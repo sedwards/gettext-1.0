@@ -1,0 +1,1 @@
+libgettextlib_la-memrchr.lo: memrchr.c

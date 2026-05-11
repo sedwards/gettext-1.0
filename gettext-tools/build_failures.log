@@ -1,0 +1,1531 @@
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
+Making all in gnulib-lib
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-argmatch.lo -MD -MP -MF .deps/libgettextlib_la-argmatch.Tpo -c -o libgettextlib_la-argmatch.lo `test -f 'argmatch.c' || echo './'`argmatch.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-argmatch.lo -MD -MP -MF .deps/libgettextlib_la-argmatch.Tpo -c argmatch.c  -fno-common -DPIC -o .libs/libgettextlib_la-argmatch.o
+In file included from argmatch.c:25:
+In file included from ./argmatch.h:36:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+argmatch.c:31:9: warning: '_' macro redefined [-Wmacro-redefined]
+   31 | #define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |         ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+1 warning and 1 error generated.
+make[3]: *** [libgettextlib_la-argmatch.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-basename-lgpl.lo -MD -MP -MF .deps/libgettextlib_la-basename-lgpl.Tpo -c -o libgettextlib_la-basename-lgpl.lo `test -f 'basename-lgpl.c' || echo './'`basename-lgpl.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-basename-lgpl.lo -MD -MP -MF .deps/libgettextlib_la-basename-lgpl.Tpo -c basename-lgpl.c  -fno-common -DPIC -o .libs/libgettextlib_la-basename-lgpl.o
+In file included from basename-lgpl.c:26:
+In file included from ./filename.h:24:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-basename-lgpl.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-byteswap.lo -MD -MP -MF .deps/libgettextlib_la-byteswap.Tpo -c -o libgettextlib_la-byteswap.lo `test -f 'byteswap.c' || echo './'`byteswap.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-byteswap.lo -MD -MP -MF .deps/libgettextlib_la-byteswap.Tpo -c byteswap.c  -fno-common -DPIC -o .libs/libgettextlib_la-byteswap.o
+In file included from byteswap.c:20:
+./byteswap.h:33:10: fatal error: 'stdbit.h' file not found
+   33 | #include <stdbit.h> /* for stdc_memreverse8u* */
+      |          ^~~~~~~~~~
+1 error generated.
+make[3]: *** [libgettextlib_la-byteswap.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-canonicalize.lo -MD -MP -MF .deps/libgettextlib_la-canonicalize.Tpo -c -o libgettextlib_la-canonicalize.lo `test -f 'canonicalize.c' || echo './'`canonicalize.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-canonicalize.lo -MD -MP -MF .deps/libgettextlib_la-canonicalize.Tpo -c canonicalize.c  -fno-common -DPIC -o .libs/libgettextlib_la-canonicalize.o
+In file included from canonicalize.c:27:
+In file included from ./filename.h:24:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-canonicalize.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-canonicalize-lgpl.lo -MD -MP -MF .deps/libgettextlib_la-canonicalize-lgpl.Tpo -c -o libgettextlib_la-canonicalize-lgpl.lo `test -f 'canonicalize-lgpl.c' || echo './'`canonicalize-lgpl.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-canonicalize-lgpl.lo -MD -MP -MF .deps/libgettextlib_la-canonicalize-lgpl.Tpo -c canonicalize-lgpl.c  -fno-common -DPIC -o .libs/libgettextlib_la-canonicalize-lgpl.o
+In file included from canonicalize-lgpl.c:38:
+In file included from ./filename.h:24:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-canonicalize-lgpl.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-clean-temp.lo -MD -MP -MF .deps/libgettextlib_la-clean-temp.Tpo -c -o libgettextlib_la-clean-temp.lo `test -f 'clean-temp.c' || echo './'`clean-temp.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-clean-temp.lo -MD -MP -MF .deps/libgettextlib_la-clean-temp.Tpo -c clean-temp.c  -fno-common -DPIC -o .libs/libgettextlib_la-clean-temp.o
+In file included from clean-temp.c:52:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+clean-temp.c:69:9: warning: '_' macro redefined [-Wmacro-redefined]
+   69 | #define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |         ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+1 warning and 1 error generated.
+make[3]: *** [libgettextlib_la-clean-temp.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-clean-temp-simple.lo -MD -MP -MF .deps/libgettextlib_la-clean-temp-simple.Tpo -c -o libgettextlib_la-clean-temp-simple.lo `test -f 'clean-temp-simple.c' || echo './'`clean-temp-simple.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-clean-temp-simple.lo -MD -MP -MF .deps/libgettextlib_la-clean-temp-simple.Tpo -c clean-temp-simple.c  -fno-common -DPIC -o .libs/libgettextlib_la-clean-temp-simple.o
+In file included from clean-temp-simple.c:39:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+clean-temp-simple.c:41:9: warning: '_' macro redefined [-Wmacro-redefined]
+   41 | #define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |         ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+1 warning and 1 error generated.
+make[3]: *** [libgettextlib_la-clean-temp-simple.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-concat-filename.lo -MD -MP -MF .deps/libgettextlib_la-concat-filename.Tpo -c -o libgettextlib_la-concat-filename.lo `test -f 'concat-filename.c' || echo './'`concat-filename.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-concat-filename.lo -MD -MP -MF .deps/libgettextlib_la-concat-filename.Tpo -c concat-filename.c  -fno-common -DPIC -o .libs/libgettextlib_la-concat-filename.o
+In file included from concat-filename.c:28:
+In file included from ./filename.h:24:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-concat-filename.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-csharpcomp.lo -MD -MP -MF .deps/libgettextlib_la-csharpcomp.Tpo -c -o libgettextlib_la-csharpcomp.lo `test -f 'csharpcomp.c' || echo './'`csharpcomp.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-csharpcomp.lo -MD -MP -MF .deps/libgettextlib_la-csharpcomp.Tpo -c csharpcomp.c  -fno-common -DPIC -o .libs/libgettextlib_la-csharpcomp.o
+In file included from csharpcomp.c:41:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+csharpcomp.c:43:9: warning: '_' macro redefined [-Wmacro-redefined]
+   43 | #define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |         ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+csharpcomp.c:180:17: error: call to undeclared function 'str_endswith'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  180 |             if (str_endswith (source_file, ".resources"))
+      |                 ^
+csharpcomp.c:589:17: error: call to undeclared function 'str_endswith'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  589 |             if (str_endswith (source_file_converted, ".resources"))
+      |                 ^
+csharpcomp.c:769:21: error: call to undeclared function 'str_endswith'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  769 |                 if (str_endswith (source_file_converted, ".resources"))
+      |                     ^
+csharpcomp.c:929:17: error: call to undeclared function 'str_endswith'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  929 |             if (str_endswith (source_file_converted, ".resources"))
+      |                 ^
+csharpcomp.c:982:28: error: call to undeclared function 'str_endswith'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  982 |   bool output_is_library = str_endswith (output_file, ".dll");
+      |                            ^
+1 warning and 6 errors generated.
+make[3]: *** [libgettextlib_la-csharpcomp.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-csharpexec.lo -MD -MP -MF .deps/libgettextlib_la-csharpexec.Tpo -c -o libgettextlib_la-csharpexec.lo `test -f 'csharpexec.c' || echo './'`csharpexec.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-csharpexec.lo -MD -MP -MF .deps/libgettextlib_la-csharpexec.Tpo -c csharpexec.c  -fno-common -DPIC -o .libs/libgettextlib_la-csharpexec.o
+In file included from csharpexec.c:44:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+csharpexec.c:79:9: warning: '_' macro redefined [-Wmacro-redefined]
+   79 | #define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |         ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+1 warning and 1 error generated.
+make[3]: *** [libgettextlib_la-csharpexec.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-dirname.lo -MD -MP -MF .deps/libgettextlib_la-dirname.Tpo -c -o libgettextlib_la-dirname.lo `test -f 'dirname.c' || echo './'`dirname.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-dirname.lo -MD -MP -MF .deps/libgettextlib_la-dirname.Tpo -c dirname.c  -fno-common -DPIC -o .libs/libgettextlib_la-dirname.o
+In file included from dirname.c:24:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-dirname.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-basename.lo -MD -MP -MF .deps/libgettextlib_la-basename.Tpo -c -o libgettextlib_la-basename.lo `test -f 'basename.c' || echo './'`basename.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-basename.lo -MD -MP -MF .deps/libgettextlib_la-basename.Tpo -c basename.c  -fno-common -DPIC -o .libs/libgettextlib_la-basename.o
+In file included from basename.c:23:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-basename.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-dirname-lgpl.lo -MD -MP -MF .deps/libgettextlib_la-dirname-lgpl.Tpo -c -o libgettextlib_la-dirname-lgpl.lo `test -f 'dirname-lgpl.c' || echo './'`dirname-lgpl.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-dirname-lgpl.lo -MD -MP -MF .deps/libgettextlib_la-dirname-lgpl.Tpo -c dirname-lgpl.c  -fno-common -DPIC -o .libs/libgettextlib_la-dirname-lgpl.o
+In file included from dirname-lgpl.c:24:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-dirname-lgpl.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-error.lo -MD -MP -MF .deps/libgettextlib_la-error.Tpo -c -o libgettextlib_la-error.lo `test -f 'error.c' || echo './'`error.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-error.lo -MD -MP -MF .deps/libgettextlib_la-error.Tpo -c error.c  -fno-common -DPIC -o .libs/libgettextlib_la-error.o
+In file included from error.c:40:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+error.c:41:10: warning: '_' macro redefined [-Wmacro-redefined]
+   41 | # define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |          ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+1 warning and 1 error generated.
+make[3]: *** [libgettextlib_la-error.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-execute.lo -MD -MP -MF .deps/libgettextlib_la-execute.Tpo -c -o libgettextlib_la-execute.lo `test -f 'execute.c' || echo './'`execute.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-execute.lo -MD -MP -MF .deps/libgettextlib_la-execute.Tpo -c execute.c  -fno-common -DPIC -o .libs/libgettextlib_la-execute.o
+execute.c:35:9: warning: 'posix_spawn_file_actions_t' macro redefined [-Wmacro-redefined]
+   35 | #define posix_spawn_file_actions_t posix_spawn_file_actions_t
+      |         ^
+./spawn.h:681:10: note: previous definition is here
+  681 | # define posix_spawn_file_actions_t rpl_posix_spawn_file_actions_t
+      |          ^
+execute.c:36:9: warning: 'posix_spawnattr_t' macro redefined [-Wmacro-redefined]
+   36 | #define posix_spawnattr_t posix_spawnattr_t
+      |         ^
+./spawn.h:659:10: note: previous definition is here
+  659 | # define posix_spawnattr_t rpl_posix_spawnattr_t
+      |          ^
+In file included from execute.c:58:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+2 warnings and 1 error generated.
+make[3]: *** [libgettextlib_la-execute.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-filenamecat-lgpl.lo -MD -MP -MF .deps/libgettextlib_la-filenamecat-lgpl.Tpo -c -o libgettextlib_la-filenamecat-lgpl.lo `test -f 'filenamecat-lgpl.c' || echo './'`filenamecat-lgpl.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-filenamecat-lgpl.lo -MD -MP -MF .deps/libgettextlib_la-filenamecat-lgpl.Tpo -c filenamecat-lgpl.c  -fno-common -DPIC -o .libs/libgettextlib_la-filenamecat-lgpl.o
+In file included from filenamecat-lgpl.c:29:
+In file included from ./filename.h:24:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-filenamecat-lgpl.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-findprog-in.lo -MD -MP -MF .deps/libgettextlib_la-findprog-in.Tpo -c -o libgettextlib_la-findprog-in.lo `test -f 'findprog-in.c' || echo './'`findprog-in.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-findprog-in.lo -MD -MP -MF .deps/libgettextlib_la-findprog-in.Tpo -c findprog-in.c  -fno-common -DPIC -o .libs/libgettextlib_la-findprog-in.o
+In file included from findprog-in.c:30:
+In file included from ./filename.h:24:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-findprog-in.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-getopt.lo -MD -MP -MF .deps/libgettextlib_la-getopt.Tpo -c -o libgettextlib_la-getopt.lo `test -f 'getopt.c' || echo './'`getopt.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-getopt.lo -MD -MP -MF .deps/libgettextlib_la-getopt.Tpo -c getopt.c  -fno-common -DPIC -o .libs/libgettextlib_la-getopt.o
+In file included from getopt.c:44:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+getopt.c:45:10: warning: '_' macro redefined [-Wmacro-redefined]
+   45 | # define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |          ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+1 warning and 1 error generated.
+make[3]: *** [libgettextlib_la-getopt.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-javacomp.lo -MD -MP -MF .deps/libgettextlib_la-javacomp.Tpo -c -o libgettextlib_la-javacomp.lo `test -f 'javacomp.c' || echo './'`javacomp.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-javacomp.lo -MD -MP -MF .deps/libgettextlib_la-javacomp.Tpo -c javacomp.c  -fno-common -DPIC -o .libs/libgettextlib_la-javacomp.o
+In file included from javacomp.c:51:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+javacomp.c:53:9: warning: '_' macro redefined [-Wmacro-redefined]
+   53 | #define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |         ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+1 warning and 1 error generated.
+make[3]: *** [libgettextlib_la-javacomp.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-javaexec.lo -MD -MP -MF .deps/libgettextlib_la-javaexec.Tpo -c -o libgettextlib_la-javaexec.lo `test -f 'javaexec.c' || echo './'`javaexec.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-javaexec.lo -MD -MP -MF .deps/libgettextlib_la-javaexec.Tpo -c javaexec.c  -fno-common -DPIC -o .libs/libgettextlib_la-javaexec.o
+In file included from javaexec.c:36:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+javaexec.c:38:9: warning: '_' macro redefined [-Wmacro-redefined]
+   38 | #define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |         ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+1 warning and 1 error generated.
+make[3]: *** [libgettextlib_la-javaexec.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-mbiterf.lo -MD -MP -MF .deps/libgettextlib_la-mbiterf.Tpo -c -o libgettextlib_la-mbiterf.lo `test -f 'mbiterf.c' || echo './'`mbiterf.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-mbiterf.lo -MD -MP -MF .deps/libgettextlib_la-mbiterf.Tpo -c mbiterf.c  -fno-common -DPIC -o .libs/libgettextlib_la-mbiterf.o
+In file included from mbiterf.c:20:
+In file included from ./mbiterf.h:88:
+In file included from ./mbchar.h:152:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-mbiterf.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-mbsnlen.lo -MD -MP -MF .deps/libgettextlib_la-mbsnlen.Tpo -c -o libgettextlib_la-mbsnlen.lo `test -f 'mbsnlen.c' || echo './'`mbsnlen.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-mbsnlen.lo -MD -MP -MF .deps/libgettextlib_la-mbsnlen.Tpo -c mbsnlen.c  -fno-common -DPIC -o .libs/libgettextlib_la-mbsnlen.o
+In file included from mbsnlen.c:28:
+In file included from ./mbiterf.h:84:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-mbsnlen.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-mbsstr.lo -MD -MP -MF .deps/libgettextlib_la-mbsstr.Tpo -c -o libgettextlib_la-mbsstr.lo `test -f 'mbsstr.c' || echo './'`mbsstr.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-mbsstr.lo -MD -MP -MF .deps/libgettextlib_la-mbsstr.Tpo -c mbsstr.c  -fno-common -DPIC -o .libs/libgettextlib_la-mbsstr.o
+In file included from mbsstr.c:36:
+In file included from ./mbuiter.h:101:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+mbsstr.c:53:14: error: call to undeclared function 'mbslen'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   53 |   size_t m = mbslen (needle);
+      |              ^
+2 errors generated.
+make[3]: *** [libgettextlib_la-mbsstr.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-mbuiter.lo -MD -MP -MF .deps/libgettextlib_la-mbuiter.Tpo -c -o libgettextlib_la-mbuiter.lo `test -f 'mbuiter.c' || echo './'`mbuiter.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-mbuiter.lo -MD -MP -MF .deps/libgettextlib_la-mbuiter.Tpo -c mbuiter.c  -fno-common -DPIC -o .libs/libgettextlib_la-mbuiter.o
+In file included from mbuiter.c:19:
+In file included from ./mbuiter.h:105:
+In file included from ./mbchar.h:152:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-mbuiter.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-mbuiterf.lo -MD -MP -MF .deps/libgettextlib_la-mbuiterf.Tpo -c -o libgettextlib_la-mbuiterf.lo `test -f 'mbuiterf.c' || echo './'`mbuiterf.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-mbuiterf.lo -MD -MP -MF .deps/libgettextlib_la-mbuiterf.Tpo -c mbuiterf.c  -fno-common -DPIC -o .libs/libgettextlib_la-mbuiterf.o
+In file included from mbuiterf.c:19:
+In file included from ./mbuiterf.h:96:
+In file included from ./mbchar.h:152:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-mbuiterf.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-mem-hash-map.lo -MD -MP -MF .deps/libgettextlib_la-mem-hash-map.Tpo -c -o libgettextlib_la-mem-hash-map.lo `test -f 'mem-hash-map.c' || echo './'`mem-hash-map.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-mem-hash-map.lo -MD -MP -MF .deps/libgettextlib_la-mem-hash-map.Tpo -c mem-hash-map.c  -fno-common -DPIC -o .libs/libgettextlib_la-mem-hash-map.o
+In file included from mem-hash-map.c:24:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-mem-hash-map.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-obstack.lo -MD -MP -MF .deps/libgettextlib_la-obstack.Tpo -c -o libgettextlib_la-obstack.lo `test -f 'obstack.c' || echo './'`obstack.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-obstack.lo -MD -MP -MF .deps/libgettextlib_la-obstack.Tpo -c obstack.c  -fno-common -DPIC -o .libs/libgettextlib_la-obstack.o
+In file included from obstack.c:332:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-obstack.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-pipe2-safer.lo -MD -MP -MF .deps/libgettextlib_la-pipe2-safer.Tpo -c -o libgettextlib_la-pipe2-safer.lo `test -f 'pipe2-safer.c' || echo './'`pipe2-safer.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-pipe2-safer.lo -MD -MP -MF .deps/libgettextlib_la-pipe2-safer.Tpo -c pipe2-safer.c  -fno-common -DPIC -o .libs/libgettextlib_la-pipe2-safer.o
+pipe2-safer.c:34:7: error: call to undeclared function 'pipe2'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   34 |   if (pipe2 (fd, flags) == 0)
+      |       ^
+pipe2-safer.c:34:7: note: did you mean 'pipe'?
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/unistd.h:482:6: note: 'pipe' declared here
+  482 | int      pipe(int [2]);
+      |          ^
+1 error generated.
+make[3]: *** [libgettextlib_la-pipe2-safer.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn.lo -MD -MP -MF .deps/libgettextlib_la-spawn.Tpo -c -o libgettextlib_la-spawn.lo `test -f 'spawn.c' || echo './'`spawn.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn.lo -MD -MP -MF .deps/libgettextlib_la-spawn.Tpo -c spawn.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawn.o
+spawn.c:27:1: error: conflicting types for 'posix_spawn'
+   27 | posix_spawn (pid_t *pid, const char *path,
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:60:9: note: previous declaration is here
+   60 | int     posix_spawn(pid_t * __restrict, const char * __restrict,
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawn.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn_faction_addchdir.lo -MD -MP -MF .deps/libgettextlib_la-spawn_faction_addchdir.Tpo -c -o libgettextlib_la-spawn_faction_addchdir.lo `test -f 'spawn_faction_addchdir.c' || echo './'`spawn_faction_addchdir.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn_faction_addchdir.lo -MD -MP -MF .deps/libgettextlib_la-spawn_faction_addchdir.Tpo -c spawn_faction_addchdir.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawn_faction_addchdir.o
+spawn_faction_addchdir.c:32:1: error: conflicting types for 'posix_spawn_file_actions_addchdir'
+   32 | posix_spawn_file_actions_addchdir (posix_spawn_file_actions_t *file_actions,
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:72:9: note: previous declaration is here
+   72 | int     posix_spawn_file_actions_addchdir(posix_spawn_file_actions_t *,
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawn_faction_addchdir.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn_faction_addclose.lo -MD -MP -MF .deps/libgettextlib_la-spawn_faction_addclose.Tpo -c -o libgettextlib_la-spawn_faction_addclose.lo `test -f 'spawn_faction_addclose.c' || echo './'`spawn_faction_addclose.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn_faction_addclose.lo -MD -MP -MF .deps/libgettextlib_la-spawn_faction_addclose.Tpo -c spawn_faction_addclose.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawn_faction_addclose.o
+spawn_faction_addclose.c:36:1: error: conflicting types for 'posix_spawn_file_actions_addclose'
+   36 | posix_spawn_file_actions_addclose (posix_spawn_file_actions_t *file_actions,
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:78:9: note: previous declaration is here
+   78 | int     posix_spawn_file_actions_addclose(posix_spawn_file_actions_t *, int) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawn_faction_addclose.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn_faction_adddup2.lo -MD -MP -MF .deps/libgettextlib_la-spawn_faction_adddup2.Tpo -c -o libgettextlib_la-spawn_faction_adddup2.lo `test -f 'spawn_faction_adddup2.c' || echo './'`spawn_faction_adddup2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn_faction_adddup2.lo -MD -MP -MF .deps/libgettextlib_la-spawn_faction_adddup2.Tpo -c spawn_faction_adddup2.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawn_faction_adddup2.o
+spawn_faction_adddup2.c:36:1: error: conflicting types for 'posix_spawn_file_actions_adddup2'
+   36 | posix_spawn_file_actions_adddup2 (posix_spawn_file_actions_t *file_actions,
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:80:9: note: previous declaration is here
+   80 | int     posix_spawn_file_actions_adddup2(posix_spawn_file_actions_t *, int,
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawn_faction_adddup2.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn_faction_addopen.lo -MD -MP -MF .deps/libgettextlib_la-spawn_faction_addopen.Tpo -c -o libgettextlib_la-spawn_faction_addopen.lo `test -f 'spawn_faction_addopen.c' || echo './'`spawn_faction_addopen.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn_faction_addopen.lo -MD -MP -MF .deps/libgettextlib_la-spawn_faction_addopen.Tpo -c spawn_faction_addopen.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawn_faction_addopen.o
+spawn_faction_addopen.c:38:1: error: conflicting types for 'posix_spawn_file_actions_addopen'
+   38 | posix_spawn_file_actions_addopen (posix_spawn_file_actions_t *file_actions,
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:83:9: note: previous declaration is here
+   83 | int     posix_spawn_file_actions_addopen(
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawn_faction_addopen.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn_faction_destroy.lo -MD -MP -MF .deps/libgettextlib_la-spawn_faction_destroy.Tpo -c -o libgettextlib_la-spawn_faction_destroy.lo `test -f 'spawn_faction_destroy.c' || echo './'`spawn_faction_destroy.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn_faction_destroy.lo -MD -MP -MF .deps/libgettextlib_la-spawn_faction_destroy.Tpo -c spawn_faction_destroy.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawn_faction_destroy.o
+spawn_faction_destroy.c:30:1: error: conflicting types for 'posix_spawn_file_actions_destroy'
+   30 | posix_spawn_file_actions_destroy (posix_spawn_file_actions_t *file_actions)
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:87:9: note: previous declaration is here
+   87 | int     posix_spawn_file_actions_destroy(posix_spawn_file_actions_t *) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawn_faction_destroy.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn_faction_init.lo -MD -MP -MF .deps/libgettextlib_la-spawn_faction_init.Tpo -c -o libgettextlib_la-spawn_faction_init.lo `test -f 'spawn_faction_init.c' || echo './'`spawn_faction_init.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn_faction_init.lo -MD -MP -MF .deps/libgettextlib_la-spawn_faction_init.Tpo -c spawn_faction_init.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawn_faction_init.o
+spawn_faction_init.c:51:1: error: conflicting types for 'posix_spawn_file_actions_init'
+   51 | posix_spawn_file_actions_init (posix_spawn_file_actions_t *file_actions)
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:89:9: note: previous declaration is here
+   89 | int     posix_spawn_file_actions_init(posix_spawn_file_actions_t *) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawn_faction_init.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawnattr_destroy.lo -MD -MP -MF .deps/libgettextlib_la-spawnattr_destroy.Tpo -c -o libgettextlib_la-spawnattr_destroy.lo `test -f 'spawnattr_destroy.c' || echo './'`spawnattr_destroy.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawnattr_destroy.lo -MD -MP -MF .deps/libgettextlib_la-spawnattr_destroy.Tpo -c spawnattr_destroy.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawnattr_destroy.o
+spawnattr_destroy.c:24:1: error: conflicting types for 'posix_spawnattr_destroy'
+   24 | posix_spawnattr_destroy (posix_spawnattr_t *attr)
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:91:9: note: previous declaration is here
+   91 | int     posix_spawnattr_destroy(posix_spawnattr_t *) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawnattr_destroy.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawnattr_init.lo -MD -MP -MF .deps/libgettextlib_la-spawnattr_init.Tpo -c -o libgettextlib_la-spawnattr_init.lo `test -f 'spawnattr_init.c' || echo './'`spawnattr_init.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawnattr_init.lo -MD -MP -MF .deps/libgettextlib_la-spawnattr_init.Tpo -c spawnattr_init.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawnattr_init.o
+spawnattr_init.c:26:1: error: conflicting types for 'posix_spawnattr_init'
+   26 | posix_spawnattr_init (posix_spawnattr_t *attr)
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:105:9: note: previous declaration is here
+  105 | int     posix_spawnattr_init(posix_spawnattr_t *) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawnattr_init.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawnattr_setflags.lo -MD -MP -MF .deps/libgettextlib_la-spawnattr_setflags.Tpo -c -o libgettextlib_la-spawnattr_setflags.lo `test -f 'spawnattr_setflags.c' || echo './'`spawnattr_setflags.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawnattr_setflags.lo -MD -MP -MF .deps/libgettextlib_la-spawnattr_setflags.Tpo -c spawnattr_setflags.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawnattr_setflags.o
+spawnattr_setflags.c:35:1: error: conflicting types for 'posix_spawnattr_setflags'
+   35 | posix_spawnattr_setflags (posix_spawnattr_t *attr, short int flags)
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:110:9: note: previous declaration is here
+  110 | int     posix_spawnattr_setflags(posix_spawnattr_t *, short) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawnattr_setflags.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawnattr_setpgroup.lo -MD -MP -MF .deps/libgettextlib_la-spawnattr_setpgroup.Tpo -c -o libgettextlib_la-spawnattr_setpgroup.lo `test -f 'spawnattr_setpgroup.c' || echo './'`spawnattr_setpgroup.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawnattr_setpgroup.lo -MD -MP -MF .deps/libgettextlib_la-spawnattr_setpgroup.Tpo -c spawnattr_setpgroup.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawnattr_setpgroup.o
+spawnattr_setpgroup.c:26:1: error: conflicting types for 'posix_spawnattr_setpgroup'
+   26 | posix_spawnattr_setpgroup (posix_spawnattr_t *attr, pid_t pgroup)
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:112:9: note: previous declaration is here
+  112 | int     posix_spawnattr_setpgroup(posix_spawnattr_t *, pid_t) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawnattr_setpgroup.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawnattr_setsigmask.lo -MD -MP -MF .deps/libgettextlib_la-spawnattr_setsigmask.Tpo -c -o libgettextlib_la-spawnattr_setsigmask.lo `test -f 'spawnattr_setsigmask.c' || echo './'`spawnattr_setsigmask.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawnattr_setsigmask.lo -MD -MP -MF .deps/libgettextlib_la-spawnattr_setsigmask.Tpo -c spawnattr_setsigmask.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawnattr_setsigmask.o
+spawnattr_setsigmask.c:26:1: error: conflicting types for 'posix_spawnattr_setsigmask'
+   26 | posix_spawnattr_setsigmask (posix_spawnattr_t *attr,
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:114:9: note: previous declaration is here
+  114 | int     posix_spawnattr_setsigmask(posix_spawnattr_t * __restrict,
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawnattr_setsigmask.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawnp.lo -MD -MP -MF .deps/libgettextlib_la-spawnp.Tpo -c -o libgettextlib_la-spawnp.lo `test -f 'spawnp.c' || echo './'`spawnp.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawnp.lo -MD -MP -MF .deps/libgettextlib_la-spawnp.Tpo -c spawnp.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawnp.o
+spawnp.c:27:1: error: conflicting types for 'posix_spawnp'
+   27 | posix_spawnp (pid_t *pid, const char *file,
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:66:9: note: previous declaration is here
+   66 | int     posix_spawnp(pid_t * __restrict, const char * __restrict,
+      |         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-spawnp.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-propername.lo -MD -MP -MF .deps/libgettextlib_la-propername.Tpo -c -o libgettextlib_la-propername.lo `test -f 'propername.c' || echo './'`propername.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-propername.lo -MD -MP -MF .deps/libgettextlib_la-propername.Tpo -c propername.c  -fno-common -DPIC -o .libs/libgettextlib_la-propername.o
+In file included from propername.c:41:
+In file included from ./mbchar.h:152:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+propername.c:70:36: error: call to undeclared function 'mbsstr'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   70 |       const char *tsub_in_string = mbsstr (string, tsub);
+      |                                    ^
+propername.c:70:36: note: did you mean 'wcsstr'?
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_wchar.h:156:10: note: 'wcsstr' declared here
+  156 | wchar_t *wcsstr(const wchar_t * __restrict, const wchar_t * __restrict);
+      |          ^
+2 errors generated.
+make[3]: *** [libgettextlib_la-propername.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-quotearg.lo -MD -MP -MF .deps/libgettextlib_la-quotearg.Tpo -c -o libgettextlib_la-quotearg.lo `test -f 'quotearg.c' || echo './'`quotearg.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-quotearg.lo -MD -MP -MF .deps/libgettextlib_la-quotearg.Tpo -c quotearg.c  -fno-common -DPIC -o .libs/libgettextlib_la-quotearg.o
+In file included from quotearg.c:46:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+quotearg.c:47:9: warning: '_' macro redefined [-Wmacro-redefined]
+   47 | #define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |         ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+1 warning and 1 error generated.
+make[3]: *** [libgettextlib_la-quotearg.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-read-file.lo -MD -MP -MF .deps/libgettextlib_la-read-file.Tpo -c -o libgettextlib_la-read-file.lo `test -f 'read-file.c' || echo './'`read-file.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-read-file.lo -MD -MP -MF .deps/libgettextlib_la-read-file.Tpo -c read-file.c  -fno-common -DPIC -o .libs/libgettextlib_la-read-file.o
+read-file.c:110:23: error: call to undeclared function 'memset_explicit'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  110 |                       memset_explicit (buf + size, 0, alloc - size);
+      |                       ^
+read-file.c:157:15: error: call to undeclared function 'memset_explicit'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  157 |               memset_explicit (buf, 0, saved_alloc);
+      |               ^
+read-file.c:171:7: error: call to undeclared function 'memset_explicit'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  171 |       memset_explicit (buf, 0, alloc);
+      |       ^
+read-file.c:208:13: error: call to undeclared function 'memset_explicit'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  208 |             memset_explicit (out, 0, *length);
+      |             ^
+4 errors generated.
+make[3]: *** [libgettextlib_la-read-file.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-setlocale.lo -MD -MP -MF .deps/libgettextlib_la-setlocale.Tpo -c -o libgettextlib_la-setlocale.lo `test -f 'setlocale.c' || echo './'`setlocale.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-setlocale.lo -MD -MP -MF .deps/libgettextlib_la-setlocale.Tpo -c setlocale.c  -fno-common -DPIC -o .libs/libgettextlib_la-setlocale.o
+In file included from setlocale.c:45:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFPropertyList.h:18:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFStream.h:20:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/dispatch/dispatch.h:40:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+setlocale.c:79:21: error: call to undeclared function 'setlocale_null'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   79 |     return (char *) setlocale_null (category);
+      |                     ^
+setlocale.c:79:12: warning: cast to 'char *' from smaller integer type 'int' [-Wint-to-pointer-cast]
+   79 |     return (char *) setlocale_null (category);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning and 2 errors generated.
+make[3]: *** [libgettextlib_la-setlocale.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn-pipe.lo -MD -MP -MF .deps/libgettextlib_la-spawn-pipe.Tpo -c -o libgettextlib_la-spawn-pipe.lo `test -f 'spawn-pipe.c' || echo './'`spawn-pipe.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-spawn-pipe.lo -MD -MP -MF .deps/libgettextlib_la-spawn-pipe.Tpo -c spawn-pipe.c  -fno-common -DPIC -o .libs/libgettextlib_la-spawn-pipe.o
+In file included from spawn-pipe.c:44:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+spawn-pipe.c:46:9: warning: '_' macro redefined [-Wmacro-redefined]
+   46 | #define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |         ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+spawn-pipe.c:441:26: error: use of undeclared identifier 'environ'
+  441 |   char **child_environ = environ;
+      |                          ^~~~~~~
+spawn-pipe.c:471:45: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  471 |   if ((err = posix_spawn_file_actions_init (&actions)) != 0
+      |                                             ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:89:67: note: passing argument to parameter here
+   89 | int     posix_spawn_file_actions_init(posix_spawn_file_actions_t *) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |                                                                   ^
+spawn-pipe.c:474:56: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  474 |            && (err = posix_spawn_file_actions_adddup2 (&actions,
+      |                                                        ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:80:70: note: passing argument to parameter here
+   80 | int     posix_spawn_file_actions_adddup2(posix_spawn_file_actions_t *, int,
+      |                                                                      ^
+spawn-pipe.c:478:59: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  478 |               && (err = posix_spawn_file_actions_adddup2 (&actions,
+      |                                                           ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:80:70: note: passing argument to parameter here
+   80 | int     posix_spawn_file_actions_adddup2(posix_spawn_file_actions_t *, int,
+      |                                                                      ^
+spawn-pipe.c:482:60: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  482 |               && (err = posix_spawn_file_actions_addclose (&actions, ofd[0]))
+      |                                                            ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:78:71: note: passing argument to parameter here
+   78 | int     posix_spawn_file_actions_addclose(posix_spawn_file_actions_t *, int) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |                                                                       ^
+spawn-pipe.c:485:60: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  485 |               && (err = posix_spawn_file_actions_addclose (&actions, ifd[1]))
+      |                                                            ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:78:71: note: passing argument to parameter here
+   78 | int     posix_spawn_file_actions_addclose(posix_spawn_file_actions_t *, int) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |                                                                       ^
+spawn-pipe.c:488:60: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  488 |               && (err = posix_spawn_file_actions_addclose (&actions, ofd[1]))
+      |                                                            ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:78:71: note: passing argument to parameter here
+   78 | int     posix_spawn_file_actions_addclose(posix_spawn_file_actions_t *, int) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |                                                                       ^
+spawn-pipe.c:491:60: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  491 |               && (err = posix_spawn_file_actions_addclose (&actions, ifd[0]))
+      |                                                            ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:78:71: note: passing argument to parameter here
+   78 | int     posix_spawn_file_actions_addclose(posix_spawn_file_actions_t *, int) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |                                                                       ^
+spawn-pipe.c:494:59: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  494 |               && (err = posix_spawn_file_actions_addopen (&actions,
+      |                                                           ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:84:41: note: passing argument to parameter here
+   84 |         posix_spawn_file_actions_t * __restrict, int,
+      |                                                ^
+spawn-pipe.c:501:59: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  501 |               && (err = posix_spawn_file_actions_addopen (&actions,
+      |                                                           ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:84:41: note: passing argument to parameter here
+   84 |         posix_spawn_file_actions_t * __restrict, int,
+      |                                                ^
+spawn-pipe.c:508:59: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  508 |               && (err = posix_spawn_file_actions_addopen (&actions,
+      |                                                           ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:84:41: note: passing argument to parameter here
+   84 |         posix_spawn_file_actions_t * __restrict, int,
+      |                                                ^
+spawn-pipe.c:514:60: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  514 |               && (err = posix_spawn_file_actions_addchdir (&actions,
+      |                                                            ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:72:71: note: passing argument to parameter here
+   72 | int     posix_spawn_file_actions_addchdir(posix_spawn_file_actions_t *,
+      |                                                                       ^
+spawn-pipe.c:517:48: warning: incompatible pointer types passing 'rpl_posix_spawnattr_t *' to parameter of type 'posix_spawnattr_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  517 |               && ((err = posix_spawnattr_init (&attrs)) != 0
+      |                                                ^~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:105:49: note: passing argument to parameter here
+  105 | int     posix_spawnattr_init(posix_spawnattr_t *) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |                                                 ^
+spawn-pipe.c:525:58: warning: incompatible pointer types passing 'rpl_posix_spawnattr_t *' to parameter of type 'posix_spawnattr_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  525 |                       (err = posix_spawnattr_setsigmask (&attrs,
+      |                                                          ^~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:114:66: note: passing argument to parameter here
+  114 | int     posix_spawnattr_setsigmask(posix_spawnattr_t * __restrict,
+      |                                                                  ^
+spawn-pipe.c:528:59: warning: incompatible pointer types passing 'rpl_posix_spawnattr_t *' to parameter of type 'posix_spawnattr_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  528 |                       || (err = posix_spawnattr_setflags (&attrs,
+      |                                                           ^~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:110:53: note: passing argument to parameter here
+  110 | int     posix_spawnattr_setflags(posix_spawnattr_t *, short) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |                                                     ^
+spawn-pipe.c:534:56: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'const posix_spawn_file_actions_t *' (aka 'void *const *') [-Wincompatible-pointer-types]
+  534 |                      ? posix_spawn (&child, prog_path, &actions,
+      |                                                        ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:61:39: note: passing argument to parameter here
+   61 |     const posix_spawn_file_actions_t *,
+      |                                       ^
+spawn-pipe.c:535:37: warning: incompatible pointer types passing 'rpl_posix_spawnattr_t *' to parameter of type 'const posix_spawnattr_t *' (aka 'void *const *') [-Wincompatible-pointer-types]
+  535 |                                     attrs_allocated ? &attrs : NULL,
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:62:41: note: passing argument to parameter here
+   62 |     const posix_spawnattr_t * __restrict,
+      |                                         ^
+spawn-pipe.c:538:57: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'const posix_spawn_file_actions_t *' (aka 'void *const *') [-Wincompatible-pointer-types]
+  538 |                      : posix_spawnp (&child, prog_path, &actions,
+      |                                                         ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:67:39: note: passing argument to parameter here
+   67 |     const posix_spawn_file_actions_t *,
+      |                                       ^
+spawn-pipe.c:539:38: warning: incompatible pointer types passing 'rpl_posix_spawnattr_t *' to parameter of type 'const posix_spawnattr_t *' (aka 'void *const *') [-Wincompatible-pointer-types]
+  539 |                                      attrs_allocated ? &attrs : NULL,
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:68:41: note: passing argument to parameter here
+   68 |     const posix_spawnattr_t * __restrict,
+      |                                         ^
+spawn-pipe.c:545:43: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  545 |         posix_spawn_file_actions_destroy (&actions);
+      |                                           ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:87:70: note: passing argument to parameter here
+   87 | int     posix_spawn_file_actions_destroy(posix_spawn_file_actions_t *) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |                                                                      ^
+spawn-pipe.c:547:34: warning: incompatible pointer types passing 'rpl_posix_spawnattr_t *' to parameter of type 'posix_spawnattr_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  547 |         posix_spawnattr_destroy (&attrs);
+      |                                  ^~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:91:52: note: passing argument to parameter here
+   91 | int     posix_spawnattr_destroy(posix_spawnattr_t *) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |                                                    ^
+spawn-pipe.c:569:37: warning: incompatible pointer types passing 'rpl_posix_spawn_file_actions_t *' to parameter of type 'posix_spawn_file_actions_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  569 |   posix_spawn_file_actions_destroy (&actions);
+      |                                     ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:87:70: note: passing argument to parameter here
+   87 | int     posix_spawn_file_actions_destroy(posix_spawn_file_actions_t *) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |                                                                      ^
+spawn-pipe.c:571:30: warning: incompatible pointer types passing 'rpl_posix_spawnattr_t *' to parameter of type 'posix_spawnattr_t *' (aka 'void **') [-Wincompatible-pointer-types]
+  571 |     posix_spawnattr_destroy (&attrs);
+      |                              ^~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/spawn.h:91:52: note: passing argument to parameter here
+   91 | int     posix_spawnattr_destroy(posix_spawnattr_t *) __API_AVAILABLE(macos(10.5), ios(2.0)) __API_UNAVAILABLE(watchos, tvos);
+      |                                                    ^
+23 warnings and 2 errors generated.
+make[3]: *** [libgettextlib_la-spawn-pipe.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-strerror.lo -MD -MP -MF .deps/libgettextlib_la-strerror.Tpo -c -o libgettextlib_la-strerror.lo `test -f 'strerror.c' || echo './'`strerror.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-strerror.lo -MD -MP -MF .deps/libgettextlib_la-strerror.Tpo -c strerror.c  -fno-common -DPIC -o .libs/libgettextlib_la-strerror.o
+In file included from strerror.c:26:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-strerror.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-string-buffer-printf.lo -MD -MP -MF .deps/libgettextlib_la-string-buffer-printf.Tpo -c -o libgettextlib_la-string-buffer-printf.lo `test -f 'string-buffer-printf.c' || echo './'`string-buffer-printf.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-string-buffer-printf.lo -MD -MP -MF .deps/libgettextlib_la-string-buffer-printf.Tpo -c string-buffer-printf.c  -fno-common -DPIC -o .libs/libgettextlib_la-string-buffer-printf.o
+string-buffer-printf.c:55:19: error: call to undeclared function 'vsnzprintf'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   55 |   ptrdiff_t ret = vsnzprintf (buffer->data + buffer->length, room,
+      |                   ^
+string-buffer-printf.c:55:19: note: did you mean 'vsnprintf'?
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:442:6: note: 'vsnprintf' declared here
+  442 | int      vsnprintf(char * __restrict _LIBC_COUNT(__size) __str, size_t __size, const char * __restrict __format, va_list) __printflike(3, 0);
+      |          ^
+string-buffer-printf.c:141:19: error: call to undeclared function 'vsnzprintf'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  141 |   ptrdiff_t ret = vsnzprintf (buffer->data + buffer->length, room,
+      |                   ^
+2 errors generated.
+make[3]: *** [libgettextlib_la-string-buffer-printf.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-string-buffer-reversed-printf.lo -MD -MP -MF .deps/libgettextlib_la-string-buffer-reversed-printf.Tpo -c -o libgettextlib_la-string-buffer-reversed-printf.lo `test -f 'string-buffer-reversed-printf.c' || echo './'`string-buffer-reversed-printf.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-string-buffer-reversed-printf.lo -MD -MP -MF .deps/libgettextlib_la-string-buffer-reversed-printf.Tpo -c string-buffer-reversed-printf.c  -fno-common -DPIC -o .libs/libgettextlib_la-string-buffer-reversed-printf.o
+string-buffer-reversed-printf.c:58:19: error: call to undeclared function 'vsnzprintf'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   58 |   ptrdiff_t ret = vsnzprintf (buffer->data, room, formatstring, list);
+      |                   ^
+string-buffer-reversed-printf.c:58:19: note: did you mean 'vsnprintf'?
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:442:6: note: 'vsnprintf' declared here
+  442 | int      vsnprintf(char * __restrict _LIBC_COUNT(__size) __str, size_t __size, const char * __restrict __format, va_list) __printflike(3, 0);
+      |          ^
+string-buffer-reversed-printf.c:150:19: error: call to undeclared function 'vsnzprintf'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  150 |   ptrdiff_t ret = vsnzprintf (buffer->data, room, formatstring, args);
+      |                   ^
+2 errors generated.
+make[3]: *** [libgettextlib_la-string-buffer-reversed-printf.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-tempname.lo -MD -MP -MF .deps/libgettextlib_la-tempname.Tpo -c -o libgettextlib_la-tempname.lo `test -f 'tempname.c' || echo './'`tempname.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-tempname.lo -MD -MP -MF .deps/libgettextlib_la-tempname.Tpo -c tempname.c  -fno-common -DPIC -o .libs/libgettextlib_la-tempname.o
+tempname.c:96:7: error: call to undeclared function 'getrandom'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   96 |   if (__getrandom (r, sizeof *r, GRND_NONBLOCK) == sizeof *r)
+      |       ^
+tempname.c:56:22: note: expanded from macro '__getrandom'
+   56 | # define __getrandom getrandom
+      |                      ^
+1 error generated.
+make[3]: *** [libgettextlib_la-tempname.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-tmpdir.lo -MD -MP -MF .deps/libgettextlib_la-tmpdir.Tpo -c -o libgettextlib_la-tmpdir.lo `test -f 'tmpdir.c' || echo './'`tmpdir.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-tmpdir.lo -MD -MP -MF .deps/libgettextlib_la-tmpdir.Tpo -c tmpdir.c  -fno-common -DPIC -o .libs/libgettextlib_la-tmpdir.o
+tmpdir.c:110:23: error: call to undeclared function 'secure_getenv'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  110 |       const char *d = __libc_secure_getenv ("TMPDIR");
+      |                       ^
+tmpdir.c:61:31: note: expanded from macro '__libc_secure_getenv'
+   61 | # define __libc_secure_getenv secure_getenv
+      |                               ^
+1 error generated.
+make[3]: *** [libgettextlib_la-tmpdir.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-trim.lo -MD -MP -MF .deps/libgettextlib_la-trim.Tpo -c -o libgettextlib_la-trim.lo `test -f 'trim.c' || echo './'`trim.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-trim.lo -MD -MP -MF .deps/libgettextlib_la-trim.Tpo -c trim.c  -fno-common -DPIC -o .libs/libgettextlib_la-trim.o
+In file included from trim.c:32:
+In file included from ./mbchar.h:152:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [libgettextlib_la-trim.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT unilbrk/libgettextlib_la-u8-possible-linebreaks.lo -MD -MP -MF unilbrk/.deps/libgettextlib_la-u8-possible-linebreaks.Tpo -c -o unilbrk/libgettextlib_la-u8-possible-linebreaks.lo `test -f 'unilbrk/u8-possible-linebreaks.c' || echo './'`unilbrk/u8-possible-linebreaks.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT unilbrk/libgettextlib_la-u8-possible-linebreaks.lo -MD -MP -MF unilbrk/.deps/libgettextlib_la-u8-possible-linebreaks.Tpo -c unilbrk/u8-possible-linebreaks.c  -fno-common -DPIC -o unilbrk/.libs/libgettextlib_la-u8-possible-linebreaks.o
+In file included from unilbrk/u8-possible-linebreaks.c:36:
+In file included from ./uniwidth/cjk.h:18:
+In file included from ./streq-opt.h:22:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[3]: *** [unilbrk/libgettextlib_la-u8-possible-linebreaks.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-aszprintf.lo -MD -MP -MF .deps/libgettextlib_la-aszprintf.Tpo -c -o libgettextlib_la-aszprintf.lo `test -f 'aszprintf.c' || echo './'`aszprintf.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-aszprintf.lo -MD -MP -MF .deps/libgettextlib_la-aszprintf.Tpo -c aszprintf.c  -fno-common -DPIC -o .libs/libgettextlib_la-aszprintf.o
+aszprintf.c:29:22: error: call to undeclared function 'vaszprintf'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   29 |   ptrdiff_t result = vaszprintf (resultp, format, args);
+      |                      ^
+1 error generated.
+make[3]: *** [libgettextlib_la-aszprintf.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-vc-mtime.lo -MD -MP -MF .deps/libgettextlib_la-vc-mtime.Tpo -c -o libgettextlib_la-vc-mtime.lo `test -f 'vc-mtime.c' || echo './'`vc-mtime.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-vc-mtime.lo -MD -MP -MF .deps/libgettextlib_la-vc-mtime.Tpo -c vc-mtime.c  -fno-common -DPIC -o .libs/libgettextlib_la-vc-mtime.o
+In file included from vc-mtime.c:39:
+In file included from ./filename.h:24:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+vc-mtime.c:52:9: warning: '_' macro redefined [-Wmacro-redefined]
+   52 | #define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |         ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+vc-mtime.c:253:28: error: call to undeclared function 'strnul'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  253 |               && endptr == strnul (line))
+      |                            ^
+vc-mtime.c:253:25: warning: comparison between pointer and integer ('char *' and 'int') [-Wpointer-integer-compare]
+  253 |               && endptr == strnul (line))
+      |                  ~~~~~~ ^  ~~~~~~~~~~~~~
+vc-mtime.c:530:41: error: call to undeclared function 'canonicalize_file_name'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  530 |                       char *canonical = canonicalize_file_name (filenames[n]);
+      |                                         ^
+vc-mtime.c:558:27: error: call to undeclared function 'str_startswith'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  558 |                       if (str_startswith (canonical_filenames[n], git_checkout_slash))
+      |                           ^
+vc-mtime.c:888:48: error: call to undeclared function 'strnul'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  888 |                                   && endptr == strnul (line)))
+      |                                                ^
+vc-mtime.c:888:45: warning: comparison between pointer and integer ('char *' and 'int') [-Wpointer-integer-compare]
+  888 |                                   && endptr == strnul (line)))
+      |                                      ~~~~~~ ^  ~~~~~~~~~~~~~
+3 warnings and 5 errors generated.
+make[3]: *** [libgettextlib_la-vc-mtime.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-wait-process.lo -MD -MP -MF .deps/libgettextlib_la-wait-process.Tpo -c -o libgettextlib_la-wait-process.lo `test -f 'wait-process.c' || echo './'`wait-process.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-wait-process.lo -MD -MP -MF .deps/libgettextlib_la-wait-process.Tpo -c wait-process.c  -fno-common -DPIC -o .libs/libgettextlib_la-wait-process.o
+In file included from wait-process.c:36:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+wait-process.c:38:9: warning: '_' macro redefined [-Wmacro-redefined]
+   38 | #define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |         ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+1 warning and 1 error generated.
+make[3]: *** [libgettextlib_la-wait-process.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-xmalloc.lo -MD -MP -MF .deps/libgettextlib_la-xmalloc.Tpo -c -o libgettextlib_la-xmalloc.lo `test -f 'xmalloc.c' || echo './'`xmalloc.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-xmalloc.lo -MD -MP -MF .deps/libgettextlib_la-xmalloc.Tpo -c xmalloc.c  -fno-common -DPIC -o .libs/libgettextlib_la-xmalloc.o
+xmalloc.c:85:25: error: call to undeclared function 'reallocarray'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   85 |   return check_nonnull (reallocarray (p, n, s));
+      |                         ^
+1 error generated.
+make[3]: *** [libgettextlib_la-xmalloc.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-xstrerror.lo -MD -MP -MF .deps/libgettextlib_la-xstrerror.Tpo -c -o libgettextlib_la-xstrerror.lo `test -f 'xstrerror.c' || echo './'`xstrerror.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-xstrerror.lo -MD -MP -MF .deps/libgettextlib_la-xstrerror.Tpo -c xstrerror.c  -fno-common -DPIC -o .libs/libgettextlib_la-xstrerror.o
+In file included from xstrerror.c:26:
+In file included from ./gettext.h:3:
+./string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+./string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+xstrerror.c:28:9: warning: '_' macro redefined [-Wmacro-redefined]
+   28 | #define _(msgid) dgettext (GNULIB_TEXT_DOMAIN, msgid)
+      |         ^
+./gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+1 warning and 1 error generated.
+make[3]: *** [libgettextlib_la-xstrerror.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-xvasprintf.lo -MD -MP -MF .deps/libgettextlib_la-xvasprintf.Tpo -c -o libgettextlib_la-xvasprintf.lo `test -f 'xvasprintf.c' || echo './'`xvasprintf.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-xvasprintf.lo -MD -MP -MF .deps/libgettextlib_la-xvasprintf.Tpo -c xvasprintf.c  -fno-common -DPIC -o .libs/libgettextlib_la-xvasprintf.o
+xvasprintf.c:97:7: error: call to undeclared function 'vaszprintf'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   97 |   if (vaszprintf (&result, format, args) < 0)
+      |       ^
+xvasprintf.c:97:7: note: did you mean 'vasprintf'?
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:482:6: note: 'vasprintf' declared here
+  482 | int      vasprintf(char *_LIBC_CSTR *__restrict, const char * __restrict, va_list) __printflike(2, 0);
+      |          ^
+1 error generated.
+make[3]: *** [libgettextlib_la-xvasprintf.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-fnmatch.lo -MD -MP -MF .deps/libgettextlib_la-fnmatch.Tpo -c -o libgettextlib_la-fnmatch.lo `test -f 'fnmatch.c' || echo './'`fnmatch.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-fnmatch.lo -MD -MP -MF .deps/libgettextlib_la-fnmatch.Tpo -c fnmatch.c  -fno-common -DPIC -o .libs/libgettextlib_la-fnmatch.o
+In file included from fnmatch.c:262:
+./fnmatch_loop.c:1067:13: error: call to undeclared function 'wmempcpy'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+ 1067 |             NEW_PATTERN;
+      |             ^
+./fnmatch_loop.c:1064:24: note: expanded from macro 'NEW_PATTERN'
+ 1064 |             *((CHAR *) MEMPCPY (newp->str, startp, p - startp)) = L_('\0');   \
+      |                        ^
+fnmatch.c:187:26: note: expanded from macro 'MEMPCPY'
+  187 | #define MEMPCPY(D, S, N) WMEMPCPY (D, S, N)
+      |                          ^
+fnmatch.c:50:19: note: expanded from macro 'WMEMPCPY'
+   50 | # define WMEMPCPY wmempcpy
+      |                   ^
+./fnmatch_loop.c:1067:13: note: did you mean 'wmemcpy'?
+./fnmatch_loop.c:1064:24: note: expanded from macro 'NEW_PATTERN'
+ 1064 |             *((CHAR *) MEMPCPY (newp->str, startp, p - startp)) = L_('\0');   \
+      |                        ^
+fnmatch.c:187:26: note: expanded from macro 'MEMPCPY'
+  187 | #define MEMPCPY(D, S, N) WMEMPCPY (D, S, N)
+      |                          ^
+fnmatch.c:50:19: note: expanded from macro 'WMEMPCPY'
+   50 | # define WMEMPCPY wmempcpy
+      |                   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_wchar.h:173:3: note: 'wmemcpy' declared here
+  173 |                 wmemcpy(wchar_t * __restrict _LIBC_COUNT(__n),
+      |                 ^
+In file included from fnmatch.c:262:
+./fnmatch_loop.c:1067:13: warning: cast to 'wchar_t *' (aka 'int *') from smaller integer type 'int' [-Wint-to-pointer-cast]
+ 1067 |             NEW_PATTERN;
+      |             ^~~~~~~~~~~
+./fnmatch_loop.c:1064:15: note: expanded from macro 'NEW_PATTERN'
+ 1064 |             *((CHAR *) MEMPCPY (newp->str, startp, p - startp)) = L_('\0');   \
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./fnmatch_loop.c:1074:13: error: call to undeclared function 'wmempcpy'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+ 1074 |             NEW_PATTERN;
+      |             ^
+./fnmatch_loop.c:1064:24: note: expanded from macro 'NEW_PATTERN'
+ 1064 |             *((CHAR *) MEMPCPY (newp->str, startp, p - startp)) = L_('\0');   \
+      |                        ^
+fnmatch.c:187:26: note: expanded from macro 'MEMPCPY'
+  187 | #define MEMPCPY(D, S, N) WMEMPCPY (D, S, N)
+      |                          ^
+fnmatch.c:50:19: note: expanded from macro 'WMEMPCPY'
+   50 | # define WMEMPCPY wmempcpy
+      |                   ^
+In file included from fnmatch.c:262:
+./fnmatch_loop.c:1074:13: warning: cast to 'wchar_t *' (aka 'int *') from smaller integer type 'int' [-Wint-to-pointer-cast]
+ 1074 |             NEW_PATTERN;
+      |             ^~~~~~~~~~~
+./fnmatch_loop.c:1064:15: note: expanded from macro 'NEW_PATTERN'
+ 1064 |             *((CHAR *) MEMPCPY (newp->str, startp, p - startp)) = L_('\0');   \
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings and 2 errors generated.
+make[3]: *** [libgettextlib_la-fnmatch.lo] Error 1
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1    -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-vasnprintf.lo -MD -MP -MF .deps/libgettextlib_la-vasnprintf.Tpo -c -o libgettextlib_la-vasnprintf.lo `test -f 'vasnprintf.c' || echo './'`vasnprintf.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I.. -I../../gettext-runtime/intl -I.. -DIN_LIBGETTEXTLIB -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT libgettextlib_la-vasnprintf.lo -MD -MP -MF .deps/libgettextlib_la-vasnprintf.Tpo -c vasnprintf.c  -fno-common -DPIC -o .libs/libgettextlib_la-vasnprintf.o
+vasnprintf.c:3574:23: error: call to undeclared function 'mbszero'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+ 3574 |                       mbszero (&state);
+      |                       ^
+vasnprintf.c:3574:23: note: did you mean 'bzero'?
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_strings.h:75:7: note: 'bzero' declared here
+   75 | void     bzero(void *_LIBC_SIZE(__n), size_t __n) __POSIX_C_DEPRECATED(200112L);
+      |          ^
+vasnprintf.c:3611:23: error: call to undeclared function 'mbszero'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+ 3611 |                       mbszero (&state);
+      |                       ^
+vasnprintf.c:3735:23: error: call to undeclared function 'mbszero'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+ 3735 |                       mbszero (&state);
+      |                       ^
+vasnprintf.c:3759:23: error: call to undeclared function 'mbszero'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+ 3759 |                       mbszero (&state);
+      |                       ^
+4 errors generated.
+make[3]: *** [libgettextlib_la-vasnprintf.lo] Error 1
+make[3]: Target `all-am' not remade because of errors.
+make[2]: *** [all] Error 2
+Making all in libgrep
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
+Making all in gnulib-lib
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+gcc -DHAVE_CONFIG_H -I. -I../..  -I../../../gettext-runtime/intl -I../../gnulib-lib -I../../gnulib-lib -DIN_GETTEXT_TOOLS_LIBGREP=1   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT malloc/libgnu_a-dynarray_emplace_enlarge.o -MD -MP -MF malloc/.deps/libgnu_a-dynarray_emplace_enlarge.Tpo -c -o malloc/libgnu_a-dynarray_emplace_enlarge.o `test -f 'malloc/dynarray_emplace_enlarge.c' || echo './'`malloc/dynarray_emplace_enlarge.c
+In file included from malloc/dynarray_emplace_enlarge.c:27:
+../../gnulib-lib/string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+../../gnulib-lib/string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[5]: *** [malloc/libgnu_a-dynarray_emplace_enlarge.o] Error 1
+gcc -DHAVE_CONFIG_H -I. -I../..  -I../../../gettext-runtime/intl -I../../gnulib-lib -I../../gnulib-lib -DIN_GETTEXT_TOOLS_LIBGREP=1   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT malloc/libgnu_a-dynarray_finalize.o -MD -MP -MF malloc/.deps/libgnu_a-dynarray_finalize.Tpo -c -o malloc/libgnu_a-dynarray_finalize.o `test -f 'malloc/dynarray_finalize.c' || echo './'`malloc/dynarray_finalize.c
+In file included from malloc/dynarray_finalize.c:25:
+../../gnulib-lib/string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+../../gnulib-lib/string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[5]: *** [malloc/libgnu_a-dynarray_finalize.o] Error 1
+gcc -DHAVE_CONFIG_H -I. -I../..  -I../../../gettext-runtime/intl -I../../gnulib-lib -I../../gnulib-lib -DIN_GETTEXT_TOOLS_LIBGREP=1   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT malloc/libgnu_a-dynarray_resize.o -MD -MP -MF malloc/.deps/libgnu_a-dynarray_resize.Tpo -c -o malloc/libgnu_a-dynarray_resize.o `test -f 'malloc/dynarray_resize.c' || echo './'`malloc/dynarray_resize.c
+In file included from malloc/dynarray_resize.c:27:
+../../gnulib-lib/string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+../../gnulib-lib/string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[5]: *** [malloc/libgnu_a-dynarray_resize.o] Error 1
+gcc -DHAVE_CONFIG_H -I. -I../..  -I../../../gettext-runtime/intl -I../../gnulib-lib -I../../gnulib-lib -DIN_GETTEXT_TOOLS_LIBGREP=1   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -g -O2 -MT malloc/libgnu_a-dynarray_resize_clear.o -MD -MP -MF malloc/.deps/libgnu_a-dynarray_resize_clear.Tpo -c -o malloc/libgnu_a-dynarray_resize_clear.o `test -f 'malloc/dynarray_resize_clear.c' || echo './'`malloc/dynarray_resize_clear.c
+In file included from malloc/dynarray_resize_clear.c:24:
+../../gnulib-lib/string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+../../gnulib-lib/string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[5]: *** [malloc/libgnu_a-dynarray_resize_clear.o] Error 1
+make[5]: Target `all-am' not remade because of errors.
+make[4]: *** [all] Error 2
+depbase=`echo m-fgrep.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H -I. -I..  -Ignulib-lib -I./gnulib-lib -I../gnulib-lib -I../gnulib-lib -I../../gettext-runtime/intl   -g -O2 -MT m-fgrep.o -MD -MP -MF $depbase.Tpo -c -o m-fgrep.o m-fgrep.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+In file included from m-fgrep.c:33:
+In file included from ../gnulib-lib/gettext.h:3:
+../gnulib-lib/string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+../gnulib-lib/string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+m-fgrep.c:34:9: warning: '_' macro redefined [-Wmacro-redefined]
+   34 | #define _(str) gettext (str)
+      |         ^
+../gnulib-lib/gettext.h:4:9: note: previous definition is here
+    4 | #define _(msgid) (msgid)
+      |         ^
+1 warning and 1 error generated.
+make[4]: *** [m-fgrep.o] Error 1
+make[4]: Target `all-am' not remade because of errors.
+make[3]: *** [all-recursive] Error 1
+make[2]: *** [all] Error 2
+Making all in src
+here=`pwd`; \
+	cd ../../libtextstyle/lib && \
+	  /Applications/Xcode.app/Contents/Developer/usr/bin/make install-nobase_includeHEADERS install-nobase_nodist_includeHEADERS DESTDIR= includedir="$here"
+make[3]: *** No rule to make target `install-nobase_includeHEADERS'.
+make[3]: *** No rule to make target `install-nobase_nodist_includeHEADERS'.
+make[2]: *** [textstyle.h] Error 2
+here=`pwd`; \
+	cd ../../libtextstyle/lib && \
+	  /Applications/Xcode.app/Contents/Developer/usr/bin/make install-nobase_includeHEADERS install-nobase_nodist_includeHEADERS DESTDIR= includedir="$here"
+make[3]: *** No rule to make target `install-nobase_includeHEADERS'.
+make[3]: *** No rule to make target `install-nobase_nodist_includeHEADERS'.
+make[2]: *** [textstyle/version.h] Error 2
+here=`pwd`; \
+	cd ../../libtextstyle/lib && \
+	  /Applications/Xcode.app/Contents/Developer/usr/bin/make install-nobase_includeHEADERS install-nobase_nodist_includeHEADERS DESTDIR= includedir="$here"
+make[3]: *** No rule to make target `install-nobase_includeHEADERS'.
+make[3]: *** No rule to make target `install-nobase_nodist_includeHEADERS'.
+make[2]: *** [textstyle/woe32dll.h] Error 2
+make[2]: Target `all' not remade because of errors.
+Making all in libgettextpo
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+	  : "Avoid double inclusion, to avoid a warning about redefinition of DLL_VARIABLE and LIBGETTEXTSRC_DLL_VARIABLE."; \
+	  echo '#ifndef GTPO_CONFIG_H'; \
+	  echo '#define GTPO_CONFIG_H'; \
+	  echo; \
+	  echo '#include "../config.h"'; \
+	  : "We don't use gnulib module 'fchdir' here."; \
+	  echo '#undef REPLACE_FCHDIR'; \
+	  : "Turn all gettext() calls into dgettext() calls."; \
+	  echo '#define DEFAULT_TEXT_DOMAIN "gettext-tools"'; \
+	  : "All code is collected in a single library,"; \
+	  : "No references to variables in other libraries exist."; \
+	  echo '#undef DLL_VARIABLE'; \
+	  echo '#define DLL_VARIABLE'; \
+	  echo '#undef LIBGETTEXTSRC_DLL_VARIABLE'; \
+	  echo '#define LIBGETTEXTSRC_DLL_VARIABLE'; \
+	  echo; \
+	  echo '#endif /* GTPO_CONFIG_H */'; \
+	} > config.h && \
+	if test -n "1"; then \
+	  { \
+	    for f in ../src/str-list.c ../src/message.c ../src/pos.c ../src/msgl-ascii.c ../src/write-catalog.c ../src/write-po.c ../src/po-charset.c ../src/read-catalog-special.c ../src/read-catalog-abstract.c ../src/read-catalog.c ../src/read-po.c ../src/read-po-lex.c ../src/read-po-gram.c ../src/plural-table.c ../src/format-c.c ../src/format-c++-brace.c ../src/format-python.c ../src/format-python-brace.c ../src/format-java.c ../src/format-java-printf.c ../src/format-csharp.c ../src/format-javascript.c ../src/format-scheme.c ../src/format-lisp.c ../src/format-elisp.c ../src/format-librep.c ../src/format-rust.c ../src/format-go.c ../src/format-ruby.c ../src/format-sh.c ../src/format-sh-printf.c ../src/format-awk.c ../src/format-lua.c ../src/format-pascal.c ../src/format-modula2.c ../src/format-d.c ../src/format-ocaml.c ../src/format-smalltalk.c ../src/format-qt.c ../src/format-qt-plural.c ../src/format-kde.c ../src/format-kde-kuit.c ../src/format-boost.c ../src/format-tcl.c ../src/format-perl.c ../src/format-perl-brace.c ../src/format-php.c ../src/format-gcc-internal.c ../src/format-gfc-internal.c ../src/format.c ../src/plural-exp.c ../src/plural-eval.c ../src/msgl-check.c ../src/sentence.c basename-lgpl.c c-ctype.h c-ctype.c c-strcasecmp.c c-strncasecmp.c c-strstr.h c-strstr.c c32isalnum.c c32isalpha.c c32isblank.c c32iscntrl.c c32isdigit.c c32isgraph.c c32islower.c c32isprint.c c32ispunct.c c32isspace.c c32isupper.c c32isxdigit.c c32tolower.c c32width.c cloexec.c  concat-filename.c diffseq.h  error.c exitfail.c  fd-hook.c  float.c  free.c fseterr.c fstat.c fstrcmp.h fstrcmp.c  full-write.h full-write.c fwriteerror.h fwriteerror.c gcd.h gcd.c getdelim.c    gettext.h hard-locale.c ialloc.c   idx.h     gl_linked_list.h gl_linked_list.c gl_anylinked_list1.h gl_anylinked_list2.h gl_list.h gl_list.c localcharset.c  glthread/lock.h glthread/lock.c lstat.c malloca.c markup.h markup.c math.c mbchar.c mbiterf.h mbiterf.c mbrtoc32.c   mbsnlen.c mbszero.c mem-hash-map.h mem-hash-map.c  memrchr.c minmax.h   next-prime.h next-prime.c obstack.c glthread/once.h glthread/once.c  printf-frexp.c printf-frexpl.c   rawmemchr.c  reallocarray.c safe-write.c setlocale_null.c setlocale-lock.c setlocale_null-unlocked.c   size_max.h  stat-time.c    stdlib.c   str_startswith.c  strerror.c strerror-override.c striconv.h striconv.c striconveh.h striconveh.c striconveha.h striconveha.c string-desc.c string-desc-contains.c string.c  glthread/threadlib.c glthread/tls.h glthread/tls.c unicase/tolower.c uniconv/u8-conv-from-enc.c unictype/ctype_alnum.c unictype/ctype_alpha.c unictype/ctype_blank.c unictype/ctype_cntrl.c unictype/ctype_digit.c unictype/ctype_graph.c unictype/ctype_lower.c unictype/ctype_print.c unictype/ctype_punct.c unictype/ctype_space.c unictype/ctype_upper.c unictype/ctype_xdigit.c unictype/pr_white_space.c unictype/pr_xid_continue.c unictype/pr_xid_start.c unilbrk/lbrktables.c unilbrk/u8-possible-linebreaks.c unilbrk/u8-width-linebreaks.c unilbrk/ulc-common.c unilbrk/ulc-width-linebreaks.c unistd.c unistr/u16-mbtouc.c unistr/u16-mbtouc-aux.c unistr/u8-check.c unistr/u8-mblen.c unistr/u8-mbtouc.c unistr/u8-mbtouc-aux.c unistr/u8-mbtouc-unsafe.c unistr/u8-mbtouc-unsafe-aux.c unistr/u8-mbtoucr.c  unistr/u8-prev.c  unistr/u8-uctomb.c unistr/u8-uctomb-aux.c uniwidth/width.c vaszprintf.c aszprintf.c wctype-h.c        xmalloc.c xalloc-die.c xconcat-filename.c gl_xlist.h gl_xlist.c xmalloca.c xsize.h xsize.c xstrerror.c xstriconv.h xstriconv.c xvasprintf.h xvasprintf.c xasprintf.c libgnu_la-asnprintf.lo libgnu_la-fopen.lo libgnu_la-memmem.lo libgnu_la-printf-args.lo libgnu_la-printf-parse.lo libgnu_la-strerror_r.lo libgnu_la-strstr.lo libgnu_la-vasnprintf.lo; do \
+	      case $f in \
+	        *.c | *.o | *.lo ) \
+	          sf=`echo "$f" | sed -e 's,^libgnu_la-,,' -e 's,\\.[^.]*$,,'`.c; \
+	          test -f $sf || sf=./$sf; \
+	          of=`echo "$f" | sed -e 's,^.*/,,' -e 's,^libgnu_la-,,' -e 's,\\.[^.]*$,,'`.o; \
+	          gcc -DIN_LIBGETTEXTPO=1 -DOMIT_SETLOCALE_LOCK=1 -DHAVE_CONFIG_H -I. -I..  -I.. -I../src -I../src -I../../gettext-runtime/intl -I../../gettext-runtime/intl   -g -O2 -DIN_LIBGETTEXTPO=1 -DOMIT_SETLOCALE_LOCK=1 -DHAVE_CONFIG_H -w -c $sf || { rm -f config.h; exit 1; }; \
+	          sh ./exported.sh $of 1>&5; \
+	          rm -f $of `echo "$of" | sed -e 's,\\.o$,.lo,'`; \
+	          ;; \
+	      esac; \
+	    done; \
+	  } 5>&1 1>&2 \
+	    | sed -e 's,.* ,,' | grep -v '@' | LC_ALL=C sort | LC_ALL=C uniq \
+	    | sed -e 's,^obstack_free$,__obstack_free,' \
+	    | sed -e 's,^\(.*\)$,#define \1 libgettextpo_\1,' > config.h-t && \
+	  if test -f config.h; then \
+	    cat config.h-t >> config.h; \
+	    rm -f config.h-t; \
+	  else \
+	    rm -f config.h-t; \
+	    exit 1; \
+	  fi \
+	fi
+../src/read-catalog-abstract.c:263:17: error: call to undeclared function 'str_startswith'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  263 |              && str_startswith (s, catr->po_lex_isolate_start));
+      |                 ^
+1 error generated.
+make[2]: *** [config.h] Error 1
+make[2]: Target `all' not remade because of errors.
+Making all in po
+make[2]: Nothing to be done for `all'.
+Making all in its
+make[2]: Nothing to be done for `all'.
+Making all in projects
+make[2]: Nothing to be done for `all'.
+Making all in styles
+make[2]: Nothing to be done for `all'.
+Making all in wizard
+make[2]: Nothing to be done for `all'.
+Making all in autotools
+make[2]: Nothing to be done for `all'.
+Making all in misc
+make[2]: Nothing to be done for `all'.
+Making all in emacs
+if test 'no' != no; then \
+	  am__dir=. am__subdir_includes=''; \
+	  case start-po.elc in */*) \
+	    am__dir=`echo 'start-po.elc' | sed 's,/[^/]*$,,'`; \
+	    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+	  esac; \
+	  test -d "$am__dir" || .././../build-aux/install-sh -c -d "$am__dir" || exit 1; \
+	  no --batch \
+	      \
+	    $am__subdir_includes -L . -L . \
+	    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "start-po.elc")) (defun byte-compile-dest-file (_) "start-po.elc") )' \
+	    -f batch-byte-compile 'start-po.el'; \
+	else :; fi
+if test 'no' != no; then \
+	  am__dir=. am__subdir_includes=''; \
+	  case po-mode.elc in */*) \
+	    am__dir=`echo 'po-mode.elc' | sed 's,/[^/]*$,,'`; \
+	    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+	  esac; \
+	  test -d "$am__dir" || .././../build-aux/install-sh -c -d "$am__dir" || exit 1; \
+	  no --batch \
+	      \
+	    $am__subdir_includes -L . -L . \
+	    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "po-mode.elc")) (defun byte-compile-dest-file (_) "po-mode.elc") )' \
+	    -f batch-byte-compile 'po-mode.el'; \
+	else :; fi
+if test 'no' != no; then \
+	  am__dir=. am__subdir_includes=''; \
+	  case po-compat.elc in */*) \
+	    am__dir=`echo 'po-compat.elc' | sed 's,/[^/]*$,,'`; \
+	    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+	  esac; \
+	  test -d "$am__dir" || .././../build-aux/install-sh -c -d "$am__dir" || exit 1; \
+	  no --batch \
+	      \
+	    $am__subdir_includes -L . -L . \
+	    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "po-compat.elc")) (defun byte-compile-dest-file (_) "po-compat.elc") )' \
+	    -f batch-byte-compile 'po-compat.el'; \
+	else :; fi
+Making all in man
+make[2]: Nothing to be done for `all'.
+Making all in m4
+make[2]: Nothing to be done for `all'.
+Making all in tests
+Making all in gnulib-lib
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+make[4]: Nothing to be done for `all-am'.
+make[3]: Nothing to be done for `all-am'.
+Making all in system-tests
+make[2]: Nothing to be done for `all'.
+Making all in gnulib-tests
+## ---------------------------------------------------- ##
+## ------------------- Gnulib tests ------------------- ##
+## You can ignore compiler warnings in this directory.  ##
+## ---------------------------------------------------- ##
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
+Making all in .
+depbase=`echo endian.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -DIN_GETTEXT_TOOLS_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../gnulib-lib -I./../gnulib-lib -I../../gettext-runtime/intl  -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -g -O2 -MT endian.o -MD -MP -MF $depbase.Tpo -c -o endian.o endian.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+In file included from endian.c:22:
+In file included from ./endian.h:60:
+../gnulib-lib/byteswap.h:33:10: fatal error: 'stdbit.h' file not found
+   33 | #include <stdbit.h> /* for stdc_memreverse8u* */
+      |          ^~~~~~~~~~
+1 error generated.
+make[4]: *** [endian.o] Error 1
+depbase=`echo putenv.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -DIN_GETTEXT_TOOLS_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../gnulib-lib -I./../gnulib-lib -I../../gettext-runtime/intl  -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -g -O2 -MT putenv.o -MD -MP -MF $depbase.Tpo -c -o putenv.o putenv.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+putenv.c:127:13: error: use of undeclared identifier 'environ'
+  127 |   for (ep = environ; *ep; ep++)
+      |             ^~~~~~~
+putenv.c:137:26: error: use of undeclared identifier 'environ'
+  137 |       size_t size = ep - environ;
+      |                          ^~~~~~~
+putenv.c:142:32: error: use of undeclared identifier 'environ'
+  142 |       memcpy (new_environ + 1, environ, (size + 1) * sizeof *new_environ);
+      |                                ^~~~~~~
+putenv.c:145:7: error: use of undeclared identifier 'environ'
+  145 |       environ = new_environ;
+      |       ^~~~~~~
+4 errors generated.
+make[4]: *** [putenv.o] Error 1
+depbase=`echo random.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -DIN_GETTEXT_TOOLS_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../gnulib-lib -I./../gnulib-lib -I../../gettext-runtime/intl  -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -g -O2 -MT random.o -MD -MP -MF $depbase.Tpo -c -o random.o random.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+random.c:177:27: error: variable has incomplete type 'struct random_data'
+  177 | static struct random_data unsafe_state =
+      |                           ^
+random.c:177:15: note: forward declaration of 'struct random_data'
+  177 | static struct random_data unsafe_state =
+      |               ^
+random.c:228:10: error: call to undeclared function 'srandom_r'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  228 |   (void) __srandom_r (x, &unsafe_state);
+      |          ^
+random.c:58:22: note: expanded from macro '__srandom_r'
+   58 | # define __srandom_r srandom_r
+      |                      ^
+random.c:228:10: note: did you mean 'srandom'?
+random.c:58:22: note: expanded from macro '__srandom_r'
+   58 | # define __srandom_r srandom_r
+      |                      ^
+random.c:225:1: note: 'srandom' declared here
+  225 | __srandom (unsigned int x)
+      | ^
+  226 | {
+  227 |   __libc_lock_lock (lock);
+  228 |   (void) __srandom_r (x, &unsafe_state);
+      |          ~~~~~~~~~~~
+      |          srandom
+random.c:54:20: note: expanded from macro '__srandom'
+   54 | # define __srandom srandom
+      |                    ^
+random.c:253:13: error: call to undeclared function 'initstate_r'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  253 |   int ret = __initstate_r (seed, arg_state, n, &unsafe_state);
+      |             ^
+random.c:59:24: note: expanded from macro '__initstate_r'
+   59 | # define __initstate_r initstate_r
+      |                        ^
+random.c:253:13: note: did you mean 'initstate'?
+random.c:59:24: note: expanded from macro '__initstate_r'
+   59 | # define __initstate_r initstate_r
+      |                        ^
+random.c:247:1: note: 'initstate' declared here
+  247 | __initstate (unsigned int seed, char *arg_state, size_t n)
+      | ^
+  248 | {
+  249 |   __libc_lock_lock (lock);
+  250 | 
+  251 |   int32_t *ostate = &unsafe_state.state[-1];
+  252 | 
+  253 |   int ret = __initstate_r (seed, arg_state, n, &unsafe_state);
+      |             ~~~~~~~~~~~~~
+      |             initstate
+random.c:55:22: note: expanded from macro '__initstate'
+   55 | # define __initstate initstate
+      |                      ^
+random.c:271:1: error: conflicting types for 'setstate'
+  271 | __setstate (char *arg_state)
+      | ^
+random.c:56:21: note: expanded from macro '__setstate'
+   56 | # define __setstate setstate
+      |                     ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:264:30: note: previous declaration is here
+  264 | char *_LIBC_UNSAFE_INDEXABLE    setstate(const char *_LIBC_UNSAFE_INDEXABLE);
+      |                                 ^
+random.c:277:7: error: call to undeclared function 'setstate_r'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  277 |   if (__setstate_r (arg_state, &unsafe_state) < 0)
+      |       ^
+random.c:60:23: note: expanded from macro '__setstate_r'
+   60 | # define __setstate_r setstate_r
+      |                       ^
+random.c:277:7: note: did you mean 'setstate'?
+random.c:60:23: note: expanded from macro '__setstate_r'
+   60 | # define __setstate_r setstate_r
+      |                       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:264:30: note: 'setstate' declared here
+  264 | char *_LIBC_UNSAFE_INDEXABLE    setstate(const char *_LIBC_UNSAFE_INDEXABLE);
+      |                                 ^
+random.c:304:10: error: call to undeclared function 'random_r'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  304 |   (void) __random_r (&unsafe_state, &retval);
+      |          ^
+random.c:61:21: note: expanded from macro '__random_r'
+   61 | # define __random_r random_r
+      |                     ^
+6 errors generated.
+make[4]: *** [random.o] Error 1
+depbase=`echo random_r.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -DIN_GETTEXT_TOOLS_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../gnulib-lib -I./../gnulib-lib -I../../gettext-runtime/intl  -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -g -O2 -MT random_r.o -MD -MP -MF $depbase.Tpo -c -o random_r.o random_r.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+random_r.c:188:40: warning: declaration of 'struct random_data' will not be visible outside of this function [-Wvisibility]
+  188 | __srandom_r (unsigned int seed, struct random_data *buf)
+      |                                        ^
+random_r.c:192:17: error: incomplete definition of type 'struct random_data'
+  192 |   int type = buf->rand_type;
+      |              ~~~^
+random_r.c:188:40: note: forward declaration of 'struct random_data'
+  188 | __srandom_r (unsigned int seed, struct random_data *buf)
+      |                                        ^
+random_r.c:196:23: error: incomplete definition of type 'struct random_data'
+  196 |   int32_t *state = buf->state;
+      |                    ~~~^
+random_r.c:188:40: note: forward declaration of 'struct random_data'
+  188 | __srandom_r (unsigned int seed, struct random_data *buf)
+      |                                        ^
+random_r.c:206:15: error: incomplete definition of type 'struct random_data'
+  206 |   int kc = buf->rand_deg;
+      |            ~~~^
+random_r.c:188:40: note: forward declaration of 'struct random_data'
+  188 | __srandom_r (unsigned int seed, struct random_data *buf)
+      |                                        ^
+random_r.c:220:6: error: incomplete definition of type 'struct random_data'
+  220 |   buf->fptr = &state[buf->rand_sep];
+      |   ~~~^
+random_r.c:188:40: note: forward declaration of 'struct random_data'
+  188 | __srandom_r (unsigned int seed, struct random_data *buf)
+      |                                        ^
+random_r.c:220:25: error: incomplete definition of type 'struct random_data'
+  220 |   buf->fptr = &state[buf->rand_sep];
+      |                      ~~~^
+random_r.c:188:40: note: forward declaration of 'struct random_data'
+  188 | __srandom_r (unsigned int seed, struct random_data *buf)
+      |                                        ^
+random_r.c:221:6: error: incomplete definition of type 'struct random_data'
+  221 |   buf->rptr = &state[0];
+      |   ~~~^
+random_r.c:188:40: note: forward declaration of 'struct random_data'
+  188 | __srandom_r (unsigned int seed, struct random_data *buf)
+      |                                        ^
+random_r.c:226:14: error: call to undeclared function 'random_r'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  226 |       (void) __random_r (buf, &discard);
+      |              ^
+random_r.c:64:21: note: expanded from macro '__random_r'
+   64 | # define __random_r random_r
+      |                     ^
+random_r.c:226:14: note: did you mean 'srandom_r'?
+random_r.c:64:21: note: expanded from macro '__random_r'
+   64 | # define __random_r random_r
+      |                     ^
+random_r.c:188:1: note: 'srandom_r' declared here
+  188 | __srandom_r (unsigned int seed, struct random_data *buf)
+      | ^
+random_r.c:61:22: note: expanded from macro '__srandom_r'
+   61 | # define __srandom_r srandom_r
+      |                      ^
+random_r.c:251:23: warning: declaration of 'struct random_data' will not be visible outside of this function [-Wvisibility]
+  251 |                struct random_data *buf)
+      |                       ^
+random_r.c:256:27: error: incomplete definition of type 'struct random_data'
+  256 |   int32_t *old_state = buf->state;
+      |                        ~~~^
+random_r.c:251:23: note: forward declaration of 'struct random_data'
+  251 |                struct random_data *buf)
+      |                       ^
+random_r.c:259:25: error: incomplete definition of type 'struct random_data'
+  259 |       int old_type = buf->rand_type;
+      |                      ~~~^
+random_r.c:251:23: note: forward declaration of 'struct random_data'
+  251 |                struct random_data *buf)
+      |                       ^
+random_r.c:263:38: error: incomplete definition of type 'struct random_data'
+  263 |                   : (MAX_TYPES * (buf->rptr - old_state)) + old_type));
+      |                                   ~~~^
+random_r.c:251:23: note: forward declaration of 'struct random_data'
+  251 |                struct random_data *buf)
+      |                       ^
+random_r.c:282:6: error: incomplete definition of type 'struct random_data'
+  282 |   buf->rand_type = type;
+      |   ~~~^
+random_r.c:251:23: note: forward declaration of 'struct random_data'
+  251 |                struct random_data *buf)
+      |                       ^
+random_r.c:283:6: error: incomplete definition of type 'struct random_data'
+  283 |   buf->rand_sep = separation;
+      |   ~~~^
+random_r.c:251:23: note: forward declaration of 'struct random_data'
+  251 |                struct random_data *buf)
+      |                       ^
+random_r.c:284:6: error: incomplete definition of type 'struct random_data'
+  284 |   buf->rand_deg = degree;
+      |   ~~~^
+random_r.c:251:23: note: forward declaration of 'struct random_data'
+  251 |                struct random_data *buf)
+      |                       ^
+random_r.c:287:6: error: incomplete definition of type 'struct random_data'
+  287 |   buf->end_ptr = &state[degree];
+      |   ~~~^
+random_r.c:251:23: note: forward declaration of 'struct random_data'
+  251 |                struct random_data *buf)
+      |                       ^
+random_r.c:289:6: error: incomplete definition of type 'struct random_data'
+  289 |   buf->state = state;
+      |   ~~~^
+random_r.c:251:23: note: forward declaration of 'struct random_data'
+  251 |                struct random_data *buf)
+      |                       ^
+random_r.c:291:22: warning: incompatible pointer types passing 'struct random_data *' to parameter of type 'struct random_data *' [-Wincompatible-pointer-types]
+  291 |   __srandom_r (seed, buf);
+      |                      ^~~
+random_r.c:188:53: note: passing argument to parameter 'buf' here
+  188 | __srandom_r (unsigned int seed, struct random_data *buf)
+      |                                                     ^
+random_r.c:294:44: error: incomplete definition of type 'struct random_data'
+  294 |              type == TYPE_0 ? TYPE_0 : (buf->rptr - state) * MAX_TYPES + type);
+      |                                         ~~~^
+random_r.c:251:23: note: forward declaration of 'struct random_data'
+  251 |                struct random_data *buf)
+      |                       ^
+random_r.c:314:39: warning: declaration of 'struct random_data' will not be visible outside of this function [-Wvisibility]
+  314 | __setstate_r (char *arg_state, struct random_data *buf)
+      |                                       ^
+random_r.c:321:21: error: incomplete definition of type 'struct random_data'
+  321 |   int old_type = buf->rand_type;
+      |                  ~~~^
+random_r.c:314:39: note: forward declaration of 'struct random_data'
+  314 | __setstate_r (char *arg_state, struct random_data *buf)
+      |                                       ^
+random_r.c:322:27: error: incomplete definition of type 'struct random_data'
+  322 |   int32_t *old_state = buf->state;
+      |                        ~~~^
+random_r.c:314:39: note: forward declaration of 'struct random_data'
+  314 | __setstate_r (char *arg_state, struct random_data *buf)
+      |                                       ^
+random_r.c:326:34: error: incomplete definition of type 'struct random_data'
+  326 |               : (MAX_TYPES * (buf->rptr - old_state)) + old_type));
+      |                               ~~~^
+random_r.c:314:39: note: forward declaration of 'struct random_data'
+  314 | __setstate_r (char *arg_state, struct random_data *buf)
+      |                                       ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+4 warnings and 20 errors generated.
+make[4]: *** [random_r.o] Error 1
+depbase=`echo vma-iter.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -DEXEEXT=\"\" -I. -I..  -DIN_GETTEXT_TOOLS_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../gnulib-lib -I./../gnulib-lib -I../../gettext-runtime/intl  -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable -g -O2 -MT vma-iter.o -MD -MP -MF $depbase.Tpo -c -o vma-iter.o vma-iter.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+In file included from vma-iter.c:99:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/mach/mach.h:67:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/mach/mach_interface.h:43:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/mach/host_priv.h:6:
+../gnulib-lib/string.h:2391:21: error: redefinition of 'memrchr'
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+../gnulib-lib/string.h:2391:21: note: previous definition is here
+ 2391 | static inline void *memrchr(const void *s, int c, size_t n) {
+      |                     ^
+1 error generated.
+make[4]: *** [vma-iter.o] Error 1
+make[4]: *** No rule to make target `../gnulib-lib/libgettextlib.la', needed by `current-locale'.
+make[4]: Target `all-am' not remade because of errors.
+make[3]: *** [all-recursive] Error 1
+make[2]: *** [all] Error 2
+Making all in install-tests
+make[2]: Nothing to be done for `all'.
+Making all in examples
+Making all in po
+make[3]: Nothing to be done for `all'.
+make[3]: Nothing to be done for `all-am'.
+Making all in doc
+make[2]: Nothing to be done for `all'.
+make[2]: Nothing to be done for `all-am'.
+make[1]: *** [all-recursive] Error 1
+make: *** [all] Error 2

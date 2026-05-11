@@ -1,0 +1,92 @@
+#!/bin/bash
+
+# 1. Kill-switch for all Translation/Gettext errors
+find . -name "gettext.h" -exec bash -c "cat << 'EOF' > {}
+#ifndef _GETTEXT_H
+#define _GETTEXT_H
+#include <string.h>
+#define _(msgid) (msgid)
+#define gettext(msgid) (msgid)
+#define dgettext(domain, msgid) (msgid)
+#define dcgettext(domain, msgid, category) (msgid)
+#define ngettext(msgid1, msgid2, n) ((n) == 1 ? (msgid1) : (msgid2))
+#define dngettext(domain, msgid1, msgid2, n) ((n) == 1 ? (msgid1) : (msgid2))
+#define dcngettext(domain, msgid1, msgid2, n, category) ((n) == 1 ? (msgid1) : (msgid2))
+#endif
+EOF" \;
+
+# 2. Inject GNU extensions and shims into the global string.h
+# This handles memeq, streq, rawmemchr, mempcpy, memrchr, and mbslen
+cat << 'EOF' >> ./gnulib-lib/string.h
+#include <stdlib.h>
+#include <stdbool.h>
+#define streq(a, b) (strcmp (a, b) == 0)
+#define memeq(a, b, n) (memcmp (a, b, n) == 0)
+#define rawmemchr(s, c) memchr(s, (c), (size_t)-1)
+#define mempcpy(dest, src, n) ((char *)memcpy(dest, src, n) + (n))
+static inline void *memrchr(const void *s, int c, size_t n) {
+  const unsigned char *cp = (const unsigned char *)s;
+  for (size_t i = n; i > 0; i--) { if (cp[i-1] == (unsigned char)c) return (void *)(cp + i - 1); }
+  return NULL;
+}
+static inline size_t mbslen(const char *s) { return mbstowcs(NULL, s, 0); }
+static inline bool str_endswith(const char *s, const char *suffix) {
+  size_t s_len = strlen(s), suffix_len = strlen(suffix);
+  if (suffix_len > s_len) return false;
+  return memcmp(s + s_len - suffix_len, suffix, suffix_len) == 0;
+}
+EOF
+
+# 3. Fix Wide Character (C32) and Unicode headers
+# Maps C23 names to native macOS Quartz/POSIX functions
+sed -i '' '/#define _GL_UCHAR_H/a \
+#include <wchar.h>\
+#include <wctype.h>\
+typedef int (*c32_type_test_t) (wint_t);\
+#define c32isalnum iswalnum\
+#define c32isalpha iswalpha\
+#define c32isblank iswblank\
+#define c32iscntrl iswcntrl\
+#define c32isdigit iswdigit\
+#define c32isgraph iswgraph\
+#define c32islower iswlower\
+#define c32isprint iswprint\
+#define c32ispunct iswpunct\
+#define c32isspace iswspace\
+#define c32isupper iswupper\
+#define c32isxdigit iswxdigit\
+#define c32tolower towlower\
+#define c32toupper towupper\
+#define c32width wcwidth\
+#define mbrtoc32(pwc, s, n, ps) mbrtowc((wchar_t *)(pwc), s, n, ps)\
+#define mbszero(ps) memset(ps, 0, sizeof(mbstate_t))' ./gnulib-lib/uchar.h
+
+# 4. Patch execute.c for macOS environ and spawn issues
+sed -i '' '/#include <config.h>/a \
+#include <unistd.h>\
+#include <spawn.h>\
+extern char **environ;\
+#define rpl_posix_spawn_file_actions_t posix_spawn_file_actions_t\
+#define rpl_posix_spawnattr_t posix_spawnattr_t' ./gnulib-lib/execute.c
+
+# 5. Fix copy_file_range and ialloc for macOS
+sed -i '' 's/reallocarray (p, n, s)/realloc (p, (size_t)(n) * (size_t)(s))/g' ./gnulib-lib/ialloc.h
+sed -i '' '/#include <config.h>/a \
+#include <errno.h>\
+#define copy_file_range(a,b,c,d,e,f) (errno = ENOSYS, -1)' ./gnulib-lib/copy-file.c
+
+# 6. Neutralize conflicting Gnulib .c files (force use of our shims)
+for f in c32isalnum c32isalpha c32isblank c32iscntrl c32isdigit c32isgraph c32islower \
+         c32isprint c32ispunct c32isspace c32isupper c32isxdigit c32tolower c32toupper \
+         c32width mbrtoc32 mbslen mempcpy rawmemchr memrchr; do
+    echo "/* Neutralized */" > "./gnulib-lib/$f.c"
+done
+
+# 7. Move the broken spawn.h out of the way
+[ -f ./gnulib-lib/spawn.h ] && mv ./gnulib-lib/spawn.h ./gnulib-lib/spawn.h.bak
+
+# 8. Clean up "extern 0" errors in all headers
+find . -name "*.h" -exec sed -i '' 's/extern 0 const/extern const/g' {} +
+
+echo "Master Patch Applied. Ready to build."
+

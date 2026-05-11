@@ -1,0 +1,1 @@
+libgettextlib_la-mempcpy.lo: mempcpy.c

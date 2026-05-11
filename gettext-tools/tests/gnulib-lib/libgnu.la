@@ -1,0 +1,9 @@
+# libgnu.la - a libtool library file
+dlname=''
+library_names=''
+old_library=''
+current=0
+age=0
+revision=0
+installed=no
+shouldnotlink=no

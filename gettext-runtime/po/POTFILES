@@ -1,0 +1,6 @@
+     ../src/envsubst.c \
+     ../src/gettext.c \
+     ../src/ngettext.c \
+     ../src/printf-command.c \
+     ../src/printf_gettext.c \
+     ../src/printf_ngettext.c

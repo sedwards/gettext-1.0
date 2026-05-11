@@ -1,0 +1,1 @@
+libgettextlib_la-mbrtoc32.lo: mbrtoc32.c
