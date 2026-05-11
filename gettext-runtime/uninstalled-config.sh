@@ -45,7 +45,7 @@
 # Attention! This variable needs to be used _after_ the -I options that ensure
 # access to config.h (because INCINTL may contain a -I option that would allow
 # access to libintl's private config.h, which you should not use).
-if test no = yes; then
+if test yes = yes; then
   # The intl/ subdirectory contains the <libintl.h> that "make install" would
   # install.
   INCINTL="-I ${relative_builddir}/intl"
@@ -57,7 +57,7 @@ fi
 # LIBINTL is a set of compiler options, to use when linking without libtool,
 # that ensures that the library that contains the *gettext() family of functions
 # gets found.
-if test no = yes; then
+if test yes = yes; then
   if test 'yes' = yes; then
     # NB: This case is not supported on AIX and HP-UX.
     LIBINTL="${relative_builddir}/intl/.libs/libintl.so -Wl,-rpath,${relative_builddir}/intl/.libs  -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices"
@@ -72,7 +72,7 @@ fi
 # LTLIBINTL is a set of compiler options, to use when linking with libtool,
 # that ensures that the library that contains the *gettext() family of functions
 # gets found.
-if test no = yes; then
+if test yes = yes; then
   LTLIBINTL="${relative_builddir}/intl/libintl.la  -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices"
 else
   # The functionality is provided by libc.
@@ -82,7 +82,7 @@ fi
 # LIBINTL_DEP is a list of files, that can be used in Makefile dependency lists,
 # that indicate that binaries linked with LIBINTL or LTLIBINTL need to be
 # rebuilt.
-if test no = yes; then
+if test yes = yes; then
   LIBINTL_DEP="${relative_builddir}/intl/libintl.la"
 else
   LIBINTL_DEP=
@@ -92,11 +92,11 @@ fi
 
 # USE_NLS is 'yes' if the build is NLS enabled and therefore .po files should
 # be compiled and .mo files should be installed. It is 'no' otherwise.
-USE_NLS='no'
+USE_NLS='yes'
 
 # POSUB is 'po' if the build is NLS enabled and therefore the build needs to
 # recurse into the 'po' directory. It is empty otherwise.
-POSUB=''
+POSUB='po'
 
 # XGETTEXT is a GNU xgettext version ≥ 0.12, if found in $PATH, or ':' if
 # not found.

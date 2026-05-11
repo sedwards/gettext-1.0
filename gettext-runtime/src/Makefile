@@ -18,58 +18,58 @@
 
 
 am__is_gnu_make = { \
-	if test -z '$(MAKELEVEL)'; then \
-	false; \
-	elif test -n '$(MAKE_HOST)'; then \
-	true; \
-	elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
-	true; \
-	else \
-	false; \
-	fi; \
+  if test -z '$(MAKELEVEL)'; then \
+    false; \
+  elif test -n '$(MAKE_HOST)'; then \
+    true; \
+  elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
+    true; \
+  else \
+    false; \
+  fi; \
 }
 am__make_running_with_option = \
-	case $${target_option-} in \
-	  ?) ;; \
-	  *) echo "am__make_running_with_option: internal error: invalid" \
-	          "target option '$${target_option-}' specified" >&2; \
-	     exit 1;; \
-	esac; \
-	has_opt=no; \
-	sane_makeflags=$$MAKEFLAGS; \
-	if $(am__is_gnu_make); then \
-	sane_makeflags=$$MFLAGS; \
-	else \
-	case $$MAKEFLAGS in \
-	  *\\[\ \	]*) \
-	    bs=\\; \
-	    sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
-	      | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
-	esac; \
-	fi; \
-	skip_next=no; \
-	strip_trailopt () \
+  case $${target_option-} in \
+      ?) ;; \
+      *) echo "am__make_running_with_option: internal error: invalid" \
+              "target option '$${target_option-}' specified" >&2; \
+         exit 1;; \
+  esac; \
+  has_opt=no; \
+  sane_makeflags=$$MAKEFLAGS; \
+  if $(am__is_gnu_make); then \
+    sane_makeflags=$$MFLAGS; \
+  else \
+    case $$MAKEFLAGS in \
+      *\\[\ \	]*) \
+        bs=\\; \
+        sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
+          | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
+    esac; \
+  fi; \
+  skip_next=no; \
+  strip_trailopt () \
   { \
-	flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
+    flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
   }; \
-	for flg in $$sane_makeflags; do \
-	test $$skip_next = yes && { skip_next=no; continue; }; \
-	case $$flg in \
-	  *=*|--*) continue;; \
-	    -*I) strip_trailopt 'I'; skip_next=yes;; \
-	  -*I?*) strip_trailopt 'I';; \
-	    -*O) strip_trailopt 'O'; skip_next=yes;; \
-	  -*O?*) strip_trailopt 'O';; \
-	    -*l) strip_trailopt 'l'; skip_next=yes;; \
-	  -*l?*) strip_trailopt 'l';; \
-	  -[dEDm]) skip_next=yes;; \
-	  -[JT]) skip_next=yes;; \
-	esac; \
-	case $$flg in \
-	  *$$target_option*) has_opt=yes; break;; \
-	esac; \
-	done; \
-	test $$has_opt = yes
+  for flg in $$sane_makeflags; do \
+    test $$skip_next = yes && { skip_next=no; continue; }; \
+    case $$flg in \
+      *=*|--*) continue;; \
+        -*I) strip_trailopt 'I'; skip_next=yes;; \
+      -*I?*) strip_trailopt 'I';; \
+        -*O) strip_trailopt 'O'; skip_next=yes;; \
+      -*O?*) strip_trailopt 'O';; \
+        -*l) strip_trailopt 'l'; skip_next=yes;; \
+      -*l?*) strip_trailopt 'l';; \
+      -[dEDm]) skip_next=yes;; \
+      -[JT]) skip_next=yes;; \
+    esac; \
+    case $$flg in \
+      *$$target_option*) has_opt=yes; break;; \
+    esac; \
+  done; \
+  test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
 am__rm_f = rm -f $(am__rm_f_notfound)
@@ -90,8 +90,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = aarch64-apple-darwin25.4.0
-host_triplet = aarch64-apple-darwin25.4.0
+build_triplet = aarch64-apple-darwin
+host_triplet = aarch64-apple-darwin
 bin_PROGRAMS = gettext$(EXEEXT) ngettext$(EXEEXT) \
 	printf_gettext$(EXEEXT) printf_ngettext$(EXEEXT) \
 	envsubst$(EXEEXT)
@@ -379,29 +379,29 @@ printf_ngettext_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(LDFLAGS) -o $@
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
-	$(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
-	*) f=$$p;; \
-	esac;
+    $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
+    *) f=$$p;; \
+  esac;
 am__strip_dir = f=`echo $$p | sed -e 's|^.*/||'`;
 am__install_max = 40
 am__nobase_strip_setup = \
-	srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
+  srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
 am__nobase_strip = \
-	for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
+  for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
 am__nobase_list = $(am__nobase_strip_setup); \
-	for p in $$list; do echo "$$p $$p"; done | \
-	sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
-	$(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
-	if (++n[$$2] == $(am__install_max)) \
-	  { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
-	END { for (dir in files) print dir, files[dir] }'
+  for p in $$list; do echo "$$p $$p"; done | \
+  sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
+  $(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
+    if (++n[$$2] == $(am__install_max)) \
+      { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
+    END { for (dir in files) print dir, files[dir] }'
 am__base_list = \
-	sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
-	sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+  sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
+  sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 am__uninstall_files_from_dir = { \
   { test ! -d "$$dir" && test ! -f "$$dir" && test ! -r "$$dir"; } \
   || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
-	   $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
+       $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
   }
 SCRIPTS = $(bin_SCRIPTS)
 AM_V_P = $(am__v_P_$(V))
@@ -450,27 +450,27 @@ DIST_SOURCES = $(libgrtsrc_a_SOURCES) $(envsubst_SOURCES) \
 	$(gettext_SOURCES) $(ngettext_SOURCES) \
 	$(printf_gettext_SOURCES) $(printf_ngettext_SOURCES)
 am__can_run_installinfo = \
-	case $$AM_UPDATE_INFO_DIR in \
-	n|no|NO) false;; \
-	*) (install-info --version) >/dev/null 2>&1;; \
-	esac
+  case $$AM_UPDATE_INFO_DIR in \
+    n|no|NO) false;; \
+    *) (install-info --version) >/dev/null 2>&1;; \
+  esac
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 # Read a list of newline-separated strings from the standard input,
 # and print each of them once, without duplicates.  Input order is
 # *not* preserved.
 am__uniquify_input = $(AWK) '\
-	BEGIN { nonempty = 0; } \
+  BEGIN { nonempty = 0; } \
   { items[$$0] = 1; nonempty = 1; } \
-	END { if (nonempty) { for (i in items) print i; }; } \
+  END { if (nonempty) { for (i in items) print i; }; } \
 '
 # Make sure the list of sources is unique.  This is necessary because,
 # e.g., the same source file might be shared among _SOURCES variables
 # for different programs/libraries.
 am__define_uniq_tagged_files = \
-	list='$(am__tagged_files)'; \
-	unique=`for i in $$list; do \
-	if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
-	done | $(am__uniquify_input)`
+  list='$(am__tagged_files)'; \
+  unique=`for i in $$list; do \
+    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+  done | $(am__uniquify_input)`
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/gettext.sh.in \
 	$(top_srcdir)/../build-aux/depcomp \
 	$(top_srcdir)/../build-aux/mkinstalldirs
@@ -501,20 +501,20 @@ BUILDD = no
 BUILDJAVA = no
 BUILDMODULA2 = no
 CAN_PRINT_STACK_TRACE = 0
-CATOBJEXT = 
+CATOBJEXT = .gmo
 CC = gcc
 CCDEPMODE = depmode=none
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CLASSPATH = 
-CLASSPATH_SEPARATOR = :
+CLASSPATH_SEPARATOR = 
 CONF_JAVAC = 
 CPP = gcc -E
 CPPFLAGS = 
 CROSS_COMPILING = no
 CSCOPE = cscope
 CSHARPCOMPFLAGS = -O -g
-CSHARP_CHOICE = any
+CSHARP_CHOICE = no
 CTAGS = ctags
 CXX = g++
 CXXCPP = g++ -E
@@ -534,7 +534,7 @@ DFLAGS =
 DLLTOOL = false
 DSYMUTIL = dsymutil
 DUMPBIN = 
-D_CHOICE = yes
+D_CHOICE = no
 ECHO_C = \c
 ECHO_N = 
 ECHO_T = 
@@ -1428,7 +1428,7 @@ HAVE_ISWBLANK = 1
 HAVE_ISWCNTRL = 1
 HAVE_JAVAC = 
 HAVE_JAVAC_ENVVAR = 
-HAVE_JAVAC_IN_PATH = yes
+HAVE_JAVAC_IN_PATH = 
 HAVE_LCHMOD = 1
 HAVE_LCHOWN = 1
 HAVE_LDEXPF = 1
@@ -1714,7 +1714,7 @@ ICONV_H = iconv.h
 INCLUDE_NEXT = include_next
 INCLUDE_NEXT_AS_FIRST_DIRECTIVE = include_next
 INSTALL = /usr/bin/install -c
-INSTALLED_LIBINTL = 
+INSTALLED_LIBINTL = -lintl  -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices 
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_PROGRAM_ENV = 
@@ -1724,15 +1724,15 @@ INT32_MAX_LT_INTMAX_MAX = 1
 INT64_MAX_EQ_LONG_MAX = defined _LP64
 INTL_MACOSX_LIBS = -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 ISINF_LIBM = 
-JAR = jar
-JAVA_CHOICE = yes
+JAR = 
+JAVA_CHOICE = no
 LD = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
 LDFLAGS = 
 LIBDL = 
 LIBGRT_LIBDEPS =  
 LIBGRT_LTLIBDEPS =  
 LIBICONV = 
-LIBINTL = 
+LIBINTL = ${top_builddir}/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 LIBMULTITHREAD = -lpthread
 LIBOBJS = 
 LIBPMULTITHREAD = -lpthread
@@ -1763,7 +1763,7 @@ LOCALE_FR = fr_FR.ISO8859-1
 LOCALE_JA = ja_JP.eucJP
 LOCALE_ZH_CN = zh_CN.GB18030
 LTLIBICONV = 
-LTLIBINTL = 
+LTLIBINTL = ${top_builddir}/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 LTLIBMULTITHREAD = -lpthread
 LTLIBOBJS = 
 LTLIBTHREAD = 
@@ -1775,7 +1775,7 @@ MAKEINFO = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' m
 MANIFEST_TOOL = :
 MBRTOWC_LIB = 
 MKDIR_P = .././../build-aux/install-sh -c -d
-MODULA2_CHOICE = yes
+MODULA2_CHOICE = no
 MSGFMT = :
 MSGMERGE = :
 MSGMERGE_FOR_MSGFMT_OPTION = --no-location --quiet
@@ -1854,7 +1854,7 @@ PACKAGE_URL =
 PACKAGE_VERSION = 1.0
 PATH_SEPARATOR = :
 PERL = /usr/bin/perl
-POSUB = 
+POSUB = po
 PRAGMA_COLUMNS = 
 PRAGMA_SYSTEM_HEADER = #pragma GCC system_header
 PRIPTR_PREFIX = __PRIPTR_PREFIX
@@ -2272,8 +2272,8 @@ UNISTD_H_DEFINES_STRUCT_TIMESPEC = 0
 UNISTD_H_HAVE_SYS_RANDOM_H = 0
 UNISTD_H_HAVE_WINSOCK2_H = 0
 UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS = 0
-USE_INCLUDED_LIBINTL = no
-USE_NLS = no
+USE_INCLUDED_LIBINTL = yes
+USE_NLS = yes
 VALUE_OF_LC_ALL = 
 VALUE_OF_LC_COLLATE = 
 VALUE_OF_LC_CTYPE = 
@@ -2312,10 +2312,10 @@ am__xargs_n = xargs -n
 bindir = ${exec_prefix}/bin
 bindir_c = "/Users/sedwards/gtk/bin"
 bindir_c_make = \"$(bindir)\"
-build = aarch64-apple-darwin25.4.0
-build_alias = 
+build = aarch64-apple-darwin
+build_alias = arm64-apple-darwin
 build_cpu = aarch64
-build_os = darwin25.4.0
+build_os = darwin
 build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
@@ -2336,10 +2336,10 @@ gltests_WITNESS = IN_GETTEXT_RUNTIME_GNULIB_TESTS
 gltests_libgrt_LIBOBJDEPS = 
 gltests_libgrt_LIBOBJS = 
 gltests_libgrt_LTLIBOBJS = 
-host = aarch64-apple-darwin25.4.0
-host_alias = 
+host = aarch64-apple-darwin
+host_alias = arm64-apple-darwin
 host_cpu = aarch64
-host_os = darwin25.4.0
+host_os = darwin
 host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
@@ -2397,12 +2397,12 @@ envsubst_SOURCES = envsubst.c
 
 # libgrtsrc contains all code that is needed by at least two programs.
 libgrtsrc_a_SOURCES = \
-	printf-command.h printf-command.c
+  printf-command.h printf-command.c
 
 
 # Link dependencies.
 # Need  because striconv.c uses iconv().
-LDADD = libgrtsrc.a ../gnulib-lib/libgrt.a   $(WOE32_LDADD)
+LDADD = libgrtsrc.a ../gnulib-lib/libgrt.a ${top_builddir}/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices  $(WOE32_LDADD)
 
 # Specify installation directory, for --enable-relocatable.
 gettext_CFLAGS = -DINSTALLDIR=$(bindir_c_make)

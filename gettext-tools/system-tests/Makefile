@@ -83,20 +83,20 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = aarch64-apple-darwin25.4.0
-host_triplet = aarch64-apple-darwin25.4.0
-check_PROGRAMS = testlocale$(EXEEXT) \
-	intl-1-prg$(EXEEXT) \
-	intl-3-prg$(EXEEXT) \
-	intl-4-prg$(EXEEXT) \
-	intl-5-prg$(EXEEXT) \
-	intl-setlocale-1-prg$(EXEEXT) \
-	intl-setlocale-2-prg$(EXEEXT) \
-	intl-thread-1-prg$(EXEEXT) \
-	intl-thread-2-prg$(EXEEXT) \
-	intl-thread-3-prg$(EXEEXT) \
-	cake$(EXEEXT) fc3$(EXEEXT) \
-	fc4$(EXEEXT) fc5$(EXEEXT)
+build_triplet = aarch64-apple-darwin
+host_triplet = aarch64-apple-darwin
+#check_PROGRAMS = testlocale$(EXEEXT) \
+#	intl-1-prg$(EXEEXT) \
+#	intl-3-prg$(EXEEXT) \
+#	intl-4-prg$(EXEEXT) \
+#	intl-5-prg$(EXEEXT) \
+#	intl-setlocale-1-prg$(EXEEXT) \
+#	intl-setlocale-2-prg$(EXEEXT) \
+#	intl-thread-1-prg$(EXEEXT) \
+#	intl-thread-2-prg$(EXEEXT) \
+#	intl-thread-3-prg$(EXEEXT) \
+#	cake$(EXEEXT) fc3$(EXEEXT) \
+#	fc4$(EXEEXT) fc5$(EXEEXT)
 subdir = system-tests
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
@@ -509,7 +509,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__cake_SOURCES_DIST = plural-1-prg.c
-am_cake_OBJECTS = plural-1-prg.$(OBJEXT)
+#am_cake_OBJECTS = plural-1-prg.$(OBJEXT)
 cake_OBJECTS = $(am_cake_OBJECTS)
 cake_LDADD = $(LDADD)
 AM_V_lt = $(am__v_lt_$(V))
@@ -517,49 +517,49 @@ am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 am__v_lt_1 = 
 am__fc3_SOURCES_DIST = format-c-3-prg.c
-am_fc3_OBJECTS = format-c-3-prg.$(OBJEXT)
+#am_fc3_OBJECTS = format-c-3-prg.$(OBJEXT)
 fc3_OBJECTS = $(am_fc3_OBJECTS)
 fc3_LDADD = $(LDADD)
 am__fc4_SOURCES_DIST = format-c-4-prg.c
-am_fc4_OBJECTS = format-c-4-prg.$(OBJEXT)
+#am_fc4_OBJECTS = format-c-4-prg.$(OBJEXT)
 fc4_OBJECTS = $(am_fc4_OBJECTS)
 fc4_LDADD = $(LDADD)
 am__fc5_SOURCES_DIST = format-c-5-prg.c
-am_fc5_OBJECTS = format-c-5-prg.$(OBJEXT)
+#am_fc5_OBJECTS = format-c-5-prg.$(OBJEXT)
 fc5_OBJECTS = $(am_fc5_OBJECTS)
 fc5_LDADD = $(LDADD)
 am__intl_1_prg_SOURCES_DIST = intl-1-prg.c
-am_intl_1_prg_OBJECTS =  \
-	intl-1-prg.$(OBJEXT)
+#am_intl_1_prg_OBJECTS =  \
+#	intl-1-prg.$(OBJEXT)
 intl_1_prg_OBJECTS = $(am_intl_1_prg_OBJECTS)
 intl_1_prg_LDADD = $(LDADD)
 am__intl_3_prg_SOURCES_DIST = intl-3-prg.c
-am_intl_3_prg_OBJECTS =  \
-	intl-3-prg.$(OBJEXT)
+#am_intl_3_prg_OBJECTS =  \
+#	intl-3-prg.$(OBJEXT)
 intl_3_prg_OBJECTS = $(am_intl_3_prg_OBJECTS)
 intl_3_prg_LDADD = $(LDADD)
 am__intl_4_prg_SOURCES_DIST = intl-4-prg.c
-am_intl_4_prg_OBJECTS =  \
-	intl-4-prg.$(OBJEXT)
+#am_intl_4_prg_OBJECTS =  \
+#	intl-4-prg.$(OBJEXT)
 intl_4_prg_OBJECTS = $(am_intl_4_prg_OBJECTS)
 intl_4_prg_LDADD = $(LDADD)
 am__intl_5_prg_SOURCES_DIST = intl-5-prg.c
-am_intl_5_prg_OBJECTS =  \
-	intl-5-prg.$(OBJEXT)
+#am_intl_5_prg_OBJECTS =  \
+#	intl-5-prg.$(OBJEXT)
 intl_5_prg_OBJECTS = $(am_intl_5_prg_OBJECTS)
 intl_5_prg_LDADD = $(LDADD)
 am__intl_setlocale_1_prg_SOURCES_DIST = intl-setlocale-1-prg.c
-am_intl_setlocale_1_prg_OBJECTS =  \
-	intl-setlocale-1-prg.$(OBJEXT)
+#am_intl_setlocale_1_prg_OBJECTS =  \
+#	intl-setlocale-1-prg.$(OBJEXT)
 intl_setlocale_1_prg_OBJECTS = $(am_intl_setlocale_1_prg_OBJECTS)
 intl_setlocale_1_prg_LDADD = $(LDADD)
 am__intl_setlocale_2_prg_SOURCES_DIST = intl-setlocale-2-prg.c
-am_intl_setlocale_2_prg_OBJECTS =  \
-	intl-setlocale-2-prg.$(OBJEXT)
+#am_intl_setlocale_2_prg_OBJECTS =  \
+#	intl-setlocale-2-prg.$(OBJEXT)
 intl_setlocale_2_prg_OBJECTS = $(am_intl_setlocale_2_prg_OBJECTS)
 intl_setlocale_2_prg_LDADD = $(LDADD)
 am__intl_thread_1_prg_SOURCES_DIST = intl-thread-1-prg.c
-am_intl_thread_1_prg_OBJECTS = intl_thread_1_prg-intl-thread-1-prg.$(OBJEXT)
+#am_intl_thread_1_prg_OBJECTS = intl_thread_1_prg-intl-thread-1-prg.$(OBJEXT)
 intl_thread_1_prg_OBJECTS = $(am_intl_thread_1_prg_OBJECTS)
 intl_thread_1_prg_DEPENDENCIES =
 intl_thread_1_prg_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
@@ -567,7 +567,7 @@ intl_thread_1_prg_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(intl_thread_1_prg_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) \
 	-o $@
 am__intl_thread_2_prg_SOURCES_DIST = intl-thread-2-prg.c
-am_intl_thread_2_prg_OBJECTS = intl_thread_2_prg-intl-thread-2-prg.$(OBJEXT)
+#am_intl_thread_2_prg_OBJECTS = intl_thread_2_prg-intl-thread-2-prg.$(OBJEXT)
 intl_thread_2_prg_OBJECTS = $(am_intl_thread_2_prg_OBJECTS)
 intl_thread_2_prg_DEPENDENCIES =
 intl_thread_2_prg_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
@@ -575,7 +575,7 @@ intl_thread_2_prg_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(intl_thread_2_prg_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) \
 	-o $@
 am__intl_thread_3_prg_SOURCES_DIST = intl-thread-3-prg.c
-am_intl_thread_3_prg_OBJECTS = intl_thread_3_prg-intl-thread-3-prg.$(OBJEXT)
+#am_intl_thread_3_prg_OBJECTS = intl_thread_3_prg-intl-thread-3-prg.$(OBJEXT)
 intl_thread_3_prg_OBJECTS = $(am_intl_thread_3_prg_OBJECTS)
 intl_thread_3_prg_DEPENDENCIES =
 intl_thread_3_prg_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
@@ -583,8 +583,8 @@ intl_thread_3_prg_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(intl_thread_3_prg_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) \
 	-o $@
 am__testlocale_SOURCES_DIST = testlocale.c
-am_testlocale_OBJECTS =  \
-	testlocale.$(OBJEXT)
+#am_testlocale_OBJECTS =  \
+#	testlocale.$(OBJEXT)
 testlocale_OBJECTS = $(am_testlocale_OBJECTS)
 testlocale_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_$(V))
@@ -825,18 +825,18 @@ case "$@" in						\
 esac;							\
 test "x$$am__odir" = x"." || test -d "$$am__odir" 	\
   || $(MKDIR_P) "$$am__odir" || exit $$?;		\
-if test -f "./$$f"; then dir=./;			\
+# if test -f "./$$f"; then dir=./;			\
 elif test -f "$$f"; then dir=;				\
-else dir="$(srcdir)/"; fi;				\
+# else dir="$(srcdir)/"; fi;				\
 tst=$$dir$$f; log='$@'; 				\
-if test -n '$(IGNORE_SKIPPED_LOGS)'; then		\
+# if test -n '$(IGNORE_SKIPPED_LOGS)'; then		\
   am__collect_skipped_logs='--collect-skipped-logs no';	\
-else							\
+# else							\
   am__collect_skipped_logs='';				\
 fi;							\
-if test -n '$(DISABLE_HARD_ERRORS)'; then		\
+# if test -n '$(DISABLE_HARD_ERRORS)'; then		\
   am__enable_hard_errors=no; 				\
-else							\
+# else							\
   am__enable_hard_errors=yes; 				\
 fi; 							\
 case " $(XFAIL_TESTS) " in				\
@@ -907,8 +907,8 @@ AUTOCONF = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' a
 AUTOHEADER = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' autoheader
 AUTOMAKE = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' automake-1.18
 AWK = awk
-BISON_LOCALEDIR = 
-BISON_LOCALEDIR_c = ""
+BISON_LOCALEDIR = /usr/share/locale
+BISON_LOCALEDIR_c = "/usr/share/locale"
 BISON_LOCALEDIR_c_make = \"$(BISON_LOCALEDIR)\"
 BITSIZEOF_PTRDIFF_T = 
 BITSIZEOF_SIG_ATOMIC_T = 
@@ -919,15 +919,15 @@ BUILDCSHARP = no
 BUILDD = no
 BUILDJAVA = no
 BUILDMODULA2 = no
-BYTESWAP_H = @BYTESWAP_H@
+BYTESWAP_H = 
 CAN_PRINT_STACK_TRACE = 0
-CATOBJEXT = 
+CATOBJEXT = .gmo
 CC = gcc
 CCDEPMODE = depmode=none
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CLASSPATH = 
-CLASSPATH_SEPARATOR = :
+CLASSPATH_SEPARATOR = 
 CLIX_PATH = 
 CLIX_PATH_VAR = 
 CLOCK_TIME_LIB = @CLOCK_TIME_LIB@
@@ -938,7 +938,7 @@ CPPFLAGS =
 CROSS_COMPILING = no
 CSCOPE = cscope
 CSHARPCOMPFLAGS = -O -g
-CSHARP_CHOICE = any
+CSHARP_CHOICE = no
 CTAGS = ctags
 CXX = g++
 CXXCPP = g++ -E
@@ -963,14 +963,14 @@ DLLTOOL = false
 DSYMUTIL = dsymutil
 DUMPBIN = 
 DVIPS = /Users/sedwards/gtk/source/gettext-1.0/build-aux/missing dvips
-D_CHOICE = yes
+D_CHOICE = no
 ECHO_C = \c
 ECHO_N = 
 ECHO_T = 
 EGREP = /usr/bin/grep -E
 EMACS = no
 EMACSLOADPATH = 
-ENDIAN_H = @ENDIAN_H@
+ENDIAN_H = 
 ENDIAN_H_JUST_MISSING_STDINT = @ENDIAN_H_JUST_MISSING_STDINT@
 ERRNO_H = 
 ETAGS = etags
@@ -979,12 +979,12 @@ FGREP = /usr/bin/grep -F
 FILECMD = file
 FILE_HAS_ACL_LIB = @FILE_HAS_ACL_LIB@
 FLOAT_H = float.h
-FNMATCH_H = @FNMATCH_H@
+FNMATCH_H = 
 FOREIGN_WARN_CFLAGS = 
 GETADDRINFO_LIB = @GETADDRINFO_LIB@
 GETLOCALENAME_L_LIB = @GETLOCALENAME_L_LIB@
-GETOPT_CDEFS_H = @GETOPT_CDEFS_H@
-GETOPT_H = @GETOPT_H@
+GETOPT_CDEFS_H = 
+GETOPT_H = 
 GETRANDOM_LIB = @GETRANDOM_LIB@
 GETTEXT_MACRO_VERSION = 0.24
 GLIBC2 = no
@@ -3005,7 +3005,7 @@ HAVE_ACOSL = 1
 HAVE_ALIGNED_ALLOC = 1
 HAVE_ALLOCA_H = 1
 HAVE_ALPHASORT = @HAVE_ALPHASORT@
-HAVE_ARPA_INET_H = @HAVE_ARPA_INET_H@
+HAVE_ARPA_INET_H = 
 HAVE_ASINF = 1
 HAVE_ASINL = 1
 HAVE_ATAN2F = 1
@@ -3119,7 +3119,7 @@ HAVE_DECL_UNSETENV = 1
 HAVE_DECL_VSNPRINTF = 1
 HAVE_DECL_WCSDUP = 1
 HAVE_DECL_WCWIDTH = 1
-HAVE_DIRENT_H = @HAVE_DIRENT_H@
+HAVE_DIRENT_H = 
 HAVE_DOTNET = 
 HAVE_DOTNET_CSC = 
 HAVE_DOTNET_IN_PATH = 
@@ -3127,7 +3127,7 @@ HAVE_DOTNET_SDK =
 HAVE_DPRINTF = 1
 HAVE_DUP3 = 1
 HAVE_DUPLOCALE = 1
-HAVE_ENDIAN_H = @HAVE_ENDIAN_H@
+HAVE_ENDIAN_H = 
 HAVE_ERROR = 0
 HAVE_ERROR_AT_LINE = 0
 HAVE_ERROR_H = 0
@@ -3160,7 +3160,7 @@ HAVE_FMAL = 1
 HAVE_FMODF = 1
 HAVE_FMODL = 1
 HAVE_FNMATCH = @HAVE_FNMATCH@
-HAVE_FNMATCH_H = @HAVE_FNMATCH_H@
+HAVE_FNMATCH_H = 
 HAVE_FREELOCALE = 1
 HAVE_FREXPF = 1
 HAVE_FSEEKO = 1
@@ -3175,7 +3175,7 @@ HAVE_GETGROUPS = 1
 HAVE_GETHOSTNAME = 1
 HAVE_GETLOCALENAME_L = 1
 HAVE_GETLOGIN = 1
-HAVE_GETOPT_H = @HAVE_GETOPT_H@
+HAVE_GETOPT_H = 
 HAVE_GETPAGESIZE = 1
 HAVE_GETPASS = 1
 HAVE_GETPAYLOAD = 1
@@ -3221,10 +3221,10 @@ HAVE_ISXDIGIT_L = @HAVE_ISXDIGIT_L@
 HAVE_JAVA = 
 HAVE_JAVAC = 
 HAVE_JAVAC_ENVVAR = 
-HAVE_JAVAC_IN_PATH = yes
+HAVE_JAVAC_IN_PATH = 
 HAVE_JAVAEXEC = 
 HAVE_JAVA_ENVVAR = 
-HAVE_JAVA_IN_PATH = yes
+HAVE_JAVA_IN_PATH = 
 HAVE_JRE = 
 HAVE_JRE_IN_PATH = 
 HAVE_LANGINFO_ABALTMON = 0
@@ -3286,8 +3286,8 @@ HAVE_MONO =
 HAVE_MONO_IN_PATH = 
 HAVE_MSVC_INVALID_PARAMETER_HANDLER = 0
 HAVE_NANOSLEEP = 1
-HAVE_NETDB_H = @HAVE_NETDB_H@
-HAVE_NETINET_IN_H = @HAVE_NETINET_IN_H@
+HAVE_NETDB_H = 
+HAVE_NETINET_IN_H = 
 HAVE_NEWLOCALE = 1
 HAVE_NL_LANGINFO = 1
 HAVE_OFF64_T = 0
@@ -3423,10 +3423,10 @@ HAVE_SINF = 1
 HAVE_SINHF = 1
 HAVE_SINL = 1
 HAVE_SLEEP = 1
-HAVE_SPAWN_H = @HAVE_SPAWN_H@
+HAVE_SPAWN_H = 
 HAVE_SQRTF = 1
 HAVE_SQRTL = 1
-HAVE_STDBIT_H = @HAVE_STDBIT_H@
+HAVE_STDBIT_H = 
 HAVE_STDCKDINT_H = 1
 HAVE_STDCOUNTOF_H = 1
 HAVE_STDINT_H = 1
@@ -3459,19 +3459,19 @@ HAVE_SYMLINK = 1
 HAVE_SYMLINKAT = 1
 HAVE_SYS_BITYPES_H = 0
 HAVE_SYS_CDEFS_H = 0
-HAVE_SYS_ENDIAN_H = @HAVE_SYS_ENDIAN_H@
+HAVE_SYS_ENDIAN_H = 
 HAVE_SYS_INTTYPES_H = 0
-HAVE_SYS_IOCTL_H = @HAVE_SYS_IOCTL_H@
+HAVE_SYS_IOCTL_H = 
 HAVE_SYS_LOADAVG_H = 0
 HAVE_SYS_PARAM_H = 0
 HAVE_SYS_PROCESS_H = 0
-HAVE_SYS_RANDOM_H = @HAVE_SYS_RANDOM_H@
-HAVE_SYS_RESOURCE_H = @HAVE_SYS_RESOURCE_H@
-HAVE_SYS_SELECT_H = @HAVE_SYS_SELECT_H@
-HAVE_SYS_SOCKET_H = @HAVE_SYS_SOCKET_H@
-HAVE_SYS_TIME_H = @HAVE_SYS_TIME_H@
+HAVE_SYS_RANDOM_H = 
+HAVE_SYS_RESOURCE_H = 
+HAVE_SYS_SELECT_H = 
+HAVE_SYS_SOCKET_H = 
+HAVE_SYS_TIME_H = 
 HAVE_SYS_TYPES_H = 1
-HAVE_SYS_UIO_H = @HAVE_SYS_UIO_H@
+HAVE_SYS_UIO_H = 
 HAVE_TANF = 1
 HAVE_TANHF = 1
 HAVE_TANL = 1
@@ -3497,7 +3497,7 @@ HAVE_UNLOCKPT = 1
 HAVE_USLEEP = 1
 HAVE_UTIME = @HAVE_UTIME@
 HAVE_UTIMENSAT = 1
-HAVE_UTIME_H = @HAVE_UTIME_H@
+HAVE_UTIME_H = 
 HAVE_VASPRINTF = 1
 HAVE_VDPRINTF = 1
 HAVE_VISIBILITY = 1
@@ -3546,7 +3546,7 @@ HAVE_WORKING_C32RTOMB = 0
 HAVE_WORKING_CXX_STDCKDINT_H = 1
 HAVE_WORKING_C_STDCKDINT_H = 1
 HAVE_WORKING_MBRTOC32 = 0
-HAVE_WS2TCPIP_H = @HAVE_WS2TCPIP_H@
+HAVE_WS2TCPIP_H = 
 HAVE_XLOCALE_H = 1
 HAVE__EXIT = 1
 HOSTENT_LIB = @HOSTENT_LIB@
@@ -3560,7 +3560,7 @@ INCLUDE_NEXT_AS_FIRST_DIRECTIVE = include_next
 INET_NTOP_LIB = @INET_NTOP_LIB@
 INET_PTON_LIB = @INET_PTON_LIB@
 INSTALL = /usr/bin/install -c
-INSTALLED_LIBGETTEXTPO_DEPS = 
+INSTALLED_LIBGETTEXTPO_DEPS = -lintl  -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices 
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_PROGRAM_ENV = @INSTALL_PROGRAM_ENV@
@@ -3569,8 +3569,8 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 INT32_MAX_LT_INTMAX_MAX = 1
 INT64_MAX_EQ_LONG_MAX = defined _LP64
 INTL_MACOSX_LIBS = -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
-JAR = jar
-JAVA_CHOICE = yes
+JAR = 
+JAVA_CHOICE = no
 LC_COLLATE_IMPLEMENTED = true
 LC_MONETARY_IMPLEMENTED = true
 LC_NUMERIC_IMPLEMENTED = true
@@ -3582,7 +3582,7 @@ LIBDL =
 LIBGNU_LIBDEPS = 
 LIBGNU_LTLIBDEPS = 
 LIBICONV = 
-LIBINTL = 
+LIBINTL = ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 LIBJSON_C = 
 LIBMULTITHREAD = -lpthread
 LIBOBJS = 
@@ -3604,7 +3604,7 @@ LIBUNISTRING_UNICASE_H = unicase.h
 LIBUNISTRING_UNICONV_H = uniconv.h
 LIBUNISTRING_UNICTYPE_H = unictype.h
 LIBUNISTRING_UNILBRK_H = unilbrk.h
-LIBUNISTRING_UNINAME_H = @LIBUNISTRING_UNINAME_H@
+LIBUNISTRING_UNINAME_H = 
 LIBUNISTRING_UNINORM_H = uninorm.h
 LIBUNISTRING_UNISTR_H = unistr.h
 LIBUNISTRING_UNITYPES_H = unitypes.h
@@ -3639,7 +3639,7 @@ LOCALE_JA = ja_JP.eucJP
 LOCALE_TR_UTF8 = @LOCALE_TR_UTF8@
 LOCALE_ZH_CN = zh_CN.GB18030
 LTLIBICONV = 
-LTLIBINTL = 
+LTLIBINTL = ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 LTLIBMULTITHREAD = -lpthread
 LTLIBOBJS = 
 LTLIBTEXTSTYLE = 
@@ -3652,7 +3652,7 @@ MAKEINFO = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' m
 MANIFEST_TOOL = :
 MBRTOWC_LIB = 
 MKDIR_P = .././../build-aux/install-sh -c -d
-MODULA2_CHOICE = yes
+MODULA2_CHOICE = no
 MONO_PATH = 
 MONO_PATH_SEPARATOR = :
 MSGFMT = :
@@ -3660,35 +3660,35 @@ MSGMERGE = msgmerge
 MSGMERGE_FOR_MSGFMT_OPTION = --for-msgfmt
 MSGMERGE_LIBM = 
 NANOSLEEP_LIB = @NANOSLEEP_LIB@
-NETINET_IN_H = @NETINET_IN_H@
-NEXT_ARPA_INET_H = @NEXT_ARPA_INET_H@
+NETINET_IN_H = 
+NEXT_ARPA_INET_H = 
 NEXT_ASSERT_H = <assert.h>
-NEXT_AS_FIRST_DIRECTIVE_ARPA_INET_H = @NEXT_AS_FIRST_DIRECTIVE_ARPA_INET_H@
+NEXT_AS_FIRST_DIRECTIVE_ARPA_INET_H = 
 NEXT_AS_FIRST_DIRECTIVE_ASSERT_H = <assert.h>
-NEXT_AS_FIRST_DIRECTIVE_CTYPE_H = @NEXT_AS_FIRST_DIRECTIVE_CTYPE_H@
-NEXT_AS_FIRST_DIRECTIVE_DIRENT_H = @NEXT_AS_FIRST_DIRECTIVE_DIRENT_H@
-NEXT_AS_FIRST_DIRECTIVE_ENDIAN_H = @NEXT_AS_FIRST_DIRECTIVE_ENDIAN_H@
+NEXT_AS_FIRST_DIRECTIVE_CTYPE_H = 
+NEXT_AS_FIRST_DIRECTIVE_DIRENT_H = 
+NEXT_AS_FIRST_DIRECTIVE_ENDIAN_H = 
 NEXT_AS_FIRST_DIRECTIVE_ERRNO_H = 
 NEXT_AS_FIRST_DIRECTIVE_ERROR_H = <error.h>
 NEXT_AS_FIRST_DIRECTIVE_FCNTL_H = <fcntl.h>
 NEXT_AS_FIRST_DIRECTIVE_FLOAT_H = <float.h>
-NEXT_AS_FIRST_DIRECTIVE_FNMATCH_H = @NEXT_AS_FIRST_DIRECTIVE_FNMATCH_H@
-NEXT_AS_FIRST_DIRECTIVE_GETOPT_H = @NEXT_AS_FIRST_DIRECTIVE_GETOPT_H@
+NEXT_AS_FIRST_DIRECTIVE_FNMATCH_H = 
+NEXT_AS_FIRST_DIRECTIVE_GETOPT_H = 
 NEXT_AS_FIRST_DIRECTIVE_ICONV_H = <iconv.h>
 NEXT_AS_FIRST_DIRECTIVE_INTTYPES_H = <inttypes.h>
 NEXT_AS_FIRST_DIRECTIVE_LANGINFO_H = <langinfo.h>
 NEXT_AS_FIRST_DIRECTIVE_LIMITS_H = <limits.h>
 NEXT_AS_FIRST_DIRECTIVE_LOCALE_H = <locale.h>
 NEXT_AS_FIRST_DIRECTIVE_MATH_H = <math.h>
-NEXT_AS_FIRST_DIRECTIVE_NETDB_H = @NEXT_AS_FIRST_DIRECTIVE_NETDB_H@
-NEXT_AS_FIRST_DIRECTIVE_NETINET_IN_H = @NEXT_AS_FIRST_DIRECTIVE_NETINET_IN_H@
-NEXT_AS_FIRST_DIRECTIVE_OMP_H = @NEXT_AS_FIRST_DIRECTIVE_OMP_H@
+NEXT_AS_FIRST_DIRECTIVE_NETDB_H = 
+NEXT_AS_FIRST_DIRECTIVE_NETINET_IN_H = 
+NEXT_AS_FIRST_DIRECTIVE_OMP_H = 
 NEXT_AS_FIRST_DIRECTIVE_PTHREAD_H = <pthread.h>
 NEXT_AS_FIRST_DIRECTIVE_SCHED_H = <sched.h>
 NEXT_AS_FIRST_DIRECTIVE_SIGNAL_H = <signal.h>
-NEXT_AS_FIRST_DIRECTIVE_SPAWN_H = @NEXT_AS_FIRST_DIRECTIVE_SPAWN_H@
+NEXT_AS_FIRST_DIRECTIVE_SPAWN_H = 
 NEXT_AS_FIRST_DIRECTIVE_STDARG_H = 
-NEXT_AS_FIRST_DIRECTIVE_STDBIT_H = @NEXT_AS_FIRST_DIRECTIVE_STDBIT_H@
+NEXT_AS_FIRST_DIRECTIVE_STDBIT_H = 
 NEXT_AS_FIRST_DIRECTIVE_STDCKDINT_H = <stdckdint.h>
 NEXT_AS_FIRST_DIRECTIVE_STDCOUNTOF_H = <stdcountof.h>
 NEXT_AS_FIRST_DIRECTIVE_STDDEF_H = <stddef.h>
@@ -3696,46 +3696,46 @@ NEXT_AS_FIRST_DIRECTIVE_STDINT_H = <stdint.h>
 NEXT_AS_FIRST_DIRECTIVE_STDIO_H = <stdio.h>
 NEXT_AS_FIRST_DIRECTIVE_STDLIB_H = <stdlib.h>
 NEXT_AS_FIRST_DIRECTIVE_STRING_H = <string.h>
-NEXT_AS_FIRST_DIRECTIVE_SYS_IOCTL_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_IOCTL_H@
-NEXT_AS_FIRST_DIRECTIVE_SYS_RANDOM_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_RANDOM_H@
-NEXT_AS_FIRST_DIRECTIVE_SYS_RESOURCE_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_RESOURCE_H@
-NEXT_AS_FIRST_DIRECTIVE_SYS_SELECT_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_SELECT_H@
-NEXT_AS_FIRST_DIRECTIVE_SYS_SOCKET_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_SOCKET_H@
+NEXT_AS_FIRST_DIRECTIVE_SYS_IOCTL_H = 
+NEXT_AS_FIRST_DIRECTIVE_SYS_RANDOM_H = 
+NEXT_AS_FIRST_DIRECTIVE_SYS_RESOURCE_H = 
+NEXT_AS_FIRST_DIRECTIVE_SYS_SELECT_H = 
+NEXT_AS_FIRST_DIRECTIVE_SYS_SOCKET_H = 
 NEXT_AS_FIRST_DIRECTIVE_SYS_STAT_H = <sys/stat.h>
-NEXT_AS_FIRST_DIRECTIVE_SYS_TIME_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_TIME_H@
+NEXT_AS_FIRST_DIRECTIVE_SYS_TIME_H = 
 NEXT_AS_FIRST_DIRECTIVE_SYS_TYPES_H = <sys/types.h>
-NEXT_AS_FIRST_DIRECTIVE_SYS_UIO_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_UIO_H@
-NEXT_AS_FIRST_DIRECTIVE_SYS_WAIT_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_WAIT_H@
+NEXT_AS_FIRST_DIRECTIVE_SYS_UIO_H = 
+NEXT_AS_FIRST_DIRECTIVE_SYS_WAIT_H = 
 NEXT_AS_FIRST_DIRECTIVE_TIME_H = <time.h>
 NEXT_AS_FIRST_DIRECTIVE_UCHAR_H = <uchar.h>
 NEXT_AS_FIRST_DIRECTIVE_UNISTD_H = <unistd.h>
-NEXT_AS_FIRST_DIRECTIVE_UTIME_H = @NEXT_AS_FIRST_DIRECTIVE_UTIME_H@
+NEXT_AS_FIRST_DIRECTIVE_UTIME_H = 
 NEXT_AS_FIRST_DIRECTIVE_WCHAR_H = <wchar.h>
 NEXT_AS_FIRST_DIRECTIVE_WCTYPE_H = <wctype.h>
-NEXT_CTYPE_H = @NEXT_CTYPE_H@
-NEXT_DIRENT_H = @NEXT_DIRENT_H@
-NEXT_ENDIAN_H = @NEXT_ENDIAN_H@
+NEXT_CTYPE_H = 
+NEXT_DIRENT_H = 
+NEXT_ENDIAN_H = 
 NEXT_ERRNO_H = 
 NEXT_ERROR_H = <error.h>
 NEXT_FCNTL_H = <fcntl.h>
 NEXT_FLOAT_H = <float.h>
-NEXT_FNMATCH_H = @NEXT_FNMATCH_H@
-NEXT_GETOPT_H = @NEXT_GETOPT_H@
+NEXT_FNMATCH_H = 
+NEXT_GETOPT_H = 
 NEXT_ICONV_H = <iconv.h>
 NEXT_INTTYPES_H = <inttypes.h>
 NEXT_LANGINFO_H = <langinfo.h>
 NEXT_LIMITS_H = <limits.h>
 NEXT_LOCALE_H = <locale.h>
 NEXT_MATH_H = <math.h>
-NEXT_NETDB_H = @NEXT_NETDB_H@
-NEXT_NETINET_IN_H = @NEXT_NETINET_IN_H@
-NEXT_OMP_H = @NEXT_OMP_H@
+NEXT_NETDB_H = 
+NEXT_NETINET_IN_H = 
+NEXT_OMP_H = 
 NEXT_PTHREAD_H = <pthread.h>
 NEXT_SCHED_H = <sched.h>
 NEXT_SIGNAL_H = <signal.h>
-NEXT_SPAWN_H = @NEXT_SPAWN_H@
+NEXT_SPAWN_H = 
 NEXT_STDARG_H = <stdarg.h>
-NEXT_STDBIT_H = @NEXT_STDBIT_H@
+NEXT_STDBIT_H = 
 NEXT_STDCKDINT_H = <stdckdint.h>
 NEXT_STDCOUNTOF_H = <stdcountof.h>
 NEXT_STDDEF_H = <stddef.h>
@@ -3743,20 +3743,20 @@ NEXT_STDINT_H = <stdint.h>
 NEXT_STDIO_H = <stdio.h>
 NEXT_STDLIB_H = <stdlib.h>
 NEXT_STRING_H = <string.h>
-NEXT_SYS_IOCTL_H = @NEXT_SYS_IOCTL_H@
-NEXT_SYS_RANDOM_H = @NEXT_SYS_RANDOM_H@
-NEXT_SYS_RESOURCE_H = @NEXT_SYS_RESOURCE_H@
-NEXT_SYS_SELECT_H = @NEXT_SYS_SELECT_H@
-NEXT_SYS_SOCKET_H = @NEXT_SYS_SOCKET_H@
+NEXT_SYS_IOCTL_H = 
+NEXT_SYS_RANDOM_H = 
+NEXT_SYS_RESOURCE_H = 
+NEXT_SYS_SELECT_H = 
+NEXT_SYS_SOCKET_H = 
 NEXT_SYS_STAT_H = <sys/stat.h>
-NEXT_SYS_TIME_H = @NEXT_SYS_TIME_H@
+NEXT_SYS_TIME_H = 
 NEXT_SYS_TYPES_H = <sys/types.h>
-NEXT_SYS_UIO_H = @NEXT_SYS_UIO_H@
-NEXT_SYS_WAIT_H = @NEXT_SYS_WAIT_H@
+NEXT_SYS_UIO_H = 
+NEXT_SYS_WAIT_H = 
 NEXT_TIME_H = <time.h>
 NEXT_UCHAR_H = <uchar.h>
 NEXT_UNISTD_H = <unistd.h>
-NEXT_UTIME_H = @NEXT_UTIME_H@
+NEXT_UTIME_H = 
 NEXT_WCHAR_H = <wchar.h>
 NEXT_WCTYPE_H = <wctype.h>
 NM = /usr/bin/nm -B
@@ -3783,7 +3783,7 @@ PACKAGE_VERSION = 1.0
 PATH_SEPARATOR = :
 PERL = /usr/bin/perl
 POSIX_SPAWN_LIB = @POSIX_SPAWN_LIB@
-POSUB = 
+POSUB = po
 PRAGMA_COLUMNS = 
 PRAGMA_SYSTEM_HEADER = #pragma GCC system_header
 PRIPTR_PREFIX = __PRIPTR_PREFIX
@@ -4213,7 +4213,7 @@ SIG_ATOMIC_T_SUFFIX =
 SIZE_T_SUFFIX = 
 SMALL_WCHAR_T = 0
 STDARG_H = 
-STDBIT_H = @STDBIT_H@
+STDBIT_H = 
 STDCKDINT_H = 
 STDCOUNTOF_H = stdcountof.h
 STDDEF_H = stddef.h
@@ -4225,7 +4225,7 @@ SYS_IOCTL_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS = 0
 SYS_TIME_H_DEFINES_STRUCT_TIMESPEC = 0
 TESTCSHARP = no
 TESTJAVA = no
-TESTLIBASPRINTF = yes
+TESTLIBASPRINTF = no
 TEXI2PDF = /Users/sedwards/gtk/source/gettext-1.0/build-aux/missing texi2pdf
 TIME_H_DEFINES_STRUCT_TIMESPEC = 1
 TIME_H_DEFINES_TIME_UTC = 1
@@ -4244,9 +4244,9 @@ UNISTD_H_HAVE_SYS_RANDOM_H = 0
 UNISTD_H_HAVE_WINSOCK2_H = 0
 UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS = 0
 USE_ACL = @USE_ACL@
-USE_INCLUDED_LIBINTL = no
-USE_NLS = no
-USE_SELINUX_SELINUX_H = @USE_SELINUX_SELINUX_H@
+USE_INCLUDED_LIBINTL = yes
+USE_NLS = yes
+USE_SELINUX_SELINUX_H = 
 VERSION = 1.0
 WARN_CFLAGS = 
 WCHAR_T_SUFFIX = 
@@ -4284,10 +4284,10 @@ am__xargs_n = xargs -n
 bindir = ${exec_prefix}/bin
 bindir_c = "/Users/sedwards/gtk/bin"
 bindir_c_make = \"$(bindir)\"
-build = aarch64-apple-darwin25.4.0
-build_alias = 
+build = aarch64-apple-darwin
+build_alias = arm64-apple-darwin
 build_cpu = aarch64
-build_os = darwin25.4.0
+build_os = darwin
 build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
@@ -4357,10 +4357,10 @@ gttgltests_WITNESS = IN_GETTEXT_TOOLS_GNULIB_TESTS
 gttgltests_libtestsgnu_LIBOBJDEPS = 
 gttgltests_libtestsgnu_LIBOBJS = 
 gttgltests_libtestsgnu_LTLIBOBJS = 
-host = aarch64-apple-darwin25.4.0
-host_alias = 
+host = aarch64-apple-darwin
+host_alias = arm64-apple-darwin
 host_cpu = aarch64
-host_os = darwin25.4.0
+host_os = darwin
 host_vendor = apple
 htmldir = ${docdir}
 htmldir_c = @htmldir_c@
@@ -4378,7 +4378,7 @@ libdir_c_make = \"$(libdir)\"
 libexecdir = ${exec_prefix}/libexec
 libexecdir_c = "/Users/sedwards/gtk/libexec"
 libexecdir_c_make = \"$(libexecdir)\"
-lispdir = ${datadir}/emacs/site-lisp
+lispdir = ${datarootdir}/emacs/site-lisp
 lispdir_c = @lispdir_c@
 lispdir_c_make = @lispdir_c_make@
 localedir = ${datarootdir}/locale
@@ -4471,37 +4471,37 @@ LOG_COMPILER = $(SHELL) $(srcdir)/run-test
 # Note that Automake's $(DEFAULT_INCLUDES) already contains
 # -I. -I$(srcdir) -I$(top_builddir).
 AM_CPPFLAGS = 
-TESTS = intl-1 intl-2 intl-3 intl-4 intl-5 \
-	intl-setlocale-1 intl-setlocale-2 \
-	intl-thread-1 intl-thread-2 intl-thread-3 \
-	format-c-3 format-c-4 format-c-5 plural-1
+#TESTS = intl-1 intl-2 intl-3 intl-4 intl-5 \
+#	intl-setlocale-1 intl-setlocale-2 \
+#	intl-thread-1 intl-thread-2 intl-thread-3 \
+#	format-c-3 format-c-4 format-c-5 plural-1
 
-testlocale_SOURCES = testlocale.c
-intl_1_prg_SOURCES = intl-1-prg.c
-intl_3_prg_SOURCES = intl-3-prg.c
-intl_4_prg_SOURCES = intl-4-prg.c
-intl_5_prg_SOURCES = intl-5-prg.c
-intl_setlocale_1_prg_SOURCES = intl-setlocale-1-prg.c
-intl_setlocale_2_prg_SOURCES = intl-setlocale-2-prg.c
-intl_thread_1_prg_SOURCES = intl-thread-1-prg.c
-intl_thread_1_prg_CFLAGS = $(intl_thread_1_prg_CFLAGS_1)
-intl_thread_1_prg_CFLAGS_1 = -DUSE_POSIX_THREADS
-intl_thread_1_prg_LDADD = $(LDADD) $(intl_thread_1_prg_LDADD_1)
-intl_thread_1_prg_LDADD_1 = -lpthread
-intl_thread_2_prg_SOURCES = intl-thread-2-prg.c
-intl_thread_2_prg_CFLAGS = $(intl_thread_2_prg_CFLAGS_1)
-intl_thread_2_prg_CFLAGS_1 = -DUSE_POSIX_THREADS
-intl_thread_2_prg_LDADD = $(LDADD) $(intl_thread_2_prg_LDADD_1)
-intl_thread_2_prg_LDADD_1 = -lpthread
-intl_thread_3_prg_SOURCES = intl-thread-3-prg.c
-intl_thread_3_prg_CFLAGS = $(intl_thread_3_prg_CFLAGS_1)
-intl_thread_3_prg_CFLAGS_1 = -DUSE_POSIX_THREADS
-intl_thread_3_prg_LDADD = $(LDADD) $(intl_thread_3_prg_LDADD_1)
-intl_thread_3_prg_LDADD_1 = -lpthread
-cake_SOURCES = plural-1-prg.c
-fc3_SOURCES = format-c-3-prg.c
-fc4_SOURCES = format-c-4-prg.c
-fc5_SOURCES = format-c-5-prg.c
+#testlocale_SOURCES = testlocale.c
+#intl_1_prg_SOURCES = intl-1-prg.c
+#intl_3_prg_SOURCES = intl-3-prg.c
+#intl_4_prg_SOURCES = intl-4-prg.c
+#intl_5_prg_SOURCES = intl-5-prg.c
+#intl_setlocale_1_prg_SOURCES = intl-setlocale-1-prg.c
+#intl_setlocale_2_prg_SOURCES = intl-setlocale-2-prg.c
+#intl_thread_1_prg_SOURCES = intl-thread-1-prg.c
+#intl_thread_1_prg_CFLAGS = $(intl_thread_1_prg_CFLAGS_1)
+#intl_thread_1_prg_CFLAGS_1 = -DUSE_POSIX_THREADS
+#intl_thread_1_prg_LDADD = $(LDADD) $(intl_thread_1_prg_LDADD_1)
+#intl_thread_1_prg_LDADD_1 = -lpthread
+#intl_thread_2_prg_SOURCES = intl-thread-2-prg.c
+#intl_thread_2_prg_CFLAGS = $(intl_thread_2_prg_CFLAGS_1)
+#intl_thread_2_prg_CFLAGS_1 = -DUSE_POSIX_THREADS
+#intl_thread_2_prg_LDADD = $(LDADD) $(intl_thread_2_prg_LDADD_1)
+#intl_thread_2_prg_LDADD_1 = -lpthread
+#intl_thread_3_prg_SOURCES = intl-thread-3-prg.c
+#intl_thread_3_prg_CFLAGS = $(intl_thread_3_prg_CFLAGS_1)
+#intl_thread_3_prg_CFLAGS_1 = -DUSE_POSIX_THREADS
+#intl_thread_3_prg_LDADD = $(LDADD) $(intl_thread_3_prg_LDADD_1)
+#intl_thread_3_prg_LDADD_1 = -lpthread
+#cake_SOURCES = plural-1-prg.c
+#fc3_SOURCES = format-c-3-prg.c
+#fc4_SOURCES = format-c-4-prg.c
+#fc5_SOURCES = format-c-5-prg.c
 all: all-am
 
 .SUFFIXES:
@@ -5212,7 +5212,7 @@ uninstall-am:
 
 .PRECIOUS: Makefile
 
-.PHONY: $(TESTS)
+#.PHONY: $(TESTS)
 
 # Clean up after Solaris cc.
 clean-local:

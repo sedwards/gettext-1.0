@@ -168,7 +168,7 @@ SED = /Users/sedwards/gtk/bin/gsed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = 
-USE_NLS = no
+USE_NLS = yes
 VERSION = 1.0
 XGETTEXT = :
 XGETTEXT_015 = :
@@ -184,14 +184,14 @@ am__tar = tar --format=ustar -chf - "$$tardir"
 am__untar = tar -xf -
 am__xargs_n = xargs -n
 bindir = ${exec_prefix}/bin
-build_alias = 
+build_alias = arm64-apple-darwin
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/gettext
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host_alias = 
+host_alias = arm64-apple-darwin
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
@@ -669,7 +669,7 @@ $(GPOFILES): $(srcdir)/$(DOMAIN).pot
 	rm -f $${lang}.gpo && \
 	$(MSGMERGE) $(MSGMERGE_OPTIONS) -o $${lang}.gpo $(srcdir)/$${lang}.po $(srcdir)/$(DOMAIN).pot
 
-all-local: all-local-no
+all-local: all-local-yes
 
 all-local-yes: $(srcdir)/stamp-po
 all-local-no:

@@ -1699,6 +1699,21 @@
 #ifndef _GL_ATTRIBUTE_MALLOC
 # define _GL_ATTRIBUTE_MALLOC
 #endif
+#ifndef _GL_ATTRIBUTE_NODISCARD
+# define _GL_ATTRIBUTE_NODISCARD
+#endif
+#ifndef _GL_ATTRIBUTE_COLD
+# define _GL_ATTRIBUTE_COLD
+#endif
+#ifndef _GL_ATTRIBUTE_NONNULL
+# define _GL_ATTRIBUTE_NONNULL(x)
+#endif
+#ifndef _GL_ATTRIBUTE_NONNULL_IF_NONZERO
+# define _GL_ATTRIBUTE_NONNULL_IF_NONZERO(x, y)
+#endif
+#ifndef _GL_UNUSED
+# define _GL_UNUSED
+#endif
 #ifndef _GL_GNUC_PREREQ
 # if defined __GNUC__ && defined __GNUC_MINOR__
 #  define _GL_GNUC_PREREQ(maj, min) ((maj) < __GNUC__ || ((maj) == __GNUC__ && (min) <= __GNUC_MINOR__))
@@ -1716,6 +1731,15 @@
 #endif
 #ifndef EXIT_FAILURE
 # define EXIT_FAILURE 1
+#endif
+#ifndef VERSION
+# define VERSION "1.0"
+#endif
+#ifndef PACKAGE
+# define PACKAGE "gettext"
+#endif
+#ifndef DLL_VARIABLE
+# define DLL_VARIABLE
 #endif
 
 /* Gnulib Memory Wrappers */

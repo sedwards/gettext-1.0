@@ -74,14 +74,14 @@ ECHO="printf %s\\n"
 PATH_SEPARATOR=":"
 
 # The host system.
-host_alias=
-host=aarch64-apple-darwin25.4.0
-host_os=darwin25.4.0
+host_alias=arm64-apple-darwin
+host=aarch64-apple-darwin
+host_os=darwin
 
 # The build system.
-build_alias=
-build=aarch64-apple-darwin25.4.0
-build_os=darwin25.4.0
+build_alias=arm64-apple-darwin
+build=aarch64-apple-darwin
+build_os=darwin
 
 # A sed program that does not truncate output.
 SED="/Users/sedwards/gtk/bin/gsed"

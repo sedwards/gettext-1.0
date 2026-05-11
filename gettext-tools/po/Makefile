@@ -84,10 +84,10 @@ POTFILES_DEPS != for file in $(POTFILES); do echo $(top_srcdir)/$$file; done
 
 # The set of available translations.
 ALL_LINGUAS != if test -f $(srcdir)/LINGUAS; then \
-	             sed -e '/^\#/d' < $(srcdir)/LINGUAS; \
-	           else \
-	             echo $(LINGUAS); \
-	           fi
+                 sed -e '/^\#/d' < $(srcdir)/LINGUAS; \
+               else \
+                 echo $(LINGUAS); \
+               fi
 # This is computed as $(foreach lang, $(ALL_LINGUAS), $(srcdir)/$(lang).po)
 POFILES != for lang in $(ALL_LINGUAS); do echo $(srcdir)/$$lang.po; done
 # This is computed as $(foreach lang, $(ALL_LINGUAS), $(srcdir)/$(lang).gmo)
@@ -96,17 +96,17 @@ GMOFILES != for lang in $(ALL_LINGUAS); do echo $(srcdir)/$$lang.gmo; done
 DUMMYPOFILES != for lang in $(ALL_LINGUAS); do echo $$lang.nop; done
 
 DISTFILES.common = \
-	Makefile.in.in remove-potcdate.sed \
-	$(DISTFILES.common.extra1) $(DISTFILES.common.extra2) \
-	$(DISTFILES.common.extra3) $(DISTFILES.common.extra4) \
-	$(DISTFILES.common.extra5) $(DISTFILES.common.extra6)
+  Makefile.in.in remove-potcdate.sed \
+  $(DISTFILES.common.extra1) $(DISTFILES.common.extra2) \
+  $(DISTFILES.common.extra3) $(DISTFILES.common.extra4) \
+  $(DISTFILES.common.extra5) $(DISTFILES.common.extra6)
 DISTFILES = \
-	$(DISTFILES.common) \
-	Makevars POTFILES.in \
-	$(POFILES) $(GMOFILES) \
-	$(DISTFILES.extra1) $(DISTFILES.extra2) \
-	$(DISTFILES.extra3) $(DISTFILES.extra4) \
-	$(DISTFILES.extra5) $(DISTFILES.extra6)
+  $(DISTFILES.common) \
+  Makevars POTFILES.in \
+  $(POFILES) $(GMOFILES) \
+  $(DISTFILES.extra1) $(DISTFILES.extra2) \
+  $(DISTFILES.extra3) $(DISTFILES.extra4) \
+  $(DISTFILES.extra5) $(DISTFILES.extra6)
 
 # The set of desired translations, as specified by the installer or distributor.
 DESIRED_LINGUAS = $(ALL_LINGUAS)
@@ -118,15 +118,15 @@ DESIRED_LINGUAS = $(ALL_LINGUAS)
 #      as a fallback for messages which are not translated in the desiredlang
 #      catalog).
 INST_LINGUAS != for presentlang in $(ALL_LINGUAS); do \
-	              useit=false; \
-	              for desiredlang in $(DESIRED_LINGUAS); do \
-	                case "$$desiredlang" in \
-	                  "$$presentlang" | "$$presentlang"_* | "$$presentlang".* | "$$presentlang"@*) \
-	                    useit=true ;; \
-	                esac; \
-	              done; \
-	              if $$useit; then echo $$presentlang; fi; \
-	            done
+                  useit=false; \
+                  for desiredlang in $(DESIRED_LINGUAS); do \
+                    case "$$desiredlang" in \
+                      "$$presentlang" | "$$presentlang"_* | "$$presentlang".* | "$$presentlang"@*) \
+                        useit=true ;; \
+                    esac; \
+                  done; \
+                  if $$useit; then echo $$presentlang; fi; \
+                done
 # This is computed as $(foreach lang, $(INST_LINGUAS), $(lang).gmo)
 CATALOGS != for lang in $(INST_LINGUAS); do echo $$lang.gmo; done
 
@@ -138,7 +138,7 @@ DISTFILESDEPS = $(DISTFILESDEPS_$(DIST_DEPENDS_ON_UPDATE_PO))
 # Include the customization of this po/ directory.
 include $(srcdir)/Makevars
 
-all: all-no
+all: all-yes
 
 
 .SUFFIXES:
@@ -368,7 +368,7 @@ $(POFILES):
 
 install: install-exec install-data
 install-exec:
-install-data: install-data-no
+install-data: install-data-yes
 install-data-no: all
 install-data-yes: all
 	@catalogs='$(CATALOGS)'; \
@@ -414,7 +414,7 @@ install-strip: install
 
 installdirs: installdirs-exec installdirs-data
 installdirs-exec:
-installdirs-data: installdirs-data-no
+installdirs-data: installdirs-data-yes
 installdirs-data-no:
 installdirs-data-yes:
 	@catalogs='$(CATALOGS)'; \
@@ -453,7 +453,7 @@ installcheck:
 
 uninstall: uninstall-exec uninstall-data
 uninstall-exec:
-uninstall-data: uninstall-data-no
+uninstall-data: uninstall-data-yes
 uninstall-data-no:
 uninstall-data-yes:
 	catalogs='$(CATALOGS)'; \
@@ -540,14 +540,14 @@ update-gmo: Makefile $(GMOFILES)
 # Include all the Rules-* extensions. Documented in
 # <https://www.gnu.org/software/gettext/manual/html_node/po_002fRules_002d_002a.html>
 RULES_FILES != cd $(srcdir) \
-	           && for file in Rules-*; do \
-	                if test -f "$$file"; then \
-	                  case "$$file" in \
-	                    *.orig | *.bak | *~) ;; \
-	                    *) echo $(srcdir)/"$$file" ;; \
-	                  esac; \
-	                fi; \
-	              done
+               && for file in Rules-*; do \
+                    if test -f "$$file"; then \
+                      case "$$file" in \
+                        *.orig | *.bak | *~) ;; \
+                        *) echo $(srcdir)/"$$file" ;; \
+                      esac; \
+                    fi; \
+                  done
 include $(RULES_FILES)
 
 # Recreate Makefile by invoking config.status. Explicitly invoke the shell,

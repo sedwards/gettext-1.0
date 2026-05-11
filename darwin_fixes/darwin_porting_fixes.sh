@@ -37,12 +37,32 @@ echo "--- [2/12] Regenerating Build System (Autotools) - [DISABLED] ---"
 # If needed, run manually: aclocal -I gnulib-m4 -I m4 && autoconf
 
 echo "--- [3/12] Running Configure with Darwin Options ---"
-./configure --prefix="$PREFIX" \
+#./configure --prefix="$PREFIX" \
+#  M4="$PREFIX/bin/m4" \
+#  --disable-dependency-tracking \
+#  --without-libxml2 \
+#  --disable-nls \
+#  --disable-intl
+
+./configure --prefix=/Users/sedwards/gtk \
+  --build=arm64-apple-darwin --host=arm64-apple-darwin \
   M4="$PREFIX/bin/m4" \
   --disable-dependency-tracking \
+  --with-included-gettext \
   --without-libxml2 \
-  --disable-nls \
-  --disable-intl
+  --disable-java \
+  --disable-d \
+  --disable-csharp \
+  --disable-curses \
+  --disable-libasprintf \
+  --disable-modula2 \
+  --without-libncurses-prefix \
+  --without-libtermcap-prefix \
+  --without-libxcurses-prefix \
+  --without-libcurses-prefix \
+  --without-libtextstyle-prefix \
+  --with-included-libunistring \
+  --without-emacs \
 
 echo "--- [4/12] Cleaning up previous shim attempts ---"
 find . -name "config.h" -exec sed -i '' '/DARWIN_/,/EOF/d' {} +
@@ -312,5 +332,75 @@ find . -name "*.m4" -exec touch -t 202001010000 {} +
 find . -name "*.in" -exec touch -t 202401010000 {} +
 touch -t 202401010000 configure aclocal.m4 config.h.in
 find . -name "Makefile.in" -exec touch {} +
+
+echo "--- [13/13] Shim to use system SDK everwhere we can
+echo "Fix all Makefiles"
+# Add this to your Master Porting Script to catch all unexpanded conditionals
+find . -name "Makefile" -exec sed -i '' 's/^@[A-Z0-9_]\{1,\}@//' {} +
+
+#!/bin/bash
+# header_fixes.sh
+
+HEADERS="fcntl.h sys/types.h sys/stat.h sys/select.h unistd.h stdlib.h string.h wchar.h wctype.h float.h sys/resource.h"
+
+for h in $HEADERS; do
+    echo "Converting $h to SDK proxy..."
+    find . -path "*/$h" | while read -r target; do
+        # Unlock and delete
+        chmod 644 "$target" 2>/dev/null
+        rm -f "$target"
+        
+        # Ensure directory exists
+        mkdir -p "$(dirname "$target")"
+        
+        # Create the Proxy Header
+        cat > "$target" <<EOF
+/* Darwin SDK Proxy Header */
+#ifndef _DARWIN_PROXY_H
+#define _DARWIN_PROXY_H
+
+#include <stddef.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+    void *malloc(size_t);
+    void *realloc(void *, size_t);
+    void free(void *);
+    void abort(void);
+    void exit(int);
+#ifdef __cplusplus
+}
+#endif
+
+/* Include actual system headers */
+#include <sys/types.h>
+#include <time.h>
+#include <sys/time.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <float.h>
+#include <sys/resource.h>
+
+#endif
+EOF
+
+        # Lock the file
+        chmod 444 "$target"
+    done
+done
+
+echo "Stripping Makefile placeholders..."
+find . -name "Makefile" -exec sed -i '' 's/@[A-Z0-9_]\{1,\}_H@//g' {} +
+
+# Audit: Supposedly another Makefile fix
+sed -i '' 's/@[A-Z0-9_]\{1,\}_H@//g' Makefile
+
+sed -i '' 's/@[A-Z0-9_]\{1,\}_H@//g' Makefile
 
 echo "Master porting fixes and configuration applied. You can now run 'make -k'"

@@ -89,8 +89,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = aarch64-apple-darwin25.4.0
-host_triplet = aarch64-apple-darwin25.4.0
+build_triplet = aarch64-apple-darwin
+host_triplet = aarch64-apple-darwin
 
 # On mingw, disable the declarations of *printf functions as aliases to the
 # corresponding __mingw_*printf functions, because
@@ -99,7 +99,7 @@ host_triplet = aarch64-apple-darwin25.4.0
 #   __udivdi3, __umoddi3).
 #am__append_1 = -D__USE_MINGW_ANSI_STDIO=0
 # A bison-2.1 generated plural.c includes <libintl.h> if ENABLE_NLS.
-#am__append_2 = libintl.h
+am__append_2 = libintl.h
 #am__append_3 = libintl.res.lo
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -152,8 +152,8 @@ am__objects_1 = bindtextdom.lo dcgettext.lo dgettext.lo gettext.lo \
 	dcngettext.lo dngettext.lo ngettext.lo plural.lo plural-exp.lo \
 	langprefs.lo log.lo printf.lo setlocale.lo version.lo osdep.lo \
 	intl-compat.lo compat.lo
-am_libgnuintl_la_OBJECTS =  \
-	$(am__objects_1)
+#am_libgnuintl_la_OBJECTS =  \
+#	$(am__objects_1)
 libgnuintl_la_OBJECTS = $(am_libgnuintl_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -162,19 +162,19 @@ am__v_lt_1 =
 libgnuintl_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 	$(libgnuintl_la_LDFLAGS) $(LDFLAGS) -o $@
-am_libgnuintl_la_rpath =
+#am_libgnuintl_la_rpath =
 am__libintl_la_SOURCES_DIST = bindtextdom.c dcgettext.c dgettext.c \
 	gettext.c finddomain.c hash-string.c loadmsgcat.c \
 	localealias.c textdomain.c l10nflist.c explodename.c \
 	dcigettext.c dcngettext.c dngettext.c ngettext.c plural.y \
 	plural-exp.c langprefs.c log.c printf.c setlocale.c version.c \
 	osdep.c intl-compat.c compat.c
-#am_libintl_la_OBJECTS = $(am__objects_1)
+am_libintl_la_OBJECTS = $(am__objects_1)
 libintl_la_OBJECTS = $(am_libintl_la_OBJECTS)
 libintl_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 	$(libintl_la_LDFLAGS) $(LDFLAGS) -o $@
-#am_libintl_la_rpath =
+am_libintl_la_rpath =
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -378,7 +378,7 @@ AUTOCONF = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' a
 AUTOHEADER = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' autoheader
 AUTOMAKE = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' automake-1.18
 AWK = awk
-CATOBJEXT = 
+CATOBJEXT = .gmo
 CC = gcc
 CCDEPMODE = depmode=none
 CFLAGS = -g -O2
@@ -427,7 +427,7 @@ LDFLAGS =
 LIBGNU_LIBDEPS = 
 LIBGNU_LTLIBDEPS = 
 LIBICONV = 
-LIBINTL = 
+LIBINTL = ${top_builddir}/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 LIBMULTITHREAD = -lpthread
 LIBOBJS = 
 LIBPMULTITHREAD = -lpthread
@@ -440,7 +440,7 @@ LIB_SCHED_YIELD =
 LIPO = lipo
 LN_S = ln -s
 LTLIBICONV = 
-LTLIBINTL = 
+LTLIBINTL = ${top_builddir}/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 LTLIBMULTITHREAD = -lpthread
 LTLIBOBJS = 
 LTLIBTHREAD = 
@@ -466,7 +466,7 @@ PACKAGE_TARNAME = libintl
 PACKAGE_URL = 
 PACKAGE_VERSION = 1.0
 PATH_SEPARATOR = :
-POSUB = 
+POSUB = po
 RANLIB = ranlib
 RC = 
 SCHED_YIELD_LIB = 
@@ -474,8 +474,8 @@ SED = /Users/sedwards/gtk/bin/gsed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-USE_INCLUDED_LIBINTL = no
-USE_NLS = no
+USE_INCLUDED_LIBINTL = yes
+USE_NLS = yes
 VERSION = 1.0
 WARN_CFLAGS = 
 WINDRES = 
@@ -498,10 +498,10 @@ am__tar = tar --format=ustar -chf - "$$tardir"
 am__untar = tar -xf -
 am__xargs_n = xargs -n
 bindir = ${exec_prefix}/bin
-build = aarch64-apple-darwin25.4.0
-build_alias = 
+build = aarch64-apple-darwin
+build_alias = arm64-apple-darwin
 build_cpu = aarch64
-build_os = darwin25.4.0
+build_os = darwin
 build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
@@ -522,10 +522,10 @@ gltests_WITNESS = IN_LIBINTL_GNULIB_TESTS
 gltests_libgnu_LIBOBJDEPS = 
 gltests_libgnu_LIBOBJS = 
 gltests_libgnu_LTLIBOBJS = 
-host = aarch64-apple-darwin25.4.0
-host_alias = 
+host = aarch64-apple-darwin
+host_alias = arm64-apple-darwin
 host_cpu = aarch64
-host_os = darwin25.4.0
+host_os = darwin
 host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
@@ -594,7 +594,7 @@ AM_CPPFLAGS = -Ignulib-lib -I$(srcdir)/gnulib-lib \
 # Enable more warning options in this directory.
 
 # Tell the ELF linker which symbols to export.
-AM_CFLAGS =  @CFLAG_VISIBILITY@
+AM_CFLAGS =  
 BISON = :
 BISONFLAGS = --name-prefix=__gettext
 # Just to shut up Automake "error: Yacc source seen but 'YACC' is undefined".
@@ -733,12 +733,12 @@ LIBINTLSOURCES = \
 # We must not install the libintl.h/libintl.la files if we are on a
 # system which has the GNU gettext() function in its C library or in a
 # separate library.
-#nodist_include_HEADERS = libintl.h
-noinst_LTLIBRARIES = libgnuintl.la
+nodist_include_HEADERS = libintl.h
+#noinst_LTLIBRARIES = libgnuintl.la
 # Note: libintl.la actually gets installed in $(libdir). See below.
-#noinst_LTLIBRARIES = libintl.la
-#libintl_la_SOURCES = $(LIBINTLSOURCES)
-libgnuintl_la_SOURCES = $(LIBINTLSOURCES)
+noinst_LTLIBRARIES = libintl.la
+libintl_la_SOURCES = $(LIBINTLSOURCES)
+#libgnuintl_la_SOURCES = $(LIBINTLSOURCES)
 
 # Dependencies.
 PLURAL_DEPS = $(am__append_2)
@@ -746,10 +746,10 @@ WOE32_LIBADD =
 #WOE32_LIBADD = libintl.res.lo
 
 # What object files to include in libintl.la and libgnuintl.la.
-libintl_la_LIBADD = gnulib-lib/libgnu.la $(WOE32_LIBADD)
-libintl_la_DEPENDENCIES = gnulib-lib/libgnu.la $(WOE32_LIBADD)
-libgnuintl_la_LIBADD = gnulib-lib/libgnu.la $(WOE32_LIBADD)
-libgnuintl_la_DEPENDENCIES = gnulib-lib/libgnu.la $(WOE32_LIBADD)
+libintl_la_LIBADD = libgnu.la $(WOE32_LIBADD)
+libintl_la_DEPENDENCIES = libgnu.la $(WOE32_LIBADD)
+libgnuintl_la_LIBADD = libgnu.la $(WOE32_LIBADD)
+libgnuintl_la_DEPENDENCIES = libgnu.la $(WOE32_LIBADD)
 INTL_WINDOWS_LIBS = 
 
 # langprefs.c (_nl_language_preferences_win32_95) uses functions from
@@ -1249,7 +1249,7 @@ check-am: all-am
 check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-recursive
 all-am: Makefile $(LTLIBRARIES) $(HEADERS) config.h
-installdirs-local:
+#installdirs-local:
 installdirs: installdirs-recursive
 installdirs-am: installdirs-local
 	for dir in "$(DESTDIR)$(includedir)"; do \
@@ -1293,8 +1293,8 @@ maintainer-clean-generic:
 	-$(am__rm_f) $(BUILT_SOURCES)
 	-$(am__rm_f) $(MAINTAINERCLEANFILES)
 	-$(am__rm_f) plural.c
-install-exec-local:
-uninstall-local:
+#install-exec-local:
+#uninstall-local:
 clean: clean-recursive
 
 clean-am: clean-generic clean-libtool clean-local \
@@ -1629,26 +1629,26 @@ compat.lo:           ../config.h libgnuintl.h
 
 # Installation of libintl.la.
 
-#install-exec-local: install-exec-libintl
-#install-exec-libintl: libintl.la
-#	$(mkdir_p) $(DESTDIR)$(libdir)
-#	$(LIBTOOL) --mode=install \
-#	  $(INSTALL) libintl.la $(DESTDIR)$(libdir)/libintl.la; \
-#	if test "@RELOCATABLE@" = yes; then \
-#	  dependencies=`sed -n -e 's,^dependency_libs=\(.*\),\1,p' < $(DESTDIR)$(libdir)/libintl.la | sed -e "s,^',," -e "s,'\$$,,"`; \
-#	  if test -n "$$dependencies"; then \
-#	    rm -f $(DESTDIR)$(libdir)/libintl.la; \
-#	  fi; \
-#	fi
+install-exec-local: install-exec-libintl
+install-exec-libintl: libintl.la
+	$(mkdir_p) $(DESTDIR)$(libdir)
+	$(LIBTOOL) --mode=install \
+	  $(INSTALL) libintl.la $(DESTDIR)$(libdir)/libintl.la; \
+	if test "@RELOCATABLE@" = yes; then \
+	  dependencies=`sed -n -e 's,^dependency_libs=\(.*\),\1,p' < $(DESTDIR)$(libdir)/libintl.la | sed -e "s,^',," -e "s,'\$$,,"`; \
+	  if test -n "$$dependencies"; then \
+	    rm -f $(DESTDIR)$(libdir)/libintl.la; \
+	  fi; \
+	fi
 
-#installdirs-local: installdirs-libintl
-#installdirs-libintl:
-#	$(mkdir_p) $(DESTDIR)$(libdir)
+installdirs-local: installdirs-libintl
+installdirs-libintl:
+	$(mkdir_p) $(DESTDIR)$(libdir)
 
-#uninstall-local: uninstall-libintl
-#uninstall-libintl:
-#	$(LIBTOOL) --mode=uninstall \
-#	  rm -f $(DESTDIR)$(libdir)/libintl.la
+uninstall-local: uninstall-libintl
+uninstall-libintl:
+	$(LIBTOOL) --mode=uninstall \
+	  rm -f $(DESTDIR)$(libdir)/libintl.la
 
 # Installation of preloadable_libintl.so.
 

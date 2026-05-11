@@ -113,8 +113,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = aarch64-apple-darwin25.4.0
-host_triplet = aarch64-apple-darwin25.4.0
+build_triplet = aarch64-apple-darwin
+host_triplet = aarch64-apple-darwin
 TESTS = test-memory-ostream$(EXEEXT) test-term-ostream-xterm.sh \
 	test-instanceof$(EXEEXT) test-accessors$(EXEEXT)
 XFAIL_TESTS =
@@ -603,18 +603,18 @@ case "$@" in						\
 esac;							\
 test "x$$am__odir" = x"." || test -d "$$am__odir" 	\
   || $(MKDIR_P) "$$am__odir" || exit $$?;		\
-if test -f "./$$f"; then dir=./;			\
+# if test -f "./$$f"; then dir=./;			\
 elif test -f "$$f"; then dir=;				\
-else dir="$(srcdir)/"; fi;				\
+# else dir="$(srcdir)/"; fi;				\
 tst=$$dir$$f; log='$@'; 				\
-if test -n '$(IGNORE_SKIPPED_LOGS)'; then		\
+# if test -n '$(IGNORE_SKIPPED_LOGS)'; then		\
   am__collect_skipped_logs='--collect-skipped-logs no';	\
-else							\
+# else							\
   am__collect_skipped_logs='';				\
 fi;							\
-if test -n '$(DISABLE_HARD_ERRORS)'; then		\
+# if test -n '$(DISABLE_HARD_ERRORS)'; then		\
   am__enable_hard_errors=no; 				\
-else							\
+# else							\
   am__enable_hard_errors=yes; 				\
 fi; 							\
 case " $(XFAIL_TESTS) " in				\
@@ -1943,7 +1943,7 @@ LIBPTHREAD =
 LIBS = 
 LIBSOCKET = 
 LIBSTDTHREAD = 
-LIBTERMINFO = -lncurses
+LIBTERMINFO = 
 LIBTESTS_LIBDEPS = 
 LIBTHREAD = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
@@ -1974,7 +1974,7 @@ LTLIBICONV =
 LTLIBINTL = 
 LTLIBMULTITHREAD = -lpthread
 LTLIBOBJS = 
-LTLIBTERMINFO = -lncurses
+LTLIBTERMINFO = 
 LTLIBTHREAD = 
 LT_SYS_LIBRARY_PATH = 
 MAKEINFO = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/libtextstyle/build-aux/missing' makeinfo
@@ -2493,10 +2493,10 @@ am__tar = ${AMTAR} chof - --owner=root --group=root "$$tardir"
 am__untar = tar -xf -
 am__xargs_n = xargs -n
 bindir = ${exec_prefix}/bin
-build = aarch64-apple-darwin25.4.0
-build_alias = 
+build = aarch64-apple-darwin
+build_alias = arm64-apple-darwin
 build_cpu = aarch64
-build_os = darwin25.4.0
+build_os = darwin
 build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
@@ -2504,10 +2504,10 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = aarch64-apple-darwin25.4.0
-host_alias = 
+host = aarch64-apple-darwin
+host_alias = arm64-apple-darwin
 host_cpu = aarch64
-host_os = darwin25.4.0
+host_os = darwin
 host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
@@ -2517,12 +2517,12 @@ libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
-lts_LIBOBJDEPS =  $(DEPDIR)/asnprintf.Plo $(DEPDIR)/asprintf.Plo $(DEPDIR)/printf-args.Plo $(DEPDIR)/printf-parse.Plo $(DEPDIR)/snprintf.Plo $(DEPDIR)/vasnprintf.Plo $(DEPDIR)/vasprintf.Plo
-lts_LIBOBJS =  asnprintf.o asprintf.o printf-args.o printf-parse.o snprintf.o vasnprintf.o vasprintf.o
-lts_LTLIBOBJS =  asnprintf.lo asprintf.lo printf-args.lo printf-parse.lo snprintf.lo vasnprintf.lo vasprintf.lo
-lts_libtextstyle_LIBOBJDEPS =  $(DEPDIR)/libtextstyle_la-asnprintf.Plo $(DEPDIR)/libtextstyle_la-asprintf.Plo $(DEPDIR)/libtextstyle_la-printf-args.Plo $(DEPDIR)/libtextstyle_la-printf-parse.Plo $(DEPDIR)/libtextstyle_la-snprintf.Plo $(DEPDIR)/libtextstyle_la-vasnprintf.Plo $(DEPDIR)/libtextstyle_la-vasprintf.Plo
-lts_libtextstyle_LIBOBJS =  libtextstyle_a-asnprintf.o libtextstyle_a-asprintf.o libtextstyle_a-printf-args.o libtextstyle_a-printf-parse.o libtextstyle_a-snprintf.o libtextstyle_a-vasnprintf.o libtextstyle_a-vasprintf.o
-lts_libtextstyle_LTLIBOBJS =  libtextstyle_la-asnprintf.lo libtextstyle_la-asprintf.lo libtextstyle_la-printf-args.lo libtextstyle_la-printf-parse.lo libtextstyle_la-snprintf.lo libtextstyle_la-vasnprintf.lo libtextstyle_la-vasprintf.lo
+lts_LIBOBJDEPS =  $(DEPDIR)/asnprintf.Plo $(DEPDIR)/asprintf.Plo $(DEPDIR)/printf-args.Plo $(DEPDIR)/printf-parse.Plo $(DEPDIR)/snprintf.Plo $(DEPDIR)/tparm.Plo $(DEPDIR)/tputs.Plo $(DEPDIR)/vasnprintf.Plo $(DEPDIR)/vasprintf.Plo
+lts_LIBOBJS =  asnprintf.o asprintf.o printf-args.o printf-parse.o snprintf.o tparm.o tputs.o vasnprintf.o vasprintf.o
+lts_LTLIBOBJS =  asnprintf.lo asprintf.lo printf-args.lo printf-parse.lo snprintf.lo tparm.lo tputs.lo vasnprintf.lo vasprintf.lo
+lts_libtextstyle_LIBOBJDEPS =  $(DEPDIR)/libtextstyle_la-asnprintf.Plo $(DEPDIR)/libtextstyle_la-asprintf.Plo $(DEPDIR)/libtextstyle_la-printf-args.Plo $(DEPDIR)/libtextstyle_la-printf-parse.Plo $(DEPDIR)/libtextstyle_la-snprintf.Plo $(DEPDIR)/libtextstyle_la-tparm.Plo $(DEPDIR)/libtextstyle_la-tputs.Plo $(DEPDIR)/libtextstyle_la-vasnprintf.Plo $(DEPDIR)/libtextstyle_la-vasprintf.Plo
+lts_libtextstyle_LIBOBJS =  libtextstyle_a-asnprintf.o libtextstyle_a-asprintf.o libtextstyle_a-printf-args.o libtextstyle_a-printf-parse.o libtextstyle_a-snprintf.o libtextstyle_a-tparm.o libtextstyle_a-tputs.o libtextstyle_a-vasnprintf.o libtextstyle_a-vasprintf.o
+lts_libtextstyle_LTLIBOBJS =  libtextstyle_la-asnprintf.lo libtextstyle_la-asprintf.lo libtextstyle_la-printf-args.lo libtextstyle_la-printf-parse.lo libtextstyle_la-snprintf.lo libtextstyle_la-tparm.lo libtextstyle_la-tputs.lo libtextstyle_la-vasnprintf.lo libtextstyle_la-vasprintf.lo
 ltstests_LIBOBJDEPS = 
 ltstests_LIBOBJS = 
 ltstests_LTLIBOBJS = 

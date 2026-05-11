@@ -21,58 +21,58 @@
 
 
 am__is_gnu_make = { \
-	if test -z '$(MAKELEVEL)'; then \
-	false; \
-	elif test -n '$(MAKE_HOST)'; then \
-	true; \
-	elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
-	true; \
-	else \
-	false; \
-	fi; \
+  if test -z '$(MAKELEVEL)'; then \
+    false; \
+  elif test -n '$(MAKE_HOST)'; then \
+    true; \
+  elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
+    true; \
+  else \
+    false; \
+  fi; \
 }
 am__make_running_with_option = \
-	case $${target_option-} in \
-	  ?) ;; \
-	  *) echo "am__make_running_with_option: internal error: invalid" \
-	          "target option '$${target_option-}' specified" >&2; \
-	     exit 1;; \
-	esac; \
-	has_opt=no; \
-	sane_makeflags=$$MAKEFLAGS; \
-	if $(am__is_gnu_make); then \
-	sane_makeflags=$$MFLAGS; \
-	else \
-	case $$MAKEFLAGS in \
-	  *\\[\ \	]*) \
-	    bs=\\; \
-	    sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
-	      | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
-	esac; \
-	fi; \
-	skip_next=no; \
-	strip_trailopt () \
+  case $${target_option-} in \
+      ?) ;; \
+      *) echo "am__make_running_with_option: internal error: invalid" \
+              "target option '$${target_option-}' specified" >&2; \
+         exit 1;; \
+  esac; \
+  has_opt=no; \
+  sane_makeflags=$$MAKEFLAGS; \
+  if $(am__is_gnu_make); then \
+    sane_makeflags=$$MFLAGS; \
+  else \
+    case $$MAKEFLAGS in \
+      *\\[\ \	]*) \
+        bs=\\; \
+        sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
+          | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
+    esac; \
+  fi; \
+  skip_next=no; \
+  strip_trailopt () \
   { \
-	flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
+    flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
   }; \
-	for flg in $$sane_makeflags; do \
-	test $$skip_next = yes && { skip_next=no; continue; }; \
-	case $$flg in \
-	  *=*|--*) continue;; \
-	    -*I) strip_trailopt 'I'; skip_next=yes;; \
-	  -*I?*) strip_trailopt 'I';; \
-	    -*O) strip_trailopt 'O'; skip_next=yes;; \
-	  -*O?*) strip_trailopt 'O';; \
-	    -*l) strip_trailopt 'l'; skip_next=yes;; \
-	  -*l?*) strip_trailopt 'l';; \
-	  -[dEDm]) skip_next=yes;; \
-	  -[JT]) skip_next=yes;; \
-	esac; \
-	case $$flg in \
-	  *$$target_option*) has_opt=yes; break;; \
-	esac; \
-	done; \
-	test $$has_opt = yes
+  for flg in $$sane_makeflags; do \
+    test $$skip_next = yes && { skip_next=no; continue; }; \
+    case $$flg in \
+      *=*|--*) continue;; \
+        -*I) strip_trailopt 'I'; skip_next=yes;; \
+      -*I?*) strip_trailopt 'I';; \
+        -*O) strip_trailopt 'O'; skip_next=yes;; \
+      -*O?*) strip_trailopt 'O';; \
+        -*l) strip_trailopt 'l'; skip_next=yes;; \
+      -*l?*) strip_trailopt 'l';; \
+      -[dEDm]) skip_next=yes;; \
+      -[JT]) skip_next=yes;; \
+    esac; \
+    case $$flg in \
+      *$$target_option*) has_opt=yes; break;; \
+    esac; \
+  done; \
+  test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
 am__rm_f = rm -f $(am__rm_f_notfound)
@@ -89,8 +89,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = aarch64-apple-darwin25.4.0
-host_triplet = aarch64-apple-darwin25.4.0
+build_triplet = aarch64-apple-darwin
+host_triplet = aarch64-apple-darwin
 bin_PROGRAMS = msgcmp$(EXEEXT) msgfmt$(EXEEXT) msgmerge$(EXEEXT) \
 	msgunfmt$(EXEEXT) xgettext$(EXEEXT) msgattrib$(EXEEXT) \
 	msgcat$(EXEEXT) msgcomm$(EXEEXT) msgconv$(EXEEXT) \
@@ -545,29 +545,29 @@ PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
 LIBRARIES = $(noinst_LIBRARIES)
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
-	$(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
-	*) f=$$p;; \
-	esac;
+    $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
+    *) f=$$p;; \
+  esac;
 am__strip_dir = f=`echo $$p | sed -e 's|^.*/||'`;
 am__install_max = 40
 am__nobase_strip_setup = \
-	srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
+  srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
 am__nobase_strip = \
-	for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
+  for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
 am__nobase_list = $(am__nobase_strip_setup); \
-	for p in $$list; do echo "$$p $$p"; done | \
-	sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
-	$(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
-	if (++n[$$2] == $(am__install_max)) \
-	  { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
-	END { for (dir in files) print dir, files[dir] }'
+  for p in $$list; do echo "$$p $$p"; done | \
+  sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
+  $(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
+    if (++n[$$2] == $(am__install_max)) \
+      { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
+    END { for (dir in files) print dir, files[dir] }'
 am__base_list = \
-	sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
-	sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+  sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
+  sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 am__uninstall_files_from_dir = { \
   { test ! -d "$$dir" && test ! -f "$$dir" && test ! -r "$$dir"; } \
   || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
-	   $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
+       $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
   }
 LTLIBRARIES = $(lib_LTLIBRARIES) $(noinst_LTLIBRARIES)
 AM_V_AR = $(am__v_AR_$(V))
@@ -1234,10 +1234,10 @@ DIST_SOURCES = $(libxgettextts1_a_SOURCES) $(libxgettextts2_a_SOURCES) \
 	$(recode_sr_latin_SOURCES) $(am__spit_SOURCES_DIST) \
 	$(urlget_SOURCES) $(am__xgettext_SOURCES_DIST)
 am__can_run_installinfo = \
-	case $$AM_UPDATE_INFO_DIR in \
-	n|no|NO) false;; \
-	*) (install-info --version) >/dev/null 2>&1;; \
-	esac
+  case $$AM_UPDATE_INFO_DIR in \
+    n|no|NO) false;; \
+    *) (install-info --version) >/dev/null 2>&1;; \
+  esac
 DATA = $(schema_DATA)
 HEADERS = $(noinst_HEADERS)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
@@ -1245,18 +1245,18 @@ am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 # and print each of them once, without duplicates.  Input order is
 # *not* preserved.
 am__uniquify_input = $(AWK) '\
-	BEGIN { nonempty = 0; } \
+  BEGIN { nonempty = 0; } \
   { items[$$0] = 1; nonempty = 1; } \
-	END { if (nonempty) { for (i in items) print i; }; } \
+  END { if (nonempty) { for (i in items) print i; }; } \
 '
 # Make sure the list of sources is unique.  This is necessary because,
 # e.g., the same source file might be shared among _SOURCES variables
 # for different programs/libraries.
 am__define_uniq_tagged_files = \
-	list='$(am__tagged_files)'; \
-	unique=`for i in $$list; do \
-	if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
-	done | $(am__uniquify_input)`
+  list='$(am__tagged_files)'; \
+  unique=`for i in $$list; do \
+    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+  done | $(am__uniquify_input)`
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/spit.py.in \
 	$(srcdir)/user-email.sh.in $(top_srcdir)/../build-aux/depcomp \
 	$(top_srcdir)/../build-aux/mkinstalldirs \
@@ -1284,8 +1284,8 @@ AUTOCONF = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' a
 AUTOHEADER = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' autoheader
 AUTOMAKE = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' automake-1.18
 AWK = awk
-BISON_LOCALEDIR = 
-BISON_LOCALEDIR_c = ""
+BISON_LOCALEDIR = /usr/share/locale
+BISON_LOCALEDIR_c = "/usr/share/locale"
 BISON_LOCALEDIR_c_make = \"$(BISON_LOCALEDIR)\"
 BITSIZEOF_PTRDIFF_T = 
 BITSIZEOF_SIG_ATOMIC_T = 
@@ -1298,13 +1298,13 @@ BUILDJAVA = no
 BUILDMODULA2 = no
 BYTESWAP_H = 
 CAN_PRINT_STACK_TRACE = 0
-CATOBJEXT = 
+CATOBJEXT = .gmo
 CC = gcc
 CCDEPMODE = depmode=none
 CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CLASSPATH = 
-CLASSPATH_SEPARATOR = :
+CLASSPATH_SEPARATOR = 
 CLIX_PATH = 
 CLIX_PATH_VAR = 
 CLOCK_TIME_LIB = @CLOCK_TIME_LIB@
@@ -1315,7 +1315,7 @@ CPPFLAGS =
 CROSS_COMPILING = no
 CSCOPE = cscope
 CSHARPCOMPFLAGS = -O -g
-CSHARP_CHOICE = any
+CSHARP_CHOICE = no
 CTAGS = ctags
 CXX = g++
 CXXCPP = g++ -E
@@ -1347,7 +1347,7 @@ DLLTOOL = false
 DSYMUTIL = dsymutil
 DUMPBIN = 
 DVIPS = /Users/sedwards/gtk/source/gettext-1.0/build-aux/missing dvips
-D_CHOICE = yes
+D_CHOICE = no
 ECHO_C = \c
 ECHO_N = 
 ECHO_T = 
@@ -3605,10 +3605,10 @@ HAVE_ISXDIGIT_L = @HAVE_ISXDIGIT_L@
 HAVE_JAVA = 
 HAVE_JAVAC = 
 HAVE_JAVAC_ENVVAR = 
-HAVE_JAVAC_IN_PATH = yes
+HAVE_JAVAC_IN_PATH = 
 HAVE_JAVAEXEC = 
 HAVE_JAVA_ENVVAR = 
-HAVE_JAVA_IN_PATH = yes
+HAVE_JAVA_IN_PATH = 
 HAVE_JRE = 
 HAVE_JRE_IN_PATH = 
 HAVE_LANGINFO_ABALTMON = 0
@@ -3944,7 +3944,7 @@ INCLUDE_NEXT_AS_FIRST_DIRECTIVE = include_next
 INET_NTOP_LIB = @INET_NTOP_LIB@
 INET_PTON_LIB = @INET_PTON_LIB@
 INSTALL = /usr/bin/install -c
-INSTALLED_LIBGETTEXTPO_DEPS = 
+INSTALLED_LIBGETTEXTPO_DEPS = -lintl  -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices 
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_PROGRAM_ENV = @INSTALL_PROGRAM_ENV@
@@ -3953,8 +3953,8 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 INT32_MAX_LT_INTMAX_MAX = 1
 INT64_MAX_EQ_LONG_MAX = defined _LP64
 INTL_MACOSX_LIBS = -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
-JAR = jar
-JAVA_CHOICE = yes
+JAR = 
+JAVA_CHOICE = no
 LC_COLLATE_IMPLEMENTED = true
 LC_MONETARY_IMPLEMENTED = true
 LC_NUMERIC_IMPLEMENTED = true
@@ -3966,7 +3966,7 @@ LIBDL =
 LIBGNU_LIBDEPS = 
 LIBGNU_LTLIBDEPS = 
 LIBICONV = 
-LIBINTL = 
+LIBINTL = ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 LIBJSON_C = 
 LIBMULTITHREAD = -lpthread
 LIBOBJS = 
@@ -4023,7 +4023,7 @@ LOCALE_JA = ja_JP.eucJP
 LOCALE_TR_UTF8 = @LOCALE_TR_UTF8@
 LOCALE_ZH_CN = zh_CN.GB18030
 LTLIBICONV = 
-LTLIBINTL = 
+LTLIBINTL = ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 LTLIBMULTITHREAD = -lpthread
 LTLIBOBJS = 
 LTLIBTEXTSTYLE = 
@@ -4036,7 +4036,7 @@ MAKEINFO = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' m
 MANIFEST_TOOL = :
 MBRTOWC_LIB = 
 MKDIR_P = .././../build-aux/install-sh -c -d
-MODULA2_CHOICE = yes
+MODULA2_CHOICE = no
 MONO_PATH = 
 MONO_PATH_SEPARATOR = :
 MSGFMT = :
@@ -4167,7 +4167,7 @@ PACKAGE_VERSION = 1.0
 PATH_SEPARATOR = :
 PERL = /usr/bin/perl
 POSIX_SPAWN_LIB = @POSIX_SPAWN_LIB@
-POSUB = 
+POSUB = po
 PRAGMA_COLUMNS = 
 PRAGMA_SYSTEM_HEADER = #pragma GCC system_header
 PRIPTR_PREFIX = __PRIPTR_PREFIX
@@ -4611,7 +4611,7 @@ SYS_IOCTL_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS = 0
 SYS_TIME_H_DEFINES_STRUCT_TIMESPEC = 0
 TESTCSHARP = no
 TESTJAVA = no
-TESTLIBASPRINTF = yes
+TESTLIBASPRINTF = no
 TEXI2PDF = /Users/sedwards/gtk/source/gettext-1.0/build-aux/missing texi2pdf
 TIME_H_DEFINES_STRUCT_TIMESPEC = 1
 TIME_H_DEFINES_TIME_UTC = 1
@@ -4630,8 +4630,8 @@ UNISTD_H_HAVE_SYS_RANDOM_H = 0
 UNISTD_H_HAVE_WINSOCK2_H = 0
 UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS = 0
 USE_ACL = @USE_ACL@
-USE_INCLUDED_LIBINTL = no
-USE_NLS = no
+USE_INCLUDED_LIBINTL = yes
+USE_NLS = yes
 USE_SELINUX_SELINUX_H = 
 VERSION = 1.0
 WARN_CFLAGS = 
@@ -4670,10 +4670,10 @@ am__xargs_n = xargs -n
 bindir = ${exec_prefix}/bin
 bindir_c = "/Users/sedwards/gtk/bin"
 bindir_c_make = \"$(bindir)\"
-build = aarch64-apple-darwin25.4.0
-build_alias = 
+build = aarch64-apple-darwin
+build_alias = arm64-apple-darwin
 build_cpu = aarch64
-build_os = darwin25.4.0
+build_os = darwin
 build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
@@ -4743,10 +4743,10 @@ gttgltests_WITNESS = IN_GETTEXT_TOOLS_GNULIB_TESTS
 gttgltests_libtestsgnu_LIBOBJDEPS = 
 gttgltests_libtestsgnu_LIBOBJS = 
 gttgltests_libtestsgnu_LTLIBOBJS = 
-host = aarch64-apple-darwin25.4.0
-host_alias = 
+host = aarch64-apple-darwin
+host_alias = arm64-apple-darwin
 host_cpu = aarch64
-host_os = darwin25.4.0
+host_os = darwin
 host_vendor = apple
 htmldir = ${docdir}
 htmldir_c = @htmldir_c@
@@ -4764,7 +4764,7 @@ libdir_c_make = \"$(libdir)\"
 libexecdir = ${exec_prefix}/libexec
 libexecdir_c = "/Users/sedwards/gtk/libexec"
 libexecdir_c_make = \"$(libexecdir)\"
-lispdir = ${datadir}/emacs/site-lisp
+lispdir = ${datarootdir}/emacs/site-lisp
 lispdir_c = @lispdir_c@
 lispdir_c_make = @lispdir_c_make@
 localedir = ${datarootdir}/locale
@@ -4851,64 +4851,64 @@ lib_LTLIBRARIES = libgettextsrc.la
 #noinst_LTLIBRARIES = libgettextsrc.la
 noinst_LIBRARIES = libxgettextx.a $(LIBXGETTEXTTS)
 noinst_HEADERS = \
-	pos.h message.h po-error.h xerror-handler.h po-xerror.h \
-	read-po-internal.h po-charset.h read-po-lex.h \
-	open-catalog.h read-catalog-special.h \
-	read-catalog-abstract.h read-catalog.h read-catalog-file.h \
-	read-po.h read-properties.h read-stringtable.h \
-	str-list.h \
-	write-catalog.h write-po.h write-properties.h write-stringtable.h \
-	dir-list.h file-list.h read-po-gram.h cldr-plural.h \
-	cldr-plural-exp.h locating-rules.h its.h search-path.h \
-	msgl-charset.h msgl-equal.h msgl-iconv.h msgl-ascii.h msgl-ofn.h msgl-cat.h \
-	msgl-header.h msgl-english.h msgl-check.h msgl-fsearch.h msgl-merge.h \
-	msgfmt.h msgunfmt.h \
-	plural-count.h plural-eval.h plural-distrib.h \
-	read-mo.h write-mo.h \
-	read-java.h write-java.h \
-	read-csharp.h write-csharp.h \
-	read-resources.h write-resources.h \
-	read-tcl.h write-tcl.h \
-	write-qt.h \
-	read-desktop.h write-desktop.h \
-	write-xml.h \
-	po-time.h plural-table.h lang-table.h country-table.h format.h filters.h \
-	xgettext.h \
-	if-error.h \
-	rc-str-list.h xg-pos.h xg-encoding.h xg-mixed-string.h xg-formatstring.h \
-	xg-arglist-context.h xg-arglist-callshape.h xg-arglist-parser.h xg-message.h \
-	xg-check.h \
-	x-po.h x-properties.h x-stringtable.h \
-	x-c.h \
-	x-python.h \
-	x-java.h \
-	x-csharp.h \
-	x-javascript.h \
-	x-typescript.h \
-	x-typescriptx.h \
-	x-typescript-impl.h \
-	x-scheme.h \
-	x-lisp.h \
-	x-elisp.h \
-	x-librep.h \
-	x-rust.h \
-	x-go.h \
-	x-ruby.h \
-	x-sh.h \
-	x-awk.h \
-	x-lua.h \
-	x-modula2.h \
-	x-d.h html5-entities.h \
-	x-ocaml.h \
-	x-smalltalk.h \
-	x-vala.h \
-	x-tcl.h \
-	x-perl.h \
-	x-php.h \
-	x-ycp.h \
-	x-rst.h \
-	x-desktop.h \
-	x-glade.h x-gsettings.h x-appdata.h
+  pos.h message.h po-error.h xerror-handler.h po-xerror.h \
+  read-po-internal.h po-charset.h read-po-lex.h \
+  open-catalog.h read-catalog-special.h \
+  read-catalog-abstract.h read-catalog.h read-catalog-file.h \
+  read-po.h read-properties.h read-stringtable.h \
+  str-list.h \
+  write-catalog.h write-po.h write-properties.h write-stringtable.h \
+  dir-list.h file-list.h read-po-gram.h cldr-plural.h \
+  cldr-plural-exp.h locating-rules.h its.h search-path.h \
+  msgl-charset.h msgl-equal.h msgl-iconv.h msgl-ascii.h msgl-ofn.h msgl-cat.h \
+  msgl-header.h msgl-english.h msgl-check.h msgl-fsearch.h msgl-merge.h \
+  msgfmt.h msgunfmt.h \
+  plural-count.h plural-eval.h plural-distrib.h \
+  read-mo.h write-mo.h \
+  read-java.h write-java.h \
+  read-csharp.h write-csharp.h \
+  read-resources.h write-resources.h \
+  read-tcl.h write-tcl.h \
+  write-qt.h \
+  read-desktop.h write-desktop.h \
+  write-xml.h \
+  po-time.h plural-table.h lang-table.h country-table.h format.h filters.h \
+  xgettext.h \
+  if-error.h \
+  rc-str-list.h xg-pos.h xg-encoding.h xg-mixed-string.h xg-formatstring.h \
+  xg-arglist-context.h xg-arglist-callshape.h xg-arglist-parser.h xg-message.h \
+  xg-check.h \
+  x-po.h x-properties.h x-stringtable.h \
+  x-c.h \
+  x-python.h \
+  x-java.h \
+  x-csharp.h \
+  x-javascript.h \
+  x-typescript.h \
+  x-typescriptx.h \
+  x-typescript-impl.h \
+  x-scheme.h \
+  x-lisp.h \
+  x-elisp.h \
+  x-librep.h \
+  x-rust.h \
+  x-go.h \
+  x-ruby.h \
+  x-sh.h \
+  x-awk.h \
+  x-lua.h \
+  x-modula2.h \
+  x-d.h html5-entities.h \
+  x-ocaml.h \
+  x-smalltalk.h \
+  x-vala.h \
+  x-tcl.h \
+  x-perl.h \
+  x-php.h \
+  x-ycp.h \
+  x-rst.h \
+  x-desktop.h \
+  x-glade.h x-gsettings.h x-appdata.h
 
 
 # The following are already set through configmake.m4 and configure.ac:
@@ -4937,7 +4937,7 @@ AM_CFLAGS =
 
 # Ensure that <stdint.h> defines SIZE_MAX in C++ mode, like it does in C mode.
 AM_CXXFLAGS = -D__STDC_LIMIT_MACROS
-LDADD = ../gnulib-lib/libgettextlib.la $(LTLIBUNISTRING)  $(WOE32_LDADD)
+LDADD = ../gnulib-lib/libgettextlib.la $(LTLIBUNISTRING) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(WOE32_LDADD)
 OTHERPROGDEPENDENCIES = ../gnulib-lib/libgettextlib.la $(WOE32_LDADD)
 BISON = :
 JAVACOMP = $(SHELL) ../javacomp.sh
@@ -4991,31 +4991,31 @@ FORMAT_SOURCE = format.c format-invalid.h format-c.c \
 # libgettextsrc contains all code that is needed by at least two programs
 # and that does not use OpenMP.
 libgettextsrc_la_SOURCES = \
-	$(COMMON_SOURCE) \
-	read-catalog-special.c \
-	read-catalog.c read-catalog-file.c \
-	write-catalog.c write-properties.c write-stringtable.c write-po.c \
-	msgl-ascii.c \
-	msgl-ofn.c \
-	msgl-iconv.c \
-	msgl-equal.c \
-	msgl-cat.c \
-	msgl-header.c \
-	msgl-english.c \
-	msgl-check.c \
-	file-list.c \
-	msgl-charset.c \
-	msgl-fsearch.c \
-	lang-table.c \
-	po-time.c \
-	plural-exp.c plural-eval.c plural-table.c \
-	plural-count.c \
-	quote.h \
-	sentence.h sentence.c \
-	$(FORMAT_SOURCE) \
-	read-desktop.c \
-	locating-rules.c its.c \
-	search-path.c
+  $(COMMON_SOURCE) \
+  read-catalog-special.c \
+  read-catalog.c read-catalog-file.c \
+  write-catalog.c write-properties.c write-stringtable.c write-po.c \
+  msgl-ascii.c \
+  msgl-ofn.c \
+  msgl-iconv.c \
+  msgl-equal.c \
+  msgl-cat.c \
+  msgl-header.c \
+  msgl-english.c \
+  msgl-check.c \
+  file-list.c \
+  msgl-charset.c \
+  msgl-fsearch.c \
+  lang-table.c \
+  po-time.c \
+  plural-exp.c plural-eval.c plural-table.c \
+  plural-count.c \
+  quote.h \
+  sentence.h sentence.c \
+  $(FORMAT_SOURCE) \
+  read-desktop.c \
+  locating-rules.c its.c \
+  search-path.c
 
 
 # xgettext has some tree-sitter based backends.
@@ -5110,7 +5110,7 @@ xgettext_SOURCES = xgettext.c if-error.c xg-pos.c \
 # x-go.c cannot be compiled by GCC 11 with '-fanalyzer' in 1 GB of RAM.
 # Therefore use special CFLAGS for this compilation unit.
 libxgettextx_a_SOURCES = \
-	x-go.c
+  x-go.c
 
 libxgettextx_a_CPPFLAGS = $(xgettext_CPPFLAGS)
 libxgettextx_a_CFLAGS = $(AM_CFLAGS) 
@@ -5157,12 +5157,12 @@ libgettextsrc_la_DEPENDENCIES = $(WOE32_LIBADD)
 # Need $(LTLIBUNISTRING) because ulc_width_linebreaks, uc_width, etc. may be
 # taken from libunistring, when the configure option --with-libunistring-prefix
 # was given.
-# Need  because many source files use gettext().
+# Need ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices because many source files use gettext().
 # Need  because po-charset.c, read-po-lex.c, msgl-iconv.c,
 # write-po.c use iconv().
 libgettextsrc_la_LDFLAGS = -release 1.0 \
 	../gnulib-lib/libgettextlib.la $(LTLIBUNISTRING) \
-	$(LT_LIBTEXTSTYLE)   -lc -no-undefined \
+	$(LT_LIBTEXTSTYLE) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices  -lc -no-undefined \
 	$(am__append_8) $(am__append_9) $(am__append_10)
 
 # Needed for the expansion of LIBGETTEXTSRC_DLL_VARIABLE on MSVC.
@@ -5391,8 +5391,8 @@ CSHARP_DLL_DIR = ../../gettext-runtime/intl-csharp
 
 # Special rules for XML schemas.
 schema_DATA = \
-	its.xsd10 its.xsd11 its-extensions.xsd \
-	locating-rules.xsd10 locating-rules.xsd11
+  its.xsd10 its.xsd11 its-extensions.xsd \
+  locating-rules.xsd10 locating-rules.xsd11
 
 WOE32_LDADD = 
 

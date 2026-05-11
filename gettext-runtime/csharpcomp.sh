@@ -122,7 +122,7 @@ while test $# != 0; do
       # On Windows, assume that 'dotnet' and 'csc' are native Windows programs,
       # not Cygwin programs.
       arg="$2"
-      case "darwin25.4.0" in
+      case "darwin" in
         cygwin*)
           arg=`cygpath -w "$arg"`
           ;;
@@ -135,7 +135,7 @@ while test $# != 0; do
       # On Windows, assume that 'dotnet' and 'csc' are native Windows programs,
       # not Cygwin programs.
       arg="$2"
-      case "darwin25.4.0" in
+      case "darwin" in
         cygwin*)
           arg=`cygpath -w "$arg"`
           ;;
@@ -164,7 +164,7 @@ while test $# != 0; do
       # On Windows, assume that 'dotnet' and 'csc' are native Windows programs,
       # not Cygwin programs.
       arg="$1"
-      case "darwin25.4.0" in
+      case "darwin" in
         cygwin*)
           arg=`cygpath -w "$arg"`
           ;;
@@ -176,7 +176,7 @@ while test $# != 0; do
       # On Windows, assume that 'dotnet' and 'csc' are native Windows programs,
       # not Cygwin programs.
       arg="$1"
-      case "darwin25.4.0" in
+      case "darwin" in
         cygwin*)
           arg=`cygpath -w "$arg"`
           ;;
@@ -211,7 +211,7 @@ else
     dotnet_sdk_dir=`dotnet --list-sdks | sed -e 's/\([^ ]*\) \[\(.*\)\].*/\2\/\1/p' | sed -e 1q`
     # Add -lib and -reference options, so that the compiler finds Object, Console, String, etc.
     arg="$dotnet_runtime_dir"
-    case "darwin25.4.0" in
+    case "darwin" in
       cygwin*)
         arg=`cygpath -w "$arg"`
         ;;
@@ -225,7 +225,7 @@ else
     done
     func_add_word_to_command dotnet
     csc="$dotnet_sdk_dir/Roslyn/bincore/csc.dll"
-    case "darwin25.4.0" in
+    case "darwin" in
       cygwin*)
         csc=`cygpath -w "$csc"`
         ;;

@@ -57,58 +57,58 @@
 
 
 am__is_gnu_make = { \
-	if test -z '$(MAKELEVEL)'; then \
-	false; \
-	elif test -n '$(MAKE_HOST)'; then \
-	true; \
-	elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
-	true; \
-	else \
-	false; \
-	fi; \
+  if test -z '$(MAKELEVEL)'; then \
+    false; \
+  elif test -n '$(MAKE_HOST)'; then \
+    true; \
+  elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
+    true; \
+  else \
+    false; \
+  fi; \
 }
 am__make_running_with_option = \
-	case $${target_option-} in \
-	  ?) ;; \
-	  *) echo "am__make_running_with_option: internal error: invalid" \
-	          "target option '$${target_option-}' specified" >&2; \
-	     exit 1;; \
-	esac; \
-	has_opt=no; \
-	sane_makeflags=$$MAKEFLAGS; \
-	if $(am__is_gnu_make); then \
-	sane_makeflags=$$MFLAGS; \
-	else \
-	case $$MAKEFLAGS in \
-	  *\\[\ \	]*) \
-	    bs=\\; \
-	    sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
-	      | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
-	esac; \
-	fi; \
-	skip_next=no; \
-	strip_trailopt () \
+  case $${target_option-} in \
+      ?) ;; \
+      *) echo "am__make_running_with_option: internal error: invalid" \
+              "target option '$${target_option-}' specified" >&2; \
+         exit 1;; \
+  esac; \
+  has_opt=no; \
+  sane_makeflags=$$MAKEFLAGS; \
+  if $(am__is_gnu_make); then \
+    sane_makeflags=$$MFLAGS; \
+  else \
+    case $$MAKEFLAGS in \
+      *\\[\ \	]*) \
+        bs=\\; \
+        sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
+          | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
+    esac; \
+  fi; \
+  skip_next=no; \
+  strip_trailopt () \
   { \
-	flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
+    flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
   }; \
-	for flg in $$sane_makeflags; do \
-	test $$skip_next = yes && { skip_next=no; continue; }; \
-	case $$flg in \
-	  *=*|--*) continue;; \
-	    -*I) strip_trailopt 'I'; skip_next=yes;; \
-	  -*I?*) strip_trailopt 'I';; \
-	    -*O) strip_trailopt 'O'; skip_next=yes;; \
-	  -*O?*) strip_trailopt 'O';; \
-	    -*l) strip_trailopt 'l'; skip_next=yes;; \
-	  -*l?*) strip_trailopt 'l';; \
-	  -[dEDm]) skip_next=yes;; \
-	  -[JT]) skip_next=yes;; \
-	esac; \
-	case $$flg in \
-	  *$$target_option*) has_opt=yes; break;; \
-	esac; \
-	done; \
-	test $$has_opt = yes
+  for flg in $$sane_makeflags; do \
+    test $$skip_next = yes && { skip_next=no; continue; }; \
+    case $$flg in \
+      *=*|--*) continue;; \
+        -*I) strip_trailopt 'I'; skip_next=yes;; \
+      -*I?*) strip_trailopt 'I';; \
+        -*O) strip_trailopt 'O'; skip_next=yes;; \
+      -*O?*) strip_trailopt 'O';; \
+        -*l) strip_trailopt 'l'; skip_next=yes;; \
+      -*l?*) strip_trailopt 'l';; \
+      -[dEDm]) skip_next=yes;; \
+      -[JT]) skip_next=yes;; \
+    esac; \
+    case $$flg in \
+      *$$target_option*) has_opt=yes; break;; \
+    esac; \
+  done; \
+  test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
 am__rm_f = rm -f $(am__rm_f_notfound)
@@ -129,40 +129,40 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = aarch64-apple-darwin25.4.0
-host_triplet = aarch64-apple-darwin25.4.0
-@GL_COND_OBJ_FLOAT_TRUE@am__append_1 = float.c
-@GL_COND_OBJ_ITOLD_TRUE@am__append_2 = itold.c
-@GL_COND_OBJ_FREE_TRUE@am__append_3 = free.c
-@GL_COND_OBJ_FSETERR_TRUE@am__append_4 = fseterr.c
-@GL_COND_OBJ_ISWBLANK_TRUE@am__append_5 = iswblank.c
-@GL_COND_OBJ_ISWDIGIT_TRUE@am__append_6 = iswdigit.c
-@GL_COND_OBJ_ISWPUNCT_TRUE@am__append_7 = iswpunct.c
-@GL_COND_OBJ_ISWXDIGIT_TRUE@am__append_8 = iswxdigit.c
-@GL_COND_OBJ_LOCALECONV_TRUE@am__append_9 = localeconv.c
-@GL_COND_OBJ_MBRTOC32_TRUE@am__append_10 = mbrtoc32.c
-@GL_COND_OBJ_MBRTOWC_TRUE@am__append_11 = mbrtowc.c
-@GL_COND_OBJ_MBSINIT_TRUE@am__append_12 = mbsinit.c
-@GL_COND_OBJ_MEMCHR_TRUE@am__append_13 = memchr.c
-@GL_COND_OBJ_SETLOCALE_LOCK_TRUE@am__append_14 = setlocale-lock.c
-@GL_COND_OBJ_STDIO_READ_TRUE@am__append_15 = stdio-read.c
-@GL_COND_OBJ_STDIO_WRITE_TRUE@am__append_16 = stdio-write.c
-@GL_COND_OBJ_STDIO_CONSOLESAFE_TRUE@am__append_17 = stdio-consolesafe.c
-@LIBUNISTRING_COMPILE_UNICASE_TOLOWER_TRUE@am__append_18 = unicase/tolower.c
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_ALNUM_TRUE@am__append_19 = unictype/ctype_alnum.c
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_ALPHA_TRUE@am__append_20 = unictype/ctype_alpha.c
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_BLANK_TRUE@am__append_21 = unictype/ctype_blank.c
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_CNTRL_TRUE@am__append_22 = unictype/ctype_cntrl.c
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_DIGIT_TRUE@am__append_23 = unictype/ctype_digit.c
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_GRAPH_TRUE@am__append_24 = unictype/ctype_graph.c
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_LOWER_TRUE@am__append_25 = unictype/ctype_lower.c
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_PRINT_TRUE@am__append_26 = unictype/ctype_print.c
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_PUNCT_TRUE@am__append_27 = unictype/ctype_punct.c
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_SPACE_TRUE@am__append_28 = unictype/ctype_space.c
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_UPPER_TRUE@am__append_29 = unictype/ctype_upper.c
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_XDIGIT_TRUE@am__append_30 = unictype/ctype_xdigit.c
-@LIBUNISTRING_COMPILE_UNIWIDTH_WIDTH_TRUE@am__append_31 = uniwidth/width.c
-@GL_COND_OBJ_WCWIDTH_TRUE@am__append_32 = wcwidth.c
+build_triplet = aarch64-apple-darwin
+host_triplet = aarch64-apple-darwin
+am__append_1 = float.c
+am__append_2 = itold.c
+am__append_3 = free.c
+am__append_4 = fseterr.c
+am__append_5 = iswblank.c
+am__append_6 = iswdigit.c
+am__append_7 = iswpunct.c
+am__append_8 = iswxdigit.c
+am__append_9 = localeconv.c
+am__append_10 = mbrtoc32.c
+am__append_11 = mbrtowc.c
+am__append_12 = mbsinit.c
+am__append_13 = memchr.c
+am__append_14 = setlocale-lock.c
+am__append_15 = stdio-read.c
+am__append_16 = stdio-write.c
+am__append_17 = stdio-consolesafe.c
+am__append_18 = unicase/tolower.c
+am__append_19 = unictype/ctype_alnum.c
+am__append_20 = unictype/ctype_alpha.c
+am__append_21 = unictype/ctype_blank.c
+am__append_22 = unictype/ctype_cntrl.c
+am__append_23 = unictype/ctype_digit.c
+am__append_24 = unictype/ctype_graph.c
+am__append_25 = unictype/ctype_lower.c
+am__append_26 = unictype/ctype_print.c
+am__append_27 = unictype/ctype_punct.c
+am__append_28 = unictype/ctype_space.c
+am__append_29 = unictype/ctype_upper.c
+am__append_30 = unictype/ctype_xdigit.c
+am__append_31 = uniwidth/width.c
+am__append_32 = wcwidth.c
 subdir = gnulib-lib
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/../../m4/libtool.m4 \
@@ -281,41 +281,41 @@ am__libgnu_la_SOURCES_DIST = c32isalnum.c c32isalpha.c c32isblank.c \
 	unictype/ctype_space.c unictype/ctype_upper.c \
 	unictype/ctype_xdigit.c unistd.c uniwidth/width.c wctype-h.c \
 	wcwidth.c xsize.h xsize.c
-@GL_COND_OBJ_FLOAT_TRUE@am__objects_1 = libgnu_la-float.lo
-@GL_COND_OBJ_ITOLD_TRUE@am__objects_2 = libgnu_la-itold.lo
-@GL_COND_OBJ_FREE_TRUE@am__objects_3 = libgnu_la-free.lo
-@GL_COND_OBJ_FSETERR_TRUE@am__objects_4 = libgnu_la-fseterr.lo
-@GL_COND_OBJ_ISWBLANK_TRUE@am__objects_5 = libgnu_la-iswblank.lo
-@GL_COND_OBJ_ISWDIGIT_TRUE@am__objects_6 = libgnu_la-iswdigit.lo
-@GL_COND_OBJ_ISWPUNCT_TRUE@am__objects_7 = libgnu_la-iswpunct.lo
-@GL_COND_OBJ_ISWXDIGIT_TRUE@am__objects_8 = libgnu_la-iswxdigit.lo
-@GL_COND_OBJ_LOCALECONV_TRUE@am__objects_9 = libgnu_la-localeconv.lo
-@GL_COND_OBJ_MBRTOC32_TRUE@am__objects_10 = libgnu_la-mbrtoc32.lo
-@GL_COND_OBJ_MBRTOWC_TRUE@am__objects_11 = libgnu_la-mbrtowc.lo
-@GL_COND_OBJ_MBSINIT_TRUE@am__objects_12 = libgnu_la-mbsinit.lo
-@GL_COND_OBJ_MEMCHR_TRUE@am__objects_13 = libgnu_la-memchr.lo
-@GL_COND_OBJ_SETLOCALE_LOCK_TRUE@am__objects_14 =  \
-@GL_COND_OBJ_SETLOCALE_LOCK_TRUE@	libgnu_la-setlocale-lock.lo
-@GL_COND_OBJ_STDIO_READ_TRUE@am__objects_15 = libgnu_la-stdio-read.lo
-@GL_COND_OBJ_STDIO_WRITE_TRUE@am__objects_16 =  \
-@GL_COND_OBJ_STDIO_WRITE_TRUE@	libgnu_la-stdio-write.lo
-@GL_COND_OBJ_STDIO_CONSOLESAFE_TRUE@am__objects_17 = libgnu_la-stdio-consolesafe.lo
+am__objects_1 = libgnu_la-float.lo
+am__objects_2 = libgnu_la-itold.lo
+am__objects_3 = libgnu_la-free.lo
+am__objects_4 = libgnu_la-fseterr.lo
+am__objects_5 = libgnu_la-iswblank.lo
+am__objects_6 = libgnu_la-iswdigit.lo
+am__objects_7 = libgnu_la-iswpunct.lo
+am__objects_8 = libgnu_la-iswxdigit.lo
+am__objects_9 = libgnu_la-localeconv.lo
+am__objects_10 = libgnu_la-mbrtoc32.lo
+am__objects_11 = libgnu_la-mbrtowc.lo
+am__objects_12 = libgnu_la-mbsinit.lo
+am__objects_13 = libgnu_la-memchr.lo
+am__objects_14 =  \
+	libgnu_la-setlocale-lock.lo
+am__objects_15 = libgnu_la-stdio-read.lo
+am__objects_16 =  \
+	libgnu_la-stdio-write.lo
+am__objects_17 = libgnu_la-stdio-consolesafe.lo
 am__dirstamp = $(am__leading_dot)dirstamp
-@LIBUNISTRING_COMPILE_UNICASE_TOLOWER_TRUE@am__objects_18 = unicase/libgnu_la-tolower.lo
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_ALNUM_TRUE@am__objects_19 = unictype/libgnu_la-ctype_alnum.lo
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_ALPHA_TRUE@am__objects_20 = unictype/libgnu_la-ctype_alpha.lo
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_BLANK_TRUE@am__objects_21 = unictype/libgnu_la-ctype_blank.lo
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_CNTRL_TRUE@am__objects_22 = unictype/libgnu_la-ctype_cntrl.lo
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_DIGIT_TRUE@am__objects_23 = unictype/libgnu_la-ctype_digit.lo
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_GRAPH_TRUE@am__objects_24 = unictype/libgnu_la-ctype_graph.lo
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_LOWER_TRUE@am__objects_25 = unictype/libgnu_la-ctype_lower.lo
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_PRINT_TRUE@am__objects_26 = unictype/libgnu_la-ctype_print.lo
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_PUNCT_TRUE@am__objects_27 = unictype/libgnu_la-ctype_punct.lo
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_SPACE_TRUE@am__objects_28 = unictype/libgnu_la-ctype_space.lo
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_UPPER_TRUE@am__objects_29 = unictype/libgnu_la-ctype_upper.lo
-@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_XDIGIT_TRUE@am__objects_30 = unictype/libgnu_la-ctype_xdigit.lo
-@LIBUNISTRING_COMPILE_UNIWIDTH_WIDTH_TRUE@am__objects_31 = uniwidth/libgnu_la-width.lo
-@GL_COND_OBJ_WCWIDTH_TRUE@am__objects_32 = libgnu_la-wcwidth.lo
+am__objects_18 = unicase/libgnu_la-tolower.lo
+am__objects_19 = unictype/libgnu_la-ctype_alnum.lo
+am__objects_20 = unictype/libgnu_la-ctype_alpha.lo
+am__objects_21 = unictype/libgnu_la-ctype_blank.lo
+am__objects_22 = unictype/libgnu_la-ctype_cntrl.lo
+am__objects_23 = unictype/libgnu_la-ctype_digit.lo
+am__objects_24 = unictype/libgnu_la-ctype_graph.lo
+am__objects_25 = unictype/libgnu_la-ctype_lower.lo
+am__objects_26 = unictype/libgnu_la-ctype_print.lo
+am__objects_27 = unictype/libgnu_la-ctype_punct.lo
+am__objects_28 = unictype/libgnu_la-ctype_space.lo
+am__objects_29 = unictype/libgnu_la-ctype_upper.lo
+am__objects_30 = unictype/libgnu_la-ctype_xdigit.lo
+am__objects_31 = uniwidth/libgnu_la-width.lo
+am__objects_32 = libgnu_la-wcwidth.lo
 am_libgnu_la_OBJECTS = libgnu_la-c32isalnum.lo libgnu_la-c32isalpha.lo \
 	libgnu_la-c32isblank.lo libgnu_la-c32iscntrl.lo \
 	libgnu_la-c32isdigit.lo libgnu_la-c32isgraph.lo \
@@ -460,45 +460,45 @@ RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	installdirs-recursive pdf-recursive ps-recursive \
 	tags-recursive uninstall-recursive
 am__can_run_installinfo = \
-	case $$AM_UPDATE_INFO_DIR in \
-	n|no|NO) false;; \
-	*) (install-info --version) >/dev/null 2>&1;; \
-	esac
+  case $$AM_UPDATE_INFO_DIR in \
+    n|no|NO) false;; \
+    *) (install-info --version) >/dev/null 2>&1;; \
+  esac
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
-	$(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
-	*) f=$$p;; \
-	esac;
+    $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
+    *) f=$$p;; \
+  esac;
 am__strip_dir = f=`echo $$p | sed -e 's|^.*/||'`;
 am__install_max = 40
 am__nobase_strip_setup = \
-	srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
+  srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
 am__nobase_strip = \
-	for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
+  for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
 am__nobase_list = $(am__nobase_strip_setup); \
-	for p in $$list; do echo "$$p $$p"; done | \
-	sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
-	$(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
-	if (++n[$$2] == $(am__install_max)) \
-	  { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
-	END { for (dir in files) print dir, files[dir] }'
+  for p in $$list; do echo "$$p $$p"; done | \
+  sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
+  $(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
+    if (++n[$$2] == $(am__install_max)) \
+      { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
+    END { for (dir in files) print dir, files[dir] }'
 am__base_list = \
-	sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
-	sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+  sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
+  sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 am__uninstall_files_from_dir = { \
   { test ! -d "$$dir" && test ! -f "$$dir" && test ! -r "$$dir"; } \
   || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
-	   $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
+       $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
   }
 am__installdirs = "$(DESTDIR)$(pkgdatadir)"
 DATA = $(pkgdata_DATA)
 HEADERS = $(noinst_HEADERS)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
-	distclean-recursive maintainer-clean-recursive
+  distclean-recursive maintainer-clean-recursive
 am__recursive_targets = \
-	$(RECURSIVE_TARGETS) \
-	$(RECURSIVE_CLEAN_TARGETS) \
-	$(am__extra_recursive_targets)
+  $(RECURSIVE_TARGETS) \
+  $(RECURSIVE_CLEAN_TARGETS) \
+  $(am__extra_recursive_targets)
 AM_RECURSIVE_TARGETS = $(am__recursive_targets:-recursive=) TAGS CTAGS \
 	distdir distdir-am
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
@@ -506,48 +506,48 @@ am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 # and print each of them once, without duplicates.  Input order is
 # *not* preserved.
 am__uniquify_input = $(AWK) '\
-	BEGIN { nonempty = 0; } \
+  BEGIN { nonempty = 0; } \
   { items[$$0] = 1; nonempty = 1; } \
-	END { if (nonempty) { for (i in items) print i; }; } \
+  END { if (nonempty) { for (i in items) print i; }; } \
 '
 # Make sure the list of sources is unique.  This is necessary because,
 # e.g., the same source file might be shared among _SOURCES variables
 # for different programs/libraries.
 am__define_uniq_tagged_files = \
-	list='$(am__tagged_files)'; \
-	unique=`for i in $$list; do \
-	if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
-	done | $(am__uniquify_input)`
+  list='$(am__tagged_files)'; \
+  unique=`for i in $$list; do \
+    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+  done | $(am__uniquify_input)`
 DIST_SUBDIRS = $(SUBDIRS)
 am__DIST_COMMON = $(srcdir)/Makefile.in \
 	$(top_srcdir)/../../build-aux/depcomp \
 	$(top_srcdir)/../../build-aux/mkinstalldirs alloca.c
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 am__relativize = \
-	dir0=`pwd`; \
-	sed_first='s,^\([^/]*\)/.*$$,\1,'; \
-	sed_rest='s,^[^/]*/*,,'; \
-	sed_last='s,^.*/\([^/]*\)$$,\1,'; \
-	sed_butlast='s,/*[^/]*$$,,'; \
-	while test -n "$$dir1"; do \
-	first=`echo "$$dir1" | sed -e "$$sed_first"`; \
-	if test "$$first" != "."; then \
-	  if test "$$first" = ".."; then \
-	    dir2=`echo "$$dir0" | sed -e "$$sed_last"`/"$$dir2"; \
-	    dir0=`echo "$$dir0" | sed -e "$$sed_butlast"`; \
-	  else \
-	    first2=`echo "$$dir2" | sed -e "$$sed_first"`; \
-	    if test "$$first2" = "$$first"; then \
-	      dir2=`echo "$$dir2" | sed -e "$$sed_rest"`; \
-	    else \
-	      dir2="../$$dir2"; \
-	    fi; \
-	    dir0="$$dir0"/"$$first"; \
-	  fi; \
-	fi; \
-	dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
-	done; \
-	reldir="$$dir2"
+  dir0=`pwd`; \
+  sed_first='s,^\([^/]*\)/.*$$,\1,'; \
+  sed_rest='s,^[^/]*/*,,'; \
+  sed_last='s,^.*/\([^/]*\)$$,\1,'; \
+  sed_butlast='s,/*[^/]*$$,,'; \
+  while test -n "$$dir1"; do \
+    first=`echo "$$dir1" | sed -e "$$sed_first"`; \
+    if test "$$first" != "."; then \
+      if test "$$first" = ".."; then \
+        dir2=`echo "$$dir0" | sed -e "$$sed_last"`/"$$dir2"; \
+        dir0=`echo "$$dir0" | sed -e "$$sed_butlast"`; \
+      else \
+        first2=`echo "$$dir2" | sed -e "$$sed_first"`; \
+        if test "$$first2" = "$$first"; then \
+          dir2=`echo "$$dir2" | sed -e "$$sed_rest"`; \
+        else \
+          dir2="../$$dir2"; \
+        fi; \
+        dir0="$$dir0"/"$$first"; \
+      fi; \
+    fi; \
+    dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
+  done; \
+  reldir="$$dir2"
 ACLOCAL = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' aclocal-1.18
 ALLOCA = @ALLOCA@
 ALLOCA_H = 
@@ -1703,10 +1703,10 @@ am__tar = tar --format=ustar -chf - "$$tardir"
 am__untar = tar -xf -
 am__xargs_n = xargs -n
 bindir = ${exec_prefix}/bin
-build = aarch64-apple-darwin25.4.0
-build_alias = 
+build = aarch64-apple-darwin
+build_alias = arm64-apple-darwin
 build_cpu = aarch64
-build_os = darwin25.4.0
+build_os = darwin
 build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
@@ -1727,10 +1727,10 @@ gltests_WITNESS = IN_LIBASPRINTF_GNULIB_TESTS
 gltests_libgnu_LIBOBJDEPS = 
 gltests_libgnu_LIBOBJS = 
 gltests_libgnu_LTLIBOBJS = 
-host = aarch64-apple-darwin25.4.0
-host_alias = 
+host = aarch64-apple-darwin
+host_alias = arm64-apple-darwin
 host_cpu = aarch64
-host_os = darwin25.4.0
+host_os = darwin
 host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
@@ -3036,46 +3036,46 @@ uninstall-am: uninstall-pkgdataDATA
 
 # We need the following in order to create <alloca.h> when the system
 # doesn't have one that works with the given compiler.
-@GL_GENERATE_ALLOCA_H_TRUE@alloca.h: alloca.in.h $(top_builddir)/config.status
-@GL_GENERATE_ALLOCA_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_ALLOCA_H_TRUE@	  -e 's|@''HAVE_ALLOCA_H''@|$(HAVE_ALLOCA_H)|g' \
-@GL_GENERATE_ALLOCA_H_TRUE@	  $(srcdir)/alloca.in.h > $@-t
-@GL_GENERATE_ALLOCA_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_ALLOCA_H_FALSE@alloca.h: $(top_builddir)/config.status
-@GL_GENERATE_ALLOCA_H_FALSE@	rm -f $@
+alloca.h: alloca.in.h $(top_builddir)/config.status
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	  -e 's|@''HAVE_ALLOCA_H''@|$(HAVE_ALLOCA_H)|g' \
+	  $(srcdir)/alloca.in.h > $@-t
+	$(AM_V_at)mv $@-t $@
+alloca.h: $(top_builddir)/config.status
+	rm -f $@
 
 # We need the following in order to create <assert.h> when the system
 # doesn't have one that works with the given compiler.
-@GL_GENERATE_ASSERT_H_TRUE@assert.h: assert.in.h verify.h $(top_builddir)/config.status
-@GL_GENERATE_ASSERT_H_TRUE@	$(gl_V_at){ $(SED_HEADER_STDOUT) \
-@GL_GENERATE_ASSERT_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-@GL_GENERATE_ASSERT_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
-@GL_GENERATE_ASSERT_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
-@GL_GENERATE_ASSERT_H_TRUE@	      -e 's|@''NEXT_ASSERT_H''@|$(NEXT_ASSERT_H)|g' \
-@GL_GENERATE_ASSERT_H_TRUE@	      < $(srcdir)/assert.in.h && \
-@GL_GENERATE_ASSERT_H_TRUE@	  sed -e '/@assert.h omit start@/,/@assert.h omit end@/d' \
-@GL_GENERATE_ASSERT_H_TRUE@	      -e 's|_gl_verify|_gl_static_assert|g' \
-@GL_GENERATE_ASSERT_H_TRUE@	      -e 's|_GL_VERIFY|_GL_STATIC_ASSERT|g' \
-@GL_GENERATE_ASSERT_H_TRUE@	      -e 's|_GL\(_STATIC_ASSERT_H\)|_GL\1|g' \
-@GL_GENERATE_ASSERT_H_TRUE@	      < $(srcdir)/verify.h; \
-@GL_GENERATE_ASSERT_H_TRUE@	} > $@-t
-@GL_GENERATE_ASSERT_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_ASSERT_H_FALSE@assert.h: $(top_builddir)/config.status
-@GL_GENERATE_ASSERT_H_FALSE@	rm -f $@
+assert.h: assert.in.h verify.h $(top_builddir)/config.status
+	$(gl_V_at){ $(SED_HEADER_STDOUT) \
+	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
+	      -e 's|@''NEXT_ASSERT_H''@|$(NEXT_ASSERT_H)|g' \
+	      < $(srcdir)/assert.in.h && \
+	  sed -e '/@assert.h omit start@/,/@assert.h omit end@/d' \
+	      -e 's|_gl_verify|_gl_static_assert|g' \
+	      -e 's|_GL_VERIFY|_GL_STATIC_ASSERT|g' \
+	      -e 's|_GL\(_STATIC_ASSERT_H\)|_GL\1|g' \
+	      < $(srcdir)/verify.h; \
+	} > $@-t
+	$(AM_V_at)mv $@-t $@
+assert.h: $(top_builddir)/config.status
+	rm -f $@
 
 # We need the following in order to create <errno.h> when the system
 # doesn't have one that is POSIX compliant.
-@GL_GENERATE_ERRNO_H_TRUE@errno.h: errno.in.h $(top_builddir)/config.status
-@GL_GENERATE_ERRNO_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_ERRNO_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
-@GL_GENERATE_ERRNO_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-@GL_GENERATE_ERRNO_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
-@GL_GENERATE_ERRNO_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
-@GL_GENERATE_ERRNO_H_TRUE@	      -e 's|@''NEXT_ERRNO_H''@|$(NEXT_ERRNO_H)|g' \
-@GL_GENERATE_ERRNO_H_TRUE@	      $(srcdir)/errno.in.h > $@-t
-@GL_GENERATE_ERRNO_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_ERRNO_H_FALSE@errno.h: $(top_builddir)/config.status
-@GL_GENERATE_ERRNO_H_FALSE@	rm -f $@
+errno.h: errno.in.h $(top_builddir)/config.status
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	      -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
+	      -e 's|@''NEXT_ERRNO_H''@|$(NEXT_ERRNO_H)|g' \
+	      $(srcdir)/errno.in.h > $@-t
+	$(AM_V_at)mv $@-t $@
+errno.h: $(top_builddir)/config.status
+	rm -f $@
 
 # We need the following in order to create <fcntl.h> when the system
 # doesn't have one that works with the given compiler.
@@ -3109,18 +3109,18 @@ fcntl.h: fcntl.in.h $(top_builddir)/config.status $(CXXDEFS_H) $(ARG_NONNULL_H) 
 
 # We need the following in order to create <float.h> when the system
 # doesn't have one that works with the given compiler.
-@GL_GENERATE_FLOAT_H_TRUE@float.h: float.in.h $(top_builddir)/config.status
-@GL_GENERATE_FLOAT_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_FLOAT_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
-@GL_GENERATE_FLOAT_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-@GL_GENERATE_FLOAT_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
-@GL_GENERATE_FLOAT_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
-@GL_GENERATE_FLOAT_H_TRUE@	      -e 's|@''NEXT_FLOAT_H''@|$(NEXT_FLOAT_H)|g' \
-@GL_GENERATE_FLOAT_H_TRUE@	      -e 's|@''REPLACE_ITOLD''@|$(REPLACE_ITOLD)|g' \
-@GL_GENERATE_FLOAT_H_TRUE@	      $(srcdir)/float.in.h > $@-t
-@GL_GENERATE_FLOAT_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_FLOAT_H_FALSE@float.h: $(top_builddir)/config.status
-@GL_GENERATE_FLOAT_H_FALSE@	rm -f $@
+float.h: float.in.h $(top_builddir)/config.status
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	      -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
+	      -e 's|@''NEXT_FLOAT_H''@|$(NEXT_FLOAT_H)|g' \
+	      -e 's|@''REPLACE_ITOLD''@|$(REPLACE_ITOLD)|g' \
+	      $(srcdir)/float.in.h > $@-t
+	$(AM_V_at)mv $@-t $@
+float.h: $(top_builddir)/config.status
+	rm -f $@
 
 # We need the following in order to create <inttypes.h> when the system
 # doesn't have one that works with the given compiler.
@@ -3158,17 +3158,17 @@ inttypes.h: inttypes.in.h $(top_builddir)/config.status $(CXXDEFS_H) $(WARN_ON_U
 
 # We need the following in order to create <limits.h> when the system
 # doesn't have one that is compatible with GNU.
-@GL_GENERATE_LIMITS_H_TRUE@limits.h: limits.in.h $(top_builddir)/config.status
-@GL_GENERATE_LIMITS_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_LIMITS_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
-@GL_GENERATE_LIMITS_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-@GL_GENERATE_LIMITS_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
-@GL_GENERATE_LIMITS_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
-@GL_GENERATE_LIMITS_H_TRUE@	      -e 's|@''NEXT_LIMITS_H''@|$(NEXT_LIMITS_H)|g' \
-@GL_GENERATE_LIMITS_H_TRUE@	      $(srcdir)/limits.in.h > $@-t
-@GL_GENERATE_LIMITS_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_LIMITS_H_FALSE@limits.h: $(top_builddir)/config.status
-@GL_GENERATE_LIMITS_H_FALSE@	rm -f $@
+limits.h: limits.in.h $(top_builddir)/config.status
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	      -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
+	      -e 's|@''NEXT_LIMITS_H''@|$(NEXT_LIMITS_H)|g' \
+	      $(srcdir)/limits.in.h > $@-t
+	$(AM_V_at)mv $@-t $@
+limits.h: $(top_builddir)/config.status
+	rm -f $@
 
 # We need the following in order to create <locale.h> when the system
 # doesn't have one that provides all definitions.
@@ -3211,92 +3211,92 @@ locale.h: locale.in.h $(top_builddir)/config.status $(CXXDEFS_H) $(ARG_NONNULL_H
 
 # We need the following in order to create <stdckdint.h> when the system
 # doesn't have one that works with the given compiler.
-@GL_GENERATE_STDCKDINT_H_TRUE@stdckdint.h: stdckdint.in.h $(top_builddir)/config.status
-@GL_GENERATE_STDCKDINT_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_STDCKDINT_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
-@GL_GENERATE_STDCKDINT_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-@GL_GENERATE_STDCKDINT_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
-@GL_GENERATE_STDCKDINT_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
-@GL_GENERATE_STDCKDINT_H_TRUE@	      -e 's|@''NEXT_STDCKDINT_H''@|$(NEXT_STDCKDINT_H)|g' \
-@GL_GENERATE_STDCKDINT_H_TRUE@	      -e 's|@''HAVE_C_STDCKDINT_H''@|$(HAVE_C_STDCKDINT_H)|g' \
-@GL_GENERATE_STDCKDINT_H_TRUE@	      -e 's|@''HAVE_WORKING_C_STDCKDINT_H''@|$(HAVE_WORKING_C_STDCKDINT_H)|g' \
-@GL_GENERATE_STDCKDINT_H_TRUE@	      -e 's|@''HAVE_CXX_STDCKDINT_H''@|$(HAVE_CXX_STDCKDINT_H)|g' \
-@GL_GENERATE_STDCKDINT_H_TRUE@	      -e 's|@''HAVE_WORKING_CXX_STDCKDINT_H''@|$(HAVE_WORKING_CXX_STDCKDINT_H)|g' \
-@GL_GENERATE_STDCKDINT_H_TRUE@	  $(srcdir)/stdckdint.in.h > $@-t
-@GL_GENERATE_STDCKDINT_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_STDCKDINT_H_FALSE@stdckdint.h: $(top_builddir)/config.status
-@GL_GENERATE_STDCKDINT_H_FALSE@	rm -f $@
+stdckdint.h: stdckdint.in.h $(top_builddir)/config.status
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	      -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
+	      -e 's|@''NEXT_STDCKDINT_H''@|$(NEXT_STDCKDINT_H)|g' \
+	      -e 's|@''HAVE_C_STDCKDINT_H''@|$(HAVE_C_STDCKDINT_H)|g' \
+	      -e 's|@''HAVE_WORKING_C_STDCKDINT_H''@|$(HAVE_WORKING_C_STDCKDINT_H)|g' \
+	      -e 's|@''HAVE_CXX_STDCKDINT_H''@|$(HAVE_CXX_STDCKDINT_H)|g' \
+	      -e 's|@''HAVE_WORKING_CXX_STDCKDINT_H''@|$(HAVE_WORKING_CXX_STDCKDINT_H)|g' \
+	  $(srcdir)/stdckdint.in.h > $@-t
+	$(AM_V_at)mv $@-t $@
+stdckdint.h: $(top_builddir)/config.status
+	rm -f $@
 
 # We need the following in order to create <stdcountof.h> when the system
 # doesn't have one that works with the given compiler.
-@GL_GENERATE_STDCOUNTOF_H_TRUE@stdcountof.h: stdcountof.in.h $(top_builddir)/config.status
-@GL_GENERATE_STDCOUNTOF_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
-@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's/@''HAVE_STDCOUNTOF_H''@/$(HAVE_STDCOUNTOF_H)/g' \
-@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's/@''CXX_HAVE_STDCOUNTOF_H''@/$(CXX_HAVE_STDCOUNTOF_H)/g' \
-@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
-@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
-@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's|@''NEXT_STDCOUNTOF_H''@|$(NEXT_STDCOUNTOF_H)|g' \
-@GL_GENERATE_STDCOUNTOF_H_TRUE@	      $(srcdir)/stdcountof.in.h > $@-t
-@GL_GENERATE_STDCOUNTOF_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_STDCOUNTOF_H_FALSE@stdcountof.h: $(top_builddir)/config.status
-@GL_GENERATE_STDCOUNTOF_H_FALSE@	rm -f $@
+stdcountof.h: stdcountof.in.h $(top_builddir)/config.status
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	      -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's/@''HAVE_STDCOUNTOF_H''@/$(HAVE_STDCOUNTOF_H)/g' \
+	      -e 's/@''CXX_HAVE_STDCOUNTOF_H''@/$(CXX_HAVE_STDCOUNTOF_H)/g' \
+	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
+	      -e 's|@''NEXT_STDCOUNTOF_H''@|$(NEXT_STDCOUNTOF_H)|g' \
+	      $(srcdir)/stdcountof.in.h > $@-t
+	$(AM_V_at)mv $@-t $@
+stdcountof.h: $(top_builddir)/config.status
+	rm -f $@
 
 # We need the following in order to create <stddef.h> when the system
 # doesn't have one that works with the given compiler.
-@GL_GENERATE_STDDEF_H_TRUE@stddef.h: stddef.in.h $(top_builddir)/config.status
-@GL_GENERATE_STDDEF_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_STDDEF_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
-@GL_GENERATE_STDDEF_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-@GL_GENERATE_STDDEF_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
-@GL_GENERATE_STDDEF_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
-@GL_GENERATE_STDDEF_H_TRUE@	      -e 's|@''NEXT_STDDEF_H''@|$(NEXT_STDDEF_H)|g' \
-@GL_GENERATE_STDDEF_H_TRUE@	      -e 's|@''NULLPTR_T_NEEDS_STDDEF''@|$(NULLPTR_T_NEEDS_STDDEF)|g' \
-@GL_GENERATE_STDDEF_H_TRUE@	      -e 's|@''STDDEF_NOT_IDEMPOTENT''@|$(STDDEF_NOT_IDEMPOTENT)|g' \
-@GL_GENERATE_STDDEF_H_TRUE@	      -e 's|@''REPLACE_NULL''@|$(REPLACE_NULL)|g' \
-@GL_GENERATE_STDDEF_H_TRUE@	      -e 's|@''HAVE_MAX_ALIGN_T''@|$(HAVE_MAX_ALIGN_T)|g' \
-@GL_GENERATE_STDDEF_H_TRUE@	      -e 's|@''HAVE_C_UNREACHABLE''@|$(HAVE_C_UNREACHABLE)|g' \
-@GL_GENERATE_STDDEF_H_TRUE@	      $(srcdir)/stddef.in.h > $@-t
-@GL_GENERATE_STDDEF_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_STDDEF_H_FALSE@stddef.h: $(top_builddir)/config.status
-@GL_GENERATE_STDDEF_H_FALSE@	rm -f $@
+stddef.h: stddef.in.h $(top_builddir)/config.status
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	      -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
+	      -e 's|@''NEXT_STDDEF_H''@|$(NEXT_STDDEF_H)|g' \
+	      -e 's|@''NULLPTR_T_NEEDS_STDDEF''@|$(NULLPTR_T_NEEDS_STDDEF)|g' \
+	      -e 's|@''STDDEF_NOT_IDEMPOTENT''@|$(STDDEF_NOT_IDEMPOTENT)|g' \
+	      -e 's|@''REPLACE_NULL''@|$(REPLACE_NULL)|g' \
+	      -e 's|@''HAVE_MAX_ALIGN_T''@|$(HAVE_MAX_ALIGN_T)|g' \
+	      -e 's|@''HAVE_C_UNREACHABLE''@|$(HAVE_C_UNREACHABLE)|g' \
+	      $(srcdir)/stddef.in.h > $@-t
+	$(AM_V_at)mv $@-t $@
+stddef.h: $(top_builddir)/config.status
+	rm -f $@
 
 # We need the following in order to create <stdint.h> when the system
 # doesn't have one that works with the given compiler.
-@GL_GENERATE_STDINT_H_TRUE@stdint.h: stdint.in.h $(top_builddir)/config.status
-@GL_GENERATE_STDINT_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''HAVE_STDINT_H''@/$(HAVE_STDINT_H)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's|@''NEXT_STDINT_H''@|$(NEXT_STDINT_H)|g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''HAVE_C99_STDINT_H''@/$(HAVE_C99_STDINT_H)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''HAVE_SYS_TYPES_H''@/$(HAVE_SYS_TYPES_H)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''HAVE_INTTYPES_H''@/$(HAVE_INTTYPES_H)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''HAVE_SYS_INTTYPES_H''@/$(HAVE_SYS_INTTYPES_H)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''HAVE_SYS_BITYPES_H''@/$(HAVE_SYS_BITYPES_H)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''HAVE_WCHAR_H''@/$(HAVE_WCHAR_H)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''APPLE_UNIVERSAL_BUILD''@/$(APPLE_UNIVERSAL_BUILD)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''BITSIZEOF_PTRDIFF_T''@/$(BITSIZEOF_PTRDIFF_T)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''PTRDIFF_T_SUFFIX''@/$(PTRDIFF_T_SUFFIX)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''BITSIZEOF_SIG_ATOMIC_T''@/$(BITSIZEOF_SIG_ATOMIC_T)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''HAVE_SIGNED_SIG_ATOMIC_T''@/$(HAVE_SIGNED_SIG_ATOMIC_T)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''SIG_ATOMIC_T_SUFFIX''@/$(SIG_ATOMIC_T_SUFFIX)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''BITSIZEOF_SIZE_T''@/$(BITSIZEOF_SIZE_T)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''SIZE_T_SUFFIX''@/$(SIZE_T_SUFFIX)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''BITSIZEOF_WCHAR_T''@/$(BITSIZEOF_WCHAR_T)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''HAVE_SIGNED_WCHAR_T''@/$(HAVE_SIGNED_WCHAR_T)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''WCHAR_T_SUFFIX''@/$(WCHAR_T_SUFFIX)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''BITSIZEOF_WINT_T''@/$(BITSIZEOF_WINT_T)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''HAVE_SIGNED_WINT_T''@/$(HAVE_SIGNED_WINT_T)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''WINT_T_SUFFIX''@/$(WINT_T_SUFFIX)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      -e 's/@''GNULIBHEADERS_OVERRIDE_WINT_T''@/$(GNULIBHEADERS_OVERRIDE_WINT_T)/g' \
-@GL_GENERATE_STDINT_H_TRUE@	      $(srcdir)/stdint.in.h > $@-t
-@GL_GENERATE_STDINT_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_STDINT_H_FALSE@stdint.h: $(top_builddir)/config.status
-@GL_GENERATE_STDINT_H_FALSE@	rm -f $@
+stdint.h: stdint.in.h $(top_builddir)/config.status
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	      -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's/@''HAVE_STDINT_H''@/$(HAVE_STDINT_H)/g' \
+	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
+	      -e 's|@''NEXT_STDINT_H''@|$(NEXT_STDINT_H)|g' \
+	      -e 's/@''HAVE_C99_STDINT_H''@/$(HAVE_C99_STDINT_H)/g' \
+	      -e 's/@''HAVE_SYS_TYPES_H''@/$(HAVE_SYS_TYPES_H)/g' \
+	      -e 's/@''HAVE_INTTYPES_H''@/$(HAVE_INTTYPES_H)/g' \
+	      -e 's/@''HAVE_SYS_INTTYPES_H''@/$(HAVE_SYS_INTTYPES_H)/g' \
+	      -e 's/@''HAVE_SYS_BITYPES_H''@/$(HAVE_SYS_BITYPES_H)/g' \
+	      -e 's/@''HAVE_WCHAR_H''@/$(HAVE_WCHAR_H)/g' \
+	      -e 's/@''APPLE_UNIVERSAL_BUILD''@/$(APPLE_UNIVERSAL_BUILD)/g' \
+	      -e 's/@''BITSIZEOF_PTRDIFF_T''@/$(BITSIZEOF_PTRDIFF_T)/g' \
+	      -e 's/@''PTRDIFF_T_SUFFIX''@/$(PTRDIFF_T_SUFFIX)/g' \
+	      -e 's/@''BITSIZEOF_SIG_ATOMIC_T''@/$(BITSIZEOF_SIG_ATOMIC_T)/g' \
+	      -e 's/@''HAVE_SIGNED_SIG_ATOMIC_T''@/$(HAVE_SIGNED_SIG_ATOMIC_T)/g' \
+	      -e 's/@''SIG_ATOMIC_T_SUFFIX''@/$(SIG_ATOMIC_T_SUFFIX)/g' \
+	      -e 's/@''BITSIZEOF_SIZE_T''@/$(BITSIZEOF_SIZE_T)/g' \
+	      -e 's/@''SIZE_T_SUFFIX''@/$(SIZE_T_SUFFIX)/g' \
+	      -e 's/@''BITSIZEOF_WCHAR_T''@/$(BITSIZEOF_WCHAR_T)/g' \
+	      -e 's/@''HAVE_SIGNED_WCHAR_T''@/$(HAVE_SIGNED_WCHAR_T)/g' \
+	      -e 's/@''WCHAR_T_SUFFIX''@/$(WCHAR_T_SUFFIX)/g' \
+	      -e 's/@''BITSIZEOF_WINT_T''@/$(BITSIZEOF_WINT_T)/g' \
+	      -e 's/@''HAVE_SIGNED_WINT_T''@/$(HAVE_SIGNED_WINT_T)/g' \
+	      -e 's/@''WINT_T_SUFFIX''@/$(WINT_T_SUFFIX)/g' \
+	      -e 's/@''GNULIBHEADERS_OVERRIDE_WINT_T''@/$(GNULIBHEADERS_OVERRIDE_WINT_T)/g' \
+	      $(srcdir)/stdint.in.h > $@-t
+	$(AM_V_at)mv $@-t $@
+stdint.h: $(top_builddir)/config.status
+	rm -f $@
 
 # We need the following in order to create <stdio.h> when the system
 # doesn't have one that works with the given compiler.
@@ -3447,7 +3447,7 @@ stdio.h: stdio.in.h $(top_builddir)/config.status $(CXXDEFS_H) $(ARG_NONNULL_H) 
 	$(AM_V_at)mv $@-t3 $@
 
 stdlib.h: stdlib.in.h $(top_builddir)/config.status $(CXXDEFS_H) \
-	$(_NORETURN_H) $(ARG_NONNULL_H) $(WARN_ON_USE_H)
+  $(_NORETURN_H) $(ARG_NONNULL_H) $(WARN_ON_USE_H)
 	$(gl_V_at)$(SED_HEADER_STDOUT) \
 	      -e 's|@''GUARD_PREFIX''@|GL|g' \
 	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \

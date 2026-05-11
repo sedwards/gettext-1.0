@@ -41,58 +41,58 @@
 
 
 am__is_gnu_make = { \
-	if test -z '$(MAKELEVEL)'; then \
-	false; \
-	elif test -n '$(MAKE_HOST)'; then \
-	true; \
-	elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
-	true; \
-	else \
-	false; \
-	fi; \
+  if test -z '$(MAKELEVEL)'; then \
+    false; \
+  elif test -n '$(MAKE_HOST)'; then \
+    true; \
+  elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
+    true; \
+  else \
+    false; \
+  fi; \
 }
 am__make_running_with_option = \
-	case $${target_option-} in \
-	  ?) ;; \
-	  *) echo "am__make_running_with_option: internal error: invalid" \
-	          "target option '$${target_option-}' specified" >&2; \
-	     exit 1;; \
-	esac; \
-	has_opt=no; \
-	sane_makeflags=$$MAKEFLAGS; \
-	if $(am__is_gnu_make); then \
-	sane_makeflags=$$MFLAGS; \
-	else \
-	case $$MAKEFLAGS in \
-	  *\\[\ \	]*) \
-	    bs=\\; \
-	    sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
-	      | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
-	esac; \
-	fi; \
-	skip_next=no; \
-	strip_trailopt () \
+  case $${target_option-} in \
+      ?) ;; \
+      *) echo "am__make_running_with_option: internal error: invalid" \
+              "target option '$${target_option-}' specified" >&2; \
+         exit 1;; \
+  esac; \
+  has_opt=no; \
+  sane_makeflags=$$MAKEFLAGS; \
+  if $(am__is_gnu_make); then \
+    sane_makeflags=$$MFLAGS; \
+  else \
+    case $$MAKEFLAGS in \
+      *\\[\ \	]*) \
+        bs=\\; \
+        sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
+          | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
+    esac; \
+  fi; \
+  skip_next=no; \
+  strip_trailopt () \
   { \
-	flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
+    flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
   }; \
-	for flg in $$sane_makeflags; do \
-	test $$skip_next = yes && { skip_next=no; continue; }; \
-	case $$flg in \
-	  *=*|--*) continue;; \
-	    -*I) strip_trailopt 'I'; skip_next=yes;; \
-	  -*I?*) strip_trailopt 'I';; \
-	    -*O) strip_trailopt 'O'; skip_next=yes;; \
-	  -*O?*) strip_trailopt 'O';; \
-	    -*l) strip_trailopt 'l'; skip_next=yes;; \
-	  -*l?*) strip_trailopt 'l';; \
-	  -[dEDm]) skip_next=yes;; \
-	  -[JT]) skip_next=yes;; \
-	esac; \
-	case $$flg in \
-	  *$$target_option*) has_opt=yes; break;; \
-	esac; \
-	done; \
-	test $$has_opt = yes
+  for flg in $$sane_makeflags; do \
+    test $$skip_next = yes && { skip_next=no; continue; }; \
+    case $$flg in \
+      *=*|--*) continue;; \
+        -*I) strip_trailopt 'I'; skip_next=yes;; \
+      -*I?*) strip_trailopt 'I';; \
+        -*O) strip_trailopt 'O'; skip_next=yes;; \
+      -*O?*) strip_trailopt 'O';; \
+        -*l) strip_trailopt 'l'; skip_next=yes;; \
+      -*l?*) strip_trailopt 'l';; \
+      -[dEDm]) skip_next=yes;; \
+      -[JT]) skip_next=yes;; \
+    esac; \
+    case $$flg in \
+      *$$target_option*) has_opt=yes; break;; \
+    esac; \
+  done; \
+  test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
 am__rm_f = rm -f $(am__rm_f_notfound)
@@ -109,8 +109,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = aarch64-apple-darwin25.4.0
-host_triplet = aarch64-apple-darwin25.4.0
+build_triplet = aarch64-apple-darwin
+host_triplet = aarch64-apple-darwin
 TESTS = test-accept$(EXEEXT) test-access$(EXEEXT) test-set-mode-acl.sh \
 	test-set-mode-acl-1.sh test-set-mode-acl-2.sh test-copy-acl.sh \
 	test-copy-acl-1.sh test-copy-acl-2.sh test-alignasof$(EXEEXT) \
@@ -549,22 +549,22 @@ check_PROGRAMS = test-accept$(EXEEXT) test-access$(EXEEXT) \
 	test-xstring-desc$(EXEEXT) test-xstrtol$(EXEEXT) \
 	test-xstrtoul$(EXEEXT) test-xvasprintf$(EXEEXT)
 EXTRA_PROGRAMS = test-verify-try$(EXEEXT)
-@GL_COND_OBJ_ACCEPT_TRUE@am__append_1 = accept.c
-@GL_COND_OBJ_BIND_TRUE@am__append_2 = bind.c
+am__append_1 = accept.c
+am__append_2 = bind.c
 am__append_3 = c32rtomb.c
-@GL_COND_OBJ_CONNECT_TRUE@am__append_4 = connect.c
-@GL_COND_OBJ_CREAT_TRUE@am__append_5 = creat.c
-@GL_GENERATE_ENDIAN_H_TRUE@am__append_6 = endian.c
-@GL_COND_OBJ_FFLUSH_TRUE@am__append_7 = fflush.c
-@GL_COND_OBJ_FPURGE_TRUE@am__append_8 = fpurge.c
-@GL_COND_OBJ_FREOPEN_TRUE@am__append_9 = freopen.c
-@GL_COND_OBJ_FSEEK_TRUE@am__append_10 = fseek.c
-@GL_COND_OBJ_FSEEKO_TRUE@am__append_11 = fseeko.c
-@GL_COND_OBJ_FTRUNCATE_TRUE@am__append_12 = ftruncate.c
-@GL_COND_OBJ_GETPAGESIZE_TRUE@am__append_13 = getpagesize.c
-@GL_COND_OBJ_IOCTL_TRUE@am__append_14 = ioctl.c
-@GL_COND_OBJ_LINK_TRUE@am__append_15 = link.c
-@GL_COND_OBJ_LISTEN_TRUE@am__append_16 = listen.c
+am__append_4 = connect.c
+am__append_5 = creat.c
+am__append_6 = endian.c
+am__append_7 = fflush.c
+am__append_8 = fpurge.c
+am__append_9 = freopen.c
+am__append_10 = fseek.c
+am__append_11 = fseeko.c
+am__append_12 = ftruncate.c
+am__append_13 = getpagesize.c
+am__append_14 = ioctl.c
+am__append_15 = link.c
+am__append_16 = listen.c
 #am__append_17 = test-localcharset-w32utf8.sh
 #am__append_18 = test-localcharset-w32utf8 \
 #	test-localename-w32utf8 \
@@ -575,53 +575,53 @@ am__append_3 = c32rtomb.c
 #	test-mbrtowc-windows-utf8.res
 #am__append_20 = test-localename-w32utf8.sh
 #am__append_21 = test-mbrtowc-w32utf8.sh
-@GL_COND_OBJ_MKFIFO_TRUE@am__append_22 = mkfifo.c
-@GL_COND_OBJ_NANOSLEEP_TRUE@am__append_23 = nanosleep.c
-@GL_COND_OBJ_PERROR_TRUE@am__append_24 = perror.c
-@GL_COND_OBJ_PSELECT_TRUE@am__append_25 = pselect.c
-@GL_COND_OBJ_PTHREAD_COND_TRUE@am__append_26 = pthread-cond.c
-@GL_COND_OBJ_PTHREAD_MUTEX_TRUE@am__append_27 = pthread-mutex.c
-@GL_COND_OBJ_PTHREAD_RWLOCK_TRUE@am__append_28 = pthread-rwlock.c
-@GL_COND_OBJ_PTHREAD_THREAD_TRUE@am__append_29 = pthread-thread.c
-@GL_COND_OBJ_PTHREAD_MUTEX_TIMEDLOCK_TRUE@am__append_30 = pthread_mutex_timedlock.c
-@GL_COND_OBJ_PUTENV_TRUE@am__append_31 = putenv.c
-@GL_COND_OBJ_RANDOM_TRUE@am__append_32 = random.c
-@GL_COND_OBJ_RANDOM_R_TRUE@am__append_33 = random_r.c
-@GL_COND_OBJ_SCHED_YIELD_TRUE@am__append_34 = sched_yield.c
-@GL_COND_OBJ_SELECT_TRUE@am__append_35 = select.c
+am__append_22 = mkfifo.c
+am__append_23 = nanosleep.c
+am__append_24 = perror.c
+am__append_25 = pselect.c
+am__append_26 = pthread-cond.c
+am__append_27 = pthread-mutex.c
+am__append_28 = pthread-rwlock.c
+am__append_29 = pthread-thread.c
+am__append_30 = pthread_mutex_timedlock.c
+am__append_31 = putenv.c
+am__append_32 = random.c
+am__append_33 = random_r.c
+am__append_34 = sched_yield.c
+am__append_35 = select.c
 #am__append_36 = test-setlocale-w32utf8.sh
 #am__append_37 = test-setlocale-w32utf8
 #am__append_38 = test-setlocale-windows-utf8.res
-@GL_COND_OBJ_SETSOCKOPT_TRUE@am__append_39 = setsockopt.c
+am__append_39 = setsockopt.c
 
 # Work around https://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=57213
-@OS_IS_NETBSD_FALSE@am__append_40 = test-sigprocmask
-@GL_COND_OBJ_SLEEP_TRUE@am__append_41 = sleep.c
-@GL_COND_OBJ_SOCKET_TRUE@am__append_42 = socket.c
-@GL_COND_OBJ_SYMLINK_TRUE@am__append_43 = symlink.c
-@GL_COND_OBJ_SYMLINKAT_TRUE@am__append_44 = symlinkat.c
-@GL_COND_OBJ_TIME_TRUE@am__append_45 = time.c
+am__append_40 = test-sigprocmask
+am__append_41 = sleep.c
+am__append_42 = socket.c
+am__append_43 = symlink.c
+am__append_44 = symlinkat.c
+am__append_45 = time.c
 
 # Unlike other libunistring modules, this test passes only when the
 # same version of uniname/uniname.c is used (even if it is newer).
-@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@am__append_46 = uniname/test-uninames.sh
-@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@am__append_47 = test-uninames
-@LIBUNISTRING_COMPILE_UNISTR_U16_CMP_TRUE@am__append_48 = unistr/u16-cmp.c
-@LIBUNISTRING_COMPILE_UNISTR_U32_CMP_TRUE@am__append_49 = unistr/u32-cmp.c
-@LIBUNISTRING_COMPILE_UNISTR_U32_SET_TRUE@am__append_50 = unistr/u32-set.c
-@LIBUNISTRING_COMPILE_UNISTR_U8_CMP_TRUE@am__append_51 = unistr/u8-cmp.c
-@LIBUNISTRING_COMPILE_UNISTR_U8_STRLEN_TRUE@am__append_52 = unistr/u8-strlen.c
-@GL_COND_OBJ_UNLINKAT_TRUE@am__append_53 = unlinkat.c
-@GL_COND_OBJ_USLEEP_TRUE@am__append_54 = usleep.c
-@OS_IS_CYGWIN_FALSE@am__append_55 = test-usleep
+am__append_46 = uniname/test-uninames.sh
+am__append_47 = test-uninames
+am__append_48 = unistr/u16-cmp.c
+am__append_49 = unistr/u32-cmp.c
+am__append_50 = unistr/u32-set.c
+am__append_51 = unistr/u8-cmp.c
+am__append_52 = unistr/u8-strlen.c
+am__append_53 = unlinkat.c
+am__append_54 = usleep.c
+am__append_55 = test-usleep
 #am__append_56 = wcrtomb.c
-@GL_COND_OBJ_WCTOB_TRUE@am__append_57 = wctob.c
-@GL_COND_OBJ_WCTOMB_TRUE@am__append_58 = wctomb.c
-@GL_COND_OBJ_WINDOWS_COND_TRUE@am__append_59 = windows-cond.c
+am__append_57 = wctob.c
+am__append_58 = wctomb.c
+am__append_59 = windows-cond.c
 #am__append_60 = windows-thread.c
-@GL_COND_OBJ_WINDOWS_TIMEDMUTEX_TRUE@am__append_61 = windows-timedmutex.c
-@GL_COND_OBJ_WINDOWS_TIMEDRECMUTEX_TRUE@am__append_62 = windows-timedrecmutex.c
-@GL_COND_OBJ_WINDOWS_TIMEDRWLOCK_TRUE@am__append_63 = windows-timedrwlock.c
+am__append_61 = windows-timedmutex.c
+am__append_62 = windows-timedrecmutex.c
+am__append_63 = windows-timedrwlock.c
 subdir = gnulib-tests
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
@@ -1034,7 +1034,7 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/../build-aux/mkinstalldirs
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
-@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@am__EXEEXT_1 = test-uninames$(EXEEXT)
+am__EXEEXT_1 = test-uninames$(EXEEXT)
 #am__EXEEXT_2 =  \
 #	test-localcharset-w32utf8$(EXEEXT) \
 #	test-localename-w32utf8$(EXEEXT) \
@@ -1070,64 +1070,64 @@ am__libtests_a_SOURCES_DIST = accept.c copy-acl.c set-acl.c \
 	windows-timedmutex.c windows-timedrecmutex.c \
 	windows-timedrwlock.c xgetcwd.c gl_xoset.h gl_xoset.c \
 	xstrtol-error.c glthread/yield.h
-@GL_COND_OBJ_ACCEPT_TRUE@am__objects_1 = accept.$(OBJEXT)
-@GL_COND_OBJ_BIND_TRUE@am__objects_2 = bind.$(OBJEXT)
+am__objects_1 = accept.$(OBJEXT)
+am__objects_2 = bind.$(OBJEXT)
 am__objects_3 = c32rtomb.$(OBJEXT)
-@GL_COND_OBJ_CONNECT_TRUE@am__objects_4 = connect.$(OBJEXT)
-@GL_COND_OBJ_CREAT_TRUE@am__objects_5 = creat.$(OBJEXT)
-@GL_GENERATE_ENDIAN_H_TRUE@am__objects_6 = endian.$(OBJEXT)
-@GL_COND_OBJ_FFLUSH_TRUE@am__objects_7 = fflush.$(OBJEXT)
-@GL_COND_OBJ_FPURGE_TRUE@am__objects_8 = fpurge.$(OBJEXT)
-@GL_COND_OBJ_FREOPEN_TRUE@am__objects_9 = freopen.$(OBJEXT)
-@GL_COND_OBJ_FSEEK_TRUE@am__objects_10 = fseek.$(OBJEXT)
-@GL_COND_OBJ_FSEEKO_TRUE@am__objects_11 = fseeko.$(OBJEXT)
-@GL_COND_OBJ_FTRUNCATE_TRUE@am__objects_12 = ftruncate.$(OBJEXT)
-@GL_COND_OBJ_GETPAGESIZE_TRUE@am__objects_13 = getpagesize.$(OBJEXT)
-@GL_COND_OBJ_IOCTL_TRUE@am__objects_14 = ioctl.$(OBJEXT)
-@GL_COND_OBJ_LINK_TRUE@am__objects_15 = link.$(OBJEXT)
-@GL_COND_OBJ_LISTEN_TRUE@am__objects_16 = listen.$(OBJEXT)
-@GL_COND_OBJ_MKFIFO_TRUE@am__objects_17 = mkfifo.$(OBJEXT)
-@GL_COND_OBJ_NANOSLEEP_TRUE@am__objects_18 = nanosleep.$(OBJEXT)
-@GL_COND_OBJ_PERROR_TRUE@am__objects_19 = perror.$(OBJEXT)
-@GL_COND_OBJ_PSELECT_TRUE@am__objects_20 = pselect.$(OBJEXT)
-@GL_COND_OBJ_PTHREAD_COND_TRUE@am__objects_21 =  \
-@GL_COND_OBJ_PTHREAD_COND_TRUE@	pthread-cond.$(OBJEXT)
-@GL_COND_OBJ_PTHREAD_MUTEX_TRUE@am__objects_22 =  \
-@GL_COND_OBJ_PTHREAD_MUTEX_TRUE@	pthread-mutex.$(OBJEXT)
-@GL_COND_OBJ_PTHREAD_RWLOCK_TRUE@am__objects_23 =  \
-@GL_COND_OBJ_PTHREAD_RWLOCK_TRUE@	pthread-rwlock.$(OBJEXT)
-@GL_COND_OBJ_PTHREAD_THREAD_TRUE@am__objects_24 =  \
-@GL_COND_OBJ_PTHREAD_THREAD_TRUE@	pthread-thread.$(OBJEXT)
-@GL_COND_OBJ_PTHREAD_MUTEX_TIMEDLOCK_TRUE@am__objects_25 = pthread_mutex_timedlock.$(OBJEXT)
-@GL_COND_OBJ_PUTENV_TRUE@am__objects_26 = putenv.$(OBJEXT)
-@GL_COND_OBJ_RANDOM_TRUE@am__objects_27 = random.$(OBJEXT)
-@GL_COND_OBJ_RANDOM_R_TRUE@am__objects_28 = random_r.$(OBJEXT)
-@GL_COND_OBJ_SCHED_YIELD_TRUE@am__objects_29 = sched_yield.$(OBJEXT)
-@GL_COND_OBJ_SELECT_TRUE@am__objects_30 = select.$(OBJEXT)
-@GL_COND_OBJ_SETSOCKOPT_TRUE@am__objects_31 = setsockopt.$(OBJEXT)
-@GL_COND_OBJ_SLEEP_TRUE@am__objects_32 = sleep.$(OBJEXT)
-@GL_COND_OBJ_SOCKET_TRUE@am__objects_33 = socket.$(OBJEXT)
-@GL_COND_OBJ_SYMLINK_TRUE@am__objects_34 = symlink.$(OBJEXT)
-@GL_COND_OBJ_SYMLINKAT_TRUE@am__objects_35 = symlinkat.$(OBJEXT)
+am__objects_4 = connect.$(OBJEXT)
+am__objects_5 = creat.$(OBJEXT)
+am__objects_6 = endian.$(OBJEXT)
+am__objects_7 = fflush.$(OBJEXT)
+am__objects_8 = fpurge.$(OBJEXT)
+am__objects_9 = freopen.$(OBJEXT)
+am__objects_10 = fseek.$(OBJEXT)
+am__objects_11 = fseeko.$(OBJEXT)
+am__objects_12 = ftruncate.$(OBJEXT)
+am__objects_13 = getpagesize.$(OBJEXT)
+am__objects_14 = ioctl.$(OBJEXT)
+am__objects_15 = link.$(OBJEXT)
+am__objects_16 = listen.$(OBJEXT)
+am__objects_17 = mkfifo.$(OBJEXT)
+am__objects_18 = nanosleep.$(OBJEXT)
+am__objects_19 = perror.$(OBJEXT)
+am__objects_20 = pselect.$(OBJEXT)
+am__objects_21 =  \
+	pthread-cond.$(OBJEXT)
+am__objects_22 =  \
+	pthread-mutex.$(OBJEXT)
+am__objects_23 =  \
+	pthread-rwlock.$(OBJEXT)
+am__objects_24 =  \
+	pthread-thread.$(OBJEXT)
+am__objects_25 = pthread_mutex_timedlock.$(OBJEXT)
+am__objects_26 = putenv.$(OBJEXT)
+am__objects_27 = random.$(OBJEXT)
+am__objects_28 = random_r.$(OBJEXT)
+am__objects_29 = sched_yield.$(OBJEXT)
+am__objects_30 = select.$(OBJEXT)
+am__objects_31 = setsockopt.$(OBJEXT)
+am__objects_32 = sleep.$(OBJEXT)
+am__objects_33 = socket.$(OBJEXT)
+am__objects_34 = symlink.$(OBJEXT)
+am__objects_35 = symlinkat.$(OBJEXT)
 am__dirstamp = $(am__leading_dot)dirstamp
-@GL_COND_OBJ_TIME_TRUE@am__objects_36 = time.$(OBJEXT)
-@LIBUNISTRING_COMPILE_UNISTR_U16_CMP_TRUE@am__objects_37 = unistr/u16-cmp.$(OBJEXT)
-@LIBUNISTRING_COMPILE_UNISTR_U32_CMP_TRUE@am__objects_38 = unistr/u32-cmp.$(OBJEXT)
-@LIBUNISTRING_COMPILE_UNISTR_U32_SET_TRUE@am__objects_39 = unistr/u32-set.$(OBJEXT)
-@LIBUNISTRING_COMPILE_UNISTR_U8_CMP_TRUE@am__objects_40 = unistr/u8-cmp.$(OBJEXT)
-@LIBUNISTRING_COMPILE_UNISTR_U8_STRLEN_TRUE@am__objects_41 = unistr/u8-strlen.$(OBJEXT)
-@GL_COND_OBJ_UNLINKAT_TRUE@am__objects_42 = unlinkat.$(OBJEXT)
-@GL_COND_OBJ_USLEEP_TRUE@am__objects_43 = usleep.$(OBJEXT)
+am__objects_36 = time.$(OBJEXT)
+am__objects_37 = unistr/u16-cmp.$(OBJEXT)
+am__objects_38 = unistr/u32-cmp.$(OBJEXT)
+am__objects_39 = unistr/u32-set.$(OBJEXT)
+am__objects_40 = unistr/u8-cmp.$(OBJEXT)
+am__objects_41 = unistr/u8-strlen.$(OBJEXT)
+am__objects_42 = unlinkat.$(OBJEXT)
+am__objects_43 = usleep.$(OBJEXT)
 #am__objects_44 = wcrtomb.$(OBJEXT)
-@GL_COND_OBJ_WCTOB_TRUE@am__objects_45 = wctob.$(OBJEXT)
-@GL_COND_OBJ_WCTOMB_TRUE@am__objects_46 = wctomb.$(OBJEXT)
-@GL_COND_OBJ_WINDOWS_COND_TRUE@am__objects_47 =  \
-@GL_COND_OBJ_WINDOWS_COND_TRUE@	windows-cond.$(OBJEXT)
+am__objects_45 = wctob.$(OBJEXT)
+am__objects_46 = wctomb.$(OBJEXT)
+am__objects_47 =  \
+	windows-cond.$(OBJEXT)
 #am__objects_48 =  \
 #	windows-thread.$(OBJEXT)
-@GL_COND_OBJ_WINDOWS_TIMEDMUTEX_TRUE@am__objects_49 = windows-timedmutex.$(OBJEXT)
-@GL_COND_OBJ_WINDOWS_TIMEDRECMUTEX_TRUE@am__objects_50 = windows-timedrecmutex.$(OBJEXT)
-@GL_COND_OBJ_WINDOWS_TIMEDRWLOCK_TRUE@am__objects_51 = windows-timedrwlock.$(OBJEXT)
+am__objects_49 = windows-timedmutex.$(OBJEXT)
+am__objects_50 = windows-timedrecmutex.$(OBJEXT)
+am__objects_51 = windows-timedrwlock.$(OBJEXT)
 am_libtests_a_OBJECTS = $(am__objects_1) copy-acl.$(OBJEXT) \
 	set-acl.$(OBJEXT) gl_array_map.$(OBJEXT) \
 	gl_array_oset.$(OBJEXT) gl_array_set.$(OBJEXT) \
@@ -3204,9 +3204,9 @@ test_uniname_h_OBJECTS = $(am_test_uniname_h_OBJECTS)
 test_uniname_h_DEPENDENCIES = $(am__DEPENDENCIES_2) \
 	$(am__DEPENDENCIES_1)
 am__test_uninames_SOURCES_DIST = uniname/test-uninames.c
-@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@am_test_uninames_OBJECTS = uniname/test-uninames.$(OBJEXT)
+am_test_uninames_OBJECTS = uniname/test-uninames.$(OBJEXT)
 test_uninames_OBJECTS = $(am_test_uninames_OBJECTS)
-@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@test_uninames_DEPENDENCIES = $(am__DEPENDENCIES_2)
+test_uninames_DEPENDENCIES = $(am__DEPENDENCIES_2)
 am_test_uninorm_h_OBJECTS = uninorm/test-uninorm-h.$(OBJEXT)
 test_uninorm_h_OBJECTS = $(am_test_uninorm_h_OBJECTS)
 test_uninorm_h_DEPENDENCIES = $(am__DEPENDENCIES_2) \
@@ -4061,45 +4061,45 @@ RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	installdirs-recursive pdf-recursive ps-recursive \
 	tags-recursive uninstall-recursive
 am__can_run_installinfo = \
-	case $$AM_UPDATE_INFO_DIR in \
-	n|no|NO) false;; \
-	*) (install-info --version) >/dev/null 2>&1;; \
-	esac
+  case $$AM_UPDATE_INFO_DIR in \
+    n|no|NO) false;; \
+    *) (install-info --version) >/dev/null 2>&1;; \
+  esac
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
-	$(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
-	*) f=$$p;; \
-	esac;
+    $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
+    *) f=$$p;; \
+  esac;
 am__strip_dir = f=`echo $$p | sed -e 's|^.*/||'`;
 am__install_max = 40
 am__nobase_strip_setup = \
-	srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
+  srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
 am__nobase_strip = \
-	for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
+  for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
 am__nobase_list = $(am__nobase_strip_setup); \
-	for p in $$list; do echo "$$p $$p"; done | \
-	sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
-	$(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
-	if (++n[$$2] == $(am__install_max)) \
-	  { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
-	END { for (dir in files) print dir, files[dir] }'
+  for p in $$list; do echo "$$p $$p"; done | \
+  sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
+  $(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
+    if (++n[$$2] == $(am__install_max)) \
+      { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
+    END { for (dir in files) print dir, files[dir] }'
 am__base_list = \
-	sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
-	sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+  sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
+  sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 am__uninstall_files_from_dir = { \
   { test ! -d "$$dir" && test ! -f "$$dir" && test ! -r "$$dir"; } \
   || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
-	   $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
+       $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
   }
 am__installdirs = "$(DESTDIR)$(pkgdatadir)"
 DATA = $(pkgdata_DATA)
 HEADERS = $(noinst_HEADERS)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
-	distclean-recursive maintainer-clean-recursive
+  distclean-recursive maintainer-clean-recursive
 am__recursive_targets = \
-	$(RECURSIVE_TARGETS) \
-	$(RECURSIVE_CLEAN_TARGETS) \
-	$(am__extra_recursive_targets)
+  $(RECURSIVE_TARGETS) \
+  $(RECURSIVE_CLEAN_TARGETS) \
+  $(am__extra_recursive_targets)
 AM_RECURSIVE_TARGETS = $(am__recursive_targets:-recursive=) TAGS CTAGS \
 	check recheck distdir distdir-am
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
@@ -4107,39 +4107,39 @@ am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 # and print each of them once, without duplicates.  Input order is
 # *not* preserved.
 am__uniquify_input = $(AWK) '\
-	BEGIN { nonempty = 0; } \
+  BEGIN { nonempty = 0; } \
   { items[$$0] = 1; nonempty = 1; } \
-	END { if (nonempty) { for (i in items) print i; }; } \
+  END { if (nonempty) { for (i in items) print i; }; } \
 '
 # Make sure the list of sources is unique.  This is necessary because,
 # e.g., the same source file might be shared among _SOURCES variables
 # for different programs/libraries.
 am__define_uniq_tagged_files = \
-	list='$(am__tagged_files)'; \
-	unique=`for i in $$list; do \
-	if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
-	done | $(am__uniquify_input)`
+  list='$(am__tagged_files)'; \
+  unique=`for i in $$list; do \
+    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+  done | $(am__uniquify_input)`
 am__tty_colors_dummy = \
-	mgn= red= grn= lgn= blu= brg= std=; \
-	am__color_tests=no
+  mgn= red= grn= lgn= blu= brg= std=; \
+  am__color_tests=no
 am__tty_colors = { \
-	$(am__tty_colors_dummy); \
-	if test "X$(AM_COLOR_TESTS)" = Xno; then \
-	am__color_tests=no; \
-	elif test "X$(AM_COLOR_TESTS)" = Xalways; then \
-	am__color_tests=yes; \
-	elif test "X$$TERM" != Xdumb && { test -t 1; } 2>/dev/null; then \
-	am__color_tests=yes; \
-	fi; \
-	if test $$am__color_tests = yes; then \
-	red='[0;31m'; \
-	grn='[0;32m'; \
-	lgn='[1;32m'; \
-	blu='[1;34m'; \
-	mgn='[0;35m'; \
-	brg='[1m'; \
-	std='[m'; \
-	fi; \
+  $(am__tty_colors_dummy); \
+  if test "X$(AM_COLOR_TESTS)" = Xno; then \
+    am__color_tests=no; \
+  elif test "X$(AM_COLOR_TESTS)" = Xalways; then \
+    am__color_tests=yes; \
+  elif test "X$$TERM" != Xdumb && { test -t 1; } 2>/dev/null; then \
+    am__color_tests=yes; \
+  fi; \
+  if test $$am__color_tests = yes; then \
+    red='[0;31m'; \
+    grn='[0;32m'; \
+    lgn='[1;32m'; \
+    blu='[1;34m'; \
+    mgn='[0;35m'; \
+    brg='[1m'; \
+    std='[m'; \
+  fi; \
 }
 am__recheck_rx = ^[ 	]*:recheck:[ 	]*
 am__global_test_result_rx = ^[ 	]*:global-test-result:[ 	]*
@@ -4148,75 +4148,75 @@ am__copy_in_global_log_rx = ^[ 	]*:copy-in-global-log:[ 	]*
 # standard input, print the name of the tests that are to be re-run
 # upon "make recheck".
 am__list_recheck_tests = $(AWK) '{ \
-	recheck = 1; \
-	while ((rc = (getline line < ($$0 ".trs"))) != 0) \
-	{ \
-	  if (rc < 0) \
-	    { \
-	      if ((getline line2 < ($$0 ".log")) < 0) \
+  recheck = 1; \
+  while ((rc = (getline line < ($$0 ".trs"))) != 0) \
+    { \
+      if (rc < 0) \
+        { \
+          if ((getline line2 < ($$0 ".log")) < 0) \
 	    recheck = 0; \
-	      break; \
-	    } \
-	  else if (line ~ /$(am__recheck_rx)[nN][Oo]/) \
-	    { \
-	      recheck = 0; \
-	      break; \
-	    } \
-	  else if (line ~ /$(am__recheck_rx)[yY][eE][sS]/) \
-	    { \
-	      break; \
-	    } \
-	}; \
-	if (recheck) \
-	print $$0; \
-	close ($$0 ".trs"); \
-	close ($$0 ".log"); \
+          break; \
+        } \
+      else if (line ~ /$(am__recheck_rx)[nN][Oo]/) \
+        { \
+          recheck = 0; \
+          break; \
+        } \
+      else if (line ~ /$(am__recheck_rx)[yY][eE][sS]/) \
+        { \
+          break; \
+        } \
+    }; \
+  if (recheck) \
+    print $$0; \
+  close ($$0 ".trs"); \
+  close ($$0 ".log"); \
 }'
 # A command that, given a newline-separated list of test names on the
 # standard input, create the global log from their .trs and .log files.
 am__create_global_log = $(AWK) ' \
 function fatal(msg) \
 { \
-	print "fatal: making $@: " msg | "cat >&2"; \
-	exit 1; \
+  print "fatal: making $@: " msg | "cat >&2"; \
+  exit 1; \
 } \
 function rst_section(header) \
 { \
-	print header; \
-	len = length(header); \
-	for (i = 1; i <= len; i = i + 1) \
-	printf "="; \
-	printf "\n\n"; \
+  print header; \
+  len = length(header); \
+  for (i = 1; i <= len; i = i + 1) \
+    printf "="; \
+  printf "\n\n"; \
 } \
 { \
-	copy_in_global_log = 1; \
-	global_test_result = "RUN"; \
-	while ((rc = (getline line < ($$0 ".trs"))) != 0) \
-	{ \
-	  if (rc < 0) \
-	     fatal("failed to read from " $$0 ".trs"); \
-	  if (line ~ /$(am__global_test_result_rx)/) \
-	    { \
-	      sub("$(am__global_test_result_rx)", "", line); \
-	      sub("[ 	]*$$", "", line); \
-	      global_test_result = line; \
-	    } \
-	  else if (line ~ /$(am__copy_in_global_log_rx)[nN][oO]/) \
-	    copy_in_global_log = 0; \
-	}; \
-	if (copy_in_global_log) \
-	{ \
-	  rst_section(global_test_result ": " $$0); \
-	  while ((rc = (getline line < ($$0 ".log"))) != 0) \
-	  { \
-	    if (rc < 0) \
-	      fatal("failed to read from " $$0 ".log"); \
-	    print line; \
-	  }; \
-	  printf "\n"; \
-	}; \
-	close ($$0 ".trs"); \
-	close ($$0 ".log"); \
+  copy_in_global_log = 1; \
+  global_test_result = "RUN"; \
+  while ((rc = (getline line < ($$0 ".trs"))) != 0) \
+    { \
+      if (rc < 0) \
+         fatal("failed to read from " $$0 ".trs"); \
+      if (line ~ /$(am__global_test_result_rx)/) \
+        { \
+          sub("$(am__global_test_result_rx)", "", line); \
+          sub("[ 	]*$$", "", line); \
+          global_test_result = line; \
+        } \
+      else if (line ~ /$(am__copy_in_global_log_rx)[nN][oO]/) \
+        copy_in_global_log = 0; \
+    }; \
+  if (copy_in_global_log) \
+    { \
+      rst_section(global_test_result ": " $$0); \
+      while ((rc = (getline line < ($$0 ".log"))) != 0) \
+      { \
+        if (rc < 0) \
+          fatal("failed to read from " $$0 ".log"); \
+        print line; \
+      }; \
+      printf "\n"; \
+    }; \
+  close ($$0 ".trs"); \
+  close ($$0 ".log"); \
 }'
 # Restructured Text title.
 am__rst_title = { sed 's/.*/   &   /;h;s/./=/g;p;x;s/ *$$//;p;g' && echo; }
@@ -4227,7 +4227,7 @@ am__sh_e_setup = case $$- in *e*) set +e;; esac
 # Default flags passed to test drivers.
 am__common_driver_flags = \
   --color-tests "$$am__color_tests" \
-	$$am__collect_skipped_logs \
+  $$am__collect_skipped_logs \
   --enable-hard-errors "$$am__enable_hard_errors" \
   --expect-failure "$$am__expect_failure"
 # To be inserted before the command running the test.  Creates the
@@ -4244,7 +4244,7 @@ $(am__tty_colors);					\
 srcdir=$(srcdir); export srcdir;			\
 case "$@" in						\
   */*) am__odir=`echo "./$@" | sed 's|/[^/]*$$||'`;;	\
-	*) am__odir=.;; 					\
+    *) am__odir=.;; 					\
 esac;							\
 test "x$$am__odir" = x"." || test -d "$$am__odir" 	\
   || $(MKDIR_P) "$$am__odir" || exit $$?;		\
@@ -4253,20 +4253,20 @@ elif test -f "$$f"; then dir=;				\
 # else dir="$(srcdir)/"; fi;				\
 tst=$$dir$$f; log='$@'; 				\
 # if test -n '$(IGNORE_SKIPPED_LOGS)'; then		\
-	am__collect_skipped_logs='--collect-skipped-logs no';	\
+  am__collect_skipped_logs='--collect-skipped-logs no';	\
 # else							\
-	am__collect_skipped_logs='';				\
+  am__collect_skipped_logs='';				\
 fi;							\
 # if test -n '$(DISABLE_HARD_ERRORS)'; then		\
-	am__enable_hard_errors=no; 				\
+  am__enable_hard_errors=no; 				\
 # else							\
-	am__enable_hard_errors=yes; 				\
+  am__enable_hard_errors=yes; 				\
 fi; 							\
 case " $(XFAIL_TESTS) " in				\
   *[\ \	]$$f[\ \	]* | *[\ \	]$$dir$$f[\ \	]*) \
-	am__expect_failure=yes;;				\
+    am__expect_failure=yes;;				\
   *)							\
-	am__expect_failure=no;;				\
+    am__expect_failure=no;;				\
 esac; 							\
 $(AM_TESTS_ENVIRONMENT) $(TESTS_ENVIRONMENT)
 # A shell command to get the names of the tests scripts with any registered
@@ -4277,27 +4277,27 @@ $(AM_TESTS_ENVIRONMENT) $(TESTS_ENVIRONMENT)
 # since that might cause problem with VPATH rewrites for suffix-less tests.
 # See also 'test-harness-vpath-rewrite.sh' and 'test-trs-basic.sh'.
 am__set_TESTS_bases = \
-	bases='$(TEST_LOGS)'; \
-	bases=`for i in $$bases; do echo $$i; done | sed 's/\.log$$//'`; \
-	bases=`echo $$bases`
+  bases='$(TEST_LOGS)'; \
+  bases=`for i in $$bases; do echo $$i; done | sed 's/\.log$$//'`; \
+  bases=`echo $$bases`
 AM_TESTSUITE_SUMMARY_HEADER = ' for $(PACKAGE_STRING)'
 RECHECK_LOGS = $(TEST_LOGS)
-@OS_IS_NETBSD_FALSE@am__EXEEXT_4 = test-sigprocmask$(EXEEXT)
-@OS_IS_CYGWIN_FALSE@am__EXEEXT_5 = test-usleep$(EXEEXT)
+am__EXEEXT_4 = test-sigprocmask$(EXEEXT)
+am__EXEEXT_5 = test-usleep$(EXEEXT)
 TEST_SUITE_LOG = test-suite.log
 TEST_EXTENSIONS =  .test
 LOG_DRIVER = $(SHELL) $(top_srcdir)/../build-aux/test-driver
 LOG_COMPILE = $(LOG_COMPILER) $(AM_LOG_FLAGS) $(LOG_FLAGS)
 am__set_b = \
-	case '$@' in \
-	*/*) \
-	  case '$*' in \
-	    */*) b='$*';; \
-	      *) b=`echo '$@' | sed 's/\.log$$//'`; \
-	   esac;; \
-	*) \
-	  b='$*';; \
-	esac
+  case '$@' in \
+    */*) \
+      case '$*' in \
+        */*) b='$*';; \
+          *) b=`echo '$@' | sed 's/\.log$$//'`; \
+       esac;; \
+    *) \
+      b='$*';; \
+  esac
 am__test_logs1 = $(TESTS:=.log)
 am__test_logs2 = $(am__test_logs1:.log=.log)
 TEST_LOGS = $(am__test_logs2:.test.log=.log)
@@ -4311,30 +4311,30 @@ am__DIST_COMMON = $(srcdir)/Makefile.gnulib $(srcdir)/Makefile.in \
 	$(top_srcdir)/../build-aux/test-driver alloca.c
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 am__relativize = \
-	dir0=`pwd`; \
-	sed_first='s,^\([^/]*\)/.*$$,\1,'; \
-	sed_rest='s,^[^/]*/*,,'; \
-	sed_last='s,^.*/\([^/]*\)$$,\1,'; \
-	sed_butlast='s,/*[^/]*$$,,'; \
-	while test -n "$$dir1"; do \
-	first=`echo "$$dir1" | sed -e "$$sed_first"`; \
-	if test "$$first" != "."; then \
-	  if test "$$first" = ".."; then \
-	    dir2=`echo "$$dir0" | sed -e "$$sed_last"`/"$$dir2"; \
-	    dir0=`echo "$$dir0" | sed -e "$$sed_butlast"`; \
-	  else \
-	    first2=`echo "$$dir2" | sed -e "$$sed_first"`; \
-	    if test "$$first2" = "$$first"; then \
-	      dir2=`echo "$$dir2" | sed -e "$$sed_rest"`; \
-	    else \
-	      dir2="../$$dir2"; \
-	    fi; \
-	    dir0="$$dir0"/"$$first"; \
-	  fi; \
-	fi; \
-	dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
-	done; \
-	reldir="$$dir2"
+  dir0=`pwd`; \
+  sed_first='s,^\([^/]*\)/.*$$,\1,'; \
+  sed_rest='s,^[^/]*/*,,'; \
+  sed_last='s,^.*/\([^/]*\)$$,\1,'; \
+  sed_butlast='s,/*[^/]*$$,,'; \
+  while test -n "$$dir1"; do \
+    first=`echo "$$dir1" | sed -e "$$sed_first"`; \
+    if test "$$first" != "."; then \
+      if test "$$first" = ".."; then \
+        dir2=`echo "$$dir0" | sed -e "$$sed_last"`/"$$dir2"; \
+        dir0=`echo "$$dir0" | sed -e "$$sed_butlast"`; \
+      else \
+        first2=`echo "$$dir2" | sed -e "$$sed_first"`; \
+        if test "$$first2" = "$$first"; then \
+          dir2=`echo "$$dir2" | sed -e "$$sed_rest"`; \
+        else \
+          dir2="../$$dir2"; \
+        fi; \
+        dir0="$$dir0"/"$$first"; \
+      fi; \
+    fi; \
+    dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
+  done; \
+  reldir="$$dir2"
 pkgdatadir = ${datadir}/gettext
 pkgincludedir = ${includedir}/gettext
 pkglibdir = ${libdir}/gettext
@@ -4357,8 +4357,8 @@ AUTOCONF = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' a
 AUTOHEADER = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' autoheader
 AUTOMAKE = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' automake-1.18
 AWK = awk
-BISON_LOCALEDIR = 
-BISON_LOCALEDIR_c = ""
+BISON_LOCALEDIR = /usr/share/locale
+BISON_LOCALEDIR_c = "/usr/share/locale"
 BISON_LOCALEDIR_c_make = \"$(BISON_LOCALEDIR)\"
 BITSIZEOF_PTRDIFF_T = 
 BITSIZEOF_SIG_ATOMIC_T = 
@@ -4371,13 +4371,13 @@ BUILDJAVA = no
 BUILDMODULA2 = no
 BYTESWAP_H = 
 CAN_PRINT_STACK_TRACE = 0
-CATOBJEXT = 
+CATOBJEXT = .gmo
 CC = gcc
 CCDEPMODE = depmode=none
 CFLAGS = -Wno-error $(GL_CFLAG_GNULIB_WARNINGS) -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CLASSPATH = 
-CLASSPATH_SEPARATOR = :
+CLASSPATH_SEPARATOR = 
 CLIX_PATH = 
 CLIX_PATH_VAR = 
 CLOCK_TIME_LIB = @CLOCK_TIME_LIB@
@@ -4388,7 +4388,7 @@ CPPFLAGS =
 CROSS_COMPILING = no
 CSCOPE = cscope
 CSHARPCOMPFLAGS = -O -g
-CSHARP_CHOICE = any
+CSHARP_CHOICE = no
 CTAGS = ctags
 CXX = g++
 CXXCPP = g++ -E
@@ -4410,7 +4410,7 @@ DLLTOOL = false
 DSYMUTIL = dsymutil
 DUMPBIN = 
 DVIPS = /Users/sedwards/gtk/source/gettext-1.0/build-aux/missing dvips
-D_CHOICE = yes
+D_CHOICE = no
 ECHO_C = \c
 ECHO_N = 
 ECHO_T = 
@@ -6668,10 +6668,10 @@ HAVE_ISXDIGIT_L = @HAVE_ISXDIGIT_L@
 HAVE_JAVA = 
 HAVE_JAVAC = 
 HAVE_JAVAC_ENVVAR = 
-HAVE_JAVAC_IN_PATH = yes
+HAVE_JAVAC_IN_PATH = 
 HAVE_JAVAEXEC = 
 HAVE_JAVA_ENVVAR = 
-HAVE_JAVA_IN_PATH = yes
+HAVE_JAVA_IN_PATH = 
 HAVE_JRE = 
 HAVE_JRE_IN_PATH = 
 HAVE_LANGINFO_ABALTMON = 0
@@ -7007,7 +7007,7 @@ INCLUDE_NEXT_AS_FIRST_DIRECTIVE = include_next
 INET_NTOP_LIB = @INET_NTOP_LIB@
 INET_PTON_LIB = @INET_PTON_LIB@
 INSTALL = /usr/bin/install -c
-INSTALLED_LIBGETTEXTPO_DEPS = 
+INSTALLED_LIBGETTEXTPO_DEPS = -lintl  -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices 
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_PROGRAM_ENV = @INSTALL_PROGRAM_ENV@
@@ -7016,8 +7016,8 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 INT32_MAX_LT_INTMAX_MAX = 1
 INT64_MAX_EQ_LONG_MAX = defined _LP64
 INTL_MACOSX_LIBS = -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
-JAR = jar
-JAVA_CHOICE = yes
+JAR = 
+JAVA_CHOICE = no
 LC_COLLATE_IMPLEMENTED = true
 LC_MONETARY_IMPLEMENTED = true
 LC_NUMERIC_IMPLEMENTED = true
@@ -7029,7 +7029,7 @@ LIBDL =
 LIBGNU_LIBDEPS = 
 LIBGNU_LTLIBDEPS = 
 LIBICONV = 
-LIBINTL = 
+LIBINTL = ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 LIBJSON_C = 
 LIBMULTITHREAD = -lpthread
 LIBOBJS = 
@@ -7086,7 +7086,7 @@ LOCALE_JA = ja_JP.eucJP
 LOCALE_TR_UTF8 = @LOCALE_TR_UTF8@
 LOCALE_ZH_CN = zh_CN.GB18030
 LTLIBICONV = 
-LTLIBINTL = 
+LTLIBINTL = ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 LTLIBMULTITHREAD = -lpthread
 LTLIBOBJS = 
 LTLIBTEXTSTYLE = 
@@ -7099,7 +7099,7 @@ MAKEINFO = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' m
 MANIFEST_TOOL = :
 MBRTOWC_LIB = 
 MKDIR_P = .././../build-aux/install-sh -c -d
-MODULA2_CHOICE = yes
+MODULA2_CHOICE = no
 MONO_PATH = 
 MONO_PATH_SEPARATOR = :
 MSGFMT = :
@@ -7230,7 +7230,7 @@ PACKAGE_VERSION = 1.0
 PATH_SEPARATOR = :
 PERL = /usr/bin/perl
 POSIX_SPAWN_LIB = @POSIX_SPAWN_LIB@
-POSUB = 
+POSUB = po
 PRAGMA_COLUMNS = 
 PRAGMA_SYSTEM_HEADER = #pragma GCC system_header
 PRIPTR_PREFIX = __PRIPTR_PREFIX
@@ -7672,7 +7672,7 @@ SYS_IOCTL_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS = 0
 SYS_TIME_H_DEFINES_STRUCT_TIMESPEC = 0
 TESTCSHARP = no
 TESTJAVA = no
-TESTLIBASPRINTF = yes
+TESTLIBASPRINTF = no
 TEXI2PDF = /Users/sedwards/gtk/source/gettext-1.0/build-aux/missing texi2pdf
 TIME_H_DEFINES_STRUCT_TIMESPEC = 1
 TIME_H_DEFINES_TIME_UTC = 1
@@ -7691,8 +7691,8 @@ UNISTD_H_HAVE_SYS_RANDOM_H = 0
 UNISTD_H_HAVE_WINSOCK2_H = 0
 UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS = 0
 USE_ACL = @USE_ACL@
-USE_INCLUDED_LIBINTL = no
-USE_NLS = no
+USE_INCLUDED_LIBINTL = yes
+USE_NLS = yes
 USE_SELINUX_SELINUX_H = 
 VERSION = 1.0
 WARN_CFLAGS = 
@@ -7731,10 +7731,10 @@ am__xargs_n = xargs -n
 bindir = ${exec_prefix}/bin
 bindir_c = "/Users/sedwards/gtk/bin"
 bindir_c_make = \"$(bindir)\"
-build = aarch64-apple-darwin25.4.0
-build_alias = 
+build = aarch64-apple-darwin
+build_alias = arm64-apple-darwin
 build_cpu = aarch64
-build_os = darwin25.4.0
+build_os = darwin
 build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
@@ -7804,10 +7804,10 @@ gttgltests_WITNESS = IN_GETTEXT_TOOLS_GNULIB_TESTS
 gttgltests_libtestsgnu_LIBOBJDEPS = 
 gttgltests_libtestsgnu_LIBOBJS = 
 gttgltests_libtestsgnu_LTLIBOBJS = 
-host = aarch64-apple-darwin25.4.0
-host_alias = 
+host = aarch64-apple-darwin
+host_alias = arm64-apple-darwin
 host_cpu = aarch64
-host_os = darwin25.4.0
+host_os = darwin
 host_vendor = apple
 htmldir = ${docdir}
 htmldir_c = @htmldir_c@
@@ -7825,7 +7825,7 @@ libdir_c_make = \"$(libdir)\"
 libexecdir = ${exec_prefix}/libexec
 libexecdir_c = "/Users/sedwards/gtk/libexec"
 libexecdir_c_make = \"$(libexecdir)\"
-lispdir = ${datadir}/emacs/site-lisp
+lispdir = ${datarootdir}/emacs/site-lisp
 lispdir_c = @lispdir_c@
 lispdir_c_make = @lispdir_c_make@
 localedir = ${datarootdir}/locale
@@ -7939,7 +7939,7 @@ TESTS_ENVIRONMENT = EXEEXT='' srcdir='$(srcdir)' \
 	LOCALE_EN_UTF8='en_US.UTF-8' LOCALE_FR='fr_FR.ISO8859-1' \
 	LOCALE_FR_UTF8='fr_FR.UTF-8' LOCALE_JA='ja_JP.eucJP' \
 	LOCALE_ZH_CN='zh_CN.GB18030' USE_ACL=$(USE_ACL) \
-	USE_ACL=$(USE_ACL) host_os='darwin25.4.0' \
+	USE_ACL=$(USE_ACL) host_os='darwin' \
 	LOCALE_EN_UTF8='en_US.UTF-8' LOCALE_FR='fr_FR.ISO8859-1' \
 	LOCALE_FR_UTF8='fr_FR.UTF-8' LOCALE_JA='ja_JP.eucJP' \
 	LOCALE_ZH_CN='zh_CN.GB18030' \
@@ -8398,11 +8398,11 @@ EXTRA_libtests_a_SOURCES = alloca.c anytostr.c at-func.c at-func.c
 AM_LIBTOOLFLAGS = --preserve-dup-deps
 IGNORE_SKIPPED_LOGS = 1
 test_accept_LDADD = $(LDADD) @LIBSOCKET@
-test_set_mode_acl_LDADD = $(LDADD) $(LIB_ACL) $(LIBUNISTRING)  $(MBRTOWC_LIB) $(LIBC32CONV)
-test_copy_acl_LDADD = $(LDADD) $(LIB_ACL) $(QCOPY_ACL_LIB) $(LIBUNISTRING)  $(MBRTOWC_LIB) $(LIBC32CONV)
-test_sameacls_LDADD = $(LDADD) $(LIB_ACL)  $(MBRTOWC_LIB)
-test_argmatch_LDADD = $(LDADD) $(LIBUNISTRING)  $(MBRTOWC_LIB) $(LIBC32CONV)
-test_array_set_LDADD = $(LDADD) 
+test_set_mode_acl_LDADD = $(LDADD) $(LIB_ACL) $(LIBUNISTRING) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(MBRTOWC_LIB) $(LIBC32CONV)
+test_copy_acl_LDADD = $(LDADD) $(LIB_ACL) $(QCOPY_ACL_LIB) $(LIBUNISTRING) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(MBRTOWC_LIB) $(LIBC32CONV)
+test_sameacls_LDADD = $(LDADD) $(LIB_ACL) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(MBRTOWC_LIB)
+test_argmatch_LDADD = $(LDADD) $(LIBUNISTRING) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(MBRTOWC_LIB) $(LIBC32CONV)
+test_array_set_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_asyncsafe_spin1_LDADD = $(LDADD) 
 test_asyncsafe_spin2_LDADD = $(LDADD) -lpthread @YIELD_LIB@ @LIB_SEMAPHORE@
 test_bind_LDADD = $(LDADD) @LIBSOCKET@ $(INET_PTON_LIB)
@@ -8430,29 +8430,29 @@ test_c32rtomb_LDADD = $(LDADD) $(LIBUNISTRING) $(SETLOCALE_LIB) $(LIBC32CONV)
 test_c32tolower_LDADD = $(LDADD) $(SETLOCALE_LIB) $(MBRTOWC_LIB) $(LIBUNISTRING) $(LIBC32CONV)
 test_c32width_LDADD = $(LDADD) $(SETLOCALE_LIB) $(LIBUNISTRING) $(LIBC32CONV)
 test_canonicalize_lgpl_LDADD = $(LDADD) $(LIBINTL)
-test_canonicalize_LDADD = $(LDADD) 
+test_canonicalize_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_connect_LDADD = $(LDADD) @LIBSOCKET@ $(INET_PTON_LIB)
-test_copy_file_LDADD = $(LDADD) $(LIB_ACL) $(QCOPY_ACL_LIB) $(CLOCK_TIME_LIB) $(LIBUNISTRING)  $(MBRTOWC_LIB) $(LIBC32CONV)
-test_dirname_LDADD = $(LDADD) 
+test_copy_file_LDADD = $(LDADD) $(LIB_ACL) $(QCOPY_ACL_LIB) $(CLOCK_TIME_LIB) $(LIBUNISTRING) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(MBRTOWC_LIB) $(LIBC32CONV)
+test_dirname_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_error_LDADD = $(LDADD) $(LIBINTL)
-test_execute_main_LDADD = $(LDADD)  $(LIBTHREAD)
+test_execute_main_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(LIBTHREAD)
 # The test-execute-child program must be a real executable, not a libtool
 # wrapper script, and should link against as few libraries as possible.
 # Therefore don't link it against any libraries other than -lc.
 test_execute_child_LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
 test_execute_child_LDADD = 
-test_execute_script_LDADD = $(LDADD)  $(LIBTHREAD)
+test_execute_script_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(LIBTHREAD)
 test_execute_script_CPPFLAGS = $(AM_CPPFLAGS) -DSRCDIR=\"$(srcdir)/\"
 test_fchdir_LDADD = $(LDADD) $(LIBINTL)
-test_fdopendir_LDADD = $(LDADD) 
+test_fdopendir_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_file_has_acl_LDADD = $(LDADD) $(FILE_HAS_ACL_LIB)
-test_filenamecat_LDADD = $(LDADD) 
+test_filenamecat_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_fnmatch_LDADD = $(LDADD) $(SETLOCALE_LIB) $(LIBUNISTRING) $(MBRTOWC_LIB)
 test_fnmatch_w32_LDADD = $(LDADD) $(SETLOCALE_LIB) $(LIBUNISTRING) $(MBRTOWC_LIB)
 test_frexp_nolibm_SOURCES = test-frexp.c randomd.c
 test_frexpl_nolibm_SOURCES = test-frexpl.c randoml.c
-test_fstatat_LDADD = $(LDADD) 
-test_fstrcmp_LDADD = $(LDADD)  $(LIBTHREAD)
+test_fstatat_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
+test_fstrcmp_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(LIBTHREAD)
 
 # In 'sed', replace the pattern space with a "DO NOT EDIT" comment.
 SED_HEADER_NOEDIT = s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,
@@ -8469,9 +8469,9 @@ SED_HEADER_TO_AT_t = $(SED_HEADER_STDOUT) -n -e 'w $@-t'
 # Use $(gl_V_at) instead of $(AM_V_GEN) or $(AM_V_at) on a line that
 # is its recipe's first line if and only if @NMD@ lines are absent.
 gl_V_at = $(AM_V_GEN)
-test_getaddrinfo_LDADD = $(LDADD) @GETADDRINFO_LIB@ 
+test_getaddrinfo_LDADD = $(LDADD) @GETADDRINFO_LIB@ ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_getcwd_lgpl_LDADD = $(LDADD) $(LIBINTL)
-test_getcwd_LDADD = $(LDADD) 
+test_getcwd_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_getopt_gnu_LDADD = $(LDADD) $(LIBINTL)
 test_getopt_posix_LDADD = $(LDADD) $(LIBINTL)
 test_getprogname_LDADD = $(LDADD)
@@ -8484,8 +8484,8 @@ V_GPERF_ = $(V_GPERF_$(AM_DEFAULT_VERBOSITY))
 V_GPERF_0 = @echo "  GPERF   " $@;
 test_hard_locale_LDADD = $(LDADD) $(SETLOCALE_LIB) 
 current_locale_SOURCES = locale.c
-test_hash_map_LDADD = $(LDADD) 
-test_hash_set_LDADD = $(LDADD) 
+test_hash_map_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
+test_hash_set_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_htonl_LDADD = $(LDADD) @HTONL_LIB@
 test_iconv_LDADD = $(LDADD) 
 test_inet_ntop_LDADD = $(LDADD) @INET_NTOP_LIB@
@@ -8517,14 +8517,14 @@ test_once1_SOURCES = test-once.c
 test_once1_LDADD = $(LDADD) 
 test_once2_SOURCES = test-once.c
 test_once2_LDADD = $(LDADD) -lpthread
-test_openat_LDADD = $(LDADD) 
+test_openat_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_options_LDADD = $(LDADD) $(LIBINTL)
 test_options_prog_LDADD = $(LDADD) $(LIBINTL)
-test_pipe_filter_ii1_LDADD = $(LDADD)  $(LIBTHREAD)
-test_pipe_filter_ii2_main_LDADD = $(LDADD)  $(LIBTHREAD)
+test_pipe_filter_ii1_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(LIBTHREAD)
+test_pipe_filter_ii2_main_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(LIBTHREAD)
 test_pipe2_LDADD = $(LDADD) $(LIBSOCKET)
 test_posix_spawn_script_CPPFLAGS = $(AM_CPPFLAGS) -DSRCDIR=\"$(srcdir)/\"
-test_posix_spawn_chdir_LDADD = $(LDADD) 
+test_posix_spawn_chdir_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_posix_spawnp_script_CPPFLAGS = $(AM_CPPFLAGS) -DSRCDIR=\"$(srcdir)/\"
 test_pselect_LDADD = $(LDADD) @SELECT_LIB@ @LIBSOCKET@  $(INET_PTON_LIB)
 test_pthread_cond_LDADD = $(LDADD) -lpthread 
@@ -8538,10 +8538,10 @@ test_pthread_rwlock_LDADD = $(LDADD) -lpthread  @LIB_SEMAPHORE@
 test_pthread_thread_LDADD = $(LDADD) -lpthread
 test_pthread_sigmask1_LDADD = $(LDADD) 
 test_pthread_sigmask2_LDADD = $(LDADD)  -lpthread
-test_quotearg_simple_LDADD = $(LDADD) $(LIBUNISTRING)  $(MBRTOWC_LIB) $(LIBC32CONV)
+test_quotearg_simple_LDADD = $(LDADD) $(LIBUNISTRING) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(MBRTOWC_LIB) $(LIBC32CONV)
 test_random_mt_LDADD = $(LDADD) $(LIBINTL) $(LIBMULTITHREAD) $(YIELD_LIB)
-test_readlinkat_LDADD = $(LDADD) 
-test_renameatu_LDADD = $(LDADD) 
+test_readlinkat_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
+test_renameatu_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_select_LDADD = $(LDADD) @SELECT_LIB@ @LIBSOCKET@ $(INET_PTON_LIB)
 test_select_fd_LDADD = $(LDADD) @SELECT_LIB@
 test_select_stdin_LDADD = $(LDADD) @SELECT_LIB@
@@ -8554,7 +8554,7 @@ test_setlocale2_LDADD = $(LDADD) @SETLOCALE_LIB@
 test_setlocale_w32_LDADD = $(LDADD) @SETLOCALE_LIB@
 #test_setlocale_w32utf8_LDADD = $(LDADD) test-setlocale-windows-utf8.res $(SETLOCALE_LIB)
 test_setsockopt_LDADD = $(LDADD) @LIBSOCKET@
-test_sh_quote_LDADD = $(LDADD) $(LIBUNISTRING)  $(MBRTOWC_LIB) $(LIBC32CONV)
+test_sh_quote_LDADD = $(LDADD) $(LIBUNISTRING) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(MBRTOWC_LIB) $(LIBC32CONV)
 
 # Because this Makefile snippet defines a variable used by other
 # gnulib Makefile snippets, it must be present in all makefiles that
@@ -8576,27 +8576,27 @@ CXXDEFS_H = $(srcdir)/c++defs.h
 # need it. This is ensured by the applicability 'all' defined above.
 WARN_ON_USE_H = $(srcdir)/warn-on-use.h
 test_sockets_LDADD = $(LDADD) @LIBSOCKET@
-test_spawn_pipe_main_LDADD = $(LDADD)  $(LIBTHREAD)
+test_spawn_pipe_main_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(LIBTHREAD)
 # The test-spawn-pipe-child program must be a real executable, not a libtool
 # wrapper script, and should link against as few libraries as possible.
 # Therefore don't link it against any libraries other than -lc.
 test_spawn_pipe_child_LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
 test_spawn_pipe_child_LDADD = 
-test_spawn_pipe_script_LDADD = $(LDADD)  $(LIBTHREAD)
+test_spawn_pipe_script_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(LIBTHREAD)
 test_spawn_pipe_script_CPPFLAGS = $(AM_CPPFLAGS) -DSRCDIR=\"$(srcdir)/\"
 test_spin2_LDADD = $(LDADD) -lpthread @YIELD_LIB@ @LIB_SEMAPHORE@
 test_stat_LDADD = $(LDADD) $(LIBINTL)
-test_stat_time_LDADD = $(LDADD) $(NANOSLEEP_LIB) 
+test_stat_time_LDADD = $(LDADD) $(NANOSLEEP_LIB) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_striconv_LDADD = $(LDADD) 
 test_striconveh_LDADD = $(LDADD) $(LIBUNISTRING) 
 test_striconveha_SOURCES = test-striconveha.c iconvsupport.c
 test_striconveha_LDADD = $(LDADD) $(LIBUNISTRING) 
 test_supersede_LDADD = $(LDADD) $(LIB_ACL) $(QCOPY_ACL_LIB) $(CLOCK_TIME_LIB) $(GETRANDOM_LIB) $(LIBINTL) $(LIBTHREAD)
-test_symlinkat_LDADD = $(LDADD) 
+test_symlinkat_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_thread_self_LDADD = $(LDADD) 
 test_thread_create_LDADD = $(LDADD) -lpthread
 test_tls_LDADD = $(LDADD) -lpthread @YIELD_LIB@
-test_trim_LDADD = $(LDADD) $(LIBUNISTRING)  $(MBRTOWC_LIB) $(LIBC32CONV)
+test_trim_LDADD = $(LDADD) $(LIBUNISTRING) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices $(MBRTOWC_LIB) $(LIBC32CONV)
 test_unicase_h_SOURCES = unicase/test-unicase-h.c
 test_unicase_h_LDADD = $(LDADD) $(LIBUNISTRING)
 test_cased_SOURCES = unicase/test-cased.c
@@ -8655,8 +8655,8 @@ test_u8_width_linebreaks_SOURCES = unilbrk/test-u8-width-linebreaks.c
 test_u8_width_linebreaks_LDADD = $(LDADD) $(LIBUNISTRING)
 test_uniname_h_SOURCES = uniname/test-uniname-h.c
 test_uniname_h_LDADD = $(LDADD) $(LIBUNISTRING)
-@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@test_uninames_SOURCES = uniname/test-uninames.c
-@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@test_uninames_LDADD = $(LDADD) 
+test_uninames_SOURCES = uniname/test-uninames.c
+test_uninames_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_uninorm_h_SOURCES = uninorm/test-uninorm-h.c
 test_uninorm_h_LDADD = $(LDADD) $(LIBUNISTRING)
 test_canonical_decomposition_SOURCES = uninorm/test-canonical-decomposition.c
@@ -8664,29 +8664,29 @@ test_canonical_decomposition_LDADD = $(LDADD) $(LIBUNISTRING)
 test_composition_SOURCES = uninorm/test-composition.c
 test_composition_LDADD = $(LDADD) $(LIBUNISTRING)
 test_nfc_SOURCES = \
-	uninorm/test-nfc.c \
-	uninorm/test-u8-nfc.c \
-	uninorm/test-u16-nfc.c \
-	uninorm/test-u32-nfc.c
+  uninorm/test-nfc.c \
+  uninorm/test-u8-nfc.c \
+  uninorm/test-u16-nfc.c \
+  uninorm/test-u32-nfc.c
 
 test_nfc_LDADD = $(LDADD) $(LIBUNISTRING)
 test_u32_nfc_big_SOURCES = \
-	uninorm/test-u32-nfc-big.c \
-	uninorm/test-u32-normalize-big.c
+  uninorm/test-u32-nfc-big.c \
+  uninorm/test-u32-normalize-big.c
 
-test_u32_nfc_big_LDADD = $(LDADD) $(LIBUNISTRING) 
+test_u32_nfc_big_LDADD = $(LDADD) $(LIBUNISTRING) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_nfd_SOURCES = \
-	uninorm/test-nfd.c \
-	uninorm/test-u8-nfd.c \
-	uninorm/test-u16-nfd.c \
-	uninorm/test-u32-nfd.c
+  uninorm/test-nfd.c \
+  uninorm/test-u8-nfd.c \
+  uninorm/test-u16-nfd.c \
+  uninorm/test-u32-nfd.c
 
 test_nfd_LDADD = $(LDADD) $(LIBUNISTRING)
 test_u32_nfd_big_SOURCES = \
-	uninorm/test-u32-nfd-big.c \
-	uninorm/test-u32-normalize-big.c
+  uninorm/test-u32-nfd-big.c \
+  uninorm/test-u32-normalize-big.c
 
-test_u32_nfd_big_LDADD = $(LDADD) $(LIBUNISTRING) 
+test_u32_nfd_big_LDADD = $(LDADD) $(LIBUNISTRING) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_unistr_h_SOURCES = unistr/test-unistr-h.c
 test_unistr_h_LDADD = $(LDADD) $(LIBUNISTRING)
 test_u16_check_SOURCES = unistr/test-u16-check.c
@@ -8735,16 +8735,16 @@ test_u8_uctomb_SOURCES = unistr/test-u8-uctomb.c
 test_u8_uctomb_LDADD = $(LDADD) $(LIBUNISTRING)
 test_uniwidth_h_SOURCES = uniwidth/test-uniwidth-h.c
 test_uniwidth_h_LDADD = $(LDADD) $(LIBUNISTRING)
-test_unlinkat_LDADD = $(LDADD) 
+test_unlinkat_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_wcrtomb_LDADD = $(LDADD) $(SETLOCALE_LIB)
 test_wcwidth_LDADD = $(LDADD) $(SETLOCALE_LIB) $(LIBUNISTRING)
-test_xalloc_die_LDADD = $(LDADD) 
-test_xmemdup0_LDADD = $(LDADD) 
+test_xalloc_die_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
+test_xmemdup0_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_xstrerror_LDADD = $(LDADD) $(LIBINTL)
-test_xstring_desc_LDADD = $(LDADD) 
-test_xstrtol_LDADD = $(LDADD) 
-test_xstrtoul_LDADD = $(LDADD) 
-test_xvasprintf_LDADD = $(LDADD) 
+test_xstring_desc_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
+test_xstrtol_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
+test_xstrtoul_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
+test_xvasprintf_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 
@@ -11523,15 +11523,15 @@ $(TEST_SUITE_LOG): $(TEST_LOGS)
 	}; \
 	output_system_information () \
 	{ \
-	      echo;                                     \
+          echo;                                     \
 	  { uname -a | $(AWK) '{                    \
-	printf "System information (uname -a):";          \
-	for (i = 1; i < NF; ++i)                          \
-	{                                               \
-	  if (i != 2)                                   \
-	    printf " %s", $$i;                          \
-	}                                               \
-	printf "\n";                                      \
+  printf "System information (uname -a):";          \
+  for (i = 1; i < NF; ++i)                          \
+    {                                               \
+      if (i != 2)                                   \
+        printf " %s", $$i;                          \
+    }                                               \
+  printf "\n";                                      \
 }'; } 2>&1;                                         \
 	  if test -r /etc/os-release; then          \
 	    echo "Distribution information (/etc/os-release):"; \
@@ -16247,20 +16247,20 @@ uninstall-am: uninstall-pkgdataDATA
 
 # We need the following in order to create <endian.h> when the system
 # doesn't have one.
-@GL_GENERATE_ENDIAN_H_TRUE@endian.h: endian.in.h $(top_builddir)/config.status
-@GL_GENERATE_ENDIAN_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
-@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
-@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@||g' \
-@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''HAVE_ENDIAN_H''@|$(HAVE_ENDIAN_H)|g' \
-@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''NEXT_ENDIAN_H''@|$(NEXT_ENDIAN_H)|g' \
-@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''HAVE_SYS_ENDIAN_H''@|$(HAVE_SYS_ENDIAN_H)|g' \
-@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''ENDIAN_H_JUST_MISSING_STDINT''@|$(ENDIAN_H_JUST_MISSING_STDINT)|g' \
-@GL_GENERATE_ENDIAN_H_TRUE@	$(srcdir)/endian.in.h > $@-t
-@GL_GENERATE_ENDIAN_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_ENDIAN_H_FALSE@endian.h: $(top_builddir)/config.status
-@GL_GENERATE_ENDIAN_H_FALSE@	rm -f $@
+endian.h: endian.in.h $(top_builddir)/config.status
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	      -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	      -e 's|@''HAVE_ENDIAN_H''@|$(HAVE_ENDIAN_H)|g' \
+	      -e 's|@''NEXT_ENDIAN_H''@|$(NEXT_ENDIAN_H)|g' \
+	      -e 's|@''HAVE_SYS_ENDIAN_H''@|$(HAVE_SYS_ENDIAN_H)|g' \
+	      -e 's|@''ENDIAN_H_JUST_MISSING_STDINT''@|$(ENDIAN_H_JUST_MISSING_STDINT)|g' \
+	$(srcdir)/endian.in.h > $@-t
+	$(AM_V_at)mv $@-t $@
+endian.h: $(top_builddir)/config.status
+	rm -f $@
 #test-localcharset-windows-utf8.res : $(srcdir)/windows-utf8.rc
 #	$(WINDRES) -i $(srcdir)/windows-utf8.rc -o test-localcharset-windows-utf8.res --output-format=coff
 #test-localename-windows-utf8.res : $(srcdir)/windows-utf8.rc
