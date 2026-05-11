@@ -2451,12 +2451,8 @@ OS_IS_ANDROID_FALSE
 OS_IS_ANDROID_TRUE
 OS_IS_HAIKU_FALSE
 OS_IS_HAIKU_TRUE
-PLATFORM_IS_MSVC_FALSE
-PLATFORM_IS_MSVC_TRUE
 PLATFORM_IS_MINGW_FALSE
 PLATFORM_IS_MINGW_TRUE
-OS_IS_NATIVE_WINDOWS_FALSE
-OS_IS_NATIVE_WINDOWS_TRUE
 OS_IS_CYGWIN_FALSE
 OS_IS_CYGWIN_TRUE
 OS_IS_SOLARIS11_FALSE
@@ -2667,8 +2663,6 @@ RELOCATABLE_CONFIG_H_DIR
 RELOCATABLE_LIBRARY_PATH
 RELOCATABLE_VIA_WRAPPER_FALSE
 RELOCATABLE_VIA_WRAPPER_TRUE
-RELOCATABLE_VIA_LD_FALSE
-RELOCATABLE_VIA_LD_TRUE
 INSTALL_PROGRAM_ENV
 RELOCATABLE_LDFLAGS
 LIBDL
@@ -4669,6 +4663,14 @@ GL_CFLAG_INHIBIT_WARNINGS
 NO_EXPENSIVE_WARN_CFLAGS
 FOREIGN_WARN_CFLAGS
 WARN_CFLAGS
+RELOCATABLE_VIA_LD_FALSE
+RELOCATABLE_VIA_LD_TRUE
+OS_IS_NATIVE_WINDOWS_FALSE
+OS_IS_NATIVE_WINDOWS_TRUE
+PLATFORM_IS_MSVC_FALSE
+PLATFORM_IS_MSVC_TRUE
+INCLUDED_LIBXML_FALSE
+INCLUDED_LIBXML_TRUE
 am__fastdepCXX_FALSE
 am__fastdepCXX_TRUE
 CXXDEPMODE
@@ -14127,6 +14129,39 @@ esac
   # Code from module thread:
   # Code from module windows-thread:
   # Code from module windows-tls:
+
+
+ if false; then
+  INCLUDED_LIBXML_TRUE=
+  INCLUDED_LIBXML_FALSE='#'
+else
+  INCLUDED_LIBXML_TRUE='#'
+  INCLUDED_LIBXML_FALSE=
+fi
+
+ if false; then
+  PLATFORM_IS_MSVC_TRUE=
+  PLATFORM_IS_MSVC_FALSE='#'
+else
+  PLATFORM_IS_MSVC_TRUE='#'
+  PLATFORM_IS_MSVC_FALSE=
+fi
+
+ if false; then
+  OS_IS_NATIVE_WINDOWS_TRUE=
+  OS_IS_NATIVE_WINDOWS_FALSE='#'
+else
+  OS_IS_NATIVE_WINDOWS_TRUE='#'
+  OS_IS_NATIVE_WINDOWS_FALSE=
+fi
+
+ if false; then
+  RELOCATABLE_VIA_LD_TRUE=
+  RELOCATABLE_VIA_LD_FALSE='#'
+else
+  RELOCATABLE_VIA_LD_TRUE='#'
+  RELOCATABLE_VIA_LD_FALSE=
+fi
 
 
 
@@ -125048,6 +125083,22 @@ then :
   enableval=$enable_year2038; 
 fi
 
+if test -z "${INCLUDED_LIBXML_TRUE}" && test -z "${INCLUDED_LIBXML_FALSE}"; then
+  as_fn_error $? "conditional \"INCLUDED_LIBXML\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${PLATFORM_IS_MSVC_TRUE}" && test -z "${PLATFORM_IS_MSVC_FALSE}"; then
+  as_fn_error $? "conditional \"PLATFORM_IS_MSVC\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${OS_IS_NATIVE_WINDOWS_TRUE}" && test -z "${OS_IS_NATIVE_WINDOWS_FALSE}"; then
+  as_fn_error $? "conditional \"OS_IS_NATIVE_WINDOWS\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${RELOCATABLE_VIA_LD_TRUE}" && test -z "${RELOCATABLE_VIA_LD_FALSE}"; then
+  as_fn_error $? "conditional \"RELOCATABLE_VIA_LD\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
 if test -z "${WOE32_TRUE}" && test -z "${WOE32_FALSE}"; then
   as_fn_error $? "conditional \"WOE32\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5

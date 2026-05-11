@@ -2564,6 +2564,8 @@ HAVE_ALLOCA_H
 ALLOCA
 GL_COND_LIBTOOL_FALSE
 GL_COND_LIBTOOL_TRUE
+INCLUDED_LIBXML_FALSE
+INCLUDED_LIBXML_TRUE
 WOE32_FALSE
 WOE32_TRUE
 RC
@@ -18364,6 +18366,14 @@ else
   WOE32_FALSE=
 fi
 
+ if false; then
+  INCLUDED_LIBXML_TRUE=
+  INCLUDED_LIBXML_FALSE='#'
+else
+  INCLUDED_LIBXML_TRUE='#'
+  INCLUDED_LIBXML_FALSE=
+fi
+
 
 
 
@@ -24250,8 +24260,8 @@ rm -f core conftest.err conftest.$ac_objext conftest.beam \
         LIBS="$saved_LIBS"
         test $gl_pthread_api = yes && break
       done
-      echo "$as_me:24253: gl_pthread_api=$gl_pthread_api" >&5
-      echo "$as_me:24254: LIBPTHREAD=$LIBPTHREAD" >&5
+      echo "$as_me:24263: gl_pthread_api=$gl_pthread_api" >&5
+      echo "$as_me:24264: LIBPTHREAD=$LIBPTHREAD" >&5
 
       gl_pthread_in_glibc=no
       # On Linux with glibc >= 2.34, libc contains the fully functional
@@ -24280,7 +24290,7 @@ rm -rf conftest*
   *) :
      ;;
 esac
-      echo "$as_me:24283: gl_pthread_in_glibc=$gl_pthread_in_glibc" >&5
+      echo "$as_me:24293: gl_pthread_in_glibc=$gl_pthread_in_glibc" >&5
 
       # Test for libpthread by looking for pthread_kill.
       if test $gl_pthread_api = yes && test -z "$LIBPTHREAD"
@@ -24498,7 +24508,7 @@ fi
 fi
 
 fi
-      echo "$as_me:24501: LIBPMULTITHREAD=$LIBPMULTITHREAD" >&5
+      echo "$as_me:24511: LIBPMULTITHREAD=$LIBPMULTITHREAD" >&5
 
 fi
     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether POSIX threads API is available" >&5
@@ -29370,8 +29380,8 @@ rm -f core conftest.err conftest.$ac_objext conftest.beam \
         LIBS="$saved_LIBS"
         test $gl_pthread_api = yes && break
       done
-      echo "$as_me:29373: gl_pthread_api=$gl_pthread_api" >&5
-      echo "$as_me:29374: LIBPTHREAD=$LIBPTHREAD" >&5
+      echo "$as_me:29383: gl_pthread_api=$gl_pthread_api" >&5
+      echo "$as_me:29384: LIBPTHREAD=$LIBPTHREAD" >&5
 
       gl_pthread_in_glibc=no
       # On Linux with glibc >= 2.34, libc contains the fully functional
@@ -29400,7 +29410,7 @@ rm -rf conftest*
   *) :
      ;;
 esac
-      echo "$as_me:29403: gl_pthread_in_glibc=$gl_pthread_in_glibc" >&5
+      echo "$as_me:29413: gl_pthread_in_glibc=$gl_pthread_in_glibc" >&5
 
       # Test for libpthread by looking for pthread_kill.
       if test $gl_pthread_api = yes && test -z "$LIBPTHREAD"
@@ -29618,7 +29628,7 @@ fi
 fi
 
 fi
-      echo "$as_me:29621: LIBPMULTITHREAD=$LIBPMULTITHREAD" >&5
+      echo "$as_me:29631: LIBPMULTITHREAD=$LIBPMULTITHREAD" >&5
 
 fi
     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether POSIX threads API is available" >&5
@@ -29887,8 +29897,8 @@ rm -f core conftest.err conftest.$ac_objext conftest.beam \
         LIBS="$saved_LIBS"
         test $gl_pthread_api = yes && break
       done
-      echo "$as_me:29890: gl_pthread_api=$gl_pthread_api" >&5
-      echo "$as_me:29891: LIBPTHREAD=$LIBPTHREAD" >&5
+      echo "$as_me:29900: gl_pthread_api=$gl_pthread_api" >&5
+      echo "$as_me:29901: LIBPTHREAD=$LIBPTHREAD" >&5
 
       gl_pthread_in_glibc=no
       # On Linux with glibc >= 2.34, libc contains the fully functional
@@ -29917,7 +29927,7 @@ rm -rf conftest*
   *) :
      ;;
 esac
-      echo "$as_me:29920: gl_pthread_in_glibc=$gl_pthread_in_glibc" >&5
+      echo "$as_me:29930: gl_pthread_in_glibc=$gl_pthread_in_glibc" >&5
 
       # Test for libpthread by looking for pthread_kill.
       if test $gl_pthread_api = yes && test -z "$LIBPTHREAD"
@@ -30135,7 +30145,7 @@ fi
 fi
 
 fi
-      echo "$as_me:30138: LIBPMULTITHREAD=$LIBPMULTITHREAD" >&5
+      echo "$as_me:30148: LIBPMULTITHREAD=$LIBPMULTITHREAD" >&5
 
 fi
     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether POSIX threads API is available" >&5
@@ -55620,6 +55630,10 @@ fi
 
 if test -z "${WOE32_TRUE}" && test -z "${WOE32_FALSE}"; then
   as_fn_error $? "conditional \"WOE32\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${INCLUDED_LIBXML_TRUE}" && test -z "${INCLUDED_LIBXML_FALSE}"; then
+  as_fn_error $? "conditional \"INCLUDED_LIBXML\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${GL_COND_LIBTOOL_TRUE}" && test -z "${GL_COND_LIBTOOL_FALSE}"; then

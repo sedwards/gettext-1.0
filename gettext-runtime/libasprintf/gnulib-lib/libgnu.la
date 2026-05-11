@@ -1,4 +1,12 @@
 # libgnu.la - a libtool library file
-old_library='libgnu.a'
+dlname=''
+library_names=''
+old_library=''
+inherited_linker_flags=''
+dependency_libs=''
+current=0
+age=0
+revision=0
 installed=no
 shouldnotlink=no
+libdir=''

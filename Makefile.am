@@ -17,7 +17,7 @@
 ## Process this file with automake to produce Makefile.in.
 
 AUTOMAKE_OPTIONS = 1.5 gnu
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I gnulib-m4 -I m4
 
 SUBDIRS = gnulib-lib  gnulib-local gettext-runtime libtextstyle gettext-tools
 

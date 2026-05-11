@@ -111,55 +111,55 @@
 
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
-	false; \
+    false; \
   elif test -n '$(MAKE_HOST)'; then \
-	true; \
+    true; \
   elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
-	true; \
+    true; \
   else \
-	false; \
+    false; \
   fi; \
 }
 am__make_running_with_option = \
   case $${target_option-} in \
-	  ?) ;; \
-	  *) echo "am__make_running_with_option: internal error: invalid" \
-	          "target option '$${target_option-}' specified" >&2; \
-	     exit 1;; \
+      ?) ;; \
+      *) echo "am__make_running_with_option: internal error: invalid" \
+              "target option '$${target_option-}' specified" >&2; \
+         exit 1;; \
   esac; \
   has_opt=no; \
   sane_makeflags=$$MAKEFLAGS; \
   if $(am__is_gnu_make); then \
-	sane_makeflags=$$MFLAGS; \
+    sane_makeflags=$$MFLAGS; \
   else \
-	case $$MAKEFLAGS in \
-	  *\\[\ \	]*) \
-	    bs=\\; \
-	    sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
-	      | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
-	esac; \
+    case $$MAKEFLAGS in \
+      *\\[\ \	]*) \
+        bs=\\; \
+        sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
+          | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
+    esac; \
   fi; \
   skip_next=no; \
   strip_trailopt () \
   { \
-	flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
+    flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
   }; \
   for flg in $$sane_makeflags; do \
-	test $$skip_next = yes && { skip_next=no; continue; }; \
-	case $$flg in \
-	  *=*|--*) continue;; \
-	    -*I) strip_trailopt 'I'; skip_next=yes;; \
-	  -*I?*) strip_trailopt 'I';; \
-	    -*O) strip_trailopt 'O'; skip_next=yes;; \
-	  -*O?*) strip_trailopt 'O';; \
-	    -*l) strip_trailopt 'l'; skip_next=yes;; \
-	  -*l?*) strip_trailopt 'l';; \
-	  -[dEDm]) skip_next=yes;; \
-	  -[JT]) skip_next=yes;; \
-	esac; \
-	case $$flg in \
-	  *$$target_option*) has_opt=yes; break;; \
-	esac; \
+    test $$skip_next = yes && { skip_next=no; continue; }; \
+    case $$flg in \
+      *=*|--*) continue;; \
+        -*I) strip_trailopt 'I'; skip_next=yes;; \
+      -*I?*) strip_trailopt 'I';; \
+        -*O) strip_trailopt 'O'; skip_next=yes;; \
+      -*O?*) strip_trailopt 'O';; \
+        -*l) strip_trailopt 'l'; skip_next=yes;; \
+      -*l?*) strip_trailopt 'l';; \
+      -[dEDm]) skip_next=yes;; \
+      -[JT]) skip_next=yes;; \
+    esac; \
+    case $$flg in \
+      *$$target_option*) has_opt=yes; break;; \
+    esac; \
   done; \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
@@ -289,72 +289,151 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/nl_langinfo.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/nullptr.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/regex.m4 \
+	$(top_srcdir)/../m4/fixautomake.m4 \
+	$(top_srcdir)/../m4/init-package-version.m4 \
+	$(top_srcdir)/../m4/more-warnings.m4 \
+	$(top_srcdir)/../m4/woe32-dll.m4 \
+	$(top_srcdir)/../gettext-runtime/m4/glibc2.m4 \
+	$(top_srcdir)/../gettext-runtime/m4/nls.m4 \
+	$(top_srcdir)/../gettext-runtime/m4/po.m4 \
+	$(top_srcdir)/../gettext-runtime/m4/progtest.m4 \
+	$(top_srcdir)/m4/exported.m4 $(top_srcdir)/m4/hostname.m4 \
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/locale-de.m4 \
+	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+	$(top_srcdir)/gnulib-m4/00gnulib.m4 \
 	$(top_srcdir)/gnulib-m4/__inline.m4 \
 	$(top_srcdir)/gnulib-m4/absolute-header.m4 \
+	$(top_srcdir)/gnulib-m4/access.m4 \
+	$(top_srcdir)/gnulib-m4/acl.m4 \
 	$(top_srcdir)/gnulib-m4/alloca.m4 \
+	$(top_srcdir)/gnulib-m4/alphasort.m4 \
 	$(top_srcdir)/gnulib-m4/ansi-c++.m4 \
+	$(top_srcdir)/gnulib-m4/arpa_inet_h.m4 \
 	$(top_srcdir)/gnulib-m4/asm-underscore.m4 \
 	$(top_srcdir)/gnulib-m4/assert_h.m4 \
+	$(top_srcdir)/gnulib-m4/atexit.m4 \
+	$(top_srcdir)/gnulib-m4/atomic-cas.m4 \
+	$(top_srcdir)/gnulib-m4/backupfile.m4 \
 	$(top_srcdir)/gnulib-m4/bison-i18n.m4 \
 	$(top_srcdir)/gnulib-m4/bison.m4 \
+	$(top_srcdir)/gnulib-m4/btowc.m4 \
+	$(top_srcdir)/gnulib-m4/build-to-host.m4 \
 	$(top_srcdir)/gnulib-m4/builtin-expect.m4 \
+	$(top_srcdir)/gnulib-m4/byteswap.m4 \
 	$(top_srcdir)/gnulib-m4/c-bool.m4 \
 	$(top_srcdir)/gnulib-m4/c32rtomb.m4 \
 	$(top_srcdir)/gnulib-m4/calloc.m4 \
+	$(top_srcdir)/gnulib-m4/canonicalize.m4 \
+	$(top_srcdir)/gnulib-m4/chdir-long.m4 \
+	$(top_srcdir)/gnulib-m4/clock_time.m4 \
 	$(top_srcdir)/gnulib-m4/close.m4 \
+	$(top_srcdir)/gnulib-m4/closedir.m4 \
 	$(top_srcdir)/gnulib-m4/codeset.m4 \
 	$(top_srcdir)/gnulib-m4/configmake.m4 \
+	$(top_srcdir)/gnulib-m4/copy-file-range.m4 \
+	$(top_srcdir)/gnulib-m4/copy-file.m4 \
+	$(top_srcdir)/gnulib-m4/creat.m4 \
 	$(top_srcdir)/gnulib-m4/csharp.m4 \
 	$(top_srcdir)/gnulib-m4/csharpcomp.m4 \
 	$(top_srcdir)/gnulib-m4/csharpexec.m4 \
-	$(top_srcdir)/gnulib-m4/d.m4 $(top_srcdir)/gnulib-m4/dcomp.m4 \
+	$(top_srcdir)/gnulib-m4/ctype_h.m4 \
+	$(top_srcdir)/gnulib-m4/d-ino.m4 $(top_srcdir)/gnulib-m4/d.m4 \
+	$(top_srcdir)/gnulib-m4/dcomp.m4 \
+	$(top_srcdir)/gnulib-m4/dirent_h.m4 \
+	$(top_srcdir)/gnulib-m4/dirfd.m4 \
 	$(top_srcdir)/gnulib-m4/double-slash-root.m4 \
-	$(top_srcdir)/gnulib-m4/dup2.m4 \
+	$(top_srcdir)/gnulib-m4/dup.m4 $(top_srcdir)/gnulib-m4/dup2.m4 \
+	$(top_srcdir)/gnulib-m4/eaccess.m4 \
+	$(top_srcdir)/gnulib-m4/endian_h.m4 \
+	$(top_srcdir)/gnulib-m4/environ.m4 \
 	$(top_srcdir)/gnulib-m4/errno_h.m4 \
 	$(top_srcdir)/gnulib-m4/error.m4 \
 	$(top_srcdir)/gnulib-m4/error_h.m4 \
+	$(top_srcdir)/gnulib-m4/execute.m4 \
 	$(top_srcdir)/gnulib-m4/exponentd.m4 \
 	$(top_srcdir)/gnulib-m4/exponentf.m4 \
 	$(top_srcdir)/gnulib-m4/exponentl.m4 \
 	$(top_srcdir)/gnulib-m4/extensions-aix.m4 \
 	$(top_srcdir)/gnulib-m4/extensions.m4 \
 	$(top_srcdir)/gnulib-m4/extern-inline.m4 \
+	$(top_srcdir)/gnulib-m4/fatal-signal.m4 \
 	$(top_srcdir)/gnulib-m4/fchdir.m4 \
 	$(top_srcdir)/gnulib-m4/fclose.m4 \
 	$(top_srcdir)/gnulib-m4/fcntl-o.m4 \
 	$(top_srcdir)/gnulib-m4/fcntl.m4 \
 	$(top_srcdir)/gnulib-m4/fcntl_h.m4 \
 	$(top_srcdir)/gnulib-m4/fdopen.m4 \
+	$(top_srcdir)/gnulib-m4/fdopendir.m4 \
 	$(top_srcdir)/gnulib-m4/fflush.m4 \
+	$(top_srcdir)/gnulib-m4/filenamecat.m4 \
+	$(top_srcdir)/gnulib-m4/findprog-in.m4 \
+	$(top_srcdir)/gnulib-m4/findprog.m4 \
 	$(top_srcdir)/gnulib-m4/flexmember.m4 \
 	$(top_srcdir)/gnulib-m4/float_h.m4 \
+	$(top_srcdir)/gnulib-m4/fnmatch.m4 \
+	$(top_srcdir)/gnulib-m4/fnmatch_h.m4 \
 	$(top_srcdir)/gnulib-m4/fopen.m4 \
+	$(top_srcdir)/gnulib-m4/fpending.m4 \
 	$(top_srcdir)/gnulib-m4/fpieee.m4 \
+	$(top_srcdir)/gnulib-m4/fpurge.m4 \
+	$(top_srcdir)/gnulib-m4/freading.m4 \
 	$(top_srcdir)/gnulib-m4/free.m4 \
+	$(top_srcdir)/gnulib-m4/freopen.m4 \
 	$(top_srcdir)/gnulib-m4/frexp.m4 \
 	$(top_srcdir)/gnulib-m4/frexpl.m4 \
+	$(top_srcdir)/gnulib-m4/fseek.m4 \
+	$(top_srcdir)/gnulib-m4/fseeko.m4 \
 	$(top_srcdir)/gnulib-m4/fseterr.m4 \
 	$(top_srcdir)/gnulib-m4/fstat.m4 \
+	$(top_srcdir)/gnulib-m4/fstatat.m4 \
+	$(top_srcdir)/gnulib-m4/ftell.m4 \
+	$(top_srcdir)/gnulib-m4/ftello.m4 \
+	$(top_srcdir)/gnulib-m4/ftruncate.m4 \
+	$(top_srcdir)/gnulib-m4/getaddrinfo.m4 \
+	$(top_srcdir)/gnulib-m4/getcwd-abort-bug.m4 \
+	$(top_srcdir)/gnulib-m4/getcwd-path-max.m4 \
+	$(top_srcdir)/gnulib-m4/getcwd.m4 \
 	$(top_srcdir)/gnulib-m4/getdelim.m4 \
 	$(top_srcdir)/gnulib-m4/getdtablesize.m4 \
 	$(top_srcdir)/gnulib-m4/getline.m4 \
+	$(top_srcdir)/gnulib-m4/getlocalename_l.m4 \
+	$(top_srcdir)/gnulib-m4/getopt.m4 \
+	$(top_srcdir)/gnulib-m4/getpagesize.m4 \
 	$(top_srcdir)/gnulib-m4/getprogname.m4 \
+	$(top_srcdir)/gnulib-m4/getrandom.m4 \
+	$(top_srcdir)/gnulib-m4/getrusage.m4 \
+	$(top_srcdir)/gnulib-m4/gettext.m4 \
 	$(top_srcdir)/gnulib-m4/gettext_h.m4 \
+	$(top_srcdir)/gnulib-m4/gettime.m4 \
+	$(top_srcdir)/gnulib-m4/gettimeofday.m4 \
+	$(top_srcdir)/gnulib-m4/gnulib-common.m4 \
+	$(top_srcdir)/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/gnulib-i18n.m4 \
+	$(top_srcdir)/gnulib-m4/gocomp.m4 \
 	$(top_srcdir)/gnulib-m4/host-cpu-c-abi.m4 \
+	$(top_srcdir)/gnulib-m4/hostent.m4 \
+	$(top_srcdir)/gnulib-m4/htonl.m4 \
 	$(top_srcdir)/gnulib-m4/iconv.m4 \
 	$(top_srcdir)/gnulib-m4/iconv_h.m4 \
 	$(top_srcdir)/gnulib-m4/iconv_open.m4 \
 	$(top_srcdir)/gnulib-m4/include_next.m4 \
+	$(top_srcdir)/gnulib-m4/inet_ntop.m4 \
+	$(top_srcdir)/gnulib-m4/inet_pton.m4 \
 	$(top_srcdir)/gnulib-m4/inline.m4 \
+	$(top_srcdir)/gnulib-m4/intl-thread-locale.m4 \
 	$(top_srcdir)/gnulib-m4/intlmacosx.m4 \
 	$(top_srcdir)/gnulib-m4/intmax_t.m4 \
+	$(top_srcdir)/gnulib-m4/inttostr.m4 \
 	$(top_srcdir)/gnulib-m4/inttypes.m4 \
 	$(top_srcdir)/gnulib-m4/inttypes_h.m4 \
+	$(top_srcdir)/gnulib-m4/ioctl.m4 \
+	$(top_srcdir)/gnulib-m4/isblank.m4 \
 	$(top_srcdir)/gnulib-m4/isnand.m4 \
 	$(top_srcdir)/gnulib-m4/isnanf.m4 \
 	$(top_srcdir)/gnulib-m4/isnanl.m4 \
 	$(top_srcdir)/gnulib-m4/iswblank.m4 \
+	$(top_srcdir)/gnulib-m4/iswctype.m4 \
 	$(top_srcdir)/gnulib-m4/iswdigit.m4 \
 	$(top_srcdir)/gnulib-m4/iswpunct.m4 \
 	$(top_srcdir)/gnulib-m4/iswxdigit.m4 \
@@ -362,6 +441,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/javacomp.m4 \
 	$(top_srcdir)/gnulib-m4/javaexec.m4 \
 	$(top_srcdir)/gnulib-m4/largefile.m4 \
+	$(top_srcdir)/gnulib-m4/lcmessage.m4 \
 	$(top_srcdir)/gnulib-m4/ldexpl.m4 \
 	$(top_srcdir)/gnulib-m4/lib-ld.m4 \
 	$(top_srcdir)/gnulib-m4/lib-link.m4 \
@@ -372,14 +452,19 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/libunistring-optional.m4 \
 	$(top_srcdir)/gnulib-m4/libunistring.m4 \
 	$(top_srcdir)/gnulib-m4/limits-h.m4 \
+	$(top_srcdir)/gnulib-m4/link.m4 \
 	$(top_srcdir)/gnulib-m4/localcharset.m4 \
 	$(top_srcdir)/gnulib-m4/locale-en.m4 \
 	$(top_srcdir)/gnulib-m4/locale-fr.m4 \
 	$(top_srcdir)/gnulib-m4/locale-ja.m4 \
+	$(top_srcdir)/gnulib-m4/locale-tr.m4 \
 	$(top_srcdir)/gnulib-m4/locale-zh.m4 \
 	$(top_srcdir)/gnulib-m4/locale_h.m4 \
 	$(top_srcdir)/gnulib-m4/localeconv.m4 \
+	$(top_srcdir)/gnulib-m4/localename.m4 \
+	$(top_srcdir)/gnulib-m4/localtime.m4 \
 	$(top_srcdir)/gnulib-m4/lock.m4 \
+	$(top_srcdir)/gnulib-m4/lseek.m4 \
 	$(top_srcdir)/gnulib-m4/lstat.m4 \
 	$(top_srcdir)/gnulib-m4/malloc.m4 \
 	$(top_srcdir)/gnulib-m4/malloca.m4 \
@@ -390,11 +475,22 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/mbrtoc32.m4 \
 	$(top_srcdir)/gnulib-m4/mbrtowc.m4 \
 	$(top_srcdir)/gnulib-m4/mbsinit.m4 \
+	$(top_srcdir)/gnulib-m4/mbslen.m4 \
+	$(top_srcdir)/gnulib-m4/mbsrtowcs.m4 \
 	$(top_srcdir)/gnulib-m4/mbstate_t.m4 \
+	$(top_srcdir)/gnulib-m4/mbtowc.m4 \
 	$(top_srcdir)/gnulib-m4/memchr.m4 \
+	$(top_srcdir)/gnulib-m4/memcmp.m4 \
 	$(top_srcdir)/gnulib-m4/memmem.m4 \
+	$(top_srcdir)/gnulib-m4/memmove.m4 \
+	$(top_srcdir)/gnulib-m4/mempcpy.m4 \
 	$(top_srcdir)/gnulib-m4/memrchr.m4 \
+	$(top_srcdir)/gnulib-m4/memset.m4 \
+	$(top_srcdir)/gnulib-m4/memset_explicit.m4 \
 	$(top_srcdir)/gnulib-m4/minmax.m4 \
+	$(top_srcdir)/gnulib-m4/mkdir.m4 \
+	$(top_srcdir)/gnulib-m4/mkdtemp.m4 \
+	$(top_srcdir)/gnulib-m4/mkfifo.m4 \
 	$(top_srcdir)/gnulib-m4/mmap-anon.m4 \
 	$(top_srcdir)/gnulib-m4/mode_t.m4 \
 	$(top_srcdir)/gnulib-m4/modula2.m4 \
@@ -403,41 +499,100 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/msvc-nothrow.m4 \
 	$(top_srcdir)/gnulib-m4/multiarch.m4 \
 	$(top_srcdir)/gnulib-m4/musl.m4 \
+	$(top_srcdir)/gnulib-m4/nan-mips.m4 \
+	$(top_srcdir)/gnulib-m4/nanosleep.m4 \
+	$(top_srcdir)/gnulib-m4/netdb_h.m4 \
+	$(top_srcdir)/gnulib-m4/netinet_in_h.m4 \
+	$(top_srcdir)/gnulib-m4/nocrash.m4 \
 	$(top_srcdir)/gnulib-m4/obstack.m4 \
 	$(top_srcdir)/gnulib-m4/off64_t.m4 \
 	$(top_srcdir)/gnulib-m4/off_t.m4 \
+	$(top_srcdir)/gnulib-m4/omp_h.m4 \
 	$(top_srcdir)/gnulib-m4/once.m4 \
 	$(top_srcdir)/gnulib-m4/open-cloexec.m4 \
 	$(top_srcdir)/gnulib-m4/open-slash.m4 \
 	$(top_srcdir)/gnulib-m4/open.m4 \
+	$(top_srcdir)/gnulib-m4/openat.m4 \
+	$(top_srcdir)/gnulib-m4/opendir.m4 \
 	$(top_srcdir)/gnulib-m4/pathmax.m4 \
+	$(top_srcdir)/gnulib-m4/perror.m4 \
+	$(top_srcdir)/gnulib-m4/pipe.m4 \
+	$(top_srcdir)/gnulib-m4/pipe2.m4 \
+	$(top_srcdir)/gnulib-m4/posix_spawn.m4 \
+	$(top_srcdir)/gnulib-m4/posix_spawn_faction_addchdir.m4 \
 	$(top_srcdir)/gnulib-m4/printf-frexp.m4 \
 	$(top_srcdir)/gnulib-m4/printf-frexpl.m4 \
 	$(top_srcdir)/gnulib-m4/printf.m4 \
+	$(top_srcdir)/gnulib-m4/priv-set.m4 \
+	$(top_srcdir)/gnulib-m4/pselect.m4 \
+	$(top_srcdir)/gnulib-m4/pthread-cond.m4 \
+	$(top_srcdir)/gnulib-m4/pthread-mutex.m4 \
 	$(top_srcdir)/gnulib-m4/pthread-once.m4 \
+	$(top_srcdir)/gnulib-m4/pthread-rwlock.m4 \
 	$(top_srcdir)/gnulib-m4/pthread-spin.m4 \
+	$(top_srcdir)/gnulib-m4/pthread-thread.m4 \
 	$(top_srcdir)/gnulib-m4/pthread_h.m4 \
+	$(top_srcdir)/gnulib-m4/pthread_mutex_timedlock.m4 \
 	$(top_srcdir)/gnulib-m4/pthread_rwlock_rdlock.m4 \
 	$(top_srcdir)/gnulib-m4/pthread_sigmask.m4 \
+	$(top_srcdir)/gnulib-m4/putenv.m4 \
+	$(top_srcdir)/gnulib-m4/quote.m4 \
+	$(top_srcdir)/gnulib-m4/quotearg.m4 \
 	$(top_srcdir)/gnulib-m4/raise.m4 \
+	$(top_srcdir)/gnulib-m4/random.m4 \
+	$(top_srcdir)/gnulib-m4/random_r.m4 \
 	$(top_srcdir)/gnulib-m4/rawmemchr.m4 \
+	$(top_srcdir)/gnulib-m4/read-file.m4 \
+	$(top_srcdir)/gnulib-m4/read.m4 \
+	$(top_srcdir)/gnulib-m4/readdir.m4 \
+	$(top_srcdir)/gnulib-m4/readlink.m4 \
+	$(top_srcdir)/gnulib-m4/readlinkat.m4 \
 	$(top_srcdir)/gnulib-m4/realloc.m4 \
 	$(top_srcdir)/gnulib-m4/reallocarray.m4 \
 	$(top_srcdir)/gnulib-m4/relocatable-lib.m4 \
+	$(top_srcdir)/gnulib-m4/relocatable.m4 \
+	$(top_srcdir)/gnulib-m4/rename.m4 \
+	$(top_srcdir)/gnulib-m4/renameat.m4 \
+	$(top_srcdir)/gnulib-m4/rewinddir.m4 \
+	$(top_srcdir)/gnulib-m4/rmdir.m4 \
 	$(top_srcdir)/gnulib-m4/safe-read.m4 \
 	$(top_srcdir)/gnulib-m4/safe-write.m4 \
+	$(top_srcdir)/gnulib-m4/save-cwd.m4 \
+	$(top_srcdir)/gnulib-m4/scandir.m4 \
 	$(top_srcdir)/gnulib-m4/sched_h.m4 \
+	$(top_srcdir)/gnulib-m4/sched_yield.m4 \
+	$(top_srcdir)/gnulib-m4/secure_getenv.m4 \
+	$(top_srcdir)/gnulib-m4/select.m4 \
+	$(top_srcdir)/gnulib-m4/selinux-selinux-h.m4 \
+	$(top_srcdir)/gnulib-m4/semaphore.m4 \
+	$(top_srcdir)/gnulib-m4/servent.m4 \
+	$(top_srcdir)/gnulib-m4/setenv.m4 \
+	$(top_srcdir)/gnulib-m4/setlocale.m4 \
 	$(top_srcdir)/gnulib-m4/setlocale_null.m4 \
+	$(top_srcdir)/gnulib-m4/sh-filename.m4 \
+	$(top_srcdir)/gnulib-m4/sig_atomic_t.m4 \
+	$(top_srcdir)/gnulib-m4/sigaction.m4 \
 	$(top_srcdir)/gnulib-m4/signal_h.m4 \
 	$(top_srcdir)/gnulib-m4/signalblocking.m4 \
 	$(top_srcdir)/gnulib-m4/signbit.m4 \
 	$(top_srcdir)/gnulib-m4/sigpipe.m4 \
 	$(top_srcdir)/gnulib-m4/size_max.m4 \
+	$(top_srcdir)/gnulib-m4/sleep.m4 \
+	$(top_srcdir)/gnulib-m4/snan.m4 \
+	$(top_srcdir)/gnulib-m4/snprintf.m4 \
+	$(top_srcdir)/gnulib-m4/socketlib.m4 \
+	$(top_srcdir)/gnulib-m4/sockets.m4 \
+	$(top_srcdir)/gnulib-m4/socklen.m4 \
+	$(top_srcdir)/gnulib-m4/sockpfaf.m4 \
+	$(top_srcdir)/gnulib-m4/sparcv8+.m4 \
+	$(top_srcdir)/gnulib-m4/spawn-pipe.m4 \
+	$(top_srcdir)/gnulib-m4/spawn_h.m4 \
 	$(top_srcdir)/gnulib-m4/ssize_t.m4 \
 	$(top_srcdir)/gnulib-m4/stat-time.m4 \
 	$(top_srcdir)/gnulib-m4/stat.m4 \
 	$(top_srcdir)/gnulib-m4/stdalign.m4 \
 	$(top_srcdir)/gnulib-m4/stdarg.m4 \
+	$(top_srcdir)/gnulib-m4/stdbit_h.m4 \
 	$(top_srcdir)/gnulib-m4/stdckdint_h.m4 \
 	$(top_srcdir)/gnulib-m4/stdcountof_h.m4 \
 	$(top_srcdir)/gnulib-m4/stddef_h.m4 \
@@ -448,6 +603,8 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/stpcpy.m4 \
 	$(top_srcdir)/gnulib-m4/stpncpy.m4 \
 	$(top_srcdir)/gnulib-m4/strchrnul.m4 \
+	$(top_srcdir)/gnulib-m4/strcspn.m4 \
+	$(top_srcdir)/gnulib-m4/strdup.m4 \
 	$(top_srcdir)/gnulib-m4/strerror.m4 \
 	$(top_srcdir)/gnulib-m4/strerror_r.m4 \
 	$(top_srcdir)/gnulib-m4/strerrorname_np.m4 \
@@ -455,56 +612,76 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/stringeq.m4 \
 	$(top_srcdir)/gnulib-m4/strncpy.m4 \
 	$(top_srcdir)/gnulib-m4/strnlen.m4 \
+	$(top_srcdir)/gnulib-m4/strpbrk.m4 \
 	$(top_srcdir)/gnulib-m4/strstr.m4 \
+	$(top_srcdir)/gnulib-m4/strtol.m4 \
+	$(top_srcdir)/gnulib-m4/strtoul.m4 \
+	$(top_srcdir)/gnulib-m4/supersede.m4 \
+	$(top_srcdir)/gnulib-m4/symlink.m4 \
+	$(top_srcdir)/gnulib-m4/symlinkat.m4 \
 	$(top_srcdir)/gnulib-m4/sys_cdefs_h.m4 \
 	$(top_srcdir)/gnulib-m4/sys_ioctl_h.m4 \
+	$(top_srcdir)/gnulib-m4/sys_random_h.m4 \
+	$(top_srcdir)/gnulib-m4/sys_resource_h.m4 \
+	$(top_srcdir)/gnulib-m4/sys_select_h.m4 \
 	$(top_srcdir)/gnulib-m4/sys_socket_h.m4 \
 	$(top_srcdir)/gnulib-m4/sys_stat_h.m4 \
+	$(top_srcdir)/gnulib-m4/sys_time_h.m4 \
 	$(top_srcdir)/gnulib-m4/sys_types_h.m4 \
+	$(top_srcdir)/gnulib-m4/sys_uio_h.m4 \
+	$(top_srcdir)/gnulib-m4/sys_wait_h.m4 \
+	$(top_srcdir)/gnulib-m4/tempname.m4 \
 	$(top_srcdir)/gnulib-m4/thread.m4 \
 	$(top_srcdir)/gnulib-m4/threadlib.m4 \
+	$(top_srcdir)/gnulib-m4/time.m4 \
 	$(top_srcdir)/gnulib-m4/time_h.m4 \
+	$(top_srcdir)/gnulib-m4/timespec.m4 \
 	$(top_srcdir)/gnulib-m4/tls.m4 \
+	$(top_srcdir)/gnulib-m4/tmpdir.m4 \
 	$(top_srcdir)/gnulib-m4/uchar_h.m4 \
+	$(top_srcdir)/gnulib-m4/ungetc.m4 \
 	$(top_srcdir)/gnulib-m4/unicase_h.m4 \
 	$(top_srcdir)/gnulib-m4/unictype_h.m4 \
 	$(top_srcdir)/gnulib-m4/uninorm_h.m4 \
+	$(top_srcdir)/gnulib-m4/unistd-safer.m4 \
 	$(top_srcdir)/gnulib-m4/unistd_h.m4 \
 	$(top_srcdir)/gnulib-m4/unitypes_h.m4 \
+	$(top_srcdir)/gnulib-m4/unlink.m4 \
+	$(top_srcdir)/gnulib-m4/unlinkat.m4 \
+	$(top_srcdir)/gnulib-m4/unlinkdir.m4 \
 	$(top_srcdir)/gnulib-m4/unlocked-io.m4 \
+	$(top_srcdir)/gnulib-m4/usleep.m4 \
+	$(top_srcdir)/gnulib-m4/utime.m4 \
+	$(top_srcdir)/gnulib-m4/utime_h.m4 \
+	$(top_srcdir)/gnulib-m4/utimens.m4 \
+	$(top_srcdir)/gnulib-m4/utimes.m4 \
 	$(top_srcdir)/gnulib-m4/vasnprintf.m4 \
 	$(top_srcdir)/gnulib-m4/vasprintf.m4 \
 	$(top_srcdir)/gnulib-m4/visibility.m4 \
+	$(top_srcdir)/gnulib-m4/wait-process.m4 \
+	$(top_srcdir)/gnulib-m4/waitpid.m4 \
 	$(top_srcdir)/gnulib-m4/warn-on-use.m4 \
 	$(top_srcdir)/gnulib-m4/warnings.m4 \
 	$(top_srcdir)/gnulib-m4/wchar_h.m4 \
 	$(top_srcdir)/gnulib-m4/wcrtomb.m4 \
+	$(top_srcdir)/gnulib-m4/wctob.m4 \
+	$(top_srcdir)/gnulib-m4/wctomb.m4 \
+	$(top_srcdir)/gnulib-m4/wctype.m4 \
 	$(top_srcdir)/gnulib-m4/wctype_h.m4 \
 	$(top_srcdir)/gnulib-m4/wcwidth.m4 \
+	$(top_srcdir)/gnulib-m4/windows-rc.m4 \
 	$(top_srcdir)/gnulib-m4/wint_t.m4 \
+	$(top_srcdir)/gnulib-m4/wmemchr.m4 \
+	$(top_srcdir)/gnulib-m4/wmempcpy.m4 \
 	$(top_srcdir)/gnulib-m4/write.m4 \
 	$(top_srcdir)/gnulib-m4/xalloc.m4 \
+	$(top_srcdir)/gnulib-m4/xattr.m4 \
+	$(top_srcdir)/gnulib-m4/xgetcwd.m4 \
 	$(top_srcdir)/gnulib-m4/xsize.m4 \
+	$(top_srcdir)/gnulib-m4/xstrtol.m4 \
 	$(top_srcdir)/gnulib-m4/xvasprintf.m4 \
-	$(top_srcdir)/../m4/00gnulib.m4 \
-	$(top_srcdir)/../m4/fixautomake.m4 \
-	$(top_srcdir)/../m4/gnulib-common.m4 \
-	$(top_srcdir)/../m4/gnulib-comp.m4 \
-	$(top_srcdir)/../m4/init-package-version.m4 \
-	$(top_srcdir)/../m4/more-warnings.m4 \
-	$(top_srcdir)/../m4/woe32-dll.m4 \
-	$(top_srcdir)/../m4/zzgnulib.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/build-to-host.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/gettext.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/glibc2.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/nls.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/po.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/progtest.m4 \
-	$(top_srcdir)/m4/exported.m4 $(top_srcdir)/m4/hostname.m4 \
-	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/locale-de.m4 \
-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/gnulib-m4/yield.m4 \
+	$(top_srcdir)/gnulib-m4/zzgnulib.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
@@ -514,8 +691,8 @@ CONFIG_CLEAN_FILES = exported.sh
 CONFIG_CLEAN_VPATH_FILES =
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
-	$(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
-	*) f=$$p;; \
+    $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
+    *) f=$$p;; \
   esac;
 am__strip_dir = f=`echo $$p | sed -e 's|^.*/||'`;
 am__install_max = 40
@@ -527,16 +704,16 @@ am__nobase_list = $(am__nobase_strip_setup); \
   for p in $$list; do echo "$$p $$p"; done | \
   sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
   $(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
-	if (++n[$$2] == $(am__install_max)) \
-	  { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
-	END { for (dir in files) print dir, files[dir] }'
+    if (++n[$$2] == $(am__install_max)) \
+      { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
+    END { for (dir in files) print dir, files[dir] }'
 am__base_list = \
   sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 am__uninstall_files_from_dir = { \
   { test ! -d "$$dir" && test ! -f "$$dir" && test ! -r "$$dir"; } \
   || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
-	   $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
+       $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
   }
 am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(includedir)"
 LTLIBRARIES = $(lib_LTLIBRARIES) $(noinst_LTLIBRARIES)
@@ -1106,8 +1283,8 @@ DIST_SOURCES = $(am__libgettextpo_la_SOURCES_DIST) \
 	$(am__libgnu_la_SOURCES_DIST) $(EXTRA_libgnu_la_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
-	n|no|NO) false;; \
-	*) (install-info --version) >/dev/null 2>&1;; \
+    n|no|NO) false;; \
+    *) (install-info --version) >/dev/null 2>&1;; \
   esac
 HEADERS = $(nodist_include_HEADERS) $(nodist_noinst_HEADERS)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
@@ -1125,7 +1302,7 @@ am__uniquify_input = $(AWK) '\
 am__define_uniq_tagged_files = \
   list='$(am__tagged_files)'; \
   unique=`for i in $$list; do \
-	if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
   done | $(am__uniquify_input)`
 am__DIST_COMMON = $(srcdir)/Makefile.gnulib $(srcdir)/Makefile.in \
 	$(srcdir)/exported.sh.in $(top_srcdir)/../build-aux/depcomp \
@@ -1135,7 +1312,7 @@ pkgdatadir = ${datadir}/gettext
 pkgincludedir = ${includedir}/gettext
 pkglibdir = ${libdir}/gettext
 pkglibexecdir = ${libexecdir}/gettext
-ACLOCAL = /Users/sedwards/gtk/bin/aclocal -I /Users/sedwards/gtk/share/aclocal
+ACLOCAL = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' aclocal-1.18
 ALLOCA = 
 ALLOCA_H = alloca.h
 AMTAR = $${TAR-tar}
@@ -1165,6 +1342,7 @@ BUILDCSHARP = no
 BUILDD = no
 BUILDJAVA = no
 BUILDMODULA2 = no
+BYTESWAP_H = @BYTESWAP_H@
 CAN_PRINT_STACK_TRACE = 0
 CATOBJEXT = 
 CC = gcc
@@ -1175,6 +1353,7 @@ CLASSPATH =
 CLASSPATH_SEPARATOR = :
 CLIX_PATH = 
 CLIX_PATH_VAR = 
+CLOCK_TIME_LIB = @CLOCK_TIME_LIB@
 CONF_JAVA = 
 CONF_JAVAC = 
 CPP = gcc -E
@@ -1199,6 +1378,7 @@ DEFS = -DIN_LIBGETTEXTPO=1 -DOMIT_SETLOCALE_LOCK=1 -DHAVE_CONFIG_H
 DEPDIR = .deps
 DESIRED_LINGUAS = $(ALL_LINGUAS)
 DFLAGS = 
+DIR_HAS_FD_MEMBER = @DIR_HAS_FD_MEMBER@
 DLLTOOL = false
 DSYMUTIL = dsymutil
 DUMPBIN = 
@@ -1210,19 +1390,809 @@ ECHO_T =
 EGREP = /usr/bin/grep -E
 EMACS = no
 EMACSLOADPATH = 
+ENDIAN_H = @ENDIAN_H@
+ENDIAN_H_JUST_MISSING_STDINT = @ENDIAN_H_JUST_MISSING_STDINT@
 ERRNO_H = 
 ETAGS = etags
 EXEEXT = 
 FGREP = /usr/bin/grep -F
 FILECMD = file
+FILE_HAS_ACL_LIB = @FILE_HAS_ACL_LIB@
 FLOAT_H = float.h
+FNMATCH_H = @FNMATCH_H@
 FOREIGN_WARN_CFLAGS = 
+GETADDRINFO_LIB = @GETADDRINFO_LIB@
+GETLOCALENAME_L_LIB = @GETLOCALENAME_L_LIB@
+GETOPT_CDEFS_H = @GETOPT_CDEFS_H@
+GETOPT_H = @GETOPT_H@
+GETRANDOM_LIB = @GETRANDOM_LIB@
 GETTEXT_MACRO_VERSION = 0.24
 GLIBC2 = no
 GLOBAL_SYMBOL_PIPE = /Users/sedwards/gtk/bin/gsed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p' | /Users/sedwards/gtk/bin/gsed '/ __gnu_lto/d'
 GL_CFLAG_ALLOW_WARNINGS = -Wno-error
 GL_CFLAG_GNULIB_WARNINGS =  -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-string-plus-int -Wno-tautological-constant-out-of-range-compare -Wno-sign-conversion -Wno-type-limits -Wno-unused-const-variable
 GL_CFLAG_INHIBIT_WARNINGS = -w
+GL_CXXFLAG_ALLOW_WARNINGS = @GL_CXXFLAG_ALLOW_WARNINGS@
+GL_GNULIB_ABORT_DEBUG = @GL_GNULIB_ABORT_DEBUG@
+GL_GNULIB_ACCEPT = @GL_GNULIB_ACCEPT@
+GL_GNULIB_ACCEPT4 = @GL_GNULIB_ACCEPT4@
+GL_GNULIB_ACCESS = @GL_GNULIB_ACCESS@
+GL_GNULIB_ACOSF = @GL_GNULIB_ACOSF@
+GL_GNULIB_ACOSL = @GL_GNULIB_ACOSL@
+GL_GNULIB_ALIGNED_ALLOC = @GL_GNULIB_ALIGNED_ALLOC@
+GL_GNULIB_ALPHASORT = @GL_GNULIB_ALPHASORT@
+GL_GNULIB_ASINF = @GL_GNULIB_ASINF@
+GL_GNULIB_ASINL = @GL_GNULIB_ASINL@
+GL_GNULIB_ATAN2F = @GL_GNULIB_ATAN2F@
+GL_GNULIB_ATANF = @GL_GNULIB_ATANF@
+GL_GNULIB_ATANL = @GL_GNULIB_ATANL@
+GL_GNULIB_ATOLL = @GL_GNULIB_ATOLL@
+GL_GNULIB_BIND = @GL_GNULIB_BIND@
+GL_GNULIB_BTOC32 = @GL_GNULIB_BTOC32@
+GL_GNULIB_BTOWC = @GL_GNULIB_BTOWC@
+GL_GNULIB_C32ISALNUM = @GL_GNULIB_C32ISALNUM@
+GL_GNULIB_C32ISALPHA = @GL_GNULIB_C32ISALPHA@
+GL_GNULIB_C32ISBLANK = @GL_GNULIB_C32ISBLANK@
+GL_GNULIB_C32ISCNTRL = @GL_GNULIB_C32ISCNTRL@
+GL_GNULIB_C32ISDIGIT = @GL_GNULIB_C32ISDIGIT@
+GL_GNULIB_C32ISGRAPH = @GL_GNULIB_C32ISGRAPH@
+GL_GNULIB_C32ISLOWER = @GL_GNULIB_C32ISLOWER@
+GL_GNULIB_C32ISPRINT = @GL_GNULIB_C32ISPRINT@
+GL_GNULIB_C32ISPUNCT = @GL_GNULIB_C32ISPUNCT@
+GL_GNULIB_C32ISSPACE = @GL_GNULIB_C32ISSPACE@
+GL_GNULIB_C32ISUPPER = @GL_GNULIB_C32ISUPPER@
+GL_GNULIB_C32ISXDIGIT = @GL_GNULIB_C32ISXDIGIT@
+GL_GNULIB_C32RTOMB = @GL_GNULIB_C32RTOMB@
+GL_GNULIB_C32SNRTOMBS = @GL_GNULIB_C32SNRTOMBS@
+GL_GNULIB_C32SRTOMBS = @GL_GNULIB_C32SRTOMBS@
+GL_GNULIB_C32STOMBS = @GL_GNULIB_C32STOMBS@
+GL_GNULIB_C32SWIDTH = @GL_GNULIB_C32SWIDTH@
+GL_GNULIB_C32TOB = @GL_GNULIB_C32TOB@
+GL_GNULIB_C32TOLOWER = @GL_GNULIB_C32TOLOWER@
+GL_GNULIB_C32TOUPPER = @GL_GNULIB_C32TOUPPER@
+GL_GNULIB_C32WIDTH = @GL_GNULIB_C32WIDTH@
+GL_GNULIB_C32_APPLY_MAPPING = @GL_GNULIB_C32_APPLY_MAPPING@
+GL_GNULIB_C32_APPLY_TYPE_TEST = @GL_GNULIB_C32_APPLY_TYPE_TEST@
+GL_GNULIB_C32_GET_MAPPING = @GL_GNULIB_C32_GET_MAPPING@
+GL_GNULIB_C32_GET_TYPE_TEST = @GL_GNULIB_C32_GET_TYPE_TEST@
+GL_GNULIB_CALLOC_GNU = @GL_GNULIB_CALLOC_GNU@
+GL_GNULIB_CALLOC_POSIX = @GL_GNULIB_CALLOC_POSIX@
+GL_GNULIB_CANONICALIZE_FILE_NAME = @GL_GNULIB_CANONICALIZE_FILE_NAME@
+GL_GNULIB_CBRT = @GL_GNULIB_CBRT@
+GL_GNULIB_CBRTF = @GL_GNULIB_CBRTF@
+GL_GNULIB_CBRTL = @GL_GNULIB_CBRTL@
+GL_GNULIB_CEIL = @GL_GNULIB_CEIL@
+GL_GNULIB_CEILF = @GL_GNULIB_CEILF@
+GL_GNULIB_CEILL = @GL_GNULIB_CEILL@
+GL_GNULIB_CHDIR = @GL_GNULIB_CHDIR@
+GL_GNULIB_CHMOD = @GL_GNULIB_CHMOD@
+GL_GNULIB_CHOWN = @GL_GNULIB_CHOWN@
+GL_GNULIB_CLOSE = @GL_GNULIB_CLOSE@
+GL_GNULIB_CLOSEDIR = @GL_GNULIB_CLOSEDIR@
+GL_GNULIB_CONNECT = @GL_GNULIB_CONNECT@
+GL_GNULIB_COPYSIGN = @GL_GNULIB_COPYSIGN@
+GL_GNULIB_COPYSIGNF = @GL_GNULIB_COPYSIGNF@
+GL_GNULIB_COPYSIGNL = @GL_GNULIB_COPYSIGNL@
+GL_GNULIB_COPY_FILE_RANGE = @GL_GNULIB_COPY_FILE_RANGE@
+GL_GNULIB_COSF = @GL_GNULIB_COSF@
+GL_GNULIB_COSHF = @GL_GNULIB_COSHF@
+GL_GNULIB_COSL = @GL_GNULIB_COSL@
+GL_GNULIB_CREAT = @GL_GNULIB_CREAT@
+GL_GNULIB_CTIME = @GL_GNULIB_CTIME@
+GL_GNULIB_DIRFD = @GL_GNULIB_DIRFD@
+GL_GNULIB_DPRINTF = @GL_GNULIB_DPRINTF@
+GL_GNULIB_DUP = @GL_GNULIB_DUP@
+GL_GNULIB_DUP2 = @GL_GNULIB_DUP2@
+GL_GNULIB_DUP3 = @GL_GNULIB_DUP3@
+GL_GNULIB_DUPLOCALE = @GL_GNULIB_DUPLOCALE@
+GL_GNULIB_DZPRINTF = @GL_GNULIB_DZPRINTF@
+GL_GNULIB_ENVIRON = @GL_GNULIB_ENVIRON@
+GL_GNULIB_EUIDACCESS = @GL_GNULIB_EUIDACCESS@
+GL_GNULIB_EXECL = @GL_GNULIB_EXECL@
+GL_GNULIB_EXECLE = @GL_GNULIB_EXECLE@
+GL_GNULIB_EXECLP = @GL_GNULIB_EXECLP@
+GL_GNULIB_EXECV = @GL_GNULIB_EXECV@
+GL_GNULIB_EXECVE = @GL_GNULIB_EXECVE@
+GL_GNULIB_EXECVP = @GL_GNULIB_EXECVP@
+GL_GNULIB_EXECVPE = @GL_GNULIB_EXECVPE@
+GL_GNULIB_EXP2 = @GL_GNULIB_EXP2@
+GL_GNULIB_EXP2F = @GL_GNULIB_EXP2F@
+GL_GNULIB_EXP2L = @GL_GNULIB_EXP2L@
+GL_GNULIB_EXPF = @GL_GNULIB_EXPF@
+GL_GNULIB_EXPL = @GL_GNULIB_EXPL@
+GL_GNULIB_EXPLICIT_BZERO = @GL_GNULIB_EXPLICIT_BZERO@
+GL_GNULIB_EXPM1 = @GL_GNULIB_EXPM1@
+GL_GNULIB_EXPM1F = @GL_GNULIB_EXPM1F@
+GL_GNULIB_EXPM1L = @GL_GNULIB_EXPM1L@
+GL_GNULIB_FABSF = @GL_GNULIB_FABSF@
+GL_GNULIB_FABSL = @GL_GNULIB_FABSL@
+GL_GNULIB_FACCESSAT = @GL_GNULIB_FACCESSAT@
+GL_GNULIB_FCHDIR = @GL_GNULIB_FCHDIR@
+GL_GNULIB_FCHMODAT = @GL_GNULIB_FCHMODAT@
+GL_GNULIB_FCHOWNAT = @GL_GNULIB_FCHOWNAT@
+GL_GNULIB_FCLOSE = @GL_GNULIB_FCLOSE@
+GL_GNULIB_FCNTL = @GL_GNULIB_FCNTL@
+GL_GNULIB_FDATASYNC = @GL_GNULIB_FDATASYNC@
+GL_GNULIB_FDOPEN = @GL_GNULIB_FDOPEN@
+GL_GNULIB_FDOPENDIR = @GL_GNULIB_FDOPENDIR@
+GL_GNULIB_FFLUSH = @GL_GNULIB_FFLUSH@
+GL_GNULIB_FFSL = @GL_GNULIB_FFSL@
+GL_GNULIB_FFSLL = @GL_GNULIB_FFSLL@
+GL_GNULIB_FGETC = @GL_GNULIB_FGETC@
+GL_GNULIB_FGETS = @GL_GNULIB_FGETS@
+GL_GNULIB_FLOOR = @GL_GNULIB_FLOOR@
+GL_GNULIB_FLOORF = @GL_GNULIB_FLOORF@
+GL_GNULIB_FLOORL = @GL_GNULIB_FLOORL@
+GL_GNULIB_FMA = @GL_GNULIB_FMA@
+GL_GNULIB_FMAF = @GL_GNULIB_FMAF@
+GL_GNULIB_FMAL = @GL_GNULIB_FMAL@
+GL_GNULIB_FMOD = @GL_GNULIB_FMOD@
+GL_GNULIB_FMODF = @GL_GNULIB_FMODF@
+GL_GNULIB_FMODL = @GL_GNULIB_FMODL@
+GL_GNULIB_FNMATCH = @GL_GNULIB_FNMATCH@
+GL_GNULIB_FOPEN = @GL_GNULIB_FOPEN@
+GL_GNULIB_FOPEN_GNU = @GL_GNULIB_FOPEN_GNU@
+GL_GNULIB_FPRINTF = @GL_GNULIB_FPRINTF@
+GL_GNULIB_FPRINTF_POSIX = @GL_GNULIB_FPRINTF_POSIX@
+GL_GNULIB_FPURGE = @GL_GNULIB_FPURGE@
+GL_GNULIB_FPUTC = @GL_GNULIB_FPUTC@
+GL_GNULIB_FPUTS = @GL_GNULIB_FPUTS@
+GL_GNULIB_FREAD = @GL_GNULIB_FREAD@
+GL_GNULIB_FREELOCALE = @GL_GNULIB_FREELOCALE@
+GL_GNULIB_FREE_POSIX = @GL_GNULIB_FREE_POSIX@
+GL_GNULIB_FREOPEN = @GL_GNULIB_FREOPEN@
+GL_GNULIB_FREXP = @GL_GNULIB_FREXP@
+GL_GNULIB_FREXPF = @GL_GNULIB_FREXPF@
+GL_GNULIB_FREXPL = @GL_GNULIB_FREXPL@
+GL_GNULIB_FSCANF = @GL_GNULIB_FSCANF@
+GL_GNULIB_FSEEK = @GL_GNULIB_FSEEK@
+GL_GNULIB_FSEEKO = @GL_GNULIB_FSEEKO@
+GL_GNULIB_FSTAT = @GL_GNULIB_FSTAT@
+GL_GNULIB_FSTATAT = @GL_GNULIB_FSTATAT@
+GL_GNULIB_FSYNC = @GL_GNULIB_FSYNC@
+GL_GNULIB_FTELL = @GL_GNULIB_FTELL@
+GL_GNULIB_FTELLO = @GL_GNULIB_FTELLO@
+GL_GNULIB_FTRUNCATE = @GL_GNULIB_FTRUNCATE@
+GL_GNULIB_FUTIMENS = @GL_GNULIB_FUTIMENS@
+GL_GNULIB_FWRITE = @GL_GNULIB_FWRITE@
+GL_GNULIB_FZPRINTF = @GL_GNULIB_FZPRINTF@
+GL_GNULIB_GETADDRINFO = @GL_GNULIB_GETADDRINFO@
+GL_GNULIB_GETC = @GL_GNULIB_GETC@
+GL_GNULIB_GETCHAR = @GL_GNULIB_GETCHAR@
+GL_GNULIB_GETCWD = @GL_GNULIB_GETCWD@
+GL_GNULIB_GETDELIM = @GL_GNULIB_GETDELIM@
+GL_GNULIB_GETDOMAINNAME = @GL_GNULIB_GETDOMAINNAME@
+GL_GNULIB_GETDTABLESIZE = @GL_GNULIB_GETDTABLESIZE@
+GL_GNULIB_GETENTROPY = @GL_GNULIB_GETENTROPY@
+GL_GNULIB_GETGROUPS = @GL_GNULIB_GETGROUPS@
+GL_GNULIB_GETHOSTNAME = @GL_GNULIB_GETHOSTNAME@
+GL_GNULIB_GETLINE = @GL_GNULIB_GETLINE@
+GL_GNULIB_GETLOADAVG = @GL_GNULIB_GETLOADAVG@
+GL_GNULIB_GETLOCALENAME_L = @GL_GNULIB_GETLOCALENAME_L@
+GL_GNULIB_GETLOCALENAME_L_UNSAFE = @GL_GNULIB_GETLOCALENAME_L_UNSAFE@
+GL_GNULIB_GETLOGIN = @GL_GNULIB_GETLOGIN@
+GL_GNULIB_GETLOGIN_R = @GL_GNULIB_GETLOGIN_R@
+GL_GNULIB_GETOPT_POSIX = @GL_GNULIB_GETOPT_POSIX@
+GL_GNULIB_GETPAGESIZE = @GL_GNULIB_GETPAGESIZE@
+GL_GNULIB_GETPASS = @GL_GNULIB_GETPASS@
+GL_GNULIB_GETPASS_GNU = @GL_GNULIB_GETPASS_GNU@
+GL_GNULIB_GETPAYLOAD = @GL_GNULIB_GETPAYLOAD@
+GL_GNULIB_GETPAYLOADF = @GL_GNULIB_GETPAYLOADF@
+GL_GNULIB_GETPAYLOADL = @GL_GNULIB_GETPAYLOADL@
+GL_GNULIB_GETPEERNAME = @GL_GNULIB_GETPEERNAME@
+GL_GNULIB_GETPROGNAME = @GL_GNULIB_GETPROGNAME@
+GL_GNULIB_GETRANDOM = @GL_GNULIB_GETRANDOM@
+GL_GNULIB_GETRUSAGE = @GL_GNULIB_GETRUSAGE@
+GL_GNULIB_GETSOCKNAME = @GL_GNULIB_GETSOCKNAME@
+GL_GNULIB_GETSOCKOPT = @GL_GNULIB_GETSOCKOPT@
+GL_GNULIB_GETSUBOPT = @GL_GNULIB_GETSUBOPT@
+GL_GNULIB_GETTIMEOFDAY = @GL_GNULIB_GETTIMEOFDAY@
+GL_GNULIB_GETUMASK = @GL_GNULIB_GETUMASK@
+GL_GNULIB_GETUSERSHELL = @GL_GNULIB_GETUSERSHELL@
+GL_GNULIB_GRANTPT = @GL_GNULIB_GRANTPT@
+GL_GNULIB_GROUP_MEMBER = @GL_GNULIB_GROUP_MEMBER@
+GL_GNULIB_HYPOT = @GL_GNULIB_HYPOT@
+GL_GNULIB_HYPOTF = @GL_GNULIB_HYPOTF@
+GL_GNULIB_HYPOTL = @GL_GNULIB_HYPOTL@
+GL_GNULIB_ICONV = @GL_GNULIB_ICONV@
+GL_GNULIB_ILOGB = @GL_GNULIB_ILOGB@
+GL_GNULIB_ILOGBF = @GL_GNULIB_ILOGBF@
+GL_GNULIB_ILOGBL = @GL_GNULIB_ILOGBL@
+GL_GNULIB_IMAXABS = @GL_GNULIB_IMAXABS@
+GL_GNULIB_IMAXDIV = @GL_GNULIB_IMAXDIV@
+GL_GNULIB_INET_NTOP = @GL_GNULIB_INET_NTOP@
+GL_GNULIB_INET_PTON = @GL_GNULIB_INET_PTON@
+GL_GNULIB_IOCTL = @GL_GNULIB_IOCTL@
+GL_GNULIB_ISALNUM_L = @GL_GNULIB_ISALNUM_L@
+GL_GNULIB_ISALPHA_L = @GL_GNULIB_ISALPHA_L@
+GL_GNULIB_ISATTY = @GL_GNULIB_ISATTY@
+GL_GNULIB_ISBLANK = @GL_GNULIB_ISBLANK@
+GL_GNULIB_ISBLANK_L = @GL_GNULIB_ISBLANK_L@
+GL_GNULIB_ISCNTRL_L = @GL_GNULIB_ISCNTRL_L@
+GL_GNULIB_ISDIGIT_L = @GL_GNULIB_ISDIGIT_L@
+GL_GNULIB_ISFINITE = @GL_GNULIB_ISFINITE@
+GL_GNULIB_ISFINITE_NO_CXX = @GL_GNULIB_ISFINITE_NO_CXX@
+GL_GNULIB_ISGRAPH_L = @GL_GNULIB_ISGRAPH_L@
+GL_GNULIB_ISINF = @GL_GNULIB_ISINF@
+GL_GNULIB_ISINF_NO_CXX = @GL_GNULIB_ISINF_NO_CXX@
+GL_GNULIB_ISLOWER_L = @GL_GNULIB_ISLOWER_L@
+GL_GNULIB_ISNAN = @GL_GNULIB_ISNAN@
+GL_GNULIB_ISNAND = @GL_GNULIB_ISNAND@
+GL_GNULIB_ISNANF = @GL_GNULIB_ISNANF@
+GL_GNULIB_ISNANL = @GL_GNULIB_ISNANL@
+GL_GNULIB_ISNAN_NO_CXX = @GL_GNULIB_ISNAN_NO_CXX@
+GL_GNULIB_ISPRINT_L = @GL_GNULIB_ISPRINT_L@
+GL_GNULIB_ISPUNCT_L = @GL_GNULIB_ISPUNCT_L@
+GL_GNULIB_ISSPACE_L = @GL_GNULIB_ISSPACE_L@
+GL_GNULIB_ISUPPER_L = @GL_GNULIB_ISUPPER_L@
+GL_GNULIB_ISWBLANK = @GL_GNULIB_ISWBLANK@
+GL_GNULIB_ISWCTYPE = @GL_GNULIB_ISWCTYPE@
+GL_GNULIB_ISWDIGIT = @GL_GNULIB_ISWDIGIT@
+GL_GNULIB_ISWPUNCT = @GL_GNULIB_ISWPUNCT@
+GL_GNULIB_ISWXDIGIT = @GL_GNULIB_ISWXDIGIT@
+GL_GNULIB_ISXDIGIT_L = @GL_GNULIB_ISXDIGIT_L@
+GL_GNULIB_LCHMOD = @GL_GNULIB_LCHMOD@
+GL_GNULIB_LCHOWN = @GL_GNULIB_LCHOWN@
+GL_GNULIB_LDEXP = @GL_GNULIB_LDEXP@
+GL_GNULIB_LDEXPF = @GL_GNULIB_LDEXPF@
+GL_GNULIB_LDEXPL = @GL_GNULIB_LDEXPL@
+GL_GNULIB_LINK = @GL_GNULIB_LINK@
+GL_GNULIB_LINKAT = @GL_GNULIB_LINKAT@
+GL_GNULIB_LISTEN = @GL_GNULIB_LISTEN@
+GL_GNULIB_LOCALECONV = @GL_GNULIB_LOCALECONV@
+GL_GNULIB_LOCALENAME_UNSAFE = @GL_GNULIB_LOCALENAME_UNSAFE@
+GL_GNULIB_LOCALTIME = @GL_GNULIB_LOCALTIME@
+GL_GNULIB_LOG = @GL_GNULIB_LOG@
+GL_GNULIB_LOG10 = @GL_GNULIB_LOG10@
+GL_GNULIB_LOG10F = @GL_GNULIB_LOG10F@
+GL_GNULIB_LOG10L = @GL_GNULIB_LOG10L@
+GL_GNULIB_LOG1P = @GL_GNULIB_LOG1P@
+GL_GNULIB_LOG1PF = @GL_GNULIB_LOG1PF@
+GL_GNULIB_LOG1PL = @GL_GNULIB_LOG1PL@
+GL_GNULIB_LOG2 = @GL_GNULIB_LOG2@
+GL_GNULIB_LOG2F = @GL_GNULIB_LOG2F@
+GL_GNULIB_LOG2L = @GL_GNULIB_LOG2L@
+GL_GNULIB_LOGB = @GL_GNULIB_LOGB@
+GL_GNULIB_LOGBF = @GL_GNULIB_LOGBF@
+GL_GNULIB_LOGBL = @GL_GNULIB_LOGBL@
+GL_GNULIB_LOGF = @GL_GNULIB_LOGF@
+GL_GNULIB_LOGL = @GL_GNULIB_LOGL@
+GL_GNULIB_LOGP1 = @GL_GNULIB_LOGP1@
+GL_GNULIB_LOGP1F = @GL_GNULIB_LOGP1F@
+GL_GNULIB_LOGP1L = @GL_GNULIB_LOGP1L@
+GL_GNULIB_LSEEK = @GL_GNULIB_LSEEK@
+GL_GNULIB_LSTAT = @GL_GNULIB_LSTAT@
+GL_GNULIB_MALLOC_GNU = @GL_GNULIB_MALLOC_GNU@
+GL_GNULIB_MALLOC_POSIX = @GL_GNULIB_MALLOC_POSIX@
+GL_GNULIB_MBRLEN = @GL_GNULIB_MBRLEN@
+GL_GNULIB_MBRTOC16 = @GL_GNULIB_MBRTOC16@
+GL_GNULIB_MBRTOC32 = @GL_GNULIB_MBRTOC32@
+GL_GNULIB_MBRTOWC = @GL_GNULIB_MBRTOWC@
+GL_GNULIB_MBSCASECMP = @GL_GNULIB_MBSCASECMP@
+GL_GNULIB_MBSCASESTR = @GL_GNULIB_MBSCASESTR@
+GL_GNULIB_MBSCHR = @GL_GNULIB_MBSCHR@
+GL_GNULIB_MBSCSPN = @GL_GNULIB_MBSCSPN@
+GL_GNULIB_MBSINIT = @GL_GNULIB_MBSINIT@
+GL_GNULIB_MBSLEN = @GL_GNULIB_MBSLEN@
+GL_GNULIB_MBSNCASECMP = @GL_GNULIB_MBSNCASECMP@
+GL_GNULIB_MBSNLEN = @GL_GNULIB_MBSNLEN@
+GL_GNULIB_MBSNRTOC32S = @GL_GNULIB_MBSNRTOC32S@
+GL_GNULIB_MBSNRTOWCS = @GL_GNULIB_MBSNRTOWCS@
+GL_GNULIB_MBSPBRK = @GL_GNULIB_MBSPBRK@
+GL_GNULIB_MBSPCASECMP = @GL_GNULIB_MBSPCASECMP@
+GL_GNULIB_MBSRCHR = @GL_GNULIB_MBSRCHR@
+GL_GNULIB_MBSRTOC32S = @GL_GNULIB_MBSRTOC32S@
+GL_GNULIB_MBSRTOWCS = @GL_GNULIB_MBSRTOWCS@
+GL_GNULIB_MBSSEP = @GL_GNULIB_MBSSEP@
+GL_GNULIB_MBSSPN = @GL_GNULIB_MBSSPN@
+GL_GNULIB_MBSSTR = @GL_GNULIB_MBSSTR@
+GL_GNULIB_MBSTOC32S = @GL_GNULIB_MBSTOC32S@
+GL_GNULIB_MBSTOK_R = @GL_GNULIB_MBSTOK_R@
+GL_GNULIB_MBSTOWCS = @GL_GNULIB_MBSTOWCS@
+GL_GNULIB_MBSZERO = @GL_GNULIB_MBSZERO@
+GL_GNULIB_MBS_ENDSWITH = @GL_GNULIB_MBS_ENDSWITH@
+GL_GNULIB_MBS_STARTSWITH = @GL_GNULIB_MBS_STARTSWITH@
+GL_GNULIB_MBTOWC = @GL_GNULIB_MBTOWC@
+GL_GNULIB_MDA_ACCESS = @GL_GNULIB_MDA_ACCESS@
+GL_GNULIB_MDA_CHDIR = @GL_GNULIB_MDA_CHDIR@
+GL_GNULIB_MDA_CHMOD = @GL_GNULIB_MDA_CHMOD@
+GL_GNULIB_MDA_CLOSE = @GL_GNULIB_MDA_CLOSE@
+GL_GNULIB_MDA_CREAT = @GL_GNULIB_MDA_CREAT@
+GL_GNULIB_MDA_DUP = @GL_GNULIB_MDA_DUP@
+GL_GNULIB_MDA_DUP2 = @GL_GNULIB_MDA_DUP2@
+GL_GNULIB_MDA_ECVT = @GL_GNULIB_MDA_ECVT@
+GL_GNULIB_MDA_EXECL = @GL_GNULIB_MDA_EXECL@
+GL_GNULIB_MDA_EXECLE = @GL_GNULIB_MDA_EXECLE@
+GL_GNULIB_MDA_EXECLP = @GL_GNULIB_MDA_EXECLP@
+GL_GNULIB_MDA_EXECV = @GL_GNULIB_MDA_EXECV@
+GL_GNULIB_MDA_EXECVE = @GL_GNULIB_MDA_EXECVE@
+GL_GNULIB_MDA_EXECVP = @GL_GNULIB_MDA_EXECVP@
+GL_GNULIB_MDA_EXECVPE = @GL_GNULIB_MDA_EXECVPE@
+GL_GNULIB_MDA_FCLOSEALL = @GL_GNULIB_MDA_FCLOSEALL@
+GL_GNULIB_MDA_FCVT = @GL_GNULIB_MDA_FCVT@
+GL_GNULIB_MDA_FDOPEN = @GL_GNULIB_MDA_FDOPEN@
+GL_GNULIB_MDA_FILENO = @GL_GNULIB_MDA_FILENO@
+GL_GNULIB_MDA_GCVT = @GL_GNULIB_MDA_GCVT@
+GL_GNULIB_MDA_GETCWD = @GL_GNULIB_MDA_GETCWD@
+GL_GNULIB_MDA_GETPID = @GL_GNULIB_MDA_GETPID@
+GL_GNULIB_MDA_GETW = @GL_GNULIB_MDA_GETW@
+GL_GNULIB_MDA_ISATTY = @GL_GNULIB_MDA_ISATTY@
+GL_GNULIB_MDA_J0 = @GL_GNULIB_MDA_J0@
+GL_GNULIB_MDA_J1 = @GL_GNULIB_MDA_J1@
+GL_GNULIB_MDA_JN = @GL_GNULIB_MDA_JN@
+GL_GNULIB_MDA_LSEEK = @GL_GNULIB_MDA_LSEEK@
+GL_GNULIB_MDA_MEMCCPY = @GL_GNULIB_MDA_MEMCCPY@
+GL_GNULIB_MDA_MKDIR = @GL_GNULIB_MDA_MKDIR@
+GL_GNULIB_MDA_MKTEMP = @GL_GNULIB_MDA_MKTEMP@
+GL_GNULIB_MDA_OPEN = @GL_GNULIB_MDA_OPEN@
+GL_GNULIB_MDA_PUTENV = @GL_GNULIB_MDA_PUTENV@
+GL_GNULIB_MDA_PUTW = @GL_GNULIB_MDA_PUTW@
+GL_GNULIB_MDA_READ = @GL_GNULIB_MDA_READ@
+GL_GNULIB_MDA_RMDIR = @GL_GNULIB_MDA_RMDIR@
+GL_GNULIB_MDA_STRDUP = @GL_GNULIB_MDA_STRDUP@
+GL_GNULIB_MDA_SWAB = @GL_GNULIB_MDA_SWAB@
+GL_GNULIB_MDA_TEMPNAM = @GL_GNULIB_MDA_TEMPNAM@
+GL_GNULIB_MDA_TZSET = @GL_GNULIB_MDA_TZSET@
+GL_GNULIB_MDA_UMASK = @GL_GNULIB_MDA_UMASK@
+GL_GNULIB_MDA_UNLINK = @GL_GNULIB_MDA_UNLINK@
+GL_GNULIB_MDA_UTIME = @GL_GNULIB_MDA_UTIME@
+GL_GNULIB_MDA_WCSDUP = @GL_GNULIB_MDA_WCSDUP@
+GL_GNULIB_MDA_WRITE = @GL_GNULIB_MDA_WRITE@
+GL_GNULIB_MDA_Y0 = @GL_GNULIB_MDA_Y0@
+GL_GNULIB_MDA_Y1 = @GL_GNULIB_MDA_Y1@
+GL_GNULIB_MDA_YN = @GL_GNULIB_MDA_YN@
+GL_GNULIB_MEMCHR = @GL_GNULIB_MEMCHR@
+GL_GNULIB_MEMEQ = @GL_GNULIB_MEMEQ@
+GL_GNULIB_MEMMEM = @GL_GNULIB_MEMMEM@
+GL_GNULIB_MEMPCPY = @GL_GNULIB_MEMPCPY@
+GL_GNULIB_MEMRCHR = @GL_GNULIB_MEMRCHR@
+GL_GNULIB_MEMSET_EXPLICIT = @GL_GNULIB_MEMSET_EXPLICIT@
+GL_GNULIB_MKDIR = @GL_GNULIB_MKDIR@
+GL_GNULIB_MKDIRAT = @GL_GNULIB_MKDIRAT@
+GL_GNULIB_MKDTEMP = @GL_GNULIB_MKDTEMP@
+GL_GNULIB_MKFIFO = @GL_GNULIB_MKFIFO@
+GL_GNULIB_MKFIFOAT = @GL_GNULIB_MKFIFOAT@
+GL_GNULIB_MKNOD = @GL_GNULIB_MKNOD@
+GL_GNULIB_MKNODAT = @GL_GNULIB_MKNODAT@
+GL_GNULIB_MKOSTEMP = @GL_GNULIB_MKOSTEMP@
+GL_GNULIB_MKOSTEMPS = @GL_GNULIB_MKOSTEMPS@
+GL_GNULIB_MKSTEMP = @GL_GNULIB_MKSTEMP@
+GL_GNULIB_MKSTEMPS = @GL_GNULIB_MKSTEMPS@
+GL_GNULIB_MKTIME = @GL_GNULIB_MKTIME@
+GL_GNULIB_MODF = @GL_GNULIB_MODF@
+GL_GNULIB_MODFF = @GL_GNULIB_MODFF@
+GL_GNULIB_MODFL = @GL_GNULIB_MODFL@
+GL_GNULIB_NANOSLEEP = @GL_GNULIB_NANOSLEEP@
+GL_GNULIB_NEWLOCALE = @GL_GNULIB_NEWLOCALE@
+GL_GNULIB_NONBLOCKING = @GL_GNULIB_NONBLOCKING@
+GL_GNULIB_OBSTACK_PRINTF = @GL_GNULIB_OBSTACK_PRINTF@
+GL_GNULIB_OBSTACK_PRINTF_POSIX = @GL_GNULIB_OBSTACK_PRINTF_POSIX@
+GL_GNULIB_OBSTACK_ZPRINTF = @GL_GNULIB_OBSTACK_ZPRINTF@
+GL_GNULIB_OPEN = @GL_GNULIB_OPEN@
+GL_GNULIB_OPENAT = @GL_GNULIB_OPENAT@
+GL_GNULIB_OPENAT2 = @GL_GNULIB_OPENAT2@
+GL_GNULIB_OPENDIR = @GL_GNULIB_OPENDIR@
+GL_GNULIB_OVERRIDES_STRUCT_STAT = @GL_GNULIB_OVERRIDES_STRUCT_STAT@
+GL_GNULIB_PCLOSE = @GL_GNULIB_PCLOSE@
+GL_GNULIB_PERROR = @GL_GNULIB_PERROR@
+GL_GNULIB_PIPE = @GL_GNULIB_PIPE@
+GL_GNULIB_PIPE2 = @GL_GNULIB_PIPE2@
+GL_GNULIB_POPEN = @GL_GNULIB_POPEN@
+GL_GNULIB_POSIX_MEMALIGN = @GL_GNULIB_POSIX_MEMALIGN@
+GL_GNULIB_POSIX_OPENPT = @GL_GNULIB_POSIX_OPENPT@
+GL_GNULIB_POSIX_SPAWN = @GL_GNULIB_POSIX_SPAWN@
+GL_GNULIB_POSIX_SPAWNATTR_DESTROY = @GL_GNULIB_POSIX_SPAWNATTR_DESTROY@
+GL_GNULIB_POSIX_SPAWNATTR_GETFLAGS = @GL_GNULIB_POSIX_SPAWNATTR_GETFLAGS@
+GL_GNULIB_POSIX_SPAWNATTR_GETPGROUP = @GL_GNULIB_POSIX_SPAWNATTR_GETPGROUP@
+GL_GNULIB_POSIX_SPAWNATTR_GETSCHEDPARAM = @GL_GNULIB_POSIX_SPAWNATTR_GETSCHEDPARAM@
+GL_GNULIB_POSIX_SPAWNATTR_GETSCHEDPOLICY = @GL_GNULIB_POSIX_SPAWNATTR_GETSCHEDPOLICY@
+GL_GNULIB_POSIX_SPAWNATTR_GETSIGDEFAULT = @GL_GNULIB_POSIX_SPAWNATTR_GETSIGDEFAULT@
+GL_GNULIB_POSIX_SPAWNATTR_GETSIGMASK = @GL_GNULIB_POSIX_SPAWNATTR_GETSIGMASK@
+GL_GNULIB_POSIX_SPAWNATTR_INIT = @GL_GNULIB_POSIX_SPAWNATTR_INIT@
+GL_GNULIB_POSIX_SPAWNATTR_SETFLAGS = @GL_GNULIB_POSIX_SPAWNATTR_SETFLAGS@
+GL_GNULIB_POSIX_SPAWNATTR_SETPGROUP = @GL_GNULIB_POSIX_SPAWNATTR_SETPGROUP@
+GL_GNULIB_POSIX_SPAWNATTR_SETSCHEDPARAM = @GL_GNULIB_POSIX_SPAWNATTR_SETSCHEDPARAM@
+GL_GNULIB_POSIX_SPAWNATTR_SETSCHEDPOLICY = @GL_GNULIB_POSIX_SPAWNATTR_SETSCHEDPOLICY@
+GL_GNULIB_POSIX_SPAWNATTR_SETSIGDEFAULT = @GL_GNULIB_POSIX_SPAWNATTR_SETSIGDEFAULT@
+GL_GNULIB_POSIX_SPAWNATTR_SETSIGMASK = @GL_GNULIB_POSIX_SPAWNATTR_SETSIGMASK@
+GL_GNULIB_POSIX_SPAWNP = @GL_GNULIB_POSIX_SPAWNP@
+GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_ADDCHDIR = @GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_ADDCHDIR@
+GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_ADDCLOSE = @GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_ADDCLOSE@
+GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_ADDDUP2 = @GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_ADDDUP2@
+GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_ADDFCHDIR = @GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_ADDFCHDIR@
+GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_ADDOPEN = @GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_ADDOPEN@
+GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_DESTROY = @GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_DESTROY@
+GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_INIT = @GL_GNULIB_POSIX_SPAWN_FILE_ACTIONS_INIT@
+GL_GNULIB_POWF = @GL_GNULIB_POWF@
+GL_GNULIB_PREAD = @GL_GNULIB_PREAD@
+GL_GNULIB_PRINTF = @GL_GNULIB_PRINTF@
+GL_GNULIB_PRINTF_POSIX = @GL_GNULIB_PRINTF_POSIX@
+GL_GNULIB_PSELECT = @GL_GNULIB_PSELECT@
+GL_GNULIB_PTHREAD_COND = @GL_GNULIB_PTHREAD_COND@
+GL_GNULIB_PTHREAD_MUTEX = @GL_GNULIB_PTHREAD_MUTEX@
+GL_GNULIB_PTHREAD_MUTEX_TIMEDLOCK = @GL_GNULIB_PTHREAD_MUTEX_TIMEDLOCK@
+GL_GNULIB_PTHREAD_ONCE = @GL_GNULIB_PTHREAD_ONCE@
+GL_GNULIB_PTHREAD_RWLOCK = @GL_GNULIB_PTHREAD_RWLOCK@
+GL_GNULIB_PTHREAD_SIGMASK = @GL_GNULIB_PTHREAD_SIGMASK@
+GL_GNULIB_PTHREAD_SPIN = @GL_GNULIB_PTHREAD_SPIN@
+GL_GNULIB_PTHREAD_THREAD = @GL_GNULIB_PTHREAD_THREAD@
+GL_GNULIB_PTHREAD_TSS = @GL_GNULIB_PTHREAD_TSS@
+GL_GNULIB_PTSNAME = @GL_GNULIB_PTSNAME@
+GL_GNULIB_PTSNAME_R = @GL_GNULIB_PTSNAME_R@
+GL_GNULIB_PUTC = @GL_GNULIB_PUTC@
+GL_GNULIB_PUTCHAR = @GL_GNULIB_PUTCHAR@
+GL_GNULIB_PUTENV = @GL_GNULIB_PUTENV@
+GL_GNULIB_PUTS = @GL_GNULIB_PUTS@
+GL_GNULIB_PWRITE = @GL_GNULIB_PWRITE@
+GL_GNULIB_QSORT_R = @GL_GNULIB_QSORT_R@
+GL_GNULIB_RAISE = @GL_GNULIB_RAISE@
+GL_GNULIB_RAND = @GL_GNULIB_RAND@
+GL_GNULIB_RANDOM = @GL_GNULIB_RANDOM@
+GL_GNULIB_RANDOM_R = @GL_GNULIB_RANDOM_R@
+GL_GNULIB_RAWMEMCHR = @GL_GNULIB_RAWMEMCHR@
+GL_GNULIB_READ = @GL_GNULIB_READ@
+GL_GNULIB_READDIR = @GL_GNULIB_READDIR@
+GL_GNULIB_READLINK = @GL_GNULIB_READLINK@
+GL_GNULIB_READLINKAT = @GL_GNULIB_READLINKAT@
+GL_GNULIB_REALLOCARRAY = @GL_GNULIB_REALLOCARRAY@
+GL_GNULIB_REALLOC_POSIX = @GL_GNULIB_REALLOC_POSIX@
+GL_GNULIB_REALPATH = @GL_GNULIB_REALPATH@
+GL_GNULIB_RECV = @GL_GNULIB_RECV@
+GL_GNULIB_RECVFROM = @GL_GNULIB_RECVFROM@
+GL_GNULIB_REMAINDER = @GL_GNULIB_REMAINDER@
+GL_GNULIB_REMAINDERF = @GL_GNULIB_REMAINDERF@
+GL_GNULIB_REMAINDERL = @GL_GNULIB_REMAINDERL@
+GL_GNULIB_REMOVE = @GL_GNULIB_REMOVE@
+GL_GNULIB_RENAME = @GL_GNULIB_RENAME@
+GL_GNULIB_RENAMEAT = @GL_GNULIB_RENAMEAT@
+GL_GNULIB_REWINDDIR = @GL_GNULIB_REWINDDIR@
+GL_GNULIB_RINT = @GL_GNULIB_RINT@
+GL_GNULIB_RINTF = @GL_GNULIB_RINTF@
+GL_GNULIB_RINTL = @GL_GNULIB_RINTL@
+GL_GNULIB_RMDIR = @GL_GNULIB_RMDIR@
+GL_GNULIB_ROUND = @GL_GNULIB_ROUND@
+GL_GNULIB_ROUNDF = @GL_GNULIB_ROUNDF@
+GL_GNULIB_ROUNDL = @GL_GNULIB_ROUNDL@
+GL_GNULIB_RPMATCH = @GL_GNULIB_RPMATCH@
+GL_GNULIB_SCANDIR = @GL_GNULIB_SCANDIR@
+GL_GNULIB_SCANF = @GL_GNULIB_SCANF@
+GL_GNULIB_SCHED_YIELD = @GL_GNULIB_SCHED_YIELD@
+GL_GNULIB_SECURE_GETENV = @GL_GNULIB_SECURE_GETENV@
+GL_GNULIB_SELECT = @GL_GNULIB_SELECT@
+GL_GNULIB_SEND = @GL_GNULIB_SEND@
+GL_GNULIB_SENDTO = @GL_GNULIB_SENDTO@
+GL_GNULIB_SETENV = @GL_GNULIB_SETENV@
+GL_GNULIB_SETHOSTNAME = @GL_GNULIB_SETHOSTNAME@
+GL_GNULIB_SETLOCALE = @GL_GNULIB_SETLOCALE@
+GL_GNULIB_SETLOCALE_NULL = @GL_GNULIB_SETLOCALE_NULL@
+GL_GNULIB_SETPAYLOAD = @GL_GNULIB_SETPAYLOAD@
+GL_GNULIB_SETPAYLOADF = @GL_GNULIB_SETPAYLOADF@
+GL_GNULIB_SETPAYLOADL = @GL_GNULIB_SETPAYLOADL@
+GL_GNULIB_SETPAYLOADSIG = @GL_GNULIB_SETPAYLOADSIG@
+GL_GNULIB_SETPAYLOADSIGF = @GL_GNULIB_SETPAYLOADSIGF@
+GL_GNULIB_SETPAYLOADSIGL = @GL_GNULIB_SETPAYLOADSIGL@
+GL_GNULIB_SETSOCKOPT = @GL_GNULIB_SETSOCKOPT@
+GL_GNULIB_SHUTDOWN = @GL_GNULIB_SHUTDOWN@
+GL_GNULIB_SIG2STR = @GL_GNULIB_SIG2STR@
+GL_GNULIB_SIGABBREV_NP = @GL_GNULIB_SIGABBREV_NP@
+GL_GNULIB_SIGACTION = @GL_GNULIB_SIGACTION@
+GL_GNULIB_SIGDESCR_NP = @GL_GNULIB_SIGDESCR_NP@
+GL_GNULIB_SIGNAL_H_SIGPIPE = @GL_GNULIB_SIGNAL_H_SIGPIPE@
+GL_GNULIB_SIGNBIT = @GL_GNULIB_SIGNBIT@
+GL_GNULIB_SIGNBIT_NO_CXX = @GL_GNULIB_SIGNBIT_NO_CXX@
+GL_GNULIB_SIGPROCMASK = @GL_GNULIB_SIGPROCMASK@
+GL_GNULIB_SINF = @GL_GNULIB_SINF@
+GL_GNULIB_SINHF = @GL_GNULIB_SINHF@
+GL_GNULIB_SINL = @GL_GNULIB_SINL@
+GL_GNULIB_SLEEP = @GL_GNULIB_SLEEP@
+GL_GNULIB_SNPRINTF = @GL_GNULIB_SNPRINTF@
+GL_GNULIB_SNZPRINTF = @GL_GNULIB_SNZPRINTF@
+GL_GNULIB_SOCKET = @GL_GNULIB_SOCKET@
+GL_GNULIB_SPRINTF_POSIX = @GL_GNULIB_SPRINTF_POSIX@
+GL_GNULIB_SQRTF = @GL_GNULIB_SQRTF@
+GL_GNULIB_SQRTL = @GL_GNULIB_SQRTL@
+GL_GNULIB_STACK_TRACE = @GL_GNULIB_STACK_TRACE@
+GL_GNULIB_STAT = @GL_GNULIB_STAT@
+GL_GNULIB_STDC_BIT_CEIL = @GL_GNULIB_STDC_BIT_CEIL@
+GL_GNULIB_STDC_BIT_FLOOR = @GL_GNULIB_STDC_BIT_FLOOR@
+GL_GNULIB_STDC_BIT_WIDTH = @GL_GNULIB_STDC_BIT_WIDTH@
+GL_GNULIB_STDC_COUNT_ONES = @GL_GNULIB_STDC_COUNT_ONES@
+GL_GNULIB_STDC_COUNT_ZEROS = @GL_GNULIB_STDC_COUNT_ZEROS@
+GL_GNULIB_STDC_FIRST_LEADING_ONE = @GL_GNULIB_STDC_FIRST_LEADING_ONE@
+GL_GNULIB_STDC_FIRST_LEADING_ZERO = @GL_GNULIB_STDC_FIRST_LEADING_ZERO@
+GL_GNULIB_STDC_FIRST_TRAILING_ONE = @GL_GNULIB_STDC_FIRST_TRAILING_ONE@
+GL_GNULIB_STDC_FIRST_TRAILING_ZERO = @GL_GNULIB_STDC_FIRST_TRAILING_ZERO@
+GL_GNULIB_STDC_HAS_SINGLE_BIT = @GL_GNULIB_STDC_HAS_SINGLE_BIT@
+GL_GNULIB_STDC_LEADING_ONES = @GL_GNULIB_STDC_LEADING_ONES@
+GL_GNULIB_STDC_LEADING_ZEROS = @GL_GNULIB_STDC_LEADING_ZEROS@
+GL_GNULIB_STDC_LOAD8 = @GL_GNULIB_STDC_LOAD8@
+GL_GNULIB_STDC_LOAD8_ALIGNED = @GL_GNULIB_STDC_LOAD8_ALIGNED@
+GL_GNULIB_STDC_MEMREVERSE8 = @GL_GNULIB_STDC_MEMREVERSE8@
+GL_GNULIB_STDC_MEMREVERSE8U = @GL_GNULIB_STDC_MEMREVERSE8U@
+GL_GNULIB_STDC_ROTATE_LEFT = @GL_GNULIB_STDC_ROTATE_LEFT@
+GL_GNULIB_STDC_ROTATE_RIGHT = @GL_GNULIB_STDC_ROTATE_RIGHT@
+GL_GNULIB_STDC_STORE8 = @GL_GNULIB_STDC_STORE8@
+GL_GNULIB_STDC_STORE8_ALIGNED = @GL_GNULIB_STDC_STORE8_ALIGNED@
+GL_GNULIB_STDC_TRAILING_ONES = @GL_GNULIB_STDC_TRAILING_ONES@
+GL_GNULIB_STDC_TRAILING_ZEROS = @GL_GNULIB_STDC_TRAILING_ZEROS@
+GL_GNULIB_STDIO_H_NONBLOCKING = @GL_GNULIB_STDIO_H_NONBLOCKING@
+GL_GNULIB_STDIO_H_SIGPIPE = @GL_GNULIB_STDIO_H_SIGPIPE@
+GL_GNULIB_STPCPY = @GL_GNULIB_STPCPY@
+GL_GNULIB_STPNCPY = @GL_GNULIB_STPNCPY@
+GL_GNULIB_STRCASESTR = @GL_GNULIB_STRCASESTR@
+GL_GNULIB_STRCHRNUL = @GL_GNULIB_STRCHRNUL@
+GL_GNULIB_STRDUP = @GL_GNULIB_STRDUP@
+GL_GNULIB_STREQ = @GL_GNULIB_STREQ@
+GL_GNULIB_STRERROR = @GL_GNULIB_STRERROR@
+GL_GNULIB_STRERRORNAME_NP = @GL_GNULIB_STRERRORNAME_NP@
+GL_GNULIB_STRERROR_L = @GL_GNULIB_STRERROR_L@
+GL_GNULIB_STRERROR_R = @GL_GNULIB_STRERROR_R@
+GL_GNULIB_STRFTIME = @GL_GNULIB_STRFTIME@
+GL_GNULIB_STRNCAT = @GL_GNULIB_STRNCAT@
+GL_GNULIB_STRNCPY = @GL_GNULIB_STRNCPY@
+GL_GNULIB_STRNDUP = @GL_GNULIB_STRNDUP@
+GL_GNULIB_STRNLEN = @GL_GNULIB_STRNLEN@
+GL_GNULIB_STRNUL = @GL_GNULIB_STRNUL@
+GL_GNULIB_STRPBRK = @GL_GNULIB_STRPBRK@
+GL_GNULIB_STRPTIME = @GL_GNULIB_STRPTIME@
+GL_GNULIB_STRSEP = @GL_GNULIB_STRSEP@
+GL_GNULIB_STRSIGNAL = @GL_GNULIB_STRSIGNAL@
+GL_GNULIB_STRSTR = @GL_GNULIB_STRSTR@
+GL_GNULIB_STRTOD = @GL_GNULIB_STRTOD@
+GL_GNULIB_STRTOF = @GL_GNULIB_STRTOF@
+GL_GNULIB_STRTOIMAX = @GL_GNULIB_STRTOIMAX@
+GL_GNULIB_STRTOK_R = @GL_GNULIB_STRTOK_R@
+GL_GNULIB_STRTOL = @GL_GNULIB_STRTOL@
+GL_GNULIB_STRTOLD = @GL_GNULIB_STRTOLD@
+GL_GNULIB_STRTOLL = @GL_GNULIB_STRTOLL@
+GL_GNULIB_STRTOUL = @GL_GNULIB_STRTOUL@
+GL_GNULIB_STRTOULL = @GL_GNULIB_STRTOULL@
+GL_GNULIB_STRTOUMAX = @GL_GNULIB_STRTOUMAX@
+GL_GNULIB_STRVERSCMP = @GL_GNULIB_STRVERSCMP@
+GL_GNULIB_STR_ENDSWITH = @GL_GNULIB_STR_ENDSWITH@
+GL_GNULIB_STR_STARTSWITH = @GL_GNULIB_STR_STARTSWITH@
+GL_GNULIB_SYMLINK = @GL_GNULIB_SYMLINK@
+GL_GNULIB_SYMLINKAT = @GL_GNULIB_SYMLINKAT@
+GL_GNULIB_SYSTEM_POSIX = @GL_GNULIB_SYSTEM_POSIX@
+GL_GNULIB_SZPRINTF = @GL_GNULIB_SZPRINTF@
+GL_GNULIB_TANF = @GL_GNULIB_TANF@
+GL_GNULIB_TANHF = @GL_GNULIB_TANHF@
+GL_GNULIB_TANL = @GL_GNULIB_TANL@
+GL_GNULIB_TIME = @GL_GNULIB_TIME@
+GL_GNULIB_TIMEGM = @GL_GNULIB_TIMEGM@
+GL_GNULIB_TIMESPEC_GET = @GL_GNULIB_TIMESPEC_GET@
+GL_GNULIB_TIMESPEC_GETRES = @GL_GNULIB_TIMESPEC_GETRES@
+GL_GNULIB_TIME_R = @GL_GNULIB_TIME_R@
+GL_GNULIB_TIME_RZ = @GL_GNULIB_TIME_RZ@
+GL_GNULIB_TMPFILE = @GL_GNULIB_TMPFILE@
+GL_GNULIB_TOLOWER_L = @GL_GNULIB_TOLOWER_L@
+GL_GNULIB_TOTALORDER = @GL_GNULIB_TOTALORDER@
+GL_GNULIB_TOTALORDERF = @GL_GNULIB_TOTALORDERF@
+GL_GNULIB_TOTALORDERL = @GL_GNULIB_TOTALORDERL@
+GL_GNULIB_TOTALORDERMAG = @GL_GNULIB_TOTALORDERMAG@
+GL_GNULIB_TOTALORDERMAGF = @GL_GNULIB_TOTALORDERMAGF@
+GL_GNULIB_TOTALORDERMAGL = @GL_GNULIB_TOTALORDERMAGL@
+GL_GNULIB_TOUPPER_L = @GL_GNULIB_TOUPPER_L@
+GL_GNULIB_TOWCTRANS = @GL_GNULIB_TOWCTRANS@
+GL_GNULIB_TRUNC = @GL_GNULIB_TRUNC@
+GL_GNULIB_TRUNCATE = @GL_GNULIB_TRUNCATE@
+GL_GNULIB_TRUNCF = @GL_GNULIB_TRUNCF@
+GL_GNULIB_TRUNCL = @GL_GNULIB_TRUNCL@
+GL_GNULIB_TTYNAME_R = @GL_GNULIB_TTYNAME_R@
+GL_GNULIB_TZNAME = @GL_GNULIB_TZNAME@
+GL_GNULIB_TZSET = @GL_GNULIB_TZSET@
+GL_GNULIB_UNICASE_EMPTY_PREFIX_CONTEXT_DLL_VARIABLE = @GL_GNULIB_UNICASE_EMPTY_PREFIX_CONTEXT_DLL_VARIABLE@
+GL_GNULIB_UNICASE_EMPTY_SUFFIX_CONTEXT_DLL_VARIABLE = @GL_GNULIB_UNICASE_EMPTY_SUFFIX_CONTEXT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_CC_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_CC_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_CF_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_CF_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_CN_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_CN_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_CO_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_CO_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_CS_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_CS_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_C_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_C_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_LC_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_LC_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_LL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_LL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_LM_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_LM_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_LO_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_LO_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_LT_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_LT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_LU_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_LU_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_L_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_L_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_MC_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_MC_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_ME_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_ME_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_MN_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_MN_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_M_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_M_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_ND_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_ND_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_NL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_NL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_NO_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_NO_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_N_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_N_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_PC_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_PC_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_PD_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_PD_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_PE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_PE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_PF_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_PF_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_PI_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_PI_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_PO_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_PO_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_PS_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_PS_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_P_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_P_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_SC_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_SC_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_SK_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_SK_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_SM_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_SM_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_SO_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_SO_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_S_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_S_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_ZL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_ZL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_ZP_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_ZP_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_ZS_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_ZS_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_CATEGORY_Z_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_CATEGORY_Z_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_ALPHABETIC_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_ALPHABETIC_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_ASCII_HEX_DIGIT_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_ASCII_HEX_DIGIT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_DIGIT_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_DIGIT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_RIGHT_TO_LEFT_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_RIGHT_TO_LEFT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_BLOCK_SEPARATOR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_BLOCK_SEPARATOR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_BOUNDARY_NEUTRAL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_BOUNDARY_NEUTRAL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_COMMON_SEPARATOR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_COMMON_SEPARATOR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_CONTROL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_CONTROL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_EMBEDDING_OR_OVERRIDE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_EMBEDDING_OR_OVERRIDE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUROPEAN_DIGIT_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUROPEAN_DIGIT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_SEPARATOR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_SEPARATOR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_TERMINATOR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_TERMINATOR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_HEBREW_RIGHT_TO_LEFT_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_HEBREW_RIGHT_TO_LEFT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_LEFT_TO_RIGHT_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_LEFT_TO_RIGHT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_NON_SPACING_MARK_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_NON_SPACING_MARK_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_OTHER_NEUTRAL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_OTHER_NEUTRAL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_PDF_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_PDF_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_SEGMENT_SEPARATOR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_SEGMENT_SEPARATOR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_BIDI_WHITESPACE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_BIDI_WHITESPACE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_CASED_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_CASED_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_CASE_IGNORABLE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_CASE_IGNORABLE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEFOLDED_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEFOLDED_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEMAPPED_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEMAPPED_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_LOWERCASED_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_LOWERCASED_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_TITLECASED_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_TITLECASED_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_UPPERCASED_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_UPPERCASED_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_COMBINING_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_COMBINING_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_COMPOSITE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_COMPOSITE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_CURRENCY_SYMBOL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_CURRENCY_SYMBOL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_DASH_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_DASH_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_DECIMAL_DIGIT_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_DECIMAL_DIGIT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_DEPRECATED_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_DEPRECATED_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_DIACRITIC_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_DIACRITIC_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_EMOJI_COMPONENT_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_EMOJI_COMPONENT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_EMOJI_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_EMOJI_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_BASE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_BASE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_EMOJI_PRESENTATION_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_EMOJI_PRESENTATION_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_EXTENDED_PICTOGRAPHIC_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_EXTENDED_PICTOGRAPHIC_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_EXTENDER_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_EXTENDER_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_FORMAT_CONTROL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_FORMAT_CONTROL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_BASE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_BASE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_EXTEND_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_EXTEND_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_LINK_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_LINK_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_HEX_DIGIT_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_HEX_DIGIT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_HYPHEN_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_HYPHEN_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_IDEOGRAPHIC_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_IDEOGRAPHIC_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_IDS_BINARY_OPERATOR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_IDS_BINARY_OPERATOR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_IDS_TRINARY_OPERATOR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_IDS_TRINARY_OPERATOR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_IDS_UNARY_OPERATOR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_IDS_UNARY_OPERATOR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_CONTINUE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_CONTINUE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_START_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_START_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_ID_CONTINUE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_ID_CONTINUE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_ID_START_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_ID_START_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_IGNORABLE_CONTROL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_IGNORABLE_CONTROL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_ISO_CONTROL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_ISO_CONTROL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_JOIN_CONTROL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_JOIN_CONTROL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_LEFT_OF_PAIR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_LEFT_OF_PAIR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_LINE_SEPARATOR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_LINE_SEPARATOR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_LOGICAL_ORDER_EXCEPTION_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_LOGICAL_ORDER_EXCEPTION_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_LOWERCASE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_LOWERCASE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_MATH_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_MATH_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_MODIFIER_COMBINING_MARK_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_MODIFIER_COMBINING_MARK_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_NON_BREAK_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_NON_BREAK_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_NOT_A_CHARACTER_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_NOT_A_CHARACTER_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_NUMERIC_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_NUMERIC_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_OTHER_ALPHABETIC_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_OTHER_ALPHABETIC_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_OTHER_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_OTHER_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_OTHER_GRAPHEME_EXTEND_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_OTHER_GRAPHEME_EXTEND_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_OTHER_ID_CONTINUE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_OTHER_ID_CONTINUE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_OTHER_ID_START_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_OTHER_ID_START_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_OTHER_LOWERCASE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_OTHER_LOWERCASE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_OTHER_MATH_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_OTHER_MATH_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_OTHER_UPPERCASE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_OTHER_UPPERCASE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_PAIRED_PUNCTUATION_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_PAIRED_PUNCTUATION_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_PARAGRAPH_SEPARATOR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_PARAGRAPH_SEPARATOR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_PATTERN_SYNTAX_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_PATTERN_SYNTAX_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_PATTERN_WHITE_SPACE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_PATTERN_WHITE_SPACE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_PREPENDED_CONCATENATION_MARK_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_PREPENDED_CONCATENATION_MARK_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_PRIVATE_USE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_PRIVATE_USE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_PUNCTUATION_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_PUNCTUATION_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_QUOTATION_MARK_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_QUOTATION_MARK_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_RADICAL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_RADICAL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_REGIONAL_INDICATOR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_REGIONAL_INDICATOR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_SENTENCE_TERMINAL_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_SENTENCE_TERMINAL_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_SOFT_DOTTED_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_SOFT_DOTTED_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_SPACE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_SPACE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_TERMINAL_PUNCTUATION_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_TERMINAL_PUNCTUATION_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_TITLECASE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_TITLECASE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_UNASSIGNED_CODE_VALUE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_UNASSIGNED_CODE_VALUE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_UNIFIED_IDEOGRAPH_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_UNIFIED_IDEOGRAPH_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_UPPERCASE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_UPPERCASE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_VARIATION_SELECTOR_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_VARIATION_SELECTOR_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_WHITE_SPACE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_WHITE_SPACE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_XID_CONTINUE_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_XID_CONTINUE_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_XID_START_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_XID_START_DLL_VARIABLE@
+GL_GNULIB_UNICTYPE_PROPERTY_ZERO_WIDTH_DLL_VARIABLE = @GL_GNULIB_UNICTYPE_PROPERTY_ZERO_WIDTH_DLL_VARIABLE@
+GL_GNULIB_UNINORM_NFC_DLL_VARIABLE = @GL_GNULIB_UNINORM_NFC_DLL_VARIABLE@
+GL_GNULIB_UNINORM_NFD_DLL_VARIABLE = @GL_GNULIB_UNINORM_NFD_DLL_VARIABLE@
+GL_GNULIB_UNINORM_NFKC_DLL_VARIABLE = @GL_GNULIB_UNINORM_NFKC_DLL_VARIABLE@
+GL_GNULIB_UNINORM_NFKD_DLL_VARIABLE = @GL_GNULIB_UNINORM_NFKD_DLL_VARIABLE@
+GL_GNULIB_UNISTD_H_GETOPT = @GL_GNULIB_UNISTD_H_GETOPT@
+GL_GNULIB_UNISTD_H_NONBLOCKING = @GL_GNULIB_UNISTD_H_NONBLOCKING@
+GL_GNULIB_UNISTD_H_SIGPIPE = @GL_GNULIB_UNISTD_H_SIGPIPE@
+GL_GNULIB_UNLINK = @GL_GNULIB_UNLINK@
+GL_GNULIB_UNLINKAT = @GL_GNULIB_UNLINKAT@
+GL_GNULIB_UNLOCKPT = @GL_GNULIB_UNLOCKPT@
+GL_GNULIB_UNSETENV = @GL_GNULIB_UNSETENV@
+GL_GNULIB_USLEEP = @GL_GNULIB_USLEEP@
+GL_GNULIB_UTIME = @GL_GNULIB_UTIME@
+GL_GNULIB_UTIMENSAT = @GL_GNULIB_UTIMENSAT@
+GL_GNULIB_VAPRINTF = @GL_GNULIB_VAPRINTF@
+GL_GNULIB_VASPRINTF = @GL_GNULIB_VASPRINTF@
+GL_GNULIB_VASZPRINTF = @GL_GNULIB_VASZPRINTF@
+GL_GNULIB_VDPRINTF = @GL_GNULIB_VDPRINTF@
+GL_GNULIB_VDZPRINTF = @GL_GNULIB_VDZPRINTF@
+GL_GNULIB_VFPRINTF = @GL_GNULIB_VFPRINTF@
+GL_GNULIB_VFPRINTF_POSIX = @GL_GNULIB_VFPRINTF_POSIX@
+GL_GNULIB_VFSCANF = @GL_GNULIB_VFSCANF@
+GL_GNULIB_VFZPRINTF = @GL_GNULIB_VFZPRINTF@
+GL_GNULIB_VPRINTF = @GL_GNULIB_VPRINTF@
+GL_GNULIB_VPRINTF_POSIX = @GL_GNULIB_VPRINTF_POSIX@
+GL_GNULIB_VSCANF = @GL_GNULIB_VSCANF@
+GL_GNULIB_VSNPRINTF = @GL_GNULIB_VSNPRINTF@
+GL_GNULIB_VSNZPRINTF = @GL_GNULIB_VSNZPRINTF@
+GL_GNULIB_VSPRINTF_POSIX = @GL_GNULIB_VSPRINTF_POSIX@
+GL_GNULIB_VSZPRINTF = @GL_GNULIB_VSZPRINTF@
+GL_GNULIB_VZPRINTF = @GL_GNULIB_VZPRINTF@
+GL_GNULIB_WAITPID = @GL_GNULIB_WAITPID@
+GL_GNULIB_WCPCPY = @GL_GNULIB_WCPCPY@
+GL_GNULIB_WCPNCPY = @GL_GNULIB_WCPNCPY@
+GL_GNULIB_WCRTOMB = @GL_GNULIB_WCRTOMB@
+GL_GNULIB_WCSCASECMP = @GL_GNULIB_WCSCASECMP@
+GL_GNULIB_WCSCAT = @GL_GNULIB_WCSCAT@
+GL_GNULIB_WCSCHR = @GL_GNULIB_WCSCHR@
+GL_GNULIB_WCSCMP = @GL_GNULIB_WCSCMP@
+GL_GNULIB_WCSCOLL = @GL_GNULIB_WCSCOLL@
+GL_GNULIB_WCSCPY = @GL_GNULIB_WCSCPY@
+GL_GNULIB_WCSCSPN = @GL_GNULIB_WCSCSPN@
+GL_GNULIB_WCSDUP = @GL_GNULIB_WCSDUP@
+GL_GNULIB_WCSFTIME = @GL_GNULIB_WCSFTIME@
+GL_GNULIB_WCSLEN = @GL_GNULIB_WCSLEN@
+GL_GNULIB_WCSNCASECMP = @GL_GNULIB_WCSNCASECMP@
+GL_GNULIB_WCSNCAT = @GL_GNULIB_WCSNCAT@
+GL_GNULIB_WCSNCMP = @GL_GNULIB_WCSNCMP@
+GL_GNULIB_WCSNCPY = @GL_GNULIB_WCSNCPY@
+GL_GNULIB_WCSNLEN = @GL_GNULIB_WCSNLEN@
+GL_GNULIB_WCSNRTOMBS = @GL_GNULIB_WCSNRTOMBS@
+GL_GNULIB_WCSPBRK = @GL_GNULIB_WCSPBRK@
+GL_GNULIB_WCSRCHR = @GL_GNULIB_WCSRCHR@
+GL_GNULIB_WCSRTOMBS = @GL_GNULIB_WCSRTOMBS@
+GL_GNULIB_WCSSPN = @GL_GNULIB_WCSSPN@
+GL_GNULIB_WCSSTR = @GL_GNULIB_WCSSTR@
+GL_GNULIB_WCSTOK = @GL_GNULIB_WCSTOK@
+GL_GNULIB_WCSWIDTH = @GL_GNULIB_WCSWIDTH@
+GL_GNULIB_WCSXFRM = @GL_GNULIB_WCSXFRM@
+GL_GNULIB_WCTOB = @GL_GNULIB_WCTOB@
+GL_GNULIB_WCTOMB = @GL_GNULIB_WCTOMB@
+GL_GNULIB_WCTRANS = @GL_GNULIB_WCTRANS@
+GL_GNULIB_WCTYPE = @GL_GNULIB_WCTYPE@
+GL_GNULIB_WCWIDTH = @GL_GNULIB_WCWIDTH@
+GL_GNULIB_WGETCWD = @GL_GNULIB_WGETCWD@
+GL_GNULIB_WMEMCHR = @GL_GNULIB_WMEMCHR@
+GL_GNULIB_WMEMCMP = @GL_GNULIB_WMEMCMP@
+GL_GNULIB_WMEMCPY = @GL_GNULIB_WMEMCPY@
+GL_GNULIB_WMEMMOVE = @GL_GNULIB_WMEMMOVE@
+GL_GNULIB_WMEMPCPY = @GL_GNULIB_WMEMPCPY@
+GL_GNULIB_WMEMSET = @GL_GNULIB_WMEMSET@
+GL_GNULIB_WRITE = @GL_GNULIB_WRITE@
+GL_GNULIB_ZPRINTF = @GL_GNULIB_ZPRINTF@
+GL_GNULIB__EXIT = @GL_GNULIB__EXIT@
 GL_GRGL_GNULIB_ABORT_DEBUG = 0
 GL_GRGL_GNULIB_ACCESS = 0
 GL_GRGL_GNULIB_ALIGNED_ALLOC = 0
@@ -2444,12 +3414,18 @@ GNULIBHEADERS_OVERRIDE_WINT_T = 0
 GNULIB_LOCALEDIR = ${datarootdir}/locale
 GNULIB_LOCALEDIR_c = "/Users/sedwards/gtk/share/locale"
 GNULIB_LOCALEDIR_c_make = \"$(GNULIB_LOCALEDIR)\"
+GO = @GO@
+GOCOMPFLAGS = @GOCOMPFLAGS@
+GO_CHOICE = @GO_CHOICE@
 GREP = /usr/bin/grep
 HARD_LOCALE_LIB = 
+HAVE_ACCEPT4 = @HAVE_ACCEPT4@
 HAVE_ACOSF = 1
 HAVE_ACOSL = 1
 HAVE_ALIGNED_ALLOC = 1
 HAVE_ALLOCA_H = 1
+HAVE_ALPHASORT = @HAVE_ALPHASORT@
+HAVE_ARPA_INET_H = @HAVE_ARPA_INET_H@
 HAVE_ASINF = 1
 HAVE_ASINL = 1
 HAVE_ATAN2F = 1
@@ -2468,6 +3444,7 @@ HAVE_CBRTL = 1
 HAVE_CHOWN = 1
 HAVE_CLIX = 
 HAVE_CLIX_IN_PATH = 
+HAVE_CLOSEDIR = @HAVE_CLOSEDIR@
 HAVE_COPYSIGN = 1
 HAVE_COPYSIGNF = 1
 HAVE_COPYSIGNL = 1
@@ -2487,6 +3464,7 @@ HAVE_DECL_ATANL = 1
 HAVE_DECL_CEILF = 1
 HAVE_DECL_CEILL = 1
 HAVE_DECL_COSL = 1
+HAVE_DECL_DIRFD = @HAVE_DECL_DIRFD@
 HAVE_DECL_ECVT = 1
 HAVE_DECL_ENVIRON = 1
 HAVE_DECL_EXECVPE = 0
@@ -2495,24 +3473,33 @@ HAVE_DECL_FCHDIR = 1
 HAVE_DECL_FCLOSEALL = 0
 HAVE_DECL_FCVT = 1
 HAVE_DECL_FDATASYNC = 1
+HAVE_DECL_FDOPENDIR = @HAVE_DECL_FDOPENDIR@
 HAVE_DECL_FLOORF = 1
 HAVE_DECL_FLOORL = 1
 HAVE_DECL_FPURGE = 1
+HAVE_DECL_FREEADDRINFO = @HAVE_DECL_FREEADDRINFO@
 HAVE_DECL_FREXPL = 1
 HAVE_DECL_FSEEKO = 1
 HAVE_DECL_FTELLO = 1
+HAVE_DECL_GAI_STRERROR = @HAVE_DECL_GAI_STRERROR@
 HAVE_DECL_GCVT = 1
+HAVE_DECL_GETADDRINFO = @HAVE_DECL_GETADDRINFO@
 HAVE_DECL_GETDELIM = 1
 HAVE_DECL_GETDOMAINNAME = 1
 HAVE_DECL_GETLINE = 1
 HAVE_DECL_GETLOADAVG = 1
 HAVE_DECL_GETLOGIN = 1
 HAVE_DECL_GETLOGIN_R = 1
+HAVE_DECL_GETNAMEINFO = @HAVE_DECL_GETNAMEINFO@
 HAVE_DECL_GETPAGESIZE = 1
 HAVE_DECL_GETUSERSHELL = 1
 HAVE_DECL_GETW = 1
+HAVE_DECL_HTONL = @HAVE_DECL_HTONL@
+HAVE_DECL_HTONS = @HAVE_DECL_HTONS@
 HAVE_DECL_IMAXABS = 1
 HAVE_DECL_IMAXDIV = 1
+HAVE_DECL_INET_NTOP = @HAVE_DECL_INET_NTOP@
+HAVE_DECL_INET_PTON = @HAVE_DECL_INET_PTON@
 HAVE_DECL_INITSTATE = 1
 HAVE_DECL_LDEXPL = 1
 HAVE_DECL_LOCALTIME_R = 1
@@ -2522,6 +3509,8 @@ HAVE_DECL_LOGL = 1
 HAVE_DECL_MEMEQ = 0
 HAVE_DECL_MEMMEM = 1
 HAVE_DECL_MEMRCHR = 0
+HAVE_DECL_NTOHL = @HAVE_DECL_NTOHL@
+HAVE_DECL_NTOHS = @HAVE_DECL_NTOHS@
 HAVE_DECL_OBSTACK_PRINTF = 1
 HAVE_DECL_PROGRAM_INVOCATION_NAME = 0
 HAVE_DECL_PUTW = 1
@@ -2550,6 +3539,7 @@ HAVE_DECL_UNSETENV = 1
 HAVE_DECL_VSNPRINTF = 1
 HAVE_DECL_WCSDUP = 1
 HAVE_DECL_WCWIDTH = 1
+HAVE_DIRENT_H = @HAVE_DIRENT_H@
 HAVE_DOTNET = 
 HAVE_DOTNET_CSC = 
 HAVE_DOTNET_IN_PATH = 
@@ -2557,6 +3547,7 @@ HAVE_DOTNET_SDK =
 HAVE_DPRINTF = 1
 HAVE_DUP3 = 1
 HAVE_DUPLOCALE = 1
+HAVE_ENDIAN_H = @HAVE_ENDIAN_H@
 HAVE_ERROR = 0
 HAVE_ERROR_AT_LINE = 0
 HAVE_ERROR_H = 0
@@ -2579,6 +3570,7 @@ HAVE_FCHMODAT = 1
 HAVE_FCHOWNAT = 1
 HAVE_FCNTL = 1
 HAVE_FDATASYNC = 1
+HAVE_FDOPENDIR = @HAVE_FDOPENDIR@
 HAVE_FEATURES_H = 0
 HAVE_FFSL = 1
 HAVE_FFSLL = 1
@@ -2587,6 +3579,8 @@ HAVE_FMAF = 1
 HAVE_FMAL = 1
 HAVE_FMODF = 1
 HAVE_FMODL = 1
+HAVE_FNMATCH = @HAVE_FNMATCH@
+HAVE_FNMATCH_H = @HAVE_FNMATCH_H@
 HAVE_FREELOCALE = 1
 HAVE_FREXPF = 1
 HAVE_FSEEKO = 1
@@ -2601,13 +3595,17 @@ HAVE_GETGROUPS = 1
 HAVE_GETHOSTNAME = 1
 HAVE_GETLOCALENAME_L = 1
 HAVE_GETLOGIN = 1
+HAVE_GETOPT_H = @HAVE_GETOPT_H@
 HAVE_GETPAGESIZE = 1
 HAVE_GETPASS = 1
 HAVE_GETPAYLOAD = 1
 HAVE_GETPAYLOADF = 1
 HAVE_GETPAYLOADL = 1
 HAVE_GETPROGNAME = 1
+HAVE_GETRANDOM = @HAVE_GETRANDOM@
+HAVE_GETRUSAGE = @HAVE_GETRUSAGE@
 HAVE_GETSUBOPT = 1
+HAVE_GETTIMEOFDAY = @HAVE_GETTIMEOFDAY@
 HAVE_GETUMASK = 1
 HAVE_GLOBAL_SYMBOL_PIPE = 1
 HAVE_GRANTPT = 1
@@ -2622,11 +3620,24 @@ HAVE_IMAXDIV = 1
 HAVE_IMAXDIV_T = 1
 HAVE_INITSTATE = 1
 HAVE_INTTYPES_H = 1
+HAVE_ISALNUM_L = @HAVE_ISALNUM_L@
+HAVE_ISALPHA_L = @HAVE_ISALPHA_L@
+HAVE_ISBLANK = @HAVE_ISBLANK@
+HAVE_ISBLANK_L = @HAVE_ISBLANK_L@
+HAVE_ISCNTRL_L = @HAVE_ISCNTRL_L@
+HAVE_ISDIGIT_L = @HAVE_ISDIGIT_L@
+HAVE_ISGRAPH_L = @HAVE_ISGRAPH_L@
+HAVE_ISLOWER_L = @HAVE_ISLOWER_L@
 HAVE_ISNAND = 1
 HAVE_ISNANF = 1
 HAVE_ISNANL = 1
+HAVE_ISPRINT_L = @HAVE_ISPRINT_L@
+HAVE_ISPUNCT_L = @HAVE_ISPUNCT_L@
+HAVE_ISSPACE_L = @HAVE_ISSPACE_L@
+HAVE_ISUPPER_L = @HAVE_ISUPPER_L@
 HAVE_ISWBLANK = 1
 HAVE_ISWCNTRL = 1
+HAVE_ISXDIGIT_L = @HAVE_ISXDIGIT_L@
 HAVE_JAVA = 
 HAVE_JAVAC = 
 HAVE_JAVAC_ENVVAR = 
@@ -2695,11 +3706,14 @@ HAVE_MONO =
 HAVE_MONO_IN_PATH = 
 HAVE_MSVC_INVALID_PARAMETER_HANDLER = 0
 HAVE_NANOSLEEP = 1
+HAVE_NETDB_H = @HAVE_NETDB_H@
+HAVE_NETINET_IN_H = @HAVE_NETINET_IN_H@
 HAVE_NEWLOCALE = 1
 HAVE_NL_LANGINFO = 1
 HAVE_OFF64_T = 0
 HAVE_OPENAT = 1
 HAVE_OPENAT2 = 0
+HAVE_OPENDIR = @HAVE_OPENDIR@
 HAVE_OS_H = 0
 HAVE_PCLOSE = 1
 HAVE_PIPE = 1
@@ -2708,8 +3722,14 @@ HAVE_POPEN = 1
 HAVE_POSIX_MEMALIGN = 1
 HAVE_POSIX_OPENPT = 1
 HAVE_POSIX_SIGNALBLOCKING = 1
+HAVE_POSIX_SPAWN = @HAVE_POSIX_SPAWN@
+HAVE_POSIX_SPAWNATTR_T = @HAVE_POSIX_SPAWNATTR_T@
+HAVE_POSIX_SPAWN_FILE_ACTIONS_ADDCHDIR = @HAVE_POSIX_SPAWN_FILE_ACTIONS_ADDCHDIR@
+HAVE_POSIX_SPAWN_FILE_ACTIONS_ADDFCHDIR = @HAVE_POSIX_SPAWN_FILE_ACTIONS_ADDFCHDIR@
+HAVE_POSIX_SPAWN_FILE_ACTIONS_T = @HAVE_POSIX_SPAWN_FILE_ACTIONS_T@
 HAVE_POWF = 1
 HAVE_PREAD = 1
+HAVE_PSELECT = @HAVE_PSELECT@
 HAVE_PTHREAD_ATTR_DESTROY = 1
 HAVE_PTHREAD_ATTR_GETDETACHSTATE = 1
 HAVE_PTHREAD_ATTR_INIT = 1
@@ -2777,6 +3797,7 @@ HAVE_RAISE = 1
 HAVE_RANDOM = 1
 HAVE_RANDOM_R = 1
 HAVE_RAWMEMCHR = 0
+HAVE_READDIR = @HAVE_READDIR@
 HAVE_READLINK = 1
 HAVE_READLINKAT = 1
 HAVE_REALLOCARRAY = 0
@@ -2785,6 +3806,7 @@ HAVE_REMAINDER = 1
 HAVE_REMAINDERF = 1
 HAVE_REMAINDERL = 1
 HAVE_RENAMEAT = 1
+HAVE_REWINDDIR = @HAVE_REWINDDIR@
 HAVE_RINT = 1
 HAVE_RINTF = 1
 HAVE_RINTL = 1
@@ -2793,6 +3815,8 @@ HAVE_ROUNDF = 1
 HAVE_ROUNDL = 1
 HAVE_RPMATCH = 1
 HAVE_SAME_LONG_DOUBLE_AS_DOUBLE = 1
+HAVE_SA_FAMILY_T = @HAVE_SA_FAMILY_T@
+HAVE_SCANDIR = @HAVE_SCANDIR@
 HAVE_SCHED_H = 1
 HAVE_SCHED_YIELD = 1
 HAVE_SECURE_GETENV = 1
@@ -2819,8 +3843,10 @@ HAVE_SINF = 1
 HAVE_SINHF = 1
 HAVE_SINL = 1
 HAVE_SLEEP = 1
+HAVE_SPAWN_H = @HAVE_SPAWN_H@
 HAVE_SQRTF = 1
 HAVE_SQRTL = 1
+HAVE_STDBIT_H = @HAVE_STDBIT_H@
 HAVE_STDCKDINT_H = 1
 HAVE_STDCOUNTOF_H = 1
 HAVE_STDINT_H = 1
@@ -2841,19 +3867,31 @@ HAVE_STRTOLD = 1
 HAVE_STRTOLL = 1
 HAVE_STRTOUL = 1
 HAVE_STRTOULL = 1
+HAVE_STRUCT_ADDRINFO = @HAVE_STRUCT_ADDRINFO@
 HAVE_STRUCT_RANDOM_DATA = 1
 HAVE_STRUCT_SCHED_PARAM = 1
 HAVE_STRUCT_SIGACTION_SA_SIGACTION = 1
+HAVE_STRUCT_SOCKADDR_STORAGE = @HAVE_STRUCT_SOCKADDR_STORAGE@
+HAVE_STRUCT_SOCKADDR_STORAGE_SS_FAMILY = @HAVE_STRUCT_SOCKADDR_STORAGE_SS_FAMILY@
+HAVE_STRUCT_TIMEVAL = @HAVE_STRUCT_TIMEVAL@
 HAVE_STRVERSCMP = 1
 HAVE_SYMLINK = 1
 HAVE_SYMLINKAT = 1
 HAVE_SYS_BITYPES_H = 0
 HAVE_SYS_CDEFS_H = 0
+HAVE_SYS_ENDIAN_H = @HAVE_SYS_ENDIAN_H@
 HAVE_SYS_INTTYPES_H = 0
+HAVE_SYS_IOCTL_H = @HAVE_SYS_IOCTL_H@
 HAVE_SYS_LOADAVG_H = 0
 HAVE_SYS_PARAM_H = 0
 HAVE_SYS_PROCESS_H = 0
+HAVE_SYS_RANDOM_H = @HAVE_SYS_RANDOM_H@
+HAVE_SYS_RESOURCE_H = @HAVE_SYS_RESOURCE_H@
+HAVE_SYS_SELECT_H = @HAVE_SYS_SELECT_H@
+HAVE_SYS_SOCKET_H = @HAVE_SYS_SOCKET_H@
+HAVE_SYS_TIME_H = @HAVE_SYS_TIME_H@
 HAVE_SYS_TYPES_H = 1
+HAVE_SYS_UIO_H = @HAVE_SYS_UIO_H@
 HAVE_TANF = 1
 HAVE_TANHF = 1
 HAVE_TANL = 1
@@ -2861,12 +3899,14 @@ HAVE_TIMEGM = 1
 HAVE_TIMESPEC_GET = 1
 HAVE_TIMESPEC_GETRES = 1
 HAVE_TIMEZONE_T = 0
+HAVE_TOLOWER_L = @HAVE_TOLOWER_L@
 HAVE_TOTALORDER = 1
 HAVE_TOTALORDERF = 1
 HAVE_TOTALORDERL = 1
 HAVE_TOTALORDERMAG = 1
 HAVE_TOTALORDERMAGF = 1
 HAVE_TOTALORDERMAGL = 1
+HAVE_TOUPPER_L = @HAVE_TOUPPER_L@
 HAVE_TYPE_VOLATILE_SIG_ATOMIC_T = 1
 HAVE_TZALLOC = 0
 HAVE_UCHAR_H = 0
@@ -2875,7 +3915,9 @@ HAVE_UNISTRING_WOE32DLL_H = 0
 HAVE_UNLINKAT = 1
 HAVE_UNLOCKPT = 1
 HAVE_USLEEP = 1
+HAVE_UTIME = @HAVE_UTIME@
 HAVE_UTIMENSAT = 1
+HAVE_UTIME_H = @HAVE_UTIME_H@
 HAVE_VASPRINTF = 1
 HAVE_VDPRINTF = 1
 HAVE_VISIBILITY = 1
@@ -2924,18 +3966,24 @@ HAVE_WORKING_C32RTOMB = 0
 HAVE_WORKING_CXX_STDCKDINT_H = 1
 HAVE_WORKING_C_STDCKDINT_H = 1
 HAVE_WORKING_MBRTOC32 = 0
+HAVE_WS2TCPIP_H = @HAVE_WS2TCPIP_H@
 HAVE_XLOCALE_H = 1
 HAVE__EXIT = 1
+HOSTENT_LIB = @HOSTENT_LIB@
+HTONL_LIB = @HTONL_LIB@
 ICONV_CONST = 
 ICONV_H = iconv.h
 INCCURL = 
 INCJSON_C = 
 INCLUDE_NEXT = include_next
 INCLUDE_NEXT_AS_FIRST_DIRECTIVE = include_next
+INET_NTOP_LIB = @INET_NTOP_LIB@
+INET_PTON_LIB = @INET_PTON_LIB@
 INSTALL = /usr/bin/install -c
 INSTALLED_LIBGETTEXTPO_DEPS = 
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
+INSTALL_PROGRAM_ENV = @INSTALL_PROGRAM_ENV@
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 INT32_MAX_LT_INTMAX_MAX = 1
@@ -2961,9 +4009,11 @@ LIBOBJS =
 LIBPMULTITHREAD = -lpthread
 LIBPTHREAD = 
 LIBS = 
+LIBSOCKET = @LIBSOCKET@
 LIBSTDTHREAD = 
 LIBTESTSGNU_LIBDEPS = 
 LIBTESTSGNU_LTLIBDEPS = 
+LIBTESTS_LIBDEPS = @LIBTESTS_LIBDEPS@
 LIBTEXTSTYLE = 
 LIBTEXTSTYLE_PREFIX = 
 LIBTHREAD = 
@@ -2974,17 +4024,28 @@ LIBUNISTRING_UNICASE_H = unicase.h
 LIBUNISTRING_UNICONV_H = uniconv.h
 LIBUNISTRING_UNICTYPE_H = unictype.h
 LIBUNISTRING_UNILBRK_H = unilbrk.h
+LIBUNISTRING_UNINAME_H = @LIBUNISTRING_UNINAME_H@
 LIBUNISTRING_UNINORM_H = uninorm.h
 LIBUNISTRING_UNISTR_H = unistr.h
 LIBUNISTRING_UNITYPES_H = unitypes.h
 LIBUNISTRING_UNIWIDTH_H = uniwidth.h
+LIB_ACL = @LIB_ACL@
+LIB_CLOCK_GETTIME = @LIB_CLOCK_GETTIME@
+LIB_GETRANDOM = @LIB_GETRANDOM@
 LIB_HARD_LOCALE = 
 LIB_MBRTOWC = 
+LIB_NANOSLEEP = @LIB_NANOSLEEP@
 LIB_NL_LANGINFO = 
+LIB_POSIX_SPAWN = @LIB_POSIX_SPAWN@
 LIB_PTHREAD = -lpthread
 LIB_PTHREAD_SIGMASK = 
 LIB_SCHED_YIELD = 
+LIB_SELECT = @LIB_SELECT@
+LIB_SELINUX = @LIB_SELINUX@
+LIB_SEMAPHORE = @LIB_SEMAPHORE@
+LIB_SETLOCALE = @LIB_SETLOCALE@
 LIB_SETLOCALE_NULL = 
+LIB_XATTR = @LIB_XATTR@
 LIMITS_H = limits.h
 LIPO = lipo
 LN_S = ln -s
@@ -2995,6 +4056,7 @@ LOCALE_EN_UTF8 = en_US.UTF-8
 LOCALE_FR = fr_FR.ISO8859-1
 LOCALE_FR_UTF8 = fr_FR.UTF-8
 LOCALE_JA = ja_JP.eucJP
+LOCALE_TR_UTF8 = @LOCALE_TR_UTF8@
 LOCALE_ZH_CN = zh_CN.GB18030
 LTLIBICONV = 
 LTLIBINTL = 
@@ -3017,22 +4079,36 @@ MSGFMT = :
 MSGMERGE = msgmerge
 MSGMERGE_FOR_MSGFMT_OPTION = --for-msgfmt
 MSGMERGE_LIBM = 
+NANOSLEEP_LIB = @NANOSLEEP_LIB@
+NETINET_IN_H = @NETINET_IN_H@
+NEXT_ARPA_INET_H = @NEXT_ARPA_INET_H@
 NEXT_ASSERT_H = <assert.h>
+NEXT_AS_FIRST_DIRECTIVE_ARPA_INET_H = @NEXT_AS_FIRST_DIRECTIVE_ARPA_INET_H@
 NEXT_AS_FIRST_DIRECTIVE_ASSERT_H = <assert.h>
+NEXT_AS_FIRST_DIRECTIVE_CTYPE_H = @NEXT_AS_FIRST_DIRECTIVE_CTYPE_H@
+NEXT_AS_FIRST_DIRECTIVE_DIRENT_H = @NEXT_AS_FIRST_DIRECTIVE_DIRENT_H@
+NEXT_AS_FIRST_DIRECTIVE_ENDIAN_H = @NEXT_AS_FIRST_DIRECTIVE_ENDIAN_H@
 NEXT_AS_FIRST_DIRECTIVE_ERRNO_H = 
 NEXT_AS_FIRST_DIRECTIVE_ERROR_H = <error.h>
 NEXT_AS_FIRST_DIRECTIVE_FCNTL_H = <fcntl.h>
 NEXT_AS_FIRST_DIRECTIVE_FLOAT_H = <float.h>
+NEXT_AS_FIRST_DIRECTIVE_FNMATCH_H = @NEXT_AS_FIRST_DIRECTIVE_FNMATCH_H@
+NEXT_AS_FIRST_DIRECTIVE_GETOPT_H = @NEXT_AS_FIRST_DIRECTIVE_GETOPT_H@
 NEXT_AS_FIRST_DIRECTIVE_ICONV_H = <iconv.h>
 NEXT_AS_FIRST_DIRECTIVE_INTTYPES_H = <inttypes.h>
 NEXT_AS_FIRST_DIRECTIVE_LANGINFO_H = <langinfo.h>
 NEXT_AS_FIRST_DIRECTIVE_LIMITS_H = <limits.h>
 NEXT_AS_FIRST_DIRECTIVE_LOCALE_H = <locale.h>
 NEXT_AS_FIRST_DIRECTIVE_MATH_H = <math.h>
+NEXT_AS_FIRST_DIRECTIVE_NETDB_H = @NEXT_AS_FIRST_DIRECTIVE_NETDB_H@
+NEXT_AS_FIRST_DIRECTIVE_NETINET_IN_H = @NEXT_AS_FIRST_DIRECTIVE_NETINET_IN_H@
+NEXT_AS_FIRST_DIRECTIVE_OMP_H = @NEXT_AS_FIRST_DIRECTIVE_OMP_H@
 NEXT_AS_FIRST_DIRECTIVE_PTHREAD_H = <pthread.h>
 NEXT_AS_FIRST_DIRECTIVE_SCHED_H = <sched.h>
 NEXT_AS_FIRST_DIRECTIVE_SIGNAL_H = <signal.h>
+NEXT_AS_FIRST_DIRECTIVE_SPAWN_H = @NEXT_AS_FIRST_DIRECTIVE_SPAWN_H@
 NEXT_AS_FIRST_DIRECTIVE_STDARG_H = 
+NEXT_AS_FIRST_DIRECTIVE_STDBIT_H = @NEXT_AS_FIRST_DIRECTIVE_STDBIT_H@
 NEXT_AS_FIRST_DIRECTIVE_STDCKDINT_H = <stdckdint.h>
 NEXT_AS_FIRST_DIRECTIVE_STDCOUNTOF_H = <stdcountof.h>
 NEXT_AS_FIRST_DIRECTIVE_STDDEF_H = <stddef.h>
@@ -3040,27 +4116,46 @@ NEXT_AS_FIRST_DIRECTIVE_STDINT_H = <stdint.h>
 NEXT_AS_FIRST_DIRECTIVE_STDIO_H = <stdio.h>
 NEXT_AS_FIRST_DIRECTIVE_STDLIB_H = <stdlib.h>
 NEXT_AS_FIRST_DIRECTIVE_STRING_H = <string.h>
+NEXT_AS_FIRST_DIRECTIVE_SYS_IOCTL_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_IOCTL_H@
+NEXT_AS_FIRST_DIRECTIVE_SYS_RANDOM_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_RANDOM_H@
+NEXT_AS_FIRST_DIRECTIVE_SYS_RESOURCE_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_RESOURCE_H@
+NEXT_AS_FIRST_DIRECTIVE_SYS_SELECT_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_SELECT_H@
+NEXT_AS_FIRST_DIRECTIVE_SYS_SOCKET_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_SOCKET_H@
 NEXT_AS_FIRST_DIRECTIVE_SYS_STAT_H = <sys/stat.h>
+NEXT_AS_FIRST_DIRECTIVE_SYS_TIME_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_TIME_H@
 NEXT_AS_FIRST_DIRECTIVE_SYS_TYPES_H = <sys/types.h>
+NEXT_AS_FIRST_DIRECTIVE_SYS_UIO_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_UIO_H@
+NEXT_AS_FIRST_DIRECTIVE_SYS_WAIT_H = @NEXT_AS_FIRST_DIRECTIVE_SYS_WAIT_H@
 NEXT_AS_FIRST_DIRECTIVE_TIME_H = <time.h>
 NEXT_AS_FIRST_DIRECTIVE_UCHAR_H = <uchar.h>
 NEXT_AS_FIRST_DIRECTIVE_UNISTD_H = <unistd.h>
+NEXT_AS_FIRST_DIRECTIVE_UTIME_H = @NEXT_AS_FIRST_DIRECTIVE_UTIME_H@
 NEXT_AS_FIRST_DIRECTIVE_WCHAR_H = <wchar.h>
 NEXT_AS_FIRST_DIRECTIVE_WCTYPE_H = <wctype.h>
+NEXT_CTYPE_H = @NEXT_CTYPE_H@
+NEXT_DIRENT_H = @NEXT_DIRENT_H@
+NEXT_ENDIAN_H = @NEXT_ENDIAN_H@
 NEXT_ERRNO_H = 
 NEXT_ERROR_H = <error.h>
 NEXT_FCNTL_H = <fcntl.h>
 NEXT_FLOAT_H = <float.h>
+NEXT_FNMATCH_H = @NEXT_FNMATCH_H@
+NEXT_GETOPT_H = @NEXT_GETOPT_H@
 NEXT_ICONV_H = <iconv.h>
 NEXT_INTTYPES_H = <inttypes.h>
 NEXT_LANGINFO_H = <langinfo.h>
 NEXT_LIMITS_H = <limits.h>
 NEXT_LOCALE_H = <locale.h>
 NEXT_MATH_H = <math.h>
+NEXT_NETDB_H = @NEXT_NETDB_H@
+NEXT_NETINET_IN_H = @NEXT_NETINET_IN_H@
+NEXT_OMP_H = @NEXT_OMP_H@
 NEXT_PTHREAD_H = <pthread.h>
 NEXT_SCHED_H = <sched.h>
 NEXT_SIGNAL_H = <signal.h>
+NEXT_SPAWN_H = @NEXT_SPAWN_H@
 NEXT_STDARG_H = <stdarg.h>
+NEXT_STDBIT_H = @NEXT_STDBIT_H@
 NEXT_STDCKDINT_H = <stdckdint.h>
 NEXT_STDCOUNTOF_H = <stdcountof.h>
 NEXT_STDDEF_H = <stddef.h>
@@ -3068,11 +4163,20 @@ NEXT_STDINT_H = <stdint.h>
 NEXT_STDIO_H = <stdio.h>
 NEXT_STDLIB_H = <stdlib.h>
 NEXT_STRING_H = <string.h>
+NEXT_SYS_IOCTL_H = @NEXT_SYS_IOCTL_H@
+NEXT_SYS_RANDOM_H = @NEXT_SYS_RANDOM_H@
+NEXT_SYS_RESOURCE_H = @NEXT_SYS_RESOURCE_H@
+NEXT_SYS_SELECT_H = @NEXT_SYS_SELECT_H@
+NEXT_SYS_SOCKET_H = @NEXT_SYS_SOCKET_H@
 NEXT_SYS_STAT_H = <sys/stat.h>
+NEXT_SYS_TIME_H = @NEXT_SYS_TIME_H@
 NEXT_SYS_TYPES_H = <sys/types.h>
+NEXT_SYS_UIO_H = @NEXT_SYS_UIO_H@
+NEXT_SYS_WAIT_H = @NEXT_SYS_WAIT_H@
 NEXT_TIME_H = <time.h>
 NEXT_UCHAR_H = <uchar.h>
 NEXT_UNISTD_H = <unistd.h>
+NEXT_UTIME_H = @NEXT_UTIME_H@
 NEXT_WCHAR_H = <wchar.h>
 NEXT_WCTYPE_H = <wctype.h>
 NM = /usr/bin/nm -B
@@ -3098,6 +4202,7 @@ PACKAGE_URL =
 PACKAGE_VERSION = 1.0
 PATH_SEPARATOR = :
 PERL = /usr/bin/perl
+POSIX_SPAWN_LIB = @POSIX_SPAWN_LIB@
 POSUB = 
 PRAGMA_COLUMNS = 
 PRAGMA_SYSTEM_HEADER = #pragma GCC system_header
@@ -3106,9 +4211,18 @@ PTHREAD_H_DEFINES_STRUCT_TIMESPEC = 0
 PTHREAD_ONCE_LIB = 
 PTHREAD_SIGMASK_LIB = 
 PTRDIFF_T_SUFFIX = 
+QCOPY_ACL_LIB = @QCOPY_ACL_LIB@
 RANLIB = ranlib
 RC = 
 RELOCATABLE = no
+RELOCATABLE_BUILD_DIR = @RELOCATABLE_BUILD_DIR@
+RELOCATABLE_CONFIG_H_DIR = @RELOCATABLE_CONFIG_H_DIR@
+RELOCATABLE_LDFLAGS = @RELOCATABLE_LDFLAGS@
+
+# Support for relocatability.
+RELOCATABLE_LIBRARY_PATH = $(libdir)
+RELOCATABLE_SRC_DIR = @RELOCATABLE_SRC_DIR@
+RELOCATABLE_STRIP = @RELOCATABLE_STRIP@
 REPLACE_ABORT = 0
 REPLACE_ACCESS = 0
 REPLACE_ACOSF = 0
@@ -3129,11 +4243,13 @@ REPLACE_CEILL = 0
 REPLACE_CHMOD = 0
 REPLACE_CHOWN = 0
 REPLACE_CLOSE = 0
+REPLACE_CLOSEDIR = @REPLACE_CLOSEDIR@
 REPLACE_COPY_FILE_RANGE = 0
 REPLACE_COSF = 0
 REPLACE_COSHF = 0
 REPLACE_CREAT = 0
 REPLACE_CTIME = 0
+REPLACE_DIRFD = @REPLACE_DIRFD@
 REPLACE_DPRINTF = 0
 REPLACE_DUP = 0
 REPLACE_DUP2 = 0
@@ -3164,6 +4280,7 @@ REPLACE_FCLOSE = 1
 REPLACE_FCNTL = 0
 REPLACE_FDATASYNC = 0
 REPLACE_FDOPEN = 0
+REPLACE_FDOPENDIR = @REPLACE_FDOPENDIR@
 REPLACE_FFLUSH = 0
 REPLACE_FFSLL = 0
 REPLACE_FLOOR = 0
@@ -3175,6 +4292,7 @@ REPLACE_FMAL = 0
 REPLACE_FMOD = 0
 REPLACE_FMODF = 0
 REPLACE_FMODL = 0
+REPLACE_FNMATCH = @REPLACE_FNMATCH@
 REPLACE_FOPEN = 1
 REPLACE_FOPEN_FOR_FOPEN_GNU = 0
 REPLACE_FPRINTF = 0
@@ -3193,6 +4311,8 @@ REPLACE_FTELL = 0
 REPLACE_FTELLO = 0
 REPLACE_FTRUNCATE = 0
 REPLACE_FUTIMENS = 0
+REPLACE_GAI_STRERROR = @REPLACE_GAI_STRERROR@
+REPLACE_GETADDRINFO = @REPLACE_GETADDRINFO@
 REPLACE_GETCWD = 0
 REPLACE_GETDELIM = 1
 REPLACE_GETDOMAINNAME = 0
@@ -3211,7 +4331,9 @@ REPLACE_GETPAYLOAD = 0
 REPLACE_GETPAYLOADF = 0
 REPLACE_GETPAYLOADL = 0
 REPLACE_GETPROGNAME = 0
+REPLACE_GETRANDOM = @REPLACE_GETRANDOM@
 REPLACE_GETSUBOPT = 0
+REPLACE_GETTIMEOFDAY = @REPLACE_GETTIMEOFDAY@
 REPLACE_GETUSERSHELL = 0
 REPLACE_GMTIME = 0
 REPLACE_HUGE_VAL = 0
@@ -3226,6 +4348,8 @@ REPLACE_ILOGBF = 0
 REPLACE_ILOGBL = 0
 REPLACE_IMAXABS = 0
 REPLACE_IMAXDIV = 0
+REPLACE_INET_NTOP = @REPLACE_INET_NTOP@
+REPLACE_INET_PTON = @REPLACE_INET_PTON@
 REPLACE_INITSTATE = 0
 REPLACE_IOCTL = 0
 REPLACE_ISATTY = 0
@@ -3303,13 +4427,21 @@ REPLACE_OBSTACK = 0
 REPLACE_OBSTACK_PRINTF = 0
 REPLACE_OPEN = 0
 REPLACE_OPENAT = 0
+REPLACE_OPENDIR = @REPLACE_OPENDIR@
 REPLACE_PERROR = 0
 REPLACE_PIPE2 = 0
 REPLACE_POPEN = 0
 REPLACE_POSIX_MEMALIGN = 0
 REPLACE_POSIX_OPENPT = 0
+REPLACE_POSIX_SPAWN = @REPLACE_POSIX_SPAWN@
+REPLACE_POSIX_SPAWN_FILE_ACTIONS_ADDCHDIR = @REPLACE_POSIX_SPAWN_FILE_ACTIONS_ADDCHDIR@
+REPLACE_POSIX_SPAWN_FILE_ACTIONS_ADDCLOSE = @REPLACE_POSIX_SPAWN_FILE_ACTIONS_ADDCLOSE@
+REPLACE_POSIX_SPAWN_FILE_ACTIONS_ADDDUP2 = @REPLACE_POSIX_SPAWN_FILE_ACTIONS_ADDDUP2@
+REPLACE_POSIX_SPAWN_FILE_ACTIONS_ADDFCHDIR = @REPLACE_POSIX_SPAWN_FILE_ACTIONS_ADDFCHDIR@
+REPLACE_POSIX_SPAWN_FILE_ACTIONS_ADDOPEN = @REPLACE_POSIX_SPAWN_FILE_ACTIONS_ADDOPEN@
 REPLACE_PREAD = 0
 REPLACE_PRINTF = 0
+REPLACE_PSELECT = @REPLACE_PSELECT@
 REPLACE_PTHREAD_ATTR_DESTROY = 0
 REPLACE_PTHREAD_ATTR_GETDETACHSTATE = 0
 REPLACE_PTHREAD_ATTR_INIT = 0
@@ -3372,6 +4504,7 @@ REPLACE_RAND = 0
 REPLACE_RANDOM = 0
 REPLACE_RANDOM_R = 0
 REPLACE_READ = 0
+REPLACE_READDIR = @REPLACE_READDIR@
 REPLACE_READLINK = 0
 REPLACE_READLINKAT = 0
 REPLACE_REALLOCARRAY = 0
@@ -3383,12 +4516,14 @@ REPLACE_REMAINDERL = 0
 REPLACE_REMOVE = 0
 REPLACE_RENAME = 0
 REPLACE_RENAMEAT = 0
+REPLACE_REWINDDIR = @REPLACE_REWINDDIR@
 REPLACE_RINTL = 0
 REPLACE_RMDIR = 0
 REPLACE_ROUND = 0
 REPLACE_ROUNDF = 0
 REPLACE_ROUNDL = 0
 REPLACE_SCHED_YIELD = 0
+REPLACE_SELECT = @REPLACE_SELECT@
 REPLACE_SETENV = 0
 REPLACE_SETHOSTNAME = 0
 REPLACE_SETLOCALE = 0
@@ -3433,6 +4568,7 @@ REPLACE_STRTOUL = 0
 REPLACE_STRTOULL = 0
 REPLACE_STRTOUMAX = 0
 REPLACE_STRUCT_LCONV = 0
+REPLACE_STRUCT_TIMEVAL = @REPLACE_STRUCT_TIMEVAL@
 REPLACE_STRVERSCMP = 0
 REPLACE_SYMLINK = 0
 REPLACE_SYMLINKAT = 0
@@ -3460,6 +4596,7 @@ REPLACE_UNLINK = 0
 REPLACE_UNLINKAT = 0
 REPLACE_UNSETENV = 0
 REPLACE_USLEEP = 0
+REPLACE_UTIME = @REPLACE_UTIME@
 REPLACE_UTIMENSAT = 0
 REPLACE_VASPRINTF = 0
 REPLACE_VDPRINTF = 0
@@ -3488,6 +4625,9 @@ REPLACE_WRITE = 0
 REPLACE__EXIT = 0
 SCHED_YIELD_LIB = 
 SED = /Users/sedwards/gtk/bin/gsed
+SELECT_LIB = @SELECT_LIB@
+SERVENT_LIB = @SERVENT_LIB@
+SETLOCALE_LIB = @SETLOCALE_LIB@
 SETLOCALE_NULL_LIB = 
 SET_MAKE = 
 SHELL = /bin/sh
@@ -3495,6 +4635,7 @@ SIG_ATOMIC_T_SUFFIX =
 SIZE_T_SUFFIX = 
 SMALL_WCHAR_T = 0
 STDARG_H = 
+STDBIT_H = @STDBIT_H@
 STDCKDINT_H = 
 STDCOUNTOF_H = stdcountof.h
 STDDEF_H = stddef.h
@@ -3524,8 +4665,10 @@ UNISTD_H_DEFINES_STRUCT_TIMESPEC = 0
 UNISTD_H_HAVE_SYS_RANDOM_H = 0
 UNISTD_H_HAVE_WINSOCK2_H = 0
 UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS = 0
+USE_ACL = @USE_ACL@
 USE_INCLUDED_LIBINTL = no
 USE_NLS = no
+USE_SELINUX_SELINUX_H = @USE_SELINUX_SELINUX_H@
 VERSION = 1.0
 WARN_CFLAGS = 
 WCHAR_T_SUFFIX = 
@@ -3541,6 +4684,7 @@ XGETTEXT_EXTRA_OPTIONS =  --flag=error:3:c-format --flag=error_at_line:5:c-forma
 XMLLINT = /Users/sedwards/gtk/bin/xmllint
 YACC = bison -o y.tab.c
 YFLAGS = 
+YIELD_LIB = @YIELD_LIB@
 abs_builddir = /Users/sedwards/gtk/source/gettext-1.0/gettext-tools/libgettextpo
 abs_srcdir = /Users/sedwards/gtk/source/gettext-1.0/gettext-tools/libgettextpo
 abs_top_builddir = /Users/sedwards/gtk/source/gettext-1.0/gettext-tools
@@ -3569,23 +4713,33 @@ build_os = darwin25.4.0
 build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
+datadir_c = @datadir_c@
+datadir_c_make = @datadir_c_make@
 datarootdir = ${prefix}/share
+datarootdir_c = @datarootdir_c@
+datarootdir_c_make = @datarootdir_c_make@
 docdir = ${datarootdir}/doc/gettext
+docdir_c = @docdir_c@
+docdir_c_make = @docdir_c_make@
 dvidir = ${docdir}
+dvidir_c = @dvidir_c@
+dvidir_c_make = @dvidir_c_make@
 exec_prefix = ${prefix}
+exec_prefix_c = @exec_prefix_c@
+exec_prefix_c_make = @exec_prefix_c_make@
 gl_LIBOBJDEPS = 
 gl_LIBOBJS = 
 gl_LTLIBOBJS = 
-gl_libgnu_LIBOBJDEPS = 
-gl_libgnu_LIBOBJS = 
-gl_libgnu_LTLIBOBJS = 
+gl_libgettextlib_LIBOBJDEPS = @gl_libgettextlib_LIBOBJDEPS@
+gl_libgettextlib_LIBOBJS = @gl_libgettextlib_LIBOBJS@
+gl_libgettextlib_LTLIBOBJS = @gl_libgettextlib_LTLIBOBJS@
 gltests_LIBOBJDEPS = 
 gltests_LIBOBJS = 
 gltests_LTLIBOBJS = 
 gltests_WITNESS = IN_GETTEXT_TOOLS_GNULIB_TESTS
-gltests_libgnu_LIBOBJDEPS = 
-gltests_libgnu_LIBOBJS = 
-gltests_libgnu_LTLIBOBJS = 
+gltests_libgettextlib_LIBOBJDEPS = @gltests_libgettextlib_LIBOBJDEPS@
+gltests_libgettextlib_LIBOBJS = @gltests_libgettextlib_LIBOBJS@
+gltests_libgettextlib_LTLIBOBJS = @gltests_libgettextlib_LTLIBOBJS@
 grgl_LIBOBJDEPS = 
 grgl_LIBOBJS = 
 grgl_LTLIBOBJS = 
@@ -3631,8 +4785,14 @@ host_cpu = aarch64
 host_os = darwin25.4.0
 host_vendor = apple
 htmldir = ${docdir}
+htmldir_c = @htmldir_c@
+htmldir_c_make = @htmldir_c_make@
 includedir = ${prefix}/include
+includedir_c = @includedir_c@
+includedir_c_make = @includedir_c_make@
 infodir = ${datarootdir}/info
+infodir_c = @infodir_c@
+infodir_c_make = @infodir_c_make@
 install_sh = ${SHELL} /Users/sedwards/gtk/source/gettext-1.0/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libdir_c = "/Users/sedwards/gtk/lib"
@@ -3641,31 +4801,55 @@ libexecdir = ${exec_prefix}/libexec
 libexecdir_c = "/Users/sedwards/gtk/libexec"
 libexecdir_c_make = \"$(libexecdir)\"
 lispdir = ${datadir}/emacs/site-lisp
+lispdir_c = @lispdir_c@
+lispdir_c_make = @lispdir_c_make@
 localedir = ${datarootdir}/locale
 localedir_c = "/Users/sedwards/gtk/share/locale"
 localedir_c_make = \"$(localedir)\"
 localstatedir = ${prefix}/var
+localstatedir_c = @localstatedir_c@
+localstatedir_c_make = @localstatedir_c_make@
 mandir = ${datarootdir}/man
+mandir_c = @mandir_c@
+mandir_c_make = @mandir_c_make@
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
+oldincludedir_c = @oldincludedir_c@
+oldincludedir_c_make = @oldincludedir_c_make@
 pdfdir = ${docdir}
+pdfdir_c = @pdfdir_c@
+pdfdir_c_make = @pdfdir_c_make@
 pkgdatadir_c = "/Users/sedwards/gtk/share/gettext"
 pkgdatadir_c_make = \"$(pkgdatadir)\"
+pkgincludedir_c = @pkgincludedir_c@
+pkgincludedir_c_make = @pkgincludedir_c_make@
 pkglibdir_c = "/Users/sedwards/gtk/lib/gettext"
 pkglibdir_c_make = \"$(pkglibdir)\"
 pkglibexecdir_c = "/Users/sedwards/gtk/libexec/gettext"
 pkglibexecdir_c_make = \"$(pkglibexecdir)\"
 prefix = /Users/sedwards/gtk
+prefix_c = @prefix_c@
+prefix_c_make = @prefix_c_make@
 program_transform_name = s,x,x,
 psdir = ${docdir}
+psdir_c = @psdir_c@
+psdir_c_make = @psdir_c_make@
 reloc_final_prefix_c = "/Users/sedwards/gtk"
 reloc_final_prefix_c_make = \"$(reloc_final_prefix)\"
 runstatedir = ${localstatedir}/run
+runstatedir_c = @runstatedir_c@
+runstatedir_c_make = @runstatedir_c_make@
 sbindir = ${exec_prefix}/sbin
+sbindir_c = @sbindir_c@
+sbindir_c_make = @sbindir_c_make@
 sharedstatedir = ${prefix}/com
+sharedstatedir_c = @sharedstatedir_c@
+sharedstatedir_c_make = @sharedstatedir_c_make@
 srcdir = .
 subdirs =  examples
 sysconfdir = ${prefix}/etc
+sysconfdir_c = @sysconfdir_c@
+sysconfdir_c_make = @sysconfdir_c_make@
 target_alias = 
 top_build_prefix = ../
 top_builddir = ..
@@ -3884,9 +5068,6 @@ libgettextpo_la_LDFLAGS = -version-info \
 	-export-symbols-regex \
 	'^([^l]|l[^i]|li[^b]|lib[^g]|libg[^e]|libge[^t]|libget[^t]|libgett[^e]|libgette[^x]|libgettex[^t]|libgettext[^p]|libgettextp[^o]|libgettextpo[^_]|libgettextpo_version).*' \
 	$(am__append_2) $(am__append_3) $(am__append_4)
-
-# Support for relocatability.
-RELOCATABLE_LIBRARY_PATH = $(libdir)
 WOE32_LIBADD = 
 #WOE32_LIBADD = libgettextpo.res.lo
 libgnu_la_SOURCES = basename-lgpl.c c-ctype.h c-ctype.c c-strcasecmp.c \

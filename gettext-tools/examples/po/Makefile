@@ -16,55 +16,55 @@
 
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
-	false; \
+    false; \
   elif test -n '$(MAKE_HOST)'; then \
-	true; \
+    true; \
   elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
-	true; \
+    true; \
   else \
-	false; \
+    false; \
   fi; \
 }
 am__make_running_with_option = \
   case $${target_option-} in \
-	  ?) ;; \
-	  *) echo "am__make_running_with_option: internal error: invalid" \
-	          "target option '$${target_option-}' specified" >&2; \
-	     exit 1;; \
+      ?) ;; \
+      *) echo "am__make_running_with_option: internal error: invalid" \
+              "target option '$${target_option-}' specified" >&2; \
+         exit 1;; \
   esac; \
   has_opt=no; \
   sane_makeflags=$$MAKEFLAGS; \
   if $(am__is_gnu_make); then \
-	sane_makeflags=$$MFLAGS; \
+    sane_makeflags=$$MFLAGS; \
   else \
-	case $$MAKEFLAGS in \
-	  *\\[\ \	]*) \
-	    bs=\\; \
-	    sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
-	      | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
-	esac; \
+    case $$MAKEFLAGS in \
+      *\\[\ \	]*) \
+        bs=\\; \
+        sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
+          | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
+    esac; \
   fi; \
   skip_next=no; \
   strip_trailopt () \
   { \
-	flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
+    flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
   }; \
   for flg in $$sane_makeflags; do \
-	test $$skip_next = yes && { skip_next=no; continue; }; \
-	case $$flg in \
-	  *=*|--*) continue;; \
-	    -*I) strip_trailopt 'I'; skip_next=yes;; \
-	  -*I?*) strip_trailopt 'I';; \
-	    -*O) strip_trailopt 'O'; skip_next=yes;; \
-	  -*O?*) strip_trailopt 'O';; \
-	    -*l) strip_trailopt 'l'; skip_next=yes;; \
-	  -*l?*) strip_trailopt 'l';; \
-	  -[dEDm]) skip_next=yes;; \
-	  -[JT]) skip_next=yes;; \
-	esac; \
-	case $$flg in \
-	  *$$target_option*) has_opt=yes; break;; \
-	esac; \
+    test $$skip_next = yes && { skip_next=no; continue; }; \
+    case $$flg in \
+      *=*|--*) continue;; \
+        -*I) strip_trailopt 'I'; skip_next=yes;; \
+      -*I?*) strip_trailopt 'I';; \
+        -*O) strip_trailopt 'O'; skip_next=yes;; \
+      -*O?*) strip_trailopt 'O';; \
+        -*l) strip_trailopt 'l'; skip_next=yes;; \
+      -*l?*) strip_trailopt 'l';; \
+      -[dEDm]) skip_next=yes;; \
+      -[JT]) skip_next=yes;; \
+    esac; \
+    case $$flg in \
+      *$$target_option*) has_opt=yes; break;; \
+    esac; \
   done; \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
@@ -117,14 +117,14 @@ SOURCES =
 DIST_SOURCES =
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
-	n|no|NO) false;; \
-	*) (install-info --version) >/dev/null 2>&1;; \
+    n|no|NO) false;; \
+    *) (install-info --version) >/dev/null 2>&1;; \
   esac
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 am__DIST_COMMON = $(srcdir)/Makefile.in \
 	$(top_srcdir)/../../build-aux/mkinstalldirs
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = /Users/sedwards/gtk/bin/aclocal -I /Users/sedwards/gtk/share/aclocal
+ACLOCAL = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' aclocal-1.18
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AUTOCONF = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' autoconf
@@ -631,10 +631,10 @@ POTFILES_DEPS != for file in $(POTFILES); do echo $(top_srcdir)/$$file; done
 
 # The set of available translations.
 ALL_LINGUAS != if test -f $(srcdir)/LINGUAS; then \
-	             sed -e '/^\#/d' < $(srcdir)/LINGUAS; \
-	           else \
-	             echo $(LINGUAS); \
-	           fi
+                 sed -e '/^\#/d' < $(srcdir)/LINGUAS; \
+               else \
+                 echo $(LINGUAS); \
+               fi
 # This is computed as $(foreach lang, $(ALL_LINGUAS), $(srcdir)/$(lang).po)
 POFILES != for lang in $(ALL_LINGUAS); do echo $(srcdir)/$$lang.po; done
 # This is computed as $(foreach lang, $(ALL_LINGUAS), $(lang).gpo)

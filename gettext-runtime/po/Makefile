@@ -96,17 +96,17 @@ GMOFILES != for lang in $(ALL_LINGUAS); do echo $(srcdir)/$$lang.gmo; done
 DUMMYPOFILES != for lang in $(ALL_LINGUAS); do echo $$lang.nop; done
 
 DISTFILES.common = \
-  Makefile.in.in remove-potcdate.sed \
-  $(DISTFILES.common.extra1) $(DISTFILES.common.extra2) \
-  $(DISTFILES.common.extra3) $(DISTFILES.common.extra4) \
-  $(DISTFILES.common.extra5) $(DISTFILES.common.extra6)
+	Makefile.in.in remove-potcdate.sed \
+	$(DISTFILES.common.extra1) $(DISTFILES.common.extra2) \
+	$(DISTFILES.common.extra3) $(DISTFILES.common.extra4) \
+	$(DISTFILES.common.extra5) $(DISTFILES.common.extra6)
 DISTFILES = \
-  $(DISTFILES.common) \
-  Makevars POTFILES.in \
-  $(POFILES) $(GMOFILES) \
-  $(DISTFILES.extra1) $(DISTFILES.extra2) \
-  $(DISTFILES.extra3) $(DISTFILES.extra4) \
-  $(DISTFILES.extra5) $(DISTFILES.extra6)
+	$(DISTFILES.common) \
+	Makevars POTFILES.in \
+	$(POFILES) $(GMOFILES) \
+	$(DISTFILES.extra1) $(DISTFILES.extra2) \
+	$(DISTFILES.extra3) $(DISTFILES.extra4) \
+	$(DISTFILES.extra5) $(DISTFILES.extra6)
 
 # The set of desired translations, as specified by the installer or distributor.
 DESIRED_LINGUAS = $(ALL_LINGUAS)
@@ -316,7 +316,7 @@ $(DOMAIN).pot-update: $(POTFILES_DEPS) $(srcdir)/POTFILES.in
 	      --files-from=$(srcdir)/POTFILES.in \
 	      --copyright-holder='$(COPYRIGHT_HOLDER)' \
 	      --msgid-bugs-address="$$msgid_bugs_address" \
-	      $(XGETTEXT_OPTIONS)  \
+	      $(XGETTEXT_OPTIONS)  --flag=error:3:c-format --flag=error_at_line:5:c-format --keyword='proper_name:1,"This is a proper name. See the gettext manual, section Names."' --keyword='proper_name_utf8:1,"This is a proper name. See the gettext manual, section Names."' \
 	    ;; \
 	  *) \
 	    $(XGETTEXT) --default-domain=$(DOMAIN) --directory=$(top_srcdir) \
@@ -326,7 +326,7 @@ $(DOMAIN).pot-update: $(POTFILES_DEPS) $(srcdir)/POTFILES.in
 	      --package-name="$${package_prefix}gettext-runtime" \
 	      --package-version='1.0' \
 	      --msgid-bugs-address="$$msgid_bugs_address" \
-	      $(XGETTEXT_OPTIONS)  \
+	      $(XGETTEXT_OPTIONS)  --flag=error:3:c-format --flag=error_at_line:5:c-format --keyword='proper_name:1,"This is a proper name. See the gettext manual, section Names."' --keyword='proper_name_utf8:1,"This is a proper name. See the gettext manual, section Names."' \
 	    ;; \
 	esac
 	test ! -f $(DOMAIN).po || { \

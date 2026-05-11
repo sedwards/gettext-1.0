@@ -29,6 +29,13 @@
 extern "C" {
 #endif
 
+#if defined(__clang__)
+    // Clang specific handling if needed, or use standard attributes
+    #define _GL_ATTRIBUTE_DEALLOC_FREE __attribute__((ownership_takes(free, 1)))
+#elif defined(__GNUC__)
+    // GCC uses __attribute__((malloc)) or similar, but GLib often defines this internally
+    // It is safer to rely on GLib's own headers if this is a GLib project
+#endif   
 
 extern char *areadlink (char const *filename)
   _GL_ATTRIBUTE_DEALLOC_FREE;

@@ -18,55 +18,55 @@
 
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
-	false; \
+    false; \
   elif test -n '$(MAKE_HOST)'; then \
-	true; \
+    true; \
   elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
-	true; \
+    true; \
   else \
-	false; \
+    false; \
   fi; \
 }
 am__make_running_with_option = \
   case $${target_option-} in \
-	  ?) ;; \
-	  *) echo "am__make_running_with_option: internal error: invalid" \
-	          "target option '$${target_option-}' specified" >&2; \
-	     exit 1;; \
+      ?) ;; \
+      *) echo "am__make_running_with_option: internal error: invalid" \
+              "target option '$${target_option-}' specified" >&2; \
+         exit 1;; \
   esac; \
   has_opt=no; \
   sane_makeflags=$$MAKEFLAGS; \
   if $(am__is_gnu_make); then \
-	sane_makeflags=$$MFLAGS; \
+    sane_makeflags=$$MFLAGS; \
   else \
-	case $$MAKEFLAGS in \
-	  *\\[\ \	]*) \
-	    bs=\\; \
-	    sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
-	      | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
-	esac; \
+    case $$MAKEFLAGS in \
+      *\\[\ \	]*) \
+        bs=\\; \
+        sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
+          | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
+    esac; \
   fi; \
   skip_next=no; \
   strip_trailopt () \
   { \
-	flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
+    flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
   }; \
   for flg in $$sane_makeflags; do \
-	test $$skip_next = yes && { skip_next=no; continue; }; \
-	case $$flg in \
-	  *=*|--*) continue;; \
-	    -*I) strip_trailopt 'I'; skip_next=yes;; \
-	  -*I?*) strip_trailopt 'I';; \
-	    -*O) strip_trailopt 'O'; skip_next=yes;; \
-	  -*O?*) strip_trailopt 'O';; \
-	    -*l) strip_trailopt 'l'; skip_next=yes;; \
-	  -*l?*) strip_trailopt 'l';; \
-	  -[dEDm]) skip_next=yes;; \
-	  -[JT]) skip_next=yes;; \
-	esac; \
-	case $$flg in \
-	  *$$target_option*) has_opt=yes; break;; \
-	esac; \
+    test $$skip_next = yes && { skip_next=no; continue; }; \
+    case $$flg in \
+      *=*|--*) continue;; \
+        -*I) strip_trailopt 'I'; skip_next=yes;; \
+      -*I?*) strip_trailopt 'I';; \
+        -*O) strip_trailopt 'O'; skip_next=yes;; \
+      -*O?*) strip_trailopt 'O';; \
+        -*l) strip_trailopt 'l'; skip_next=yes;; \
+      -*l?*) strip_trailopt 'l';; \
+      -[dEDm]) skip_next=yes;; \
+      -[JT]) skip_next=yes;; \
+    esac; \
+    case $$flg in \
+      *$$target_option*) has_opt=yes; break;; \
+    esac; \
   done; \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
@@ -327,8 +327,8 @@ CONFIG_CLEAN_FILES = build-aux/xml-validate-10 \
 CONFIG_CLEAN_VPATH_FILES =
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
-	$(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
-	*) f=$$p;; \
+    $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
+    *) f=$$p;; \
   esac;
 am__strip_dir = f=`echo $$p | sed -e 's|^.*/||'`;
 am__install_max = 40
@@ -340,16 +340,16 @@ am__nobase_list = $(am__nobase_strip_setup); \
   for p in $$list; do echo "$$p $$p"; done | \
   sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
   $(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
-	if (++n[$$2] == $(am__install_max)) \
-	  { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
-	END { for (dir in files) print dir, files[dir] }'
+    if (++n[$$2] == $(am__install_max)) \
+      { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
+    END { for (dir in files) print dir, files[dir] }'
 am__base_list = \
   sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 am__uninstall_files_from_dir = { \
   { test ! -d "$$dir" && test ! -f "$$dir" && test ! -r "$$dir"; } \
   || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
-	   $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
+       $(am__cd) "$$dir" && echo $$files | $(am__xargs_n) 40 $(am__rm_f); }; \
   }
 am__installdirs = "$(DESTDIR)$(pkgdatadir)" \
 	"$(DESTDIR)$(examplesbuildauxdir)"
@@ -378,8 +378,8 @@ RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	tags-recursive uninstall-recursive
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
-	n|no|NO) false;; \
-	*) (install-info --version) >/dev/null 2>&1;; \
+    n|no|NO) false;; \
+    *) (install-info --version) >/dev/null 2>&1;; \
   esac
 DATA = $(examplesbuildaux_DATA)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
@@ -406,7 +406,7 @@ am__uniquify_input = $(AWK) '\
 am__define_uniq_tagged_files = \
   list='$(am__tagged_files)'; \
   unique=`for i in $$list; do \
-	if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
   done | $(am__uniquify_input)`
 DIST_SUBDIRS = $(SUBDIRS)
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in \
@@ -432,9 +432,9 @@ distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
 am__remove_distdir = \
   if test -d "$(distdir)"; then \
-	find "$(distdir)" -type d ! -perm -700 -exec chmod u+rwx {} ';' \
-	  ; rm -rf "$(distdir)" \
-	  || { sleep 5 && rm -rf "$(distdir)"; }; \
+    find "$(distdir)" -type d ! -perm -700 -exec chmod u+rwx {} ';' \
+      ; rm -rf "$(distdir)" \
+      || { sleep 5 && rm -rf "$(distdir)"; }; \
   else :; fi
 am__post_remove_distdir = $(am__remove_distdir)
 am__relativize = \
@@ -444,22 +444,22 @@ am__relativize = \
   sed_last='s,^.*/\([^/]*\)$$,\1,'; \
   sed_butlast='s,/*[^/]*$$,,'; \
   while test -n "$$dir1"; do \
-	first=`echo "$$dir1" | sed -e "$$sed_first"`; \
-	if test "$$first" != "."; then \
-	  if test "$$first" = ".."; then \
-	    dir2=`echo "$$dir0" | sed -e "$$sed_last"`/"$$dir2"; \
-	    dir0=`echo "$$dir0" | sed -e "$$sed_butlast"`; \
-	  else \
-	    first2=`echo "$$dir2" | sed -e "$$sed_first"`; \
-	    if test "$$first2" = "$$first"; then \
-	      dir2=`echo "$$dir2" | sed -e "$$sed_rest"`; \
-	    else \
-	      dir2="../$$dir2"; \
-	    fi; \
-	    dir0="$$dir0"/"$$first"; \
-	  fi; \
-	fi; \
-	dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
+    first=`echo "$$dir1" | sed -e "$$sed_first"`; \
+    if test "$$first" != "."; then \
+      if test "$$first" = ".."; then \
+        dir2=`echo "$$dir0" | sed -e "$$sed_last"`/"$$dir2"; \
+        dir0=`echo "$$dir0" | sed -e "$$sed_butlast"`; \
+      else \
+        first2=`echo "$$dir2" | sed -e "$$sed_first"`; \
+        if test "$$first2" = "$$first"; then \
+          dir2=`echo "$$dir2" | sed -e "$$sed_rest"`; \
+        else \
+          dir2="../$$dir2"; \
+        fi; \
+        dir0="$$dir0"/"$$first"; \
+      fi; \
+    fi; \
+    dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
 DIST_ARCHIVES = $(distdir).tar.gz
@@ -472,12 +472,12 @@ am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = \
   find . \( -type f -a \! \
-	        \( -name .nfs* -o -name .smb* -o -name .__afs* \) \) -print
+            \( -name .nfs* -o -name .smb* -o -name .__afs* \) \) -print
 pkgdatadir = ${datadir}/gettext
 pkgincludedir = ${includedir}/gettext
 pkglibdir = ${libdir}/gettext
 pkglibexecdir = ${libexecdir}/gettext
-ACLOCAL = /Users/sedwards/gtk/bin/aclocal -I /Users/sedwards/gtk/share/aclocal
+ACLOCAL = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' aclocal-1.18
 ALLOCA = 
 ALLOCA_H = alloca.h
 AMTAR = $${TAR-tar}
@@ -511,7 +511,7 @@ CAN_PRINT_STACK_TRACE = 0
 CATOBJEXT = 
 CC = gcc
 CCDEPMODE = depmode=none
-CFLAGS = -include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h" -g -O2
+CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CLASSPATH = 
 CLASSPATH_SEPARATOR = :
@@ -3767,23 +3767,23 @@ man/msgcmp.1 \
   : gen-man1
 .PHONY: gen-man1
 gen-man1: programs-for-distdir \
-	      src/msgcmp.c man/msgcmp.x \
-	      src/msgfmt.c man/msgfmt.x \
-	      src/msgmerge.c man/msgmerge.x \
-	      src/msgunfmt.c man/msgunfmt.x \
-	      src/xgettext.c man/xgettext.x \
-	      src/msgattrib.c man/msgattrib.x \
-	      src/msgcat.c man/msgcat.x \
-	      src/msgcomm.c man/msgcomm.x \
-	      src/msgconv.c man/msgconv.x \
-	      src/msgen.c man/msgen.x \
-	      src/msgexec.c man/msgexec.x \
-	      src/msgfilter.c man/msgfilter.x \
-	      src/msggrep.c man/msggrep.x \
-	      src/msginit.c man/msginit.x \
-	      src/msgpre.c man/msgpre.x \
-	      src/msguniq.c man/msguniq.x \
-	      src/recode-sr-latin.c man/recode-sr-latin.x
+          src/msgcmp.c man/msgcmp.x \
+          src/msgfmt.c man/msgfmt.x \
+          src/msgmerge.c man/msgmerge.x \
+          src/msgunfmt.c man/msgunfmt.x \
+          src/xgettext.c man/xgettext.x \
+          src/msgattrib.c man/msgattrib.x \
+          src/msgcat.c man/msgcat.x \
+          src/msgcomm.c man/msgcomm.x \
+          src/msgconv.c man/msgconv.x \
+          src/msgen.c man/msgen.x \
+          src/msgexec.c man/msgexec.x \
+          src/msgfilter.c man/msgfilter.x \
+          src/msggrep.c man/msggrep.x \
+          src/msginit.c man/msginit.x \
+          src/msgpre.c man/msgpre.x \
+          src/msguniq.c man/msguniq.x \
+          src/recode-sr-latin.c man/recode-sr-latin.x
 	cd man \
 	&& $(MAKE) $(AM_MAKEFLAGS) \
 	   msgcmp.1 \

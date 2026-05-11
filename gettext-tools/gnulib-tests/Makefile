@@ -41,41 +41,41 @@
 
 
 am__is_gnu_make = { \
-  if test -z '$(MAKELEVEL)'; then \
+	if test -z '$(MAKELEVEL)'; then \
 	false; \
-  elif test -n '$(MAKE_HOST)'; then \
+	elif test -n '$(MAKE_HOST)'; then \
 	true; \
-  elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
+	elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
 	true; \
-  else \
+	else \
 	false; \
-  fi; \
+	fi; \
 }
 am__make_running_with_option = \
-  case $${target_option-} in \
+	case $${target_option-} in \
 	  ?) ;; \
 	  *) echo "am__make_running_with_option: internal error: invalid" \
 	          "target option '$${target_option-}' specified" >&2; \
 	     exit 1;; \
-  esac; \
-  has_opt=no; \
-  sane_makeflags=$$MAKEFLAGS; \
-  if $(am__is_gnu_make); then \
+	esac; \
+	has_opt=no; \
+	sane_makeflags=$$MAKEFLAGS; \
+	if $(am__is_gnu_make); then \
 	sane_makeflags=$$MFLAGS; \
-  else \
+	else \
 	case $$MAKEFLAGS in \
 	  *\\[\ \	]*) \
 	    bs=\\; \
 	    sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
 	      | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
 	esac; \
-  fi; \
-  skip_next=no; \
-  strip_trailopt () \
+	fi; \
+	skip_next=no; \
+	strip_trailopt () \
   { \
 	flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
   }; \
-  for flg in $$sane_makeflags; do \
+	for flg in $$sane_makeflags; do \
 	test $$skip_next = yes && { skip_next=no; continue; }; \
 	case $$flg in \
 	  *=*|--*) continue;; \
@@ -91,8 +91,8 @@ am__make_running_with_option = \
 	case $$flg in \
 	  *$$target_option*) has_opt=yes; break;; \
 	esac; \
-  done; \
-  test $$has_opt = yes
+	done; \
+	test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
 am__rm_f = rm -f $(am__rm_f_notfound)
@@ -145,20 +145,20 @@ TESTS = test-accept$(EXEEXT) test-access$(EXEEXT) test-set-mode-acl.sh \
 	test-dirname$(EXEEXT) test-dup$(EXEEXT) test-dup2$(EXEEXT) \
 	test-endian$(EXEEXT) test-environ$(EXEEXT) \
 	test-errno-h$(EXEEXT) test-error.sh test-execute.sh \
-	test-execute-script$(EXEEXT) test-fabs$(EXEEXT) \
-	test-fchdir$(EXEEXT) test-fcntl-h$(EXEEXT) test-fcntl$(EXEEXT) \
-	test-fdopen$(EXEEXT) test-fdopendir$(EXEEXT) \
-	test-fflush$(EXEEXT) test-fflush2.sh test-fgetc$(EXEEXT) \
-	test-file-has-acl.sh test-file-has-acl-1.sh \
-	test-file-has-acl-2.sh test-filenamecat$(EXEEXT) \
-	test-fnmatch-h$(EXEEXT) test-fnmatch-1.sh test-fnmatch-2.sh \
-	test-fnmatch-3.sh test-fnmatch-4.sh test-fnmatch-5.sh \
-	test-fnmatch-w32-2.sh test-fnmatch-w32-3.sh \
-	test-fnmatch-w32-4.sh test-fnmatch-w32-5.sh \
-	test-fnmatch-w32-6.sh test-fnmatch-w32-7.sh \
-	test-fnmatch-w32-8.sh test-fopen-gnu$(EXEEXT) \
-	test-fopen$(EXEEXT) test-fpurge$(EXEEXT) test-fputc$(EXEEXT) \
-	test-fread$(EXEEXT) test-freading$(EXEEXT) test-free$(EXEEXT) \
+	test-execute-script$(EXEEXT) test-fchdir$(EXEEXT) \
+	test-fcntl-h$(EXEEXT) test-fcntl$(EXEEXT) test-fdopen$(EXEEXT) \
+	test-fdopendir$(EXEEXT) test-fflush$(EXEEXT) test-fflush2.sh \
+	test-fgetc$(EXEEXT) test-file-has-acl.sh \
+	test-file-has-acl-1.sh test-file-has-acl-2.sh \
+	test-filenamecat$(EXEEXT) test-fnmatch-h$(EXEEXT) \
+	test-fnmatch-1.sh test-fnmatch-2.sh test-fnmatch-3.sh \
+	test-fnmatch-4.sh test-fnmatch-5.sh test-fnmatch-w32-2.sh \
+	test-fnmatch-w32-3.sh test-fnmatch-w32-4.sh \
+	test-fnmatch-w32-5.sh test-fnmatch-w32-6.sh \
+	test-fnmatch-w32-7.sh test-fnmatch-w32-8.sh \
+	test-fopen-gnu$(EXEEXT) test-fopen$(EXEEXT) test-fpending.sh \
+	test-fpurge$(EXEEXT) test-fputc$(EXEEXT) test-fread$(EXEEXT) \
+	test-freading$(EXEEXT) test-free$(EXEEXT) \
 	test-freopen$(EXEEXT) test-frexp-nolibm$(EXEEXT) \
 	test-frexpl-nolibm$(EXEEXT) test-fseek.sh test-fseek2.sh \
 	test-fseeko.sh test-fseeko2.sh test-fseeko3.sh test-fseeko4.sh \
@@ -180,44 +180,42 @@ TESTS = test-accept$(EXEEXT) test-access$(EXEEXT) test-set-mode-acl.sh \
 	test-ignore-value$(EXEEXT) test-inet_ntop$(EXEEXT) \
 	test-inet_pton$(EXEEXT) test-intprops$(EXEEXT) \
 	test-inttostr$(EXEEXT) test-inttypes-h$(EXEEXT) \
-	test-ioctl$(EXEEXT) test-isblank$(EXEEXT) test-isinf$(EXEEXT) \
-	test-isnan$(EXEEXT) test-isnand-nolibm$(EXEEXT) \
-	test-isnand$(EXEEXT) test-isnanf-nolibm$(EXEEXT) \
-	test-isnanf$(EXEEXT) test-isnanl-nolibm$(EXEEXT) \
-	test-isnanl$(EXEEXT) test-iswblank$(EXEEXT) \
+	test-ioctl$(EXEEXT) test-isblank$(EXEEXT) \
+	test-isnand-nolibm$(EXEEXT) test-isnanf-nolibm$(EXEEXT) \
+	test-isnanl-nolibm$(EXEEXT) test-iswblank$(EXEEXT) \
 	test-iswctype$(EXEEXT) test-iswdigit.sh test-iswpunct.sh \
 	test-iswxdigit.sh test-largefile$(EXEEXT) \
-	test-limits-h$(EXEEXT) test-listen$(EXEEXT) $(am__append_16) \
-	test-locale-h$(EXEEXT) test-localeconv$(EXEEXT) \
-	test-localeconv-mt$(EXEEXT) test-localename$(EXEEXT) \
-	$(am__append_19) test-rwlock1$(EXEEXT) test-lock$(EXEEXT) \
-	test-log10$(EXEEXT) test-lseek.sh test-lstat$(EXEEXT) \
-	test-malloc-gnu$(EXEEXT) test-malloc-posix$(EXEEXT) \
-	test-malloca$(EXEEXT) test-math-h$(EXEEXT) test-mbrtoc32-1.sh \
-	test-mbrtoc32-2.sh test-mbrtoc32-3.sh test-mbrtoc32-4.sh \
-	test-mbrtoc32-5.sh test-mbrtoc32-w32-2.sh \
-	test-mbrtoc32-w32-3.sh test-mbrtoc32-w32-4.sh \
-	test-mbrtoc32-w32-5.sh test-mbrtoc32-w32-6.sh \
-	test-mbrtoc32-w32-7.sh test-mbrtoc32-w32-8.sh \
-	test-mbrtowc-1.sh test-mbrtowc-2.sh test-mbrtowc-3.sh \
-	test-mbrtowc-4.sh test-mbrtowc-5.sh test-mbrtowc-w32-2.sh \
-	test-mbrtowc-w32-3.sh test-mbrtowc-w32-4.sh \
-	test-mbrtowc-w32-5.sh test-mbrtowc-w32-6.sh \
-	test-mbrtowc-w32-7.sh test-mbrtowc-w32-8.sh $(am__append_20) \
-	test-mbsinit.sh test-mbslen.sh test-mbsnlen.sh \
-	test-mbsrtoc32s-1.sh test-mbsrtoc32s-2.sh test-mbsrtoc32s-3.sh \
-	test-mbsrtoc32s-4.sh test-mbsrtoc32s-5.sh test-mbsrtowcs-1.sh \
-	test-mbsrtowcs-2.sh test-mbsrtowcs-3.sh test-mbsrtowcs-4.sh \
-	test-mbsrtowcs-5.sh test-mbsstr1$(EXEEXT) test-mbsstr2.sh \
-	test-mbsstr3.sh test-memchr$(EXEEXT) test-memcmp$(EXEEXT) \
-	test-memmem$(EXEEXT) test-memmove$(EXEEXT) \
-	test-memrchr$(EXEEXT) test-memset$(EXEEXT) \
-	test-memset_explicit$(EXEEXT) test-mkdir$(EXEEXT) \
-	test-mkfifo$(EXEEXT) test-nanosleep$(EXEEXT) \
-	test-netdb-h$(EXEEXT) test-netinet_in-h$(EXEEXT) \
-	test-next-prime$(EXEEXT) test-noreturn$(EXEEXT) \
-	test-once1$(EXEEXT) test-once2$(EXEEXT) test-open$(EXEEXT) \
-	test-openat$(EXEEXT) test-options$(EXEEXT) \
+	test-limits-h$(EXEEXT) test-link$(EXEEXT) test-listen$(EXEEXT) \
+	$(am__append_17) test-locale-h$(EXEEXT) \
+	test-localeconv$(EXEEXT) test-localeconv-mt$(EXEEXT) \
+	test-localename$(EXEEXT) $(am__append_20) \
+	test-rwlock1$(EXEEXT) test-lock$(EXEEXT) test-lseek.sh \
+	test-lstat$(EXEEXT) test-malloc-gnu$(EXEEXT) \
+	test-malloc-posix$(EXEEXT) test-malloca$(EXEEXT) \
+	test-math-h$(EXEEXT) test-mbrtoc32-1.sh test-mbrtoc32-2.sh \
+	test-mbrtoc32-3.sh test-mbrtoc32-4.sh test-mbrtoc32-5.sh \
+	test-mbrtoc32-w32-2.sh test-mbrtoc32-w32-3.sh \
+	test-mbrtoc32-w32-4.sh test-mbrtoc32-w32-5.sh \
+	test-mbrtoc32-w32-6.sh test-mbrtoc32-w32-7.sh \
+	test-mbrtoc32-w32-8.sh test-mbrtowc-1.sh test-mbrtowc-2.sh \
+	test-mbrtowc-3.sh test-mbrtowc-4.sh test-mbrtowc-5.sh \
+	test-mbrtowc-w32-2.sh test-mbrtowc-w32-3.sh \
+	test-mbrtowc-w32-4.sh test-mbrtowc-w32-5.sh \
+	test-mbrtowc-w32-6.sh test-mbrtowc-w32-7.sh \
+	test-mbrtowc-w32-8.sh $(am__append_21) test-mbsinit.sh \
+	test-mbslen.sh test-mbsnlen.sh test-mbsrtoc32s-1.sh \
+	test-mbsrtoc32s-2.sh test-mbsrtoc32s-3.sh test-mbsrtoc32s-4.sh \
+	test-mbsrtoc32s-5.sh test-mbsrtowcs-1.sh test-mbsrtowcs-2.sh \
+	test-mbsrtowcs-3.sh test-mbsrtowcs-4.sh test-mbsrtowcs-5.sh \
+	test-mbsstr1$(EXEEXT) test-mbsstr2.sh test-mbsstr3.sh \
+	test-memchr$(EXEEXT) test-memcmp$(EXEEXT) test-memmem$(EXEEXT) \
+	test-memmove$(EXEEXT) test-memrchr$(EXEEXT) \
+	test-memset$(EXEEXT) test-memset_explicit$(EXEEXT) \
+	test-mkdir$(EXEEXT) test-mkfifo$(EXEEXT) \
+	test-nanosleep$(EXEEXT) test-netdb-h$(EXEEXT) \
+	test-netinet_in-h$(EXEEXT) test-next-prime$(EXEEXT) \
+	test-noreturn$(EXEEXT) test-once1$(EXEEXT) test-once2$(EXEEXT) \
+	test-open$(EXEEXT) test-openat$(EXEEXT) test-options$(EXEEXT) \
 	test-pathmax$(EXEEXT) test-perror.sh test-perror2$(EXEEXT) \
 	test-pipe-filter-ii1.sh test-pipe-filter-ii2.sh \
 	test-pipe$(EXEEXT) test-pipe2$(EXEEXT) \
@@ -234,20 +232,21 @@ TESTS = test-accept$(EXEEXT) test-access$(EXEEXT) test-set-mode-acl.sh \
 	test-posix_spawn-dup2-stdout$(EXEEXT) \
 	test-posix_spawn-dup2-stdin$(EXEEXT) \
 	test-posix_spawnp-script$(EXEEXT) \
-	test-posix_spawnp-vfork$(EXEEXT) test-pow$(EXEEXT) \
-	test-printf-frexp$(EXEEXT) test-printf-frexpl$(EXEEXT) \
-	test-priv-set$(EXEEXT) test-pselect$(EXEEXT) \
-	test-pthread-cond$(EXEEXT) test-pthread$(EXEEXT) \
-	test-pthread-mutex$(EXEEXT) test-pthread-mutex-type$(EXEEXT) \
-	test-pthread-once1$(EXEEXT) test-pthread-once2$(EXEEXT) \
-	test-pthread-rwlock$(EXEEXT) test-pthread-thread$(EXEEXT) \
-	$(am__EXEEXT_4) test-pthread_sigmask2$(EXEEXT) \
-	test-putenv$(EXEEXT) test-quotearg-simple$(EXEEXT) \
-	test-raise$(EXEEXT) test-random$(EXEEXT) \
-	test-random-mt$(EXEEXT) test-random_r$(EXEEXT) \
-	test-rawmemchr$(EXEEXT) test-read-file$(EXEEXT) \
-	test-read$(EXEEXT) test-readlink$(EXEEXT) \
+	test-posix_spawnp-vfork$(EXEEXT) test-printf-frexp$(EXEEXT) \
+	test-printf-frexpl$(EXEEXT) test-priv-set$(EXEEXT) \
+	test-pselect$(EXEEXT) test-pthread-cond$(EXEEXT) \
+	test-pthread$(EXEEXT) test-pthread-mutex$(EXEEXT) \
+	test-pthread-mutex-type$(EXEEXT) test-pthread-once1$(EXEEXT) \
+	test-pthread-once2$(EXEEXT) test-pthread-rwlock$(EXEEXT) \
+	test-pthread-thread$(EXEEXT) test-pthread_sigmask1$(EXEEXT) \
+	test-pthread_sigmask2$(EXEEXT) test-putenv$(EXEEXT) \
+	test-quotearg-simple$(EXEEXT) test-raise$(EXEEXT) \
+	test-random$(EXEEXT) test-random-mt$(EXEEXT) \
+	test-random_r$(EXEEXT) test-rawmemchr$(EXEEXT) \
+	test-read-file$(EXEEXT) test-read$(EXEEXT) \
+	test-readlink$(EXEEXT) test-readlinkat$(EXEEXT) \
 	test-realloc-posix$(EXEEXT) test-reallocarray$(EXEEXT) \
+	test-rename$(EXEEXT) test-renameatu$(EXEEXT) \
 	test-rmdir$(EXEEXT) test-sched-h$(EXEEXT) test-select$(EXEEXT) \
 	test-select-in.sh test-select-out.sh test-servent$(EXEEXT) \
 	test-setenv$(EXEEXT) test-setlocale_null$(EXEEXT) \
@@ -255,14 +254,15 @@ TESTS = test-accept$(EXEEXT) test-access$(EXEEXT) test-set-mode-acl.sh \
 	test-setlocale_null-mt-all$(EXEEXT) \
 	test-setlocale_null-unlocked$(EXEEXT) test-setlocale1.sh \
 	test-setlocale2.sh test-setlocale-w32$(EXEEXT) \
-	$(am__append_37) test-setsockopt$(EXEEXT) \
+	$(am__append_36) test-setsockopt$(EXEEXT) \
 	test-sf-istream$(EXEEXT) test-sh-quote$(EXEEXT) \
 	test-sigaction$(EXEEXT) test-signal-h$(EXEEXT) \
-	test-signbit$(EXEEXT) test-sigpipe.sh $(am__EXEEXT_5) \
+	test-signbit$(EXEEXT) test-sigpipe.sh $(am__EXEEXT_4) \
 	test-sleep$(EXEEXT) test-snprintf$(EXEEXT) \
 	test-sockets$(EXEEXT) test-spawn-h$(EXEEXT) test-spawn-pipe.sh \
 	test-spawn-pipe-script$(EXEEXT) test-spin1$(EXEEXT) \
 	test-spin2$(EXEEXT) test-stat$(EXEEXT) test-stat-time$(EXEEXT) \
+	test-stdbit-h$(EXEEXT) test-stdc_memreverse8u$(EXEEXT) \
 	test-stdckdint-h$(EXEEXT) test-stdcountof-h$(EXEEXT) \
 	test-stddef-h$(EXEEXT) test-stdint-h$(EXEEXT) \
 	test-stdio-h$(EXEEXT) test-stdlib-h$(EXEEXT) \
@@ -273,9 +273,10 @@ TESTS = test-accept$(EXEEXT) test-access$(EXEEXT) test-set-mode-acl.sh \
 	test-string-buffer-reversed$(EXEEXT) \
 	test-string-buffer$(EXEEXT) test-string-desc.sh \
 	test-string-h$(EXEEXT) test-strncpy$(EXEEXT) \
-	test-strnlen$(EXEEXT) test-strstr$(EXEEXT) \
-	test-strtol$(EXEEXT) test-strtoul$(EXEEXT) \
-	test-supersede$(EXEEXT) test-symlink$(EXEEXT) \
+	test-strnlen$(EXEEXT) test-strnul$(EXEEXT) \
+	test-strstr$(EXEEXT) test-strtol$(EXEEXT) \
+	test-strtoul$(EXEEXT) test-supersede$(EXEEXT) \
+	test-symlink$(EXEEXT) test-symlinkat$(EXEEXT) \
 	test-sys_ioctl-h$(EXEEXT) test-sys_random-h$(EXEEXT) \
 	test-sys_resource-h$(EXEEXT) test-sys_select-h$(EXEEXT) \
 	test-sys_socket-h$(EXEEXT) test-sys_stat-h$(EXEEXT) \
@@ -317,9 +318,9 @@ TESTS = test-accept$(EXEEXT) test-access$(EXEEXT) test-set-mode-acl.sh \
 	test-u8-mbtoucr$(EXEEXT) test-u8-prev$(EXEEXT) \
 	test-u8-strlen$(EXEEXT) test-u8-uctomb$(EXEEXT) \
 	test-uniwidth-h$(EXEEXT) test-unlink$(EXEEXT) \
-	test-unsetenv$(EXEEXT) $(am__EXEEXT_6) test-utime-h$(EXEEXT) \
-	test-vasnprintf$(EXEEXT) test-vasprintf$(EXEEXT) \
-	test-verify$(EXEEXT) test-verify.sh test-vsnprintf$(EXEEXT) \
+	test-unlinkat$(EXEEXT) test-unsetenv$(EXEEXT) $(am__EXEEXT_5) \
+	test-utime-h$(EXEEXT) test-vasnprintf$(EXEEXT) \
+	test-vasprintf$(EXEEXT) test-verify$(EXEEXT) test-verify.sh \
 	test-vsnzprintf-posix$(EXEEXT) test-wchar-h$(EXEEXT) \
 	test-wcrtomb.sh test-wcrtomb-w32-2.sh test-wcrtomb-w32-3.sh \
 	test-wcrtomb-w32-4.sh test-wcrtomb-w32-5.sh \
@@ -370,15 +371,16 @@ check_PROGRAMS = test-accept$(EXEEXT) test-access$(EXEEXT) \
 	test-endian$(EXEEXT) test-environ$(EXEEXT) \
 	test-errno-h$(EXEEXT) test-error$(EXEEXT) \
 	test-execute-main$(EXEEXT) test-execute-child$(EXEEXT) \
-	test-execute-script$(EXEEXT) test-fabs$(EXEEXT) \
-	test-fchdir$(EXEEXT) test-fcntl-h$(EXEEXT) test-fcntl$(EXEEXT) \
-	test-fdopen$(EXEEXT) test-fdopendir$(EXEEXT) \
-	test-fflush$(EXEEXT) test-fflush2$(EXEEXT) test-fgetc$(EXEEXT) \
+	test-execute-script$(EXEEXT) test-fchdir$(EXEEXT) \
+	test-fcntl-h$(EXEEXT) test-fcntl$(EXEEXT) test-fdopen$(EXEEXT) \
+	test-fdopendir$(EXEEXT) test-fflush$(EXEEXT) \
+	test-fflush2$(EXEEXT) test-fgetc$(EXEEXT) \
 	test-file-has-acl$(EXEEXT) test-filenamecat$(EXEEXT) \
 	test-fnmatch-h$(EXEEXT) test-fnmatch$(EXEEXT) \
 	test-fnmatch-w32$(EXEEXT) test-fopen-gnu$(EXEEXT) \
-	test-fopen$(EXEEXT) test-fpurge$(EXEEXT) test-fputc$(EXEEXT) \
-	test-fread$(EXEEXT) test-freading$(EXEEXT) test-free$(EXEEXT) \
+	test-fopen$(EXEEXT) test-fpending$(EXEEXT) \
+	test-fpurge$(EXEEXT) test-fputc$(EXEEXT) test-fread$(EXEEXT) \
+	test-freading$(EXEEXT) test-free$(EXEEXT) \
 	test-freopen$(EXEEXT) test-frexp-nolibm$(EXEEXT) \
 	test-frexpl-nolibm$(EXEEXT) test-fseek$(EXEEXT) \
 	test-fseeko$(EXEEXT) test-fseeko3$(EXEEXT) \
@@ -401,27 +403,25 @@ check_PROGRAMS = test-accept$(EXEEXT) test-access$(EXEEXT) \
 	test-inet_ntop$(EXEEXT) test-inet_pton$(EXEEXT) \
 	test-intprops$(EXEEXT) test-inttostr$(EXEEXT) \
 	test-inttypes-h$(EXEEXT) test-ioctl$(EXEEXT) \
-	test-isblank$(EXEEXT) test-isinf$(EXEEXT) test-isnan$(EXEEXT) \
-	test-isnand-nolibm$(EXEEXT) test-isnand$(EXEEXT) \
-	test-isnanf-nolibm$(EXEEXT) test-isnanf$(EXEEXT) \
-	test-isnanl-nolibm$(EXEEXT) test-isnanl$(EXEEXT) \
+	test-isblank$(EXEEXT) test-isnand-nolibm$(EXEEXT) \
+	test-isnanf-nolibm$(EXEEXT) test-isnanl-nolibm$(EXEEXT) \
 	test-iswblank$(EXEEXT) test-iswctype$(EXEEXT) \
 	test-iswdigit$(EXEEXT) test-iswpunct$(EXEEXT) \
 	test-iswxdigit$(EXEEXT) test-largefile$(EXEEXT) \
-	test-limits-h$(EXEEXT) test-listen$(EXEEXT) \
+	test-limits-h$(EXEEXT) test-link$(EXEEXT) test-listen$(EXEEXT) \
 	test-locale-h$(EXEEXT) test-localeconv$(EXEEXT) \
 	test-localeconv-mt$(EXEEXT) test-localename$(EXEEXT) \
-	test-rwlock1$(EXEEXT) test-lock$(EXEEXT) test-log10$(EXEEXT) \
-	test-lseek$(EXEEXT) test-lstat$(EXEEXT) \
-	test-malloc-gnu$(EXEEXT) test-malloc-posix$(EXEEXT) \
-	test-malloca$(EXEEXT) test-math-h$(EXEEXT) \
-	test-mbrtoc32$(EXEEXT) test-mbrtoc32-w32$(EXEEXT) \
-	test-mbrtowc$(EXEEXT) test-mbrtowc-w32$(EXEEXT) \
-	test-mbsinit$(EXEEXT) test-mbslen$(EXEEXT) \
-	test-mbsnlen$(EXEEXT) test-mbsrtoc32s$(EXEEXT) \
-	test-mbsrtowcs$(EXEEXT) test-mbsstr1$(EXEEXT) \
-	test-mbsstr2$(EXEEXT) test-mbsstr3$(EXEEXT) \
-	test-memchr$(EXEEXT) test-memcmp$(EXEEXT) test-memmem$(EXEEXT) \
+	test-rwlock1$(EXEEXT) test-lock$(EXEEXT) test-lseek$(EXEEXT) \
+	test-lstat$(EXEEXT) test-malloc-gnu$(EXEEXT) \
+	test-malloc-posix$(EXEEXT) test-malloca$(EXEEXT) \
+	test-math-h$(EXEEXT) test-mbrtoc32$(EXEEXT) \
+	test-mbrtoc32-w32$(EXEEXT) test-mbrtowc$(EXEEXT) \
+	test-mbrtowc-w32$(EXEEXT) test-mbsinit$(EXEEXT) \
+	test-mbslen$(EXEEXT) test-mbsnlen$(EXEEXT) \
+	test-mbsrtoc32s$(EXEEXT) test-mbsrtowcs$(EXEEXT) \
+	test-mbsstr1$(EXEEXT) test-mbsstr2$(EXEEXT) \
+	test-mbsstr3$(EXEEXT) test-memchr$(EXEEXT) \
+	test-memcmp$(EXEEXT) test-memmem$(EXEEXT) \
 	test-memmove$(EXEEXT) test-memrchr$(EXEEXT) \
 	test-memset$(EXEEXT) test-memset_explicit$(EXEEXT) \
 	test-mkdir$(EXEEXT) test-mkfifo$(EXEEXT) \
@@ -446,20 +446,21 @@ check_PROGRAMS = test-accept$(EXEEXT) test-access$(EXEEXT) \
 	test-posix_spawn-dup2-stdout$(EXEEXT) \
 	test-posix_spawn-dup2-stdin$(EXEEXT) \
 	test-posix_spawnp-script$(EXEEXT) \
-	test-posix_spawnp-vfork$(EXEEXT) test-pow$(EXEEXT) \
-	test-printf-frexp$(EXEEXT) test-printf-frexpl$(EXEEXT) \
-	test-priv-set$(EXEEXT) test-pselect$(EXEEXT) \
-	test-pthread-cond$(EXEEXT) test-pthread$(EXEEXT) \
-	test-pthread-mutex$(EXEEXT) test-pthread-mutex-type$(EXEEXT) \
-	test-pthread-once1$(EXEEXT) test-pthread-once2$(EXEEXT) \
-	test-pthread-rwlock$(EXEEXT) test-pthread-thread$(EXEEXT) \
-	test-pthread_sigmask1$(EXEEXT) test-pthread_sigmask2$(EXEEXT) \
-	test-putenv$(EXEEXT) test-quotearg-simple$(EXEEXT) \
-	test-raise$(EXEEXT) test-random$(EXEEXT) \
-	test-random-mt$(EXEEXT) test-random_r$(EXEEXT) \
-	test-rawmemchr$(EXEEXT) test-read-file$(EXEEXT) \
-	test-read$(EXEEXT) test-readlink$(EXEEXT) \
+	test-posix_spawnp-vfork$(EXEEXT) test-printf-frexp$(EXEEXT) \
+	test-printf-frexpl$(EXEEXT) test-priv-set$(EXEEXT) \
+	test-pselect$(EXEEXT) test-pthread-cond$(EXEEXT) \
+	test-pthread$(EXEEXT) test-pthread-mutex$(EXEEXT) \
+	test-pthread-mutex-type$(EXEEXT) test-pthread-once1$(EXEEXT) \
+	test-pthread-once2$(EXEEXT) test-pthread-rwlock$(EXEEXT) \
+	test-pthread-thread$(EXEEXT) test-pthread_sigmask1$(EXEEXT) \
+	test-pthread_sigmask2$(EXEEXT) test-putenv$(EXEEXT) \
+	test-quotearg-simple$(EXEEXT) test-raise$(EXEEXT) \
+	test-random$(EXEEXT) test-random-mt$(EXEEXT) \
+	test-random_r$(EXEEXT) test-rawmemchr$(EXEEXT) \
+	test-read-file$(EXEEXT) test-read$(EXEEXT) \
+	test-readlink$(EXEEXT) test-readlinkat$(EXEEXT) \
 	test-realloc-posix$(EXEEXT) test-reallocarray$(EXEEXT) \
+	test-rename$(EXEEXT) test-renameatu$(EXEEXT) \
 	test-rmdir$(EXEEXT) test-sched-h$(EXEEXT) test-select$(EXEEXT) \
 	test-select-fd$(EXEEXT) test-select-stdin$(EXEEXT) \
 	test-servent$(EXEEXT) test-setenv$(EXEEXT) \
@@ -477,6 +478,7 @@ check_PROGRAMS = test-accept$(EXEEXT) test-access$(EXEEXT) \
 	test-spawn-pipe-main$(EXEEXT) test-spawn-pipe-child$(EXEEXT) \
 	test-spawn-pipe-script$(EXEEXT) test-spin1$(EXEEXT) \
 	test-spin2$(EXEEXT) test-stat$(EXEEXT) test-stat-time$(EXEEXT) \
+	test-stdbit-h$(EXEEXT) test-stdc_memreverse8u$(EXEEXT) \
 	test-stdckdint-h$(EXEEXT) test-stdcountof-h$(EXEEXT) \
 	test-stddef-h$(EXEEXT) test-stdint-h$(EXEEXT) \
 	test-stdio-h$(EXEEXT) test-stdlib-h$(EXEEXT) \
@@ -487,9 +489,10 @@ check_PROGRAMS = test-accept$(EXEEXT) test-access$(EXEEXT) \
 	test-string-buffer-reversed$(EXEEXT) \
 	test-string-buffer$(EXEEXT) test-string-desc$(EXEEXT) \
 	test-string-h$(EXEEXT) test-strncpy$(EXEEXT) \
-	test-strnlen$(EXEEXT) test-strstr$(EXEEXT) \
-	test-strtol$(EXEEXT) test-strtoul$(EXEEXT) \
-	test-supersede$(EXEEXT) test-symlink$(EXEEXT) \
+	test-strnlen$(EXEEXT) test-strnul$(EXEEXT) \
+	test-strstr$(EXEEXT) test-strtol$(EXEEXT) \
+	test-strtoul$(EXEEXT) test-supersede$(EXEEXT) \
+	test-symlink$(EXEEXT) test-symlinkat$(EXEEXT) \
 	test-sys_ioctl-h$(EXEEXT) test-sys_random-h$(EXEEXT) \
 	test-sys_resource-h$(EXEEXT) test-sys_select-h$(EXEEXT) \
 	test-sys_socket-h$(EXEEXT) test-sys_stat-h$(EXEEXT) \
@@ -530,10 +533,10 @@ check_PROGRAMS = test-accept$(EXEEXT) test-access$(EXEEXT) \
 	test-u8-mbtoucr$(EXEEXT) test-u8-prev$(EXEEXT) \
 	test-u8-strlen$(EXEEXT) test-u8-uctomb$(EXEEXT) \
 	test-uniwidth-h$(EXEEXT) test-unlink$(EXEEXT) \
-	test-unsetenv$(EXEEXT) test-usleep$(EXEEXT) \
-	test-utime-h$(EXEEXT) test-vasnprintf$(EXEEXT) \
-	test-vasprintf$(EXEEXT) test-verify$(EXEEXT) \
-	test-vsnprintf$(EXEEXT) test-vsnzprintf-posix$(EXEEXT) \
+	test-unlinkat$(EXEEXT) test-unsetenv$(EXEEXT) \
+	test-usleep$(EXEEXT) test-utime-h$(EXEEXT) \
+	test-vasnprintf$(EXEEXT) test-vasprintf$(EXEEXT) \
+	test-verify$(EXEEXT) test-vsnzprintf-posix$(EXEEXT) \
 	test-wchar-h$(EXEEXT) test-wcrtomb$(EXEEXT) \
 	test-wcrtomb-w32$(EXEEXT) test-wctype-h$(EXEEXT) \
 	test-wctype$(EXEEXT) test-wcwidth$(EXEEXT) \
@@ -560,45 +563,43 @@ am__append_3 = c32rtomb.c
 @GL_COND_OBJ_FTRUNCATE_TRUE@am__append_12 = ftruncate.c
 @GL_COND_OBJ_GETPAGESIZE_TRUE@am__append_13 = getpagesize.c
 @GL_COND_OBJ_IOCTL_TRUE@am__append_14 = ioctl.c
-@GL_COND_OBJ_LISTEN_TRUE@am__append_15 = listen.c
-#am__append_16 = test-localcharset-w32utf8.sh
-#am__append_17 = test-localcharset-w32utf8 \
+@GL_COND_OBJ_LINK_TRUE@am__append_15 = link.c
+@GL_COND_OBJ_LISTEN_TRUE@am__append_16 = listen.c
+#am__append_17 = test-localcharset-w32utf8.sh
+#am__append_18 = test-localcharset-w32utf8 \
 #	test-localename-w32utf8 \
 #	test-mbrtowc-w32utf8
-#am__append_18 =  \
+#am__append_19 =  \
 #	test-localcharset-windows-utf8.res \
 #	test-localename-windows-utf8.res \
 #	test-mbrtowc-windows-utf8.res
-#am__append_19 = test-localename-w32utf8.sh
-#am__append_20 = test-mbrtowc-w32utf8.sh
-@GL_COND_OBJ_MKFIFO_TRUE@am__append_21 = mkfifo.c
-@GL_COND_OBJ_NANOSLEEP_TRUE@am__append_22 = nanosleep.c
-@GL_COND_OBJ_PERROR_TRUE@am__append_23 = perror.c
-@GL_COND_OBJ_PSELECT_TRUE@am__append_24 = pselect.c
-@GL_COND_OBJ_PTHREAD_COND_TRUE@am__append_25 = pthread-cond.c
-@GL_COND_OBJ_PTHREAD_MUTEX_TRUE@am__append_26 = pthread-mutex.c
-@GL_COND_OBJ_PTHREAD_RWLOCK_TRUE@am__append_27 = pthread-rwlock.c
-@GL_COND_OBJ_PTHREAD_THREAD_TRUE@am__append_28 = pthread-thread.c
-@GL_COND_OBJ_PTHREAD_MUTEX_TIMEDLOCK_TRUE@am__append_29 = pthread_mutex_timedlock.c
-#am__append_30 = pthread_sigmask.c
-
-# Work around https://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=57214
-@OS_IS_NETBSD_FALSE@am__append_31 = test-pthread_sigmask1
-@GL_COND_OBJ_PUTENV_TRUE@am__append_32 = putenv.c
-@GL_COND_OBJ_RANDOM_TRUE@am__append_33 = random.c
-@GL_COND_OBJ_RANDOM_R_TRUE@am__append_34 = random_r.c
-@GL_COND_OBJ_SCHED_YIELD_TRUE@am__append_35 = sched_yield.c
-@GL_COND_OBJ_SELECT_TRUE@am__append_36 = select.c
-#am__append_37 = test-setlocale-w32utf8.sh
-#am__append_38 = test-setlocale-w32utf8
-#am__append_39 = test-setlocale-windows-utf8.res
-@GL_COND_OBJ_SETSOCKOPT_TRUE@am__append_40 = setsockopt.c
+#am__append_20 = test-localename-w32utf8.sh
+#am__append_21 = test-mbrtowc-w32utf8.sh
+@GL_COND_OBJ_MKFIFO_TRUE@am__append_22 = mkfifo.c
+@GL_COND_OBJ_NANOSLEEP_TRUE@am__append_23 = nanosleep.c
+@GL_COND_OBJ_PERROR_TRUE@am__append_24 = perror.c
+@GL_COND_OBJ_PSELECT_TRUE@am__append_25 = pselect.c
+@GL_COND_OBJ_PTHREAD_COND_TRUE@am__append_26 = pthread-cond.c
+@GL_COND_OBJ_PTHREAD_MUTEX_TRUE@am__append_27 = pthread-mutex.c
+@GL_COND_OBJ_PTHREAD_RWLOCK_TRUE@am__append_28 = pthread-rwlock.c
+@GL_COND_OBJ_PTHREAD_THREAD_TRUE@am__append_29 = pthread-thread.c
+@GL_COND_OBJ_PTHREAD_MUTEX_TIMEDLOCK_TRUE@am__append_30 = pthread_mutex_timedlock.c
+@GL_COND_OBJ_PUTENV_TRUE@am__append_31 = putenv.c
+@GL_COND_OBJ_RANDOM_TRUE@am__append_32 = random.c
+@GL_COND_OBJ_RANDOM_R_TRUE@am__append_33 = random_r.c
+@GL_COND_OBJ_SCHED_YIELD_TRUE@am__append_34 = sched_yield.c
+@GL_COND_OBJ_SELECT_TRUE@am__append_35 = select.c
+#am__append_36 = test-setlocale-w32utf8.sh
+#am__append_37 = test-setlocale-w32utf8
+#am__append_38 = test-setlocale-windows-utf8.res
+@GL_COND_OBJ_SETSOCKOPT_TRUE@am__append_39 = setsockopt.c
 
 # Work around https://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=57213
-@OS_IS_NETBSD_FALSE@am__append_41 = test-sigprocmask
-@GL_COND_OBJ_SLEEP_TRUE@am__append_42 = sleep.c
-@GL_COND_OBJ_SOCKET_TRUE@am__append_43 = socket.c
-@GL_COND_OBJ_SYMLINK_TRUE@am__append_44 = symlink.c
+@OS_IS_NETBSD_FALSE@am__append_40 = test-sigprocmask
+@GL_COND_OBJ_SLEEP_TRUE@am__append_41 = sleep.c
+@GL_COND_OBJ_SOCKET_TRUE@am__append_42 = socket.c
+@GL_COND_OBJ_SYMLINK_TRUE@am__append_43 = symlink.c
+@GL_COND_OBJ_SYMLINKAT_TRUE@am__append_44 = symlinkat.c
 @GL_COND_OBJ_TIME_TRUE@am__append_45 = time.c
 
 # Unlike other libunistring modules, this test passes only when the
@@ -610,27 +611,40 @@ am__append_3 = c32rtomb.c
 @LIBUNISTRING_COMPILE_UNISTR_U32_SET_TRUE@am__append_50 = unistr/u32-set.c
 @LIBUNISTRING_COMPILE_UNISTR_U8_CMP_TRUE@am__append_51 = unistr/u8-cmp.c
 @LIBUNISTRING_COMPILE_UNISTR_U8_STRLEN_TRUE@am__append_52 = unistr/u8-strlen.c
-@GL_COND_OBJ_USLEEP_TRUE@am__append_53 = usleep.c
-@OS_IS_CYGWIN_FALSE@am__append_54 = test-usleep
-#am__append_55 = wcrtomb.c
-@GL_COND_OBJ_WCTOB_TRUE@am__append_56 = wctob.c
-@GL_COND_OBJ_WCTOMB_TRUE@am__append_57 = wctomb.c
-@GL_COND_OBJ_WINDOWS_COND_TRUE@am__append_58 = windows-cond.c
-#am__append_59 = windows-thread.c
-@GL_COND_OBJ_WINDOWS_TIMEDMUTEX_TRUE@am__append_60 = windows-timedmutex.c
-@GL_COND_OBJ_WINDOWS_TIMEDRECMUTEX_TRUE@am__append_61 = windows-timedrecmutex.c
-@GL_COND_OBJ_WINDOWS_TIMEDRWLOCK_TRUE@am__append_62 = windows-timedrwlock.c
+@GL_COND_OBJ_UNLINKAT_TRUE@am__append_53 = unlinkat.c
+@GL_COND_OBJ_USLEEP_TRUE@am__append_54 = usleep.c
+@OS_IS_CYGWIN_FALSE@am__append_55 = test-usleep
+#am__append_56 = wcrtomb.c
+@GL_COND_OBJ_WCTOB_TRUE@am__append_57 = wctob.c
+@GL_COND_OBJ_WCTOMB_TRUE@am__append_58 = wctomb.c
+@GL_COND_OBJ_WINDOWS_COND_TRUE@am__append_59 = windows-cond.c
+#am__append_60 = windows-thread.c
+@GL_COND_OBJ_WINDOWS_TIMEDMUTEX_TRUE@am__append_61 = windows-timedmutex.c
+@GL_COND_OBJ_WINDOWS_TIMEDRECMUTEX_TRUE@am__append_62 = windows-timedrecmutex.c
+@GL_COND_OBJ_WINDOWS_TIMEDRWLOCK_TRUE@am__append_63 = windows-timedrwlock.c
 subdir = gnulib-tests
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
-	$(top_srcdir)/libgettextpo/gnulib-m4/fsync.m4 \
 	$(top_srcdir)/libgettextpo/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/langinfo_h.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/mbrlen.m4 \
+	$(top_srcdir)/libgrep/gnulib-m4/mbrtoc32-regular.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/nl_langinfo.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/nullptr.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/regex.m4 \
+	$(top_srcdir)/../m4/fixautomake.m4 \
+	$(top_srcdir)/../m4/init-package-version.m4 \
+	$(top_srcdir)/../m4/more-warnings.m4 \
+	$(top_srcdir)/../m4/woe32-dll.m4 \
+	$(top_srcdir)/../gettext-runtime/m4/glibc2.m4 \
+	$(top_srcdir)/../gettext-runtime/m4/nls.m4 \
+	$(top_srcdir)/../gettext-runtime/m4/po.m4 \
+	$(top_srcdir)/../gettext-runtime/m4/progtest.m4 \
+	$(top_srcdir)/m4/exported.m4 $(top_srcdir)/m4/hostname.m4 \
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/locale-de.m4 \
+	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
 	$(top_srcdir)/gnulib-m4/00gnulib.m4 \
 	$(top_srcdir)/gnulib-m4/__inline.m4 \
 	$(top_srcdir)/gnulib-m4/absolute-header.m4 \
@@ -648,6 +662,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/bison-i18n.m4 \
 	$(top_srcdir)/gnulib-m4/bison.m4 \
 	$(top_srcdir)/gnulib-m4/btowc.m4 \
+	$(top_srcdir)/gnulib-m4/build-to-host.m4 \
 	$(top_srcdir)/gnulib-m4/builtin-expect.m4 \
 	$(top_srcdir)/gnulib-m4/byteswap.m4 \
 	$(top_srcdir)/gnulib-m4/c-bool.m4 \
@@ -655,7 +670,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/calloc.m4 \
 	$(top_srcdir)/gnulib-m4/canonicalize.m4 \
 	$(top_srcdir)/gnulib-m4/chdir-long.m4 \
-	$(top_srcdir)/gnulib-m4/check-math-lib.m4 \
 	$(top_srcdir)/gnulib-m4/clock_time.m4 \
 	$(top_srcdir)/gnulib-m4/close.m4 \
 	$(top_srcdir)/gnulib-m4/closedir.m4 \
@@ -687,7 +701,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/extensions-aix.m4 \
 	$(top_srcdir)/gnulib-m4/extensions.m4 \
 	$(top_srcdir)/gnulib-m4/extern-inline.m4 \
-	$(top_srcdir)/gnulib-m4/fabs.m4 \
 	$(top_srcdir)/gnulib-m4/fatal-signal.m4 \
 	$(top_srcdir)/gnulib-m4/fchdir.m4 \
 	$(top_srcdir)/gnulib-m4/fclose.m4 \
@@ -705,6 +718,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/fnmatch.m4 \
 	$(top_srcdir)/gnulib-m4/fnmatch_h.m4 \
 	$(top_srcdir)/gnulib-m4/fopen.m4 \
+	$(top_srcdir)/gnulib-m4/fpending.m4 \
 	$(top_srcdir)/gnulib-m4/fpieee.m4 \
 	$(top_srcdir)/gnulib-m4/fpurge.m4 \
 	$(top_srcdir)/gnulib-m4/freading.m4 \
@@ -733,6 +747,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/getprogname.m4 \
 	$(top_srcdir)/gnulib-m4/getrandom.m4 \
 	$(top_srcdir)/gnulib-m4/getrusage.m4 \
+	$(top_srcdir)/gnulib-m4/gettext.m4 \
 	$(top_srcdir)/gnulib-m4/gettext_h.m4 \
 	$(top_srcdir)/gnulib-m4/gettime.m4 \
 	$(top_srcdir)/gnulib-m4/gettimeofday.m4 \
@@ -758,8 +773,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/inttypes_h.m4 \
 	$(top_srcdir)/gnulib-m4/ioctl.m4 \
 	$(top_srcdir)/gnulib-m4/isblank.m4 \
-	$(top_srcdir)/gnulib-m4/isinf.m4 \
-	$(top_srcdir)/gnulib-m4/isnan.m4 \
 	$(top_srcdir)/gnulib-m4/isnand.m4 \
 	$(top_srcdir)/gnulib-m4/isnanf.m4 \
 	$(top_srcdir)/gnulib-m4/isnanl.m4 \
@@ -782,8 +795,8 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/libunistring-base.m4 \
 	$(top_srcdir)/gnulib-m4/libunistring-optional.m4 \
 	$(top_srcdir)/gnulib-m4/libunistring.m4 \
-	$(top_srcdir)/gnulib-m4/libxml.m4 \
 	$(top_srcdir)/gnulib-m4/limits-h.m4 \
+	$(top_srcdir)/gnulib-m4/link.m4 \
 	$(top_srcdir)/gnulib-m4/localcharset.m4 \
 	$(top_srcdir)/gnulib-m4/locale-en.m4 \
 	$(top_srcdir)/gnulib-m4/locale-fr.m4 \
@@ -795,14 +808,12 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/localename.m4 \
 	$(top_srcdir)/gnulib-m4/localtime.m4 \
 	$(top_srcdir)/gnulib-m4/lock.m4 \
-	$(top_srcdir)/gnulib-m4/log10.m4 \
 	$(top_srcdir)/gnulib-m4/lseek.m4 \
 	$(top_srcdir)/gnulib-m4/lstat.m4 \
 	$(top_srcdir)/gnulib-m4/malloc.m4 \
 	$(top_srcdir)/gnulib-m4/malloca.m4 \
 	$(top_srcdir)/gnulib-m4/manywarnings.m4 \
 	$(top_srcdir)/gnulib-m4/math_h.m4 \
-	$(top_srcdir)/gnulib-m4/mathfunc.m4 \
 	$(top_srcdir)/gnulib-m4/mbchar.m4 \
 	$(top_srcdir)/gnulib-m4/mbiter.m4 \
 	$(top_srcdir)/gnulib-m4/mbrtoc32.m4 \
@@ -811,7 +822,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/mbslen.m4 \
 	$(top_srcdir)/gnulib-m4/mbsrtowcs.m4 \
 	$(top_srcdir)/gnulib-m4/mbstate_t.m4 \
-	$(top_srcdir)/gnulib-m4/mbswidth.m4 \
 	$(top_srcdir)/gnulib-m4/mbtowc.m4 \
 	$(top_srcdir)/gnulib-m4/memchr.m4 \
 	$(top_srcdir)/gnulib-m4/memcmp.m4 \
@@ -837,7 +847,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/nanosleep.m4 \
 	$(top_srcdir)/gnulib-m4/netdb_h.m4 \
 	$(top_srcdir)/gnulib-m4/netinet_in_h.m4 \
-	$(top_srcdir)/gnulib-m4/no-c++.m4 \
 	$(top_srcdir)/gnulib-m4/nocrash.m4 \
 	$(top_srcdir)/gnulib-m4/obstack.m4 \
 	$(top_srcdir)/gnulib-m4/off64_t.m4 \
@@ -855,7 +864,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/pipe2.m4 \
 	$(top_srcdir)/gnulib-m4/posix_spawn.m4 \
 	$(top_srcdir)/gnulib-m4/posix_spawn_faction_addchdir.m4 \
-	$(top_srcdir)/gnulib-m4/pow.m4 \
 	$(top_srcdir)/gnulib-m4/printf-frexp.m4 \
 	$(top_srcdir)/gnulib-m4/printf-frexpl.m4 \
 	$(top_srcdir)/gnulib-m4/printf.m4 \
@@ -882,10 +890,13 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/read.m4 \
 	$(top_srcdir)/gnulib-m4/readdir.m4 \
 	$(top_srcdir)/gnulib-m4/readlink.m4 \
+	$(top_srcdir)/gnulib-m4/readlinkat.m4 \
 	$(top_srcdir)/gnulib-m4/realloc.m4 \
 	$(top_srcdir)/gnulib-m4/reallocarray.m4 \
 	$(top_srcdir)/gnulib-m4/relocatable-lib.m4 \
 	$(top_srcdir)/gnulib-m4/relocatable.m4 \
+	$(top_srcdir)/gnulib-m4/rename.m4 \
+	$(top_srcdir)/gnulib-m4/renameat.m4 \
 	$(top_srcdir)/gnulib-m4/rewinddir.m4 \
 	$(top_srcdir)/gnulib-m4/rmdir.m4 \
 	$(top_srcdir)/gnulib-m4/safe-read.m4 \
@@ -925,6 +936,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/stat.m4 \
 	$(top_srcdir)/gnulib-m4/stdalign.m4 \
 	$(top_srcdir)/gnulib-m4/stdarg.m4 \
+	$(top_srcdir)/gnulib-m4/stdbit_h.m4 \
 	$(top_srcdir)/gnulib-m4/stdckdint_h.m4 \
 	$(top_srcdir)/gnulib-m4/stdcountof_h.m4 \
 	$(top_srcdir)/gnulib-m4/stddef_h.m4 \
@@ -950,6 +962,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/strtoul.m4 \
 	$(top_srcdir)/gnulib-m4/supersede.m4 \
 	$(top_srcdir)/gnulib-m4/symlink.m4 \
+	$(top_srcdir)/gnulib-m4/symlinkat.m4 \
 	$(top_srcdir)/gnulib-m4/sys_cdefs_h.m4 \
 	$(top_srcdir)/gnulib-m4/sys_ioctl_h.m4 \
 	$(top_srcdir)/gnulib-m4/sys_random_h.m4 \
@@ -978,6 +991,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/unistd_h.m4 \
 	$(top_srcdir)/gnulib-m4/unitypes_h.m4 \
 	$(top_srcdir)/gnulib-m4/unlink.m4 \
+	$(top_srcdir)/gnulib-m4/unlinkat.m4 \
 	$(top_srcdir)/gnulib-m4/unlinkdir.m4 \
 	$(top_srcdir)/gnulib-m4/unlocked-io.m4 \
 	$(top_srcdir)/gnulib-m4/usleep.m4 \
@@ -988,7 +1002,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/vasnprintf.m4 \
 	$(top_srcdir)/gnulib-m4/vasprintf.m4 \
 	$(top_srcdir)/gnulib-m4/visibility.m4 \
-	$(top_srcdir)/gnulib-m4/vsnprintf.m4 \
 	$(top_srcdir)/gnulib-m4/wait-process.m4 \
 	$(top_srcdir)/gnulib-m4/waitpid.m4 \
 	$(top_srcdir)/gnulib-m4/warn-on-use.m4 \
@@ -1012,24 +1025,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/xstrtol.m4 \
 	$(top_srcdir)/gnulib-m4/xvasprintf.m4 \
 	$(top_srcdir)/gnulib-m4/yield.m4 \
-	$(top_srcdir)/gnulib-m4/zzgnulib.m4 \
-	$(top_srcdir)/../m4/fixautomake.m4 \
-	$(top_srcdir)/../m4/init-package-version.m4 \
-	$(top_srcdir)/../m4/libtool.m4 \
-	$(top_srcdir)/../m4/ltoptions.m4 \
-	$(top_srcdir)/../m4/ltsugar.m4 \
-	$(top_srcdir)/../m4/ltversion.m4 \
-	$(top_srcdir)/../m4/lt~obsolete.m4 \
-	$(top_srcdir)/../m4/more-warnings.m4 \
-	$(top_srcdir)/../m4/woe32-dll.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/build-to-host.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/gettext.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/glibc2.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/nls.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/po.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/progtest.m4 \
-	$(top_srcdir)/m4/exported.m4 $(top_srcdir)/m4/hostname.m4 \
-	$(top_srcdir)/m4/locale-de.m4 $(top_srcdir)/configure.ac
+	$(top_srcdir)/gnulib-m4/zzgnulib.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(noinst_HEADERS) \
@@ -1060,18 +1056,18 @@ am__libtests_a_SOURCES_DIST = accept.c copy-acl.c set-acl.c \
 	connect.c creat.c dtotimespec.c endian.c fflush.c \
 	filenamecat.c fpurge.c freading.c freopen.c fseek.c fseeko.c \
 	ftruncate.c getpagesize.c imaxtostr.c inttostr.c offtostr.c \
-	uinttostr.c umaxtostr.c ioctl.c listen.c mkfifo.c nan.h \
+	uinttostr.c umaxtostr.c ioctl.c link.c listen.c mkfifo.c nan.h \
 	nanosleep.c gl_oset.h gl_oset.c perror.c priv-set.c pselect.c \
 	pthread-cond.c pthread-mutex.c pthread-rwlock.c \
-	pthread-thread.c pthread_mutex_timedlock.c pthread_sigmask.c \
-	putenv.c qset-acl.c random.c random_r.c sched_yield.c select.c \
-	setsockopt.c signed-nan.h signed-snan.h sleep.c snan.h \
-	socket.c str_endswith.c symlink.c glthread/thread.h \
-	glthread/thread.c time.c timespec-add.c timespec-sub.c \
-	unistr/u16-cmp.c unistr/u32-cmp.c unistr/u32-set.c \
-	unistr/u8-cmp.c unistr/u8-strlen.c unlinkdir.c usleep.c \
-	vma-iter.c wcrtomb.c wctob.c wctomb.c windows-cond.c \
-	windows-thread.c windows-timedmutex.c windows-timedrecmutex.c \
+	pthread-thread.c pthread_mutex_timedlock.c putenv.c qset-acl.c \
+	random.c random_r.c sched_yield.c select.c setsockopt.c \
+	signed-nan.h signed-snan.h sleep.c snan.h socket.c symlink.c \
+	symlinkat.c glthread/thread.h glthread/thread.c time.c \
+	timespec-add.c timespec-sub.c unistr/u16-cmp.c \
+	unistr/u32-cmp.c unistr/u32-set.c unistr/u8-cmp.c \
+	unistr/u8-strlen.c unlinkat.c unlinkdir.c usleep.c vma-iter.c \
+	wcrtomb.c wctob.c wctomb.c windows-cond.c windows-thread.c \
+	windows-timedmutex.c windows-timedrecmutex.c \
 	windows-timedrwlock.c xgetcwd.c gl_xoset.h gl_xoset.c \
 	xstrtol-error.c glthread/yield.h
 @GL_COND_OBJ_ACCEPT_TRUE@am__objects_1 = accept.$(OBJEXT)
@@ -1088,22 +1084,21 @@ am__objects_3 = c32rtomb.$(OBJEXT)
 @GL_COND_OBJ_FTRUNCATE_TRUE@am__objects_12 = ftruncate.$(OBJEXT)
 @GL_COND_OBJ_GETPAGESIZE_TRUE@am__objects_13 = getpagesize.$(OBJEXT)
 @GL_COND_OBJ_IOCTL_TRUE@am__objects_14 = ioctl.$(OBJEXT)
-@GL_COND_OBJ_LISTEN_TRUE@am__objects_15 = listen.$(OBJEXT)
-@GL_COND_OBJ_MKFIFO_TRUE@am__objects_16 = mkfifo.$(OBJEXT)
-@GL_COND_OBJ_NANOSLEEP_TRUE@am__objects_17 = nanosleep.$(OBJEXT)
-@GL_COND_OBJ_PERROR_TRUE@am__objects_18 = perror.$(OBJEXT)
-@GL_COND_OBJ_PSELECT_TRUE@am__objects_19 = pselect.$(OBJEXT)
-@GL_COND_OBJ_PTHREAD_COND_TRUE@am__objects_20 =  \
+@GL_COND_OBJ_LINK_TRUE@am__objects_15 = link.$(OBJEXT)
+@GL_COND_OBJ_LISTEN_TRUE@am__objects_16 = listen.$(OBJEXT)
+@GL_COND_OBJ_MKFIFO_TRUE@am__objects_17 = mkfifo.$(OBJEXT)
+@GL_COND_OBJ_NANOSLEEP_TRUE@am__objects_18 = nanosleep.$(OBJEXT)
+@GL_COND_OBJ_PERROR_TRUE@am__objects_19 = perror.$(OBJEXT)
+@GL_COND_OBJ_PSELECT_TRUE@am__objects_20 = pselect.$(OBJEXT)
+@GL_COND_OBJ_PTHREAD_COND_TRUE@am__objects_21 =  \
 @GL_COND_OBJ_PTHREAD_COND_TRUE@	pthread-cond.$(OBJEXT)
-@GL_COND_OBJ_PTHREAD_MUTEX_TRUE@am__objects_21 =  \
+@GL_COND_OBJ_PTHREAD_MUTEX_TRUE@am__objects_22 =  \
 @GL_COND_OBJ_PTHREAD_MUTEX_TRUE@	pthread-mutex.$(OBJEXT)
-@GL_COND_OBJ_PTHREAD_RWLOCK_TRUE@am__objects_22 =  \
+@GL_COND_OBJ_PTHREAD_RWLOCK_TRUE@am__objects_23 =  \
 @GL_COND_OBJ_PTHREAD_RWLOCK_TRUE@	pthread-rwlock.$(OBJEXT)
-@GL_COND_OBJ_PTHREAD_THREAD_TRUE@am__objects_23 =  \
+@GL_COND_OBJ_PTHREAD_THREAD_TRUE@am__objects_24 =  \
 @GL_COND_OBJ_PTHREAD_THREAD_TRUE@	pthread-thread.$(OBJEXT)
-@GL_COND_OBJ_PTHREAD_MUTEX_TIMEDLOCK_TRUE@am__objects_24 = pthread_mutex_timedlock.$(OBJEXT)
-#am__objects_25 =  \
-#	pthread_sigmask.$(OBJEXT)
+@GL_COND_OBJ_PTHREAD_MUTEX_TIMEDLOCK_TRUE@am__objects_25 = pthread_mutex_timedlock.$(OBJEXT)
 @GL_COND_OBJ_PUTENV_TRUE@am__objects_26 = putenv.$(OBJEXT)
 @GL_COND_OBJ_RANDOM_TRUE@am__objects_27 = random.$(OBJEXT)
 @GL_COND_OBJ_RANDOM_R_TRUE@am__objects_28 = random_r.$(OBJEXT)
@@ -1113,24 +1108,26 @@ am__objects_3 = c32rtomb.$(OBJEXT)
 @GL_COND_OBJ_SLEEP_TRUE@am__objects_32 = sleep.$(OBJEXT)
 @GL_COND_OBJ_SOCKET_TRUE@am__objects_33 = socket.$(OBJEXT)
 @GL_COND_OBJ_SYMLINK_TRUE@am__objects_34 = symlink.$(OBJEXT)
+@GL_COND_OBJ_SYMLINKAT_TRUE@am__objects_35 = symlinkat.$(OBJEXT)
 am__dirstamp = $(am__leading_dot)dirstamp
-@GL_COND_OBJ_TIME_TRUE@am__objects_35 = time.$(OBJEXT)
-@LIBUNISTRING_COMPILE_UNISTR_U16_CMP_TRUE@am__objects_36 = unistr/u16-cmp.$(OBJEXT)
-@LIBUNISTRING_COMPILE_UNISTR_U32_CMP_TRUE@am__objects_37 = unistr/u32-cmp.$(OBJEXT)
-@LIBUNISTRING_COMPILE_UNISTR_U32_SET_TRUE@am__objects_38 = unistr/u32-set.$(OBJEXT)
-@LIBUNISTRING_COMPILE_UNISTR_U8_CMP_TRUE@am__objects_39 = unistr/u8-cmp.$(OBJEXT)
-@LIBUNISTRING_COMPILE_UNISTR_U8_STRLEN_TRUE@am__objects_40 = unistr/u8-strlen.$(OBJEXT)
-@GL_COND_OBJ_USLEEP_TRUE@am__objects_41 = usleep.$(OBJEXT)
-#am__objects_42 = wcrtomb.$(OBJEXT)
-@GL_COND_OBJ_WCTOB_TRUE@am__objects_43 = wctob.$(OBJEXT)
-@GL_COND_OBJ_WCTOMB_TRUE@am__objects_44 = wctomb.$(OBJEXT)
-@GL_COND_OBJ_WINDOWS_COND_TRUE@am__objects_45 =  \
+@GL_COND_OBJ_TIME_TRUE@am__objects_36 = time.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNISTR_U16_CMP_TRUE@am__objects_37 = unistr/u16-cmp.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNISTR_U32_CMP_TRUE@am__objects_38 = unistr/u32-cmp.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNISTR_U32_SET_TRUE@am__objects_39 = unistr/u32-set.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNISTR_U8_CMP_TRUE@am__objects_40 = unistr/u8-cmp.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNISTR_U8_STRLEN_TRUE@am__objects_41 = unistr/u8-strlen.$(OBJEXT)
+@GL_COND_OBJ_UNLINKAT_TRUE@am__objects_42 = unlinkat.$(OBJEXT)
+@GL_COND_OBJ_USLEEP_TRUE@am__objects_43 = usleep.$(OBJEXT)
+#am__objects_44 = wcrtomb.$(OBJEXT)
+@GL_COND_OBJ_WCTOB_TRUE@am__objects_45 = wctob.$(OBJEXT)
+@GL_COND_OBJ_WCTOMB_TRUE@am__objects_46 = wctomb.$(OBJEXT)
+@GL_COND_OBJ_WINDOWS_COND_TRUE@am__objects_47 =  \
 @GL_COND_OBJ_WINDOWS_COND_TRUE@	windows-cond.$(OBJEXT)
-#am__objects_46 =  \
+#am__objects_48 =  \
 #	windows-thread.$(OBJEXT)
-@GL_COND_OBJ_WINDOWS_TIMEDMUTEX_TRUE@am__objects_47 = windows-timedmutex.$(OBJEXT)
-@GL_COND_OBJ_WINDOWS_TIMEDRECMUTEX_TRUE@am__objects_48 = windows-timedrecmutex.$(OBJEXT)
-@GL_COND_OBJ_WINDOWS_TIMEDRWLOCK_TRUE@am__objects_49 = windows-timedrwlock.$(OBJEXT)
+@GL_COND_OBJ_WINDOWS_TIMEDMUTEX_TRUE@am__objects_49 = windows-timedmutex.$(OBJEXT)
+@GL_COND_OBJ_WINDOWS_TIMEDRECMUTEX_TRUE@am__objects_50 = windows-timedrecmutex.$(OBJEXT)
+@GL_COND_OBJ_WINDOWS_TIMEDRWLOCK_TRUE@am__objects_51 = windows-timedrwlock.$(OBJEXT)
 am_libtests_a_OBJECTS = $(am__objects_1) copy-acl.$(OBJEXT) \
 	set-acl.$(OBJEXT) gl_array_map.$(OBJEXT) \
 	gl_array_oset.$(OBJEXT) gl_array_set.$(OBJEXT) \
@@ -1142,22 +1139,22 @@ am_libtests_a_OBJECTS = $(am__objects_1) copy-acl.$(OBJEXT) \
 	$(am__objects_13) imaxtostr.$(OBJEXT) inttostr.$(OBJEXT) \
 	offtostr.$(OBJEXT) uinttostr.$(OBJEXT) umaxtostr.$(OBJEXT) \
 	$(am__objects_14) $(am__objects_15) $(am__objects_16) \
-	$(am__objects_17) gl_oset.$(OBJEXT) $(am__objects_18) \
-	priv-set.$(OBJEXT) $(am__objects_19) $(am__objects_20) \
+	$(am__objects_17) $(am__objects_18) gl_oset.$(OBJEXT) \
+	$(am__objects_19) priv-set.$(OBJEXT) $(am__objects_20) \
 	$(am__objects_21) $(am__objects_22) $(am__objects_23) \
 	$(am__objects_24) $(am__objects_25) $(am__objects_26) \
 	qset-acl.$(OBJEXT) $(am__objects_27) $(am__objects_28) \
 	$(am__objects_29) $(am__objects_30) $(am__objects_31) \
-	$(am__objects_32) $(am__objects_33) str_endswith.$(OBJEXT) \
-	$(am__objects_34) glthread/thread.$(OBJEXT) $(am__objects_35) \
+	$(am__objects_32) $(am__objects_33) $(am__objects_34) \
+	$(am__objects_35) glthread/thread.$(OBJEXT) $(am__objects_36) \
 	timespec-add.$(OBJEXT) timespec-sub.$(OBJEXT) \
-	$(am__objects_36) $(am__objects_37) $(am__objects_38) \
-	$(am__objects_39) $(am__objects_40) unlinkdir.$(OBJEXT) \
-	$(am__objects_41) vma-iter.$(OBJEXT) $(am__objects_42) \
-	$(am__objects_43) $(am__objects_44) $(am__objects_45) \
-	$(am__objects_46) $(am__objects_47) $(am__objects_48) \
-	$(am__objects_49) xgetcwd.$(OBJEXT) gl_xoset.$(OBJEXT) \
-	xstrtol-error.$(OBJEXT)
+	$(am__objects_37) $(am__objects_38) $(am__objects_39) \
+	$(am__objects_40) $(am__objects_41) $(am__objects_42) \
+	unlinkdir.$(OBJEXT) $(am__objects_43) vma-iter.$(OBJEXT) \
+	$(am__objects_44) $(am__objects_45) $(am__objects_46) \
+	$(am__objects_47) $(am__objects_48) $(am__objects_49) \
+	$(am__objects_50) $(am__objects_51) xgetcwd.$(OBJEXT) \
+	gl_xoset.$(OBJEXT) xstrtol-error.$(OBJEXT)
 libtests_a_OBJECTS = $(am_libtests_a_OBJECTS)
 am_current_locale_OBJECTS = locale.$(OBJEXT)
 current_locale_OBJECTS = $(am_current_locale_OBJECTS)
@@ -1232,11 +1229,7 @@ test_assert_DEPENDENCIES = libtests.a ../gnulib-lib/libgettextlib.la \
 	$(am__DEPENDENCIES_1)
 test_asyncsafe_spin1_SOURCES = test-asyncsafe-spin1.c
 test_asyncsafe_spin1_OBJECTS = test-asyncsafe-spin1.$(OBJEXT)
-test_asyncsafe_spin1_LDADD = $(LDADD)
-test_asyncsafe_spin1_DEPENDENCIES = libtests.a \
-	../gnulib-lib/libgettextlib.la libtests.a \
-	../gnulib-lib/libgettextlib.la libtests.a \
-	$(am__DEPENDENCIES_1)
+test_asyncsafe_spin1_DEPENDENCIES = $(am__DEPENDENCIES_2)
 test_asyncsafe_spin2_SOURCES = test-asyncsafe-spin2.c
 test_asyncsafe_spin2_OBJECTS = test-asyncsafe-spin2.$(OBJEXT)
 test_asyncsafe_spin2_DEPENDENCIES = $(am__DEPENDENCIES_2)
@@ -1603,9 +1596,6 @@ test_execute_script_OBJECTS =  \
 	test_execute_script-test-execute-script.$(OBJEXT)
 test_execute_script_DEPENDENCIES = $(am__DEPENDENCIES_2) \
 	$(am__DEPENDENCIES_1)
-am_test_fabs_OBJECTS = test-fabs.$(OBJEXT) randomd.$(OBJEXT)
-test_fabs_OBJECTS = $(am_test_fabs_OBJECTS)
-test_fabs_DEPENDENCIES = $(am__DEPENDENCIES_2)
 test_fchdir_SOURCES = test-fchdir.c
 test_fchdir_OBJECTS = test-fchdir.$(OBJEXT)
 test_fchdir_DEPENDENCIES = $(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1)
@@ -1684,6 +1674,12 @@ test_fopen_gnu_LDADD = $(LDADD)
 test_fopen_gnu_DEPENDENCIES = libtests.a \
 	../gnulib-lib/libgettextlib.la libtests.a \
 	../gnulib-lib/libgettextlib.la libtests.a \
+	$(am__DEPENDENCIES_1)
+test_fpending_SOURCES = test-fpending.c
+test_fpending_OBJECTS = test-fpending.$(OBJEXT)
+test_fpending_LDADD = $(LDADD)
+test_fpending_DEPENDENCIES = libtests.a ../gnulib-lib/libgettextlib.la \
+	libtests.a ../gnulib-lib/libgettextlib.la libtests.a \
 	$(am__DEPENDENCIES_1)
 test_fpurge_SOURCES = test-fpurge.c
 test_fpurge_OBJECTS = test-fpurge.$(OBJEXT)
@@ -1959,15 +1955,6 @@ test_isblank_LDADD = $(LDADD)
 test_isblank_DEPENDENCIES = libtests.a ../gnulib-lib/libgettextlib.la \
 	libtests.a ../gnulib-lib/libgettextlib.la libtests.a \
 	$(am__DEPENDENCIES_1)
-test_isinf_SOURCES = test-isinf.c
-test_isinf_OBJECTS = test-isinf.$(OBJEXT)
-test_isinf_DEPENDENCIES = $(am__DEPENDENCIES_2)
-test_isnan_SOURCES = test-isnan.c
-test_isnan_OBJECTS = test-isnan.$(OBJEXT)
-test_isnan_DEPENDENCIES = $(am__DEPENDENCIES_2)
-test_isnand_SOURCES = test-isnand.c
-test_isnand_OBJECTS = test-isnand.$(OBJEXT)
-test_isnand_DEPENDENCIES = $(am__DEPENDENCIES_2)
 test_isnand_nolibm_SOURCES = test-isnand-nolibm.c
 test_isnand_nolibm_OBJECTS = test-isnand-nolibm.$(OBJEXT)
 test_isnand_nolibm_LDADD = $(LDADD)
@@ -1975,9 +1962,6 @@ test_isnand_nolibm_DEPENDENCIES = libtests.a \
 	../gnulib-lib/libgettextlib.la libtests.a \
 	../gnulib-lib/libgettextlib.la libtests.a \
 	$(am__DEPENDENCIES_1)
-test_isnanf_SOURCES = test-isnanf.c
-test_isnanf_OBJECTS = test-isnanf.$(OBJEXT)
-test_isnanf_DEPENDENCIES = $(am__DEPENDENCIES_2)
 test_isnanf_nolibm_SOURCES = test-isnanf-nolibm.c
 test_isnanf_nolibm_OBJECTS = test-isnanf-nolibm.$(OBJEXT)
 test_isnanf_nolibm_LDADD = $(LDADD)
@@ -1985,9 +1969,6 @@ test_isnanf_nolibm_DEPENDENCIES = libtests.a \
 	../gnulib-lib/libgettextlib.la libtests.a \
 	../gnulib-lib/libgettextlib.la libtests.a \
 	$(am__DEPENDENCIES_1)
-test_isnanl_SOURCES = test-isnanl.c
-test_isnanl_OBJECTS = test-isnanl.$(OBJEXT)
-test_isnanl_DEPENDENCIES = $(am__DEPENDENCIES_2)
 test_isnanl_nolibm_SOURCES = test-isnanl-nolibm.c
 test_isnanl_nolibm_OBJECTS = test-isnanl-nolibm.$(OBJEXT)
 test_isnanl_nolibm_LDADD = $(LDADD)
@@ -2030,6 +2011,12 @@ test_limits_h_SOURCES = test-limits-h.c
 test_limits_h_OBJECTS = test-limits-h.$(OBJEXT)
 test_limits_h_LDADD = $(LDADD)
 test_limits_h_DEPENDENCIES = libtests.a ../gnulib-lib/libgettextlib.la \
+	libtests.a ../gnulib-lib/libgettextlib.la libtests.a \
+	$(am__DEPENDENCIES_1)
+test_link_SOURCES = test-link.c
+test_link_OBJECTS = test-link.$(OBJEXT)
+test_link_LDADD = $(LDADD)
+test_link_DEPENDENCIES = libtests.a ../gnulib-lib/libgettextlib.la \
 	libtests.a ../gnulib-lib/libgettextlib.la libtests.a \
 	$(am__DEPENDENCIES_1)
 test_listen_SOURCES = test-listen.c
@@ -2077,9 +2064,6 @@ test_localename_w32utf8_OBJECTS = test-localename-w32utf8.$(OBJEXT)
 test_lock_SOURCES = test-lock.c
 test_lock_OBJECTS = test-lock.$(OBJEXT)
 test_lock_DEPENDENCIES = $(am__DEPENDENCIES_2)
-am_test_log10_OBJECTS = test-log10.$(OBJEXT) randomd.$(OBJEXT)
-test_log10_OBJECTS = $(am_test_log10_OBJECTS)
-test_log10_DEPENDENCIES = $(am__DEPENDENCIES_2)
 test_lseek_SOURCES = test-lseek.c
 test_lseek_OBJECTS = test-lseek.$(OBJEXT)
 test_lseek_LDADD = $(LDADD)
@@ -2453,9 +2437,6 @@ test_posix_spawnp_vfork_DEPENDENCIES = libtests.a \
 	../gnulib-lib/libgettextlib.la libtests.a \
 	../gnulib-lib/libgettextlib.la libtests.a \
 	$(am__DEPENDENCIES_1)
-test_pow_SOURCES = test-pow.c
-test_pow_OBJECTS = test-pow.$(OBJEXT)
-test_pow_DEPENDENCIES = $(am__DEPENDENCIES_2)
 am_test_pr_soft_dotted_OBJECTS =  \
 	unictype/test-pr_soft_dotted.$(OBJEXT)
 test_pr_soft_dotted_OBJECTS = $(am_test_pr_soft_dotted_OBJECTS)
@@ -2591,6 +2572,9 @@ test_readlink_LDADD = $(LDADD)
 test_readlink_DEPENDENCIES = libtests.a ../gnulib-lib/libgettextlib.la \
 	libtests.a ../gnulib-lib/libgettextlib.la libtests.a \
 	$(am__DEPENDENCIES_1)
+test_readlinkat_SOURCES = test-readlinkat.c
+test_readlinkat_OBJECTS = test-readlinkat.$(OBJEXT)
+test_readlinkat_DEPENDENCIES = $(am__DEPENDENCIES_2)
 test_realloc_posix_SOURCES = test-realloc-posix.c
 test_realloc_posix_OBJECTS = test-realloc-posix.$(OBJEXT)
 test_realloc_posix_LDADD = $(LDADD)
@@ -2605,6 +2589,15 @@ test_reallocarray_DEPENDENCIES = libtests.a \
 	../gnulib-lib/libgettextlib.la libtests.a \
 	../gnulib-lib/libgettextlib.la libtests.a \
 	$(am__DEPENDENCIES_1)
+test_rename_SOURCES = test-rename.c
+test_rename_OBJECTS = test-rename.$(OBJEXT)
+test_rename_LDADD = $(LDADD)
+test_rename_DEPENDENCIES = libtests.a ../gnulib-lib/libgettextlib.la \
+	libtests.a ../gnulib-lib/libgettextlib.la libtests.a \
+	$(am__DEPENDENCIES_1)
+test_renameatu_SOURCES = test-renameatu.c
+test_renameatu_OBJECTS = test-renameatu.$(OBJEXT)
+test_renameatu_DEPENDENCIES = $(am__DEPENDENCIES_2)
 test_rmdir_SOURCES = test-rmdir.c
 test_rmdir_OBJECTS = test-rmdir.$(OBJEXT)
 test_rmdir_LDADD = $(LDADD)
@@ -2786,6 +2779,19 @@ test_stat_time_SOURCES = test-stat-time.c
 test_stat_time_OBJECTS = test-stat-time.$(OBJEXT)
 test_stat_time_DEPENDENCIES = $(am__DEPENDENCIES_2) \
 	$(am__DEPENDENCIES_1)
+test_stdbit_h_SOURCES = test-stdbit-h.c
+test_stdbit_h_OBJECTS = test-stdbit-h.$(OBJEXT)
+test_stdbit_h_LDADD = $(LDADD)
+test_stdbit_h_DEPENDENCIES = libtests.a ../gnulib-lib/libgettextlib.la \
+	libtests.a ../gnulib-lib/libgettextlib.la libtests.a \
+	$(am__DEPENDENCIES_1)
+test_stdc_memreverse8u_SOURCES = test-stdc_memreverse8u.c
+test_stdc_memreverse8u_OBJECTS = test-stdc_memreverse8u.$(OBJEXT)
+test_stdc_memreverse8u_LDADD = $(LDADD)
+test_stdc_memreverse8u_DEPENDENCIES = libtests.a \
+	../gnulib-lib/libgettextlib.la libtests.a \
+	../gnulib-lib/libgettextlib.la libtests.a \
+	$(am__DEPENDENCIES_1)
 test_stdckdint_h_SOURCES = test-stdckdint-h.c
 test_stdckdint_h_OBJECTS = test-stdckdint-h.$(OBJEXT)
 test_stdckdint_h_LDADD = $(LDADD)
@@ -2910,6 +2916,12 @@ test_strnlen_LDADD = $(LDADD)
 test_strnlen_DEPENDENCIES = libtests.a ../gnulib-lib/libgettextlib.la \
 	libtests.a ../gnulib-lib/libgettextlib.la libtests.a \
 	$(am__DEPENDENCIES_1)
+test_strnul_SOURCES = test-strnul.c
+test_strnul_OBJECTS = test-strnul.$(OBJEXT)
+test_strnul_LDADD = $(LDADD)
+test_strnul_DEPENDENCIES = libtests.a ../gnulib-lib/libgettextlib.la \
+	libtests.a ../gnulib-lib/libgettextlib.la libtests.a \
+	$(am__DEPENDENCIES_1)
 test_strstr_SOURCES = test-strstr.c
 test_strstr_OBJECTS = test-strstr.$(OBJEXT)
 test_strstr_LDADD = $(LDADD)
@@ -2946,6 +2958,9 @@ test_symlink_LDADD = $(LDADD)
 test_symlink_DEPENDENCIES = libtests.a ../gnulib-lib/libgettextlib.la \
 	libtests.a ../gnulib-lib/libgettextlib.la libtests.a \
 	$(am__DEPENDENCIES_1)
+test_symlinkat_SOURCES = test-symlinkat.c
+test_symlinkat_OBJECTS = test-symlinkat.$(OBJEXT)
+test_symlinkat_DEPENDENCIES = $(am__DEPENDENCIES_2)
 test_sys_ioctl_h_SOURCES = test-sys_ioctl-h.c
 test_sys_ioctl_h_OBJECTS = test-sys_ioctl-h.$(OBJEXT)
 test_sys_ioctl_h_LDADD = $(LDADD)
@@ -3216,6 +3231,9 @@ test_unlink_LDADD = $(LDADD)
 test_unlink_DEPENDENCIES = libtests.a ../gnulib-lib/libgettextlib.la \
 	libtests.a ../gnulib-lib/libgettextlib.la libtests.a \
 	$(am__DEPENDENCIES_1)
+test_unlinkat_SOURCES = test-unlinkat.c
+test_unlinkat_OBJECTS = test-unlinkat.$(OBJEXT)
+test_unlinkat_DEPENDENCIES = $(am__DEPENDENCIES_2)
 test_unsetenv_SOURCES = test-unsetenv.c
 test_unsetenv_OBJECTS = test-unsetenv.$(OBJEXT)
 test_unsetenv_LDADD = $(LDADD)
@@ -3258,13 +3276,6 @@ test_verify_try_SOURCES = test-verify-try.c
 test_verify_try_OBJECTS = test-verify-try.$(OBJEXT)
 test_verify_try_LDADD = $(LDADD)
 test_verify_try_DEPENDENCIES = libtests.a \
-	../gnulib-lib/libgettextlib.la libtests.a \
-	../gnulib-lib/libgettextlib.la libtests.a \
-	$(am__DEPENDENCIES_1)
-test_vsnprintf_SOURCES = test-vsnprintf.c
-test_vsnprintf_OBJECTS = test-vsnprintf.$(OBJEXT)
-test_vsnprintf_LDADD = $(LDADD)
-test_vsnprintf_DEPENDENCIES = libtests.a \
 	../gnulib-lib/libgettextlib.la libtests.a \
 	../gnulib-lib/libgettextlib.la libtests.a \
 	$(am__DEPENDENCIES_1)
@@ -3390,35 +3401,35 @@ DEFAULT_INCLUDES = -I. -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/../build-aux/depcomp
 am__maybe_remake_depfiles = depfiles
 am__depfiles_remade = ./$(DEPDIR)/accept.Po ./$(DEPDIR)/alloca.Po \
-	./$(DEPDIR)/anytostr.Po ./$(DEPDIR)/bind.Po \
-	./$(DEPDIR)/c32rtomb.Po ./$(DEPDIR)/c32tob.Po \
-	./$(DEPDIR)/connect.Po ./$(DEPDIR)/copy-acl.Po \
-	./$(DEPDIR)/creat.Po ./$(DEPDIR)/dtotimespec.Po \
-	./$(DEPDIR)/endian.Po ./$(DEPDIR)/fflush.Po \
-	./$(DEPDIR)/filenamecat.Po ./$(DEPDIR)/fpurge.Po \
-	./$(DEPDIR)/freading.Po ./$(DEPDIR)/freopen.Po \
-	./$(DEPDIR)/fseek.Po ./$(DEPDIR)/fseeko.Po \
-	./$(DEPDIR)/ftruncate.Po ./$(DEPDIR)/getpagesize.Po \
-	./$(DEPDIR)/gl_array_map.Po ./$(DEPDIR)/gl_array_oset.Po \
-	./$(DEPDIR)/gl_array_set.Po ./$(DEPDIR)/gl_oset.Po \
-	./$(DEPDIR)/gl_xoset.Po ./$(DEPDIR)/iconvsupport.Po \
-	./$(DEPDIR)/imaxtostr.Po ./$(DEPDIR)/inttostr.Po \
-	./$(DEPDIR)/ioctl.Po ./$(DEPDIR)/listen.Po \
+	./$(DEPDIR)/anytostr.Po ./$(DEPDIR)/at-func.Po \
+	./$(DEPDIR)/bind.Po ./$(DEPDIR)/c32rtomb.Po \
+	./$(DEPDIR)/c32tob.Po ./$(DEPDIR)/connect.Po \
+	./$(DEPDIR)/copy-acl.Po ./$(DEPDIR)/creat.Po \
+	./$(DEPDIR)/dtotimespec.Po ./$(DEPDIR)/endian.Po \
+	./$(DEPDIR)/fflush.Po ./$(DEPDIR)/filenamecat.Po \
+	./$(DEPDIR)/fpurge.Po ./$(DEPDIR)/freading.Po \
+	./$(DEPDIR)/freopen.Po ./$(DEPDIR)/fseek.Po \
+	./$(DEPDIR)/fseeko.Po ./$(DEPDIR)/ftruncate.Po \
+	./$(DEPDIR)/getpagesize.Po ./$(DEPDIR)/gl_array_map.Po \
+	./$(DEPDIR)/gl_array_oset.Po ./$(DEPDIR)/gl_array_set.Po \
+	./$(DEPDIR)/gl_oset.Po ./$(DEPDIR)/gl_xoset.Po \
+	./$(DEPDIR)/iconvsupport.Po ./$(DEPDIR)/imaxtostr.Po \
+	./$(DEPDIR)/inttostr.Po ./$(DEPDIR)/ioctl.Po \
+	./$(DEPDIR)/link.Po ./$(DEPDIR)/listen.Po \
 	./$(DEPDIR)/locale.Po ./$(DEPDIR)/mkfifo.Po \
 	./$(DEPDIR)/nanosleep.Po ./$(DEPDIR)/offtostr.Po \
 	./$(DEPDIR)/perror.Po ./$(DEPDIR)/priv-set.Po \
 	./$(DEPDIR)/pselect.Po ./$(DEPDIR)/pthread-cond.Po \
 	./$(DEPDIR)/pthread-mutex.Po ./$(DEPDIR)/pthread-rwlock.Po \
 	./$(DEPDIR)/pthread-thread.Po \
-	./$(DEPDIR)/pthread_mutex_timedlock.Po \
-	./$(DEPDIR)/pthread_sigmask.Po ./$(DEPDIR)/putenv.Po \
+	./$(DEPDIR)/pthread_mutex_timedlock.Po ./$(DEPDIR)/putenv.Po \
 	./$(DEPDIR)/qset-acl.Po ./$(DEPDIR)/random.Po \
 	./$(DEPDIR)/random_r.Po ./$(DEPDIR)/randomd.Po \
 	./$(DEPDIR)/randoml.Po ./$(DEPDIR)/sched_yield.Po \
 	./$(DEPDIR)/select.Po ./$(DEPDIR)/set-acl.Po \
 	./$(DEPDIR)/setsockopt.Po ./$(DEPDIR)/sleep.Po \
-	./$(DEPDIR)/socket.Po ./$(DEPDIR)/str_endswith.Po \
-	./$(DEPDIR)/symlink.Po ./$(DEPDIR)/test-accept.Po \
+	./$(DEPDIR)/socket.Po ./$(DEPDIR)/symlink.Po \
+	./$(DEPDIR)/symlinkat.Po ./$(DEPDIR)/test-accept.Po \
 	./$(DEPDIR)/test-access.Po ./$(DEPDIR)/test-alignasof.Po \
 	./$(DEPDIR)/test-alloca-opt.Po ./$(DEPDIR)/test-areadlink.Po \
 	./$(DEPDIR)/test-argmatch.Po ./$(DEPDIR)/test-arpa_inet-h.Po \
@@ -3456,27 +3467,27 @@ am__depfiles_remade = ./$(DEPDIR)/accept.Po ./$(DEPDIR)/alloca.Po \
 	./$(DEPDIR)/test-dup2.Po ./$(DEPDIR)/test-endian.Po \
 	./$(DEPDIR)/test-environ.Po ./$(DEPDIR)/test-errno-h.Po \
 	./$(DEPDIR)/test-error.Po ./$(DEPDIR)/test-execute-child.Po \
-	./$(DEPDIR)/test-execute-main.Po ./$(DEPDIR)/test-fabs.Po \
-	./$(DEPDIR)/test-fchdir.Po ./$(DEPDIR)/test-fcntl-h.Po \
-	./$(DEPDIR)/test-fcntl.Po ./$(DEPDIR)/test-fdopen.Po \
-	./$(DEPDIR)/test-fdopendir.Po ./$(DEPDIR)/test-fflush.Po \
-	./$(DEPDIR)/test-fflush2.Po ./$(DEPDIR)/test-fgetc.Po \
-	./$(DEPDIR)/test-file-has-acl.Po \
+	./$(DEPDIR)/test-execute-main.Po ./$(DEPDIR)/test-fchdir.Po \
+	./$(DEPDIR)/test-fcntl-h.Po ./$(DEPDIR)/test-fcntl.Po \
+	./$(DEPDIR)/test-fdopen.Po ./$(DEPDIR)/test-fdopendir.Po \
+	./$(DEPDIR)/test-fflush.Po ./$(DEPDIR)/test-fflush2.Po \
+	./$(DEPDIR)/test-fgetc.Po ./$(DEPDIR)/test-file-has-acl.Po \
 	./$(DEPDIR)/test-filenamecat.Po ./$(DEPDIR)/test-fnmatch-h.Po \
 	./$(DEPDIR)/test-fnmatch-w32.Po ./$(DEPDIR)/test-fnmatch.Po \
 	./$(DEPDIR)/test-fopen-gnu.Po ./$(DEPDIR)/test-fopen.Po \
-	./$(DEPDIR)/test-fpurge.Po ./$(DEPDIR)/test-fputc.Po \
-	./$(DEPDIR)/test-fread.Po ./$(DEPDIR)/test-freading.Po \
-	./$(DEPDIR)/test-free.Po ./$(DEPDIR)/test-freopen.Po \
-	./$(DEPDIR)/test-frexp.Po ./$(DEPDIR)/test-frexpl.Po \
-	./$(DEPDIR)/test-fseek.Po ./$(DEPDIR)/test-fseeko.Po \
-	./$(DEPDIR)/test-fseeko3.Po ./$(DEPDIR)/test-fseeko4.Po \
-	./$(DEPDIR)/test-fseterr.Po ./$(DEPDIR)/test-fstat.Po \
-	./$(DEPDIR)/test-fstatat.Po ./$(DEPDIR)/test-fstrcmp.Po \
-	./$(DEPDIR)/test-ftell.Po ./$(DEPDIR)/test-ftell3.Po \
-	./$(DEPDIR)/test-ftello.Po ./$(DEPDIR)/test-ftello3.Po \
-	./$(DEPDIR)/test-ftello4.Po ./$(DEPDIR)/test-ftruncate.Po \
-	./$(DEPDIR)/test-fwrite.Po ./$(DEPDIR)/test-getaddrinfo.Po \
+	./$(DEPDIR)/test-fpending.Po ./$(DEPDIR)/test-fpurge.Po \
+	./$(DEPDIR)/test-fputc.Po ./$(DEPDIR)/test-fread.Po \
+	./$(DEPDIR)/test-freading.Po ./$(DEPDIR)/test-free.Po \
+	./$(DEPDIR)/test-freopen.Po ./$(DEPDIR)/test-frexp.Po \
+	./$(DEPDIR)/test-frexpl.Po ./$(DEPDIR)/test-fseek.Po \
+	./$(DEPDIR)/test-fseeko.Po ./$(DEPDIR)/test-fseeko3.Po \
+	./$(DEPDIR)/test-fseeko4.Po ./$(DEPDIR)/test-fseterr.Po \
+	./$(DEPDIR)/test-fstat.Po ./$(DEPDIR)/test-fstatat.Po \
+	./$(DEPDIR)/test-fstrcmp.Po ./$(DEPDIR)/test-ftell.Po \
+	./$(DEPDIR)/test-ftell3.Po ./$(DEPDIR)/test-ftello.Po \
+	./$(DEPDIR)/test-ftello3.Po ./$(DEPDIR)/test-ftello4.Po \
+	./$(DEPDIR)/test-ftruncate.Po ./$(DEPDIR)/test-fwrite.Po \
+	./$(DEPDIR)/test-getaddrinfo.Po \
 	./$(DEPDIR)/test-getcwd-lgpl.Po ./$(DEPDIR)/test-getcwd.Po \
 	./$(DEPDIR)/test-getdelim.Po ./$(DEPDIR)/test-getdtablesize.Po \
 	./$(DEPDIR)/test-getline.Po ./$(DEPDIR)/test-getopt-gnu.Po \
@@ -3491,23 +3502,21 @@ am__depfiles_remade = ./$(DEPDIR)/accept.Po ./$(DEPDIR)/alloca.Po \
 	./$(DEPDIR)/test-inet_ntop.Po ./$(DEPDIR)/test-inet_pton.Po \
 	./$(DEPDIR)/test-intprops.Po ./$(DEPDIR)/test-inttostr.Po \
 	./$(DEPDIR)/test-inttypes-h.Po ./$(DEPDIR)/test-ioctl.Po \
-	./$(DEPDIR)/test-isblank.Po ./$(DEPDIR)/test-isinf.Po \
-	./$(DEPDIR)/test-isnan.Po ./$(DEPDIR)/test-isnand-nolibm.Po \
-	./$(DEPDIR)/test-isnand.Po ./$(DEPDIR)/test-isnanf-nolibm.Po \
-	./$(DEPDIR)/test-isnanf.Po ./$(DEPDIR)/test-isnanl-nolibm.Po \
-	./$(DEPDIR)/test-isnanl.Po ./$(DEPDIR)/test-iswblank.Po \
+	./$(DEPDIR)/test-isblank.Po ./$(DEPDIR)/test-isnand-nolibm.Po \
+	./$(DEPDIR)/test-isnanf-nolibm.Po \
+	./$(DEPDIR)/test-isnanl-nolibm.Po ./$(DEPDIR)/test-iswblank.Po \
 	./$(DEPDIR)/test-iswctype.Po ./$(DEPDIR)/test-iswdigit.Po \
 	./$(DEPDIR)/test-iswpunct.Po ./$(DEPDIR)/test-iswxdigit.Po \
 	./$(DEPDIR)/test-largefile.Po ./$(DEPDIR)/test-limits-h.Po \
-	./$(DEPDIR)/test-listen.Po \
+	./$(DEPDIR)/test-link.Po ./$(DEPDIR)/test-listen.Po \
 	./$(DEPDIR)/test-localcharset-w32utf8.Po \
 	./$(DEPDIR)/test-localcharset.Po ./$(DEPDIR)/test-locale-h.Po \
 	./$(DEPDIR)/test-localeconv-mt.Po \
 	./$(DEPDIR)/test-localeconv.Po \
 	./$(DEPDIR)/test-localename-w32utf8.Po \
 	./$(DEPDIR)/test-localename.Po ./$(DEPDIR)/test-lock.Po \
-	./$(DEPDIR)/test-log10.Po ./$(DEPDIR)/test-lseek.Po \
-	./$(DEPDIR)/test-lstat.Po ./$(DEPDIR)/test-malloc-gnu.Po \
+	./$(DEPDIR)/test-lseek.Po ./$(DEPDIR)/test-lstat.Po \
+	./$(DEPDIR)/test-malloc-gnu.Po \
 	./$(DEPDIR)/test-malloc-posix.Po ./$(DEPDIR)/test-malloca.Po \
 	./$(DEPDIR)/test-math-h.Po ./$(DEPDIR)/test-mbrtoc32-w32.Po \
 	./$(DEPDIR)/test-mbrtoc32.Po ./$(DEPDIR)/test-mbrtowc-w32.Po \
@@ -3543,7 +3552,7 @@ am__depfiles_remade = ./$(DEPDIR)/accept.Po ./$(DEPDIR)/alloca.Po \
 	./$(DEPDIR)/test-posix_spawn_file_actions_addclose.Po \
 	./$(DEPDIR)/test-posix_spawn_file_actions_adddup2.Po \
 	./$(DEPDIR)/test-posix_spawn_file_actions_addopen.Po \
-	./$(DEPDIR)/test-posix_spawnp-vfork.Po ./$(DEPDIR)/test-pow.Po \
+	./$(DEPDIR)/test-posix_spawnp-vfork.Po \
 	./$(DEPDIR)/test-printf-frexp.Po \
 	./$(DEPDIR)/test-printf-frexpl.Po ./$(DEPDIR)/test-priv-set.Po \
 	./$(DEPDIR)/test-pselect.Po ./$(DEPDIR)/test-pthread-cond.Po \
@@ -3560,8 +3569,10 @@ am__depfiles_remade = ./$(DEPDIR)/accept.Po ./$(DEPDIR)/alloca.Po \
 	./$(DEPDIR)/test-random.Po ./$(DEPDIR)/test-random_r.Po \
 	./$(DEPDIR)/test-rawmemchr.Po ./$(DEPDIR)/test-read-file.Po \
 	./$(DEPDIR)/test-read.Po ./$(DEPDIR)/test-readlink.Po \
+	./$(DEPDIR)/test-readlinkat.Po \
 	./$(DEPDIR)/test-realloc-posix.Po \
-	./$(DEPDIR)/test-reallocarray.Po ./$(DEPDIR)/test-rmdir.Po \
+	./$(DEPDIR)/test-reallocarray.Po ./$(DEPDIR)/test-rename.Po \
+	./$(DEPDIR)/test-renameatu.Po ./$(DEPDIR)/test-rmdir.Po \
 	./$(DEPDIR)/test-rwlock1.Po ./$(DEPDIR)/test-sameacls.Po \
 	./$(DEPDIR)/test-sched-h.Po ./$(DEPDIR)/test-scratch-buffer.Po \
 	./$(DEPDIR)/test-select-fd.Po ./$(DEPDIR)/test-select-stdin.Po \
@@ -3583,7 +3594,9 @@ am__depfiles_remade = ./$(DEPDIR)/accept.Po ./$(DEPDIR)/alloca.Po \
 	./$(DEPDIR)/test-spawn-pipe-child.Po \
 	./$(DEPDIR)/test-spawn-pipe-main.Po ./$(DEPDIR)/test-spin1.Po \
 	./$(DEPDIR)/test-spin2.Po ./$(DEPDIR)/test-stat-time.Po \
-	./$(DEPDIR)/test-stat.Po ./$(DEPDIR)/test-stdckdint-h.Po \
+	./$(DEPDIR)/test-stat.Po ./$(DEPDIR)/test-stdbit-h.Po \
+	./$(DEPDIR)/test-stdc_memreverse8u.Po \
+	./$(DEPDIR)/test-stdckdint-h.Po \
 	./$(DEPDIR)/test-stdcountof-h.Po ./$(DEPDIR)/test-stddef-h.Po \
 	./$(DEPDIR)/test-stdint-h.Po ./$(DEPDIR)/test-stdio-h.Po \
 	./$(DEPDIR)/test-stdlib-h.Po ./$(DEPDIR)/test-str_endswith.Po \
@@ -3595,9 +3608,10 @@ am__depfiles_remade = ./$(DEPDIR)/accept.Po ./$(DEPDIR)/alloca.Po \
 	./$(DEPDIR)/test-string-buffer.Po \
 	./$(DEPDIR)/test-string-desc.Po ./$(DEPDIR)/test-string-h.Po \
 	./$(DEPDIR)/test-strncpy.Po ./$(DEPDIR)/test-strnlen.Po \
-	./$(DEPDIR)/test-strstr.Po ./$(DEPDIR)/test-strtol.Po \
-	./$(DEPDIR)/test-strtoul.Po ./$(DEPDIR)/test-supersede.Po \
-	./$(DEPDIR)/test-symlink.Po ./$(DEPDIR)/test-sys_ioctl-h.Po \
+	./$(DEPDIR)/test-strnul.Po ./$(DEPDIR)/test-strstr.Po \
+	./$(DEPDIR)/test-strtol.Po ./$(DEPDIR)/test-strtoul.Po \
+	./$(DEPDIR)/test-supersede.Po ./$(DEPDIR)/test-symlink.Po \
+	./$(DEPDIR)/test-symlinkat.Po ./$(DEPDIR)/test-sys_ioctl-h.Po \
 	./$(DEPDIR)/test-sys_random-h.Po \
 	./$(DEPDIR)/test-sys_resource-h.Po \
 	./$(DEPDIR)/test-sys_select-h.Po \
@@ -3610,11 +3624,11 @@ am__depfiles_remade = ./$(DEPDIR)/accept.Po ./$(DEPDIR)/alloca.Po \
 	./$(DEPDIR)/test-time.Po ./$(DEPDIR)/test-timespec.Po \
 	./$(DEPDIR)/test-tls.Po ./$(DEPDIR)/test-trim.Po \
 	./$(DEPDIR)/test-uchar-h.Po ./$(DEPDIR)/test-unistd-h.Po \
-	./$(DEPDIR)/test-unlink.Po ./$(DEPDIR)/test-unsetenv.Po \
-	./$(DEPDIR)/test-usleep.Po ./$(DEPDIR)/test-utime-h.Po \
-	./$(DEPDIR)/test-vasnprintf.Po ./$(DEPDIR)/test-vasprintf.Po \
-	./$(DEPDIR)/test-verify-try.Po ./$(DEPDIR)/test-verify.Po \
-	./$(DEPDIR)/test-vsnprintf.Po \
+	./$(DEPDIR)/test-unlink.Po ./$(DEPDIR)/test-unlinkat.Po \
+	./$(DEPDIR)/test-unsetenv.Po ./$(DEPDIR)/test-usleep.Po \
+	./$(DEPDIR)/test-utime-h.Po ./$(DEPDIR)/test-vasnprintf.Po \
+	./$(DEPDIR)/test-vasprintf.Po ./$(DEPDIR)/test-verify-try.Po \
+	./$(DEPDIR)/test-verify.Po \
 	./$(DEPDIR)/test-vsnzprintf-posix.Po \
 	./$(DEPDIR)/test-wchar-h.Po ./$(DEPDIR)/test-wcrtomb-w32.Po \
 	./$(DEPDIR)/test-wcrtomb.Po ./$(DEPDIR)/test-wctype-h.Po \
@@ -3634,11 +3648,11 @@ am__depfiles_remade = ./$(DEPDIR)/accept.Po ./$(DEPDIR)/alloca.Po \
 	./$(DEPDIR)/test_spawn_pipe_script-test-spawn-pipe-script.Po \
 	./$(DEPDIR)/time.Po ./$(DEPDIR)/timespec-add.Po \
 	./$(DEPDIR)/timespec-sub.Po ./$(DEPDIR)/uinttostr.Po \
-	./$(DEPDIR)/umaxtostr.Po ./$(DEPDIR)/unlinkdir.Po \
-	./$(DEPDIR)/usleep.Po ./$(DEPDIR)/vma-iter.Po \
-	./$(DEPDIR)/wcrtomb.Po ./$(DEPDIR)/wctob.Po \
-	./$(DEPDIR)/wctomb.Po ./$(DEPDIR)/windows-cond.Po \
-	./$(DEPDIR)/windows-thread.Po \
+	./$(DEPDIR)/umaxtostr.Po ./$(DEPDIR)/unlinkat.Po \
+	./$(DEPDIR)/unlinkdir.Po ./$(DEPDIR)/usleep.Po \
+	./$(DEPDIR)/vma-iter.Po ./$(DEPDIR)/wcrtomb.Po \
+	./$(DEPDIR)/wctob.Po ./$(DEPDIR)/wctomb.Po \
+	./$(DEPDIR)/windows-cond.Po ./$(DEPDIR)/windows-thread.Po \
 	./$(DEPDIR)/windows-timedmutex.Po \
 	./$(DEPDIR)/windows-timedrecmutex.Po \
 	./$(DEPDIR)/windows-timedrwlock.Po ./$(DEPDIR)/xgetcwd.Po \
@@ -3762,11 +3776,11 @@ SOURCES = $(libtests_a_SOURCES) $(EXTRA_libtests_a_SOURCES) \
 	test-dirname.c test-dup.c test-dup-safer.c test-dup2.c \
 	test-endian.c test-environ.c test-errno-h.c test-error.c \
 	test-execute-child.c test-execute-main.c test-execute-script.c \
-	$(test_fabs_SOURCES) test-fchdir.c test-fcntl.c test-fcntl-h.c \
-	test-fdopen.c test-fdopendir.c test-fflush.c test-fflush2.c \
-	test-fgetc.c test-file-has-acl.c test-filenamecat.c \
-	test-fnmatch.c test-fnmatch-h.c test-fnmatch-w32.c \
-	test-fopen.c test-fopen-gnu.c test-fpurge.c test-fputc.c \
+	test-fchdir.c test-fcntl.c test-fcntl-h.c test-fdopen.c \
+	test-fdopendir.c test-fflush.c test-fflush2.c test-fgetc.c \
+	test-file-has-acl.c test-filenamecat.c test-fnmatch.c \
+	test-fnmatch-h.c test-fnmatch-w32.c test-fopen.c \
+	test-fopen-gnu.c test-fpending.c test-fpurge.c test-fputc.c \
 	test-fread.c test-freading.c test-free.c test-freopen.c \
 	$(test_frexp_nolibm_SOURCES) $(test_frexpl_nolibm_SOURCES) \
 	test-fseek.c test-fseeko.c test-fseeko3.c test-fseeko4.c \
@@ -3782,23 +3796,22 @@ SOURCES = $(libtests_a_SOURCES) $(EXTRA_libtests_a_SOURCES) \
 	test-iconv-h.c $(test_ignorable_SOURCES) test-ignore-value.c \
 	test-inet_ntop.c test-inet_pton.c test-intprops.c \
 	test-inttostr.c test-inttypes-h.c test-ioctl.c test-isblank.c \
-	test-isinf.c test-isnan.c test-isnand.c test-isnand-nolibm.c \
-	test-isnanf.c test-isnanf-nolibm.c test-isnanl.c \
-	test-isnanl-nolibm.c test-iswblank.c test-iswctype.c \
-	test-iswdigit.c test-iswpunct.c test-iswxdigit.c \
-	test-largefile.c test-limits-h.c test-listen.c \
-	test-localcharset.c test-localcharset-w32utf8.c \
-	test-locale-h.c test-localeconv.c test-localeconv-mt.c \
-	test-localename.c test-localename-w32utf8.c test-lock.c \
-	$(test_log10_SOURCES) test-lseek.c test-lstat.c \
-	test-malloc-gnu.c test-malloc-posix.c test-malloca.c \
-	test-math-h.c test-mbrtoc32.c test-mbrtoc32-w32.c \
-	test-mbrtowc.c test-mbrtowc-w32.c test-mbrtowc-w32utf8.c \
-	test-mbsinit.c test-mbslen.c test-mbsnlen.c test-mbsrtoc32s.c \
-	test-mbsrtowcs.c test-mbsstr1.c test-mbsstr2.c test-mbsstr3.c \
-	test-memchr.c test-memcmp.c test-memmem.c test-memmove.c \
-	test-memrchr.c test-memset.c test-memset_explicit.c \
-	test-mkdir.c test-mkfifo.c test-nanosleep.c test-netdb-h.c \
+	test-isnand-nolibm.c test-isnanf-nolibm.c test-isnanl-nolibm.c \
+	test-iswblank.c test-iswctype.c test-iswdigit.c \
+	test-iswpunct.c test-iswxdigit.c test-largefile.c \
+	test-limits-h.c test-link.c test-listen.c test-localcharset.c \
+	test-localcharset-w32utf8.c test-locale-h.c test-localeconv.c \
+	test-localeconv-mt.c test-localename.c \
+	test-localename-w32utf8.c test-lock.c test-lseek.c \
+	test-lstat.c test-malloc-gnu.c test-malloc-posix.c \
+	test-malloca.c test-math-h.c test-mbrtoc32.c \
+	test-mbrtoc32-w32.c test-mbrtowc.c test-mbrtowc-w32.c \
+	test-mbrtowc-w32utf8.c test-mbsinit.c test-mbslen.c \
+	test-mbsnlen.c test-mbsrtoc32s.c test-mbsrtowcs.c \
+	test-mbsstr1.c test-mbsstr2.c test-mbsstr3.c test-memchr.c \
+	test-memcmp.c test-memmem.c test-memmove.c test-memrchr.c \
+	test-memset.c test-memset_explicit.c test-mkdir.c \
+	test-mkfifo.c test-nanosleep.c test-netdb-h.c \
 	test-netinet_in-h.c test-next-prime.c $(test_nfc_SOURCES) \
 	$(test_nfd_SOURCES) test-noreturn.c $(test_once1_SOURCES) \
 	$(test_once2_SOURCES) test-open.c test-openat.c test-options.c \
@@ -3815,40 +3828,42 @@ SOURCES = $(libtests_a_SOURCES) $(EXTRA_libtests_a_SOURCES) \
 	test-posix_spawn_file_actions_adddup2.c \
 	test-posix_spawn_file_actions_addopen.c \
 	test-posix_spawnp-script.c test-posix_spawnp-vfork.c \
-	test-pow.c $(test_pr_soft_dotted_SOURCES) \
-	$(test_pr_white_space_SOURCES) $(test_pr_xid_continue_SOURCES) \
-	$(test_pr_xid_start_SOURCES) test-printf-frexp.c \
-	test-printf-frexpl.c test-priv-set.c test-pselect.c \
-	test-pthread.c test-pthread-cond.c test-pthread-mutex.c \
-	test-pthread-mutex-type.c test-pthread-once1.c \
-	test-pthread-once2.c test-pthread-rwlock.c \
-	test-pthread-thread.c test-pthread_sigmask1.c \
-	test-pthread_sigmask2.c test-putenv.c test-quotearg-simple.c \
-	test-raise.c test-random.c test-random-mt.c test-random_r.c \
-	test-rawmemchr.c test-read.c test-read-file.c test-readlink.c \
-	test-realloc-posix.c test-reallocarray.c test-rmdir.c \
-	test-rwlock1.c test-sameacls.c test-sched-h.c \
-	$(test_scratch_buffer_SOURCES) test-select.c test-select-fd.c \
-	test-select-stdin.c test-servent.c test-set-mode-acl.c \
-	test-setenv.c test-setlocale-w32.c test-setlocale-w32utf8.c \
-	test-setlocale1.c test-setlocale2.c test-setlocale_null.c \
-	test-setlocale_null-mt-all.c test-setlocale_null-mt-one.c \
-	test-setlocale_null-unlocked.c test-setsockopt.c \
-	test-sf-istream.c test-sh-quote.c test-sigaction.c \
-	test-signal-h.c test-signbit.c test-sigpipe.c \
+	$(test_pr_soft_dotted_SOURCES) $(test_pr_white_space_SOURCES) \
+	$(test_pr_xid_continue_SOURCES) $(test_pr_xid_start_SOURCES) \
+	test-printf-frexp.c test-printf-frexpl.c test-priv-set.c \
+	test-pselect.c test-pthread.c test-pthread-cond.c \
+	test-pthread-mutex.c test-pthread-mutex-type.c \
+	test-pthread-once1.c test-pthread-once2.c \
+	test-pthread-rwlock.c test-pthread-thread.c \
+	test-pthread_sigmask1.c test-pthread_sigmask2.c test-putenv.c \
+	test-quotearg-simple.c test-raise.c test-random.c \
+	test-random-mt.c test-random_r.c test-rawmemchr.c test-read.c \
+	test-read-file.c test-readlink.c test-readlinkat.c \
+	test-realloc-posix.c test-reallocarray.c test-rename.c \
+	test-renameatu.c test-rmdir.c test-rwlock1.c test-sameacls.c \
+	test-sched-h.c $(test_scratch_buffer_SOURCES) test-select.c \
+	test-select-fd.c test-select-stdin.c test-servent.c \
+	test-set-mode-acl.c test-setenv.c test-setlocale-w32.c \
+	test-setlocale-w32utf8.c test-setlocale1.c test-setlocale2.c \
+	test-setlocale_null.c test-setlocale_null-mt-all.c \
+	test-setlocale_null-mt-one.c test-setlocale_null-unlocked.c \
+	test-setsockopt.c test-sf-istream.c test-sh-quote.c \
+	test-sigaction.c test-signal-h.c test-signbit.c test-sigpipe.c \
 	test-sigprocmask.c test-sleep.c test-snprintf.c test-sockets.c \
 	test-spawn-h.c test-spawn-pipe-child.c test-spawn-pipe-main.c \
 	test-spawn-pipe-script.c test-spin1.c test-spin2.c test-stat.c \
-	test-stat-time.c test-stdckdint-h.c test-stdcountof-h.c \
-	test-stddef-h.c test-stdint-h.c test-stdio-h.c test-stdlib-h.c \
+	test-stat-time.c test-stdbit-h.c test-stdc_memreverse8u.c \
+	test-stdckdint-h.c test-stdcountof-h.c test-stddef-h.c \
+	test-stdint-h.c test-stdio-h.c test-stdlib-h.c \
 	test-str_endswith.c test-str_startswith.c test-strchrnul.c \
 	test-strerror.c test-strerror_r.c test-striconv.c \
 	test-striconveh.c $(test_striconveha_SOURCES) \
 	test-string-buffer.c test-string-buffer-reversed.c \
 	test-string-desc.c test-string-h.c test-strncpy.c \
-	test-strnlen.c test-strstr.c test-strtol.c test-strtoul.c \
-	test-supersede.c $(test_sy_java_whitespace_SOURCES) \
-	test-symlink.c test-sys_ioctl-h.c test-sys_random-h.c \
+	test-strnlen.c test-strnul.c test-strstr.c test-strtol.c \
+	test-strtoul.c test-supersede.c \
+	$(test_sy_java_whitespace_SOURCES) test-symlink.c \
+	test-symlinkat.c test-sys_ioctl-h.c test-sys_random-h.c \
 	test-sys_resource-h.c test-sys_select-h.c test-sys_socket-h.c \
 	test-sys_stat-h.c test-sys_time-h.c test-sys_types-h.c \
 	test-sys_uio-h.c test-sys_wait-h.c test-thread_create.c \
@@ -3873,9 +3888,9 @@ SOURCES = $(libtests_a_SOURCES) $(EXTRA_libtests_a_SOURCES) \
 	$(test_uniname_h_SOURCES) $(test_uninames_SOURCES) \
 	$(test_uninorm_h_SOURCES) test-unistd-h.c \
 	$(test_unistr_h_SOURCES) $(test_uniwidth_h_SOURCES) \
-	test-unlink.c test-unsetenv.c test-usleep.c test-utime-h.c \
-	test-vasnprintf.c test-vasprintf.c test-verify.c \
-	test-verify-try.c test-vsnprintf.c test-vsnzprintf-posix.c \
+	test-unlink.c test-unlinkat.c test-unsetenv.c test-usleep.c \
+	test-utime-h.c test-vasnprintf.c test-vasprintf.c \
+	test-verify.c test-verify-try.c test-vsnzprintf-posix.c \
 	test-wchar-h.c test-wcrtomb.c test-wcrtomb-w32.c test-wctype.c \
 	test-wctype-h.c test-wcwidth.c test-windows-mutex-type.c \
 	test-windows-recmutex-type.c test-windows-timedmutex-type.c \
@@ -3914,12 +3929,12 @@ DIST_SOURCES = $(am__libtests_a_SOURCES_DIST) \
 	test-dirent-h.c test-dirfd.c test-dirname.c test-dup.c \
 	test-dup-safer.c test-dup2.c test-endian.c test-environ.c \
 	test-errno-h.c test-error.c test-execute-child.c \
-	test-execute-main.c test-execute-script.c $(test_fabs_SOURCES) \
-	test-fchdir.c test-fcntl.c test-fcntl-h.c test-fdopen.c \
-	test-fdopendir.c test-fflush.c test-fflush2.c test-fgetc.c \
-	test-file-has-acl.c test-filenamecat.c test-fnmatch.c \
-	test-fnmatch-h.c test-fnmatch-w32.c test-fopen.c \
-	test-fopen-gnu.c test-fpurge.c test-fputc.c test-fread.c \
+	test-execute-main.c test-execute-script.c test-fchdir.c \
+	test-fcntl.c test-fcntl-h.c test-fdopen.c test-fdopendir.c \
+	test-fflush.c test-fflush2.c test-fgetc.c test-file-has-acl.c \
+	test-filenamecat.c test-fnmatch.c test-fnmatch-h.c \
+	test-fnmatch-w32.c test-fopen.c test-fopen-gnu.c \
+	test-fpending.c test-fpurge.c test-fputc.c test-fread.c \
 	test-freading.c test-free.c test-freopen.c \
 	$(test_frexp_nolibm_SOURCES) $(test_frexpl_nolibm_SOURCES) \
 	test-fseek.c test-fseeko.c test-fseeko3.c test-fseeko4.c \
@@ -3935,23 +3950,22 @@ DIST_SOURCES = $(am__libtests_a_SOURCES_DIST) \
 	test-iconv-h.c $(test_ignorable_SOURCES) test-ignore-value.c \
 	test-inet_ntop.c test-inet_pton.c test-intprops.c \
 	test-inttostr.c test-inttypes-h.c test-ioctl.c test-isblank.c \
-	test-isinf.c test-isnan.c test-isnand.c test-isnand-nolibm.c \
-	test-isnanf.c test-isnanf-nolibm.c test-isnanl.c \
-	test-isnanl-nolibm.c test-iswblank.c test-iswctype.c \
-	test-iswdigit.c test-iswpunct.c test-iswxdigit.c \
-	test-largefile.c test-limits-h.c test-listen.c \
-	test-localcharset.c test-localcharset-w32utf8.c \
-	test-locale-h.c test-localeconv.c test-localeconv-mt.c \
-	test-localename.c test-localename-w32utf8.c test-lock.c \
-	$(test_log10_SOURCES) test-lseek.c test-lstat.c \
-	test-malloc-gnu.c test-malloc-posix.c test-malloca.c \
-	test-math-h.c test-mbrtoc32.c test-mbrtoc32-w32.c \
-	test-mbrtowc.c test-mbrtowc-w32.c test-mbrtowc-w32utf8.c \
-	test-mbsinit.c test-mbslen.c test-mbsnlen.c test-mbsrtoc32s.c \
-	test-mbsrtowcs.c test-mbsstr1.c test-mbsstr2.c test-mbsstr3.c \
-	test-memchr.c test-memcmp.c test-memmem.c test-memmove.c \
-	test-memrchr.c test-memset.c test-memset_explicit.c \
-	test-mkdir.c test-mkfifo.c test-nanosleep.c test-netdb-h.c \
+	test-isnand-nolibm.c test-isnanf-nolibm.c test-isnanl-nolibm.c \
+	test-iswblank.c test-iswctype.c test-iswdigit.c \
+	test-iswpunct.c test-iswxdigit.c test-largefile.c \
+	test-limits-h.c test-link.c test-listen.c test-localcharset.c \
+	test-localcharset-w32utf8.c test-locale-h.c test-localeconv.c \
+	test-localeconv-mt.c test-localename.c \
+	test-localename-w32utf8.c test-lock.c test-lseek.c \
+	test-lstat.c test-malloc-gnu.c test-malloc-posix.c \
+	test-malloca.c test-math-h.c test-mbrtoc32.c \
+	test-mbrtoc32-w32.c test-mbrtowc.c test-mbrtowc-w32.c \
+	test-mbrtowc-w32utf8.c test-mbsinit.c test-mbslen.c \
+	test-mbsnlen.c test-mbsrtoc32s.c test-mbsrtowcs.c \
+	test-mbsstr1.c test-mbsstr2.c test-mbsstr3.c test-memchr.c \
+	test-memcmp.c test-memmem.c test-memmove.c test-memrchr.c \
+	test-memset.c test-memset_explicit.c test-mkdir.c \
+	test-mkfifo.c test-nanosleep.c test-netdb-h.c \
 	test-netinet_in-h.c test-next-prime.c $(test_nfc_SOURCES) \
 	$(test_nfd_SOURCES) test-noreturn.c $(test_once1_SOURCES) \
 	$(test_once2_SOURCES) test-open.c test-openat.c test-options.c \
@@ -3968,40 +3982,42 @@ DIST_SOURCES = $(am__libtests_a_SOURCES_DIST) \
 	test-posix_spawn_file_actions_adddup2.c \
 	test-posix_spawn_file_actions_addopen.c \
 	test-posix_spawnp-script.c test-posix_spawnp-vfork.c \
-	test-pow.c $(test_pr_soft_dotted_SOURCES) \
-	$(test_pr_white_space_SOURCES) $(test_pr_xid_continue_SOURCES) \
-	$(test_pr_xid_start_SOURCES) test-printf-frexp.c \
-	test-printf-frexpl.c test-priv-set.c test-pselect.c \
-	test-pthread.c test-pthread-cond.c test-pthread-mutex.c \
-	test-pthread-mutex-type.c test-pthread-once1.c \
-	test-pthread-once2.c test-pthread-rwlock.c \
-	test-pthread-thread.c test-pthread_sigmask1.c \
-	test-pthread_sigmask2.c test-putenv.c test-quotearg-simple.c \
-	test-raise.c test-random.c test-random-mt.c test-random_r.c \
-	test-rawmemchr.c test-read.c test-read-file.c test-readlink.c \
-	test-realloc-posix.c test-reallocarray.c test-rmdir.c \
-	test-rwlock1.c test-sameacls.c test-sched-h.c \
-	$(test_scratch_buffer_SOURCES) test-select.c test-select-fd.c \
-	test-select-stdin.c test-servent.c test-set-mode-acl.c \
-	test-setenv.c test-setlocale-w32.c test-setlocale-w32utf8.c \
-	test-setlocale1.c test-setlocale2.c test-setlocale_null.c \
-	test-setlocale_null-mt-all.c test-setlocale_null-mt-one.c \
-	test-setlocale_null-unlocked.c test-setsockopt.c \
-	test-sf-istream.c test-sh-quote.c test-sigaction.c \
-	test-signal-h.c test-signbit.c test-sigpipe.c \
+	$(test_pr_soft_dotted_SOURCES) $(test_pr_white_space_SOURCES) \
+	$(test_pr_xid_continue_SOURCES) $(test_pr_xid_start_SOURCES) \
+	test-printf-frexp.c test-printf-frexpl.c test-priv-set.c \
+	test-pselect.c test-pthread.c test-pthread-cond.c \
+	test-pthread-mutex.c test-pthread-mutex-type.c \
+	test-pthread-once1.c test-pthread-once2.c \
+	test-pthread-rwlock.c test-pthread-thread.c \
+	test-pthread_sigmask1.c test-pthread_sigmask2.c test-putenv.c \
+	test-quotearg-simple.c test-raise.c test-random.c \
+	test-random-mt.c test-random_r.c test-rawmemchr.c test-read.c \
+	test-read-file.c test-readlink.c test-readlinkat.c \
+	test-realloc-posix.c test-reallocarray.c test-rename.c \
+	test-renameatu.c test-rmdir.c test-rwlock1.c test-sameacls.c \
+	test-sched-h.c $(test_scratch_buffer_SOURCES) test-select.c \
+	test-select-fd.c test-select-stdin.c test-servent.c \
+	test-set-mode-acl.c test-setenv.c test-setlocale-w32.c \
+	test-setlocale-w32utf8.c test-setlocale1.c test-setlocale2.c \
+	test-setlocale_null.c test-setlocale_null-mt-all.c \
+	test-setlocale_null-mt-one.c test-setlocale_null-unlocked.c \
+	test-setsockopt.c test-sf-istream.c test-sh-quote.c \
+	test-sigaction.c test-signal-h.c test-signbit.c test-sigpipe.c \
 	test-sigprocmask.c test-sleep.c test-snprintf.c test-sockets.c \
 	test-spawn-h.c test-spawn-pipe-child.c test-spawn-pipe-main.c \
 	test-spawn-pipe-script.c test-spin1.c test-spin2.c test-stat.c \
-	test-stat-time.c test-stdckdint-h.c test-stdcountof-h.c \
-	test-stddef-h.c test-stdint-h.c test-stdio-h.c test-stdlib-h.c \
+	test-stat-time.c test-stdbit-h.c test-stdc_memreverse8u.c \
+	test-stdckdint-h.c test-stdcountof-h.c test-stddef-h.c \
+	test-stdint-h.c test-stdio-h.c test-stdlib-h.c \
 	test-str_endswith.c test-str_startswith.c test-strchrnul.c \
 	test-strerror.c test-strerror_r.c test-striconv.c \
 	test-striconveh.c $(test_striconveha_SOURCES) \
 	test-string-buffer.c test-string-buffer-reversed.c \
 	test-string-desc.c test-string-h.c test-strncpy.c \
-	test-strnlen.c test-strstr.c test-strtol.c test-strtoul.c \
-	test-supersede.c $(test_sy_java_whitespace_SOURCES) \
-	test-symlink.c test-sys_ioctl-h.c test-sys_random-h.c \
+	test-strnlen.c test-strnul.c test-strstr.c test-strtol.c \
+	test-strtoul.c test-supersede.c \
+	$(test_sy_java_whitespace_SOURCES) test-symlink.c \
+	test-symlinkat.c test-sys_ioctl-h.c test-sys_random-h.c \
 	test-sys_resource-h.c test-sys_select-h.c test-sys_socket-h.c \
 	test-sys_stat-h.c test-sys_time-h.c test-sys_types-h.c \
 	test-sys_uio-h.c test-sys_wait-h.c test-thread_create.c \
@@ -4026,9 +4042,9 @@ DIST_SOURCES = $(am__libtests_a_SOURCES_DIST) \
 	$(test_uniname_h_SOURCES) $(am__test_uninames_SOURCES_DIST) \
 	$(test_uninorm_h_SOURCES) test-unistd-h.c \
 	$(test_unistr_h_SOURCES) $(test_uniwidth_h_SOURCES) \
-	test-unlink.c test-unsetenv.c test-usleep.c test-utime-h.c \
-	test-vasnprintf.c test-vasprintf.c test-verify.c \
-	test-verify-try.c test-vsnprintf.c test-vsnzprintf-posix.c \
+	test-unlink.c test-unlinkat.c test-unsetenv.c test-usleep.c \
+	test-utime-h.c test-vasnprintf.c test-vasprintf.c \
+	test-verify.c test-verify-try.c test-vsnzprintf-posix.c \
 	test-wchar-h.c test-wcrtomb.c test-wcrtomb-w32.c test-wctype.c \
 	test-wctype-h.c test-wcwidth.c test-windows-mutex-type.c \
 	test-windows-recmutex-type.c test-windows-timedmutex-type.c \
@@ -4045,31 +4061,31 @@ RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	installdirs-recursive pdf-recursive ps-recursive \
 	tags-recursive uninstall-recursive
 am__can_run_installinfo = \
-  case $$AM_UPDATE_INFO_DIR in \
+	case $$AM_UPDATE_INFO_DIR in \
 	n|no|NO) false;; \
 	*) (install-info --version) >/dev/null 2>&1;; \
-  esac
+	esac
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
 	$(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
 	*) f=$$p;; \
-  esac;
+	esac;
 am__strip_dir = f=`echo $$p | sed -e 's|^.*/||'`;
 am__install_max = 40
 am__nobase_strip_setup = \
-  srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
+	srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
 am__nobase_strip = \
-  for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
+	for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
 am__nobase_list = $(am__nobase_strip_setup); \
-  for p in $$list; do echo "$$p $$p"; done | \
-  sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
-  $(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
+	for p in $$list; do echo "$$p $$p"; done | \
+	sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
+	$(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
 	if (++n[$$2] == $(am__install_max)) \
 	  { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
 	END { for (dir in files) print dir, files[dir] }'
 am__base_list = \
-  sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
-  sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+	sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
+	sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 am__uninstall_files_from_dir = { \
   { test ! -d "$$dir" && test ! -f "$$dir" && test ! -r "$$dir"; } \
   || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
@@ -4079,11 +4095,11 @@ am__installdirs = "$(DESTDIR)$(pkgdatadir)"
 DATA = $(pkgdata_DATA)
 HEADERS = $(noinst_HEADERS)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
-  distclean-recursive maintainer-clean-recursive
+	distclean-recursive maintainer-clean-recursive
 am__recursive_targets = \
-  $(RECURSIVE_TARGETS) \
-  $(RECURSIVE_CLEAN_TARGETS) \
-  $(am__extra_recursive_targets)
+	$(RECURSIVE_TARGETS) \
+	$(RECURSIVE_CLEAN_TARGETS) \
+	$(am__extra_recursive_targets)
 AM_RECURSIVE_TARGETS = $(am__recursive_targets:-recursive=) TAGS CTAGS \
 	check recheck distdir distdir-am
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
@@ -4091,31 +4107,31 @@ am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 # and print each of them once, without duplicates.  Input order is
 # *not* preserved.
 am__uniquify_input = $(AWK) '\
-  BEGIN { nonempty = 0; } \
+	BEGIN { nonempty = 0; } \
   { items[$$0] = 1; nonempty = 1; } \
-  END { if (nonempty) { for (i in items) print i; }; } \
+	END { if (nonempty) { for (i in items) print i; }; } \
 '
 # Make sure the list of sources is unique.  This is necessary because,
 # e.g., the same source file might be shared among _SOURCES variables
 # for different programs/libraries.
 am__define_uniq_tagged_files = \
-  list='$(am__tagged_files)'; \
-  unique=`for i in $$list; do \
+	list='$(am__tagged_files)'; \
+	unique=`for i in $$list; do \
 	if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
-  done | $(am__uniquify_input)`
+	done | $(am__uniquify_input)`
 am__tty_colors_dummy = \
-  mgn= red= grn= lgn= blu= brg= std=; \
-  am__color_tests=no
+	mgn= red= grn= lgn= blu= brg= std=; \
+	am__color_tests=no
 am__tty_colors = { \
-  $(am__tty_colors_dummy); \
-  if test "X$(AM_COLOR_TESTS)" = Xno; then \
+	$(am__tty_colors_dummy); \
+	if test "X$(AM_COLOR_TESTS)" = Xno; then \
 	am__color_tests=no; \
-  elif test "X$(AM_COLOR_TESTS)" = Xalways; then \
+	elif test "X$(AM_COLOR_TESTS)" = Xalways; then \
 	am__color_tests=yes; \
-  elif test "X$$TERM" != Xdumb && { test -t 1; } 2>/dev/null; then \
+	elif test "X$$TERM" != Xdumb && { test -t 1; } 2>/dev/null; then \
 	am__color_tests=yes; \
-  fi; \
-  if test $$am__color_tests = yes; then \
+	fi; \
+	if test $$am__color_tests = yes; then \
 	red='[0;31m'; \
 	grn='[0;32m'; \
 	lgn='[1;32m'; \
@@ -4123,7 +4139,7 @@ am__tty_colors = { \
 	mgn='[0;35m'; \
 	brg='[1m'; \
 	std='[m'; \
-  fi; \
+	fi; \
 }
 am__recheck_rx = ^[ 	]*:recheck:[ 	]*
 am__global_test_result_rx = ^[ 	]*:global-test-result:[ 	]*
@@ -4132,8 +4148,8 @@ am__copy_in_global_log_rx = ^[ 	]*:copy-in-global-log:[ 	]*
 # standard input, print the name of the tests that are to be re-run
 # upon "make recheck".
 am__list_recheck_tests = $(AWK) '{ \
-  recheck = 1; \
-  while ((rc = (getline line < ($$0 ".trs"))) != 0) \
+	recheck = 1; \
+	while ((rc = (getline line < ($$0 ".trs"))) != 0) \
 	{ \
 	  if (rc < 0) \
 	    { \
@@ -4151,31 +4167,31 @@ am__list_recheck_tests = $(AWK) '{ \
 	      break; \
 	    } \
 	}; \
-  if (recheck) \
+	if (recheck) \
 	print $$0; \
-  close ($$0 ".trs"); \
-  close ($$0 ".log"); \
+	close ($$0 ".trs"); \
+	close ($$0 ".log"); \
 }'
 # A command that, given a newline-separated list of test names on the
 # standard input, create the global log from their .trs and .log files.
 am__create_global_log = $(AWK) ' \
 function fatal(msg) \
 { \
-  print "fatal: making $@: " msg | "cat >&2"; \
-  exit 1; \
+	print "fatal: making $@: " msg | "cat >&2"; \
+	exit 1; \
 } \
 function rst_section(header) \
 { \
-  print header; \
-  len = length(header); \
-  for (i = 1; i <= len; i = i + 1) \
+	print header; \
+	len = length(header); \
+	for (i = 1; i <= len; i = i + 1) \
 	printf "="; \
-  printf "\n\n"; \
+	printf "\n\n"; \
 } \
 { \
-  copy_in_global_log = 1; \
-  global_test_result = "RUN"; \
-  while ((rc = (getline line < ($$0 ".trs"))) != 0) \
+	copy_in_global_log = 1; \
+	global_test_result = "RUN"; \
+	while ((rc = (getline line < ($$0 ".trs"))) != 0) \
 	{ \
 	  if (rc < 0) \
 	     fatal("failed to read from " $$0 ".trs"); \
@@ -4188,7 +4204,7 @@ function rst_section(header) \
 	  else if (line ~ /$(am__copy_in_global_log_rx)[nN][oO]/) \
 	    copy_in_global_log = 0; \
 	}; \
-  if (copy_in_global_log) \
+	if (copy_in_global_log) \
 	{ \
 	  rst_section(global_test_result ": " $$0); \
 	  while ((rc = (getline line < ($$0 ".log"))) != 0) \
@@ -4199,8 +4215,8 @@ function rst_section(header) \
 	  }; \
 	  printf "\n"; \
 	}; \
-  close ($$0 ".trs"); \
-  close ($$0 ".log"); \
+	close ($$0 ".trs"); \
+	close ($$0 ".log"); \
 }'
 # Restructured Text title.
 am__rst_title = { sed 's/.*/   &   /;h;s/./=/g;p;x;s/ *$$//;p;g' && echo; }
@@ -4211,7 +4227,7 @@ am__sh_e_setup = case $$- in *e*) set +e;; esac
 # Default flags passed to test drivers.
 am__common_driver_flags = \
   --color-tests "$$am__color_tests" \
-  $$am__collect_skipped_logs \
+	$$am__collect_skipped_logs \
   --enable-hard-errors "$$am__enable_hard_errors" \
   --expect-failure "$$am__expect_failure"
 # To be inserted before the command running the test.  Creates the
@@ -4237,14 +4253,14 @@ elif test -f "$$f"; then dir=;				\
 # else dir="$(srcdir)/"; fi;				\
 tst=$$dir$$f; log='$@'; 				\
 # if test -n '$(IGNORE_SKIPPED_LOGS)'; then		\
-  am__collect_skipped_logs='--collect-skipped-logs no';	\
+	am__collect_skipped_logs='--collect-skipped-logs no';	\
 # else							\
-  am__collect_skipped_logs='';				\
+	am__collect_skipped_logs='';				\
 fi;							\
 # if test -n '$(DISABLE_HARD_ERRORS)'; then		\
-  am__enable_hard_errors=no; 				\
+	am__enable_hard_errors=no; 				\
 # else							\
-  am__enable_hard_errors=yes; 				\
+	am__enable_hard_errors=yes; 				\
 fi; 							\
 case " $(XFAIL_TESTS) " in				\
   *[\ \	]$$f[\ \	]* | *[\ \	]$$dir$$f[\ \	]*) \
@@ -4261,20 +4277,19 @@ $(AM_TESTS_ENVIRONMENT) $(TESTS_ENVIRONMENT)
 # since that might cause problem with VPATH rewrites for suffix-less tests.
 # See also 'test-harness-vpath-rewrite.sh' and 'test-trs-basic.sh'.
 am__set_TESTS_bases = \
-  bases='$(TEST_LOGS)'; \
-  bases=`for i in $$bases; do echo $$i; done | sed 's/\.log$$//'`; \
-  bases=`echo $$bases`
+	bases='$(TEST_LOGS)'; \
+	bases=`for i in $$bases; do echo $$i; done | sed 's/\.log$$//'`; \
+	bases=`echo $$bases`
 AM_TESTSUITE_SUMMARY_HEADER = ' for $(PACKAGE_STRING)'
 RECHECK_LOGS = $(TEST_LOGS)
-@OS_IS_NETBSD_FALSE@am__EXEEXT_4 = test-pthread_sigmask1$(EXEEXT)
-@OS_IS_NETBSD_FALSE@am__EXEEXT_5 = test-sigprocmask$(EXEEXT)
-@OS_IS_CYGWIN_FALSE@am__EXEEXT_6 = test-usleep$(EXEEXT)
+@OS_IS_NETBSD_FALSE@am__EXEEXT_4 = test-sigprocmask$(EXEEXT)
+@OS_IS_CYGWIN_FALSE@am__EXEEXT_5 = test-usleep$(EXEEXT)
 TEST_SUITE_LOG = test-suite.log
 TEST_EXTENSIONS =  .test
 LOG_DRIVER = $(SHELL) $(top_srcdir)/../build-aux/test-driver
 LOG_COMPILE = $(LOG_COMPILER) $(AM_LOG_FLAGS) $(LOG_FLAGS)
 am__set_b = \
-  case '$@' in \
+	case '$@' in \
 	*/*) \
 	  case '$*' in \
 	    */*) b='$*';; \
@@ -4282,7 +4297,7 @@ am__set_b = \
 	   esac;; \
 	*) \
 	  b='$*';; \
-  esac
+	esac
 am__test_logs1 = $(TESTS:=.log)
 am__test_logs2 = $(am__test_logs1:.log=.log)
 TEST_LOGS = $(am__test_logs2:.test.log=.log)
@@ -4296,12 +4311,12 @@ am__DIST_COMMON = $(srcdir)/Makefile.gnulib $(srcdir)/Makefile.in \
 	$(top_srcdir)/../build-aux/test-driver alloca.c
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 am__relativize = \
-  dir0=`pwd`; \
-  sed_first='s,^\([^/]*\)/.*$$,\1,'; \
-  sed_rest='s,^[^/]*/*,,'; \
-  sed_last='s,^.*/\([^/]*\)$$,\1,'; \
-  sed_butlast='s,/*[^/]*$$,,'; \
-  while test -n "$$dir1"; do \
+	dir0=`pwd`; \
+	sed_first='s,^\([^/]*\)/.*$$,\1,'; \
+	sed_rest='s,^[^/]*/*,,'; \
+	sed_last='s,^.*/\([^/]*\)$$,\1,'; \
+	sed_butlast='s,/*[^/]*$$,,'; \
+	while test -n "$$dir1"; do \
 	first=`echo "$$dir1" | sed -e "$$sed_first"`; \
 	if test "$$first" != "."; then \
 	  if test "$$first" = ".."; then \
@@ -4318,13 +4333,13 @@ am__relativize = \
 	  fi; \
 	fi; \
 	dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
-  done; \
-  reldir="$$dir2"
+	done; \
+	reldir="$$dir2"
 pkgdatadir = ${datadir}/gettext
 pkgincludedir = ${includedir}/gettext
 pkglibdir = ${libdir}/gettext
 pkglibexecdir = ${libexecdir}/gettext
-ACLOCAL = /Users/sedwards/gtk/bin/aclocal -I /Users/sedwards/gtk/share/aclocal
+ACLOCAL = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' aclocal-1.18
 ALLOCA = 
 ALLOCA_H = alloca.h
 AMTAR = $${TAR-tar}
@@ -4359,7 +4374,7 @@ CAN_PRINT_STACK_TRACE = 0
 CATOBJEXT = 
 CC = gcc
 CCDEPMODE = depmode=none
-CFLAGS = -include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h" -Wno-error $(GL_CFLAG_GNULIB_WARNINGS) -g -O2
+CFLAGS = -Wno-error $(GL_CFLAG_GNULIB_WARNINGS) -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CLASSPATH = 
 CLASSPATH_SEPARATOR = :
@@ -4407,7 +4422,6 @@ ENDIAN_H_JUST_MISSING_STDINT = @ENDIAN_H_JUST_MISSING_STDINT@
 ERRNO_H = 
 ETAGS = etags
 EXEEXT = 
-FABS_LIBM = @FABS_LIBM@
 FGREP = /usr/bin/grep -F
 FILECMD = file
 FILE_HAS_ACL_LIB = @FILE_HAS_ACL_LIB@
@@ -4755,6 +4769,7 @@ GL_GNULIB_MDA_Y0 = @GL_GNULIB_MDA_Y0@
 GL_GNULIB_MDA_Y1 = @GL_GNULIB_MDA_Y1@
 GL_GNULIB_MDA_YN = @GL_GNULIB_MDA_YN@
 GL_GNULIB_MEMCHR = @GL_GNULIB_MEMCHR@
+GL_GNULIB_MEMEQ = @GL_GNULIB_MEMEQ@
 GL_GNULIB_MEMMEM = @GL_GNULIB_MEMMEM@
 GL_GNULIB_MEMPCPY = @GL_GNULIB_MEMPCPY@
 GL_GNULIB_MEMRCHR = @GL_GNULIB_MEMRCHR@
@@ -4905,6 +4920,28 @@ GL_GNULIB_SQRTF = @GL_GNULIB_SQRTF@
 GL_GNULIB_SQRTL = @GL_GNULIB_SQRTL@
 GL_GNULIB_STACK_TRACE = @GL_GNULIB_STACK_TRACE@
 GL_GNULIB_STAT = @GL_GNULIB_STAT@
+GL_GNULIB_STDC_BIT_CEIL = @GL_GNULIB_STDC_BIT_CEIL@
+GL_GNULIB_STDC_BIT_FLOOR = @GL_GNULIB_STDC_BIT_FLOOR@
+GL_GNULIB_STDC_BIT_WIDTH = @GL_GNULIB_STDC_BIT_WIDTH@
+GL_GNULIB_STDC_COUNT_ONES = @GL_GNULIB_STDC_COUNT_ONES@
+GL_GNULIB_STDC_COUNT_ZEROS = @GL_GNULIB_STDC_COUNT_ZEROS@
+GL_GNULIB_STDC_FIRST_LEADING_ONE = @GL_GNULIB_STDC_FIRST_LEADING_ONE@
+GL_GNULIB_STDC_FIRST_LEADING_ZERO = @GL_GNULIB_STDC_FIRST_LEADING_ZERO@
+GL_GNULIB_STDC_FIRST_TRAILING_ONE = @GL_GNULIB_STDC_FIRST_TRAILING_ONE@
+GL_GNULIB_STDC_FIRST_TRAILING_ZERO = @GL_GNULIB_STDC_FIRST_TRAILING_ZERO@
+GL_GNULIB_STDC_HAS_SINGLE_BIT = @GL_GNULIB_STDC_HAS_SINGLE_BIT@
+GL_GNULIB_STDC_LEADING_ONES = @GL_GNULIB_STDC_LEADING_ONES@
+GL_GNULIB_STDC_LEADING_ZEROS = @GL_GNULIB_STDC_LEADING_ZEROS@
+GL_GNULIB_STDC_LOAD8 = @GL_GNULIB_STDC_LOAD8@
+GL_GNULIB_STDC_LOAD8_ALIGNED = @GL_GNULIB_STDC_LOAD8_ALIGNED@
+GL_GNULIB_STDC_MEMREVERSE8 = @GL_GNULIB_STDC_MEMREVERSE8@
+GL_GNULIB_STDC_MEMREVERSE8U = @GL_GNULIB_STDC_MEMREVERSE8U@
+GL_GNULIB_STDC_ROTATE_LEFT = @GL_GNULIB_STDC_ROTATE_LEFT@
+GL_GNULIB_STDC_ROTATE_RIGHT = @GL_GNULIB_STDC_ROTATE_RIGHT@
+GL_GNULIB_STDC_STORE8 = @GL_GNULIB_STDC_STORE8@
+GL_GNULIB_STDC_STORE8_ALIGNED = @GL_GNULIB_STDC_STORE8_ALIGNED@
+GL_GNULIB_STDC_TRAILING_ONES = @GL_GNULIB_STDC_TRAILING_ONES@
+GL_GNULIB_STDC_TRAILING_ZEROS = @GL_GNULIB_STDC_TRAILING_ZEROS@
 GL_GNULIB_STDIO_H_NONBLOCKING = @GL_GNULIB_STDIO_H_NONBLOCKING@
 GL_GNULIB_STDIO_H_SIGPIPE = @GL_GNULIB_STDIO_H_SIGPIPE@
 GL_GNULIB_STPCPY = @GL_GNULIB_STPCPY@
@@ -4912,16 +4949,17 @@ GL_GNULIB_STPNCPY = @GL_GNULIB_STPNCPY@
 GL_GNULIB_STRCASESTR = @GL_GNULIB_STRCASESTR@
 GL_GNULIB_STRCHRNUL = @GL_GNULIB_STRCHRNUL@
 GL_GNULIB_STRDUP = @GL_GNULIB_STRDUP@
+GL_GNULIB_STREQ = @GL_GNULIB_STREQ@
 GL_GNULIB_STRERROR = @GL_GNULIB_STRERROR@
 GL_GNULIB_STRERRORNAME_NP = @GL_GNULIB_STRERRORNAME_NP@
 GL_GNULIB_STRERROR_L = @GL_GNULIB_STRERROR_L@
 GL_GNULIB_STRERROR_R = @GL_GNULIB_STRERROR_R@
 GL_GNULIB_STRFTIME = @GL_GNULIB_STRFTIME@
-GL_GNULIB_STRINGEQ = @GL_GNULIB_STRINGEQ@
 GL_GNULIB_STRNCAT = @GL_GNULIB_STRNCAT@
 GL_GNULIB_STRNCPY = @GL_GNULIB_STRNCPY@
 GL_GNULIB_STRNDUP = @GL_GNULIB_STRNDUP@
 GL_GNULIB_STRNLEN = @GL_GNULIB_STRNLEN@
+GL_GNULIB_STRNUL = @GL_GNULIB_STRNUL@
 GL_GNULIB_STRPBRK = @GL_GNULIB_STRPBRK@
 GL_GNULIB_STRPTIME = @GL_GNULIB_STRPTIME@
 GL_GNULIB_STRSEP = @GL_GNULIB_STRSEP@
@@ -5122,6 +5160,7 @@ GL_GNULIB_UNSETENV = @GL_GNULIB_UNSETENV@
 GL_GNULIB_USLEEP = @GL_GNULIB_USLEEP@
 GL_GNULIB_UTIME = @GL_GNULIB_UTIME@
 GL_GNULIB_UTIMENSAT = @GL_GNULIB_UTIMENSAT@
+GL_GNULIB_VAPRINTF = @GL_GNULIB_VAPRINTF@
 GL_GNULIB_VASPRINTF = @GL_GNULIB_VASPRINTF@
 GL_GNULIB_VASZPRINTF = @GL_GNULIB_VASZPRINTF@
 GL_GNULIB_VDPRINTF = @GL_GNULIB_VDPRINTF@
@@ -5185,7 +5224,33 @@ GL_GRGL_GNULIB_ABORT_DEBUG = 0
 GL_GRGL_GNULIB_ACCESS = 0
 GL_GRGL_GNULIB_ALIGNED_ALLOC = 0
 GL_GRGL_GNULIB_ATOLL = 0
+GL_GRGL_GNULIB_BTOC32 = IN_GETTEXT_TOOLS_LIBGREP
 GL_GRGL_GNULIB_BTOWC = 0
+GL_GRGL_GNULIB_C32ISALNUM = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32ISALPHA = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32ISBLANK = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32ISCNTRL = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32ISDIGIT = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32ISGRAPH = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32ISLOWER = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32ISPRINT = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32ISPUNCT = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32ISSPACE = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32ISUPPER = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32ISXDIGIT = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32RTOMB = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32SNRTOMBS = 0
+GL_GRGL_GNULIB_C32SRTOMBS = 0
+GL_GRGL_GNULIB_C32STOMBS = 0
+GL_GRGL_GNULIB_C32SWIDTH = 0
+GL_GRGL_GNULIB_C32TOB = 0
+GL_GRGL_GNULIB_C32TOLOWER = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32TOUPPER = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32WIDTH = 0
+GL_GRGL_GNULIB_C32_APPLY_MAPPING = 0
+GL_GRGL_GNULIB_C32_APPLY_TYPE_TEST = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_C32_GET_MAPPING = 0
+GL_GRGL_GNULIB_C32_GET_TYPE_TEST = IN_GETTEXT_TOOLS_LIBGREP
 GL_GRGL_GNULIB_CALLOC_GNU = 0
 GL_GRGL_GNULIB_CALLOC_POSIX = 0
 GL_GRGL_GNULIB_CANONICALIZE_FILE_NAME = 0
@@ -5246,6 +5311,8 @@ GL_GRGL_GNULIB_LSEEK = 0
 GL_GRGL_GNULIB_MALLOC_GNU = 0
 GL_GRGL_GNULIB_MALLOC_POSIX = 0
 GL_GRGL_GNULIB_MBRLEN = IN_GETTEXT_TOOLS_LIBGREP
+GL_GRGL_GNULIB_MBRTOC16 = 0
+GL_GRGL_GNULIB_MBRTOC32 = IN_GETTEXT_TOOLS_LIBGREP
 GL_GRGL_GNULIB_MBRTOWC = 0
 GL_GRGL_GNULIB_MBSCASECMP = 0
 GL_GRGL_GNULIB_MBSCASESTR = 0
@@ -5255,14 +5322,17 @@ GL_GRGL_GNULIB_MBSINIT = 0
 GL_GRGL_GNULIB_MBSLEN = 0
 GL_GRGL_GNULIB_MBSNCASECMP = 0
 GL_GRGL_GNULIB_MBSNLEN = 0
+GL_GRGL_GNULIB_MBSNRTOC32S = 0
 GL_GRGL_GNULIB_MBSNRTOWCS = 0
 GL_GRGL_GNULIB_MBSPBRK = 0
 GL_GRGL_GNULIB_MBSPCASECMP = 0
 GL_GRGL_GNULIB_MBSRCHR = 0
+GL_GRGL_GNULIB_MBSRTOC32S = 0
 GL_GRGL_GNULIB_MBSRTOWCS = 0
 GL_GRGL_GNULIB_MBSSEP = 0
 GL_GRGL_GNULIB_MBSSPN = 0
 GL_GRGL_GNULIB_MBSSTR = 0
+GL_GRGL_GNULIB_MBSTOC32S = 0
 GL_GRGL_GNULIB_MBSTOK_R = 0
 GL_GRGL_GNULIB_MBSTOWCS = 0
 GL_GRGL_GNULIB_MBSZERO = 0
@@ -5299,6 +5369,7 @@ GL_GRGL_GNULIB_MDA_UNLINK = 1
 GL_GRGL_GNULIB_MDA_WCSDUP = 1
 GL_GRGL_GNULIB_MDA_WRITE = 1
 GL_GRGL_GNULIB_MEMCHR = 0
+GL_GRGL_GNULIB_MEMEQ = 0
 GL_GRGL_GNULIB_MEMMEM = 0
 GL_GRGL_GNULIB_MEMPCPY = 0
 GL_GRGL_GNULIB_MEMRCHR = 0
@@ -5343,15 +5414,16 @@ GL_GRGL_GNULIB_STPNCPY = 0
 GL_GRGL_GNULIB_STRCASESTR = 0
 GL_GRGL_GNULIB_STRCHRNUL = 0
 GL_GRGL_GNULIB_STRDUP = 0
+GL_GRGL_GNULIB_STREQ = 0
 GL_GRGL_GNULIB_STRERROR = 0
 GL_GRGL_GNULIB_STRERRORNAME_NP = 0
 GL_GRGL_GNULIB_STRERROR_L = 0
 GL_GRGL_GNULIB_STRERROR_R = 0
-GL_GRGL_GNULIB_STRINGEQ = @GL_GRGL_GNULIB_STRINGEQ@
 GL_GRGL_GNULIB_STRNCAT = 0
 GL_GRGL_GNULIB_STRNCPY = IN_GETTEXT_TOOLS_LIBGREP
 GL_GRGL_GNULIB_STRNDUP = 0
 GL_GRGL_GNULIB_STRNLEN = 0
+GL_GRGL_GNULIB_STRNUL = 0
 GL_GRGL_GNULIB_STRPBRK = 0
 GL_GRGL_GNULIB_STRSEP = 0
 GL_GRGL_GNULIB_STRSIGNAL = 0
@@ -5373,6 +5445,148 @@ GL_GRGL_GNULIB_SYSTEM_POSIX = 0
 GL_GRGL_GNULIB_TOWCTRANS = 0
 GL_GRGL_GNULIB_TRUNCATE = 0
 GL_GRGL_GNULIB_TTYNAME_R = 0
+GL_GRGL_GNULIB_UNICASE_EMPTY_PREFIX_CONTEXT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICASE_EMPTY_SUFFIX_CONTEXT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CF_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CN_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CO_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CS_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_C_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LM_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LO_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LU_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_L_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_MC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ME_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_MN_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_M_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ND_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_NL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_NO_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_N_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PD_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PF_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PI_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PO_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PS_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_P_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SK_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SM_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SO_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_S_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ZL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ZP_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ZS_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_Z_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ALPHABETIC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ASCII_HEX_DIGIT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_DIGIT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_RIGHT_TO_LEFT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_BLOCK_SEPARATOR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_BOUNDARY_NEUTRAL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_COMMON_SEPARATOR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_CONTROL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EMBEDDING_OR_OVERRIDE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUROPEAN_DIGIT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_SEPARATOR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_TERMINATOR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_HEBREW_RIGHT_TO_LEFT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_LEFT_TO_RIGHT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_NON_SPACING_MARK_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_OTHER_NEUTRAL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_PDF_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_SEGMENT_SEPARATOR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_WHITESPACE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CASED_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CASE_IGNORABLE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEFOLDED_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEMAPPED_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_LOWERCASED_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_TITLECASED_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_UPPERCASED_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_COMBINING_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_COMPOSITE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CURRENCY_SYMBOL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DASH_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DECIMAL_DIGIT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DEPRECATED_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DIACRITIC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_COMPONENT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_BASE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_PRESENTATION_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EXTENDED_PICTOGRAPHIC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EXTENDER_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_FORMAT_CONTROL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_BASE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_EXTEND_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_LINK_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_HEX_DIGIT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_HYPHEN_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDEOGRAPHIC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDS_BINARY_OPERATOR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDS_TRINARY_OPERATOR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDS_UNARY_OPERATOR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_CONTINUE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_START_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_CONTINUE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_START_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IGNORABLE_CONTROL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ISO_CONTROL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_JOIN_CONTROL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LEFT_OF_PAIR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LINE_SEPARATOR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LOGICAL_ORDER_EXCEPTION_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LOWERCASE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_MATH_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_MODIFIER_COMBINING_MARK_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_NON_BREAK_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_NOT_A_CHARACTER_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_NUMERIC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_ALPHABETIC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_GRAPHEME_EXTEND_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_ID_CONTINUE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_ID_START_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_LOWERCASE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_MATH_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_UPPERCASE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PAIRED_PUNCTUATION_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PARAGRAPH_SEPARATOR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PATTERN_SYNTAX_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PATTERN_WHITE_SPACE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PREPENDED_CONCATENATION_MARK_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PRIVATE_USE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PUNCTUATION_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_QUOTATION_MARK_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_RADICAL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_REGIONAL_INDICATOR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_SENTENCE_TERMINAL_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_SOFT_DOTTED_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_SPACE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_TERMINAL_PUNCTUATION_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_TITLECASE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_UNASSIGNED_CODE_VALUE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_UNIFIED_IDEOGRAPH_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_UPPERCASE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_VARIATION_SELECTOR_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_WHITE_SPACE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_XID_CONTINUE_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_XID_START_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ZERO_WIDTH_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNINORM_NFC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNINORM_NFD_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNINORM_NFKC_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
+GL_GRGL_GNULIB_UNINORM_NFKD_DLL_VARIABLE = LIBUNISTRING_DLL_VARIABLE
 GL_GRGL_GNULIB_UNISTD_H_GETOPT = 0
 GL_GRGL_GNULIB_UNISTD_H_NONBLOCKING = 0
 GL_GRGL_GNULIB_UNISTD_H_SIGPIPE = 0
@@ -5717,6 +5931,7 @@ GL_GTPO_GNULIB_MDA_Y0 = 1
 GL_GTPO_GNULIB_MDA_Y1 = 1
 GL_GTPO_GNULIB_MDA_YN = 1
 GL_GTPO_GNULIB_MEMCHR = 1
+GL_GTPO_GNULIB_MEMEQ = 1
 GL_GTPO_GNULIB_MEMMEM = 1
 GL_GTPO_GNULIB_MEMPCPY = 0
 GL_GTPO_GNULIB_MEMRCHR = 1
@@ -5838,16 +6053,17 @@ GL_GTPO_GNULIB_STPNCPY = 1
 GL_GTPO_GNULIB_STRCASESTR = 0
 GL_GTPO_GNULIB_STRCHRNUL = 1
 GL_GTPO_GNULIB_STRDUP = 0
+GL_GTPO_GNULIB_STREQ = 1
 GL_GTPO_GNULIB_STRERROR = 1
 GL_GTPO_GNULIB_STRERRORNAME_NP = 0
 GL_GTPO_GNULIB_STRERROR_L = 0
 GL_GTPO_GNULIB_STRERROR_R = 1
 GL_GTPO_GNULIB_STRFTIME = 0
-GL_GTPO_GNULIB_STRINGEQ = @GL_GTPO_GNULIB_STRINGEQ@
 GL_GTPO_GNULIB_STRNCAT = 0
 GL_GTPO_GNULIB_STRNCPY = 0
 GL_GTPO_GNULIB_STRNDUP = 0
 GL_GTPO_GNULIB_STRNLEN = 1
+GL_GTPO_GNULIB_STRNUL = 1
 GL_GTPO_GNULIB_STRPBRK = 0
 GL_GTPO_GNULIB_STRPTIME = 0
 GL_GTPO_GNULIB_STRSEP = 0
@@ -6045,6 +6261,7 @@ GL_GTPO_GNULIB_UNLOCKPT = 0
 GL_GTPO_GNULIB_UNSETENV = 0
 GL_GTPO_GNULIB_USLEEP = 0
 GL_GTPO_GNULIB_UTIMENSAT = 0
+GL_GTPO_GNULIB_VAPRINTF = 0
 GL_GTPO_GNULIB_VASPRINTF = 1
 GL_GTPO_GNULIB_VASZPRINTF = 1
 GL_GTPO_GNULIB_VDPRINTF = 0
@@ -6145,6 +6362,7 @@ GL_GTTGL_GNULIB_MDA_MKTEMP = 1
 GL_GTTGL_GNULIB_MDA_PUTENV = 1
 GL_GTTGL_GNULIB_MDA_STRDUP = 1
 GL_GTTGL_GNULIB_MEMCHR = 0
+GL_GTTGL_GNULIB_MEMEQ = 1
 GL_GTTGL_GNULIB_MEMMEM = 0
 GL_GTTGL_GNULIB_MEMPCPY = 0
 GL_GTTGL_GNULIB_MEMRCHR = 0
@@ -6184,15 +6402,16 @@ GL_GTTGL_GNULIB_STPNCPY = 0
 GL_GTTGL_GNULIB_STRCASESTR = 0
 GL_GTTGL_GNULIB_STRCHRNUL = 0
 GL_GTTGL_GNULIB_STRDUP = 0
+GL_GTTGL_GNULIB_STREQ = 0
 GL_GTTGL_GNULIB_STRERROR = 0
 GL_GTTGL_GNULIB_STRERRORNAME_NP = 0
 GL_GTTGL_GNULIB_STRERROR_L = 0
 GL_GTTGL_GNULIB_STRERROR_R = 0
-GL_GTTGL_GNULIB_STRINGEQ = @GL_GTTGL_GNULIB_STRINGEQ@
 GL_GTTGL_GNULIB_STRNCAT = 0
 GL_GTTGL_GNULIB_STRNCPY = 0
 GL_GTTGL_GNULIB_STRNDUP = 0
 GL_GTTGL_GNULIB_STRNLEN = 0
+GL_GTTGL_GNULIB_STRNUL = 0
 GL_GTTGL_GNULIB_STRPBRK = 0
 GL_GTTGL_GNULIB_STRSEP = 0
 GL_GTTGL_GNULIB_STRSIGNAL = 0
@@ -6222,7 +6441,6 @@ GNULIBHEADERS_OVERRIDE_WINT_T = 0
 GNULIB_LOCALEDIR = ${datarootdir}/locale
 GNULIB_LOCALEDIR_c = "/Users/sedwards/gtk/share/locale"
 GNULIB_LOCALEDIR_c_make = \"$(GNULIB_LOCALEDIR)\"
-GNUSTEP_CONFIG = @GNUSTEP_CONFIG@
 GO = @GO@
 GOCOMPFLAGS = @GOCOMPFLAGS@
 GO_CHOICE = @GO_CHOICE@
@@ -6655,6 +6873,7 @@ HAVE_SLEEP = 1
 HAVE_SPAWN_H = 
 HAVE_SQRTF = 1
 HAVE_SQRTL = 1
+HAVE_STDBIT_H = 
 HAVE_STDCKDINT_H = 1
 HAVE_STDCOUNTOF_H = 1
 HAVE_STDINT_H = 1
@@ -6785,7 +7004,6 @@ INCCURL =
 INCJSON_C = 
 INCLUDE_NEXT = include_next
 INCLUDE_NEXT_AS_FIRST_DIRECTIVE = include_next
-INCXML = @INCXML@
 INET_NTOP_LIB = @INET_NTOP_LIB@
 INET_PTON_LIB = @INET_PTON_LIB@
 INSTALL = /usr/bin/install -c
@@ -6798,11 +7016,6 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 INT32_MAX_LT_INTMAX_MAX = 1
 INT64_MAX_EQ_LONG_MAX = defined _LP64
 INTL_MACOSX_LIBS = -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
-ISINF_LIBM = @ISINF_LIBM@
-ISNAND_LIBM = @ISNAND_LIBM@
-ISNANF_LIBM = @ISNANF_LIBM@
-ISNANL_LIBM = @ISNANL_LIBM@
-ISNAN_LIBM = @ISNAN_LIBM@
 JAR = jar
 JAVA_CHOICE = yes
 LC_COLLATE_IMPLEMENTED = true
@@ -6843,7 +7056,6 @@ LIBUNISTRING_UNINORM_H = uninorm.h
 LIBUNISTRING_UNISTR_H = unistr.h
 LIBUNISTRING_UNITYPES_H = unitypes.h
 LIBUNISTRING_UNIWIDTH_H = uniwidth.h
-LIBXML = @LIBXML@
 LIB_ACL = @LIB_ACL@
 LIB_CLOCK_GETTIME = @LIB_CLOCK_GETTIME@
 LIB_GETRANDOM = @LIB_GETRANDOM@
@@ -6873,7 +7085,6 @@ LOCALE_FR_UTF8 = fr_FR.UTF-8
 LOCALE_JA = ja_JP.eucJP
 LOCALE_TR_UTF8 = @LOCALE_TR_UTF8@
 LOCALE_ZH_CN = zh_CN.GB18030
-LOG10_LIBM = @LOG10_LIBM@
 LTLIBICONV = 
 LTLIBINTL = 
 LTLIBMULTITHREAD = -lpthread
@@ -6881,7 +7092,6 @@ LTLIBOBJS =
 LTLIBTEXTSTYLE = 
 LTLIBTHREAD = 
 LTLIBUNISTRING = 
-LTLIBXML = @LTLIBXML@
 LT_SYS_LIBRARY_PATH = 
 M2C = 
 M2FLAGS = 
@@ -6925,6 +7135,7 @@ NEXT_AS_FIRST_DIRECTIVE_SCHED_H = <sched.h>
 NEXT_AS_FIRST_DIRECTIVE_SIGNAL_H = <signal.h>
 NEXT_AS_FIRST_DIRECTIVE_SPAWN_H = 
 NEXT_AS_FIRST_DIRECTIVE_STDARG_H = 
+NEXT_AS_FIRST_DIRECTIVE_STDBIT_H = 
 NEXT_AS_FIRST_DIRECTIVE_STDCKDINT_H = <stdckdint.h>
 NEXT_AS_FIRST_DIRECTIVE_STDCOUNTOF_H = <stdcountof.h>
 NEXT_AS_FIRST_DIRECTIVE_STDDEF_H = <stddef.h>
@@ -6971,6 +7182,7 @@ NEXT_SCHED_H = <sched.h>
 NEXT_SIGNAL_H = <signal.h>
 NEXT_SPAWN_H = 
 NEXT_STDARG_H = <stdarg.h>
+NEXT_STDBIT_H = 
 NEXT_STDCKDINT_H = <stdckdint.h>
 NEXT_STDCOUNTOF_H = <stdcountof.h>
 NEXT_STDDEF_H = <stddef.h>
@@ -6996,7 +7208,6 @@ NEXT_WCHAR_H = <wchar.h>
 NEXT_WCTYPE_H = <wctype.h>
 NM = /usr/bin/nm -B
 NMEDIT = nmedit
-NO_CXX = @NO_CXX@
 NO_EXPENSIVE_WARN_CFLAGS = 
 NULLPTR_T_NEEDS_STDDEF = 1
 OBJC = gcc
@@ -7020,7 +7231,6 @@ PATH_SEPARATOR = :
 PERL = /usr/bin/perl
 POSIX_SPAWN_LIB = @POSIX_SPAWN_LIB@
 POSUB = 
-POW_LIBM = @POW_LIBM@
 PRAGMA_COLUMNS = 
 PRAGMA_SYSTEM_HEADER = #pragma GCC system_header
 PRIPTR_PREFIX = __PRIPTR_PREFIX
@@ -7450,6 +7660,7 @@ SIG_ATOMIC_T_SUFFIX =
 SIZE_T_SUFFIX = 
 SMALL_WCHAR_T = 0
 STDARG_H = 
+STDBIT_H = 
 STDCKDINT_H = 
 STDCOUNTOF_H = stdcountof.h
 STDDEF_H = stddef.h
@@ -7826,23 +8037,22 @@ EXTRA_DIST = w32sock.h test-accept.c signature.h macros.h \
 	test-error.sh test-error.c macros.h test-execute.sh \
 	test-execute-main.c test-execute-child.c test-execute-script.c \
 	executable-script executable-script.sh executable-shell-script \
-	qemu.h macros.h test-fabs.c test-fabs.h signature.h \
-	minus-zero.h macros.h randomd.c test-fchdir.c signature.h \
-	macros.h test-fcntl-h.c test-fcntl.c signature.h macros.h \
-	test-fdopen.c signature.h macros.h test-fdopendir.c \
-	signature.h macros.h stdio-impl.h test-fflush.c \
-	test-fflush2.sh test-fflush2.c signature.h macros.h \
-	test-fgetc.c signature.h macros.h test-file-has-acl.sh \
-	test-file-has-acl-1.sh test-file-has-acl-2.sh \
-	test-file-has-acl.c macros.h test-filenamecat.c \
-	test-fnmatch-h.c test-fnmatch-1.sh test-fnmatch-2.sh \
-	test-fnmatch-3.sh test-fnmatch-4.sh test-fnmatch-5.sh \
-	test-fnmatch.c test-fnmatch-w32-2.sh test-fnmatch-w32-3.sh \
-	test-fnmatch-w32-4.sh test-fnmatch-w32-5.sh \
-	test-fnmatch-w32-6.sh test-fnmatch-w32-7.sh \
-	test-fnmatch-w32-8.sh test-fnmatch-w32.c signature.h macros.h \
-	test-fopen-gnu.c macros.h test-fopen.h test-fopen.c \
-	signature.h macros.h stdio-impl.h test-fpurge.c macros.h \
+	qemu.h macros.h test-fchdir.c signature.h macros.h \
+	test-fcntl-h.c test-fcntl.c signature.h macros.h test-fdopen.c \
+	signature.h macros.h test-fdopendir.c signature.h macros.h \
+	stdio-impl.h test-fflush.c test-fflush2.sh test-fflush2.c \
+	signature.h macros.h test-fgetc.c signature.h macros.h \
+	test-file-has-acl.sh test-file-has-acl-1.sh \
+	test-file-has-acl-2.sh test-file-has-acl.c macros.h \
+	test-filenamecat.c test-fnmatch-h.c test-fnmatch-1.sh \
+	test-fnmatch-2.sh test-fnmatch-3.sh test-fnmatch-4.sh \
+	test-fnmatch-5.sh test-fnmatch.c test-fnmatch-w32-2.sh \
+	test-fnmatch-w32-3.sh test-fnmatch-w32-4.sh \
+	test-fnmatch-w32-5.sh test-fnmatch-w32-6.sh \
+	test-fnmatch-w32-7.sh test-fnmatch-w32-8.sh test-fnmatch-w32.c \
+	signature.h macros.h test-fopen-gnu.c macros.h test-fopen.h \
+	test-fopen.c signature.h macros.h test-fpending.c \
+	test-fpending.sh macros.h stdio-impl.h test-fpurge.c macros.h \
 	test-fputc.c signature.h macros.h test-fread.c signature.h \
 	macros.h freading.h stdio-impl.h test-freading.c macros.h \
 	test-free.c macros.h test-freopen.c signature.h macros.h \
@@ -7877,34 +8087,30 @@ EXTRA_DIST = w32sock.h test-accept.c signature.h macros.h \
 	test-inet_pton.c signature.h macros.h test-intprops.c macros.h \
 	anytostr.c inttostr.h macros.h test-inttostr.c \
 	test-inttypes-h.c w32sock.h test-ioctl.c signature.h macros.h \
-	test-isblank.c signature.h macros.h test-isinf.c infinity.h \
-	macros.h test-isnan.c minus-zero.h infinity.h macros.h \
-	test-isnand-nolibm.c test-isnand.h minus-zero.h infinity.h \
-	macros.h test-isnand.c test-isnand.h minus-zero.h infinity.h \
-	macros.h test-isnanf-nolibm.c test-isnanf.h minus-zero.h \
-	infinity.h macros.h test-isnanf.c test-isnanf.h minus-zero.h \
-	infinity.h macros.h test-isnanl-nolibm.c test-isnanl.h \
-	minus-zero.h infinity.h macros.h test-isnanl.c test-isnanl.h \
-	minus-zero.h infinity.h macros.h test-iswblank.c macros.h \
-	test-iswctype.c signature.h macros.h test-iswdigit.sh \
-	test-iswdigit.c signature.h macros.h test-iswpunct.sh \
-	test-iswpunct.c signature.h macros.h test-iswxdigit.sh \
-	test-iswxdigit.c signature.h macros.h test-largefile.c \
-	test-limits-h.c w32sock.h test-listen.c signature.h macros.h \
-	test-localcharset.c test-localcharset-w32utf8.sh \
-	test-localcharset-w32utf8.c windows-utf8.rc \
-	windows-utf8.manifest test-locale-h.c test-localeconv.c \
-	test-localeconv-mt.c signature.h macros.h test-localename.c \
-	test-localename-w32utf8.sh test-localename-w32utf8.c \
-	windows-utf8.rc windows-utf8.manifest macros.h test-rwlock1.c \
-	test-lock.c atomic-int-gnulib.h macros.h test-log10.c \
-	test-log10.h minus-zero.h signature.h macros.h randomd.c \
-	test-lseek.c test-lseek.sh signature.h macros.h test-lstat.h \
-	test-lstat.c signature.h macros.h test-malloc-gnu.c macros.h \
-	test-malloc-posix.c macros.h test-malloca.c test-math-h.c \
-	macros.h test-mbrtoc32-1.sh test-mbrtoc32-2.sh \
-	test-mbrtoc32-3.sh test-mbrtoc32-4.sh test-mbrtoc32-5.sh \
-	test-mbrtoc32.c test-mbrtoc32-w32-2.sh test-mbrtoc32-w32-3.sh \
+	test-isblank.c signature.h macros.h test-isnand-nolibm.c \
+	test-isnand.h minus-zero.h infinity.h macros.h \
+	test-isnanf-nolibm.c test-isnanf.h minus-zero.h infinity.h \
+	macros.h test-isnanl-nolibm.c test-isnanl.h minus-zero.h \
+	infinity.h macros.h test-iswblank.c macros.h test-iswctype.c \
+	signature.h macros.h test-iswdigit.sh test-iswdigit.c \
+	signature.h macros.h test-iswpunct.sh test-iswpunct.c \
+	signature.h macros.h test-iswxdigit.sh test-iswxdigit.c \
+	signature.h macros.h test-largefile.c test-limits-h.c \
+	test-link.h test-link.c signature.h macros.h w32sock.h \
+	test-listen.c signature.h macros.h test-localcharset.c \
+	test-localcharset-w32utf8.sh test-localcharset-w32utf8.c \
+	windows-utf8.rc windows-utf8.manifest test-locale-h.c \
+	test-localeconv.c test-localeconv-mt.c signature.h macros.h \
+	test-localename.c test-localename-w32utf8.sh \
+	test-localename-w32utf8.c windows-utf8.rc \
+	windows-utf8.manifest macros.h test-rwlock1.c test-lock.c \
+	atomic-int-gnulib.h macros.h test-lseek.c test-lseek.sh \
+	signature.h macros.h test-lstat.h test-lstat.c signature.h \
+	macros.h test-malloc-gnu.c macros.h test-malloc-posix.c \
+	macros.h test-malloca.c test-math-h.c macros.h \
+	test-mbrtoc32-1.sh test-mbrtoc32-2.sh test-mbrtoc32-3.sh \
+	test-mbrtoc32-4.sh test-mbrtoc32-5.sh test-mbrtoc32.c \
+	test-mbrtoc32-w32-2.sh test-mbrtoc32-w32-3.sh \
 	test-mbrtoc32-w32-4.sh test-mbrtoc32-w32-5.sh \
 	test-mbrtoc32-w32-6.sh test-mbrtoc32-w32-7.sh \
 	test-mbrtoc32-w32-8.sh test-mbrtoc32-w32.c signature.h \
@@ -7957,36 +8163,39 @@ EXTRA_DIST = w32sock.h test-accept.c signature.h macros.h \
 	test-posix_spawn-dup2-stdin.in.sh test-posix_spawnp-script.c \
 	test-posix_spawnp-vfork.c executable-script \
 	executable-script.sh executable-shell-script signature.h \
-	macros.h test-pow.c signature.h macros.h test-printf-frexp.c \
-	macros.h test-printf-frexpl.c macros.h priv-set.h \
-	test-priv-set.c macros.h test-pselect.c test-select.h macros.h \
-	signature.h test-pthread-cond.c virtualbox.h macros.h \
-	test-pthread.c test-pthread-mutex.c test-pthread-mutex-type.c \
-	atomic-int-posix.h macros.h test-pthread-once1.c \
-	test-pthread-once2.c macros.h test-pthread-rwlock.c \
-	atomic-int-posix.h macros.h test-pthread-thread.c macros.h \
-	test-pthread_sigmask1.c test-pthread_sigmask2.c signature.h \
-	virtualbox.h macros.h test-putenv.c macros.h signature.h \
-	test-quotearg-simple.c test-quotearg.h macros.h zerosize-ptr.h \
-	test-raise.c signature.h macros.h test-random.c \
-	test-random-mt.c signature.h macros.h test-random_r.c \
-	signature.h macros.h test-rawmemchr.c zerosize-ptr.h \
-	signature.h macros.h test-read-file.c macros.h test-read.c \
-	signature.h macros.h test-readlink.h test-readlink.c \
-	signature.h macros.h test-realloc-posix.c macros.h \
-	test-reallocarray.c signature.h macros.h test-rmdir.h \
-	test-rmdir.c signature.h macros.h root-uid.h test-sched-h.c \
-	macros.h signature.h test-select.c test-select.h \
-	test-select-fd.c test-select-in.sh test-select-out.sh \
-	test-select-stdin.c test-servent.c signature.h test-setenv.c \
-	signature.h macros.h test-setlocale_null.c \
-	test-setlocale_null-mt-one.c test-setlocale_null-mt-all.c \
-	test-setlocale_null-unlocked.c test-setlocale1.sh \
-	test-setlocale1.c test-setlocale2.sh test-setlocale2.c \
-	test-setlocale-w32.c test-setlocale-w32utf8.sh \
-	test-setlocale-w32utf8.c windows-utf8.rc windows-utf8.manifest \
-	signature.h macros.h w32sock.h test-setsockopt.c signature.h \
-	macros.h test-sf-istream.c macros.h test-sh-quote.c macros.h \
+	macros.h test-printf-frexp.c macros.h test-printf-frexpl.c \
+	macros.h priv-set.h test-priv-set.c macros.h test-pselect.c \
+	test-select.h macros.h signature.h test-pthread-cond.c \
+	virtualbox.h macros.h test-pthread.c test-pthread-mutex.c \
+	test-pthread-mutex-type.c atomic-int-posix.h macros.h \
+	test-pthread-once1.c test-pthread-once2.c macros.h \
+	test-pthread-rwlock.c atomic-int-posix.h macros.h \
+	test-pthread-thread.c macros.h test-pthread_sigmask1.c \
+	test-pthread_sigmask2.c signature.h virtualbox.h macros.h \
+	test-putenv.c macros.h signature.h test-quotearg-simple.c \
+	test-quotearg.h macros.h zerosize-ptr.h test-raise.c \
+	signature.h macros.h test-random.c test-random-mt.c \
+	signature.h macros.h test-random_r.c signature.h macros.h \
+	test-rawmemchr.c zerosize-ptr.h signature.h macros.h \
+	test-read-file.c macros.h test-read.c signature.h macros.h \
+	test-readlink.h test-readlink.c signature.h macros.h \
+	test-readlink.h test-readlinkat.c signature.h macros.h \
+	test-realloc-posix.c macros.h test-reallocarray.c signature.h \
+	macros.h test-rename.h test-rename.c signature.h macros.h \
+	test-rename.h test-renameatu.c signature.h macros.h \
+	test-rmdir.h test-rmdir.c signature.h macros.h root-uid.h \
+	test-sched-h.c macros.h signature.h test-select.c \
+	test-select.h test-select-fd.c test-select-in.sh \
+	test-select-out.sh test-select-stdin.c test-servent.c \
+	signature.h test-setenv.c signature.h macros.h \
+	test-setlocale_null.c test-setlocale_null-mt-one.c \
+	test-setlocale_null-mt-all.c test-setlocale_null-unlocked.c \
+	test-setlocale1.sh test-setlocale1.c test-setlocale2.sh \
+	test-setlocale2.c test-setlocale-w32.c \
+	test-setlocale-w32utf8.sh test-setlocale-w32utf8.c \
+	windows-utf8.rc windows-utf8.manifest signature.h macros.h \
+	w32sock.h test-setsockopt.c signature.h macros.h \
+	test-sf-istream.c macros.h test-sh-quote.c macros.h \
 	test-sigaction.c signature.h macros.h test-signal-h.c \
 	test-signbit.c minus-zero.h infinity.h macros.h test-sigpipe.c \
 	test-sigpipe.sh macros.h test-sigprocmask.c signature.h \
@@ -7998,25 +8207,28 @@ EXTRA_DIST = w32sock.h test-accept.c signature.h macros.h \
 	executable-script executable-script.sh executable-shell-script \
 	qemu.h macros.h test-spin1.c test-spin2.c atomic-int-gnulib.h \
 	test-stat.h test-stat.c signature.h macros.h test-stat-time.c \
-	macros.h nap.h macros.h test-intprops.c test-stdckdint-h.c \
-	test-stdcountof-h.c macros.h test-stddef-h.c test-stdint-h.c \
-	test-stdio-h.c macros.h test-stdlib-h.c test-sys_wait-h.h \
-	test-str_endswith.c macros.h test-str_startswith.c macros.h \
-	test-strchrnul.c signature.h macros.h test-strerror.c \
-	signature.h macros.h test-strerror_r.c signature.h macros.h \
-	test-striconv.c macros.h test-striconveh.c macros.h \
-	test-striconveha.c iconvsupport.c macros.h \
-	test-string-buffer-reversed.c macros.h test-string-buffer.c \
-	macros.h test-string-desc.sh test-string-desc.c macros.h \
-	test-string-h.c test-strncpy.c zerosize-ptr.h macros.h \
-	test-strnlen.c zerosize-ptr.h signature.h macros.h \
-	test-strstr.c zerosize-ptr.h signature.h macros.h \
-	test-strtol.c signature.h macros.h test-strtoul.c signature.h \
-	macros.h test-supersede.c test-supersede-open.h \
-	test-supersede-fopen.h macros.h test-symlink.h test-symlink.c \
-	signature.h macros.h sys_ioctl.in.h test-sys_ioctl-h.c \
-	test-sys_random-h.c test-sys_resource-h.c test-sys_select-h.c \
-	signature.h test-sys_socket-h.c macros.h test-sys_stat-h.c \
+	macros.h nap.h test-stdbit-h.c macros.h \
+	test-stdc_memreverse8u.c macros.h macros.h test-intprops.c \
+	test-stdckdint-h.c test-stdcountof-h.c macros.h \
+	test-stddef-h.c test-stdint-h.c test-stdio-h.c macros.h \
+	test-stdlib-h.c test-sys_wait-h.h test-str_endswith.c macros.h \
+	test-str_startswith.c macros.h test-strchrnul.c signature.h \
+	macros.h test-strerror.c signature.h macros.h \
+	test-strerror_r.c signature.h macros.h test-striconv.c \
+	macros.h test-striconveh.c macros.h test-striconveha.c \
+	iconvsupport.c macros.h test-string-buffer-reversed.c macros.h \
+	test-string-buffer.c macros.h test-string-desc.sh \
+	test-string-desc.c macros.h test-string-h.c test-strncpy.c \
+	zerosize-ptr.h macros.h test-strnlen.c zerosize-ptr.h \
+	signature.h macros.h test-strnul.c macros.h test-strstr.c \
+	zerosize-ptr.h signature.h macros.h test-strtol.c signature.h \
+	macros.h test-strtoul.c signature.h macros.h test-supersede.c \
+	test-supersede-open.h test-supersede-fopen.h macros.h \
+	test-symlink.h test-symlink.c signature.h macros.h at-func.c \
+	test-symlink.h test-symlinkat.c signature.h macros.h \
+	sys_ioctl.in.h test-sys_ioctl-h.c test-sys_random-h.c \
+	test-sys_resource-h.c test-sys_select-h.c signature.h \
+	test-sys_socket-h.c macros.h test-sys_stat-h.c \
 	test-sys_time-h.c test-sys_types-h.c test-sys_uio-h.c \
 	test-sys_wait-h.c test-sys_wait-h.h init.sh test-init.sh \
 	test-thread_self.c test-thread_create.c macros.h test-time-h.c \
@@ -8106,14 +8318,15 @@ EXTRA_DIST = w32sock.h test-accept.c signature.h macros.h \
 	macros.h unistr/test-u8-prev.c macros.h \
 	unistr/test-u8-strlen.c macros.h unistr/test-u8-uctomb.c \
 	macros.h uniwidth/test-uniwidth-h.c test-unlink.h \
-	test-unlink.c signature.h macros.h unlinkdir.h test-unsetenv.c \
-	signature.h macros.h test-usleep.c signature.h macros.h \
-	test-utime-h.c test-vasnprintf.c macros.h test-vasprintf.c \
-	signature.h macros.h test-verify.c test-verify-try.c \
-	test-verify.sh vma-iter.h test-vsnprintf.c signature.h \
-	macros.h test-vsnzprintf-posix.c test-snzprintf-posix.h \
-	infinity.h macros.h test-wchar-h.c test-wcrtomb.sh \
-	test-wcrtomb.c test-wcrtomb-w32-2.sh test-wcrtomb-w32-3.sh \
+	test-unlink.c signature.h macros.h at-func.c test-unlinkat.c \
+	test-rmdir.h test-unlink.h signature.h macros.h unlinkdir.h \
+	test-unsetenv.c signature.h macros.h test-usleep.c signature.h \
+	macros.h test-utime-h.c test-vasnprintf.c macros.h \
+	test-vasprintf.c signature.h macros.h test-verify.c \
+	test-verify-try.c test-verify.sh vma-iter.h \
+	test-vsnzprintf-posix.c test-snzprintf-posix.h infinity.h \
+	macros.h test-wchar-h.c test-wcrtomb.sh test-wcrtomb.c \
+	test-wcrtomb-w32-2.sh test-wcrtomb-w32-3.sh \
 	test-wcrtomb-w32-4.sh test-wcrtomb-w32-5.sh \
 	test-wcrtomb-w32-6.sh test-wcrtomb-w32-7.sh \
 	test-wcrtomb-w32-8.sh test-wcrtomb-w32.c signature.h macros.h \
@@ -8138,12 +8351,12 @@ SUFFIXES =
 # each time it fails, the makefile rule does not perform the usual
 #  "mv -f $name.Tpo $name.po, so tell make clean to remove that file.
 MOSTLYCLEANFILES = core *.stackdump endian.h endian.h-t \
-	test-fflush.txt t-fpurge.tmp t-freading.tmp t-ftell3.tmp \
-	t-ftello3.tmp test-getdelim.txt test-getline.txt \
-	$(am__append_18) test-posix_spawn-dup2-stdout.sh \
+	test-fflush.txt test-fpending.t t-fpurge.tmp t-freading.tmp \
+	t-ftell3.tmp t-ftello3.tmp test-getdelim.txt test-getline.txt \
+	$(am__append_19) test-posix_spawn-dup2-stdout.sh \
 	test-posix_spawn-dup2-stdout.sh-t \
 	test-posix_spawn-dup2-stdin.sh \
-	test-posix_spawn-dup2-stdin.sh-t $(am__append_39) sys/ioctl.h \
+	test-posix_spawn-dup2-stdin.sh-t $(am__append_38) sys/ioctl.h \
 	sys/ioctl.h-t .deps/test-verify-try.Tpo
 MOSTLYCLEANDIRS = sys
 CLEANFILES = 
@@ -8163,25 +8376,25 @@ libtests_a_SOURCES = $(am__append_1) copy-acl.c set-acl.c \
 	freading.c $(am__append_9) $(am__append_10) $(am__append_11) \
 	$(am__append_12) $(am__append_13) imaxtostr.c inttostr.c \
 	offtostr.c uinttostr.c umaxtostr.c $(am__append_14) \
-	$(am__append_15) $(am__append_21) nan.h $(am__append_22) \
-	gl_oset.h gl_oset.c $(am__append_23) priv-set.c \
-	$(am__append_24) $(am__append_25) $(am__append_26) \
-	$(am__append_27) $(am__append_28) $(am__append_29) \
-	$(am__append_30) $(am__append_32) qset-acl.c $(am__append_33) \
-	$(am__append_34) $(am__append_35) $(am__append_36) \
-	$(am__append_40) signed-nan.h signed-snan.h $(am__append_42) \
-	snan.h $(am__append_43) str_endswith.c $(am__append_44) \
+	$(am__append_15) $(am__append_16) $(am__append_22) nan.h \
+	$(am__append_23) gl_oset.h gl_oset.c $(am__append_24) \
+	priv-set.c $(am__append_25) $(am__append_26) $(am__append_27) \
+	$(am__append_28) $(am__append_29) $(am__append_30) \
+	$(am__append_31) qset-acl.c $(am__append_32) $(am__append_33) \
+	$(am__append_34) $(am__append_35) $(am__append_39) \
+	signed-nan.h signed-snan.h $(am__append_41) snan.h \
+	$(am__append_42) $(am__append_43) $(am__append_44) \
 	glthread/thread.h glthread/thread.c $(am__append_45) \
 	timespec-add.c timespec-sub.c $(am__append_48) \
 	$(am__append_49) $(am__append_50) $(am__append_51) \
-	$(am__append_52) unlinkdir.c $(am__append_53) vma-iter.c \
-	$(am__append_55) $(am__append_56) $(am__append_57) \
-	$(am__append_58) $(am__append_59) $(am__append_60) \
-	$(am__append_61) $(am__append_62) xgetcwd.c gl_xoset.h \
+	$(am__append_52) $(am__append_53) unlinkdir.c $(am__append_54) \
+	vma-iter.c $(am__append_56) $(am__append_57) $(am__append_58) \
+	$(am__append_59) $(am__append_60) $(am__append_61) \
+	$(am__append_62) $(am__append_63) xgetcwd.c gl_xoset.h \
 	gl_xoset.c xstrtol-error.c glthread/yield.h
 libtests_a_LIBADD = $(gltests_LIBOBJS) 
 libtests_a_DEPENDENCIES = $(gltests_LIBOBJS) 
-EXTRA_libtests_a_SOURCES = alloca.c anytostr.c
+EXTRA_libtests_a_SOURCES = alloca.c anytostr.c at-func.c at-func.c
 AM_LIBTOOLFLAGS = --preserve-dup-deps
 IGNORE_SKIPPED_LOGS = 1
 test_accept_LDADD = $(LDADD) @LIBSOCKET@
@@ -8190,6 +8403,7 @@ test_copy_acl_LDADD = $(LDADD) $(LIB_ACL) $(QCOPY_ACL_LIB) $(LIBUNISTRING)  $(MB
 test_sameacls_LDADD = $(LDADD) $(LIB_ACL)  $(MBRTOWC_LIB)
 test_argmatch_LDADD = $(LDADD) $(LIBUNISTRING)  $(MBRTOWC_LIB) $(LIBC32CONV)
 test_array_set_LDADD = $(LDADD) 
+test_asyncsafe_spin1_LDADD = $(LDADD) 
 test_asyncsafe_spin2_LDADD = $(LDADD) -lpthread @YIELD_LIB@ @LIB_SEMAPHORE@
 test_bind_LDADD = $(LDADD) @LIBSOCKET@ $(INET_PTON_LIB)
 test_bind_LDFLAGS = $(LDFLAGS)  @LIBSOCKET@ $(INET_PTON_LIB)
@@ -8229,8 +8443,6 @@ test_execute_child_LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS
 test_execute_child_LDADD = 
 test_execute_script_LDADD = $(LDADD)  $(LIBTHREAD)
 test_execute_script_CPPFLAGS = $(AM_CPPFLAGS) -DSRCDIR=\"$(srcdir)/\"
-test_fabs_SOURCES = test-fabs.c randomd.c
-test_fabs_LDADD = $(LDADD) @FABS_LIBM@
 test_fchdir_LDADD = $(LDADD) $(LIBINTL)
 test_fdopendir_LDADD = $(LDADD) 
 test_file_has_acl_LDADD = $(LDADD) $(FILE_HAS_ACL_LIB)
@@ -8278,11 +8490,6 @@ test_htonl_LDADD = $(LDADD) @HTONL_LIB@
 test_iconv_LDADD = $(LDADD) 
 test_inet_ntop_LDADD = $(LDADD) @INET_NTOP_LIB@
 test_inet_pton_LDADD = $(LDADD) @INET_PTON_LIB@
-test_isinf_LDADD = $(LDADD) @ISINF_LIBM@
-test_isnan_LDADD = $(LDADD) @ISNAN_LIBM@
-test_isnand_LDADD = $(LDADD) @ISNAND_LIBM@
-test_isnanf_LDADD = $(LDADD) @ISNANF_LIBM@
-test_isnanl_LDADD = $(LDADD) @ISNANL_LIBM@
 test_iswdigit_LDADD = $(LDADD) $(SETLOCALE_LIB) $(MBRTOWC_LIB)
 test_iswpunct_LDADD = $(LDADD) $(SETLOCALE_LIB) $(MBRTOWC_LIB)
 test_iswxdigit_LDADD = $(LDADD) $(SETLOCALE_LIB) $(MBRTOWC_LIB)
@@ -8294,8 +8501,6 @@ test_localename_LDADD = $(LDADD) $(SETLOCALE_LIB) -Wl,-framework -Wl,CoreFoundat
 #test_localename_w32utf8_LDADD = $(LDADD) test-localename-windows-utf8.res $(SETLOCALE_LIB)
 test_rwlock1_LDADD = $(LDADD) -lpthread @YIELD_LIB@
 test_lock_LDADD = $(LDADD) -lpthread @YIELD_LIB@ @LIB_SEMAPHORE@
-test_log10_SOURCES = test-log10.c randomd.c
-test_log10_LDADD = $(LDADD) @LOG10_LIBM@
 test_mbrtoc32_LDADD = $(LDADD) $(LIBUNISTRING) $(SETLOCALE_LIB) $(MBRTOWC_LIB) $(LIBC32CONV)
 test_mbrtowc_LDADD = $(LDADD) $(SETLOCALE_LIB) $(MBRTOWC_LIB)
 #test_mbrtowc_w32utf8_LDADD = $(LDADD) test-mbrtowc-windows-utf8.res $(SETLOCALE_LIB)
@@ -8321,7 +8526,6 @@ test_pipe2_LDADD = $(LDADD) $(LIBSOCKET)
 test_posix_spawn_script_CPPFLAGS = $(AM_CPPFLAGS) -DSRCDIR=\"$(srcdir)/\"
 test_posix_spawn_chdir_LDADD = $(LDADD) 
 test_posix_spawnp_script_CPPFLAGS = $(AM_CPPFLAGS) -DSRCDIR=\"$(srcdir)/\"
-test_pow_LDADD = $(LDADD) @POW_LIBM@
 test_pselect_LDADD = $(LDADD) @SELECT_LIB@ @LIBSOCKET@  $(INET_PTON_LIB)
 test_pthread_cond_LDADD = $(LDADD) -lpthread 
 test_pthread_mutex_LDADD = $(LDADD) -lpthread  @LIB_SEMAPHORE@
@@ -8336,6 +8540,8 @@ test_pthread_sigmask1_LDADD = $(LDADD)
 test_pthread_sigmask2_LDADD = $(LDADD)  -lpthread
 test_quotearg_simple_LDADD = $(LDADD) $(LIBUNISTRING)  $(MBRTOWC_LIB) $(LIBC32CONV)
 test_random_mt_LDADD = $(LDADD) $(LIBINTL) $(LIBMULTITHREAD) $(YIELD_LIB)
+test_readlinkat_LDADD = $(LDADD) 
+test_renameatu_LDADD = $(LDADD) 
 test_select_LDADD = $(LDADD) @SELECT_LIB@ @LIBSOCKET@ $(INET_PTON_LIB)
 test_select_fd_LDADD = $(LDADD) @SELECT_LIB@
 test_select_stdin_LDADD = $(LDADD) @SELECT_LIB@
@@ -8386,6 +8592,7 @@ test_striconveh_LDADD = $(LDADD) $(LIBUNISTRING)
 test_striconveha_SOURCES = test-striconveha.c iconvsupport.c
 test_striconveha_LDADD = $(LDADD) $(LIBUNISTRING) 
 test_supersede_LDADD = $(LDADD) $(LIB_ACL) $(QCOPY_ACL_LIB) $(CLOCK_TIME_LIB) $(GETRANDOM_LIB) $(LIBINTL) $(LIBTHREAD)
+test_symlinkat_LDADD = $(LDADD) 
 test_thread_self_LDADD = $(LDADD) 
 test_thread_create_LDADD = $(LDADD) -lpthread
 test_tls_LDADD = $(LDADD) -lpthread @YIELD_LIB@
@@ -8457,27 +8664,27 @@ test_canonical_decomposition_LDADD = $(LDADD) $(LIBUNISTRING)
 test_composition_SOURCES = uninorm/test-composition.c
 test_composition_LDADD = $(LDADD) $(LIBUNISTRING)
 test_nfc_SOURCES = \
-  uninorm/test-nfc.c \
-  uninorm/test-u8-nfc.c \
-  uninorm/test-u16-nfc.c \
-  uninorm/test-u32-nfc.c
+	uninorm/test-nfc.c \
+	uninorm/test-u8-nfc.c \
+	uninorm/test-u16-nfc.c \
+	uninorm/test-u32-nfc.c
 
 test_nfc_LDADD = $(LDADD) $(LIBUNISTRING)
 test_u32_nfc_big_SOURCES = \
-  uninorm/test-u32-nfc-big.c \
-  uninorm/test-u32-normalize-big.c
+	uninorm/test-u32-nfc-big.c \
+	uninorm/test-u32-normalize-big.c
 
 test_u32_nfc_big_LDADD = $(LDADD) $(LIBUNISTRING) 
 test_nfd_SOURCES = \
-  uninorm/test-nfd.c \
-  uninorm/test-u8-nfd.c \
-  uninorm/test-u16-nfd.c \
-  uninorm/test-u32-nfd.c
+	uninorm/test-nfd.c \
+	uninorm/test-u8-nfd.c \
+	uninorm/test-u16-nfd.c \
+	uninorm/test-u32-nfd.c
 
 test_nfd_LDADD = $(LDADD) $(LIBUNISTRING)
 test_u32_nfd_big_SOURCES = \
-  uninorm/test-u32-nfd-big.c \
-  uninorm/test-u32-normalize-big.c
+	uninorm/test-u32-nfd-big.c \
+	uninorm/test-u32-normalize-big.c
 
 test_u32_nfd_big_LDADD = $(LDADD) $(LIBUNISTRING) 
 test_unistr_h_SOURCES = unistr/test-unistr-h.c
@@ -8528,6 +8735,7 @@ test_u8_uctomb_SOURCES = unistr/test-u8-uctomb.c
 test_u8_uctomb_LDADD = $(LDADD) $(LIBUNISTRING)
 test_uniwidth_h_SOURCES = uniwidth/test-uniwidth-h.c
 test_uniwidth_h_LDADD = $(LDADD) $(LIBUNISTRING)
+test_unlinkat_LDADD = $(LDADD) 
 test_wcrtomb_LDADD = $(LDADD) $(SETLOCALE_LIB)
 test_wcwidth_LDADD = $(LDADD) $(SETLOCALE_LIB) $(LIBUNISTRING)
 test_xalloc_die_LDADD = $(LDADD) 
@@ -9010,10 +9218,6 @@ test-execute-script$(EXEEXT): $(test_execute_script_OBJECTS) $(test_execute_scri
 	@rm -f test-execute-script$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_execute_script_OBJECTS) $(test_execute_script_LDADD) $(LIBS)
 
-test-fabs$(EXEEXT): $(test_fabs_OBJECTS) $(test_fabs_DEPENDENCIES) $(EXTRA_test_fabs_DEPENDENCIES) 
-	@rm -f test-fabs$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(test_fabs_OBJECTS) $(test_fabs_LDADD) $(LIBS)
-
 test-fchdir$(EXEEXT): $(test_fchdir_OBJECTS) $(test_fchdir_DEPENDENCIES) $(EXTRA_test_fchdir_DEPENDENCIES) 
 	@rm -f test-fchdir$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_fchdir_OBJECTS) $(test_fchdir_LDADD) $(LIBS)
@@ -9073,6 +9277,10 @@ test-fopen$(EXEEXT): $(test_fopen_OBJECTS) $(test_fopen_DEPENDENCIES) $(EXTRA_te
 test-fopen-gnu$(EXEEXT): $(test_fopen_gnu_OBJECTS) $(test_fopen_gnu_DEPENDENCIES) $(EXTRA_test_fopen_gnu_DEPENDENCIES) 
 	@rm -f test-fopen-gnu$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_fopen_gnu_OBJECTS) $(test_fopen_gnu_LDADD) $(LIBS)
+
+test-fpending$(EXEEXT): $(test_fpending_OBJECTS) $(test_fpending_DEPENDENCIES) $(EXTRA_test_fpending_DEPENDENCIES) 
+	@rm -f test-fpending$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_fpending_OBJECTS) $(test_fpending_LDADD) $(LIBS)
 
 test-fpurge$(EXEEXT): $(test_fpurge_OBJECTS) $(test_fpurge_DEPENDENCIES) $(EXTRA_test_fpurge_DEPENDENCIES) 
 	@rm -f test-fpurge$(EXEEXT)
@@ -9284,33 +9492,13 @@ test-isblank$(EXEEXT): $(test_isblank_OBJECTS) $(test_isblank_DEPENDENCIES) $(EX
 	@rm -f test-isblank$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_isblank_OBJECTS) $(test_isblank_LDADD) $(LIBS)
 
-test-isinf$(EXEEXT): $(test_isinf_OBJECTS) $(test_isinf_DEPENDENCIES) $(EXTRA_test_isinf_DEPENDENCIES) 
-	@rm -f test-isinf$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(test_isinf_OBJECTS) $(test_isinf_LDADD) $(LIBS)
-
-test-isnan$(EXEEXT): $(test_isnan_OBJECTS) $(test_isnan_DEPENDENCIES) $(EXTRA_test_isnan_DEPENDENCIES) 
-	@rm -f test-isnan$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(test_isnan_OBJECTS) $(test_isnan_LDADD) $(LIBS)
-
-test-isnand$(EXEEXT): $(test_isnand_OBJECTS) $(test_isnand_DEPENDENCIES) $(EXTRA_test_isnand_DEPENDENCIES) 
-	@rm -f test-isnand$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(test_isnand_OBJECTS) $(test_isnand_LDADD) $(LIBS)
-
 test-isnand-nolibm$(EXEEXT): $(test_isnand_nolibm_OBJECTS) $(test_isnand_nolibm_DEPENDENCIES) $(EXTRA_test_isnand_nolibm_DEPENDENCIES) 
 	@rm -f test-isnand-nolibm$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_isnand_nolibm_OBJECTS) $(test_isnand_nolibm_LDADD) $(LIBS)
 
-test-isnanf$(EXEEXT): $(test_isnanf_OBJECTS) $(test_isnanf_DEPENDENCIES) $(EXTRA_test_isnanf_DEPENDENCIES) 
-	@rm -f test-isnanf$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(test_isnanf_OBJECTS) $(test_isnanf_LDADD) $(LIBS)
-
 test-isnanf-nolibm$(EXEEXT): $(test_isnanf_nolibm_OBJECTS) $(test_isnanf_nolibm_DEPENDENCIES) $(EXTRA_test_isnanf_nolibm_DEPENDENCIES) 
 	@rm -f test-isnanf-nolibm$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_isnanf_nolibm_OBJECTS) $(test_isnanf_nolibm_LDADD) $(LIBS)
-
-test-isnanl$(EXEEXT): $(test_isnanl_OBJECTS) $(test_isnanl_DEPENDENCIES) $(EXTRA_test_isnanl_DEPENDENCIES) 
-	@rm -f test-isnanl$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(test_isnanl_OBJECTS) $(test_isnanl_LDADD) $(LIBS)
 
 test-isnanl-nolibm$(EXEEXT): $(test_isnanl_nolibm_OBJECTS) $(test_isnanl_nolibm_DEPENDENCIES) $(EXTRA_test_isnanl_nolibm_DEPENDENCIES) 
 	@rm -f test-isnanl-nolibm$(EXEEXT)
@@ -9343,6 +9531,10 @@ test-largefile$(EXEEXT): $(test_largefile_OBJECTS) $(test_largefile_DEPENDENCIES
 test-limits-h$(EXEEXT): $(test_limits_h_OBJECTS) $(test_limits_h_DEPENDENCIES) $(EXTRA_test_limits_h_DEPENDENCIES) 
 	@rm -f test-limits-h$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_limits_h_OBJECTS) $(test_limits_h_LDADD) $(LIBS)
+
+test-link$(EXEEXT): $(test_link_OBJECTS) $(test_link_DEPENDENCIES) $(EXTRA_test_link_DEPENDENCIES) 
+	@rm -f test-link$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_link_OBJECTS) $(test_link_LDADD) $(LIBS)
 
 test-listen$(EXEEXT): $(test_listen_OBJECTS) $(test_listen_DEPENDENCIES) $(EXTRA_test_listen_DEPENDENCIES) 
 	@rm -f test-listen$(EXEEXT)
@@ -9379,10 +9571,6 @@ test-localename-w32utf8$(EXEEXT): $(test_localename_w32utf8_OBJECTS) $(test_loca
 test-lock$(EXEEXT): $(test_lock_OBJECTS) $(test_lock_DEPENDENCIES) $(EXTRA_test_lock_DEPENDENCIES) 
 	@rm -f test-lock$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_lock_OBJECTS) $(test_lock_LDADD) $(LIBS)
-
-test-log10$(EXEEXT): $(test_log10_OBJECTS) $(test_log10_DEPENDENCIES) $(EXTRA_test_log10_DEPENDENCIES) 
-	@rm -f test-log10$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(test_log10_OBJECTS) $(test_log10_LDADD) $(LIBS)
 
 test-lseek$(EXEEXT): $(test_lseek_OBJECTS) $(test_lseek_DEPENDENCIES) $(EXTRA_test_lseek_DEPENDENCIES) 
 	@rm -f test-lseek$(EXEEXT)
@@ -9651,10 +9839,6 @@ test-posix_spawnp-script$(EXEEXT): $(test_posix_spawnp_script_OBJECTS) $(test_po
 test-posix_spawnp-vfork$(EXEEXT): $(test_posix_spawnp_vfork_OBJECTS) $(test_posix_spawnp_vfork_DEPENDENCIES) $(EXTRA_test_posix_spawnp_vfork_DEPENDENCIES) 
 	@rm -f test-posix_spawnp-vfork$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_posix_spawnp_vfork_OBJECTS) $(test_posix_spawnp_vfork_LDADD) $(LIBS)
-
-test-pow$(EXEEXT): $(test_pow_OBJECTS) $(test_pow_DEPENDENCIES) $(EXTRA_test_pow_DEPENDENCIES) 
-	@rm -f test-pow$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(test_pow_OBJECTS) $(test_pow_LDADD) $(LIBS)
 unictype/test-pr_soft_dotted.$(OBJEXT): unictype/$(am__dirstamp) \
 	unictype/$(DEPDIR)/$(am__dirstamp)
 
@@ -9776,6 +9960,10 @@ test-readlink$(EXEEXT): $(test_readlink_OBJECTS) $(test_readlink_DEPENDENCIES) $
 	@rm -f test-readlink$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_readlink_OBJECTS) $(test_readlink_LDADD) $(LIBS)
 
+test-readlinkat$(EXEEXT): $(test_readlinkat_OBJECTS) $(test_readlinkat_DEPENDENCIES) $(EXTRA_test_readlinkat_DEPENDENCIES) 
+	@rm -f test-readlinkat$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_readlinkat_OBJECTS) $(test_readlinkat_LDADD) $(LIBS)
+
 test-realloc-posix$(EXEEXT): $(test_realloc_posix_OBJECTS) $(test_realloc_posix_DEPENDENCIES) $(EXTRA_test_realloc_posix_DEPENDENCIES) 
 	@rm -f test-realloc-posix$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_realloc_posix_OBJECTS) $(test_realloc_posix_LDADD) $(LIBS)
@@ -9783,6 +9971,14 @@ test-realloc-posix$(EXEEXT): $(test_realloc_posix_OBJECTS) $(test_realloc_posix_
 test-reallocarray$(EXEEXT): $(test_reallocarray_OBJECTS) $(test_reallocarray_DEPENDENCIES) $(EXTRA_test_reallocarray_DEPENDENCIES) 
 	@rm -f test-reallocarray$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_reallocarray_OBJECTS) $(test_reallocarray_LDADD) $(LIBS)
+
+test-rename$(EXEEXT): $(test_rename_OBJECTS) $(test_rename_DEPENDENCIES) $(EXTRA_test_rename_DEPENDENCIES) 
+	@rm -f test-rename$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_rename_OBJECTS) $(test_rename_LDADD) $(LIBS)
+
+test-renameatu$(EXEEXT): $(test_renameatu_OBJECTS) $(test_renameatu_DEPENDENCIES) $(EXTRA_test_renameatu_DEPENDENCIES) 
+	@rm -f test-renameatu$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_renameatu_OBJECTS) $(test_renameatu_LDADD) $(LIBS)
 
 test-rmdir$(EXEEXT): $(test_rmdir_OBJECTS) $(test_rmdir_DEPENDENCIES) $(EXTRA_test_rmdir_DEPENDENCIES) 
 	@rm -f test-rmdir$(EXEEXT)
@@ -9936,6 +10132,14 @@ test-stat-time$(EXEEXT): $(test_stat_time_OBJECTS) $(test_stat_time_DEPENDENCIES
 	@rm -f test-stat-time$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_stat_time_OBJECTS) $(test_stat_time_LDADD) $(LIBS)
 
+test-stdbit-h$(EXEEXT): $(test_stdbit_h_OBJECTS) $(test_stdbit_h_DEPENDENCIES) $(EXTRA_test_stdbit_h_DEPENDENCIES) 
+	@rm -f test-stdbit-h$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_stdbit_h_OBJECTS) $(test_stdbit_h_LDADD) $(LIBS)
+
+test-stdc_memreverse8u$(EXEEXT): $(test_stdc_memreverse8u_OBJECTS) $(test_stdc_memreverse8u_DEPENDENCIES) $(EXTRA_test_stdc_memreverse8u_DEPENDENCIES) 
+	@rm -f test-stdc_memreverse8u$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_stdc_memreverse8u_OBJECTS) $(test_stdc_memreverse8u_LDADD) $(LIBS)
+
 test-stdckdint-h$(EXEEXT): $(test_stdckdint_h_OBJECTS) $(test_stdckdint_h_DEPENDENCIES) $(EXTRA_test_stdckdint_h_DEPENDENCIES) 
 	@rm -f test-stdckdint-h$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_stdckdint_h_OBJECTS) $(test_stdckdint_h_LDADD) $(LIBS)
@@ -10016,6 +10220,10 @@ test-strnlen$(EXEEXT): $(test_strnlen_OBJECTS) $(test_strnlen_DEPENDENCIES) $(EX
 	@rm -f test-strnlen$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_strnlen_OBJECTS) $(test_strnlen_LDADD) $(LIBS)
 
+test-strnul$(EXEEXT): $(test_strnul_OBJECTS) $(test_strnul_DEPENDENCIES) $(EXTRA_test_strnul_DEPENDENCIES) 
+	@rm -f test-strnul$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_strnul_OBJECTS) $(test_strnul_LDADD) $(LIBS)
+
 test-strstr$(EXEEXT): $(test_strstr_OBJECTS) $(test_strstr_DEPENDENCIES) $(EXTRA_test_strstr_DEPENDENCIES) 
 	@rm -f test-strstr$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_strstr_OBJECTS) $(test_strstr_LDADD) $(LIBS)
@@ -10041,6 +10249,10 @@ test-sy_java_whitespace$(EXEEXT): $(test_sy_java_whitespace_OBJECTS) $(test_sy_j
 test-symlink$(EXEEXT): $(test_symlink_OBJECTS) $(test_symlink_DEPENDENCIES) $(EXTRA_test_symlink_DEPENDENCIES) 
 	@rm -f test-symlink$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_symlink_OBJECTS) $(test_symlink_LDADD) $(LIBS)
+
+test-symlinkat$(EXEEXT): $(test_symlinkat_OBJECTS) $(test_symlinkat_DEPENDENCIES) $(EXTRA_test_symlinkat_DEPENDENCIES) 
+	@rm -f test-symlinkat$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_symlinkat_OBJECTS) $(test_symlinkat_LDADD) $(LIBS)
 
 test-sys_ioctl-h$(EXEEXT): $(test_sys_ioctl_h_OBJECTS) $(test_sys_ioctl_h_DEPENDENCIES) $(EXTRA_test_sys_ioctl_h_DEPENDENCIES) 
 	@rm -f test-sys_ioctl-h$(EXEEXT)
@@ -10370,6 +10582,10 @@ test-unlink$(EXEEXT): $(test_unlink_OBJECTS) $(test_unlink_DEPENDENCIES) $(EXTRA
 	@rm -f test-unlink$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_unlink_OBJECTS) $(test_unlink_LDADD) $(LIBS)
 
+test-unlinkat$(EXEEXT): $(test_unlinkat_OBJECTS) $(test_unlinkat_DEPENDENCIES) $(EXTRA_test_unlinkat_DEPENDENCIES) 
+	@rm -f test-unlinkat$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_unlinkat_OBJECTS) $(test_unlinkat_LDADD) $(LIBS)
+
 test-unsetenv$(EXEEXT): $(test_unsetenv_OBJECTS) $(test_unsetenv_DEPENDENCIES) $(EXTRA_test_unsetenv_DEPENDENCIES) 
 	@rm -f test-unsetenv$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_unsetenv_OBJECTS) $(test_unsetenv_LDADD) $(LIBS)
@@ -10397,10 +10613,6 @@ test-verify$(EXEEXT): $(test_verify_OBJECTS) $(test_verify_DEPENDENCIES) $(EXTRA
 test-verify-try$(EXEEXT): $(test_verify_try_OBJECTS) $(test_verify_try_DEPENDENCIES) $(EXTRA_test_verify_try_DEPENDENCIES) 
 	@rm -f test-verify-try$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_verify_try_OBJECTS) $(test_verify_try_LDADD) $(LIBS)
-
-test-vsnprintf$(EXEEXT): $(test_vsnprintf_OBJECTS) $(test_vsnprintf_DEPENDENCIES) $(EXTRA_test_vsnprintf_DEPENDENCIES) 
-	@rm -f test-vsnprintf$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(test_vsnprintf_OBJECTS) $(test_vsnprintf_LDADD) $(LIBS)
 
 test-vsnzprintf-posix$(EXEEXT): $(test_vsnzprintf_posix_OBJECTS) $(test_vsnzprintf_posix_DEPENDENCIES) $(EXTRA_test_vsnzprintf_posix_DEPENDENCIES) 
 	@rm -f test-vsnzprintf-posix$(EXEEXT)
@@ -10500,6 +10712,7 @@ distclean-compile:
 #include ./$(DEPDIR)/accept.Po # am--include-marker
 #include ./$(DEPDIR)/alloca.Po # am--include-marker
 #include ./$(DEPDIR)/anytostr.Po # am--include-marker
+#include ./$(DEPDIR)/at-func.Po # am--include-marker
 #include ./$(DEPDIR)/bind.Po # am--include-marker
 #include ./$(DEPDIR)/c32rtomb.Po # am--include-marker
 #include ./$(DEPDIR)/c32tob.Po # am--include-marker
@@ -10526,6 +10739,7 @@ distclean-compile:
 #include ./$(DEPDIR)/imaxtostr.Po # am--include-marker
 #include ./$(DEPDIR)/inttostr.Po # am--include-marker
 #include ./$(DEPDIR)/ioctl.Po # am--include-marker
+#include ./$(DEPDIR)/link.Po # am--include-marker
 #include ./$(DEPDIR)/listen.Po # am--include-marker
 #include ./$(DEPDIR)/locale.Po # am--include-marker
 #include ./$(DEPDIR)/mkfifo.Po # am--include-marker
@@ -10539,7 +10753,6 @@ distclean-compile:
 #include ./$(DEPDIR)/pthread-rwlock.Po # am--include-marker
 #include ./$(DEPDIR)/pthread-thread.Po # am--include-marker
 #include ./$(DEPDIR)/pthread_mutex_timedlock.Po # am--include-marker
-#include ./$(DEPDIR)/pthread_sigmask.Po # am--include-marker
 #include ./$(DEPDIR)/putenv.Po # am--include-marker
 #include ./$(DEPDIR)/qset-acl.Po # am--include-marker
 #include ./$(DEPDIR)/random.Po # am--include-marker
@@ -10552,8 +10765,8 @@ distclean-compile:
 #include ./$(DEPDIR)/setsockopt.Po # am--include-marker
 #include ./$(DEPDIR)/sleep.Po # am--include-marker
 #include ./$(DEPDIR)/socket.Po # am--include-marker
-#include ./$(DEPDIR)/str_endswith.Po # am--include-marker
 #include ./$(DEPDIR)/symlink.Po # am--include-marker
+#include ./$(DEPDIR)/symlinkat.Po # am--include-marker
 #include ./$(DEPDIR)/test-accept.Po # am--include-marker
 #include ./$(DEPDIR)/test-access.Po # am--include-marker
 #include ./$(DEPDIR)/test-alignasof.Po # am--include-marker
@@ -10622,7 +10835,6 @@ distclean-compile:
 #include ./$(DEPDIR)/test-error.Po # am--include-marker
 #include ./$(DEPDIR)/test-execute-child.Po # am--include-marker
 #include ./$(DEPDIR)/test-execute-main.Po # am--include-marker
-#include ./$(DEPDIR)/test-fabs.Po # am--include-marker
 #include ./$(DEPDIR)/test-fchdir.Po # am--include-marker
 #include ./$(DEPDIR)/test-fcntl-h.Po # am--include-marker
 #include ./$(DEPDIR)/test-fcntl.Po # am--include-marker
@@ -10638,6 +10850,7 @@ distclean-compile:
 #include ./$(DEPDIR)/test-fnmatch.Po # am--include-marker
 #include ./$(DEPDIR)/test-fopen-gnu.Po # am--include-marker
 #include ./$(DEPDIR)/test-fopen.Po # am--include-marker
+#include ./$(DEPDIR)/test-fpending.Po # am--include-marker
 #include ./$(DEPDIR)/test-fpurge.Po # am--include-marker
 #include ./$(DEPDIR)/test-fputc.Po # am--include-marker
 #include ./$(DEPDIR)/test-fread.Po # am--include-marker
@@ -10689,14 +10902,9 @@ distclean-compile:
 #include ./$(DEPDIR)/test-inttypes-h.Po # am--include-marker
 #include ./$(DEPDIR)/test-ioctl.Po # am--include-marker
 #include ./$(DEPDIR)/test-isblank.Po # am--include-marker
-#include ./$(DEPDIR)/test-isinf.Po # am--include-marker
-#include ./$(DEPDIR)/test-isnan.Po # am--include-marker
 #include ./$(DEPDIR)/test-isnand-nolibm.Po # am--include-marker
-#include ./$(DEPDIR)/test-isnand.Po # am--include-marker
 #include ./$(DEPDIR)/test-isnanf-nolibm.Po # am--include-marker
-#include ./$(DEPDIR)/test-isnanf.Po # am--include-marker
 #include ./$(DEPDIR)/test-isnanl-nolibm.Po # am--include-marker
-#include ./$(DEPDIR)/test-isnanl.Po # am--include-marker
 #include ./$(DEPDIR)/test-iswblank.Po # am--include-marker
 #include ./$(DEPDIR)/test-iswctype.Po # am--include-marker
 #include ./$(DEPDIR)/test-iswdigit.Po # am--include-marker
@@ -10704,6 +10912,7 @@ distclean-compile:
 #include ./$(DEPDIR)/test-iswxdigit.Po # am--include-marker
 #include ./$(DEPDIR)/test-largefile.Po # am--include-marker
 #include ./$(DEPDIR)/test-limits-h.Po # am--include-marker
+#include ./$(DEPDIR)/test-link.Po # am--include-marker
 #include ./$(DEPDIR)/test-listen.Po # am--include-marker
 #include ./$(DEPDIR)/test-localcharset-w32utf8.Po # am--include-marker
 #include ./$(DEPDIR)/test-localcharset.Po # am--include-marker
@@ -10713,7 +10922,6 @@ distclean-compile:
 #include ./$(DEPDIR)/test-localename-w32utf8.Po # am--include-marker
 #include ./$(DEPDIR)/test-localename.Po # am--include-marker
 #include ./$(DEPDIR)/test-lock.Po # am--include-marker
-#include ./$(DEPDIR)/test-log10.Po # am--include-marker
 #include ./$(DEPDIR)/test-lseek.Po # am--include-marker
 #include ./$(DEPDIR)/test-lstat.Po # am--include-marker
 #include ./$(DEPDIR)/test-malloc-gnu.Po # am--include-marker
@@ -10772,7 +10980,6 @@ distclean-compile:
 #include ./$(DEPDIR)/test-posix_spawn_file_actions_adddup2.Po # am--include-marker
 #include ./$(DEPDIR)/test-posix_spawn_file_actions_addopen.Po # am--include-marker
 #include ./$(DEPDIR)/test-posix_spawnp-vfork.Po # am--include-marker
-#include ./$(DEPDIR)/test-pow.Po # am--include-marker
 #include ./$(DEPDIR)/test-printf-frexp.Po # am--include-marker
 #include ./$(DEPDIR)/test-printf-frexpl.Po # am--include-marker
 #include ./$(DEPDIR)/test-priv-set.Po # am--include-marker
@@ -10797,8 +11004,11 @@ distclean-compile:
 #include ./$(DEPDIR)/test-read-file.Po # am--include-marker
 #include ./$(DEPDIR)/test-read.Po # am--include-marker
 #include ./$(DEPDIR)/test-readlink.Po # am--include-marker
+#include ./$(DEPDIR)/test-readlinkat.Po # am--include-marker
 #include ./$(DEPDIR)/test-realloc-posix.Po # am--include-marker
 #include ./$(DEPDIR)/test-reallocarray.Po # am--include-marker
+#include ./$(DEPDIR)/test-rename.Po # am--include-marker
+#include ./$(DEPDIR)/test-renameatu.Po # am--include-marker
 #include ./$(DEPDIR)/test-rmdir.Po # am--include-marker
 #include ./$(DEPDIR)/test-rwlock1.Po # am--include-marker
 #include ./$(DEPDIR)/test-sameacls.Po # am--include-marker
@@ -10836,6 +11046,8 @@ distclean-compile:
 #include ./$(DEPDIR)/test-spin2.Po # am--include-marker
 #include ./$(DEPDIR)/test-stat-time.Po # am--include-marker
 #include ./$(DEPDIR)/test-stat.Po # am--include-marker
+#include ./$(DEPDIR)/test-stdbit-h.Po # am--include-marker
+#include ./$(DEPDIR)/test-stdc_memreverse8u.Po # am--include-marker
 #include ./$(DEPDIR)/test-stdckdint-h.Po # am--include-marker
 #include ./$(DEPDIR)/test-stdcountof-h.Po # am--include-marker
 #include ./$(DEPDIR)/test-stddef-h.Po # am--include-marker
@@ -10856,11 +11068,13 @@ distclean-compile:
 #include ./$(DEPDIR)/test-string-h.Po # am--include-marker
 #include ./$(DEPDIR)/test-strncpy.Po # am--include-marker
 #include ./$(DEPDIR)/test-strnlen.Po # am--include-marker
+#include ./$(DEPDIR)/test-strnul.Po # am--include-marker
 #include ./$(DEPDIR)/test-strstr.Po # am--include-marker
 #include ./$(DEPDIR)/test-strtol.Po # am--include-marker
 #include ./$(DEPDIR)/test-strtoul.Po # am--include-marker
 #include ./$(DEPDIR)/test-supersede.Po # am--include-marker
 #include ./$(DEPDIR)/test-symlink.Po # am--include-marker
+#include ./$(DEPDIR)/test-symlinkat.Po # am--include-marker
 #include ./$(DEPDIR)/test-sys_ioctl-h.Po # am--include-marker
 #include ./$(DEPDIR)/test-sys_random-h.Po # am--include-marker
 #include ./$(DEPDIR)/test-sys_resource-h.Po # am--include-marker
@@ -10881,6 +11095,7 @@ distclean-compile:
 #include ./$(DEPDIR)/test-uchar-h.Po # am--include-marker
 #include ./$(DEPDIR)/test-unistd-h.Po # am--include-marker
 #include ./$(DEPDIR)/test-unlink.Po # am--include-marker
+#include ./$(DEPDIR)/test-unlinkat.Po # am--include-marker
 #include ./$(DEPDIR)/test-unsetenv.Po # am--include-marker
 #include ./$(DEPDIR)/test-usleep.Po # am--include-marker
 #include ./$(DEPDIR)/test-utime-h.Po # am--include-marker
@@ -10888,7 +11103,6 @@ distclean-compile:
 #include ./$(DEPDIR)/test-vasprintf.Po # am--include-marker
 #include ./$(DEPDIR)/test-verify-try.Po # am--include-marker
 #include ./$(DEPDIR)/test-verify.Po # am--include-marker
-#include ./$(DEPDIR)/test-vsnprintf.Po # am--include-marker
 #include ./$(DEPDIR)/test-vsnzprintf-posix.Po # am--include-marker
 #include ./$(DEPDIR)/test-wchar-h.Po # am--include-marker
 #include ./$(DEPDIR)/test-wcrtomb-w32.Po # am--include-marker
@@ -10918,6 +11132,7 @@ distclean-compile:
 #include ./$(DEPDIR)/timespec-sub.Po # am--include-marker
 #include ./$(DEPDIR)/uinttostr.Po # am--include-marker
 #include ./$(DEPDIR)/umaxtostr.Po # am--include-marker
+#include ./$(DEPDIR)/unlinkat.Po # am--include-marker
 #include ./$(DEPDIR)/unlinkdir.Po # am--include-marker
 #include ./$(DEPDIR)/usleep.Po # am--include-marker
 #include ./$(DEPDIR)/vma-iter.Po # am--include-marker
@@ -11310,13 +11525,13 @@ $(TEST_SUITE_LOG): $(TEST_LOGS)
 	{ \
 	      echo;                                     \
 	  { uname -a | $(AWK) '{                    \
-  printf "System information (uname -a):";          \
-  for (i = 1; i < NF; ++i)                          \
+	printf "System information (uname -a):";          \
+	for (i = 1; i < NF; ++i)                          \
 	{                                               \
 	  if (i != 2)                                   \
 	    printf " %s", $$i;                          \
 	}                                               \
-  printf "\n";                                      \
+	printf "\n";                                      \
 }'; } 2>&1;                                         \
 	  if test -r /etc/os-release; then          \
 	    echo "Distribution information (/etc/os-release):"; \
@@ -11972,13 +12187,6 @@ test-execute-script.log: test-execute-script$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-test-fabs.log: test-fabs$(EXEEXT)
-	@p='test-fabs$(EXEEXT)'; \
-	b='test-fabs'; \
-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
-	--log-file $$b.log --trs-file $$b.trs \
-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
-	"$$tst" $(AM_TESTS_FD_REDIRECT)
 test-fchdir.log: test-fchdir$(EXEEXT)
 	@p='test-fchdir$(EXEEXT)'; \
 	b='test-fchdir'; \
@@ -12164,6 +12372,13 @@ test-fopen-gnu.log: test-fopen-gnu$(EXEEXT)
 test-fopen.log: test-fopen$(EXEEXT)
 	@p='test-fopen$(EXEEXT)'; \
 	b='test-fopen'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-fpending.sh.log: test-fpending.sh
+	@p='test-fpending.sh'; \
+	b='test-fpending.sh'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -12560,30 +12775,9 @@ test-isblank.log: test-isblank$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-test-isinf.log: test-isinf$(EXEEXT)
-	@p='test-isinf$(EXEEXT)'; \
-	b='test-isinf'; \
-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
-	--log-file $$b.log --trs-file $$b.trs \
-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
-	"$$tst" $(AM_TESTS_FD_REDIRECT)
-test-isnan.log: test-isnan$(EXEEXT)
-	@p='test-isnan$(EXEEXT)'; \
-	b='test-isnan'; \
-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
-	--log-file $$b.log --trs-file $$b.trs \
-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
-	"$$tst" $(AM_TESTS_FD_REDIRECT)
 test-isnand-nolibm.log: test-isnand-nolibm$(EXEEXT)
 	@p='test-isnand-nolibm$(EXEEXT)'; \
 	b='test-isnand-nolibm'; \
-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
-	--log-file $$b.log --trs-file $$b.trs \
-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
-	"$$tst" $(AM_TESTS_FD_REDIRECT)
-test-isnand.log: test-isnand$(EXEEXT)
-	@p='test-isnand$(EXEEXT)'; \
-	b='test-isnand'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -12595,23 +12789,9 @@ test-isnanf-nolibm.log: test-isnanf-nolibm$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-test-isnanf.log: test-isnanf$(EXEEXT)
-	@p='test-isnanf$(EXEEXT)'; \
-	b='test-isnanf'; \
-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
-	--log-file $$b.log --trs-file $$b.trs \
-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
-	"$$tst" $(AM_TESTS_FD_REDIRECT)
 test-isnanl-nolibm.log: test-isnanl-nolibm$(EXEEXT)
 	@p='test-isnanl-nolibm$(EXEEXT)'; \
 	b='test-isnanl-nolibm'; \
-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
-	--log-file $$b.log --trs-file $$b.trs \
-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
-	"$$tst" $(AM_TESTS_FD_REDIRECT)
-test-isnanl.log: test-isnanl$(EXEEXT)
-	@p='test-isnanl$(EXEEXT)'; \
-	b='test-isnanl'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -12661,6 +12841,13 @@ test-largefile.log: test-largefile$(EXEEXT)
 test-limits-h.log: test-limits-h$(EXEEXT)
 	@p='test-limits-h$(EXEEXT)'; \
 	b='test-limits-h'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-link.log: test-link$(EXEEXT)
+	@p='test-link$(EXEEXT)'; \
+	b='test-link'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -12724,13 +12911,6 @@ test-rwlock1.log: test-rwlock1$(EXEEXT)
 test-lock.log: test-lock$(EXEEXT)
 	@p='test-lock$(EXEEXT)'; \
 	b='test-lock'; \
-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
-	--log-file $$b.log --trs-file $$b.trs \
-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
-	"$$tst" $(AM_TESTS_FD_REDIRECT)
-test-log10.log: test-log10$(EXEEXT)
-	@p='test-log10$(EXEEXT)'; \
-	b='test-log10'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -13344,13 +13524,6 @@ test-posix_spawnp-vfork.log: test-posix_spawnp-vfork$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-test-pow.log: test-pow$(EXEEXT)
-	@p='test-pow$(EXEEXT)'; \
-	b='test-pow'; \
-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
-	--log-file $$b.log --trs-file $$b.trs \
-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
-	"$$tst" $(AM_TESTS_FD_REDIRECT)
 test-printf-frexp.log: test-printf-frexp$(EXEEXT)
 	@p='test-printf-frexp$(EXEEXT)'; \
 	b='test-printf-frexp'; \
@@ -13519,6 +13692,13 @@ test-readlink.log: test-readlink$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-readlinkat.log: test-readlinkat$(EXEEXT)
+	@p='test-readlinkat$(EXEEXT)'; \
+	b='test-readlinkat'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
 test-realloc-posix.log: test-realloc-posix$(EXEEXT)
 	@p='test-realloc-posix$(EXEEXT)'; \
 	b='test-realloc-posix'; \
@@ -13529,6 +13709,20 @@ test-realloc-posix.log: test-realloc-posix$(EXEEXT)
 test-reallocarray.log: test-reallocarray$(EXEEXT)
 	@p='test-reallocarray$(EXEEXT)'; \
 	b='test-reallocarray'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-rename.log: test-rename$(EXEEXT)
+	@p='test-rename$(EXEEXT)'; \
+	b='test-rename'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-renameatu.log: test-renameatu$(EXEEXT)
+	@p='test-renameatu$(EXEEXT)'; \
+	b='test-renameatu'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -13764,6 +13958,20 @@ test-stat-time.log: test-stat-time$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-stdbit-h.log: test-stdbit-h$(EXEEXT)
+	@p='test-stdbit-h$(EXEEXT)'; \
+	b='test-stdbit-h'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-stdc_memreverse8u.log: test-stdc_memreverse8u$(EXEEXT)
+	@p='test-stdc_memreverse8u$(EXEEXT)'; \
+	b='test-stdc_memreverse8u'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
 test-stdckdint-h.log: test-stdckdint-h$(EXEEXT)
 	@p='test-stdckdint-h$(EXEEXT)'; \
 	b='test-stdckdint-h'; \
@@ -13904,6 +14112,13 @@ test-strnlen.log: test-strnlen$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-strnul.log: test-strnul$(EXEEXT)
+	@p='test-strnul$(EXEEXT)'; \
+	b='test-strnul'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
 test-strstr.log: test-strstr$(EXEEXT)
 	@p='test-strstr$(EXEEXT)'; \
 	b='test-strstr'; \
@@ -13935,6 +14150,13 @@ test-supersede.log: test-supersede$(EXEEXT)
 test-symlink.log: test-symlink$(EXEEXT)
 	@p='test-symlink$(EXEEXT)'; \
 	b='test-symlink'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-symlinkat.log: test-symlinkat$(EXEEXT)
+	@p='test-symlinkat$(EXEEXT)'; \
+	b='test-symlinkat'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -14534,6 +14756,13 @@ test-unlink.log: test-unlink$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-unlinkat.log: test-unlinkat$(EXEEXT)
+	@p='test-unlinkat$(EXEEXT)'; \
+	b='test-unlinkat'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
 test-unsetenv.log: test-unsetenv$(EXEEXT)
 	@p='test-unsetenv$(EXEEXT)'; \
 	b='test-unsetenv'; \
@@ -14579,13 +14808,6 @@ test-verify.log: test-verify$(EXEEXT)
 test-verify.sh.log: test-verify.sh
 	@p='test-verify.sh'; \
 	b='test-verify.sh'; \
-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
-	--log-file $$b.log --trs-file $$b.trs \
-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
-	"$$tst" $(AM_TESTS_FD_REDIRECT)
-test-vsnprintf.log: test-vsnprintf$(EXEEXT)
-	@p='test-vsnprintf$(EXEEXT)'; \
-	b='test-vsnprintf'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -14917,6 +15139,7 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/accept.Po
 	-rm -f ./$(DEPDIR)/alloca.Po
 	-rm -f ./$(DEPDIR)/anytostr.Po
+	-rm -f ./$(DEPDIR)/at-func.Po
 	-rm -f ./$(DEPDIR)/bind.Po
 	-rm -f ./$(DEPDIR)/c32rtomb.Po
 	-rm -f ./$(DEPDIR)/c32tob.Po
@@ -14943,6 +15166,7 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/imaxtostr.Po
 	-rm -f ./$(DEPDIR)/inttostr.Po
 	-rm -f ./$(DEPDIR)/ioctl.Po
+	-rm -f ./$(DEPDIR)/link.Po
 	-rm -f ./$(DEPDIR)/listen.Po
 	-rm -f ./$(DEPDIR)/locale.Po
 	-rm -f ./$(DEPDIR)/mkfifo.Po
@@ -14956,7 +15180,6 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/pthread-rwlock.Po
 	-rm -f ./$(DEPDIR)/pthread-thread.Po
 	-rm -f ./$(DEPDIR)/pthread_mutex_timedlock.Po
-	-rm -f ./$(DEPDIR)/pthread_sigmask.Po
 	-rm -f ./$(DEPDIR)/putenv.Po
 	-rm -f ./$(DEPDIR)/qset-acl.Po
 	-rm -f ./$(DEPDIR)/random.Po
@@ -14969,8 +15192,8 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/setsockopt.Po
 	-rm -f ./$(DEPDIR)/sleep.Po
 	-rm -f ./$(DEPDIR)/socket.Po
-	-rm -f ./$(DEPDIR)/str_endswith.Po
 	-rm -f ./$(DEPDIR)/symlink.Po
+	-rm -f ./$(DEPDIR)/symlinkat.Po
 	-rm -f ./$(DEPDIR)/test-accept.Po
 	-rm -f ./$(DEPDIR)/test-access.Po
 	-rm -f ./$(DEPDIR)/test-alignasof.Po
@@ -15039,7 +15262,6 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/test-error.Po
 	-rm -f ./$(DEPDIR)/test-execute-child.Po
 	-rm -f ./$(DEPDIR)/test-execute-main.Po
-	-rm -f ./$(DEPDIR)/test-fabs.Po
 	-rm -f ./$(DEPDIR)/test-fchdir.Po
 	-rm -f ./$(DEPDIR)/test-fcntl-h.Po
 	-rm -f ./$(DEPDIR)/test-fcntl.Po
@@ -15055,6 +15277,7 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/test-fnmatch.Po
 	-rm -f ./$(DEPDIR)/test-fopen-gnu.Po
 	-rm -f ./$(DEPDIR)/test-fopen.Po
+	-rm -f ./$(DEPDIR)/test-fpending.Po
 	-rm -f ./$(DEPDIR)/test-fpurge.Po
 	-rm -f ./$(DEPDIR)/test-fputc.Po
 	-rm -f ./$(DEPDIR)/test-fread.Po
@@ -15106,14 +15329,9 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/test-inttypes-h.Po
 	-rm -f ./$(DEPDIR)/test-ioctl.Po
 	-rm -f ./$(DEPDIR)/test-isblank.Po
-	-rm -f ./$(DEPDIR)/test-isinf.Po
-	-rm -f ./$(DEPDIR)/test-isnan.Po
 	-rm -f ./$(DEPDIR)/test-isnand-nolibm.Po
-	-rm -f ./$(DEPDIR)/test-isnand.Po
 	-rm -f ./$(DEPDIR)/test-isnanf-nolibm.Po
-	-rm -f ./$(DEPDIR)/test-isnanf.Po
 	-rm -f ./$(DEPDIR)/test-isnanl-nolibm.Po
-	-rm -f ./$(DEPDIR)/test-isnanl.Po
 	-rm -f ./$(DEPDIR)/test-iswblank.Po
 	-rm -f ./$(DEPDIR)/test-iswctype.Po
 	-rm -f ./$(DEPDIR)/test-iswdigit.Po
@@ -15121,6 +15339,7 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/test-iswxdigit.Po
 	-rm -f ./$(DEPDIR)/test-largefile.Po
 	-rm -f ./$(DEPDIR)/test-limits-h.Po
+	-rm -f ./$(DEPDIR)/test-link.Po
 	-rm -f ./$(DEPDIR)/test-listen.Po
 	-rm -f ./$(DEPDIR)/test-localcharset-w32utf8.Po
 	-rm -f ./$(DEPDIR)/test-localcharset.Po
@@ -15130,7 +15349,6 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/test-localename-w32utf8.Po
 	-rm -f ./$(DEPDIR)/test-localename.Po
 	-rm -f ./$(DEPDIR)/test-lock.Po
-	-rm -f ./$(DEPDIR)/test-log10.Po
 	-rm -f ./$(DEPDIR)/test-lseek.Po
 	-rm -f ./$(DEPDIR)/test-lstat.Po
 	-rm -f ./$(DEPDIR)/test-malloc-gnu.Po
@@ -15189,7 +15407,6 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/test-posix_spawn_file_actions_adddup2.Po
 	-rm -f ./$(DEPDIR)/test-posix_spawn_file_actions_addopen.Po
 	-rm -f ./$(DEPDIR)/test-posix_spawnp-vfork.Po
-	-rm -f ./$(DEPDIR)/test-pow.Po
 	-rm -f ./$(DEPDIR)/test-printf-frexp.Po
 	-rm -f ./$(DEPDIR)/test-printf-frexpl.Po
 	-rm -f ./$(DEPDIR)/test-priv-set.Po
@@ -15214,8 +15431,11 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/test-read-file.Po
 	-rm -f ./$(DEPDIR)/test-read.Po
 	-rm -f ./$(DEPDIR)/test-readlink.Po
+	-rm -f ./$(DEPDIR)/test-readlinkat.Po
 	-rm -f ./$(DEPDIR)/test-realloc-posix.Po
 	-rm -f ./$(DEPDIR)/test-reallocarray.Po
+	-rm -f ./$(DEPDIR)/test-rename.Po
+	-rm -f ./$(DEPDIR)/test-renameatu.Po
 	-rm -f ./$(DEPDIR)/test-rmdir.Po
 	-rm -f ./$(DEPDIR)/test-rwlock1.Po
 	-rm -f ./$(DEPDIR)/test-sameacls.Po
@@ -15253,6 +15473,8 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/test-spin2.Po
 	-rm -f ./$(DEPDIR)/test-stat-time.Po
 	-rm -f ./$(DEPDIR)/test-stat.Po
+	-rm -f ./$(DEPDIR)/test-stdbit-h.Po
+	-rm -f ./$(DEPDIR)/test-stdc_memreverse8u.Po
 	-rm -f ./$(DEPDIR)/test-stdckdint-h.Po
 	-rm -f ./$(DEPDIR)/test-stdcountof-h.Po
 	-rm -f ./$(DEPDIR)/test-stddef-h.Po
@@ -15273,11 +15495,13 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/test-string-h.Po
 	-rm -f ./$(DEPDIR)/test-strncpy.Po
 	-rm -f ./$(DEPDIR)/test-strnlen.Po
+	-rm -f ./$(DEPDIR)/test-strnul.Po
 	-rm -f ./$(DEPDIR)/test-strstr.Po
 	-rm -f ./$(DEPDIR)/test-strtol.Po
 	-rm -f ./$(DEPDIR)/test-strtoul.Po
 	-rm -f ./$(DEPDIR)/test-supersede.Po
 	-rm -f ./$(DEPDIR)/test-symlink.Po
+	-rm -f ./$(DEPDIR)/test-symlinkat.Po
 	-rm -f ./$(DEPDIR)/test-sys_ioctl-h.Po
 	-rm -f ./$(DEPDIR)/test-sys_random-h.Po
 	-rm -f ./$(DEPDIR)/test-sys_resource-h.Po
@@ -15298,6 +15522,7 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/test-uchar-h.Po
 	-rm -f ./$(DEPDIR)/test-unistd-h.Po
 	-rm -f ./$(DEPDIR)/test-unlink.Po
+	-rm -f ./$(DEPDIR)/test-unlinkat.Po
 	-rm -f ./$(DEPDIR)/test-unsetenv.Po
 	-rm -f ./$(DEPDIR)/test-usleep.Po
 	-rm -f ./$(DEPDIR)/test-utime-h.Po
@@ -15305,7 +15530,6 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/test-vasprintf.Po
 	-rm -f ./$(DEPDIR)/test-verify-try.Po
 	-rm -f ./$(DEPDIR)/test-verify.Po
-	-rm -f ./$(DEPDIR)/test-vsnprintf.Po
 	-rm -f ./$(DEPDIR)/test-vsnzprintf-posix.Po
 	-rm -f ./$(DEPDIR)/test-wchar-h.Po
 	-rm -f ./$(DEPDIR)/test-wcrtomb-w32.Po
@@ -15335,6 +15559,7 @@ distclean: distclean-recursive
 	-rm -f ./$(DEPDIR)/timespec-sub.Po
 	-rm -f ./$(DEPDIR)/uinttostr.Po
 	-rm -f ./$(DEPDIR)/umaxtostr.Po
+	-rm -f ./$(DEPDIR)/unlinkat.Po
 	-rm -f ./$(DEPDIR)/unlinkdir.Po
 	-rm -f ./$(DEPDIR)/usleep.Po
 	-rm -f ./$(DEPDIR)/vma-iter.Po
@@ -15470,6 +15695,7 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/accept.Po
 	-rm -f ./$(DEPDIR)/alloca.Po
 	-rm -f ./$(DEPDIR)/anytostr.Po
+	-rm -f ./$(DEPDIR)/at-func.Po
 	-rm -f ./$(DEPDIR)/bind.Po
 	-rm -f ./$(DEPDIR)/c32rtomb.Po
 	-rm -f ./$(DEPDIR)/c32tob.Po
@@ -15496,6 +15722,7 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/imaxtostr.Po
 	-rm -f ./$(DEPDIR)/inttostr.Po
 	-rm -f ./$(DEPDIR)/ioctl.Po
+	-rm -f ./$(DEPDIR)/link.Po
 	-rm -f ./$(DEPDIR)/listen.Po
 	-rm -f ./$(DEPDIR)/locale.Po
 	-rm -f ./$(DEPDIR)/mkfifo.Po
@@ -15509,7 +15736,6 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/pthread-rwlock.Po
 	-rm -f ./$(DEPDIR)/pthread-thread.Po
 	-rm -f ./$(DEPDIR)/pthread_mutex_timedlock.Po
-	-rm -f ./$(DEPDIR)/pthread_sigmask.Po
 	-rm -f ./$(DEPDIR)/putenv.Po
 	-rm -f ./$(DEPDIR)/qset-acl.Po
 	-rm -f ./$(DEPDIR)/random.Po
@@ -15522,8 +15748,8 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/setsockopt.Po
 	-rm -f ./$(DEPDIR)/sleep.Po
 	-rm -f ./$(DEPDIR)/socket.Po
-	-rm -f ./$(DEPDIR)/str_endswith.Po
 	-rm -f ./$(DEPDIR)/symlink.Po
+	-rm -f ./$(DEPDIR)/symlinkat.Po
 	-rm -f ./$(DEPDIR)/test-accept.Po
 	-rm -f ./$(DEPDIR)/test-access.Po
 	-rm -f ./$(DEPDIR)/test-alignasof.Po
@@ -15592,7 +15818,6 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/test-error.Po
 	-rm -f ./$(DEPDIR)/test-execute-child.Po
 	-rm -f ./$(DEPDIR)/test-execute-main.Po
-	-rm -f ./$(DEPDIR)/test-fabs.Po
 	-rm -f ./$(DEPDIR)/test-fchdir.Po
 	-rm -f ./$(DEPDIR)/test-fcntl-h.Po
 	-rm -f ./$(DEPDIR)/test-fcntl.Po
@@ -15608,6 +15833,7 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/test-fnmatch.Po
 	-rm -f ./$(DEPDIR)/test-fopen-gnu.Po
 	-rm -f ./$(DEPDIR)/test-fopen.Po
+	-rm -f ./$(DEPDIR)/test-fpending.Po
 	-rm -f ./$(DEPDIR)/test-fpurge.Po
 	-rm -f ./$(DEPDIR)/test-fputc.Po
 	-rm -f ./$(DEPDIR)/test-fread.Po
@@ -15659,14 +15885,9 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/test-inttypes-h.Po
 	-rm -f ./$(DEPDIR)/test-ioctl.Po
 	-rm -f ./$(DEPDIR)/test-isblank.Po
-	-rm -f ./$(DEPDIR)/test-isinf.Po
-	-rm -f ./$(DEPDIR)/test-isnan.Po
 	-rm -f ./$(DEPDIR)/test-isnand-nolibm.Po
-	-rm -f ./$(DEPDIR)/test-isnand.Po
 	-rm -f ./$(DEPDIR)/test-isnanf-nolibm.Po
-	-rm -f ./$(DEPDIR)/test-isnanf.Po
 	-rm -f ./$(DEPDIR)/test-isnanl-nolibm.Po
-	-rm -f ./$(DEPDIR)/test-isnanl.Po
 	-rm -f ./$(DEPDIR)/test-iswblank.Po
 	-rm -f ./$(DEPDIR)/test-iswctype.Po
 	-rm -f ./$(DEPDIR)/test-iswdigit.Po
@@ -15674,6 +15895,7 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/test-iswxdigit.Po
 	-rm -f ./$(DEPDIR)/test-largefile.Po
 	-rm -f ./$(DEPDIR)/test-limits-h.Po
+	-rm -f ./$(DEPDIR)/test-link.Po
 	-rm -f ./$(DEPDIR)/test-listen.Po
 	-rm -f ./$(DEPDIR)/test-localcharset-w32utf8.Po
 	-rm -f ./$(DEPDIR)/test-localcharset.Po
@@ -15683,7 +15905,6 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/test-localename-w32utf8.Po
 	-rm -f ./$(DEPDIR)/test-localename.Po
 	-rm -f ./$(DEPDIR)/test-lock.Po
-	-rm -f ./$(DEPDIR)/test-log10.Po
 	-rm -f ./$(DEPDIR)/test-lseek.Po
 	-rm -f ./$(DEPDIR)/test-lstat.Po
 	-rm -f ./$(DEPDIR)/test-malloc-gnu.Po
@@ -15742,7 +15963,6 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/test-posix_spawn_file_actions_adddup2.Po
 	-rm -f ./$(DEPDIR)/test-posix_spawn_file_actions_addopen.Po
 	-rm -f ./$(DEPDIR)/test-posix_spawnp-vfork.Po
-	-rm -f ./$(DEPDIR)/test-pow.Po
 	-rm -f ./$(DEPDIR)/test-printf-frexp.Po
 	-rm -f ./$(DEPDIR)/test-printf-frexpl.Po
 	-rm -f ./$(DEPDIR)/test-priv-set.Po
@@ -15767,8 +15987,11 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/test-read-file.Po
 	-rm -f ./$(DEPDIR)/test-read.Po
 	-rm -f ./$(DEPDIR)/test-readlink.Po
+	-rm -f ./$(DEPDIR)/test-readlinkat.Po
 	-rm -f ./$(DEPDIR)/test-realloc-posix.Po
 	-rm -f ./$(DEPDIR)/test-reallocarray.Po
+	-rm -f ./$(DEPDIR)/test-rename.Po
+	-rm -f ./$(DEPDIR)/test-renameatu.Po
 	-rm -f ./$(DEPDIR)/test-rmdir.Po
 	-rm -f ./$(DEPDIR)/test-rwlock1.Po
 	-rm -f ./$(DEPDIR)/test-sameacls.Po
@@ -15806,6 +16029,8 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/test-spin2.Po
 	-rm -f ./$(DEPDIR)/test-stat-time.Po
 	-rm -f ./$(DEPDIR)/test-stat.Po
+	-rm -f ./$(DEPDIR)/test-stdbit-h.Po
+	-rm -f ./$(DEPDIR)/test-stdc_memreverse8u.Po
 	-rm -f ./$(DEPDIR)/test-stdckdint-h.Po
 	-rm -f ./$(DEPDIR)/test-stdcountof-h.Po
 	-rm -f ./$(DEPDIR)/test-stddef-h.Po
@@ -15826,11 +16051,13 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/test-string-h.Po
 	-rm -f ./$(DEPDIR)/test-strncpy.Po
 	-rm -f ./$(DEPDIR)/test-strnlen.Po
+	-rm -f ./$(DEPDIR)/test-strnul.Po
 	-rm -f ./$(DEPDIR)/test-strstr.Po
 	-rm -f ./$(DEPDIR)/test-strtol.Po
 	-rm -f ./$(DEPDIR)/test-strtoul.Po
 	-rm -f ./$(DEPDIR)/test-supersede.Po
 	-rm -f ./$(DEPDIR)/test-symlink.Po
+	-rm -f ./$(DEPDIR)/test-symlinkat.Po
 	-rm -f ./$(DEPDIR)/test-sys_ioctl-h.Po
 	-rm -f ./$(DEPDIR)/test-sys_random-h.Po
 	-rm -f ./$(DEPDIR)/test-sys_resource-h.Po
@@ -15851,6 +16078,7 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/test-uchar-h.Po
 	-rm -f ./$(DEPDIR)/test-unistd-h.Po
 	-rm -f ./$(DEPDIR)/test-unlink.Po
+	-rm -f ./$(DEPDIR)/test-unlinkat.Po
 	-rm -f ./$(DEPDIR)/test-unsetenv.Po
 	-rm -f ./$(DEPDIR)/test-usleep.Po
 	-rm -f ./$(DEPDIR)/test-utime-h.Po
@@ -15858,7 +16086,6 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/test-vasprintf.Po
 	-rm -f ./$(DEPDIR)/test-verify-try.Po
 	-rm -f ./$(DEPDIR)/test-verify.Po
-	-rm -f ./$(DEPDIR)/test-vsnprintf.Po
 	-rm -f ./$(DEPDIR)/test-vsnzprintf-posix.Po
 	-rm -f ./$(DEPDIR)/test-wchar-h.Po
 	-rm -f ./$(DEPDIR)/test-wcrtomb-w32.Po
@@ -15888,6 +16115,7 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f ./$(DEPDIR)/timespec-sub.Po
 	-rm -f ./$(DEPDIR)/uinttostr.Po
 	-rm -f ./$(DEPDIR)/umaxtostr.Po
+	-rm -f ./$(DEPDIR)/unlinkat.Po
 	-rm -f ./$(DEPDIR)/unlinkdir.Po
 	-rm -f ./$(DEPDIR)/usleep.Po
 	-rm -f ./$(DEPDIR)/vma-iter.Po

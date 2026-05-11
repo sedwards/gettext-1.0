@@ -56,7 +56,7 @@
    includes gnulib's pthread.h override, which gives a syntax error because
    /usr/include/pthread.h has not been completely processed.  Simply delegate
    to the system's header in this case.  */
-#elif  && defined __OpenBSD__ && (defined _PTHREAD_H_ && !defined PTHREAD_MUTEX_INITIALIZER)
+#elif 0 && defined __OpenBSD__ && (defined _PTHREAD_H_ && !defined PTHREAD_MUTEX_INITIALIZER)
 
 # include <sys/wait.h>
 

@@ -18,55 +18,55 @@
 
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
-	false; \
+    false; \
   elif test -n '$(MAKE_HOST)'; then \
-	true; \
+    true; \
   elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
-	true; \
+    true; \
   else \
-	false; \
+    false; \
   fi; \
 }
 am__make_running_with_option = \
   case $${target_option-} in \
-	  ?) ;; \
-	  *) echo "am__make_running_with_option: internal error: invalid" \
-	          "target option '$${target_option-}' specified" >&2; \
-	     exit 1;; \
+      ?) ;; \
+      *) echo "am__make_running_with_option: internal error: invalid" \
+              "target option '$${target_option-}' specified" >&2; \
+         exit 1;; \
   esac; \
   has_opt=no; \
   sane_makeflags=$$MAKEFLAGS; \
   if $(am__is_gnu_make); then \
-	sane_makeflags=$$MFLAGS; \
+    sane_makeflags=$$MFLAGS; \
   else \
-	case $$MAKEFLAGS in \
-	  *\\[\ \	]*) \
-	    bs=\\; \
-	    sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
-	      | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
-	esac; \
+    case $$MAKEFLAGS in \
+      *\\[\ \	]*) \
+        bs=\\; \
+        sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
+          | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
+    esac; \
   fi; \
   skip_next=no; \
   strip_trailopt () \
   { \
-	flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
+    flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
   }; \
   for flg in $$sane_makeflags; do \
-	test $$skip_next = yes && { skip_next=no; continue; }; \
-	case $$flg in \
-	  *=*|--*) continue;; \
-	    -*I) strip_trailopt 'I'; skip_next=yes;; \
-	  -*I?*) strip_trailopt 'I';; \
-	    -*O) strip_trailopt 'O'; skip_next=yes;; \
-	  -*O?*) strip_trailopt 'O';; \
-	    -*l) strip_trailopt 'l'; skip_next=yes;; \
-	  -*l?*) strip_trailopt 'l';; \
-	  -[dEDm]) skip_next=yes;; \
-	  -[JT]) skip_next=yes;; \
-	esac; \
-	case $$flg in \
-	  *$$target_option*) has_opt=yes; break;; \
-	esac; \
+    test $$skip_next = yes && { skip_next=no; continue; }; \
+    case $$flg in \
+      *=*|--*) continue;; \
+        -*I) strip_trailopt 'I'; skip_next=yes;; \
+      -*I?*) strip_trailopt 'I';; \
+        -*O) strip_trailopt 'O'; skip_next=yes;; \
+      -*O?*) strip_trailopt 'O';; \
+        -*l) strip_trailopt 'l'; skip_next=yes;; \
+      -*l?*) strip_trailopt 'l';; \
+      -[dEDm]) skip_next=yes;; \
+      -[JT]) skip_next=yes;; \
+    esac; \
+    case $$flg in \
+      *$$target_option*) has_opt=yes; break;; \
+    esac; \
   done; \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
@@ -94,14 +94,7 @@ host_triplet = aarch64-apple-darwin25.4.0
 noinst_PROGRAMS = hello$(EXEEXT)
 subdir = adhoc-tests
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/exported.m4 \
-	$(top_srcdir)/m4/init-package-version.m4 \
-	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
-	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
-	$(top_srcdir)/m4/lt~obsolete.m4 \
-	$(top_srcdir)/m4/more-warnings.m4 \
-	$(top_srcdir)/m4/woe32-dll.m4 \
-	$(top_srcdir)/gnulib-m4/00gnulib.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/gnulib-m4/00gnulib.m4 \
 	$(top_srcdir)/gnulib-m4/__inline.m4 \
 	$(top_srcdir)/gnulib-m4/absolute-header.m4 \
 	$(top_srcdir)/gnulib-m4/alloca.m4 \
@@ -286,7 +279,14 @@ am__aclocal_m4_deps = $(top_srcdir)/m4/exported.m4 \
 	$(top_srcdir)/gnulib-m4/xalloc.m4 \
 	$(top_srcdir)/gnulib-m4/xsize.m4 \
 	$(top_srcdir)/gnulib-m4/xvasprintf.m4 \
-	$(top_srcdir)/gnulib-m4/zzgnulib.m4 $(top_srcdir)/configure.ac
+	$(top_srcdir)/gnulib-m4/zzgnulib.m4 \
+	$(top_srcdir)/m4/exported.m4 \
+	$(top_srcdir)/m4/init-package-version.m4 \
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
+	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
+	$(top_srcdir)/m4/lt~obsolete.m4 \
+	$(top_srcdir)/m4/more-warnings.m4 \
+	$(top_srcdir)/m4/woe32-dll.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
@@ -342,8 +342,8 @@ SOURCES = $(hello_SOURCES)
 DIST_SOURCES = $(hello_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
-	n|no|NO) false;; \
-	*) (install-info --version) >/dev/null 2>&1;; \
+    n|no|NO) false;; \
+    *) (install-info --version) >/dev/null 2>&1;; \
   esac
 DATA = $(noinst_DATA)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
@@ -361,12 +361,12 @@ am__uniquify_input = $(AWK) '\
 am__define_uniq_tagged_files = \
   list='$(am__tagged_files)'; \
   unique=`for i in $$list; do \
-	if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
   done | $(am__uniquify_input)`
 am__DIST_COMMON = $(srcdir)/Makefile.in \
 	$(top_srcdir)/build-aux/depcomp README
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = /Users/sedwards/gtk/bin/aclocal -I /Users/sedwards/gtk/share/aclocal
+ACLOCAL = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/libtextstyle/build-aux/missing' aclocal-1.18
 ALLOCA = 
 ALLOCA_H = alloca.h
 AMTAR = $${TAR-tar}
@@ -389,7 +389,7 @@ BITSIZEOF_WINT_T =
 CAN_PRINT_STACK_TRACE = 0
 CC = gcc
 CCDEPMODE = depmode=none
-CFLAGS = -include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h" -g -O2
+CFLAGS = -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
 CPPFLAGS = 

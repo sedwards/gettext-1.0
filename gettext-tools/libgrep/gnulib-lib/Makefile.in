@@ -224,23 +224,51 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-@GL_COND_OBJ_MBRLEN_TRUE@am__append_1 = mbrlen.c
-@GL_COND_OBJ_NL_LANGINFO_TRUE@am__append_2 = nl_langinfo.c
-@GL_COND_OBJ_NL_LANGINFO_LOCK_TRUE@am__append_3 = nl_langinfo-lock.c
-@GL_COND_OBJ_REGEX_TRUE@am__append_4 = regex.c
-@GL_COND_OBJ_STRNCPY_TRUE@am__append_5 = strncpy.c
-@GL_COND_OBJ_WCRTOMB_TRUE@am__append_6 = wcrtomb.c
+@GL_COND_OBJ_C32RTOMB_TRUE@am__append_1 = c32rtomb.c
+@GL_COND_OBJ_MBRLEN_TRUE@am__append_2 = mbrlen.c
+@GL_COND_OBJ_MBRTOC32_TRUE@am__append_3 = mbrtoc32.c
+@GL_COND_OBJ_NL_LANGINFO_TRUE@am__append_4 = nl_langinfo.c
+@GL_COND_OBJ_NL_LANGINFO_LOCK_TRUE@am__append_5 = nl_langinfo-lock.c
+@GL_COND_OBJ_REGEX_TRUE@am__append_6 = regex.c
+@GL_COND_OBJ_STRNCPY_TRUE@am__append_7 = strncpy.c
+@LIBUNISTRING_COMPILE_UNICASE_TOLOWER_TRUE@am__append_8 = unicase/tolower.c
+@LIBUNISTRING_COMPILE_UNICASE_TOUPPER_TRUE@am__append_9 = unicase/toupper.c
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_ALNUM_TRUE@am__append_10 = unictype/ctype_alnum.c
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_ALPHA_TRUE@am__append_11 = unictype/ctype_alpha.c
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_BLANK_TRUE@am__append_12 = unictype/ctype_blank.c
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_CNTRL_TRUE@am__append_13 = unictype/ctype_cntrl.c
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_DIGIT_TRUE@am__append_14 = unictype/ctype_digit.c
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_GRAPH_TRUE@am__append_15 = unictype/ctype_graph.c
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_LOWER_TRUE@am__append_16 = unictype/ctype_lower.c
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_PRINT_TRUE@am__append_17 = unictype/ctype_print.c
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_PUNCT_TRUE@am__append_18 = unictype/ctype_punct.c
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_SPACE_TRUE@am__append_19 = unictype/ctype_space.c
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_UPPER_TRUE@am__append_20 = unictype/ctype_upper.c
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_XDIGIT_TRUE@am__append_21 = unictype/ctype_xdigit.c
+@GL_COND_OBJ_WCRTOMB_TRUE@am__append_22 = wcrtomb.c
 subdir = libgrep/gnulib-lib
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
-	$(top_srcdir)/libgettextpo/gnulib-m4/fsync.m4 \
 	$(top_srcdir)/libgettextpo/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/langinfo_h.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/mbrlen.m4 \
+	$(top_srcdir)/libgrep/gnulib-m4/mbrtoc32-regular.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/nl_langinfo.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/nullptr.m4 \
 	$(top_srcdir)/libgrep/gnulib-m4/regex.m4 \
+	$(top_srcdir)/../m4/fixautomake.m4 \
+	$(top_srcdir)/../m4/init-package-version.m4 \
+	$(top_srcdir)/../m4/more-warnings.m4 \
+	$(top_srcdir)/../m4/woe32-dll.m4 \
+	$(top_srcdir)/../gettext-runtime/m4/glibc2.m4 \
+	$(top_srcdir)/../gettext-runtime/m4/nls.m4 \
+	$(top_srcdir)/../gettext-runtime/m4/po.m4 \
+	$(top_srcdir)/../gettext-runtime/m4/progtest.m4 \
+	$(top_srcdir)/m4/exported.m4 $(top_srcdir)/m4/hostname.m4 \
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/locale-de.m4 \
+	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
 	$(top_srcdir)/gnulib-m4/00gnulib.m4 \
 	$(top_srcdir)/gnulib-m4/__inline.m4 \
 	$(top_srcdir)/gnulib-m4/absolute-header.m4 \
@@ -258,6 +286,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/bison-i18n.m4 \
 	$(top_srcdir)/gnulib-m4/bison.m4 \
 	$(top_srcdir)/gnulib-m4/btowc.m4 \
+	$(top_srcdir)/gnulib-m4/build-to-host.m4 \
 	$(top_srcdir)/gnulib-m4/builtin-expect.m4 \
 	$(top_srcdir)/gnulib-m4/byteswap.m4 \
 	$(top_srcdir)/gnulib-m4/c-bool.m4 \
@@ -265,7 +294,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/calloc.m4 \
 	$(top_srcdir)/gnulib-m4/canonicalize.m4 \
 	$(top_srcdir)/gnulib-m4/chdir-long.m4 \
-	$(top_srcdir)/gnulib-m4/check-math-lib.m4 \
 	$(top_srcdir)/gnulib-m4/clock_time.m4 \
 	$(top_srcdir)/gnulib-m4/close.m4 \
 	$(top_srcdir)/gnulib-m4/closedir.m4 \
@@ -297,7 +325,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/extensions-aix.m4 \
 	$(top_srcdir)/gnulib-m4/extensions.m4 \
 	$(top_srcdir)/gnulib-m4/extern-inline.m4 \
-	$(top_srcdir)/gnulib-m4/fabs.m4 \
 	$(top_srcdir)/gnulib-m4/fatal-signal.m4 \
 	$(top_srcdir)/gnulib-m4/fchdir.m4 \
 	$(top_srcdir)/gnulib-m4/fclose.m4 \
@@ -315,6 +342,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/fnmatch.m4 \
 	$(top_srcdir)/gnulib-m4/fnmatch_h.m4 \
 	$(top_srcdir)/gnulib-m4/fopen.m4 \
+	$(top_srcdir)/gnulib-m4/fpending.m4 \
 	$(top_srcdir)/gnulib-m4/fpieee.m4 \
 	$(top_srcdir)/gnulib-m4/fpurge.m4 \
 	$(top_srcdir)/gnulib-m4/freading.m4 \
@@ -343,6 +371,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/getprogname.m4 \
 	$(top_srcdir)/gnulib-m4/getrandom.m4 \
 	$(top_srcdir)/gnulib-m4/getrusage.m4 \
+	$(top_srcdir)/gnulib-m4/gettext.m4 \
 	$(top_srcdir)/gnulib-m4/gettext_h.m4 \
 	$(top_srcdir)/gnulib-m4/gettime.m4 \
 	$(top_srcdir)/gnulib-m4/gettimeofday.m4 \
@@ -368,8 +397,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/inttypes_h.m4 \
 	$(top_srcdir)/gnulib-m4/ioctl.m4 \
 	$(top_srcdir)/gnulib-m4/isblank.m4 \
-	$(top_srcdir)/gnulib-m4/isinf.m4 \
-	$(top_srcdir)/gnulib-m4/isnan.m4 \
 	$(top_srcdir)/gnulib-m4/isnand.m4 \
 	$(top_srcdir)/gnulib-m4/isnanf.m4 \
 	$(top_srcdir)/gnulib-m4/isnanl.m4 \
@@ -392,8 +419,8 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/libunistring-base.m4 \
 	$(top_srcdir)/gnulib-m4/libunistring-optional.m4 \
 	$(top_srcdir)/gnulib-m4/libunistring.m4 \
-	$(top_srcdir)/gnulib-m4/libxml.m4 \
 	$(top_srcdir)/gnulib-m4/limits-h.m4 \
+	$(top_srcdir)/gnulib-m4/link.m4 \
 	$(top_srcdir)/gnulib-m4/localcharset.m4 \
 	$(top_srcdir)/gnulib-m4/locale-en.m4 \
 	$(top_srcdir)/gnulib-m4/locale-fr.m4 \
@@ -405,14 +432,12 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/localename.m4 \
 	$(top_srcdir)/gnulib-m4/localtime.m4 \
 	$(top_srcdir)/gnulib-m4/lock.m4 \
-	$(top_srcdir)/gnulib-m4/log10.m4 \
 	$(top_srcdir)/gnulib-m4/lseek.m4 \
 	$(top_srcdir)/gnulib-m4/lstat.m4 \
 	$(top_srcdir)/gnulib-m4/malloc.m4 \
 	$(top_srcdir)/gnulib-m4/malloca.m4 \
 	$(top_srcdir)/gnulib-m4/manywarnings.m4 \
 	$(top_srcdir)/gnulib-m4/math_h.m4 \
-	$(top_srcdir)/gnulib-m4/mathfunc.m4 \
 	$(top_srcdir)/gnulib-m4/mbchar.m4 \
 	$(top_srcdir)/gnulib-m4/mbiter.m4 \
 	$(top_srcdir)/gnulib-m4/mbrtoc32.m4 \
@@ -421,7 +446,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/mbslen.m4 \
 	$(top_srcdir)/gnulib-m4/mbsrtowcs.m4 \
 	$(top_srcdir)/gnulib-m4/mbstate_t.m4 \
-	$(top_srcdir)/gnulib-m4/mbswidth.m4 \
 	$(top_srcdir)/gnulib-m4/mbtowc.m4 \
 	$(top_srcdir)/gnulib-m4/memchr.m4 \
 	$(top_srcdir)/gnulib-m4/memcmp.m4 \
@@ -447,7 +471,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/nanosleep.m4 \
 	$(top_srcdir)/gnulib-m4/netdb_h.m4 \
 	$(top_srcdir)/gnulib-m4/netinet_in_h.m4 \
-	$(top_srcdir)/gnulib-m4/no-c++.m4 \
 	$(top_srcdir)/gnulib-m4/nocrash.m4 \
 	$(top_srcdir)/gnulib-m4/obstack.m4 \
 	$(top_srcdir)/gnulib-m4/off64_t.m4 \
@@ -465,7 +488,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/pipe2.m4 \
 	$(top_srcdir)/gnulib-m4/posix_spawn.m4 \
 	$(top_srcdir)/gnulib-m4/posix_spawn_faction_addchdir.m4 \
-	$(top_srcdir)/gnulib-m4/pow.m4 \
 	$(top_srcdir)/gnulib-m4/printf-frexp.m4 \
 	$(top_srcdir)/gnulib-m4/printf-frexpl.m4 \
 	$(top_srcdir)/gnulib-m4/printf.m4 \
@@ -492,10 +514,13 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/read.m4 \
 	$(top_srcdir)/gnulib-m4/readdir.m4 \
 	$(top_srcdir)/gnulib-m4/readlink.m4 \
+	$(top_srcdir)/gnulib-m4/readlinkat.m4 \
 	$(top_srcdir)/gnulib-m4/realloc.m4 \
 	$(top_srcdir)/gnulib-m4/reallocarray.m4 \
 	$(top_srcdir)/gnulib-m4/relocatable-lib.m4 \
 	$(top_srcdir)/gnulib-m4/relocatable.m4 \
+	$(top_srcdir)/gnulib-m4/rename.m4 \
+	$(top_srcdir)/gnulib-m4/renameat.m4 \
 	$(top_srcdir)/gnulib-m4/rewinddir.m4 \
 	$(top_srcdir)/gnulib-m4/rmdir.m4 \
 	$(top_srcdir)/gnulib-m4/safe-read.m4 \
@@ -535,6 +560,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/stat.m4 \
 	$(top_srcdir)/gnulib-m4/stdalign.m4 \
 	$(top_srcdir)/gnulib-m4/stdarg.m4 \
+	$(top_srcdir)/gnulib-m4/stdbit_h.m4 \
 	$(top_srcdir)/gnulib-m4/stdckdint_h.m4 \
 	$(top_srcdir)/gnulib-m4/stdcountof_h.m4 \
 	$(top_srcdir)/gnulib-m4/stddef_h.m4 \
@@ -560,6 +586,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/strtoul.m4 \
 	$(top_srcdir)/gnulib-m4/supersede.m4 \
 	$(top_srcdir)/gnulib-m4/symlink.m4 \
+	$(top_srcdir)/gnulib-m4/symlinkat.m4 \
 	$(top_srcdir)/gnulib-m4/sys_cdefs_h.m4 \
 	$(top_srcdir)/gnulib-m4/sys_ioctl_h.m4 \
 	$(top_srcdir)/gnulib-m4/sys_random_h.m4 \
@@ -588,6 +615,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/unistd_h.m4 \
 	$(top_srcdir)/gnulib-m4/unitypes_h.m4 \
 	$(top_srcdir)/gnulib-m4/unlink.m4 \
+	$(top_srcdir)/gnulib-m4/unlinkat.m4 \
 	$(top_srcdir)/gnulib-m4/unlinkdir.m4 \
 	$(top_srcdir)/gnulib-m4/unlocked-io.m4 \
 	$(top_srcdir)/gnulib-m4/usleep.m4 \
@@ -598,7 +626,6 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/vasnprintf.m4 \
 	$(top_srcdir)/gnulib-m4/vasprintf.m4 \
 	$(top_srcdir)/gnulib-m4/visibility.m4 \
-	$(top_srcdir)/gnulib-m4/vsnprintf.m4 \
 	$(top_srcdir)/gnulib-m4/wait-process.m4 \
 	$(top_srcdir)/gnulib-m4/waitpid.m4 \
 	$(top_srcdir)/gnulib-m4/warn-on-use.m4 \
@@ -622,24 +649,7 @@ am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
 	$(top_srcdir)/gnulib-m4/xstrtol.m4 \
 	$(top_srcdir)/gnulib-m4/xvasprintf.m4 \
 	$(top_srcdir)/gnulib-m4/yield.m4 \
-	$(top_srcdir)/gnulib-m4/zzgnulib.m4 \
-	$(top_srcdir)/../m4/fixautomake.m4 \
-	$(top_srcdir)/../m4/init-package-version.m4 \
-	$(top_srcdir)/../m4/libtool.m4 \
-	$(top_srcdir)/../m4/ltoptions.m4 \
-	$(top_srcdir)/../m4/ltsugar.m4 \
-	$(top_srcdir)/../m4/ltversion.m4 \
-	$(top_srcdir)/../m4/lt~obsolete.m4 \
-	$(top_srcdir)/../m4/more-warnings.m4 \
-	$(top_srcdir)/../m4/woe32-dll.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/build-to-host.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/gettext.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/glibc2.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/nls.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/po.m4 \
-	$(top_srcdir)/../gettext-runtime/m4/progtest.m4 \
-	$(top_srcdir)/m4/exported.m4 $(top_srcdir)/m4/hostname.m4 \
-	$(top_srcdir)/m4/locale-de.m4 $(top_srcdir)/configure.ac
+	$(top_srcdir)/gnulib-m4/zzgnulib.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
@@ -655,30 +665,74 @@ am__v_AR_1 =
 libgnu_a_AR = $(AR) $(ARFLAGS)
 libgnu_a_RANLIB = $(RANLIB)
 am__DEPENDENCIES_1 =
-am__libgnu_a_SOURCES_DIST = malloc/dynarray_at_failure.c \
-	malloc/dynarray_emplace_enlarge.c malloc/dynarray_finalize.c \
-	malloc/dynarray_resize.c malloc/dynarray_resize_clear.c \
-	kwset.c mbrlen.c memchr2.h memchr2.c nl_langinfo.c \
-	nl_langinfo-lock.c regex.c stdlib.c string.c strncpy.c \
-	unistd.c wcrtomb.c wctype-h.c
+am__libgnu_a_SOURCES_DIST = btoc32.c c32_apply_type_test.c \
+	c32_get_type_test.c c32isalnum.c c32isalpha.c c32isblank.c \
+	c32iscntrl.c c32isdigit.c c32isgraph.c c32islower.c \
+	c32isprint.c c32ispunct.c c32isspace.c c32isupper.c \
+	c32isxdigit.c c32rtomb.c c32tolower.c c32toupper.c \
+	malloc/dynarray_at_failure.c malloc/dynarray_emplace_enlarge.c \
+	malloc/dynarray_finalize.c malloc/dynarray_resize.c \
+	malloc/dynarray_resize_clear.c kwset.c localeinfo.c mbrlen.c \
+	mbrtoc32.c memchr2.h memchr2.c nl_langinfo.c \
+	nl_langinfo-lock.c regex.c stdlib.c strncpy.c \
+	unicase/tolower.c unicase/toupper.c unictype/ctype_alnum.c \
+	unictype/ctype_alpha.c unictype/ctype_blank.c \
+	unictype/ctype_cntrl.c unictype/ctype_digit.c \
+	unictype/ctype_graph.c unictype/ctype_lower.c \
+	unictype/ctype_print.c unictype/ctype_punct.c \
+	unictype/ctype_space.c unictype/ctype_upper.c \
+	unictype/ctype_xdigit.c unistd.c wcrtomb.c wctype-h.c
+@GL_COND_OBJ_C32RTOMB_TRUE@am__objects_1 =  \
+@GL_COND_OBJ_C32RTOMB_TRUE@	libgnu_a-c32rtomb.$(OBJEXT)
 am__dirstamp = $(am__leading_dot)dirstamp
-@GL_COND_OBJ_MBRLEN_TRUE@am__objects_1 = libgnu_a-mbrlen.$(OBJEXT)
-@GL_COND_OBJ_NL_LANGINFO_TRUE@am__objects_2 =  \
+@GL_COND_OBJ_MBRLEN_TRUE@am__objects_2 = libgnu_a-mbrlen.$(OBJEXT)
+@GL_COND_OBJ_MBRTOC32_TRUE@am__objects_3 =  \
+@GL_COND_OBJ_MBRTOC32_TRUE@	libgnu_a-mbrtoc32.$(OBJEXT)
+@GL_COND_OBJ_NL_LANGINFO_TRUE@am__objects_4 =  \
 @GL_COND_OBJ_NL_LANGINFO_TRUE@	libgnu_a-nl_langinfo.$(OBJEXT)
-@GL_COND_OBJ_NL_LANGINFO_LOCK_TRUE@am__objects_3 = libgnu_a-nl_langinfo-lock.$(OBJEXT)
-@GL_COND_OBJ_REGEX_TRUE@am__objects_4 = libgnu_a-regex.$(OBJEXT)
-@GL_COND_OBJ_STRNCPY_TRUE@am__objects_5 = libgnu_a-strncpy.$(OBJEXT)
-@GL_COND_OBJ_WCRTOMB_TRUE@am__objects_6 = libgnu_a-wcrtomb.$(OBJEXT)
-am_libgnu_a_OBJECTS = malloc/libgnu_a-dynarray_at_failure.$(OBJEXT) \
+@GL_COND_OBJ_NL_LANGINFO_LOCK_TRUE@am__objects_5 = libgnu_a-nl_langinfo-lock.$(OBJEXT)
+@GL_COND_OBJ_REGEX_TRUE@am__objects_6 = libgnu_a-regex.$(OBJEXT)
+@GL_COND_OBJ_STRNCPY_TRUE@am__objects_7 = libgnu_a-strncpy.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICASE_TOLOWER_TRUE@am__objects_8 = unicase/libgnu_a-tolower.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICASE_TOUPPER_TRUE@am__objects_9 = unicase/libgnu_a-toupper.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_ALNUM_TRUE@am__objects_10 = unictype/libgnu_a-ctype_alnum.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_ALPHA_TRUE@am__objects_11 = unictype/libgnu_a-ctype_alpha.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_BLANK_TRUE@am__objects_12 = unictype/libgnu_a-ctype_blank.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_CNTRL_TRUE@am__objects_13 = unictype/libgnu_a-ctype_cntrl.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_DIGIT_TRUE@am__objects_14 = unictype/libgnu_a-ctype_digit.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_GRAPH_TRUE@am__objects_15 = unictype/libgnu_a-ctype_graph.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_LOWER_TRUE@am__objects_16 = unictype/libgnu_a-ctype_lower.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_PRINT_TRUE@am__objects_17 = unictype/libgnu_a-ctype_print.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_PUNCT_TRUE@am__objects_18 = unictype/libgnu_a-ctype_punct.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_SPACE_TRUE@am__objects_19 = unictype/libgnu_a-ctype_space.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_UPPER_TRUE@am__objects_20 = unictype/libgnu_a-ctype_upper.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNICTYPE_CTYPE_XDIGIT_TRUE@am__objects_21 = unictype/libgnu_a-ctype_xdigit.$(OBJEXT)
+@GL_COND_OBJ_WCRTOMB_TRUE@am__objects_22 = libgnu_a-wcrtomb.$(OBJEXT)
+am_libgnu_a_OBJECTS = libgnu_a-btoc32.$(OBJEXT) \
+	libgnu_a-c32_apply_type_test.$(OBJEXT) \
+	libgnu_a-c32_get_type_test.$(OBJEXT) \
+	libgnu_a-c32isalnum.$(OBJEXT) libgnu_a-c32isalpha.$(OBJEXT) \
+	libgnu_a-c32isblank.$(OBJEXT) libgnu_a-c32iscntrl.$(OBJEXT) \
+	libgnu_a-c32isdigit.$(OBJEXT) libgnu_a-c32isgraph.$(OBJEXT) \
+	libgnu_a-c32islower.$(OBJEXT) libgnu_a-c32isprint.$(OBJEXT) \
+	libgnu_a-c32ispunct.$(OBJEXT) libgnu_a-c32isspace.$(OBJEXT) \
+	libgnu_a-c32isupper.$(OBJEXT) libgnu_a-c32isxdigit.$(OBJEXT) \
+	$(am__objects_1) libgnu_a-c32tolower.$(OBJEXT) \
+	libgnu_a-c32toupper.$(OBJEXT) \
+	malloc/libgnu_a-dynarray_at_failure.$(OBJEXT) \
 	malloc/libgnu_a-dynarray_emplace_enlarge.$(OBJEXT) \
 	malloc/libgnu_a-dynarray_finalize.$(OBJEXT) \
 	malloc/libgnu_a-dynarray_resize.$(OBJEXT) \
 	malloc/libgnu_a-dynarray_resize_clear.$(OBJEXT) \
-	libgnu_a-kwset.$(OBJEXT) $(am__objects_1) \
-	libgnu_a-memchr2.$(OBJEXT) $(am__objects_2) $(am__objects_3) \
-	$(am__objects_4) libgnu_a-stdlib.$(OBJEXT) \
-	libgnu_a-string.$(OBJEXT) $(am__objects_5) \
-	libgnu_a-unistd.$(OBJEXT) $(am__objects_6) \
+	libgnu_a-kwset.$(OBJEXT) libgnu_a-localeinfo.$(OBJEXT) \
+	$(am__objects_2) $(am__objects_3) libgnu_a-memchr2.$(OBJEXT) \
+	$(am__objects_4) $(am__objects_5) $(am__objects_6) \
+	libgnu_a-stdlib.$(OBJEXT) $(am__objects_7) $(am__objects_8) \
+	$(am__objects_9) $(am__objects_10) $(am__objects_11) \
+	$(am__objects_12) $(am__objects_13) $(am__objects_14) \
+	$(am__objects_15) $(am__objects_16) $(am__objects_17) \
+	$(am__objects_18) $(am__objects_19) $(am__objects_20) \
+	$(am__objects_21) libgnu_a-unistd.$(OBJEXT) $(am__objects_22) \
 	libgnu_a-wctype-h.$(OBJEXT)
 libgnu_a_OBJECTS = $(am_libgnu_a_OBJECTS)
 AM_V_P = $(am__v_P_@AM_V@)
@@ -696,22 +750,59 @@ am__v_at_1 =
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/../build-aux/depcomp
 am__maybe_remake_depfiles = depfiles
-am__depfiles_remade = ./$(DEPDIR)/libgnu_a-kwset.Po \
-	./$(DEPDIR)/libgnu_a-mbrlen.Po ./$(DEPDIR)/libgnu_a-memchr2.Po \
+am__depfiles_remade = ./$(DEPDIR)/libgnu_a-btoc32.Po \
+	./$(DEPDIR)/libgnu_a-c32_apply_type_test.Po \
+	./$(DEPDIR)/libgnu_a-c32_get_type_test.Po \
+	./$(DEPDIR)/libgnu_a-c32isalnum.Po \
+	./$(DEPDIR)/libgnu_a-c32isalpha.Po \
+	./$(DEPDIR)/libgnu_a-c32isblank.Po \
+	./$(DEPDIR)/libgnu_a-c32iscntrl.Po \
+	./$(DEPDIR)/libgnu_a-c32isdigit.Po \
+	./$(DEPDIR)/libgnu_a-c32isgraph.Po \
+	./$(DEPDIR)/libgnu_a-c32islower.Po \
+	./$(DEPDIR)/libgnu_a-c32isprint.Po \
+	./$(DEPDIR)/libgnu_a-c32ispunct.Po \
+	./$(DEPDIR)/libgnu_a-c32isspace.Po \
+	./$(DEPDIR)/libgnu_a-c32isupper.Po \
+	./$(DEPDIR)/libgnu_a-c32isxdigit.Po \
+	./$(DEPDIR)/libgnu_a-c32rtomb.Po \
+	./$(DEPDIR)/libgnu_a-c32tolower.Po \
+	./$(DEPDIR)/libgnu_a-c32toupper.Po \
+	./$(DEPDIR)/libgnu_a-kwset.Po \
+	./$(DEPDIR)/libgnu_a-lc-charset-dispatch.Po \
+	./$(DEPDIR)/libgnu_a-localeinfo.Po \
+	./$(DEPDIR)/libgnu_a-mbrlen.Po \
+	./$(DEPDIR)/libgnu_a-mbrtoc32.Po \
+	./$(DEPDIR)/libgnu_a-mbtowc-lock.Po \
+	./$(DEPDIR)/libgnu_a-memchr2.Po \
 	./$(DEPDIR)/libgnu_a-nl_langinfo-lock.Po \
 	./$(DEPDIR)/libgnu_a-nl_langinfo.Po \
 	./$(DEPDIR)/libgnu_a-regcomp.Po ./$(DEPDIR)/libgnu_a-regex.Po \
 	./$(DEPDIR)/libgnu_a-regex_internal.Po \
 	./$(DEPDIR)/libgnu_a-regexec.Po ./$(DEPDIR)/libgnu_a-stdlib.Po \
-	./$(DEPDIR)/libgnu_a-string.Po ./$(DEPDIR)/libgnu_a-strncpy.Po \
-	./$(DEPDIR)/libgnu_a-unistd.Po ./$(DEPDIR)/libgnu_a-wcrtomb.Po \
+	./$(DEPDIR)/libgnu_a-strncpy.Po ./$(DEPDIR)/libgnu_a-unistd.Po \
+	./$(DEPDIR)/libgnu_a-wcrtomb.Po \
 	./$(DEPDIR)/libgnu_a-wctype-h.Po \
 	malloc/$(DEPDIR)/libgnu_a-dynarray-skeleton.Po \
 	malloc/$(DEPDIR)/libgnu_a-dynarray_at_failure.Po \
 	malloc/$(DEPDIR)/libgnu_a-dynarray_emplace_enlarge.Po \
 	malloc/$(DEPDIR)/libgnu_a-dynarray_finalize.Po \
 	malloc/$(DEPDIR)/libgnu_a-dynarray_resize.Po \
-	malloc/$(DEPDIR)/libgnu_a-dynarray_resize_clear.Po
+	malloc/$(DEPDIR)/libgnu_a-dynarray_resize_clear.Po \
+	unicase/$(DEPDIR)/libgnu_a-tolower.Po \
+	unicase/$(DEPDIR)/libgnu_a-toupper.Po \
+	unictype/$(DEPDIR)/libgnu_a-ctype_alnum.Po \
+	unictype/$(DEPDIR)/libgnu_a-ctype_alpha.Po \
+	unictype/$(DEPDIR)/libgnu_a-ctype_blank.Po \
+	unictype/$(DEPDIR)/libgnu_a-ctype_cntrl.Po \
+	unictype/$(DEPDIR)/libgnu_a-ctype_digit.Po \
+	unictype/$(DEPDIR)/libgnu_a-ctype_graph.Po \
+	unictype/$(DEPDIR)/libgnu_a-ctype_lower.Po \
+	unictype/$(DEPDIR)/libgnu_a-ctype_print.Po \
+	unictype/$(DEPDIR)/libgnu_a-ctype_punct.Po \
+	unictype/$(DEPDIR)/libgnu_a-ctype_space.Po \
+	unictype/$(DEPDIR)/libgnu_a-ctype_upper.Po \
+	unictype/$(DEPDIR)/libgnu_a-ctype_xdigit.Po
 am__mv = mv -f
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -850,7 +941,6 @@ ENDIAN_H_JUST_MISSING_STDINT = @ENDIAN_H_JUST_MISSING_STDINT@
 ERRNO_H = @ERRNO_H@
 ETAGS = @ETAGS@
 EXEEXT = @EXEEXT@
-FABS_LIBM = @FABS_LIBM@
 FGREP = @FGREP@
 FILECMD = @FILECMD@
 FILE_HAS_ACL_LIB = @FILE_HAS_ACL_LIB@
@@ -1198,6 +1288,7 @@ GL_GNULIB_MDA_Y0 = @GL_GNULIB_MDA_Y0@
 GL_GNULIB_MDA_Y1 = @GL_GNULIB_MDA_Y1@
 GL_GNULIB_MDA_YN = @GL_GNULIB_MDA_YN@
 GL_GNULIB_MEMCHR = @GL_GNULIB_MEMCHR@
+GL_GNULIB_MEMEQ = @GL_GNULIB_MEMEQ@
 GL_GNULIB_MEMMEM = @GL_GNULIB_MEMMEM@
 GL_GNULIB_MEMPCPY = @GL_GNULIB_MEMPCPY@
 GL_GNULIB_MEMRCHR = @GL_GNULIB_MEMRCHR@
@@ -1348,6 +1439,28 @@ GL_GNULIB_SQRTF = @GL_GNULIB_SQRTF@
 GL_GNULIB_SQRTL = @GL_GNULIB_SQRTL@
 GL_GNULIB_STACK_TRACE = @GL_GNULIB_STACK_TRACE@
 GL_GNULIB_STAT = @GL_GNULIB_STAT@
+GL_GNULIB_STDC_BIT_CEIL = @GL_GNULIB_STDC_BIT_CEIL@
+GL_GNULIB_STDC_BIT_FLOOR = @GL_GNULIB_STDC_BIT_FLOOR@
+GL_GNULIB_STDC_BIT_WIDTH = @GL_GNULIB_STDC_BIT_WIDTH@
+GL_GNULIB_STDC_COUNT_ONES = @GL_GNULIB_STDC_COUNT_ONES@
+GL_GNULIB_STDC_COUNT_ZEROS = @GL_GNULIB_STDC_COUNT_ZEROS@
+GL_GNULIB_STDC_FIRST_LEADING_ONE = @GL_GNULIB_STDC_FIRST_LEADING_ONE@
+GL_GNULIB_STDC_FIRST_LEADING_ZERO = @GL_GNULIB_STDC_FIRST_LEADING_ZERO@
+GL_GNULIB_STDC_FIRST_TRAILING_ONE = @GL_GNULIB_STDC_FIRST_TRAILING_ONE@
+GL_GNULIB_STDC_FIRST_TRAILING_ZERO = @GL_GNULIB_STDC_FIRST_TRAILING_ZERO@
+GL_GNULIB_STDC_HAS_SINGLE_BIT = @GL_GNULIB_STDC_HAS_SINGLE_BIT@
+GL_GNULIB_STDC_LEADING_ONES = @GL_GNULIB_STDC_LEADING_ONES@
+GL_GNULIB_STDC_LEADING_ZEROS = @GL_GNULIB_STDC_LEADING_ZEROS@
+GL_GNULIB_STDC_LOAD8 = @GL_GNULIB_STDC_LOAD8@
+GL_GNULIB_STDC_LOAD8_ALIGNED = @GL_GNULIB_STDC_LOAD8_ALIGNED@
+GL_GNULIB_STDC_MEMREVERSE8 = @GL_GNULIB_STDC_MEMREVERSE8@
+GL_GNULIB_STDC_MEMREVERSE8U = @GL_GNULIB_STDC_MEMREVERSE8U@
+GL_GNULIB_STDC_ROTATE_LEFT = @GL_GNULIB_STDC_ROTATE_LEFT@
+GL_GNULIB_STDC_ROTATE_RIGHT = @GL_GNULIB_STDC_ROTATE_RIGHT@
+GL_GNULIB_STDC_STORE8 = @GL_GNULIB_STDC_STORE8@
+GL_GNULIB_STDC_STORE8_ALIGNED = @GL_GNULIB_STDC_STORE8_ALIGNED@
+GL_GNULIB_STDC_TRAILING_ONES = @GL_GNULIB_STDC_TRAILING_ONES@
+GL_GNULIB_STDC_TRAILING_ZEROS = @GL_GNULIB_STDC_TRAILING_ZEROS@
 GL_GNULIB_STDIO_H_NONBLOCKING = @GL_GNULIB_STDIO_H_NONBLOCKING@
 GL_GNULIB_STDIO_H_SIGPIPE = @GL_GNULIB_STDIO_H_SIGPIPE@
 GL_GNULIB_STPCPY = @GL_GNULIB_STPCPY@
@@ -1355,16 +1468,17 @@ GL_GNULIB_STPNCPY = @GL_GNULIB_STPNCPY@
 GL_GNULIB_STRCASESTR = @GL_GNULIB_STRCASESTR@
 GL_GNULIB_STRCHRNUL = @GL_GNULIB_STRCHRNUL@
 GL_GNULIB_STRDUP = @GL_GNULIB_STRDUP@
+GL_GNULIB_STREQ = @GL_GNULIB_STREQ@
 GL_GNULIB_STRERROR = @GL_GNULIB_STRERROR@
 GL_GNULIB_STRERRORNAME_NP = @GL_GNULIB_STRERRORNAME_NP@
 GL_GNULIB_STRERROR_L = @GL_GNULIB_STRERROR_L@
 GL_GNULIB_STRERROR_R = @GL_GNULIB_STRERROR_R@
 GL_GNULIB_STRFTIME = @GL_GNULIB_STRFTIME@
-GL_GNULIB_STRINGEQ = @GL_GNULIB_STRINGEQ@
 GL_GNULIB_STRNCAT = @GL_GNULIB_STRNCAT@
 GL_GNULIB_STRNCPY = @GL_GNULIB_STRNCPY@
 GL_GNULIB_STRNDUP = @GL_GNULIB_STRNDUP@
 GL_GNULIB_STRNLEN = @GL_GNULIB_STRNLEN@
+GL_GNULIB_STRNUL = @GL_GNULIB_STRNUL@
 GL_GNULIB_STRPBRK = @GL_GNULIB_STRPBRK@
 GL_GNULIB_STRPTIME = @GL_GNULIB_STRPTIME@
 GL_GNULIB_STRSEP = @GL_GNULIB_STRSEP@
@@ -1565,6 +1679,7 @@ GL_GNULIB_UNSETENV = @GL_GNULIB_UNSETENV@
 GL_GNULIB_USLEEP = @GL_GNULIB_USLEEP@
 GL_GNULIB_UTIME = @GL_GNULIB_UTIME@
 GL_GNULIB_UTIMENSAT = @GL_GNULIB_UTIMENSAT@
+GL_GNULIB_VAPRINTF = @GL_GNULIB_VAPRINTF@
 GL_GNULIB_VASPRINTF = @GL_GNULIB_VASPRINTF@
 GL_GNULIB_VASZPRINTF = @GL_GNULIB_VASZPRINTF@
 GL_GNULIB_VDPRINTF = @GL_GNULIB_VDPRINTF@
@@ -1628,7 +1743,33 @@ GL_GRGL_GNULIB_ABORT_DEBUG = @GL_GRGL_GNULIB_ABORT_DEBUG@
 GL_GRGL_GNULIB_ACCESS = @GL_GRGL_GNULIB_ACCESS@
 GL_GRGL_GNULIB_ALIGNED_ALLOC = @GL_GRGL_GNULIB_ALIGNED_ALLOC@
 GL_GRGL_GNULIB_ATOLL = @GL_GRGL_GNULIB_ATOLL@
+GL_GRGL_GNULIB_BTOC32 = @GL_GRGL_GNULIB_BTOC32@
 GL_GRGL_GNULIB_BTOWC = @GL_GRGL_GNULIB_BTOWC@
+GL_GRGL_GNULIB_C32ISALNUM = @GL_GRGL_GNULIB_C32ISALNUM@
+GL_GRGL_GNULIB_C32ISALPHA = @GL_GRGL_GNULIB_C32ISALPHA@
+GL_GRGL_GNULIB_C32ISBLANK = @GL_GRGL_GNULIB_C32ISBLANK@
+GL_GRGL_GNULIB_C32ISCNTRL = @GL_GRGL_GNULIB_C32ISCNTRL@
+GL_GRGL_GNULIB_C32ISDIGIT = @GL_GRGL_GNULIB_C32ISDIGIT@
+GL_GRGL_GNULIB_C32ISGRAPH = @GL_GRGL_GNULIB_C32ISGRAPH@
+GL_GRGL_GNULIB_C32ISLOWER = @GL_GRGL_GNULIB_C32ISLOWER@
+GL_GRGL_GNULIB_C32ISPRINT = @GL_GRGL_GNULIB_C32ISPRINT@
+GL_GRGL_GNULIB_C32ISPUNCT = @GL_GRGL_GNULIB_C32ISPUNCT@
+GL_GRGL_GNULIB_C32ISSPACE = @GL_GRGL_GNULIB_C32ISSPACE@
+GL_GRGL_GNULIB_C32ISUPPER = @GL_GRGL_GNULIB_C32ISUPPER@
+GL_GRGL_GNULIB_C32ISXDIGIT = @GL_GRGL_GNULIB_C32ISXDIGIT@
+GL_GRGL_GNULIB_C32RTOMB = @GL_GRGL_GNULIB_C32RTOMB@
+GL_GRGL_GNULIB_C32SNRTOMBS = @GL_GRGL_GNULIB_C32SNRTOMBS@
+GL_GRGL_GNULIB_C32SRTOMBS = @GL_GRGL_GNULIB_C32SRTOMBS@
+GL_GRGL_GNULIB_C32STOMBS = @GL_GRGL_GNULIB_C32STOMBS@
+GL_GRGL_GNULIB_C32SWIDTH = @GL_GRGL_GNULIB_C32SWIDTH@
+GL_GRGL_GNULIB_C32TOB = @GL_GRGL_GNULIB_C32TOB@
+GL_GRGL_GNULIB_C32TOLOWER = @GL_GRGL_GNULIB_C32TOLOWER@
+GL_GRGL_GNULIB_C32TOUPPER = @GL_GRGL_GNULIB_C32TOUPPER@
+GL_GRGL_GNULIB_C32WIDTH = @GL_GRGL_GNULIB_C32WIDTH@
+GL_GRGL_GNULIB_C32_APPLY_MAPPING = @GL_GRGL_GNULIB_C32_APPLY_MAPPING@
+GL_GRGL_GNULIB_C32_APPLY_TYPE_TEST = @GL_GRGL_GNULIB_C32_APPLY_TYPE_TEST@
+GL_GRGL_GNULIB_C32_GET_MAPPING = @GL_GRGL_GNULIB_C32_GET_MAPPING@
+GL_GRGL_GNULIB_C32_GET_TYPE_TEST = @GL_GRGL_GNULIB_C32_GET_TYPE_TEST@
 GL_GRGL_GNULIB_CALLOC_GNU = @GL_GRGL_GNULIB_CALLOC_GNU@
 GL_GRGL_GNULIB_CALLOC_POSIX = @GL_GRGL_GNULIB_CALLOC_POSIX@
 GL_GRGL_GNULIB_CANONICALIZE_FILE_NAME = @GL_GRGL_GNULIB_CANONICALIZE_FILE_NAME@
@@ -1689,6 +1830,8 @@ GL_GRGL_GNULIB_LSEEK = @GL_GRGL_GNULIB_LSEEK@
 GL_GRGL_GNULIB_MALLOC_GNU = @GL_GRGL_GNULIB_MALLOC_GNU@
 GL_GRGL_GNULIB_MALLOC_POSIX = @GL_GRGL_GNULIB_MALLOC_POSIX@
 GL_GRGL_GNULIB_MBRLEN = @GL_GRGL_GNULIB_MBRLEN@
+GL_GRGL_GNULIB_MBRTOC16 = @GL_GRGL_GNULIB_MBRTOC16@
+GL_GRGL_GNULIB_MBRTOC32 = @GL_GRGL_GNULIB_MBRTOC32@
 GL_GRGL_GNULIB_MBRTOWC = @GL_GRGL_GNULIB_MBRTOWC@
 GL_GRGL_GNULIB_MBSCASECMP = @GL_GRGL_GNULIB_MBSCASECMP@
 GL_GRGL_GNULIB_MBSCASESTR = @GL_GRGL_GNULIB_MBSCASESTR@
@@ -1698,14 +1841,17 @@ GL_GRGL_GNULIB_MBSINIT = @GL_GRGL_GNULIB_MBSINIT@
 GL_GRGL_GNULIB_MBSLEN = @GL_GRGL_GNULIB_MBSLEN@
 GL_GRGL_GNULIB_MBSNCASECMP = @GL_GRGL_GNULIB_MBSNCASECMP@
 GL_GRGL_GNULIB_MBSNLEN = @GL_GRGL_GNULIB_MBSNLEN@
+GL_GRGL_GNULIB_MBSNRTOC32S = @GL_GRGL_GNULIB_MBSNRTOC32S@
 GL_GRGL_GNULIB_MBSNRTOWCS = @GL_GRGL_GNULIB_MBSNRTOWCS@
 GL_GRGL_GNULIB_MBSPBRK = @GL_GRGL_GNULIB_MBSPBRK@
 GL_GRGL_GNULIB_MBSPCASECMP = @GL_GRGL_GNULIB_MBSPCASECMP@
 GL_GRGL_GNULIB_MBSRCHR = @GL_GRGL_GNULIB_MBSRCHR@
+GL_GRGL_GNULIB_MBSRTOC32S = @GL_GRGL_GNULIB_MBSRTOC32S@
 GL_GRGL_GNULIB_MBSRTOWCS = @GL_GRGL_GNULIB_MBSRTOWCS@
 GL_GRGL_GNULIB_MBSSEP = @GL_GRGL_GNULIB_MBSSEP@
 GL_GRGL_GNULIB_MBSSPN = @GL_GRGL_GNULIB_MBSSPN@
 GL_GRGL_GNULIB_MBSSTR = @GL_GRGL_GNULIB_MBSSTR@
+GL_GRGL_GNULIB_MBSTOC32S = @GL_GRGL_GNULIB_MBSTOC32S@
 GL_GRGL_GNULIB_MBSTOK_R = @GL_GRGL_GNULIB_MBSTOK_R@
 GL_GRGL_GNULIB_MBSTOWCS = @GL_GRGL_GNULIB_MBSTOWCS@
 GL_GRGL_GNULIB_MBSZERO = @GL_GRGL_GNULIB_MBSZERO@
@@ -1742,6 +1888,7 @@ GL_GRGL_GNULIB_MDA_UNLINK = @GL_GRGL_GNULIB_MDA_UNLINK@
 GL_GRGL_GNULIB_MDA_WCSDUP = @GL_GRGL_GNULIB_MDA_WCSDUP@
 GL_GRGL_GNULIB_MDA_WRITE = @GL_GRGL_GNULIB_MDA_WRITE@
 GL_GRGL_GNULIB_MEMCHR = @GL_GRGL_GNULIB_MEMCHR@
+GL_GRGL_GNULIB_MEMEQ = @GL_GRGL_GNULIB_MEMEQ@
 GL_GRGL_GNULIB_MEMMEM = @GL_GRGL_GNULIB_MEMMEM@
 GL_GRGL_GNULIB_MEMPCPY = @GL_GRGL_GNULIB_MEMPCPY@
 GL_GRGL_GNULIB_MEMRCHR = @GL_GRGL_GNULIB_MEMRCHR@
@@ -1786,15 +1933,16 @@ GL_GRGL_GNULIB_STPNCPY = @GL_GRGL_GNULIB_STPNCPY@
 GL_GRGL_GNULIB_STRCASESTR = @GL_GRGL_GNULIB_STRCASESTR@
 GL_GRGL_GNULIB_STRCHRNUL = @GL_GRGL_GNULIB_STRCHRNUL@
 GL_GRGL_GNULIB_STRDUP = @GL_GRGL_GNULIB_STRDUP@
+GL_GRGL_GNULIB_STREQ = @GL_GRGL_GNULIB_STREQ@
 GL_GRGL_GNULIB_STRERROR = @GL_GRGL_GNULIB_STRERROR@
 GL_GRGL_GNULIB_STRERRORNAME_NP = @GL_GRGL_GNULIB_STRERRORNAME_NP@
 GL_GRGL_GNULIB_STRERROR_L = @GL_GRGL_GNULIB_STRERROR_L@
 GL_GRGL_GNULIB_STRERROR_R = @GL_GRGL_GNULIB_STRERROR_R@
-GL_GRGL_GNULIB_STRINGEQ = @GL_GRGL_GNULIB_STRINGEQ@
 GL_GRGL_GNULIB_STRNCAT = @GL_GRGL_GNULIB_STRNCAT@
 GL_GRGL_GNULIB_STRNCPY = @GL_GRGL_GNULIB_STRNCPY@
 GL_GRGL_GNULIB_STRNDUP = @GL_GRGL_GNULIB_STRNDUP@
 GL_GRGL_GNULIB_STRNLEN = @GL_GRGL_GNULIB_STRNLEN@
+GL_GRGL_GNULIB_STRNUL = @GL_GRGL_GNULIB_STRNUL@
 GL_GRGL_GNULIB_STRPBRK = @GL_GRGL_GNULIB_STRPBRK@
 GL_GRGL_GNULIB_STRSEP = @GL_GRGL_GNULIB_STRSEP@
 GL_GRGL_GNULIB_STRSIGNAL = @GL_GRGL_GNULIB_STRSIGNAL@
@@ -1816,6 +1964,148 @@ GL_GRGL_GNULIB_SYSTEM_POSIX = @GL_GRGL_GNULIB_SYSTEM_POSIX@
 GL_GRGL_GNULIB_TOWCTRANS = @GL_GRGL_GNULIB_TOWCTRANS@
 GL_GRGL_GNULIB_TRUNCATE = @GL_GRGL_GNULIB_TRUNCATE@
 GL_GRGL_GNULIB_TTYNAME_R = @GL_GRGL_GNULIB_TTYNAME_R@
+GL_GRGL_GNULIB_UNICASE_EMPTY_PREFIX_CONTEXT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICASE_EMPTY_PREFIX_CONTEXT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICASE_EMPTY_SUFFIX_CONTEXT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICASE_EMPTY_SUFFIX_CONTEXT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CF_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CF_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CN_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CN_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CO_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CO_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CS_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CS_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_C_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_C_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LM_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LM_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LO_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LO_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LU_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LU_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_L_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_L_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_MC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_MC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ME_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ME_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_MN_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_MN_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_M_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_M_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ND_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ND_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_NL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_NL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_NO_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_NO_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_N_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_N_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PD_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PD_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PF_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PF_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PI_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PI_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PO_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PO_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PS_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PS_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_P_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_P_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SK_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SK_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SM_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SM_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SO_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SO_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_S_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_S_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ZL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ZL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ZP_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ZP_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ZS_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ZS_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_CATEGORY_Z_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_CATEGORY_Z_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ALPHABETIC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ALPHABETIC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ASCII_HEX_DIGIT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ASCII_HEX_DIGIT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_DIGIT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_DIGIT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_RIGHT_TO_LEFT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_RIGHT_TO_LEFT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_BLOCK_SEPARATOR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_BLOCK_SEPARATOR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_BOUNDARY_NEUTRAL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_BOUNDARY_NEUTRAL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_COMMON_SEPARATOR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_COMMON_SEPARATOR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_CONTROL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_CONTROL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EMBEDDING_OR_OVERRIDE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EMBEDDING_OR_OVERRIDE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUROPEAN_DIGIT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUROPEAN_DIGIT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_SEPARATOR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_SEPARATOR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_TERMINATOR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_TERMINATOR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_HEBREW_RIGHT_TO_LEFT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_HEBREW_RIGHT_TO_LEFT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_LEFT_TO_RIGHT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_LEFT_TO_RIGHT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_NON_SPACING_MARK_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_NON_SPACING_MARK_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_OTHER_NEUTRAL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_OTHER_NEUTRAL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_PDF_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_PDF_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_SEGMENT_SEPARATOR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_SEGMENT_SEPARATOR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_WHITESPACE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_WHITESPACE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CASED_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CASED_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CASE_IGNORABLE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CASE_IGNORABLE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEFOLDED_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEFOLDED_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEMAPPED_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEMAPPED_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_LOWERCASED_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_LOWERCASED_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_TITLECASED_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_TITLECASED_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_UPPERCASED_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_UPPERCASED_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_COMBINING_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_COMBINING_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_COMPOSITE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_COMPOSITE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CURRENCY_SYMBOL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CURRENCY_SYMBOL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DASH_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DASH_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DECIMAL_DIGIT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DECIMAL_DIGIT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DEPRECATED_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DEPRECATED_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DIACRITIC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DIACRITIC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_COMPONENT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_COMPONENT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_BASE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_BASE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_PRESENTATION_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_PRESENTATION_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EXTENDED_PICTOGRAPHIC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EXTENDED_PICTOGRAPHIC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EXTENDER_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EXTENDER_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_FORMAT_CONTROL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_FORMAT_CONTROL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_BASE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_BASE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_EXTEND_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_EXTEND_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_LINK_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_LINK_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_HEX_DIGIT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_HEX_DIGIT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_HYPHEN_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_HYPHEN_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDEOGRAPHIC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDEOGRAPHIC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDS_BINARY_OPERATOR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDS_BINARY_OPERATOR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDS_TRINARY_OPERATOR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDS_TRINARY_OPERATOR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDS_UNARY_OPERATOR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDS_UNARY_OPERATOR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_CONTINUE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_CONTINUE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_START_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_START_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_CONTINUE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_CONTINUE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_START_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_START_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IGNORABLE_CONTROL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IGNORABLE_CONTROL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ISO_CONTROL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ISO_CONTROL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_JOIN_CONTROL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_JOIN_CONTROL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LEFT_OF_PAIR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LEFT_OF_PAIR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LINE_SEPARATOR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LINE_SEPARATOR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LOGICAL_ORDER_EXCEPTION_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LOGICAL_ORDER_EXCEPTION_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LOWERCASE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LOWERCASE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_MATH_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_MATH_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_MODIFIER_COMBINING_MARK_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_MODIFIER_COMBINING_MARK_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_NON_BREAK_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_NON_BREAK_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_NOT_A_CHARACTER_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_NOT_A_CHARACTER_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_NUMERIC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_NUMERIC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_ALPHABETIC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_ALPHABETIC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_GRAPHEME_EXTEND_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_GRAPHEME_EXTEND_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_ID_CONTINUE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_ID_CONTINUE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_ID_START_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_ID_START_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_LOWERCASE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_LOWERCASE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_MATH_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_MATH_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_UPPERCASE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_UPPERCASE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PAIRED_PUNCTUATION_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PAIRED_PUNCTUATION_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PARAGRAPH_SEPARATOR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PARAGRAPH_SEPARATOR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PATTERN_SYNTAX_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PATTERN_SYNTAX_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PATTERN_WHITE_SPACE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PATTERN_WHITE_SPACE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PREPENDED_CONCATENATION_MARK_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PREPENDED_CONCATENATION_MARK_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PRIVATE_USE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PRIVATE_USE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PUNCTUATION_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PUNCTUATION_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_QUOTATION_MARK_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_QUOTATION_MARK_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_RADICAL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_RADICAL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_REGIONAL_INDICATOR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_REGIONAL_INDICATOR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_SENTENCE_TERMINAL_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_SENTENCE_TERMINAL_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_SOFT_DOTTED_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_SOFT_DOTTED_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_SPACE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_SPACE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_TERMINAL_PUNCTUATION_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_TERMINAL_PUNCTUATION_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_TITLECASE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_TITLECASE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_UNASSIGNED_CODE_VALUE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_UNASSIGNED_CODE_VALUE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_UNIFIED_IDEOGRAPH_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_UNIFIED_IDEOGRAPH_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_UPPERCASE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_UPPERCASE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_VARIATION_SELECTOR_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_VARIATION_SELECTOR_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_WHITE_SPACE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_WHITE_SPACE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_XID_CONTINUE_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_XID_CONTINUE_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_XID_START_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_XID_START_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ZERO_WIDTH_DLL_VARIABLE = @GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ZERO_WIDTH_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNINORM_NFC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNINORM_NFC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNINORM_NFD_DLL_VARIABLE = @GL_GRGL_GNULIB_UNINORM_NFD_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNINORM_NFKC_DLL_VARIABLE = @GL_GRGL_GNULIB_UNINORM_NFKC_DLL_VARIABLE@
+GL_GRGL_GNULIB_UNINORM_NFKD_DLL_VARIABLE = @GL_GRGL_GNULIB_UNINORM_NFKD_DLL_VARIABLE@
 GL_GRGL_GNULIB_UNISTD_H_GETOPT = @GL_GRGL_GNULIB_UNISTD_H_GETOPT@
 GL_GRGL_GNULIB_UNISTD_H_NONBLOCKING = @GL_GRGL_GNULIB_UNISTD_H_NONBLOCKING@
 GL_GRGL_GNULIB_UNISTD_H_SIGPIPE = @GL_GRGL_GNULIB_UNISTD_H_SIGPIPE@
@@ -2160,6 +2450,7 @@ GL_GTPO_GNULIB_MDA_Y0 = @GL_GTPO_GNULIB_MDA_Y0@
 GL_GTPO_GNULIB_MDA_Y1 = @GL_GTPO_GNULIB_MDA_Y1@
 GL_GTPO_GNULIB_MDA_YN = @GL_GTPO_GNULIB_MDA_YN@
 GL_GTPO_GNULIB_MEMCHR = @GL_GTPO_GNULIB_MEMCHR@
+GL_GTPO_GNULIB_MEMEQ = @GL_GTPO_GNULIB_MEMEQ@
 GL_GTPO_GNULIB_MEMMEM = @GL_GTPO_GNULIB_MEMMEM@
 GL_GTPO_GNULIB_MEMPCPY = @GL_GTPO_GNULIB_MEMPCPY@
 GL_GTPO_GNULIB_MEMRCHR = @GL_GTPO_GNULIB_MEMRCHR@
@@ -2281,16 +2572,17 @@ GL_GTPO_GNULIB_STPNCPY = @GL_GTPO_GNULIB_STPNCPY@
 GL_GTPO_GNULIB_STRCASESTR = @GL_GTPO_GNULIB_STRCASESTR@
 GL_GTPO_GNULIB_STRCHRNUL = @GL_GTPO_GNULIB_STRCHRNUL@
 GL_GTPO_GNULIB_STRDUP = @GL_GTPO_GNULIB_STRDUP@
+GL_GTPO_GNULIB_STREQ = @GL_GTPO_GNULIB_STREQ@
 GL_GTPO_GNULIB_STRERROR = @GL_GTPO_GNULIB_STRERROR@
 GL_GTPO_GNULIB_STRERRORNAME_NP = @GL_GTPO_GNULIB_STRERRORNAME_NP@
 GL_GTPO_GNULIB_STRERROR_L = @GL_GTPO_GNULIB_STRERROR_L@
 GL_GTPO_GNULIB_STRERROR_R = @GL_GTPO_GNULIB_STRERROR_R@
 GL_GTPO_GNULIB_STRFTIME = @GL_GTPO_GNULIB_STRFTIME@
-GL_GTPO_GNULIB_STRINGEQ = @GL_GTPO_GNULIB_STRINGEQ@
 GL_GTPO_GNULIB_STRNCAT = @GL_GTPO_GNULIB_STRNCAT@
 GL_GTPO_GNULIB_STRNCPY = @GL_GTPO_GNULIB_STRNCPY@
 GL_GTPO_GNULIB_STRNDUP = @GL_GTPO_GNULIB_STRNDUP@
 GL_GTPO_GNULIB_STRNLEN = @GL_GTPO_GNULIB_STRNLEN@
+GL_GTPO_GNULIB_STRNUL = @GL_GTPO_GNULIB_STRNUL@
 GL_GTPO_GNULIB_STRPBRK = @GL_GTPO_GNULIB_STRPBRK@
 GL_GTPO_GNULIB_STRPTIME = @GL_GTPO_GNULIB_STRPTIME@
 GL_GTPO_GNULIB_STRSEP = @GL_GTPO_GNULIB_STRSEP@
@@ -2488,6 +2780,7 @@ GL_GTPO_GNULIB_UNLOCKPT = @GL_GTPO_GNULIB_UNLOCKPT@
 GL_GTPO_GNULIB_UNSETENV = @GL_GTPO_GNULIB_UNSETENV@
 GL_GTPO_GNULIB_USLEEP = @GL_GTPO_GNULIB_USLEEP@
 GL_GTPO_GNULIB_UTIMENSAT = @GL_GTPO_GNULIB_UTIMENSAT@
+GL_GTPO_GNULIB_VAPRINTF = @GL_GTPO_GNULIB_VAPRINTF@
 GL_GTPO_GNULIB_VASPRINTF = @GL_GTPO_GNULIB_VASPRINTF@
 GL_GTPO_GNULIB_VASZPRINTF = @GL_GTPO_GNULIB_VASZPRINTF@
 GL_GTPO_GNULIB_VDPRINTF = @GL_GTPO_GNULIB_VDPRINTF@
@@ -2588,6 +2881,7 @@ GL_GTTGL_GNULIB_MDA_MKTEMP = @GL_GTTGL_GNULIB_MDA_MKTEMP@
 GL_GTTGL_GNULIB_MDA_PUTENV = @GL_GTTGL_GNULIB_MDA_PUTENV@
 GL_GTTGL_GNULIB_MDA_STRDUP = @GL_GTTGL_GNULIB_MDA_STRDUP@
 GL_GTTGL_GNULIB_MEMCHR = @GL_GTTGL_GNULIB_MEMCHR@
+GL_GTTGL_GNULIB_MEMEQ = @GL_GTTGL_GNULIB_MEMEQ@
 GL_GTTGL_GNULIB_MEMMEM = @GL_GTTGL_GNULIB_MEMMEM@
 GL_GTTGL_GNULIB_MEMPCPY = @GL_GTTGL_GNULIB_MEMPCPY@
 GL_GTTGL_GNULIB_MEMRCHR = @GL_GTTGL_GNULIB_MEMRCHR@
@@ -2627,15 +2921,16 @@ GL_GTTGL_GNULIB_STPNCPY = @GL_GTTGL_GNULIB_STPNCPY@
 GL_GTTGL_GNULIB_STRCASESTR = @GL_GTTGL_GNULIB_STRCASESTR@
 GL_GTTGL_GNULIB_STRCHRNUL = @GL_GTTGL_GNULIB_STRCHRNUL@
 GL_GTTGL_GNULIB_STRDUP = @GL_GTTGL_GNULIB_STRDUP@
+GL_GTTGL_GNULIB_STREQ = @GL_GTTGL_GNULIB_STREQ@
 GL_GTTGL_GNULIB_STRERROR = @GL_GTTGL_GNULIB_STRERROR@
 GL_GTTGL_GNULIB_STRERRORNAME_NP = @GL_GTTGL_GNULIB_STRERRORNAME_NP@
 GL_GTTGL_GNULIB_STRERROR_L = @GL_GTTGL_GNULIB_STRERROR_L@
 GL_GTTGL_GNULIB_STRERROR_R = @GL_GTTGL_GNULIB_STRERROR_R@
-GL_GTTGL_GNULIB_STRINGEQ = @GL_GTTGL_GNULIB_STRINGEQ@
 GL_GTTGL_GNULIB_STRNCAT = @GL_GTTGL_GNULIB_STRNCAT@
 GL_GTTGL_GNULIB_STRNCPY = @GL_GTTGL_GNULIB_STRNCPY@
 GL_GTTGL_GNULIB_STRNDUP = @GL_GTTGL_GNULIB_STRNDUP@
 GL_GTTGL_GNULIB_STRNLEN = @GL_GTTGL_GNULIB_STRNLEN@
+GL_GTTGL_GNULIB_STRNUL = @GL_GTTGL_GNULIB_STRNUL@
 GL_GTTGL_GNULIB_STRPBRK = @GL_GTTGL_GNULIB_STRPBRK@
 GL_GTTGL_GNULIB_STRSEP = @GL_GTTGL_GNULIB_STRSEP@
 GL_GTTGL_GNULIB_STRSIGNAL = @GL_GTTGL_GNULIB_STRSIGNAL@
@@ -2665,7 +2960,6 @@ GNULIBHEADERS_OVERRIDE_WINT_T = @GNULIBHEADERS_OVERRIDE_WINT_T@
 GNULIB_LOCALEDIR = @GNULIB_LOCALEDIR@
 GNULIB_LOCALEDIR_c = @GNULIB_LOCALEDIR_c@
 GNULIB_LOCALEDIR_c_make = @GNULIB_LOCALEDIR_c_make@
-GNUSTEP_CONFIG = @GNUSTEP_CONFIG@
 GO = @GO@
 GOCOMPFLAGS = @GOCOMPFLAGS@
 GO_CHOICE = @GO_CHOICE@
@@ -3098,6 +3392,7 @@ HAVE_SLEEP = @HAVE_SLEEP@
 HAVE_SPAWN_H = @HAVE_SPAWN_H@
 HAVE_SQRTF = @HAVE_SQRTF@
 HAVE_SQRTL = @HAVE_SQRTL@
+HAVE_STDBIT_H = @HAVE_STDBIT_H@
 HAVE_STDCKDINT_H = @HAVE_STDCKDINT_H@
 HAVE_STDCOUNTOF_H = @HAVE_STDCOUNTOF_H@
 HAVE_STDINT_H = @HAVE_STDINT_H@
@@ -3228,7 +3523,6 @@ INCCURL = @INCCURL@
 INCJSON_C = @INCJSON_C@
 INCLUDE_NEXT = @INCLUDE_NEXT@
 INCLUDE_NEXT_AS_FIRST_DIRECTIVE = @INCLUDE_NEXT_AS_FIRST_DIRECTIVE@
-INCXML = @INCXML@
 INET_NTOP_LIB = @INET_NTOP_LIB@
 INET_PTON_LIB = @INET_PTON_LIB@
 INSTALL = @INSTALL@
@@ -3241,11 +3535,6 @@ INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 INT32_MAX_LT_INTMAX_MAX = @INT32_MAX_LT_INTMAX_MAX@
 INT64_MAX_EQ_LONG_MAX = @INT64_MAX_EQ_LONG_MAX@
 INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
-ISINF_LIBM = @ISINF_LIBM@
-ISNAND_LIBM = @ISNAND_LIBM@
-ISNANF_LIBM = @ISNANF_LIBM@
-ISNANL_LIBM = @ISNANL_LIBM@
-ISNAN_LIBM = @ISNAN_LIBM@
 JAR = @JAR@
 JAVA_CHOICE = @JAVA_CHOICE@
 LC_COLLATE_IMPLEMENTED = @LC_COLLATE_IMPLEMENTED@
@@ -3286,7 +3575,6 @@ LIBUNISTRING_UNINORM_H = @LIBUNISTRING_UNINORM_H@
 LIBUNISTRING_UNISTR_H = @LIBUNISTRING_UNISTR_H@
 LIBUNISTRING_UNITYPES_H = @LIBUNISTRING_UNITYPES_H@
 LIBUNISTRING_UNIWIDTH_H = @LIBUNISTRING_UNIWIDTH_H@
-LIBXML = @LIBXML@
 LIB_ACL = @LIB_ACL@
 LIB_CLOCK_GETTIME = @LIB_CLOCK_GETTIME@
 LIB_GETRANDOM = @LIB_GETRANDOM@
@@ -3316,7 +3604,6 @@ LOCALE_FR_UTF8 = @LOCALE_FR_UTF8@
 LOCALE_JA = @LOCALE_JA@
 LOCALE_TR_UTF8 = @LOCALE_TR_UTF8@
 LOCALE_ZH_CN = @LOCALE_ZH_CN@
-LOG10_LIBM = @LOG10_LIBM@
 LTLIBICONV = @LTLIBICONV@
 LTLIBINTL = @LTLIBINTL@
 LTLIBMULTITHREAD = @LTLIBMULTITHREAD@
@@ -3324,7 +3611,6 @@ LTLIBOBJS = @LTLIBOBJS@
 LTLIBTEXTSTYLE = @LTLIBTEXTSTYLE@
 LTLIBTHREAD = @LTLIBTHREAD@
 LTLIBUNISTRING = @LTLIBUNISTRING@
-LTLIBXML = @LTLIBXML@
 LT_SYS_LIBRARY_PATH = @LT_SYS_LIBRARY_PATH@
 M2C = @M2C@
 M2FLAGS = @M2FLAGS@
@@ -3368,6 +3654,7 @@ NEXT_AS_FIRST_DIRECTIVE_SCHED_H = @NEXT_AS_FIRST_DIRECTIVE_SCHED_H@
 NEXT_AS_FIRST_DIRECTIVE_SIGNAL_H = @NEXT_AS_FIRST_DIRECTIVE_SIGNAL_H@
 NEXT_AS_FIRST_DIRECTIVE_SPAWN_H = @NEXT_AS_FIRST_DIRECTIVE_SPAWN_H@
 NEXT_AS_FIRST_DIRECTIVE_STDARG_H = @NEXT_AS_FIRST_DIRECTIVE_STDARG_H@
+NEXT_AS_FIRST_DIRECTIVE_STDBIT_H = @NEXT_AS_FIRST_DIRECTIVE_STDBIT_H@
 NEXT_AS_FIRST_DIRECTIVE_STDCKDINT_H = @NEXT_AS_FIRST_DIRECTIVE_STDCKDINT_H@
 NEXT_AS_FIRST_DIRECTIVE_STDCOUNTOF_H = @NEXT_AS_FIRST_DIRECTIVE_STDCOUNTOF_H@
 NEXT_AS_FIRST_DIRECTIVE_STDDEF_H = @NEXT_AS_FIRST_DIRECTIVE_STDDEF_H@
@@ -3414,6 +3701,7 @@ NEXT_SCHED_H = @NEXT_SCHED_H@
 NEXT_SIGNAL_H = @NEXT_SIGNAL_H@
 NEXT_SPAWN_H = @NEXT_SPAWN_H@
 NEXT_STDARG_H = @NEXT_STDARG_H@
+NEXT_STDBIT_H = @NEXT_STDBIT_H@
 NEXT_STDCKDINT_H = @NEXT_STDCKDINT_H@
 NEXT_STDCOUNTOF_H = @NEXT_STDCOUNTOF_H@
 NEXT_STDDEF_H = @NEXT_STDDEF_H@
@@ -3439,7 +3727,6 @@ NEXT_WCHAR_H = @NEXT_WCHAR_H@
 NEXT_WCTYPE_H = @NEXT_WCTYPE_H@
 NM = @NM@
 NMEDIT = @NMEDIT@
-NO_CXX = @NO_CXX@
 NO_EXPENSIVE_WARN_CFLAGS = @NO_EXPENSIVE_WARN_CFLAGS@
 NULLPTR_T_NEEDS_STDDEF = @NULLPTR_T_NEEDS_STDDEF@
 OBJC = @OBJC@
@@ -3463,7 +3750,6 @@ PATH_SEPARATOR = @PATH_SEPARATOR@
 PERL = @PERL@
 POSIX_SPAWN_LIB = @POSIX_SPAWN_LIB@
 POSUB = @POSUB@
-POW_LIBM = @POW_LIBM@
 PRAGMA_COLUMNS = @PRAGMA_COLUMNS@
 PRAGMA_SYSTEM_HEADER = @PRAGMA_SYSTEM_HEADER@
 PRIPTR_PREFIX = @PRIPTR_PREFIX@
@@ -3893,6 +4179,7 @@ SIG_ATOMIC_T_SUFFIX = @SIG_ATOMIC_T_SUFFIX@
 SIZE_T_SUFFIX = @SIZE_T_SUFFIX@
 SMALL_WCHAR_T = @SMALL_WCHAR_T@
 STDARG_H = @STDARG_H@
+STDBIT_H = @STDBIT_H@
 STDCKDINT_H = @STDCKDINT_H@
 STDCOUNTOF_H = @STDCOUNTOF_H@
 STDDEF_H = @STDDEF_H@
@@ -4112,21 +4399,49 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = 1.5 gnits subdir-objects
-EXTRA_DIST = dynarray.h malloc/dynarray-skeleton.c malloc/dynarray.h \
-	kwset.h langinfo.in.h memchr2.valgrind windows-initguard.h \
-	regcomp.c regex.h regex_internal.c regex_internal.h regexec.c \
-	_Noreturn.h arg-nonnull.h c++defs.h warn-on-use.h stddef.in.h \
-	stdint.in.h stdlib.in.h unistd.in.h wchar.in.h wctype.in.h
+EXTRA_DIST = c32is-impl.h c32is-impl.h c32is-impl.h c32is-impl.h \
+	c32is-impl.h c32is-impl.h c32is-impl.h c32is-impl.h \
+	c32is-impl.h c32is-impl.h c32is-impl.h c32is-impl.h \
+	c32to-impl.h c32to-impl.h dynarray.h \
+	malloc/dynarray-skeleton.c malloc/dynarray.h kwset.h \
+	langinfo.in.h localeinfo.h lc-charset-dispatch.c \
+	lc-charset-dispatch.h mbrtowc-impl-utf8.h mbrtowc-impl.h \
+	mbtowc-lock.c mbtowc-lock.h windows-initguard.h \
+	memchr2.valgrind windows-initguard.h regcomp.c regex.h \
+	regex_internal.c regex_internal.h regexec.c _Noreturn.h \
+	arg-nonnull.h c++defs.h warn-on-use.h stdcountof.in.h \
+	stddef.in.h stdint.in.h stdlib.in.h streq-opt.h uchar.in.h \
+	unicase.in.h unicase/simple-mapping.h unicase/tolower.h \
+	unicase/simple-mapping.h unicase/toupper.h unictype.in.h \
+	unictype/bitmap.h unictype/ctype_alnum.h unictype/bitmap.h \
+	unictype/ctype_alpha.h unictype/bitmap.h \
+	unictype/ctype_blank.h unictype/bitmap.h \
+	unictype/ctype_cntrl.h unictype/bitmap.h \
+	unictype/ctype_digit.h unictype/bitmap.h \
+	unictype/ctype_graph.h unictype/bitmap.h \
+	unictype/ctype_lower.h unictype/bitmap.h \
+	unictype/ctype_print.h unictype/bitmap.h \
+	unictype/ctype_punct.h unictype/bitmap.h \
+	unictype/ctype_space.h unictype/bitmap.h \
+	unictype/ctype_upper.h unictype/bitmap.h \
+	unictype/ctype_xdigit.h uninorm.in.h unistd.in.h unitypes.in.h \
+	wchar.in.h wctype.in.h
 BUILT_SOURCES = malloc/dynarray.gl.h malloc/dynarray-skeleton.gl.h \
-	langinfo.h $(STDDEF_H) $(STDINT_H) stdlib.h unistd.h wchar.h \
-	wctype.h
+	langinfo.h $(STDCOUNTOF_H) $(STDDEF_H) $(STDINT_H) stdlib.h \
+	uchar.h $(LIBUNISTRING_UNICASE_H) $(LIBUNISTRING_UNICTYPE_H) \
+	$(LIBUNISTRING_UNINORM_H) unistd.h $(LIBUNISTRING_UNITYPES_H) \
+	wchar.h wctype.h
 MOSTLYCLEANFILES = core *.stackdump core *.stackdump \
 	malloc/dynarray.gl.h malloc/dynarray.gl.h-t \
 	malloc/dynarray-skeleton.gl.h malloc/dynarray-skeleton.gl.h-t \
-	langinfo.h langinfo.h-t stddef.h stddef.h-t stdint.h \
-	stdint.h-t stdlib.h stdlib.h-t1 stdlib.h-t2 stdlib.h-t3 \
-	unistd.h unistd.h-t1 unistd.h-t2 unistd.h-t3 unistd.h-t4 \
-	wchar.h wchar.h-t1 wchar.h-t2 wchar.h-t3 wctype.h wctype.h-t
+	langinfo.h langinfo.h-t stdcountof.h stdcountof.h-t stddef.h \
+	stddef.h-t stdint.h stdint.h-t stdlib.h stdlib.h-t1 \
+	stdlib.h-t2 stdlib.h-t3 uchar.h uchar.h-t unicase.h \
+	unicase.h-t unictype.h unictype.h-t1 unictype.h-t2 \
+	unictype.h-t3 unictype.h-t4 uninorm.h uninorm.h-t unistd.h \
+	unistd.h-t1 unistd.h-t2 unistd.h-t3 unistd.h-t4 unitypes.h \
+	unitypes.h-t wchar.h wchar.h-t1 wchar.h-t2 wchar.h-t3 wctype.h \
+	wctype.h-t
 MOSTLYCLEANDIRS = 
 CLEANFILES = 
 DISTCLEANFILES = 
@@ -4139,17 +4454,28 @@ noinst_LIBRARIES = libgnu.a
 # No GNU Make output.
 AM_CPPFLAGS = -I../../../gettext-runtime/intl -I../../gnulib-lib \
 	-I$(top_srcdir)/gnulib-lib -DIN_GETTEXT_TOOLS_LIBGREP=1
-libgnu_a_SOURCES = malloc/dynarray_at_failure.c \
-	malloc/dynarray_emplace_enlarge.c malloc/dynarray_finalize.c \
-	malloc/dynarray_resize.c malloc/dynarray_resize_clear.c \
-	kwset.c $(am__append_1) memchr2.h memchr2.c $(am__append_2) \
-	$(am__append_3) $(am__append_4) stdlib.c string.c \
-	$(am__append_5) unistd.c $(am__append_6) wctype-h.c
+libgnu_a_SOURCES = btoc32.c c32_apply_type_test.c c32_get_type_test.c \
+	c32isalnum.c c32isalpha.c c32isblank.c c32iscntrl.c \
+	c32isdigit.c c32isgraph.c c32islower.c c32isprint.c \
+	c32ispunct.c c32isspace.c c32isupper.c c32isxdigit.c \
+	$(am__append_1) c32tolower.c c32toupper.c \
+	malloc/dynarray_at_failure.c malloc/dynarray_emplace_enlarge.c \
+	malloc/dynarray_finalize.c malloc/dynarray_resize.c \
+	malloc/dynarray_resize_clear.c kwset.c localeinfo.c \
+	$(am__append_2) $(am__append_3) memchr2.h memchr2.c \
+	$(am__append_4) $(am__append_5) $(am__append_6) stdlib.c \
+	$(am__append_7) $(am__append_8) $(am__append_9) \
+	$(am__append_10) $(am__append_11) $(am__append_12) \
+	$(am__append_13) $(am__append_14) $(am__append_15) \
+	$(am__append_16) $(am__append_17) $(am__append_18) \
+	$(am__append_19) $(am__append_20) $(am__append_21) unistd.c \
+	$(am__append_22) wctype-h.c
 libgnu_a_CFLAGS = $(AM_CFLAGS) $(GL_CFLAG_GNULIB_WARNINGS) $(GL_CFLAG_ALLOW_WARNINGS)
 libgnu_a_LIBADD = $(grgl_libgnu_LIBOBJS)
 libgnu_a_DEPENDENCIES = $(grgl_libgnu_LIBOBJS)
-EXTRA_libgnu_a_SOURCES = malloc/dynarray-skeleton.c regcomp.c \
-	regex_internal.c regexec.c
+EXTRA_libgnu_a_SOURCES = malloc/dynarray-skeleton.c \
+	lc-charset-dispatch.c mbtowc-lock.c regcomp.c regex_internal.c \
+	regexec.c
 
 # In 'sed', replace the pattern space with a "DO NOT EDIT" comment.
 SED_HEADER_NOEDIT = s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,
@@ -4240,6 +4566,46 @@ malloc/libgnu_a-dynarray_resize.$(OBJEXT): malloc/$(am__dirstamp) \
 	malloc/$(DEPDIR)/$(am__dirstamp)
 malloc/libgnu_a-dynarray_resize_clear.$(OBJEXT):  \
 	malloc/$(am__dirstamp) malloc/$(DEPDIR)/$(am__dirstamp)
+unicase/$(am__dirstamp):
+	@$(MKDIR_P) unicase
+	@: >>unicase/$(am__dirstamp)
+unicase/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) unicase/$(DEPDIR)
+	@: >>unicase/$(DEPDIR)/$(am__dirstamp)
+unicase/libgnu_a-tolower.$(OBJEXT): unicase/$(am__dirstamp) \
+	unicase/$(DEPDIR)/$(am__dirstamp)
+unicase/libgnu_a-toupper.$(OBJEXT): unicase/$(am__dirstamp) \
+	unicase/$(DEPDIR)/$(am__dirstamp)
+unictype/$(am__dirstamp):
+	@$(MKDIR_P) unictype
+	@: >>unictype/$(am__dirstamp)
+unictype/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) unictype/$(DEPDIR)
+	@: >>unictype/$(DEPDIR)/$(am__dirstamp)
+unictype/libgnu_a-ctype_alnum.$(OBJEXT): unictype/$(am__dirstamp) \
+	unictype/$(DEPDIR)/$(am__dirstamp)
+unictype/libgnu_a-ctype_alpha.$(OBJEXT): unictype/$(am__dirstamp) \
+	unictype/$(DEPDIR)/$(am__dirstamp)
+unictype/libgnu_a-ctype_blank.$(OBJEXT): unictype/$(am__dirstamp) \
+	unictype/$(DEPDIR)/$(am__dirstamp)
+unictype/libgnu_a-ctype_cntrl.$(OBJEXT): unictype/$(am__dirstamp) \
+	unictype/$(DEPDIR)/$(am__dirstamp)
+unictype/libgnu_a-ctype_digit.$(OBJEXT): unictype/$(am__dirstamp) \
+	unictype/$(DEPDIR)/$(am__dirstamp)
+unictype/libgnu_a-ctype_graph.$(OBJEXT): unictype/$(am__dirstamp) \
+	unictype/$(DEPDIR)/$(am__dirstamp)
+unictype/libgnu_a-ctype_lower.$(OBJEXT): unictype/$(am__dirstamp) \
+	unictype/$(DEPDIR)/$(am__dirstamp)
+unictype/libgnu_a-ctype_print.$(OBJEXT): unictype/$(am__dirstamp) \
+	unictype/$(DEPDIR)/$(am__dirstamp)
+unictype/libgnu_a-ctype_punct.$(OBJEXT): unictype/$(am__dirstamp) \
+	unictype/$(DEPDIR)/$(am__dirstamp)
+unictype/libgnu_a-ctype_space.$(OBJEXT): unictype/$(am__dirstamp) \
+	unictype/$(DEPDIR)/$(am__dirstamp)
+unictype/libgnu_a-ctype_upper.$(OBJEXT): unictype/$(am__dirstamp) \
+	unictype/$(DEPDIR)/$(am__dirstamp)
+unictype/libgnu_a-ctype_xdigit.$(OBJEXT): unictype/$(am__dirstamp) \
+	unictype/$(DEPDIR)/$(am__dirstamp)
 malloc/libgnu_a-dynarray-skeleton.$(OBJEXT): malloc/$(am__dirstamp) \
 	malloc/$(DEPDIR)/$(am__dirstamp)
 
@@ -4251,12 +4617,36 @@ libgnu.a: $(libgnu_a_OBJECTS) $(libgnu_a_DEPENDENCIES) $(EXTRA_libgnu_a_DEPENDEN
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
 	-rm -f malloc/*.$(OBJEXT)
+	-rm -f unicase/*.$(OBJEXT)
+	-rm -f unictype/*.$(OBJEXT)
 
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-btoc32.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32_apply_type_test.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32_get_type_test.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32isalnum.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32isalpha.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32isblank.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32iscntrl.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32isdigit.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32isgraph.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32islower.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32isprint.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32ispunct.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32isspace.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32isupper.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32isxdigit.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32rtomb.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32tolower.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-c32toupper.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-kwset.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-lc-charset-dispatch.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-localeinfo.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-mbrlen.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-mbrtoc32.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-mbtowc-lock.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-memchr2.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-nl_langinfo-lock.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-nl_langinfo.Po@am__quote@ # am--include-marker
@@ -4265,7 +4655,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-regex_internal.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-regexec.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-stdlib.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-string.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-strncpy.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-unistd.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgnu_a-wcrtomb.Po@am__quote@ # am--include-marker
@@ -4276,6 +4665,20 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@malloc/$(DEPDIR)/libgnu_a-dynarray_finalize.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@malloc/$(DEPDIR)/libgnu_a-dynarray_resize.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@malloc/$(DEPDIR)/libgnu_a-dynarray_resize_clear.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unicase/$(DEPDIR)/libgnu_a-tolower.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unicase/$(DEPDIR)/libgnu_a-toupper.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unictype/$(DEPDIR)/libgnu_a-ctype_alnum.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unictype/$(DEPDIR)/libgnu_a-ctype_alpha.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unictype/$(DEPDIR)/libgnu_a-ctype_blank.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unictype/$(DEPDIR)/libgnu_a-ctype_cntrl.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unictype/$(DEPDIR)/libgnu_a-ctype_digit.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unictype/$(DEPDIR)/libgnu_a-ctype_graph.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unictype/$(DEPDIR)/libgnu_a-ctype_lower.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unictype/$(DEPDIR)/libgnu_a-ctype_print.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unictype/$(DEPDIR)/libgnu_a-ctype_punct.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unictype/$(DEPDIR)/libgnu_a-ctype_space.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unictype/$(DEPDIR)/libgnu_a-ctype_upper.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@unictype/$(DEPDIR)/libgnu_a-ctype_xdigit.Po@am__quote@ # am--include-marker
 
 $(am__depfiles_remade):
 	@$(MKDIR_P) $(@D)
@@ -4306,6 +4709,258 @@ am--depfiles: $(am__depfiles_remade)
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
+
+libgnu_a-btoc32.o: btoc32.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-btoc32.o -MD -MP -MF $(DEPDIR)/libgnu_a-btoc32.Tpo -c -o libgnu_a-btoc32.o `test -f 'btoc32.c' || echo '$(srcdir)/'`btoc32.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-btoc32.Tpo $(DEPDIR)/libgnu_a-btoc32.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='btoc32.c' object='libgnu_a-btoc32.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-btoc32.o `test -f 'btoc32.c' || echo '$(srcdir)/'`btoc32.c
+
+libgnu_a-btoc32.obj: btoc32.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-btoc32.obj -MD -MP -MF $(DEPDIR)/libgnu_a-btoc32.Tpo -c -o libgnu_a-btoc32.obj `if test -f 'btoc32.c'; then $(CYGPATH_W) 'btoc32.c'; else $(CYGPATH_W) '$(srcdir)/btoc32.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-btoc32.Tpo $(DEPDIR)/libgnu_a-btoc32.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='btoc32.c' object='libgnu_a-btoc32.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-btoc32.obj `if test -f 'btoc32.c'; then $(CYGPATH_W) 'btoc32.c'; else $(CYGPATH_W) '$(srcdir)/btoc32.c'; fi`
+
+libgnu_a-c32_apply_type_test.o: c32_apply_type_test.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32_apply_type_test.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32_apply_type_test.Tpo -c -o libgnu_a-c32_apply_type_test.o `test -f 'c32_apply_type_test.c' || echo '$(srcdir)/'`c32_apply_type_test.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32_apply_type_test.Tpo $(DEPDIR)/libgnu_a-c32_apply_type_test.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32_apply_type_test.c' object='libgnu_a-c32_apply_type_test.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32_apply_type_test.o `test -f 'c32_apply_type_test.c' || echo '$(srcdir)/'`c32_apply_type_test.c
+
+libgnu_a-c32_apply_type_test.obj: c32_apply_type_test.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32_apply_type_test.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32_apply_type_test.Tpo -c -o libgnu_a-c32_apply_type_test.obj `if test -f 'c32_apply_type_test.c'; then $(CYGPATH_W) 'c32_apply_type_test.c'; else $(CYGPATH_W) '$(srcdir)/c32_apply_type_test.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32_apply_type_test.Tpo $(DEPDIR)/libgnu_a-c32_apply_type_test.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32_apply_type_test.c' object='libgnu_a-c32_apply_type_test.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32_apply_type_test.obj `if test -f 'c32_apply_type_test.c'; then $(CYGPATH_W) 'c32_apply_type_test.c'; else $(CYGPATH_W) '$(srcdir)/c32_apply_type_test.c'; fi`
+
+libgnu_a-c32_get_type_test.o: c32_get_type_test.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32_get_type_test.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32_get_type_test.Tpo -c -o libgnu_a-c32_get_type_test.o `test -f 'c32_get_type_test.c' || echo '$(srcdir)/'`c32_get_type_test.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32_get_type_test.Tpo $(DEPDIR)/libgnu_a-c32_get_type_test.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32_get_type_test.c' object='libgnu_a-c32_get_type_test.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32_get_type_test.o `test -f 'c32_get_type_test.c' || echo '$(srcdir)/'`c32_get_type_test.c
+
+libgnu_a-c32_get_type_test.obj: c32_get_type_test.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32_get_type_test.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32_get_type_test.Tpo -c -o libgnu_a-c32_get_type_test.obj `if test -f 'c32_get_type_test.c'; then $(CYGPATH_W) 'c32_get_type_test.c'; else $(CYGPATH_W) '$(srcdir)/c32_get_type_test.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32_get_type_test.Tpo $(DEPDIR)/libgnu_a-c32_get_type_test.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32_get_type_test.c' object='libgnu_a-c32_get_type_test.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32_get_type_test.obj `if test -f 'c32_get_type_test.c'; then $(CYGPATH_W) 'c32_get_type_test.c'; else $(CYGPATH_W) '$(srcdir)/c32_get_type_test.c'; fi`
+
+libgnu_a-c32isalnum.o: c32isalnum.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isalnum.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32isalnum.Tpo -c -o libgnu_a-c32isalnum.o `test -f 'c32isalnum.c' || echo '$(srcdir)/'`c32isalnum.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isalnum.Tpo $(DEPDIR)/libgnu_a-c32isalnum.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isalnum.c' object='libgnu_a-c32isalnum.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isalnum.o `test -f 'c32isalnum.c' || echo '$(srcdir)/'`c32isalnum.c
+
+libgnu_a-c32isalnum.obj: c32isalnum.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isalnum.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32isalnum.Tpo -c -o libgnu_a-c32isalnum.obj `if test -f 'c32isalnum.c'; then $(CYGPATH_W) 'c32isalnum.c'; else $(CYGPATH_W) '$(srcdir)/c32isalnum.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isalnum.Tpo $(DEPDIR)/libgnu_a-c32isalnum.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isalnum.c' object='libgnu_a-c32isalnum.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isalnum.obj `if test -f 'c32isalnum.c'; then $(CYGPATH_W) 'c32isalnum.c'; else $(CYGPATH_W) '$(srcdir)/c32isalnum.c'; fi`
+
+libgnu_a-c32isalpha.o: c32isalpha.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isalpha.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32isalpha.Tpo -c -o libgnu_a-c32isalpha.o `test -f 'c32isalpha.c' || echo '$(srcdir)/'`c32isalpha.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isalpha.Tpo $(DEPDIR)/libgnu_a-c32isalpha.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isalpha.c' object='libgnu_a-c32isalpha.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isalpha.o `test -f 'c32isalpha.c' || echo '$(srcdir)/'`c32isalpha.c
+
+libgnu_a-c32isalpha.obj: c32isalpha.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isalpha.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32isalpha.Tpo -c -o libgnu_a-c32isalpha.obj `if test -f 'c32isalpha.c'; then $(CYGPATH_W) 'c32isalpha.c'; else $(CYGPATH_W) '$(srcdir)/c32isalpha.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isalpha.Tpo $(DEPDIR)/libgnu_a-c32isalpha.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isalpha.c' object='libgnu_a-c32isalpha.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isalpha.obj `if test -f 'c32isalpha.c'; then $(CYGPATH_W) 'c32isalpha.c'; else $(CYGPATH_W) '$(srcdir)/c32isalpha.c'; fi`
+
+libgnu_a-c32isblank.o: c32isblank.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isblank.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32isblank.Tpo -c -o libgnu_a-c32isblank.o `test -f 'c32isblank.c' || echo '$(srcdir)/'`c32isblank.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isblank.Tpo $(DEPDIR)/libgnu_a-c32isblank.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isblank.c' object='libgnu_a-c32isblank.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isblank.o `test -f 'c32isblank.c' || echo '$(srcdir)/'`c32isblank.c
+
+libgnu_a-c32isblank.obj: c32isblank.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isblank.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32isblank.Tpo -c -o libgnu_a-c32isblank.obj `if test -f 'c32isblank.c'; then $(CYGPATH_W) 'c32isblank.c'; else $(CYGPATH_W) '$(srcdir)/c32isblank.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isblank.Tpo $(DEPDIR)/libgnu_a-c32isblank.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isblank.c' object='libgnu_a-c32isblank.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isblank.obj `if test -f 'c32isblank.c'; then $(CYGPATH_W) 'c32isblank.c'; else $(CYGPATH_W) '$(srcdir)/c32isblank.c'; fi`
+
+libgnu_a-c32iscntrl.o: c32iscntrl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32iscntrl.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32iscntrl.Tpo -c -o libgnu_a-c32iscntrl.o `test -f 'c32iscntrl.c' || echo '$(srcdir)/'`c32iscntrl.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32iscntrl.Tpo $(DEPDIR)/libgnu_a-c32iscntrl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32iscntrl.c' object='libgnu_a-c32iscntrl.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32iscntrl.o `test -f 'c32iscntrl.c' || echo '$(srcdir)/'`c32iscntrl.c
+
+libgnu_a-c32iscntrl.obj: c32iscntrl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32iscntrl.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32iscntrl.Tpo -c -o libgnu_a-c32iscntrl.obj `if test -f 'c32iscntrl.c'; then $(CYGPATH_W) 'c32iscntrl.c'; else $(CYGPATH_W) '$(srcdir)/c32iscntrl.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32iscntrl.Tpo $(DEPDIR)/libgnu_a-c32iscntrl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32iscntrl.c' object='libgnu_a-c32iscntrl.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32iscntrl.obj `if test -f 'c32iscntrl.c'; then $(CYGPATH_W) 'c32iscntrl.c'; else $(CYGPATH_W) '$(srcdir)/c32iscntrl.c'; fi`
+
+libgnu_a-c32isdigit.o: c32isdigit.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isdigit.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32isdigit.Tpo -c -o libgnu_a-c32isdigit.o `test -f 'c32isdigit.c' || echo '$(srcdir)/'`c32isdigit.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isdigit.Tpo $(DEPDIR)/libgnu_a-c32isdigit.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isdigit.c' object='libgnu_a-c32isdigit.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isdigit.o `test -f 'c32isdigit.c' || echo '$(srcdir)/'`c32isdigit.c
+
+libgnu_a-c32isdigit.obj: c32isdigit.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isdigit.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32isdigit.Tpo -c -o libgnu_a-c32isdigit.obj `if test -f 'c32isdigit.c'; then $(CYGPATH_W) 'c32isdigit.c'; else $(CYGPATH_W) '$(srcdir)/c32isdigit.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isdigit.Tpo $(DEPDIR)/libgnu_a-c32isdigit.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isdigit.c' object='libgnu_a-c32isdigit.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isdigit.obj `if test -f 'c32isdigit.c'; then $(CYGPATH_W) 'c32isdigit.c'; else $(CYGPATH_W) '$(srcdir)/c32isdigit.c'; fi`
+
+libgnu_a-c32isgraph.o: c32isgraph.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isgraph.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32isgraph.Tpo -c -o libgnu_a-c32isgraph.o `test -f 'c32isgraph.c' || echo '$(srcdir)/'`c32isgraph.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isgraph.Tpo $(DEPDIR)/libgnu_a-c32isgraph.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isgraph.c' object='libgnu_a-c32isgraph.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isgraph.o `test -f 'c32isgraph.c' || echo '$(srcdir)/'`c32isgraph.c
+
+libgnu_a-c32isgraph.obj: c32isgraph.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isgraph.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32isgraph.Tpo -c -o libgnu_a-c32isgraph.obj `if test -f 'c32isgraph.c'; then $(CYGPATH_W) 'c32isgraph.c'; else $(CYGPATH_W) '$(srcdir)/c32isgraph.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isgraph.Tpo $(DEPDIR)/libgnu_a-c32isgraph.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isgraph.c' object='libgnu_a-c32isgraph.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isgraph.obj `if test -f 'c32isgraph.c'; then $(CYGPATH_W) 'c32isgraph.c'; else $(CYGPATH_W) '$(srcdir)/c32isgraph.c'; fi`
+
+libgnu_a-c32islower.o: c32islower.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32islower.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32islower.Tpo -c -o libgnu_a-c32islower.o `test -f 'c32islower.c' || echo '$(srcdir)/'`c32islower.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32islower.Tpo $(DEPDIR)/libgnu_a-c32islower.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32islower.c' object='libgnu_a-c32islower.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32islower.o `test -f 'c32islower.c' || echo '$(srcdir)/'`c32islower.c
+
+libgnu_a-c32islower.obj: c32islower.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32islower.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32islower.Tpo -c -o libgnu_a-c32islower.obj `if test -f 'c32islower.c'; then $(CYGPATH_W) 'c32islower.c'; else $(CYGPATH_W) '$(srcdir)/c32islower.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32islower.Tpo $(DEPDIR)/libgnu_a-c32islower.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32islower.c' object='libgnu_a-c32islower.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32islower.obj `if test -f 'c32islower.c'; then $(CYGPATH_W) 'c32islower.c'; else $(CYGPATH_W) '$(srcdir)/c32islower.c'; fi`
+
+libgnu_a-c32isprint.o: c32isprint.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isprint.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32isprint.Tpo -c -o libgnu_a-c32isprint.o `test -f 'c32isprint.c' || echo '$(srcdir)/'`c32isprint.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isprint.Tpo $(DEPDIR)/libgnu_a-c32isprint.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isprint.c' object='libgnu_a-c32isprint.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isprint.o `test -f 'c32isprint.c' || echo '$(srcdir)/'`c32isprint.c
+
+libgnu_a-c32isprint.obj: c32isprint.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isprint.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32isprint.Tpo -c -o libgnu_a-c32isprint.obj `if test -f 'c32isprint.c'; then $(CYGPATH_W) 'c32isprint.c'; else $(CYGPATH_W) '$(srcdir)/c32isprint.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isprint.Tpo $(DEPDIR)/libgnu_a-c32isprint.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isprint.c' object='libgnu_a-c32isprint.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isprint.obj `if test -f 'c32isprint.c'; then $(CYGPATH_W) 'c32isprint.c'; else $(CYGPATH_W) '$(srcdir)/c32isprint.c'; fi`
+
+libgnu_a-c32ispunct.o: c32ispunct.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32ispunct.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32ispunct.Tpo -c -o libgnu_a-c32ispunct.o `test -f 'c32ispunct.c' || echo '$(srcdir)/'`c32ispunct.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32ispunct.Tpo $(DEPDIR)/libgnu_a-c32ispunct.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32ispunct.c' object='libgnu_a-c32ispunct.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32ispunct.o `test -f 'c32ispunct.c' || echo '$(srcdir)/'`c32ispunct.c
+
+libgnu_a-c32ispunct.obj: c32ispunct.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32ispunct.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32ispunct.Tpo -c -o libgnu_a-c32ispunct.obj `if test -f 'c32ispunct.c'; then $(CYGPATH_W) 'c32ispunct.c'; else $(CYGPATH_W) '$(srcdir)/c32ispunct.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32ispunct.Tpo $(DEPDIR)/libgnu_a-c32ispunct.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32ispunct.c' object='libgnu_a-c32ispunct.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32ispunct.obj `if test -f 'c32ispunct.c'; then $(CYGPATH_W) 'c32ispunct.c'; else $(CYGPATH_W) '$(srcdir)/c32ispunct.c'; fi`
+
+libgnu_a-c32isspace.o: c32isspace.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isspace.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32isspace.Tpo -c -o libgnu_a-c32isspace.o `test -f 'c32isspace.c' || echo '$(srcdir)/'`c32isspace.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isspace.Tpo $(DEPDIR)/libgnu_a-c32isspace.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isspace.c' object='libgnu_a-c32isspace.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isspace.o `test -f 'c32isspace.c' || echo '$(srcdir)/'`c32isspace.c
+
+libgnu_a-c32isspace.obj: c32isspace.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isspace.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32isspace.Tpo -c -o libgnu_a-c32isspace.obj `if test -f 'c32isspace.c'; then $(CYGPATH_W) 'c32isspace.c'; else $(CYGPATH_W) '$(srcdir)/c32isspace.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isspace.Tpo $(DEPDIR)/libgnu_a-c32isspace.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isspace.c' object='libgnu_a-c32isspace.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isspace.obj `if test -f 'c32isspace.c'; then $(CYGPATH_W) 'c32isspace.c'; else $(CYGPATH_W) '$(srcdir)/c32isspace.c'; fi`
+
+libgnu_a-c32isupper.o: c32isupper.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isupper.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32isupper.Tpo -c -o libgnu_a-c32isupper.o `test -f 'c32isupper.c' || echo '$(srcdir)/'`c32isupper.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isupper.Tpo $(DEPDIR)/libgnu_a-c32isupper.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isupper.c' object='libgnu_a-c32isupper.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isupper.o `test -f 'c32isupper.c' || echo '$(srcdir)/'`c32isupper.c
+
+libgnu_a-c32isupper.obj: c32isupper.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isupper.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32isupper.Tpo -c -o libgnu_a-c32isupper.obj `if test -f 'c32isupper.c'; then $(CYGPATH_W) 'c32isupper.c'; else $(CYGPATH_W) '$(srcdir)/c32isupper.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isupper.Tpo $(DEPDIR)/libgnu_a-c32isupper.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isupper.c' object='libgnu_a-c32isupper.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isupper.obj `if test -f 'c32isupper.c'; then $(CYGPATH_W) 'c32isupper.c'; else $(CYGPATH_W) '$(srcdir)/c32isupper.c'; fi`
+
+libgnu_a-c32isxdigit.o: c32isxdigit.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isxdigit.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32isxdigit.Tpo -c -o libgnu_a-c32isxdigit.o `test -f 'c32isxdigit.c' || echo '$(srcdir)/'`c32isxdigit.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isxdigit.Tpo $(DEPDIR)/libgnu_a-c32isxdigit.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isxdigit.c' object='libgnu_a-c32isxdigit.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isxdigit.o `test -f 'c32isxdigit.c' || echo '$(srcdir)/'`c32isxdigit.c
+
+libgnu_a-c32isxdigit.obj: c32isxdigit.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32isxdigit.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32isxdigit.Tpo -c -o libgnu_a-c32isxdigit.obj `if test -f 'c32isxdigit.c'; then $(CYGPATH_W) 'c32isxdigit.c'; else $(CYGPATH_W) '$(srcdir)/c32isxdigit.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32isxdigit.Tpo $(DEPDIR)/libgnu_a-c32isxdigit.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32isxdigit.c' object='libgnu_a-c32isxdigit.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32isxdigit.obj `if test -f 'c32isxdigit.c'; then $(CYGPATH_W) 'c32isxdigit.c'; else $(CYGPATH_W) '$(srcdir)/c32isxdigit.c'; fi`
+
+libgnu_a-c32rtomb.o: c32rtomb.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32rtomb.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32rtomb.Tpo -c -o libgnu_a-c32rtomb.o `test -f 'c32rtomb.c' || echo '$(srcdir)/'`c32rtomb.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32rtomb.Tpo $(DEPDIR)/libgnu_a-c32rtomb.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32rtomb.c' object='libgnu_a-c32rtomb.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32rtomb.o `test -f 'c32rtomb.c' || echo '$(srcdir)/'`c32rtomb.c
+
+libgnu_a-c32rtomb.obj: c32rtomb.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32rtomb.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32rtomb.Tpo -c -o libgnu_a-c32rtomb.obj `if test -f 'c32rtomb.c'; then $(CYGPATH_W) 'c32rtomb.c'; else $(CYGPATH_W) '$(srcdir)/c32rtomb.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32rtomb.Tpo $(DEPDIR)/libgnu_a-c32rtomb.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32rtomb.c' object='libgnu_a-c32rtomb.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32rtomb.obj `if test -f 'c32rtomb.c'; then $(CYGPATH_W) 'c32rtomb.c'; else $(CYGPATH_W) '$(srcdir)/c32rtomb.c'; fi`
+
+libgnu_a-c32tolower.o: c32tolower.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32tolower.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32tolower.Tpo -c -o libgnu_a-c32tolower.o `test -f 'c32tolower.c' || echo '$(srcdir)/'`c32tolower.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32tolower.Tpo $(DEPDIR)/libgnu_a-c32tolower.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32tolower.c' object='libgnu_a-c32tolower.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32tolower.o `test -f 'c32tolower.c' || echo '$(srcdir)/'`c32tolower.c
+
+libgnu_a-c32tolower.obj: c32tolower.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32tolower.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32tolower.Tpo -c -o libgnu_a-c32tolower.obj `if test -f 'c32tolower.c'; then $(CYGPATH_W) 'c32tolower.c'; else $(CYGPATH_W) '$(srcdir)/c32tolower.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32tolower.Tpo $(DEPDIR)/libgnu_a-c32tolower.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32tolower.c' object='libgnu_a-c32tolower.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32tolower.obj `if test -f 'c32tolower.c'; then $(CYGPATH_W) 'c32tolower.c'; else $(CYGPATH_W) '$(srcdir)/c32tolower.c'; fi`
+
+libgnu_a-c32toupper.o: c32toupper.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32toupper.o -MD -MP -MF $(DEPDIR)/libgnu_a-c32toupper.Tpo -c -o libgnu_a-c32toupper.o `test -f 'c32toupper.c' || echo '$(srcdir)/'`c32toupper.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32toupper.Tpo $(DEPDIR)/libgnu_a-c32toupper.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32toupper.c' object='libgnu_a-c32toupper.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32toupper.o `test -f 'c32toupper.c' || echo '$(srcdir)/'`c32toupper.c
+
+libgnu_a-c32toupper.obj: c32toupper.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-c32toupper.obj -MD -MP -MF $(DEPDIR)/libgnu_a-c32toupper.Tpo -c -o libgnu_a-c32toupper.obj `if test -f 'c32toupper.c'; then $(CYGPATH_W) 'c32toupper.c'; else $(CYGPATH_W) '$(srcdir)/c32toupper.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-c32toupper.Tpo $(DEPDIR)/libgnu_a-c32toupper.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='c32toupper.c' object='libgnu_a-c32toupper.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-c32toupper.obj `if test -f 'c32toupper.c'; then $(CYGPATH_W) 'c32toupper.c'; else $(CYGPATH_W) '$(srcdir)/c32toupper.c'; fi`
 
 malloc/libgnu_a-dynarray_at_failure.o: malloc/dynarray_at_failure.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT malloc/libgnu_a-dynarray_at_failure.o -MD -MP -MF malloc/$(DEPDIR)/libgnu_a-dynarray_at_failure.Tpo -c -o malloc/libgnu_a-dynarray_at_failure.o `test -f 'malloc/dynarray_at_failure.c' || echo '$(srcdir)/'`malloc/dynarray_at_failure.c
@@ -4391,6 +5046,20 @@ libgnu_a-kwset.obj: kwset.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-kwset.obj `if test -f 'kwset.c'; then $(CYGPATH_W) 'kwset.c'; else $(CYGPATH_W) '$(srcdir)/kwset.c'; fi`
 
+libgnu_a-localeinfo.o: localeinfo.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-localeinfo.o -MD -MP -MF $(DEPDIR)/libgnu_a-localeinfo.Tpo -c -o libgnu_a-localeinfo.o `test -f 'localeinfo.c' || echo '$(srcdir)/'`localeinfo.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-localeinfo.Tpo $(DEPDIR)/libgnu_a-localeinfo.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='localeinfo.c' object='libgnu_a-localeinfo.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-localeinfo.o `test -f 'localeinfo.c' || echo '$(srcdir)/'`localeinfo.c
+
+libgnu_a-localeinfo.obj: localeinfo.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-localeinfo.obj -MD -MP -MF $(DEPDIR)/libgnu_a-localeinfo.Tpo -c -o libgnu_a-localeinfo.obj `if test -f 'localeinfo.c'; then $(CYGPATH_W) 'localeinfo.c'; else $(CYGPATH_W) '$(srcdir)/localeinfo.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-localeinfo.Tpo $(DEPDIR)/libgnu_a-localeinfo.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='localeinfo.c' object='libgnu_a-localeinfo.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-localeinfo.obj `if test -f 'localeinfo.c'; then $(CYGPATH_W) 'localeinfo.c'; else $(CYGPATH_W) '$(srcdir)/localeinfo.c'; fi`
+
 libgnu_a-mbrlen.o: mbrlen.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-mbrlen.o -MD -MP -MF $(DEPDIR)/libgnu_a-mbrlen.Tpo -c -o libgnu_a-mbrlen.o `test -f 'mbrlen.c' || echo '$(srcdir)/'`mbrlen.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-mbrlen.Tpo $(DEPDIR)/libgnu_a-mbrlen.Po
@@ -4404,6 +5073,20 @@ libgnu_a-mbrlen.obj: mbrlen.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='mbrlen.c' object='libgnu_a-mbrlen.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-mbrlen.obj `if test -f 'mbrlen.c'; then $(CYGPATH_W) 'mbrlen.c'; else $(CYGPATH_W) '$(srcdir)/mbrlen.c'; fi`
+
+libgnu_a-mbrtoc32.o: mbrtoc32.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-mbrtoc32.o -MD -MP -MF $(DEPDIR)/libgnu_a-mbrtoc32.Tpo -c -o libgnu_a-mbrtoc32.o `test -f 'mbrtoc32.c' || echo '$(srcdir)/'`mbrtoc32.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-mbrtoc32.Tpo $(DEPDIR)/libgnu_a-mbrtoc32.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='mbrtoc32.c' object='libgnu_a-mbrtoc32.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-mbrtoc32.o `test -f 'mbrtoc32.c' || echo '$(srcdir)/'`mbrtoc32.c
+
+libgnu_a-mbrtoc32.obj: mbrtoc32.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-mbrtoc32.obj -MD -MP -MF $(DEPDIR)/libgnu_a-mbrtoc32.Tpo -c -o libgnu_a-mbrtoc32.obj `if test -f 'mbrtoc32.c'; then $(CYGPATH_W) 'mbrtoc32.c'; else $(CYGPATH_W) '$(srcdir)/mbrtoc32.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-mbrtoc32.Tpo $(DEPDIR)/libgnu_a-mbrtoc32.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='mbrtoc32.c' object='libgnu_a-mbrtoc32.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-mbrtoc32.obj `if test -f 'mbrtoc32.c'; then $(CYGPATH_W) 'mbrtoc32.c'; else $(CYGPATH_W) '$(srcdir)/mbrtoc32.c'; fi`
 
 libgnu_a-memchr2.o: memchr2.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-memchr2.o -MD -MP -MF $(DEPDIR)/libgnu_a-memchr2.Tpo -c -o libgnu_a-memchr2.o `test -f 'memchr2.c' || echo '$(srcdir)/'`memchr2.c
@@ -4475,20 +5158,6 @@ libgnu_a-stdlib.obj: stdlib.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-stdlib.obj `if test -f 'stdlib.c'; then $(CYGPATH_W) 'stdlib.c'; else $(CYGPATH_W) '$(srcdir)/stdlib.c'; fi`
 
-libgnu_a-string.o: string.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-string.o -MD -MP -MF $(DEPDIR)/libgnu_a-string.Tpo -c -o libgnu_a-string.o `test -f 'string.c' || echo '$(srcdir)/'`string.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-string.Tpo $(DEPDIR)/libgnu_a-string.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='string.c' object='libgnu_a-string.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-string.o `test -f 'string.c' || echo '$(srcdir)/'`string.c
-
-libgnu_a-string.obj: string.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-string.obj -MD -MP -MF $(DEPDIR)/libgnu_a-string.Tpo -c -o libgnu_a-string.obj `if test -f 'string.c'; then $(CYGPATH_W) 'string.c'; else $(CYGPATH_W) '$(srcdir)/string.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-string.Tpo $(DEPDIR)/libgnu_a-string.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='string.c' object='libgnu_a-string.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-string.obj `if test -f 'string.c'; then $(CYGPATH_W) 'string.c'; else $(CYGPATH_W) '$(srcdir)/string.c'; fi`
-
 libgnu_a-strncpy.o: strncpy.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-strncpy.o -MD -MP -MF $(DEPDIR)/libgnu_a-strncpy.Tpo -c -o libgnu_a-strncpy.o `test -f 'strncpy.c' || echo '$(srcdir)/'`strncpy.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-strncpy.Tpo $(DEPDIR)/libgnu_a-strncpy.Po
@@ -4502,6 +5171,202 @@ libgnu_a-strncpy.obj: strncpy.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='strncpy.c' object='libgnu_a-strncpy.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-strncpy.obj `if test -f 'strncpy.c'; then $(CYGPATH_W) 'strncpy.c'; else $(CYGPATH_W) '$(srcdir)/strncpy.c'; fi`
+
+unicase/libgnu_a-tolower.o: unicase/tolower.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unicase/libgnu_a-tolower.o -MD -MP -MF unicase/$(DEPDIR)/libgnu_a-tolower.Tpo -c -o unicase/libgnu_a-tolower.o `test -f 'unicase/tolower.c' || echo '$(srcdir)/'`unicase/tolower.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unicase/$(DEPDIR)/libgnu_a-tolower.Tpo unicase/$(DEPDIR)/libgnu_a-tolower.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unicase/tolower.c' object='unicase/libgnu_a-tolower.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unicase/libgnu_a-tolower.o `test -f 'unicase/tolower.c' || echo '$(srcdir)/'`unicase/tolower.c
+
+unicase/libgnu_a-tolower.obj: unicase/tolower.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unicase/libgnu_a-tolower.obj -MD -MP -MF unicase/$(DEPDIR)/libgnu_a-tolower.Tpo -c -o unicase/libgnu_a-tolower.obj `if test -f 'unicase/tolower.c'; then $(CYGPATH_W) 'unicase/tolower.c'; else $(CYGPATH_W) '$(srcdir)/unicase/tolower.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unicase/$(DEPDIR)/libgnu_a-tolower.Tpo unicase/$(DEPDIR)/libgnu_a-tolower.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unicase/tolower.c' object='unicase/libgnu_a-tolower.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unicase/libgnu_a-tolower.obj `if test -f 'unicase/tolower.c'; then $(CYGPATH_W) 'unicase/tolower.c'; else $(CYGPATH_W) '$(srcdir)/unicase/tolower.c'; fi`
+
+unicase/libgnu_a-toupper.o: unicase/toupper.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unicase/libgnu_a-toupper.o -MD -MP -MF unicase/$(DEPDIR)/libgnu_a-toupper.Tpo -c -o unicase/libgnu_a-toupper.o `test -f 'unicase/toupper.c' || echo '$(srcdir)/'`unicase/toupper.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unicase/$(DEPDIR)/libgnu_a-toupper.Tpo unicase/$(DEPDIR)/libgnu_a-toupper.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unicase/toupper.c' object='unicase/libgnu_a-toupper.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unicase/libgnu_a-toupper.o `test -f 'unicase/toupper.c' || echo '$(srcdir)/'`unicase/toupper.c
+
+unicase/libgnu_a-toupper.obj: unicase/toupper.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unicase/libgnu_a-toupper.obj -MD -MP -MF unicase/$(DEPDIR)/libgnu_a-toupper.Tpo -c -o unicase/libgnu_a-toupper.obj `if test -f 'unicase/toupper.c'; then $(CYGPATH_W) 'unicase/toupper.c'; else $(CYGPATH_W) '$(srcdir)/unicase/toupper.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unicase/$(DEPDIR)/libgnu_a-toupper.Tpo unicase/$(DEPDIR)/libgnu_a-toupper.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unicase/toupper.c' object='unicase/libgnu_a-toupper.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unicase/libgnu_a-toupper.obj `if test -f 'unicase/toupper.c'; then $(CYGPATH_W) 'unicase/toupper.c'; else $(CYGPATH_W) '$(srcdir)/unicase/toupper.c'; fi`
+
+unictype/libgnu_a-ctype_alnum.o: unictype/ctype_alnum.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_alnum.o -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_alnum.Tpo -c -o unictype/libgnu_a-ctype_alnum.o `test -f 'unictype/ctype_alnum.c' || echo '$(srcdir)/'`unictype/ctype_alnum.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_alnum.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_alnum.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_alnum.c' object='unictype/libgnu_a-ctype_alnum.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_alnum.o `test -f 'unictype/ctype_alnum.c' || echo '$(srcdir)/'`unictype/ctype_alnum.c
+
+unictype/libgnu_a-ctype_alnum.obj: unictype/ctype_alnum.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_alnum.obj -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_alnum.Tpo -c -o unictype/libgnu_a-ctype_alnum.obj `if test -f 'unictype/ctype_alnum.c'; then $(CYGPATH_W) 'unictype/ctype_alnum.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_alnum.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_alnum.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_alnum.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_alnum.c' object='unictype/libgnu_a-ctype_alnum.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_alnum.obj `if test -f 'unictype/ctype_alnum.c'; then $(CYGPATH_W) 'unictype/ctype_alnum.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_alnum.c'; fi`
+
+unictype/libgnu_a-ctype_alpha.o: unictype/ctype_alpha.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_alpha.o -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_alpha.Tpo -c -o unictype/libgnu_a-ctype_alpha.o `test -f 'unictype/ctype_alpha.c' || echo '$(srcdir)/'`unictype/ctype_alpha.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_alpha.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_alpha.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_alpha.c' object='unictype/libgnu_a-ctype_alpha.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_alpha.o `test -f 'unictype/ctype_alpha.c' || echo '$(srcdir)/'`unictype/ctype_alpha.c
+
+unictype/libgnu_a-ctype_alpha.obj: unictype/ctype_alpha.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_alpha.obj -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_alpha.Tpo -c -o unictype/libgnu_a-ctype_alpha.obj `if test -f 'unictype/ctype_alpha.c'; then $(CYGPATH_W) 'unictype/ctype_alpha.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_alpha.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_alpha.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_alpha.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_alpha.c' object='unictype/libgnu_a-ctype_alpha.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_alpha.obj `if test -f 'unictype/ctype_alpha.c'; then $(CYGPATH_W) 'unictype/ctype_alpha.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_alpha.c'; fi`
+
+unictype/libgnu_a-ctype_blank.o: unictype/ctype_blank.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_blank.o -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_blank.Tpo -c -o unictype/libgnu_a-ctype_blank.o `test -f 'unictype/ctype_blank.c' || echo '$(srcdir)/'`unictype/ctype_blank.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_blank.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_blank.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_blank.c' object='unictype/libgnu_a-ctype_blank.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_blank.o `test -f 'unictype/ctype_blank.c' || echo '$(srcdir)/'`unictype/ctype_blank.c
+
+unictype/libgnu_a-ctype_blank.obj: unictype/ctype_blank.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_blank.obj -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_blank.Tpo -c -o unictype/libgnu_a-ctype_blank.obj `if test -f 'unictype/ctype_blank.c'; then $(CYGPATH_W) 'unictype/ctype_blank.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_blank.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_blank.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_blank.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_blank.c' object='unictype/libgnu_a-ctype_blank.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_blank.obj `if test -f 'unictype/ctype_blank.c'; then $(CYGPATH_W) 'unictype/ctype_blank.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_blank.c'; fi`
+
+unictype/libgnu_a-ctype_cntrl.o: unictype/ctype_cntrl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_cntrl.o -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_cntrl.Tpo -c -o unictype/libgnu_a-ctype_cntrl.o `test -f 'unictype/ctype_cntrl.c' || echo '$(srcdir)/'`unictype/ctype_cntrl.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_cntrl.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_cntrl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_cntrl.c' object='unictype/libgnu_a-ctype_cntrl.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_cntrl.o `test -f 'unictype/ctype_cntrl.c' || echo '$(srcdir)/'`unictype/ctype_cntrl.c
+
+unictype/libgnu_a-ctype_cntrl.obj: unictype/ctype_cntrl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_cntrl.obj -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_cntrl.Tpo -c -o unictype/libgnu_a-ctype_cntrl.obj `if test -f 'unictype/ctype_cntrl.c'; then $(CYGPATH_W) 'unictype/ctype_cntrl.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_cntrl.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_cntrl.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_cntrl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_cntrl.c' object='unictype/libgnu_a-ctype_cntrl.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_cntrl.obj `if test -f 'unictype/ctype_cntrl.c'; then $(CYGPATH_W) 'unictype/ctype_cntrl.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_cntrl.c'; fi`
+
+unictype/libgnu_a-ctype_digit.o: unictype/ctype_digit.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_digit.o -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_digit.Tpo -c -o unictype/libgnu_a-ctype_digit.o `test -f 'unictype/ctype_digit.c' || echo '$(srcdir)/'`unictype/ctype_digit.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_digit.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_digit.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_digit.c' object='unictype/libgnu_a-ctype_digit.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_digit.o `test -f 'unictype/ctype_digit.c' || echo '$(srcdir)/'`unictype/ctype_digit.c
+
+unictype/libgnu_a-ctype_digit.obj: unictype/ctype_digit.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_digit.obj -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_digit.Tpo -c -o unictype/libgnu_a-ctype_digit.obj `if test -f 'unictype/ctype_digit.c'; then $(CYGPATH_W) 'unictype/ctype_digit.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_digit.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_digit.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_digit.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_digit.c' object='unictype/libgnu_a-ctype_digit.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_digit.obj `if test -f 'unictype/ctype_digit.c'; then $(CYGPATH_W) 'unictype/ctype_digit.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_digit.c'; fi`
+
+unictype/libgnu_a-ctype_graph.o: unictype/ctype_graph.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_graph.o -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_graph.Tpo -c -o unictype/libgnu_a-ctype_graph.o `test -f 'unictype/ctype_graph.c' || echo '$(srcdir)/'`unictype/ctype_graph.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_graph.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_graph.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_graph.c' object='unictype/libgnu_a-ctype_graph.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_graph.o `test -f 'unictype/ctype_graph.c' || echo '$(srcdir)/'`unictype/ctype_graph.c
+
+unictype/libgnu_a-ctype_graph.obj: unictype/ctype_graph.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_graph.obj -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_graph.Tpo -c -o unictype/libgnu_a-ctype_graph.obj `if test -f 'unictype/ctype_graph.c'; then $(CYGPATH_W) 'unictype/ctype_graph.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_graph.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_graph.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_graph.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_graph.c' object='unictype/libgnu_a-ctype_graph.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_graph.obj `if test -f 'unictype/ctype_graph.c'; then $(CYGPATH_W) 'unictype/ctype_graph.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_graph.c'; fi`
+
+unictype/libgnu_a-ctype_lower.o: unictype/ctype_lower.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_lower.o -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_lower.Tpo -c -o unictype/libgnu_a-ctype_lower.o `test -f 'unictype/ctype_lower.c' || echo '$(srcdir)/'`unictype/ctype_lower.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_lower.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_lower.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_lower.c' object='unictype/libgnu_a-ctype_lower.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_lower.o `test -f 'unictype/ctype_lower.c' || echo '$(srcdir)/'`unictype/ctype_lower.c
+
+unictype/libgnu_a-ctype_lower.obj: unictype/ctype_lower.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_lower.obj -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_lower.Tpo -c -o unictype/libgnu_a-ctype_lower.obj `if test -f 'unictype/ctype_lower.c'; then $(CYGPATH_W) 'unictype/ctype_lower.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_lower.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_lower.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_lower.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_lower.c' object='unictype/libgnu_a-ctype_lower.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_lower.obj `if test -f 'unictype/ctype_lower.c'; then $(CYGPATH_W) 'unictype/ctype_lower.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_lower.c'; fi`
+
+unictype/libgnu_a-ctype_print.o: unictype/ctype_print.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_print.o -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_print.Tpo -c -o unictype/libgnu_a-ctype_print.o `test -f 'unictype/ctype_print.c' || echo '$(srcdir)/'`unictype/ctype_print.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_print.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_print.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_print.c' object='unictype/libgnu_a-ctype_print.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_print.o `test -f 'unictype/ctype_print.c' || echo '$(srcdir)/'`unictype/ctype_print.c
+
+unictype/libgnu_a-ctype_print.obj: unictype/ctype_print.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_print.obj -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_print.Tpo -c -o unictype/libgnu_a-ctype_print.obj `if test -f 'unictype/ctype_print.c'; then $(CYGPATH_W) 'unictype/ctype_print.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_print.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_print.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_print.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_print.c' object='unictype/libgnu_a-ctype_print.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_print.obj `if test -f 'unictype/ctype_print.c'; then $(CYGPATH_W) 'unictype/ctype_print.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_print.c'; fi`
+
+unictype/libgnu_a-ctype_punct.o: unictype/ctype_punct.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_punct.o -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_punct.Tpo -c -o unictype/libgnu_a-ctype_punct.o `test -f 'unictype/ctype_punct.c' || echo '$(srcdir)/'`unictype/ctype_punct.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_punct.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_punct.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_punct.c' object='unictype/libgnu_a-ctype_punct.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_punct.o `test -f 'unictype/ctype_punct.c' || echo '$(srcdir)/'`unictype/ctype_punct.c
+
+unictype/libgnu_a-ctype_punct.obj: unictype/ctype_punct.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_punct.obj -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_punct.Tpo -c -o unictype/libgnu_a-ctype_punct.obj `if test -f 'unictype/ctype_punct.c'; then $(CYGPATH_W) 'unictype/ctype_punct.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_punct.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_punct.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_punct.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_punct.c' object='unictype/libgnu_a-ctype_punct.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_punct.obj `if test -f 'unictype/ctype_punct.c'; then $(CYGPATH_W) 'unictype/ctype_punct.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_punct.c'; fi`
+
+unictype/libgnu_a-ctype_space.o: unictype/ctype_space.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_space.o -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_space.Tpo -c -o unictype/libgnu_a-ctype_space.o `test -f 'unictype/ctype_space.c' || echo '$(srcdir)/'`unictype/ctype_space.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_space.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_space.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_space.c' object='unictype/libgnu_a-ctype_space.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_space.o `test -f 'unictype/ctype_space.c' || echo '$(srcdir)/'`unictype/ctype_space.c
+
+unictype/libgnu_a-ctype_space.obj: unictype/ctype_space.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_space.obj -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_space.Tpo -c -o unictype/libgnu_a-ctype_space.obj `if test -f 'unictype/ctype_space.c'; then $(CYGPATH_W) 'unictype/ctype_space.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_space.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_space.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_space.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_space.c' object='unictype/libgnu_a-ctype_space.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_space.obj `if test -f 'unictype/ctype_space.c'; then $(CYGPATH_W) 'unictype/ctype_space.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_space.c'; fi`
+
+unictype/libgnu_a-ctype_upper.o: unictype/ctype_upper.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_upper.o -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_upper.Tpo -c -o unictype/libgnu_a-ctype_upper.o `test -f 'unictype/ctype_upper.c' || echo '$(srcdir)/'`unictype/ctype_upper.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_upper.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_upper.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_upper.c' object='unictype/libgnu_a-ctype_upper.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_upper.o `test -f 'unictype/ctype_upper.c' || echo '$(srcdir)/'`unictype/ctype_upper.c
+
+unictype/libgnu_a-ctype_upper.obj: unictype/ctype_upper.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_upper.obj -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_upper.Tpo -c -o unictype/libgnu_a-ctype_upper.obj `if test -f 'unictype/ctype_upper.c'; then $(CYGPATH_W) 'unictype/ctype_upper.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_upper.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_upper.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_upper.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_upper.c' object='unictype/libgnu_a-ctype_upper.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_upper.obj `if test -f 'unictype/ctype_upper.c'; then $(CYGPATH_W) 'unictype/ctype_upper.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_upper.c'; fi`
+
+unictype/libgnu_a-ctype_xdigit.o: unictype/ctype_xdigit.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_xdigit.o -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_xdigit.Tpo -c -o unictype/libgnu_a-ctype_xdigit.o `test -f 'unictype/ctype_xdigit.c' || echo '$(srcdir)/'`unictype/ctype_xdigit.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_xdigit.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_xdigit.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_xdigit.c' object='unictype/libgnu_a-ctype_xdigit.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_xdigit.o `test -f 'unictype/ctype_xdigit.c' || echo '$(srcdir)/'`unictype/ctype_xdigit.c
+
+unictype/libgnu_a-ctype_xdigit.obj: unictype/ctype_xdigit.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT unictype/libgnu_a-ctype_xdigit.obj -MD -MP -MF unictype/$(DEPDIR)/libgnu_a-ctype_xdigit.Tpo -c -o unictype/libgnu_a-ctype_xdigit.obj `if test -f 'unictype/ctype_xdigit.c'; then $(CYGPATH_W) 'unictype/ctype_xdigit.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_xdigit.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) unictype/$(DEPDIR)/libgnu_a-ctype_xdigit.Tpo unictype/$(DEPDIR)/libgnu_a-ctype_xdigit.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='unictype/ctype_xdigit.c' object='unictype/libgnu_a-ctype_xdigit.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o unictype/libgnu_a-ctype_xdigit.obj `if test -f 'unictype/ctype_xdigit.c'; then $(CYGPATH_W) 'unictype/ctype_xdigit.c'; else $(CYGPATH_W) '$(srcdir)/unictype/ctype_xdigit.c'; fi`
 
 libgnu_a-unistd.o: unistd.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-unistd.o -MD -MP -MF $(DEPDIR)/libgnu_a-unistd.Tpo -c -o libgnu_a-unistd.o `test -f 'unistd.c' || echo '$(srcdir)/'`unistd.c
@@ -4558,6 +5423,34 @@ malloc/libgnu_a-dynarray-skeleton.obj: malloc/dynarray-skeleton.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='malloc/dynarray-skeleton.c' object='malloc/libgnu_a-dynarray-skeleton.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o malloc/libgnu_a-dynarray-skeleton.obj `if test -f 'malloc/dynarray-skeleton.c'; then $(CYGPATH_W) 'malloc/dynarray-skeleton.c'; else $(CYGPATH_W) '$(srcdir)/malloc/dynarray-skeleton.c'; fi`
+
+libgnu_a-lc-charset-dispatch.o: lc-charset-dispatch.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-lc-charset-dispatch.o -MD -MP -MF $(DEPDIR)/libgnu_a-lc-charset-dispatch.Tpo -c -o libgnu_a-lc-charset-dispatch.o `test -f 'lc-charset-dispatch.c' || echo '$(srcdir)/'`lc-charset-dispatch.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-lc-charset-dispatch.Tpo $(DEPDIR)/libgnu_a-lc-charset-dispatch.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='lc-charset-dispatch.c' object='libgnu_a-lc-charset-dispatch.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-lc-charset-dispatch.o `test -f 'lc-charset-dispatch.c' || echo '$(srcdir)/'`lc-charset-dispatch.c
+
+libgnu_a-lc-charset-dispatch.obj: lc-charset-dispatch.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-lc-charset-dispatch.obj -MD -MP -MF $(DEPDIR)/libgnu_a-lc-charset-dispatch.Tpo -c -o libgnu_a-lc-charset-dispatch.obj `if test -f 'lc-charset-dispatch.c'; then $(CYGPATH_W) 'lc-charset-dispatch.c'; else $(CYGPATH_W) '$(srcdir)/lc-charset-dispatch.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-lc-charset-dispatch.Tpo $(DEPDIR)/libgnu_a-lc-charset-dispatch.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='lc-charset-dispatch.c' object='libgnu_a-lc-charset-dispatch.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-lc-charset-dispatch.obj `if test -f 'lc-charset-dispatch.c'; then $(CYGPATH_W) 'lc-charset-dispatch.c'; else $(CYGPATH_W) '$(srcdir)/lc-charset-dispatch.c'; fi`
+
+libgnu_a-mbtowc-lock.o: mbtowc-lock.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-mbtowc-lock.o -MD -MP -MF $(DEPDIR)/libgnu_a-mbtowc-lock.Tpo -c -o libgnu_a-mbtowc-lock.o `test -f 'mbtowc-lock.c' || echo '$(srcdir)/'`mbtowc-lock.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-mbtowc-lock.Tpo $(DEPDIR)/libgnu_a-mbtowc-lock.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='mbtowc-lock.c' object='libgnu_a-mbtowc-lock.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-mbtowc-lock.o `test -f 'mbtowc-lock.c' || echo '$(srcdir)/'`mbtowc-lock.c
+
+libgnu_a-mbtowc-lock.obj: mbtowc-lock.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-mbtowc-lock.obj -MD -MP -MF $(DEPDIR)/libgnu_a-mbtowc-lock.Tpo -c -o libgnu_a-mbtowc-lock.obj `if test -f 'mbtowc-lock.c'; then $(CYGPATH_W) 'mbtowc-lock.c'; else $(CYGPATH_W) '$(srcdir)/mbtowc-lock.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgnu_a-mbtowc-lock.Tpo $(DEPDIR)/libgnu_a-mbtowc-lock.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='mbtowc-lock.c' object='libgnu_a-mbtowc-lock.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -c -o libgnu_a-mbtowc-lock.obj `if test -f 'mbtowc-lock.c'; then $(CYGPATH_W) 'mbtowc-lock.c'; else $(CYGPATH_W) '$(srcdir)/mbtowc-lock.c'; fi`
 
 libgnu_a-regcomp.o: regcomp.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgnu_a_CFLAGS) $(CFLAGS) -MT libgnu_a-regcomp.o -MD -MP -MF $(DEPDIR)/libgnu_a-regcomp.Tpo -c -o libgnu_a-regcomp.o `test -f 'regcomp.c' || echo '$(srcdir)/'`regcomp.c
@@ -4730,6 +5623,10 @@ distclean-generic:
 	-$(am__rm_f) $(DISTCLEANFILES)
 	-$(am__rm_f) malloc/$(DEPDIR)/$(am__dirstamp)
 	-$(am__rm_f) malloc/$(am__dirstamp)
+	-$(am__rm_f) unicase/$(DEPDIR)/$(am__dirstamp)
+	-$(am__rm_f) unicase/$(am__dirstamp)
+	-$(am__rm_f) unictype/$(DEPDIR)/$(am__dirstamp)
+	-$(am__rm_f) unictype/$(am__dirstamp)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
@@ -4742,8 +5639,30 @@ clean-am: clean-generic clean-libtool clean-noinstLIBRARIES \
 	mostlyclean-am
 
 distclean: distclean-am
+	-rm -f ./$(DEPDIR)/libgnu_a-btoc32.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32_apply_type_test.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32_get_type_test.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isalnum.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isalpha.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isblank.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32iscntrl.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isdigit.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isgraph.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32islower.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isprint.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32ispunct.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isspace.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isupper.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isxdigit.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32rtomb.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32tolower.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32toupper.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-kwset.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-lc-charset-dispatch.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-localeinfo.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-mbrlen.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-mbrtoc32.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-mbtowc-lock.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-memchr2.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-nl_langinfo-lock.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-nl_langinfo.Po
@@ -4752,7 +5671,6 @@ distclean: distclean-am
 	-rm -f ./$(DEPDIR)/libgnu_a-regex_internal.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-regexec.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-stdlib.Po
-	-rm -f ./$(DEPDIR)/libgnu_a-string.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-strncpy.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-unistd.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-wcrtomb.Po
@@ -4763,6 +5681,20 @@ distclean: distclean-am
 	-rm -f malloc/$(DEPDIR)/libgnu_a-dynarray_finalize.Po
 	-rm -f malloc/$(DEPDIR)/libgnu_a-dynarray_resize.Po
 	-rm -f malloc/$(DEPDIR)/libgnu_a-dynarray_resize_clear.Po
+	-rm -f unicase/$(DEPDIR)/libgnu_a-tolower.Po
+	-rm -f unicase/$(DEPDIR)/libgnu_a-toupper.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_alnum.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_alpha.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_blank.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_cntrl.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_digit.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_graph.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_lower.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_print.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_punct.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_space.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_upper.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_xdigit.Po
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-local distclean-tags
@@ -4808,8 +5740,30 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
+	-rm -f ./$(DEPDIR)/libgnu_a-btoc32.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32_apply_type_test.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32_get_type_test.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isalnum.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isalpha.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isblank.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32iscntrl.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isdigit.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isgraph.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32islower.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isprint.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32ispunct.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isspace.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isupper.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32isxdigit.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32rtomb.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32tolower.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-c32toupper.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-kwset.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-lc-charset-dispatch.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-localeinfo.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-mbrlen.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-mbrtoc32.Po
+	-rm -f ./$(DEPDIR)/libgnu_a-mbtowc-lock.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-memchr2.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-nl_langinfo-lock.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-nl_langinfo.Po
@@ -4818,7 +5772,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f ./$(DEPDIR)/libgnu_a-regex_internal.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-regexec.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-stdlib.Po
-	-rm -f ./$(DEPDIR)/libgnu_a-string.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-strncpy.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-unistd.Po
 	-rm -f ./$(DEPDIR)/libgnu_a-wcrtomb.Po
@@ -4829,6 +5782,20 @@ maintainer-clean: maintainer-clean-am
 	-rm -f malloc/$(DEPDIR)/libgnu_a-dynarray_finalize.Po
 	-rm -f malloc/$(DEPDIR)/libgnu_a-dynarray_resize.Po
 	-rm -f malloc/$(DEPDIR)/libgnu_a-dynarray_resize_clear.Po
+	-rm -f unicase/$(DEPDIR)/libgnu_a-tolower.Po
+	-rm -f unicase/$(DEPDIR)/libgnu_a-toupper.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_alnum.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_alpha.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_blank.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_cntrl.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_digit.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_graph.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_lower.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_print.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_punct.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_space.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_upper.Po
+	-rm -f unictype/$(DEPDIR)/libgnu_a-ctype_xdigit.Po
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic \
 	maintainer-clean-local
@@ -4908,6 +5875,22 @@ langinfo.h: langinfo.in.h $(top_builddir)/config.status $(CXXDEFS_H) $(WARN_ON_U
 	      -e '/definition of _GL_WARN_ON_USE/r $(WARN_ON_USE_H)' \
 	      $(srcdir)/langinfo.in.h > $@-t
 	$(AM_V_at)mv $@-t $@
+
+# We need the following in order to create <stdcountof.h> when the system
+# doesn't have one that works with the given compiler.
+@GL_GENERATE_STDCOUNTOF_H_TRUE@stdcountof.h: stdcountof.in.h $(top_builddir)/config.status
+@GL_GENERATE_STDCOUNTOF_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
+@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL_GRGL|g' \
+@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's/@''HAVE_STDCOUNTOF_H''@/$(HAVE_STDCOUNTOF_H)/g' \
+@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's/@''CXX_HAVE_STDCOUNTOF_H''@/$(CXX_HAVE_STDCOUNTOF_H)/g' \
+@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
+@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
+@GL_GENERATE_STDCOUNTOF_H_TRUE@	      -e 's|@''NEXT_STDCOUNTOF_H''@|$(NEXT_STDCOUNTOF_H)|g' \
+@GL_GENERATE_STDCOUNTOF_H_TRUE@	      $(srcdir)/stdcountof.in.h > $@-t
+@GL_GENERATE_STDCOUNTOF_H_TRUE@	$(AM_V_at)mv $@-t $@
+@GL_GENERATE_STDCOUNTOF_H_FALSE@stdcountof.h: $(top_builddir)/config.status
+@GL_GENERATE_STDCOUNTOF_H_FALSE@	rm -f $@
 
 # We need the following in order to create <stddef.h> when the system
 # doesn't have one that works with the given compiler.
@@ -5126,6 +6109,245 @@ stdlib.h: stdlib.in.h $(top_builddir)/config.status $(CXXDEFS_H) \
 	$(AM_V_at)rm -f $@-t1 $@-t2
 	$(AM_V_at)mv $@-t3 $@
 
+uchar.h: uchar.in.h $(top_builddir)/config.status $(CXXDEFS_H) $(ARG_NONNULL_H) $(WARN_ON_USE_H)
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	      -e 's|@''GUARD_PREFIX''@|GL_GRGL|g' \
+	      -e 's/@''HAVE_UCHAR_H''@/$(HAVE_UCHAR_H)/g' \
+	      -e 's/@''CXX_HAVE_UCHAR_H''@/$(CXX_HAVE_UCHAR_H)/g' \
+	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|@PRAGMA_SYSTEM_HEADER@|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@|@PRAGMA_COLUMNS@|g' \
+	      -e 's|@''NEXT_UCHAR_H''@|$(NEXT_UCHAR_H)|g' \
+	      -e 's|@''CXX_HAS_CHAR8_TYPE''@|$(CXX_HAS_CHAR8_TYPE)|g' \
+	      -e 's|@''CXX_HAS_UCHAR_TYPES''@|$(CXX_HAS_UCHAR_TYPES)|g' \
+	      -e 's|@''SMALL_WCHAR_T''@|$(SMALL_WCHAR_T)|g' \
+	      -e 's|@''GNULIBHEADERS_OVERRIDE_CHAR8_T''@|$(GNULIBHEADERS_OVERRIDE_CHAR8_T)|g' \
+	      -e 's|@''GNULIBHEADERS_OVERRIDE_CHAR16_T''@|$(GNULIBHEADERS_OVERRIDE_CHAR16_T)|g' \
+	      -e 's|@''GNULIBHEADERS_OVERRIDE_CHAR32_T''@|$(GNULIBHEADERS_OVERRIDE_CHAR32_T)|g' \
+	      -e 's/@''GNULIB_BTOC32''@/$(GL_GRGL_GNULIB_BTOC32)/g' \
+	      -e 's/@''GNULIB_BTOWC''@/$(GL_GRGL_GNULIB_BTOWC)/g' \
+	      -e 's/@''GNULIB_C32ISALNUM''@/$(GL_GRGL_GNULIB_C32ISALNUM)/g' \
+	      -e 's/@''GNULIB_C32ISALPHA''@/$(GL_GRGL_GNULIB_C32ISALPHA)/g' \
+	      -e 's/@''GNULIB_C32ISBLANK''@/$(GL_GRGL_GNULIB_C32ISBLANK)/g' \
+	      -e 's/@''GNULIB_C32ISCNTRL''@/$(GL_GRGL_GNULIB_C32ISCNTRL)/g' \
+	      -e 's/@''GNULIB_C32ISDIGIT''@/$(GL_GRGL_GNULIB_C32ISDIGIT)/g' \
+	      -e 's/@''GNULIB_C32ISGRAPH''@/$(GL_GRGL_GNULIB_C32ISGRAPH)/g' \
+	      -e 's/@''GNULIB_C32ISLOWER''@/$(GL_GRGL_GNULIB_C32ISLOWER)/g' \
+	      -e 's/@''GNULIB_C32ISPRINT''@/$(GL_GRGL_GNULIB_C32ISPRINT)/g' \
+	      -e 's/@''GNULIB_C32ISPUNCT''@/$(GL_GRGL_GNULIB_C32ISPUNCT)/g' \
+	      -e 's/@''GNULIB_C32ISSPACE''@/$(GL_GRGL_GNULIB_C32ISSPACE)/g' \
+	      -e 's/@''GNULIB_C32ISUPPER''@/$(GL_GRGL_GNULIB_C32ISUPPER)/g' \
+	      -e 's/@''GNULIB_C32ISXDIGIT''@/$(GL_GRGL_GNULIB_C32ISXDIGIT)/g' \
+	      -e 's/@''GNULIB_C32TOLOWER''@/$(GL_GRGL_GNULIB_C32TOLOWER)/g' \
+	      -e 's/@''GNULIB_C32TOUPPER''@/$(GL_GRGL_GNULIB_C32TOUPPER)/g' \
+	      -e 's/@''GNULIB_C32WIDTH''@/$(GL_GRGL_GNULIB_C32WIDTH)/g' \
+	      -e 's/@''GNULIB_C32RTOMB''@/$(GL_GRGL_GNULIB_C32RTOMB)/g' \
+	      -e 's/@''GNULIB_C32SNRTOMBS''@/$(GL_GRGL_GNULIB_C32SNRTOMBS)/g' \
+	      -e 's/@''GNULIB_C32SRTOMBS''@/$(GL_GRGL_GNULIB_C32SRTOMBS)/g' \
+	      -e 's/@''GNULIB_C32STOMBS''@/$(GL_GRGL_GNULIB_C32STOMBS)/g' \
+	      -e 's/@''GNULIB_C32SWIDTH''@/$(GL_GRGL_GNULIB_C32SWIDTH)/g' \
+	      -e 's/@''GNULIB_C32TOB''@/$(GL_GRGL_GNULIB_C32TOB)/g' \
+	      -e 's/@''GNULIB_C32_APPLY_MAPPING''@/$(GL_GRGL_GNULIB_C32_APPLY_MAPPING)/g' \
+	      -e 's/@''GNULIB_C32_APPLY_TYPE_TEST''@/$(GL_GRGL_GNULIB_C32_APPLY_TYPE_TEST)/g' \
+	      -e 's/@''GNULIB_C32_GET_MAPPING''@/$(GL_GRGL_GNULIB_C32_GET_MAPPING)/g' \
+	      -e 's/@''GNULIB_C32_GET_TYPE_TEST''@/$(GL_GRGL_GNULIB_C32_GET_TYPE_TEST)/g' \
+	      -e 's/@''GNULIB_ISWCTYPE''@/$(GL_GRGL_GNULIB_ISWCTYPE)/g' \
+	      -e 's/@''GNULIB_ISWDIGIT''@/$(GL_GRGL_GNULIB_ISWDIGIT)/g' \
+	      -e 's/@''GNULIB_ISWXDIGIT''@/$(GL_GRGL_GNULIB_ISWXDIGIT)/g' \
+	      -e 's/@''GNULIB_MBRTOC16''@/$(GL_GRGL_GNULIB_MBRTOC16)/g' \
+	      -e 's/@''GNULIB_MBRTOC32''@/$(GL_GRGL_GNULIB_MBRTOC32)/g' \
+	      -e 's/@''GNULIB_MBSNRTOC32S''@/$(GL_GRGL_GNULIB_MBSNRTOC32S)/g' \
+	      -e 's/@''GNULIB_MBSNRTOWCS''@/$(GL_GRGL_GNULIB_MBSNRTOWCS)/g' \
+	      -e 's/@''GNULIB_MBSRTOC32S''@/$(GL_GRGL_GNULIB_MBSRTOC32S)/g' \
+	      -e 's/@''GNULIB_MBSRTOWCS''@/$(GL_GRGL_GNULIB_MBSRTOWCS)/g' \
+	      -e 's/@''GNULIB_MBSTOC32S''@/$(GL_GRGL_GNULIB_MBSTOC32S)/g' \
+	      -e 's/@''GNULIB_TOWCTRANS''@/$(GL_GRGL_GNULIB_TOWCTRANS)/g' \
+	      -e 's/@''GNULIB_WCSNRTOMBS''@/$(GL_GRGL_GNULIB_WCSNRTOMBS)/g' \
+	      -e 's/@''GNULIB_WCSRTOMBS''@/$(GL_GRGL_GNULIB_WCSRTOMBS)/g' \
+	      -e 's/@''GNULIB_WCSWIDTH''@/$(GL_GRGL_GNULIB_WCSWIDTH)/g' \
+	      -e 's/@''GNULIB_WCTOB''@/$(GL_GRGL_GNULIB_WCTOB)/g' \
+	      -e 's/@''GNULIB_WCTRANS''@/$(GL_GRGL_GNULIB_WCTRANS)/g' \
+	      -e 's/@''GNULIB_WCTYPE''@/$(GL_GRGL_GNULIB_WCTYPE)/g' \
+	      -e 's/@''GNULIB_WCWIDTH''@/$(GL_GRGL_GNULIB_WCWIDTH)/g' \
+	      -e 's|@''HAVE_C32RTOMB''@|$(HAVE_C32RTOMB)|g' \
+	      -e 's|@''HAVE_MBRTOC16''@|$(HAVE_MBRTOC16)|g' \
+	      -e 's|@''HAVE_MBRTOC32''@|$(HAVE_MBRTOC32)|g' \
+	      -e 's|@''REPLACE_C32RTOMB''@|$(REPLACE_C32RTOMB)|g' \
+	      -e 's|@''REPLACE_MBRTOC16''@|$(REPLACE_MBRTOC16)|g' \
+	      -e 's|@''REPLACE_MBRTOC32''@|$(REPLACE_MBRTOC32)|g' \
+	      -e '/definitions of _GL_FUNCDECL_RPL/r $(CXXDEFS_H)' \
+	      -e '/definition of _GL_ARG_NONNULL/r $(ARG_NONNULL_H)' \
+	      -e '/definition of _GL_WARN_ON_USE/r $(WARN_ON_USE_H)' \
+	      $(srcdir)/uchar.in.h > $@-t
+	$(AM_V_at)mv $@-t $@
+
+unicase.h: unicase.in.h
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	      -e 's|@''HAVE_UNISTRING_WOE32DLL_H''@|$(HAVE_UNISTRING_WOE32DLL_H)|g' \
+	      -e 's/@''GNULIB_UNICASE_EMPTY_PREFIX_CONTEXT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICASE_EMPTY_PREFIX_CONTEXT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICASE_EMPTY_SUFFIX_CONTEXT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICASE_EMPTY_SUFFIX_CONTEXT_DLL_VARIABLE)/g' \
+	      $(srcdir)/unicase.in.h > $@-t
+	$(AM_V_at)mv $@-t $@
+
+unictype.h: unictype.in.h
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	      -e 's|@''HAVE_UNISTRING_WOE32DLL_H''@|$(HAVE_UNISTRING_WOE32DLL_H)|g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_L_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_L_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_LC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LC_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_LU_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LU_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_LL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LL_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_LT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_LM_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LM_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_LO_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_LO_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_M_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_M_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_MN_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_MN_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_MC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_MC_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_ME_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ME_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_N_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_N_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_ND_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ND_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_NL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_NL_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_NO_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_NO_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_P_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_P_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_PC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PC_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_PD_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PD_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_PS_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PS_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_PE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_PI_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PI_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_PF_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PF_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_PO_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_PO_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_S_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_S_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_SM_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SM_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_SC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SC_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_SK_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SK_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_SO_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_SO_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_Z_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_Z_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_ZS_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ZS_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_ZL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ZL_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_ZP_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_ZP_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_C_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_C_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_CC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CC_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_CF_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CF_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_CS_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CS_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_CO_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CO_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_CATEGORY_CN_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_CATEGORY_CN_DLL_VARIABLE)/g' \
+	      < $(srcdir)/unictype.in.h > $@-t1
+	$(AM_V_at)sed \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_WHITE_SPACE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_WHITE_SPACE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_ALPHABETIC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ALPHABETIC_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_OTHER_ALPHABETIC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_ALPHABETIC_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_NOT_A_CHARACTER_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_NOT_A_CHARACTER_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_OTHER_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_DEFAULT_IGNORABLE_CODE_POINT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_DEPRECATED_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DEPRECATED_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_LOGICAL_ORDER_EXCEPTION_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LOGICAL_ORDER_EXCEPTION_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_VARIATION_SELECTOR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_VARIATION_SELECTOR_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_PRIVATE_USE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PRIVATE_USE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_UNASSIGNED_CODE_VALUE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_UNASSIGNED_CODE_VALUE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_UPPERCASE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_UPPERCASE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_OTHER_UPPERCASE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_UPPERCASE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_LOWERCASE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LOWERCASE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_OTHER_LOWERCASE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_LOWERCASE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_TITLECASE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_TITLECASE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_CASED_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CASED_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_CASE_IGNORABLE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CASE_IGNORABLE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_LOWERCASED_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_LOWERCASED_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_UPPERCASED_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_UPPERCASED_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_TITLECASED_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_TITLECASED_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEFOLDED_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEFOLDED_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEMAPPED_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CHANGES_WHEN_CASEMAPPED_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_SOFT_DOTTED_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_SOFT_DOTTED_DLL_VARIABLE)/g' \
+	      < $@-t1 > $@-t2
+	$(AM_V_at)sed \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_ID_START_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_START_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_OTHER_ID_START_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_ID_START_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_ID_CONTINUE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_CONTINUE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_OTHER_ID_CONTINUE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_ID_CONTINUE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_XID_START_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_XID_START_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_XID_CONTINUE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_XID_CONTINUE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_START_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_START_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_CONTINUE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ID_COMPAT_MATH_CONTINUE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_PATTERN_WHITE_SPACE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PATTERN_WHITE_SPACE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_PATTERN_SYNTAX_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PATTERN_SYNTAX_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_JOIN_CONTROL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_JOIN_CONTROL_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_GRAPHEME_BASE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_BASE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_GRAPHEME_EXTEND_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_EXTEND_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_OTHER_GRAPHEME_EXTEND_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_GRAPHEME_EXTEND_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_GRAPHEME_LINK_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_GRAPHEME_LINK_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_MODIFIER_COMBINING_MARK_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_MODIFIER_COMBINING_MARK_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_CONTROL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_CONTROL_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_LEFT_TO_RIGHT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_LEFT_TO_RIGHT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_HEBREW_RIGHT_TO_LEFT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_HEBREW_RIGHT_TO_LEFT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_RIGHT_TO_LEFT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_RIGHT_TO_LEFT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_EUROPEAN_DIGIT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUROPEAN_DIGIT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_SEPARATOR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_SEPARATOR_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_TERMINATOR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EUR_NUM_TERMINATOR_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_DIGIT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_ARABIC_DIGIT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_COMMON_SEPARATOR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_COMMON_SEPARATOR_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_BLOCK_SEPARATOR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_BLOCK_SEPARATOR_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_SEGMENT_SEPARATOR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_SEGMENT_SEPARATOR_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_WHITESPACE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_WHITESPACE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_NON_SPACING_MARK_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_NON_SPACING_MARK_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_BOUNDARY_NEUTRAL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_BOUNDARY_NEUTRAL_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_PDF_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_PDF_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_EMBEDDING_OR_OVERRIDE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_EMBEDDING_OR_OVERRIDE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_BIDI_OTHER_NEUTRAL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_BIDI_OTHER_NEUTRAL_DLL_VARIABLE)/g' \
+	      < $@-t2 > $@-t3
+	$(AM_V_at)sed \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_HEX_DIGIT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_HEX_DIGIT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_ASCII_HEX_DIGIT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ASCII_HEX_DIGIT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_IDEOGRAPHIC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDEOGRAPHIC_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_UNIFIED_IDEOGRAPH_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_UNIFIED_IDEOGRAPH_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_RADICAL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_RADICAL_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_IDS_UNARY_OPERATOR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDS_UNARY_OPERATOR_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_IDS_BINARY_OPERATOR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDS_BINARY_OPERATOR_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_IDS_TRINARY_OPERATOR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IDS_TRINARY_OPERATOR_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_EMOJI_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_EMOJI_PRESENTATION_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_PRESENTATION_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_BASE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_MODIFIER_BASE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_EMOJI_COMPONENT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EMOJI_COMPONENT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_EXTENDED_PICTOGRAPHIC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EXTENDED_PICTOGRAPHIC_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_ZERO_WIDTH_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ZERO_WIDTH_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_SPACE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_SPACE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_NON_BREAK_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_NON_BREAK_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_ISO_CONTROL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_ISO_CONTROL_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_FORMAT_CONTROL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_FORMAT_CONTROL_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_PREPENDED_CONCATENATION_MARK_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PREPENDED_CONCATENATION_MARK_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_DASH_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DASH_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_HYPHEN_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_HYPHEN_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_PUNCTUATION_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PUNCTUATION_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_LINE_SEPARATOR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LINE_SEPARATOR_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_PARAGRAPH_SEPARATOR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PARAGRAPH_SEPARATOR_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_QUOTATION_MARK_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_QUOTATION_MARK_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_SENTENCE_TERMINAL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_SENTENCE_TERMINAL_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_TERMINAL_PUNCTUATION_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_TERMINAL_PUNCTUATION_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_CURRENCY_SYMBOL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_CURRENCY_SYMBOL_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_MATH_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_MATH_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_OTHER_MATH_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_OTHER_MATH_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_PAIRED_PUNCTUATION_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_PAIRED_PUNCTUATION_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_LEFT_OF_PAIR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_LEFT_OF_PAIR_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_COMBINING_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_COMBINING_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_COMPOSITE_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_COMPOSITE_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_DECIMAL_DIGIT_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DECIMAL_DIGIT_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_NUMERIC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_NUMERIC_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_DIACRITIC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_DIACRITIC_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_EXTENDER_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_EXTENDER_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_IGNORABLE_CONTROL_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_IGNORABLE_CONTROL_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNICTYPE_PROPERTY_REGIONAL_INDICATOR_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNICTYPE_PROPERTY_REGIONAL_INDICATOR_DLL_VARIABLE)/g' \
+	      < $@-t3 > $@-t4
+	$(AM_V_at)rm -f $@-t1 $@-t2 $@-t3
+	$(AM_V_at)mv $@-t4 $@
+
+uninorm.h: uninorm.in.h
+	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	      -e 's|@''HAVE_UNISTRING_WOE32DLL_H''@|$(HAVE_UNISTRING_WOE32DLL_H)|g' \
+	      -e 's/@''GNULIB_UNINORM_NFD_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNINORM_NFD_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNINORM_NFC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNINORM_NFC_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNINORM_NFKD_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNINORM_NFKD_DLL_VARIABLE)/g' \
+	      -e 's/@''GNULIB_UNINORM_NFKC_DLL_VARIABLE''@/$(GL_GRGL_GNULIB_UNINORM_NFKC_DLL_VARIABLE)/g' \
+	      $(srcdir)/uninorm.in.h > $@-t
+	$(AM_V_at)mv $@-t $@
+
 # We need the following in order to create an empty placeholder for
 # <unistd.h> when the system doesn't have one.
 unistd.h: unistd.in.h $(top_builddir)/config.status $(CXXDEFS_H) $(ARG_NONNULL_H) $(WARN_ON_USE_H)
@@ -5335,6 +6557,10 @@ unistd.h: unistd.in.h $(top_builddir)/config.status $(CXXDEFS_H) $(ARG_NONNULL_H
 	      < $@-t3 > $@-t4
 	$(AM_V_at)rm -f $@-t1 $@-t2 $@-t3
 	$(AM_V_at)mv $@-t4 $@
+
+unitypes.h: unitypes.in.h
+	$(gl_V_at)$(SED_HEADER_TO_AT_t) $(srcdir)/unitypes.in.h
+	$(AM_V_at)mv $@-t $@
 
 # We need the following in order to create <wchar.h> when the system
 # version does not work standalone.

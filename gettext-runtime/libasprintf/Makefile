@@ -17,41 +17,41 @@
 
 
 am__is_gnu_make = { \
-  if test -z '$(MAKELEVEL)'; then \
+	if test -z '$(MAKELEVEL)'; then \
 	false; \
-  elif test -n '$(MAKE_HOST)'; then \
+	elif test -n '$(MAKE_HOST)'; then \
 	true; \
-  elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
+	elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then \
 	true; \
-  else \
+	else \
 	false; \
-  fi; \
+	fi; \
 }
 am__make_running_with_option = \
-  case $${target_option-} in \
+	case $${target_option-} in \
 	  ?) ;; \
 	  *) echo "am__make_running_with_option: internal error: invalid" \
 	          "target option '$${target_option-}' specified" >&2; \
 	     exit 1;; \
-  esac; \
-  has_opt=no; \
-  sane_makeflags=$$MAKEFLAGS; \
-  if $(am__is_gnu_make); then \
+	esac; \
+	has_opt=no; \
+	sane_makeflags=$$MAKEFLAGS; \
+	if $(am__is_gnu_make); then \
 	sane_makeflags=$$MFLAGS; \
-  else \
+	else \
 	case $$MAKEFLAGS in \
 	  *\\[\ \	]*) \
 	    bs=\\; \
 	    sane_makeflags=`printf '%s\n' "$$MAKEFLAGS" \
 	      | sed "s/$$bs$$bs[$$bs $$bs	]*//g"`;; \
 	esac; \
-  fi; \
-  skip_next=no; \
-  strip_trailopt () \
+	fi; \
+	skip_next=no; \
+	strip_trailopt () \
   { \
 	flg=`printf '%s\n' "$$flg" | sed "s/$$1.*$$//"`; \
   }; \
-  for flg in $$sane_makeflags; do \
+	for flg in $$sane_makeflags; do \
 	test $$skip_next = yes && { skip_next=no; continue; }; \
 	case $$flg in \
 	  *=*|--*) continue;; \
@@ -67,8 +67,8 @@ am__make_running_with_option = \
 	case $$flg in \
 	  *$$target_option*) has_opt=yes; break;; \
 	esac; \
-  done; \
-  test $$has_opt = yes
+	done; \
+	test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
 am__rm_f = rm -f $(am__rm_f_notfound)
@@ -135,23 +135,23 @@ am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
 	$(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
 	*) f=$$p;; \
-  esac;
+	esac;
 am__strip_dir = f=`echo $$p | sed -e 's|^.*/||'`;
 am__install_max = 40
 am__nobase_strip_setup = \
-  srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
+	srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
 am__nobase_strip = \
-  for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
+	for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
 am__nobase_list = $(am__nobase_strip_setup); \
-  for p in $$list; do echo "$$p $$p"; done | \
-  sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
-  $(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
+	for p in $$list; do echo "$$p $$p"; done | \
+	sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
+	$(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
 	if (++n[$$2] == $(am__install_max)) \
 	  { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
 	END { for (dir in files) print dir, files[dir] }'
 am__base_list = \
-  sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
-  sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+	sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
+	sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 am__uninstall_files_from_dir = { \
   { test ! -d "$$dir" && test ! -f "$$dir" && test ! -r "$$dir"; } \
   || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
@@ -274,17 +274,17 @@ RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	installdirs-recursive pdf-recursive ps-recursive \
 	tags-recursive uninstall-recursive
 am__can_run_installinfo = \
-  case $$AM_UPDATE_INFO_DIR in \
+	case $$AM_UPDATE_INFO_DIR in \
 	n|no|NO) false;; \
 	*) (install-info --version) >/dev/null 2>&1;; \
-  esac
+	esac
 HEADERS = $(include_HEADERS)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
-  distclean-recursive maintainer-clean-recursive
+	distclean-recursive maintainer-clean-recursive
 am__recursive_targets = \
-  $(RECURSIVE_TARGETS) \
-  $(RECURSIVE_CLEAN_TARGETS) \
-  $(am__extra_recursive_targets)
+	$(RECURSIVE_TARGETS) \
+	$(RECURSIVE_CLEAN_TARGETS) \
+	$(am__extra_recursive_targets)
 AM_RECURSIVE_TARGETS = $(am__recursive_targets:-recursive=) TAGS CTAGS \
 	cscope distdir distdir-am dist dist-all distcheck
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP) \
@@ -293,18 +293,18 @@ am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP) \
 # and print each of them once, without duplicates.  Input order is
 # *not* preserved.
 am__uniquify_input = $(AWK) '\
-  BEGIN { nonempty = 0; } \
+	BEGIN { nonempty = 0; } \
   { items[$$0] = 1; nonempty = 1; } \
-  END { if (nonempty) { for (i in items) print i; }; } \
+	END { if (nonempty) { for (i in items) print i; }; } \
 '
 # Make sure the list of sources is unique.  This is necessary because,
 # e.g., the same source file might be shared among _SOURCES variables
 # for different programs/libraries.
 am__define_uniq_tagged_files = \
-  list='$(am__tagged_files)'; \
-  unique=`for i in $$list; do \
+	list='$(am__tagged_files)'; \
+	unique=`for i in $$list; do \
 	if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
-  done | $(am__uniquify_input)`
+	done | $(am__uniquify_input)`
 DIST_SUBDIRS = $(SUBDIRS)
 am__DIST_COMMON = $(autosprintf_TEXINFOS) $(srcdir)/Makefile.in \
 	$(srcdir)/config.h.in $(top_srcdir)/../../build-aux/compile \
@@ -327,19 +327,19 @@ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
 am__remove_distdir = \
-  if test -d "$(distdir)"; then \
+	if test -d "$(distdir)"; then \
 	find "$(distdir)" -type d ! -perm -700 -exec chmod u+rwx {} ';' \
 	  ; rm -rf "$(distdir)" \
 	  || { sleep 5 && rm -rf "$(distdir)"; }; \
-  else :; fi
+	else :; fi
 am__post_remove_distdir = $(am__remove_distdir)
 am__relativize = \
-  dir0=`pwd`; \
-  sed_first='s,^\([^/]*\)/.*$$,\1,'; \
-  sed_rest='s,^[^/]*/*,,'; \
-  sed_last='s,^.*/\([^/]*\)$$,\1,'; \
-  sed_butlast='s,/*[^/]*$$,,'; \
-  while test -n "$$dir1"; do \
+	dir0=`pwd`; \
+	sed_first='s,^\([^/]*\)/.*$$,\1,'; \
+	sed_rest='s,^[^/]*/*,,'; \
+	sed_last='s,^.*/\([^/]*\)$$,\1,'; \
+	sed_butlast='s,/*[^/]*$$,,'; \
+	while test -n "$$dir1"; do \
 	first=`echo "$$dir1" | sed -e "$$sed_first"`; \
 	if test "$$first" != "."; then \
 	  if test "$$first" = ".."; then \
@@ -356,8 +356,8 @@ am__relativize = \
 	  fi; \
 	fi; \
 	dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
-  done; \
-  reldir="$$dir2"
+	done; \
+	reldir="$$dir2"
 DIST_ARCHIVES = $(distdir).tar.gz
 GZIP_ENV = -9
 DIST_TARGETS = dist-gzip
@@ -367,9 +367,9 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = \
-  find . \( -type f -a \! \
+	find . \( -type f -a \! \
 	        \( -name .nfs* -o -name .smb* -o -name .__afs* \) \) -print
-ACLOCAL = /Users/sedwards/gtk/bin/aclocal -I /Users/sedwards/gtk/share/aclocal
+ACLOCAL = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' aclocal-1.18
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
@@ -381,7 +381,7 @@ AUTOMAKE = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' a
 AWK = awk
 CC = gcc
 CCDEPMODE = depmode=none
-CFLAGS = -include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h" -g -O2
+CFLAGS = -g -O2
 CPP = gcc -E
 CPPFLAGS = 
 CSCOPE = cscope
@@ -562,14 +562,14 @@ include_HEADERS = autosprintf.h
 lib_LTLIBRARIES = libasprintf.la
 noinst_LTLIBRARIES = 
 libasprintf_la_SOURCES = \
-  lib-asprintf.h lib-asprintf.c \
-  autosprintf.h autosprintf.cc
+	lib-asprintf.h lib-asprintf.c \
+	autosprintf.h autosprintf.cc
 
 
 # Sources used only on platforms lacking vasprintf().
 lib_asprintf_EXTRASOURCES = \
-  asnprintf.c \
-  vasprintf.h vasprintf.c asprintf.c
+	asnprintf.c \
+	vasprintf.h vasprintf.c asprintf.c
 
 
 # Limit the set of exported symbols, on those platforms where libtool supports it.
@@ -1508,9 +1508,9 @@ lib-asprintf.lo: $(lib_asprintf_EXTRASOURCES)
 #	  "-DPACKAGE_VERSION_MINOR="`echo '$(VERSION)' | sed -n -e "$$sed_extract_minor"` \
 #	  "-DPACKAGE_VERSION_SUBMINOR="`echo '$(VERSION)' | sed -n -e "$$sed_extract_subminor"` \
 #	  -i $(srcdir)/libasprintf.rc -o libasprintf.res.lo --output-format=coff
-libasprintf.la: $(libasprintf_la_OBJECTS) $(libasprintf_la_DEPENDENCIES) 
-	$(AM_V_GEN)$(CXXLINK) -rpath $(libdir) $(libasprintf_la_LDFLAGS) $(libasprintf_la_OBJECTS) $(libasprintf_la_LIBADD)  $(LIBS) || \
-	$(LINK) -rpath $(libdir) $(libasprintf_la_LDFLAGS) $(libasprintf_la_OBJECTS) $(libasprintf_la_LIBADD)  $(LIBS)
+libasprintf.la: $(libasprintf_la_OBJECTS) $(libasprintf_la_DEPENDENCIES) libgnu.la
+	$(AM_V_GEN)$(CXXLINK) -rpath $(libdir) $(libasprintf_la_LDFLAGS) $(libasprintf_la_OBJECTS) $(libasprintf_la_LIBADD) libgnu.la $(LIBS) || \
+	$(LINK) -rpath $(libdir) $(libasprintf_la_LDFLAGS) $(libasprintf_la_OBJECTS) $(libasprintf_la_LIBADD) libgnu.la $(LIBS)
 
 # Clean up after Solaris cc.
 clean-local:

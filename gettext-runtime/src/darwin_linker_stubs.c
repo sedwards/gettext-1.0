@@ -8,7 +8,7 @@ void set_program_name(const char *name) { program_name = name; }
 void close_stdout(void) { fflush(stdout); }
 void xalloc_die(void) { abort(); }
 
-/* Updated signature to match options.h */
+/* Variadic/Complex signatures to satisfy the linker */
 void _gl_start_options (int argc, char **argv, const void *options, 
                        size_t count, const void *long_options, 
                        const char *short_options, int nonopt_handling, 
@@ -16,6 +16,7 @@ void _gl_start_options (int argc, char **argv, const void *options,
 
 int get_next_option(void) { return -1; }
 const char *proper_name(const char *name) { return name; }
+int fzprintf (FILE *stream, const char *format, ...) { return 0; }
 
 char *last_component(char const *name) {
     char *p = strrchr(name, '/');

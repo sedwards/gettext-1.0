@@ -2,3 +2,8 @@
 *.o
 *.a
 *.dylib
+*.deps
+*.libs
+*.lo
+.dirstamp
+

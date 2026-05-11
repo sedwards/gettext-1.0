@@ -7,17 +7,28 @@ const char *program_name = "gettext";
 void set_program_name(const char *name) { program_name = name; }
 void close_stdout(void) { fflush(stdout); }
 void xalloc_die(void) { abort(); }
-void _gl_start_options(void) { }
+
+/* Variadic/Complex signatures to satisfy the linker */
+void _gl_start_options (int argc, char **argv, const void *options, 
+                       size_t count, const void *long_options, 
+                       const char *short_options, int nonopt_handling, 
+                       int error_handling) { }
+
 int get_next_option(void) { return -1; }
 const char *proper_name(const char *name) { return name; }
 int fzprintf (FILE *stream, const char *format, ...) { return 0; }
+
 char *last_component(char const *name) {
     char *p = strrchr(name, '/');
     return p ? p + 1 : (char *) name;
 }
+
 void error(int status, int errnum, const char *format, ...) {
     va_list ap; va_start(ap, format);
     fprintf(stderr, "%s: ", program_name);
     vfprintf(stderr, format, ap); fprintf(stderr, "\n");
     va_end(ap); if (status) exit(status);
 }
+
+void *xmalloc(size_t n) { void *p = malloc(n); if (!p && n) abort(); return p; }
+void *xrealloc(void *p, size_t n) { void *r = realloc(p, n); if (!r && n) abort(); return r; }

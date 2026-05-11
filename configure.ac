@@ -35,6 +35,18 @@ dnl   the tarball is unpacked by root.
 am__tar='{ find "$$tardir" -type d | LC_ALL=C sort; find "$$tardir" ! -type d -printf "%f\\t%p\\n" | LC_ALL=C sort | LC_ALL=C cut -f2; } | ${AMTAR} chf - --no-recursion --files-from=- --format=ustar --owner=root --group=root'
 
 dnl Checks for programs.
+AC_PROG_CC
+gl_EARLY
+m4_pattern_allow([_LT_ENABLE_SHARED_DEFAULT])
+m4_pattern_allow([_LT_ENABLE_STATIC_DEFAULT])
+m4_pattern_allow([_LT_ENABLE_FAST_INSTALL_DEFAULT])
+m4_pattern_allow([_LT_WITH_AIX_SONAME_DEFAULT])
+m4_ifndef([_LT_ENABLE_SHARED_DEFAULT], [m4_define([_LT_ENABLE_SHARED_DEFAULT], [yes])])
+m4_ifndef([_LT_ENABLE_STATIC_DEFAULT], [m4_define([_LT_ENABLE_STATIC_DEFAULT], [yes])])
+m4_ifndef([_LT_ENABLE_FAST_INSTALL_DEFAULT], [m4_define([_LT_ENABLE_FAST_INSTALL_DEFAULT], [yes])])
+m4_ifndef([_LT_WITH_AIX_SONAME_DEFAULT], [m4_define([_LT_WITH_AIX_SONAME_DEFAULT], [maybe])])
+LT_PREREQ([2.4.2])
+LT_INIT([win32-dll])
 
 dnl Checks for libraries.
 
@@ -43,6 +55,8 @@ dnl Checks for header files.
 dnl Checks for typedefs, structures, and compiler characteristics.
 
 dnl Checks for library functions.
+
+gl_INIT
 
 AC_CONFIG_SUBDIRS([gettext-runtime libtextstyle gettext-tools])
 

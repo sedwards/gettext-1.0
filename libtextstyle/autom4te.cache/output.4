@@ -2564,6 +2564,8 @@ HAVE_ALLOCA_H
 ALLOCA
 GL_COND_LIBTOOL_FALSE
 GL_COND_LIBTOOL_TRUE
+INCLUDED_LIBXML_FALSE
+INCLUDED_LIBXML_TRUE
 WOE32_FALSE
 WOE32_TRUE
 RC
@@ -18362,6 +18364,14 @@ esac
 else
   WOE32_TRUE='#'
   WOE32_FALSE=
+fi
+
+ if false; then
+  INCLUDED_LIBXML_TRUE=
+  INCLUDED_LIBXML_FALSE='#'
+else
+  INCLUDED_LIBXML_TRUE='#'
+  INCLUDED_LIBXML_FALSE=
 fi
 
 
@@ -55620,6 +55630,10 @@ fi
 
 if test -z "${WOE32_TRUE}" && test -z "${WOE32_FALSE}"; then
   as_fn_error $? "conditional \"WOE32\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${INCLUDED_LIBXML_TRUE}" && test -z "${INCLUDED_LIBXML_FALSE}"; then
+  as_fn_error $? "conditional \"INCLUDED_LIBXML\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${GL_COND_LIBTOOL_TRUE}" && test -z "${GL_COND_LIBTOOL_FALSE}"; then

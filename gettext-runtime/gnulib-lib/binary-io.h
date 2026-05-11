@@ -22,6 +22,12 @@
  #error "Please include config.h first."
 #endif
 
+#if defined(__clang__)
+#ifndef _GL_UNUSED
+#define _GL_UNUSED __attribute__((__unused__))
+#endif
+#endif
+
 /* For systems that distinguish between text and binary I/O.
    O_BINARY is guaranteed by the gnulib <fcntl.h>. */
 #include <fcntl.h>

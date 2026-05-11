@@ -18,6 +18,14 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.64])
 AC_INIT([gettext-runtime], [package], [bug-gettext@gnu.org])
+m4_pattern_allow([_LT_ENABLE_SHARED_DEFAULT])
+m4_pattern_allow([_LT_ENABLE_STATIC_DEFAULT])
+m4_pattern_allow([_LT_ENABLE_FAST_INSTALL_DEFAULT])
+m4_pattern_allow([_LT_WITH_AIX_SONAME_DEFAULT])
+m4_ifndef([_LT_ENABLE_SHARED_DEFAULT], [m4_define([_LT_ENABLE_SHARED_DEFAULT], [yes])])
+m4_ifndef([_LT_ENABLE_STATIC_DEFAULT], [m4_define([_LT_ENABLE_STATIC_DEFAULT], [yes])])
+m4_ifndef([_LT_ENABLE_FAST_INSTALL_DEFAULT], [m4_define([_LT_ENABLE_FAST_INSTALL_DEFAULT], [yes])])
+m4_ifndef([_LT_WITH_AIX_SONAME_DEFAULT], [m4_define([_LT_WITH_AIX_SONAME_DEFAULT], [maybe])])
 AC_CONFIG_SRCDIR([intl/dcigettext.c])
 AC_CONFIG_AUX_DIR([../build-aux])
 VERSION_NUMBER=`cd $srcdir/.. \

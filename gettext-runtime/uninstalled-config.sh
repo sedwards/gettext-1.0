@@ -60,9 +60,9 @@ fi
 if test no = yes; then
   if test 'yes' = yes; then
     # NB: This case is not supported on AIX and HP-UX.
-    LIBINTL="${relative_builddir}/intl/.libs/libintl.so -Wl,-rpath,${relative_builddir}/intl/.libs @LIBICONV@ -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices"
+    LIBINTL="${relative_builddir}/intl/.libs/libintl.so -Wl,-rpath,${relative_builddir}/intl/.libs  -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices"
   else
-    LIBINTL="${relative_builddir}/intl/.libs/libintl.a @LIBICONV@ -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices"
+    LIBINTL="${relative_builddir}/intl/.libs/libintl.a  -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices"
   fi
 else
   # The functionality is provided by libc.
@@ -73,7 +73,7 @@ fi
 # that ensures that the library that contains the *gettext() family of functions
 # gets found.
 if test no = yes; then
-  LTLIBINTL="${relative_builddir}/intl/libintl.la @LTLIBICONV@ -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices"
+  LTLIBINTL="${relative_builddir}/intl/libintl.la  -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices"
 else
   # The functionality is provided by libc.
   LTLIBINTL=
