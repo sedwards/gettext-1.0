@@ -504,7 +504,7 @@ CAN_PRINT_STACK_TRACE = @CAN_PRINT_STACK_TRACE@
 CATOBJEXT = 
 CC = gcc
 CCDEPMODE = depmode=none
-CFLAGS = -include /Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h -g -O2
+CFLAGS = -include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h" -g -O2
 CFLAG_VISIBILITY = 
 CLASSPATH = 
 CLASSPATH_SEPARATOR = :
@@ -1731,7 +1731,7 @@ LDFLAGS =
 LIBDL = @LIBDL@
 LIBGRT_LIBDEPS = @LIBGRT_LIBDEPS@
 LIBGRT_LTLIBDEPS = @LIBGRT_LTLIBDEPS@
-LIBICONV = @LIBICONV@
+LIBICONV = 
 LIBINTL = 
 LIBMULTITHREAD = @LIBMULTITHREAD@
 LIBOBJS = 
@@ -1762,7 +1762,7 @@ LOCALE_EN_UTF8 = @LOCALE_EN_UTF8@
 LOCALE_FR = @LOCALE_FR@
 LOCALE_JA = @LOCALE_JA@
 LOCALE_ZH_CN = @LOCALE_ZH_CN@
-LTLIBICONV = @LTLIBICONV@
+LTLIBICONV = 
 LTLIBINTL = 
 LTLIBMULTITHREAD = @LTLIBMULTITHREAD@
 LTLIBOBJS = 
@@ -2401,8 +2401,8 @@ libgrtsrc_a_SOURCES = \
 
 
 # Link dependencies.
-# Need @LTLIBICONV@ because striconv.c uses iconv().
-LDADD = libgrtsrc.a   @LTLIBICONV@ $(WOE32_LDADD)
+# Need  because striconv.c uses iconv().
+LDADD = libgrtsrc.a    $(WOE32_LDADD)
 
 # Specify installation directory, for --enable-relocatable.
 gettext_CFLAGS = -DINSTALLDIR=$(bindir_c_make)

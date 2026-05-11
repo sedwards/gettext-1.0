@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <string.h>
+
+const char *program_name = "gettext";
+void set_program_name(const char *name) { program_name = name; }
+void close_stdout(void) { fflush(stdout); }
+void xalloc_die(void) { abort(); }
+void _gl_start_options(void) { }
+int get_next_option(void) { return -1; }
+const char *proper_name(const char *name) { return name; }
+int fzprintf (FILE *stream, const char *format, ...) { return 0; }
+char *last_component(char const *name) {
+    char *p = strrchr(name, '/');
+    return p ? p + 1 : (char *) name;
+}
+void error(int status, int errnum, const char *format, ...) {
+    va_list ap; va_start(ap, format);
+    fprintf(stderr, "%s: ", program_name);
+    vfprintf(stderr, format, ap); fprintf(stderr, "\n");
+    va_end(ap); if (status) exit(status);
+}

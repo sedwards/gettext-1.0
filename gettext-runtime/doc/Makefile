@@ -169,7 +169,7 @@ BUILDMODULA2 = no
 CATOBJEXT = 
 CC = gcc
 CCDEPMODE = depmode=none
-CFLAGS = -include /Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h -g -O2
+CFLAGS = -include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h" -g -O2
 CLASSPATH = 
 CLASSPATH_SEPARATOR = :
 CONF_JAVAC = 

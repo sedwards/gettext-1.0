@@ -1,0 +1,30 @@
+# Attempt to further simplify the shim
+cat > darwin_shim.h <<EOF
+#ifndef DARWIN_SHIM_H
+#define DARWIN_SHIM_H
+#include <stddef.h>
+#include <stdio.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+    extern const char *program_name;
+    void set_program_name(const char *name);
+    void close_stdout(void);
+    void xalloc_die(void);
+    void _gl_start_options(void);
+    int get_next_option(void);
+    const char *proper_name(const char *name);
+    char *last_component(char const *name);
+    void error(int status, int errnum, const char *format, ...);
+    
+    /* Memory */
+    void *xmalloc(size_t n);
+    void *xrealloc(void *p, size_t n);
+#ifdef __cplusplus
+}
+#endif
+#define XNMALLOC(n, t) ((t *) xmalloc ((n) * sizeof (t)))
+#endif
+EOF
+
