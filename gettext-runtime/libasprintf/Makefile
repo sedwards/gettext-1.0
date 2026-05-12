@@ -381,7 +381,7 @@ AUTOMAKE = ${SHELL} '/Users/sedwards/gtk/source/gettext-1.0/build-aux/missing' a
 AWK = awk
 CC = gcc
 CCDEPMODE = depmode=none
-CFLAGS = -g -O2
+CFLAGS = -include /Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h -g -O2
 CPP = gcc -E
 CPPFLAGS = 
 CSCOPE = cscope

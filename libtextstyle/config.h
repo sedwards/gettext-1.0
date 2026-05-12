@@ -1,3 +1,7 @@
+#define xmalloc config_h_hidden_xmalloc
+#define xrealloc config_h_hidden_xrealloc
+#define xmalloc config_h_hidden_xmalloc
+#define xrealloc config_h_hidden_xrealloc
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
@@ -1521,3 +1525,9 @@ extern "C" {
 # include <crt_externs.h>
 # define environ (*_NSGetEnviron())
 #endif
+#undef xmalloc
+#undef xrealloc
+
+#undef xmalloc
+#undef xrealloc
+

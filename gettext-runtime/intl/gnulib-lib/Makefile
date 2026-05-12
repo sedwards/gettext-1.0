@@ -734,7 +734,7 @@ CAN_PRINT_STACK_TRACE = @CAN_PRINT_STACK_TRACE@
 CATOBJEXT = .gmo
 CC = gcc
 CCDEPMODE = depmode=none
-CFLAGS = -g -O2
+CFLAGS = -include /Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h -g -O2
 CFLAG_VISIBILITY = 
 CPP = gcc -E
 CPPFLAGS = 
