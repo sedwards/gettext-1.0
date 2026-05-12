@@ -30,8 +30,8 @@ Kernel configured for up to 10 processors.
 Processor type: arm64e (ARM64E)
 Processors active: 0 1 2 3 4 5 6 7 8 9
 Primary memory available: 16.00 gigabytes
-Default processor set: 621 tasks, 2313 threads, 10 processors
-Load average: 2.25, Mach factor: 7.74
+Default processor set: 633 tasks, 2343 threads, 10 processors
+Load average: 1.33, Mach factor: 8.66
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
@@ -1488,7 +1488,7 @@ configure:25307: checking for GNU gettext in libintl
 configure:25349: gcc -o conftest -g -O2  -I/Users/sedwards/gtk/include  conftest.c  -L/Users/sedwards/gtk/lib -lintl >&5
 Undefined symbols for architecture arm64:
   "__nl_expand_alias", referenced from:
-      _main in conftest-6c9781.o
+      _main in conftest-ce484d.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:25349: $? = 1
@@ -1588,7 +1588,7 @@ configure: failed program was:
 configure:25398: gcc -o conftest -g -O2  -I/Users/sedwards/gtk/include  conftest.c  -L/Users/sedwards/gtk/lib -lintl  -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices >&5
 Undefined symbols for architecture arm64:
   "__nl_expand_alias", referenced from:
-      _main in conftest-c8e0d6.o
+      _main in conftest-05a952.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:25398: $? = 1
@@ -2229,7 +2229,7 @@ configure:26588: checking for canonicalize_file_name
 configure:26588: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_canonicalize_file_name", referenced from:
-      _main in conftest-a0697b.o
+      _main in conftest-caa47a.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:26588: $? = 1
@@ -2350,7 +2350,7 @@ configure:26588: checking for _set_invalid_parameter_handler
 configure:26588: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "__set_invalid_parameter_handler", referenced from:
-      _main in conftest-a85b00.o
+      _main in conftest-ea3657.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:26588: $? = 1
@@ -2486,7 +2486,7 @@ configure:26588: checking for getlocalename_l
 configure:26588: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_getlocalename_l", referenced from:
-      _main in conftest-5fad9d.o
+      _main in conftest-60de5c.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:26588: $? = 1
@@ -2605,7 +2605,7 @@ configure:26588: checking for getexecname
 configure:26588: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_getexecname", referenced from:
-      _main in conftest-312290.o
+      _main in conftest-ac2ccb.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:26588: $? = 1
@@ -2728,7 +2728,7 @@ configure:26588: checking for mbslen
 configure:26588: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_mbslen", referenced from:
-      _main in conftest-719479.o
+      _main in conftest-a05a06.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:26588: $? = 1
@@ -2889,7 +2889,7 @@ configure:26588: checking for vasnprintf
 configure:26588: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_vasnprintf", referenced from:
-      _main in conftest-4de0aa.o
+      _main in conftest-a14f63.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:26588: $? = 1
@@ -3605,7 +3605,7 @@ configure:29703: checking for error
 configure:29703: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_error", referenced from:
-      _main in conftest-eef1c8.o
+      _main in conftest-30c4ab.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:29703: $? = 1
@@ -5499,7 +5499,7 @@ configure:35111: checking whether imported symbols can be declared weak
 configure:35138: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_xyzzy", referenced from:
-      _main in conftest-9a44ef.o
+      _main in conftest-91650f.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:35138: $? = 1
@@ -6092,11 +6092,11 @@ configure:36944: checking for iconv
 configure:36969: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_iconv", referenced from:
-      _main in conftest-2545e1.o
+      _main in conftest-0822a9.o
   "_iconv_close", referenced from:
-      _main in conftest-2545e1.o
+      _main in conftest-0822a9.o
   "_iconv_open", referenced from:
-      _main in conftest-2545e1.o
+      _main in conftest-0822a9.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:36969: $? = 1
@@ -14236,7 +14236,7 @@ configure:49197: checking for __fseterr
 configure:49197: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "___fseterr", referenced from:
-      _main in conftest-af4f96.o
+      _main in conftest-aa7a94.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:49197: $? = 1
@@ -15213,7 +15213,7 @@ conftest.c:294:6: note: 'mempcpy' is a builtin with type 'void *(void *, const v
 1 warning generated.
 Undefined symbols for architecture arm64:
   "_mempcpy", referenced from:
-      _main in conftest-33587b.o
+      _main in conftest-1918d6.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:54672: $? = 1
@@ -15532,7 +15532,7 @@ configure:54762: checking for memrchr
 configure:54762: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_memrchr", referenced from:
-      _main in conftest-929a86.o
+      _main in conftest-90cf74.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:54762: $? = 1
@@ -16524,7 +16524,7 @@ configure:55882: checking for rawmemchr
 configure:55882: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_rawmemchr", referenced from:
-      _main in conftest-956311.o
+      _main in conftest-31dae0.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:55882: $? = 1
@@ -16884,7 +16884,7 @@ configure:56381: checking for reallocarray
 configure:56381: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_reallocarray", referenced from:
-      _main in conftest-28a0bd.o
+      _main in conftest-fe9477.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:56381: $? = 1

@@ -710,7 +710,7 @@ BITSIZEOF_WINT_T =
 CAN_PRINT_STACK_TRACE = 0
 CC = gcc
 CCDEPMODE = depmode=none
-CFLAGS = -include /Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h -Wno-error $(GL_CFLAG_GNULIB_WARNINGS) -g -O2
+CFLAGS = -Wno-error $(GL_CFLAG_GNULIB_WARNINGS) -g -O2
 CFLAG_VISIBILITY = -fvisibility=hidden
 CPP = gcc -E
 CPPFLAGS = 

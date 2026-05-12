@@ -333,7 +333,7 @@ find . -name "*.in" -exec touch -t 202401010000 {} +
 touch -t 202401010000 configure aclocal.m4 config.h.in
 find . -name "Makefile.in" -exec touch {} +
 
-echo "--- [13/13] Shim to use system SDK everwhere we can
+echo "--- [13/13] Shim to use system SDK everwhere we can"
 echo "Fix all Makefiles"
 # Add this to your Master Porting Script to catch all unexpanded conditionals
 find . -name "Makefile" -exec sed -i '' 's/^@[A-Z0-9_]\{1,\}@//' {} +
@@ -399,8 +399,6 @@ echo "Stripping Makefile placeholders..."
 find . -name "Makefile" -exec sed -i '' 's/@[A-Z0-9_]\{1,\}_H@//g' {} +
 
 # Audit: Supposedly another Makefile fix
-sed -i '' 's/@[A-Z0-9_]\{1,\}_H@//g' Makefile
-
 sed -i '' 's/@[A-Z0-9_]\{1,\}_H@//g' Makefile
 
 echo "Master porting fixes and configuration applied. You can now run 'make -k'"

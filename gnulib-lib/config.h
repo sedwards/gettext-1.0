@@ -1796,9 +1796,3 @@ extern "C" {
 # include <crt_externs.h>
 # define environ (*_NSGetEnviron())
 #endif
-#undef xmalloc
-#undef xrealloc
-
-#undef xmalloc
-#undef xrealloc
-
