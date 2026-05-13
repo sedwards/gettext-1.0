@@ -29,6 +29,36 @@
 #include <sys/_types/_size_t.h>
 #include <sys/_types/_null.h>
 
+/* Primitives for Modern macOS SDK compilation stability */
+#ifndef __cplusplus
+# include <stdbool.h>
+#endif
+
+/* Global expansion fallbacks for un-substituted Gnulib parameters */
+#ifndef _GL_ATTRIBUTE_NODISCARD
+# define _GL_ATTRIBUTE_NODISCARD
+#endif
+#ifndef _GL_ATTRIBUTE_DEPRECATED
+# define _GL_ATTRIBUTE_DEPRECATED
+#endif
+#ifndef _GL_ATTRIBUTE_FALLTHROUGH
+# define _GL_ATTRIBUTE_FALLTHROUGH ((void)0)
+#endif
+#ifndef _GL_ATTRIBUTE_DEALLOC
+# define _GL_ATTRIBUTE_DEALLOC(f, g)
+#endif
+
+#ifndef _GL_CMP
+# define _GL_CMP(n1, n2) (((n1) > (n2)) - ((n1) < (n2)))
+#endif
+
+#ifndef LIBGETTEXTSRC_DLL_VARIABLE
+# define LIBGETTEXTSRC_DLL_VARIABLE
+#endif
+#ifndef LIBGETTEXTLIB_DLL_VARIABLE
+# define LIBGETTEXTLIB_DLL_VARIABLE
+#endif
+
 /* Complete circuit breaker for macOS FILE dependencies in _wchar.h */
 #ifndef __sFILE_defined
 struct __sFILE;
@@ -38,20 +68,19 @@ typedef struct __sFILE FILE;
 #define _FILE_DEFINED_
 #endif
 
-/* Native macOS SDK Base Layer Inclusions */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <wchar.h>
-#include <wctype.h>
+/* Native macOS SDK Base Layer Inclusions - Forced to bypass local stubs */
+#include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h"
+#include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdlib.h"
+#include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/string.h"
+#include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/ctype.h"
+#include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/wchar.h"
+#include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/wctype.h"
 
 /* Robust standard C fallback definition for static_assert */
 #undef static_assert
 #define _GL_PASTE(a, b) a ## b
 #define _GL_MANGLE(a, b) _GL_PASTE(a, b)
-#define static_assert(expr, ...) \
-   typedef int _GL_MANGLE(_compile_time_assert_, __LINE__)[(expr) ? 1 : -1] __attribute__((unused))
+#define static_assert(expr, ...)    typedef int _GL_MANGLE(_compile_time_assert_, __LINE__)[(expr) ? 1 : -1] __attribute__((unused))
 
 #ifdef __cplusplus
 extern "C" {

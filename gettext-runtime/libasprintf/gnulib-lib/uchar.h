@@ -1,3 +1,11 @@
+#ifdef __APPLE__
+# include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
+#endif
+
+#ifdef __APPLE__
+# include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
+#endif
+
 #ifndef _GL_UCHAR_H
 #define _GL_UCHAR_H
 

@@ -1,1 +1,1 @@
-/./libtextstyle/lib/unictype.h
+/Users/sedwards/gtk/source/gettext-1.0/libtextstyle/adhoc-tests/unictype.h

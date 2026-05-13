@@ -1,7 +1,10 @@
 #!/bin/bash
+# create_darwin_shim.sh
+
+SDK_PATH=$(xcrun --show-sdk-path)
 
 # Define the complete consolidated payload for the master darwin_shim.h
-cat << 'EOF' > darwin_shim.h.tmp
+cat << EOF > darwin_shim.h.tmp
 #ifndef DARWIN_SHIM_H
 #define DARWIN_SHIM_H
 
@@ -33,6 +36,36 @@ cat << 'EOF' > darwin_shim.h.tmp
 #include <sys/_types/_size_t.h>
 #include <sys/_types/_null.h>
 
+/* Primitives for Modern macOS SDK compilation stability */
+#ifndef __cplusplus
+# include <stdbool.h>
+#endif
+
+/* Global expansion fallbacks for un-substituted Gnulib parameters */
+#ifndef _GL_ATTRIBUTE_NODISCARD
+# define _GL_ATTRIBUTE_NODISCARD
+#endif
+#ifndef _GL_ATTRIBUTE_DEPRECATED
+# define _GL_ATTRIBUTE_DEPRECATED
+#endif
+#ifndef _GL_ATTRIBUTE_FALLTHROUGH
+# define _GL_ATTRIBUTE_FALLTHROUGH ((void)0)
+#endif
+#ifndef _GL_ATTRIBUTE_DEALLOC
+# define _GL_ATTRIBUTE_DEALLOC(f, g)
+#endif
+
+#ifndef _GL_CMP
+# define _GL_CMP(n1, n2) (((n1) > (n2)) - ((n1) < (n2)))
+#endif
+
+#ifndef LIBGETTEXTSRC_DLL_VARIABLE
+# define LIBGETTEXTSRC_DLL_VARIABLE
+#endif
+#ifndef LIBGETTEXTLIB_DLL_VARIABLE
+# define LIBGETTEXTLIB_DLL_VARIABLE
+#endif
+
 /* Complete circuit breaker for macOS FILE dependencies in _wchar.h */
 #ifndef __sFILE_defined
 struct __sFILE;
@@ -42,13 +75,13 @@ typedef struct __sFILE FILE;
 #define _FILE_DEFINED_
 #endif
 
-/* Native macOS SDK Base Layer Inclusions */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <wchar.h>
-#include <wctype.h>
+/* Native macOS SDK Base Layer Inclusions - Forced to bypass local stubs */
+#include "$SDK_PATH/usr/include/stdio.h"
+#include "$SDK_PATH/usr/include/stdlib.h"
+#include "$SDK_PATH/usr/include/string.h"
+#include "$SDK_PATH/usr/include/ctype.h"
+#include "$SDK_PATH/usr/include/wchar.h"
+#include "$SDK_PATH/usr/include/wctype.h"
 
 /* Robust standard C fallback definition for static_assert */
 #undef static_assert
