@@ -22,8 +22,8 @@
 @PRAGMA_COLUMNS@
 
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_SYS_IOCTL_H@
-# @INCLUDE_NEXT@ @NEXT_SYS_IOCTL_H@
+#if 
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_SYS_IOCTL_H
@@ -60,7 +60,7 @@ _GL_FUNCDECL_RPL (ioctl, int,
 _GL_CXXALIAS_RPL (ioctl, int,
                   (int fd, int request, ... /* {void *,char *} arg */));
 # else
-#  if @SYS_IOCTL_H_HAVE_WINSOCK2_H@ || 1
+#  if  || 1
 _GL_FUNCDECL_SYS (ioctl, int,
                   (int fd, int request, ... /* {void *,char *} arg */), );
 #  endif

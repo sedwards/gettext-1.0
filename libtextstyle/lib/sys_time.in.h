@@ -37,12 +37,12 @@
    Without this extra ifdef, the C++ gettimeofday declaration below
    would be a forward declaration in gnulib's nested <sys/time.h>.  */
 #if defined _CYGWIN_SYS_TIME_H || defined _SYS_TIME_H || defined _SYS_TIME_H_
-# @INCLUDE_NEXT@ @NEXT_SYS_TIME_H@
+# @INCLUDE_NEXT@ 
 #else
 
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_SYS_TIME_H@
-# @INCLUDE_NEXT@ @NEXT_SYS_TIME_H@
+#if 
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_SYS_TIME_H
@@ -53,7 +53,7 @@
  #error "Please include config.h first."
 #endif
 
-#if ! @HAVE_SYS_TIME_H@
+#if ! 
 # include <time.h>
 #endif
 
@@ -61,7 +61,7 @@
    Also, on native Windows with a 64-bit time_t, where we are overriding the
    'struct timeval' type, get all declarations of system functions whose
    signature contains 'struct timeval'.  */
-#if (defined _MSC_VER || @REPLACE_STRUCT_TIMEVAL@) && @HAVE_WINSOCK2_H@ && !defined _GL_INCLUDING_WINSOCK2_H
+#if (defined _MSC_VER || @REPLACE_STRUCT_TIMEVAL@) &&  && !defined _GL_INCLUDING_WINSOCK2_H
 # define _GL_INCLUDING_WINSOCK2_H
 # include <winsock2.h>
 # undef _GL_INCLUDING_WINSOCK2_H
@@ -141,7 +141,7 @@ _GL_WARN_ON_USE (gettimeofday, "gettimeofday is unportable - "
 
 /* Hide some function declarations from <winsock2.h>.  */
 
-#if defined _MSC_VER && @HAVE_WINSOCK2_H@
+#if defined _MSC_VER && 
 # if !defined _@GUARD_PREFIX@_UNISTD_H
 #  if !(defined __cplusplus && defined GNULIB_NAMESPACE)
 #   undef close

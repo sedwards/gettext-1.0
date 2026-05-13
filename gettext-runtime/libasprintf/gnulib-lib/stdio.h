@@ -2,25 +2,9 @@
 # include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
 #endif
 
-#ifdef __APPLE__
-# include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
-#endif
-
-#ifdef __APPLE__
-# include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
-#endif
-
-#ifdef __APPLE__
-# include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
-#endif
-
-#ifdef __APPLE__
-# include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
-#endif
-
 /* Darwin SDK Proxy Header */
-#ifndef _DARWIN_PROXY_stdio_h
-#define _DARWIN_PROXY_stdio_h
+#ifndef sys_stdio_h
+#define sys_stdio_h
 
 #include <stddef.h>
 
@@ -50,7 +34,6 @@ extern "C" {
 #include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/wctype.h"
 #include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/float.h"
 #include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/resource.h"
+#include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/locale.h"
 
- 
-
-#endif
+#endif /* sys_stdio_h */

@@ -27,7 +27,7 @@
    In this situation, LONG_MAX and INT_MAX are not yet defined,
    therefore we should not attempt to define LONG_BIT.  */
 
-#@INCLUDE_NEXT@ @NEXT_LIMITS_H@
+#@INCLUDE_NEXT@ 
 
 #else
 /* Normal invocation convention.  */
@@ -37,7 +37,7 @@
 # define _@GUARD_PREFIX@_ALREADY_INCLUDING_LIMITS_H
 
 /* The include_next requires a split double-inclusion guard.  */
-# @INCLUDE_NEXT@ @NEXT_LIMITS_H@
+# @INCLUDE_NEXT@ 
 
 # undef _@GUARD_PREFIX@_ALREADY_INCLUDING_LIMITS_H
 

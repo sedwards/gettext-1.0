@@ -26,10 +26,10 @@
 #endif
 @PRAGMA_COLUMNS@
 
-#if @HAVE_NETDB_H@
+#if 
 
 /* The include_next requires a split double-inclusion guard.  */
-# @INCLUDE_NEXT@ @NEXT_NETDB_H@
+# @INCLUDE_NEXT@ 
 
 #endif
 

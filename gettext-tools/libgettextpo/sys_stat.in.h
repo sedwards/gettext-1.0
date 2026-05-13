@@ -35,7 +35,7 @@
 #if defined __need_system_sys_stat_h
 /* Special invocation convention.  */
 
-#@INCLUDE_NEXT@ @NEXT_SYS_STAT_H@
+#@INCLUDE_NEXT@ 
 
 #else
 /* Normal invocation convention.  */
@@ -50,7 +50,7 @@
 #include <time.h>
 
 /* The include_next requires a split double-inclusion guard.  */
-#@INCLUDE_NEXT@ @NEXT_SYS_STAT_H@
+#@INCLUDE_NEXT@ 
 
 #ifndef _@GUARD_PREFIX@_SYS_STAT_H
 #define _@GUARD_PREFIX@_SYS_STAT_H

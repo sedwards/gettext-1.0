@@ -27,7 +27,7 @@
      In this situation system _chk variants due to -D_FORTIFY_SOURCE
      might be used after any replacements defined here.  */
 
-#@INCLUDE_NEXT@ @NEXT_STRING_H@
+#@INCLUDE_NEXT@ 
 
 #else
 /* Normal invocation convention.  */
@@ -37,7 +37,7 @@
 #define _@GUARD_PREFIX@_ALREADY_INCLUDING_STRING_H
 
 /* The include_next requires a split double-inclusion guard.  */
-#@INCLUDE_NEXT@ @NEXT_STRING_H@
+#@INCLUDE_NEXT@ 
 
 #undef _@GUARD_PREFIX@_ALREADY_INCLUDING_STRING_H
 

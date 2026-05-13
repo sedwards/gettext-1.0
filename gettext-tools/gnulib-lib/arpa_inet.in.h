@@ -22,7 +22,7 @@
 #endif
 @PRAGMA_COLUMNS@
 
-#if @HAVE_FEATURES_H@
+#if 
 # include <features.h> /* for __GLIBC__ */
 #endif
 
@@ -39,10 +39,10 @@
 # include <netdb.h>
 #endif
 
-#if @HAVE_ARPA_INET_H@
+#if 
 
 /* The include_next requires a split double-inclusion guard.  */
-# @INCLUDE_NEXT@ @NEXT_ARPA_INET_H@
+# @INCLUDE_NEXT@ 
 
 #endif
 
@@ -56,7 +56,7 @@
 
 /* Get all possible declarations of inet_ntop() and inet_pton().  */
 #if (0 || 0 || defined GNULIB_POSIXCHECK) \
-    && @HAVE_WS2TCPIP_H@
+    && 
 # include <ws2tcpip.h>
 #endif
 

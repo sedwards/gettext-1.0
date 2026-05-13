@@ -38,7 +38,7 @@
       && !defined __MINGW32__)                         \
      || defined _@GUARD_PREFIX@_TIME_H)
 
-# @INCLUDE_NEXT@ @NEXT_TIME_H@
+# @INCLUDE_NEXT@ 
 
 #else
 
@@ -50,7 +50,7 @@
 #  include <unistd.h>
 # endif
 
-# @INCLUDE_NEXT@ @NEXT_TIME_H@
+# @INCLUDE_NEXT@ 
 
 /* This file uses _GL_ATTRIBUTE_DEPRECATED, GNULIB_POSIXCHECK,
    HAVE_RAW_DECL_*.  */

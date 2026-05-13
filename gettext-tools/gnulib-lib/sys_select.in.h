@@ -29,16 +29,16 @@
 /* On Solaris 2.6, <sys/types.h> and <sys/time.h> both include <sys/select.h>.
    On Cygwin and OpenBSD, <sys/time.h> includes <sys/select.h>.
    Simply delegate to the system's header in this case.  */
-#if (@HAVE_SYS_SELECT_H@                                                \
+#if (                                                \
      && !defined _GL_SYS_SELECT_H_REDIRECT_FROM_SYS_TYPES_H             \
      && (defined __sun && defined _SYS_TYPES_H                          \
          && (! (defined _XOPEN_SOURCE || defined _POSIX_C_SOURCE)       \
              || defined __EXTENSIONS__)))
 
 # define _GL_SYS_SELECT_H_REDIRECT_FROM_SYS_TYPES_H
-# @INCLUDE_NEXT@ @NEXT_SYS_SELECT_H@
+# @INCLUDE_NEXT@ <sys/select.h>
 
-#elif (@HAVE_SYS_SELECT_H@                                              \
+#elif (                                              \
        && (defined _CYGWIN_SYS_TIME_H                                   \
            || (!defined _GL_SYS_SELECT_H_REDIRECT_FROM_SYS_TIME_H       \
                && ((defined __OpenBSD__ && defined _SYS_TIME_H_)        \
@@ -48,16 +48,16 @@
                            || defined __EXTENSIONS__))))))
 
 # define _GL_SYS_SELECT_H_REDIRECT_FROM_SYS_TIME_H
-# @INCLUDE_NEXT@ @NEXT_SYS_SELECT_H@
+# @INCLUDE_NEXT@ <sys/select.h>
 
 /* On OpenBSD 5.0, <pthread.h> includes <sys/types.h>, which includes
    <sys/select.h>.  At this point we cannot include <signal.h>, because that
    includes gnulib's pthread.h override, which gives a syntax error because
    /usr/include/pthread.h has not been completely processed.  Simply delegate
    to the system's header in this case.  */
-#elif @HAVE_SYS_SELECT_H@ && defined __OpenBSD__ && (defined _PTHREAD_H_ && !defined PTHREAD_MUTEX_INITIALIZER)
+#elif  && defined __OpenBSD__ && (defined _PTHREAD_H_ && !defined PTHREAD_MUTEX_INITIALIZER)
 
-# @INCLUDE_NEXT@ @NEXT_SYS_SELECT_H@
+# @INCLUDE_NEXT@ <sys/select.h>
 
 #else
 
@@ -73,7 +73,7 @@
    in <signal.h> where it belongs.  */
 #include <sys/types.h>
 
-#if @HAVE_SYS_SELECT_H@
+#if 
 
 /* Mac OS X, AIX, HP-UX, Solaris, Interix declare select() in <sys/time.h>.
    But avoid namespace pollution on glibc systems, a circular include
@@ -84,7 +84,7 @@
 # endif
 
 /* The include_next requires a split double-inclusion guard.  */
-# @INCLUDE_NEXT@ @NEXT_SYS_SELECT_H@
+# @INCLUDE_NEXT@ <sys/select.h>
 
 #endif
 
@@ -107,7 +107,7 @@
 #ifndef _@GUARD_PREFIX@_SYS_SELECT_H
 #define _@GUARD_PREFIX@_SYS_SELECT_H
 
-#if !@HAVE_SYS_SELECT_H@
+#if !
 /* A platform that lacks <sys/select.h>.  */
 /* Get the 'struct timeval' and 'fd_set' types and the FD_* macros
    on most platforms.  */
@@ -120,7 +120,7 @@
 /* On native Windows platforms:
    Get the 'fd_set' type.
    Get the close() declaration before we override it.  */
-# if @HAVE_WINSOCK2_H@
+# if 
 #  if !defined _GL_INCLUDING_WINSOCK2_H
 #   define _GL_INCLUDING_WINSOCK2_H
 #   include <winsock2.h>
@@ -137,7 +137,7 @@
 
 /* Fix some definitions from <winsock2.h>.  */
 
-#if @HAVE_WINSOCK2_H@
+#if 
 
 /* Define type 'suseconds_t'.  */
 # if !GNULIB_defined_suseconds_t
@@ -172,7 +172,7 @@ rpl_fd_isset (SOCKET fd, const fd_set * set)
 
 /* Hide some function declarations from <winsock2.h>.  */
 
-#if @HAVE_WINSOCK2_H@
+#if 
 # if !defined _@GUARD_PREFIX@_UNISTD_H
 #  if !(defined __cplusplus && defined GNULIB_NAMESPACE)
 #   undef close
@@ -309,7 +309,7 @@ _GL_CXXALIAS_SYS (select, int,
 # if __GLIBC__ >= 2
 _GL_CXXALIASWARN (select);
 # endif
-#elif @HAVE_WINSOCK2_H@
+#elif 
 # if !GNULIB_SELECT
 #  undef select
 #  define select select_used_without_requesting_gnulib_module_select

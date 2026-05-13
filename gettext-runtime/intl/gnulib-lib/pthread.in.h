@@ -30,19 +30,19 @@
    In this situation, PTHREAD_COND_INITIALIZER is not yet defined,
    therefore we should not attempt to define PTHREAD_MUTEX_NORMAL etc.  */
 
-#@INCLUDE_NEXT@ @NEXT_PTHREAD_H@
+#@INCLUDE_NEXT@ 
 
 #else
 /* Normal invocation convention.  */
 
 #ifndef _@GUARD_PREFIX@_PTHREAD_H_
 
-#if @HAVE_PTHREAD_H@
+#if 
 
 # define _@GUARD_PREFIX@_ALREADY_INCLUDING_PTHREAD_H
 
 /* The include_next requires a split double-inclusion guard.  */
-# @INCLUDE_NEXT@ @NEXT_PTHREAD_H@
+# @INCLUDE_NEXT@ 
 
 # undef _@GUARD_PREFIX@_ALREADY_INCLUDING_PTHREAD_H
 
@@ -1947,7 +1947,7 @@ _GL_WARN_ON_USE (pthread_spin_destroy, "pthread_spin_destroy is not portable - "
 #endif
 
 
-#if defined __cplusplus && defined GNULIB_NAMESPACE && !@HAVE_PTHREAD_H@ && defined __MINGW32__
+#if defined __cplusplus && defined GNULIB_NAMESPACE && ! && defined __MINGW32__
 /* Provide the symbols required by mingw's <bits/gthr-default.h>.  */
 # if @GNULIB_PTHREAD_THREAD@
 using GNULIB_NAMESPACE::pthread_create;

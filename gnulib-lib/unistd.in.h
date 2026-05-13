@@ -21,22 +21,22 @@
 #endif
 @PRAGMA_COLUMNS@
 
-#if @HAVE_UNISTD_H@ && defined _GL_INCLUDING_UNISTD_H
+#if  && defined _GL_INCLUDING_UNISTD_H
 /* Special invocation convention:
    - On Mac OS X 10.3.9 we have a sequence of nested includes
      <unistd.h> -> <signal.h> -> <pthread.h> -> <unistd.h>
      In this situation, the functions are not yet declared, therefore we cannot
      provide the C++ aliases.  */
 
-#@INCLUDE_NEXT@ @NEXT_UNISTD_H@
+#@INCLUDE_NEXT@ 
 
 #else
 /* Normal invocation convention.  */
 
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_UNISTD_H@
+#if 
 # define _GL_INCLUDING_UNISTD_H
-# @INCLUDE_NEXT@ @NEXT_UNISTD_H@
+# @INCLUDE_NEXT@ 
 # undef _GL_INCLUDING_UNISTD_H
 #endif
 
@@ -59,7 +59,7 @@
 #endif
 
 /* Get all possible declarations of gethostname().  */
-#if @GNULIB_GETHOSTNAME@ && @UNISTD_H_HAVE_WINSOCK2_H@ \
+#if @GNULIB_GETHOSTNAME@ &&  \
   && !defined _GL_INCLUDING_WINSOCK2_H
 # define _GL_INCLUDING_WINSOCK2_H
 # include <winsock2.h>
@@ -144,7 +144,7 @@
 #if (@GNULIB_GETENTROPY@ || defined GNULIB_POSIXCHECK) \
     && ((defined __APPLE__ && defined __MACH__) || defined __sun \
         || defined __ANDROID__) \
-    && @UNISTD_H_HAVE_SYS_RANDOM_H@ \
+    &&  \
     && !defined __GLIBC__
 # include <sys/random.h>
 #endif
@@ -185,7 +185,7 @@ _GL_INLINE_HEADER_BEGIN
 
 /* Hide some function declarations from <winsock2.h>.  */
 
-#if @GNULIB_GETHOSTNAME@ && @UNISTD_H_HAVE_WINSOCK2_H@
+#if @GNULIB_GETHOSTNAME@ && 
 # if !defined _@GUARD_PREFIX@_SYS_SOCKET_H
 #  if !(defined __cplusplus && defined GNULIB_NAMESPACE)
 #   undef socket
@@ -1291,7 +1291,7 @@ _GL_WARN_ON_USE (getgroups, "getgroups is unportable - "
    Null terminate it if the name is shorter than LEN.
    If the host name is longer than LEN, set errno = EINVAL and return -1.
    Return 0 if successful, otherwise set errno and return -1.  */
-# if @UNISTD_H_HAVE_WINSOCK2_H@
+# if 
 #  if !(defined __cplusplus && defined GNULIB_NAMESPACE)
 #   undef gethostname
 #   define gethostname rpl_gethostname
@@ -1309,7 +1309,7 @@ _GL_FUNCDECL_SYS (gethostname, int, (char *name, size_t len),
 _GL_CXXALIAS_SYS_CAST (gethostname, int, (char *name, size_t len));
 # endif
 _GL_CXXALIASWARN (gethostname);
-#elif @UNISTD_H_HAVE_WINSOCK2_H@
+#elif 
 # if !GNULIB_GETHOSTNAME
 #  undef gethostname
 #  define gethostname gethostname_used_without_requesting_gnulib_module_gethostname
@@ -1428,7 +1428,7 @@ _GL_FUNCDECL_SYS (getpagesize, int, (void), );
 #     endif
 #    endif
 /* This is for BeOS.  */
-#    if !defined _gl_getpagesize && @HAVE_OS_H@
+#    if !defined _gl_getpagesize && 
 #     include <OS.h>
 #     if defined B_PAGE_SIZE
 #      define _gl_getpagesize() B_PAGE_SIZE
@@ -1439,7 +1439,7 @@ _GL_FUNCDECL_SYS (getpagesize, int, (void), );
 #     define _gl_getpagesize() 2048
 #    endif
 /* This is for older Unix systems.  */
-#    if !defined _gl_getpagesize && @HAVE_SYS_PARAM_H@
+#    if !defined _gl_getpagesize && 
 #     include <sys/param.h>
 #     ifdef EXEC_PAGESIZE
 #      define _gl_getpagesize() EXEC_PAGESIZE

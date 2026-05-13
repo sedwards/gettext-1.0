@@ -2,11 +2,28 @@
 # Runs with our configure requirements
 bash darwin_port.sh
 
+bash config.h.shim.sh
+
+# Reconfigure
+
 # Create proxy headers
 header_fixes3.sh
 
 # Correct wctype proxy
 fix_wctype.sh
+
+
+
+./configure --whatever
+bash config.h.shim.sh
+bash enforce_config_h_first.sh
+bash create_darwin_shim.sh
+bash header_fixes3.sh
+bash create_uchar_header.sh	
+bash create_stdio_shim.sh
+bash apply_absolute_shims.sh
+bash sync_and_link_unicode.sh
+
 
 
 # Set this to your absolute gettext root directory path

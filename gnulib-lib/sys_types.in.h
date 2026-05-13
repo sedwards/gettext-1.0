@@ -33,7 +33,7 @@
 
 /* Special invocation convention inside mingw header files.  */
 
-#@INCLUDE_NEXT@ @NEXT_SYS_TYPES_H@
+#@INCLUDE_NEXT@ 
 
 #else
 /* Normal invocation convention.  */
@@ -42,7 +42,7 @@
 
 /* The include_next requires a split double-inclusion guard.  */
 # define _GL_INCLUDING_SYS_TYPES_H
-#@INCLUDE_NEXT@ @NEXT_SYS_TYPES_H@
+#@INCLUDE_NEXT@ 
 # undef _GL_INCLUDING_SYS_TYPES_H
 
 #ifndef _@GUARD_PREFIX@_SYS_TYPES_H

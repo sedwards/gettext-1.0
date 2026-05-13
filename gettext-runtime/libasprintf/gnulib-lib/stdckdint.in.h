@@ -23,15 +23,15 @@
 #ifndef _@GUARD_PREFIX@_STDCKDINT_H
 
 /* The include_next requires a split double-inclusion guard.  */
-#if defined __cplusplus ? @HAVE_CXX_STDCKDINT_H@ : @HAVE_C_STDCKDINT_H@
-# @INCLUDE_NEXT@ @NEXT_STDCKDINT_H@
+#if defined __cplusplus ?  : 
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_STDCKDINT_H
 #define _@GUARD_PREFIX@_STDCKDINT_H
 
 /* Do nothing but include the system header if it works properly.  */
-# if defined __cplusplus ? !@HAVE_WORKING_CXX_STDCKDINT_H@ : !@HAVE_WORKING_C_STDCKDINT_H@
+# if defined __cplusplus ? ! : !
 
 /* Avoid redefining macros.  */
 #  undef ckd_add
@@ -53,6 +53,6 @@
 #  define ckd_sub(r, a, b) ((bool) _GL_INT_SUBTRACT_WRAPV (a, b, r))
 #  define ckd_mul(r, a, b) ((bool) _GL_INT_MULTIPLY_WRAPV (a, b, r))
 
-# endif /* defined __cplusplus ? @HAVE_WORKING_CXX_STDCKDINT_H@ : @HAVE_WORKING_C_STDCKDINT_H@ */
+# endif /* defined __cplusplus ?  :  */
 #endif /* _@GUARD_PREFIX@_STDCKDINT_H */
 #endif /* _@GUARD_PREFIX@_STDCKDINT_H */

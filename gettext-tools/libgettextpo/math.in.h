@@ -35,14 +35,14 @@
      In this situation, the functions are not yet declared, therefore we cannot
      provide the C++ aliases.  */
 
-#@INCLUDE_NEXT_AS_FIRST_DIRECTIVE@ @NEXT_AS_FIRST_DIRECTIVE_MATH_H@
+#@INCLUDE_NEXT_AS_FIRST_DIRECTIVE@ 
 
 #else
 /* Normal invocation convention.  */
 
 /* The include_next requires a split double-inclusion guard.  */
 #define _GL_INCLUDING_MATH_H
-#@INCLUDE_NEXT_AS_FIRST_DIRECTIVE@ @NEXT_AS_FIRST_DIRECTIVE_MATH_H@
+#@INCLUDE_NEXT_AS_FIRST_DIRECTIVE@ 
 #undef _GL_INCLUDING_MATH_H
 
 #ifndef _@GUARD_PREFIX@_MATH_H

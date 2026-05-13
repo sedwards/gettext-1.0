@@ -37,7 +37,7 @@
      <wctype.h> is being processed, which doesn't include the idempotency
      guard.   */
 
-#@INCLUDE_NEXT@ @NEXT_WCTYPE_H@
+#@INCLUDE_NEXT@ 
 
 #else
 /* Normal invocation convention.  */
@@ -70,8 +70,8 @@
 /* Include the original <wctype.h> if it exists.
    BeOS 5 has the functions but no <wctype.h>.  */
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_WCTYPE_H@
-# @INCLUDE_NEXT@ @NEXT_WCTYPE_H@
+#if 
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_WCTYPE_H
@@ -113,7 +113,7 @@ _GL_INLINE_HEADER_BEGIN
    wint_t must be "unchanged by default argument promotions".  Override it.  */
 # if @GNULIBHEADERS_OVERRIDE_WINT_T@
 #  if !GNULIB_defined_wint_t
-#   if @HAVE_CRTDEFS_H@
+#   if 
 #    include <crtdefs.h>
 #   else
 #    include <stddef.h>

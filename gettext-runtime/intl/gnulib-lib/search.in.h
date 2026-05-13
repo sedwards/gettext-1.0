@@ -23,8 +23,8 @@
 @PRAGMA_COLUMNS@
 
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_SEARCH_H@
-# @INCLUDE_NEXT@ @NEXT_SEARCH_H@
+#if 
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_SEARCH_H

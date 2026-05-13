@@ -25,8 +25,8 @@
 @PRAGMA_COLUMNS@
 
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_FNMATCH_H@ && !@REPLACE_FNMATCH@
-# @INCLUDE_NEXT@ @NEXT_FNMATCH_H@
+#if  && !@REPLACE_FNMATCH@
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_FNMATCH_H
@@ -43,7 +43,7 @@
 
 /* The definition of _GL_WARN_ON_USE is copied here.  */
 
-#if !@HAVE_FNMATCH_H@ || @REPLACE_FNMATCH@
+#if ! || @REPLACE_FNMATCH@
 
 /* We #undef these before defining them because some losing systems
    (HP-UX A.08.07 for example) define these in <unistd.h>.  */

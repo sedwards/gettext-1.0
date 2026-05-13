@@ -21,21 +21,21 @@
 #endif
 @PRAGMA_COLUMNS@
 
-#if @HAVE_NETINET_IN_H@
+#if 
 
 /* On many platforms, <netinet/in.h> assumes prior inclusion of
    <sys/types.h>.  */
 # include <sys/types.h>
 
 /* The include_next requires a split double-inclusion guard.  */
-# @INCLUDE_NEXT@ @NEXT_NETINET_IN_H@
+# @INCLUDE_NEXT@ 
 
 #endif
 
 #ifndef _@GUARD_PREFIX@_NETINET_IN_H
 #define _@GUARD_PREFIX@_NETINET_IN_H
 
-#if !@HAVE_NETINET_IN_H@
+#if !
 
 /* A platform that lacks <netinet/in.h>.  */
 

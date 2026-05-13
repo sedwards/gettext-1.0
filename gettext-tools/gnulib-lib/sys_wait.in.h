@@ -24,7 +24,7 @@
 
 /* The include_next requires a split double-inclusion guard.  */
 #if !(defined _WIN32 && ! defined __CYGWIN__)
-# @INCLUDE_NEXT@ @NEXT_SYS_WAIT_H@
+# @INCLUDE_NEXT@ <sys/wait.h>
 #endif
 
 #ifndef _@GUARD_PREFIX@_SYS_WAIT_H

@@ -21,7 +21,7 @@
 
 #ifndef _@GUARD_PREFIX@_SYS_RESOURCE_H
 
-#if @HAVE_SYS_RESOURCE_H@
+#if 
 
 /* On FreeBSD 5.0, <sys/resource.h> assumes prior inclusion of <sys/types.h>
    and <sys/time.h>.  */
@@ -29,7 +29,7 @@
 # include <sys/time.h>
 
 /* The include_next requires a split double-inclusion guard.  */
-# @INCLUDE_NEXT@ @NEXT_SYS_RESOURCE_H@
+# @INCLUDE_NEXT@ 
 
 #endif
 
@@ -41,7 +41,7 @@
  #error "Please include config.h first."
 #endif
 
-#if !@HAVE_SYS_RESOURCE_H@
+#if !
 /* A platform that lacks <sys/resource.h>.  */
 
 /* Get 'struct timeval'.  */

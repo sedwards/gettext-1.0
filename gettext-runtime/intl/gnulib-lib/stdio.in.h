@@ -24,7 +24,7 @@
 /* Special invocation convention:
    - Inside glibc header files.  */
 
-#@INCLUDE_NEXT@ @NEXT_STDIO_H@
+#@INCLUDE_NEXT@ 
 
 #else
 /* Normal invocation convention.  */
@@ -46,7 +46,7 @@
 #define _@GUARD_PREFIX@_ALREADY_INCLUDING_STDIO_H
 
 /* The include_next requires a split double-inclusion guard.  */
-#@INCLUDE_NEXT@ @NEXT_STDIO_H@
+#@INCLUDE_NEXT@ 
 
 #undef _@GUARD_PREFIX@_ALREADY_INCLUDING_STDIO_H
 

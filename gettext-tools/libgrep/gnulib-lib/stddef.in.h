@@ -49,7 +49,7 @@
 #  ifdef __need_wint_t
 #   define _@GUARD_PREFIX@_STDDEF_WINT_T
 #  endif
-#  @INCLUDE_NEXT@ @NEXT_STDDEF_H@
+#  @INCLUDE_NEXT@ 
    /* On TinyCC, make sure that the macros that indicate the special invocation
       convention get undefined.  */
 #  undef __need_wchar_t
@@ -97,7 +97,7 @@ typedef long max_align_t;
 
 /* The include_next requires a split double-inclusion guard.  */
 
-#  @INCLUDE_NEXT@ @NEXT_STDDEF_H@
+#  @INCLUDE_NEXT@ 
 
 /* On NetBSD 5.0, the definition of NULL lacks proper parentheses.  */
 #  if (@REPLACE_NULL@ \

@@ -48,7 +48,7 @@
    - With MinGW 3.22, when <string.h> includes <wchar.h>, only some part of
      <wchar.h> is actually processed, and that doesn't include 'mbstate_t'.  */
 
-#@INCLUDE_NEXT@ @NEXT_WCHAR_H@
+#@INCLUDE_NEXT@ 
 /* The glibc 2.5 /usr/include/wchar.h defines __need_wint_t but never undefines
    it.  We need to do that here.  */
 #undef __need_wint_t
@@ -58,7 +58,7 @@
 
 #ifndef _@GUARD_PREFIX@_WCHAR_H
 
-#if @HAVE_FEATURES_H@
+#if 
 # include <features.h> /* for __GLIBC__ */
 #endif
 
@@ -72,8 +72,8 @@
 /* Include the original <wchar.h> if it exists.
    Some builds of uClibc lack it.  */
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_WCHAR_H@
-# @INCLUDE_NEXT@ @NEXT_WCHAR_H@
+#if 
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_WCHAR_H
@@ -185,7 +185,7 @@
    wint_t must be "unchanged by default argument promotions".  Override it.  */
 # if @GNULIBHEADERS_OVERRIDE_WINT_T@
 #  if !GNULIB_defined_wint_t
-#   if @HAVE_CRTDEFS_H@
+#   if 
 #    include <crtdefs.h>
 #   else
 #    include <stddef.h>

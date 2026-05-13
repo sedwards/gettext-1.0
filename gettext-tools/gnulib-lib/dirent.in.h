@@ -22,8 +22,8 @@
 @PRAGMA_COLUMNS@
 
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_DIRENT_H@
-# @INCLUDE_NEXT@ @NEXT_DIRENT_H@
+#if 
+# @INCLUDE_NEXT@ <dirent.h>
 #endif
 
 #ifndef _@GUARD_PREFIX@_DIRENT_H
@@ -38,7 +38,7 @@
 /* Get ino_t.  Needed on some systems, including glibc 2.8.  */
 #include <sys/types.h>
 
-#if !@HAVE_DIRENT_H@
+#if !
 /* Define types DIR and 'struct dirent'.  */
 # if !GNULIB_defined_struct_dirent
 struct dirent
@@ -106,7 +106,7 @@ static_assert (DT_UNKNOWN != DT_FIFO && DT_UNKNOWN != DT_CHR
 /* struct gl_directory is a type with a field 'int fd_to_close'.
    It is needed for implementing fdopendir().  */
 struct gl_directory;
-#  if @HAVE_DIRENT_H@
+#  if 
 #   define DIR struct gl_directory
 #  else
 typedef struct gl_directory DIR;

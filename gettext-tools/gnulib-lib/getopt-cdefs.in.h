@@ -27,7 +27,7 @@
 /* getopt-core.h and getopt-ext.h are shared with GNU libc, and expect
    a number of the internal macros supplied to GNU libc's headers by
    sys/cdefs.h.  Provide fallback definitions for all of them.  */
-#if @HAVE_SYS_CDEFS_H@
+#if 
 # include <sys/cdefs.h>
 #endif
 

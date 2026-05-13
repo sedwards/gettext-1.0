@@ -29,8 +29,8 @@
 #endif
 
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_UTIME_H@
-# @INCLUDE_NEXT@ @NEXT_UTIME_H@
+#if 
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_UTIME_H
@@ -41,7 +41,7 @@
  #error "Please include config.h first."
 #endif
 
-#if !@HAVE_UTIME_H@
+#if !
 # include <sys/utime.h>
 #endif
 

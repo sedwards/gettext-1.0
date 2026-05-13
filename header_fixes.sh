@@ -1,10 +1,8 @@
-#!/bin/bash
-# header_fixes3.sh
 
 # Get the actual macOS SDK path to avoid infinite loops
 SDK_PATH=$(xcrun --show-sdk-path)
 
-HEADERS="fcntl.h sys/types.h sys/stat.h sys/select.h unistd.h stdlib.h string.h wchar.h wctype.h float.h sys/resource.h time.h sys/time.h stdio.h ctype.h"
+HEADERS="fcntl.h sys/types.h sys/stat.h sys/select.h unistd.h stdlib.h string.h wchar.h wctype.h float.h sys/resource.h time.h sys/time.h stdio.h ctype.h locael.h"
 
 for h in $HEADERS; do
     echo "Converting $h to SDK proxy..."
@@ -53,6 +51,7 @@ extern "C" {
 #include "$SDK_PATH/usr/include/wchar.h"
 #include "$SDK_PATH/usr/include/wctype.h"
 #include "$SDK_PATH/usr/include/float.h"
+#include "$SDK_PATH/usr/include/locale.h"
 #include "$SDK_PATH/usr/include/sys/resource.h"
 
 #endif /* ${guard_name} */

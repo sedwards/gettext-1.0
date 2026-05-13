@@ -39,7 +39,7 @@
    Ideally we should test __BIONIC__ here, but it is only defined after
    <sys/cdefs.h> has been included; hence test __ANDROID__ instead.  */
 #if defined __ANDROID__ && defined _GL_INCLUDING_SYS_TYPES_H
-# @INCLUDE_NEXT@ @NEXT_STDINT_H@
+# @INCLUDE_NEXT@ 
 #else
 
 /* Get those types that are already defined in other system include
@@ -50,7 +50,7 @@
    for the "fast" types and macros, which we recommend against using
    in public interfaces due to compiler differences.  */
 
-#if @HAVE_STDINT_H@
+#if 
   /* Some pre-C++11 <stdint.h> implementations need this.  */
 # ifdef __cplusplus
 #  ifndef __STDC_CONSTANT_MACROS
@@ -66,7 +66,7 @@
      in <inttypes.h> would reinclude us, skipping our contents because
      _@GUARD_PREFIX@_STDINT_H is defined.
      The include_next requires a split double-inclusion guard.  */
-# @INCLUDE_NEXT@ @NEXT_STDINT_H@
+# @INCLUDE_NEXT@ 
 #endif
 
 #if ! defined _@GUARD_PREFIX@_STDINT_H && ! defined _GL_JUST_INCLUDE_SYSTEM_STDINT_H
@@ -85,30 +85,30 @@
 # define WINT_MAX 0xffffffffU
 #endif
 
-#if ! @HAVE_C99_STDINT_H@
+#if ! 
 
 /* <sys/types.h> defines some of the stdint.h types as well, on glibc and
    OpenBSD 3.8 (via <machine/types.h>).
    AIX 5.2 <sys/types.h> isn't needed and causes troubles.
    Mac OS X 10.4.6 <sys/types.h> includes <stdint.h> (which is us), but
    relies on the system <stdint.h> definitions, so include
-   <sys/types.h> after @NEXT_STDINT_H@.  */
-# if @HAVE_SYS_TYPES_H@ && ! defined _AIX
+   <sys/types.h> after .  */
+# if  && ! defined _AIX
 #  include <sys/types.h>
 # endif
 
-# if @HAVE_INTTYPES_H@
+# if 
   /* In OpenBSD 3.8, <inttypes.h> includes <machine/types.h>, which defines
      int{8,16,32,64}_t, uint{8,16,32,64}_t and __BIT_TYPES_DEFINED__.
      <inttypes.h> also defines intptr_t and uintptr_t.  */
 #  include <inttypes.h>
-# elif @HAVE_SYS_INTTYPES_H@
+# elif 
   /* Solaris 7 <sys/inttypes.h> has the types except the *_fast*_t types, and
      the macros except for *_FAST*_*, INTPTR_MIN, PTRDIFF_MIN, PTRDIFF_MAX.  */
 #  include <sys/inttypes.h>
 # endif
 
-# if @HAVE_SYS_BITYPES_H@ && ! defined __BIT_TYPES_DEFINED__
+# if  && ! defined __BIT_TYPES_DEFINED__
   /* Linux libc4 >= 4.6.7 and libc5 have a <sys/bitypes.h> that defines
      int{8,16,32,64}_t and __BIT_TYPES_DEFINED__.  In libc5 >= 5.2.2 it is
      included by <sys/types.h>.  */
@@ -578,7 +578,7 @@ typedef int _verify_intmax_size[sizeof (intmax_t) == sizeof (uintmax_t)
 
 /* wchar_t limits */
 /* Get WCHAR_MIN, WCHAR_MAX.  */
-# if @HAVE_WCHAR_H@ && ! (defined WCHAR_MIN && defined WCHAR_MAX)
+# if  && ! (defined WCHAR_MIN && defined WCHAR_MAX)
 #  define _GL_JUST_INCLUDE_SYSTEM_WCHAR_H
 #  include <wchar.h>
 #  undef _GL_JUST_INCLUDE_SYSTEM_WCHAR_H
@@ -674,7 +674,7 @@ typedef int _verify_intmax_size[sizeof (intmax_t) == sizeof (uintmax_t)
 #  endif
 # endif
 
-#endif /* !@HAVE_C99_STDINT_H@ */
+#endif /* ! */
 
 /* Macros specified by ISO/IEC TS 18661-1:2014.  */
 

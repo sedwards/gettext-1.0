@@ -41,7 +41,7 @@
 #if !(defined __GLIBC__ || defined __UCLIBC__) || (defined __cplusplus && defined GNULIB_NAMESPACE && (defined __ICC || !(__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 3))))
 # include <sys/stat.h>
 #endif
-#@INCLUDE_NEXT@ @NEXT_FCNTL_H@
+#@INCLUDE_NEXT@ 
 
 /* Native Windows platforms declare open(), creat() in <io.h>.  */
 #if (@GNULIB_CREAT@ || @GNULIB_OPEN@ || defined GNULIB_POSIXCHECK) \
@@ -70,7 +70,7 @@
 # include <sys/stat.h>
 #endif
 /* The include_next requires a split double-inclusion guard.  */
-#@INCLUDE_NEXT@ @NEXT_FCNTL_H@
+#@INCLUDE_NEXT@ 
 
 /* Native Windows platforms declare open(), creat() in <io.h>.  */
 #if (@GNULIB_CREAT@ || @GNULIB_OPEN@ || defined GNULIB_POSIXCHECK) \

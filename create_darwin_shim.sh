@@ -12,24 +12,24 @@ cat << EOF > darwin_shim.h.tmp
 #include <sys/cdefs.h>
 #include <_types.h>
 
-/* Complete core Darwin mask properties */
+/* Complete core Darwin mask properties to insulate from header loop bugs */
 #define _CTYPE_A    0x00000100L
 #define _CTYPE_B    0x00000200L
-#define _DARWIN_CTYPE_A _CTYPE_A
-#define _DARWIN_CTYPE_B _CTYPE_B
-
 #define _CTYPE_C    0x00000400L
 #define _CTYPE_D    0x00000800L
 #define _CTYPE_G    0x00002000L
-#define _CTYPE_I    0x00004000L
-#define _CTYPE_L    0x00004000L
-#define _CTYPE_P    0x00010000L
-#define _CTYPE_Q    0x00200000L
-#define _CTYPE_R    0x00020000L
-#define _CTYPE_S    0x00040000L
+#define _CTYPE_I    0x00010000L
+#define _CTYPE_L    0x00001000L
+#define _CTYPE_P    0x00000800L
+#define _CTYPE_Q    0x00020000L
+#define _CTYPE_R    0x00040000L
+#define _CTYPE_S    0x00000080L
 #define _CTYPE_T    0x00400000L
-#define _CTYPE_U    0x00080000L
-#define _CTYPE_X    0x00100000L
+#define _CTYPE_U    0x00004000L
+#define _CTYPE_X    0x00000200L
+
+#define _DARWIN_CTYPE_A _CTYPE_A
+#define _DARWIN_CTYPE_B _CTYPE_B
 
 /* Core prerequisite scalar types */
 #include <sys/_types/_va_list.h>
@@ -40,6 +40,21 @@ cat << EOF > darwin_shim.h.tmp
 #ifndef __cplusplus
 # include <stdbool.h>
 #endif
+
+/* Native Apple SDK Deep-Linking Fallbacks for Locales */
+#include "$SDK_PATH/usr/include/xlocale.h"
+#include "$SDK_PATH/usr/include/locale.h"
+
+/* Ensure POSIX context blocks map cleanly independently of SDK variations */
+#ifndef LC_GLOBAL_LOCALE
+# define LC_GLOBAL_LOCALE ((locale_t)-1)
+#endif
+
+/* Fix: Forward declare the complete structure bounds to avoid incomplete enum fields */
+enum storage {
+    STORAGE_THREAD,
+    STORAGE_GLOBAL
+};
 
 /* Global expansion fallbacks for un-substituted Gnulib parameters */
 #ifndef _GL_ATTRIBUTE_NODISCARD
@@ -108,7 +123,7 @@ extern "C" {
 static inline void *xmalloc(size_t n) { void *p = malloc(n); if (!p && n) abort(); return p; }
 # endif
 # ifndef xrealloc
-static inline void *xrealloc(void *p, size_t n) { void *r = realloc(p, n); if (!r && n) abort(); return r; }
+#  define xrealloc config_h_hidden_xrealloc
 # endif
 #endif
 

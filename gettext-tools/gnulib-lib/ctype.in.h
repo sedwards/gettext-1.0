@@ -38,13 +38,13 @@
 /* We're in the middle of including <iso/wchar_iso.h>.
    Include just the original <ctype.h>.  */
 
-#@INCLUDE_NEXT@ @NEXT_CTYPE_H@
+#@INCLUDE_NEXT@ <ctype.h>
 
 #else
 
 /* Include the original <ctype.h>.  */
 /* The include_next requires a split double-inclusion guard.  */
-#@INCLUDE_NEXT@ @NEXT_CTYPE_H@
+#@INCLUDE_NEXT@ <ctype.h>
 
 #ifndef _@GUARD_PREFIX@_CTYPE_H
 #define _@GUARD_PREFIX@_CTYPE_H

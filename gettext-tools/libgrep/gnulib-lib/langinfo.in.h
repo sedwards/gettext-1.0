@@ -27,8 +27,8 @@
 @PRAGMA_COLUMNS@
 
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_LANGINFO_H@
-# @INCLUDE_NEXT@ @NEXT_LANGINFO_H@
+#if 
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_LANGINFO_H
@@ -40,7 +40,7 @@
 #endif
 
 
-#if !@HAVE_LANGINFO_H@
+#if !
 
 /* A platform that lacks <langinfo.h>.  */
 

@@ -23,7 +23,7 @@
 @PRAGMA_COLUMNS@
 
 /* The include_next requires a split double-inclusion guard.  */
-#@INCLUDE_NEXT@ @NEXT_FLOAT_H@
+#@INCLUDE_NEXT@ 
 
 #ifndef _@GUARD_PREFIX@_FLOAT_H
 #define _@GUARD_PREFIX@_FLOAT_H

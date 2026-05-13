@@ -26,7 +26,7 @@
    <pthread.h> -> <sched.h> -> <spawn.h> are included by GNULIB.
    In this situation, struct sched_param is not yet defined.  */
 
-#@INCLUDE_NEXT@ @NEXT_SPAWN_H@
+#@INCLUDE_NEXT@ 
 
 #else
 
@@ -34,11 +34,11 @@
 /* Normal invocation convention.  */
 
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_SPAWN_H@
+#if 
 
 # define _@GUARD_PREFIX@_ALREADY_INCLUDING_SPAWN_H
 
-# @INCLUDE_NEXT@ @NEXT_SPAWN_H@
+# @INCLUDE_NEXT@ 
 
 # define _@GUARD_PREFIX@_ALREADY_INCLUDING_SPAWN_H
 

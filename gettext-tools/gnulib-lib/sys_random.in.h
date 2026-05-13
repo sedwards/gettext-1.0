@@ -21,7 +21,7 @@
 
 #ifndef _@GUARD_PREFIX@_SYS_RANDOM_H
 
-#if @HAVE_SYS_RANDOM_H@
+#if 
 
 /* On uClibc < 1.0.35, <sys/random.h> assumes prior inclusion of <stddef.h>.
    Do not use __UCLIBC__ here, as it might not be defined yet.
@@ -38,7 +38,7 @@
 # endif
 
 /* The include_next requires a split double-inclusion guard.  */
-# @INCLUDE_NEXT@ @NEXT_SYS_RANDOM_H@
+# @INCLUDE_NEXT@ 
 
 #endif
 

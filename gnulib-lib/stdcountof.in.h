@@ -23,8 +23,8 @@
 @PRAGMA_COLUMNS@
 
 /* The include_next requires a split double-inclusion guard.  */
-#if (defined __cplusplus ? @CXX_HAVE_STDCOUNTOF_H@ : @HAVE_STDCOUNTOF_H@)
-# @INCLUDE_NEXT@ @NEXT_STDCOUNTOF_H@
+#if (defined __cplusplus ?  : )
+# @INCLUDE_NEXT@ 
 #else
 
 #ifndef _@GUARD_PREFIX@_STDCOUNTOF_H

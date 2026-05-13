@@ -23,7 +23,7 @@
 
 #include "unitypes.h"
 
-#if @HAVE_UNISTRING_WOE32DLL_H@
+#if 
 # include <unistring/woe32dll.h>
 #else
 # define LIBUNISTRING_DLL_VARIABLE

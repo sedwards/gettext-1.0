@@ -38,7 +38,7 @@
      In this situation, some of the functions are not yet declared, therefore
      we cannot provide the C++ aliases.  */
 
-# @INCLUDE_NEXT@ @NEXT_SIGNAL_H@
+# @INCLUDE_NEXT@ 
 
 #else
 /* Normal invocation convention.  */
@@ -54,7 +54,7 @@
 #include <sys/types.h>
 
 /* The include_next requires a split double-inclusion guard.  */
-#@INCLUDE_NEXT@ @NEXT_SIGNAL_H@
+#@INCLUDE_NEXT@ 
 
 #undef _@GUARD_PREFIX@_ALREADY_INCLUDING_SIGNAL_H
 

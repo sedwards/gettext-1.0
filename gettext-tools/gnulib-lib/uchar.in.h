@@ -28,7 +28,7 @@
 @PRAGMA_COLUMNS@
 
 /* The include_next requires a split double-inclusion guard.  */
-#if (defined __cplusplus ? @CXX_HAVE_UCHAR_H@ : @HAVE_UCHAR_H@)
+#if (defined __cplusplus ?  : )
 # if defined __HAIKU__
 /* Work around <https://dev.haiku-os.org/ticket/17040>.  */
 #  include <stdint.h>
@@ -41,7 +41,7 @@
 #  define char16_t gl_char16_t
 #  define char32_t gl_char32_t
 # endif
-# @INCLUDE_NEXT@ @NEXT_UCHAR_H@
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_UCHAR_H
@@ -57,8 +57,8 @@
    Although POSIX allows <uchar.h> to make all symbols visible from <stdint.h>,
    our includers should not rely on this.  */
 #if (! (defined __cplusplus \
-        ? @CXX_HAVE_UCHAR_H@ || @CXX_HAS_UCHAR_TYPES@ \
-        : @HAVE_UCHAR_H@) \
+        ?  || @CXX_HAS_UCHAR_TYPES@ \
+        : ) \
      || @GNULIBHEADERS_OVERRIDE_CHAR16_T@ || @GNULIBHEADERS_OVERRIDE_CHAR32_T@)
 # include <stdint.h>
 #endif
@@ -69,7 +69,7 @@
    when part of the API of a Gnulib module extending <uchar.h> that needs
    these two symbols.  */
 #if (! (/* The underlying <uchar.h> defines mbstate_t, size_t.  */ \
-        defined __cplusplus ? @CXX_HAVE_UCHAR_H@ : @HAVE_UCHAR_H@) \
+        defined __cplusplus ?  : ) \
      || (/* These need wint_t and maybe WEOF and a <wchar.h> function.  */ \
          0 || 0) \
      || (/* These need mbszero.  */ \
@@ -116,7 +116,7 @@
 _GL_INLINE_HEADER_BEGIN
 
 
-#if !(defined __cplusplus ? @CXX_HAVE_UCHAR_H@ || @CXX_HAS_CHAR8_TYPE@ : @HAVE_UCHAR_H@)
+#if !(defined __cplusplus ?  || @CXX_HAS_CHAR8_TYPE@ : )
 
 /* An 8-bit variant of wchar_t.
    Note: This type is mandated by ISO C 23 or newer, and denotes UTF-8 units.  */
@@ -129,7 +129,7 @@ typedef unsigned char gl_char8_t;
 
 #endif
 
-#if !(defined __cplusplus ? @CXX_HAVE_UCHAR_H@ || @CXX_HAS_UCHAR_TYPES@ : @HAVE_UCHAR_H@)
+#if !(defined __cplusplus ?  || @CXX_HAS_UCHAR_TYPES@ : )
 
 /* A 16-bit variant of wchar_t.
    Note: This type is mandated by ISO C 11 or newer.  In ISO C 23
@@ -144,7 +144,7 @@ typedef uint_least16_t gl_char16_t;
 
 #endif
 
-#if !(defined __cplusplus ? @CXX_HAVE_UCHAR_H@ || @CXX_HAS_UCHAR_TYPES@ : @HAVE_UCHAR_H@)
+#if !(defined __cplusplus ?  || @CXX_HAS_UCHAR_TYPES@ : )
 
 /* A 32-bit variant of wchar_t.
    Note: This type is mandated by ISO C 11 or newer.  In ISO C 23

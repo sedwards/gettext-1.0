@@ -22,6 +22,6 @@
 #endif
 @PRAGMA_COLUMNS@
 
-#@INCLUDE_NEXT@ @NEXT_ASSERT_H@
+#@INCLUDE_NEXT@ 
 
 /* The definition of static_assert is copied here.  */

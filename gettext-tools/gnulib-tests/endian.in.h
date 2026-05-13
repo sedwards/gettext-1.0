@@ -24,12 +24,12 @@
 #endif
 @PRAGMA_COLUMNS@
 
-#if @HAVE_ENDIAN_H@
+#if 
 
 /* The include_next requires a split double-inclusion guard.  */
-# @INCLUDE_NEXT@ @NEXT_ENDIAN_H@
+# @INCLUDE_NEXT@ 
 
-#elif @HAVE_SYS_ENDIAN_H@
+#elif 
 
 # include <sys/endian.h>
 
@@ -73,7 +73,7 @@ _GL_INLINE_HEADER_BEGIN
 # define BYTE_ORDER LITTLE_ENDIAN
 #endif
 
-#if @HAVE_ENDIAN_H@ || @HAVE_SYS_ENDIAN_H@
+#if  || 
 
 /* Make sure we don't have any system definitions.  */
 # undef be16toh

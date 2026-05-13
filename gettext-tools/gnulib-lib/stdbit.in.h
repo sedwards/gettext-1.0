@@ -25,8 +25,8 @@
 @PRAGMA_COLUMNS@
 
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_STDBIT_H@
-# @INCLUDE_NEXT@ @NEXT_STDBIT_H@
+#if 
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_STDBIT_H

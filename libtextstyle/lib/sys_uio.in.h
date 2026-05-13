@@ -21,20 +21,20 @@
 
 #ifndef _@GUARD_PREFIX@_SYS_UIO_H
 
-#if @HAVE_SYS_UIO_H@
+#if 
 
 /* On OpenBSD 4.4, <sys/uio.h> assumes prior inclusion of <sys/types.h>.  */
 # include <sys/types.h>
 
 /* The include_next requires a split double-inclusion guard.  */
-# @INCLUDE_NEXT@ @NEXT_SYS_UIO_H@
+# @INCLUDE_NEXT@ 
 
 #endif
 
 #ifndef _@GUARD_PREFIX@_SYS_UIO_H
 #define _@GUARD_PREFIX@_SYS_UIO_H
 
-#if !@HAVE_SYS_UIO_H@
+#if !
 /* A platform that lacks <sys/uio.h>.  */
 /* Get 'size_t' and 'ssize_t'.  */
 # include <sys/types.h>

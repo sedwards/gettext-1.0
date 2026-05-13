@@ -27,7 +27,7 @@
    - To handle Solaris header files (through Solaris 10) when combined
      with gettext's libintl.h.  */
 
-#@INCLUDE_NEXT@ @NEXT_LOCALE_H@
+#@INCLUDE_NEXT@ <locale.h>
 
 #else
 /* Normal invocation convention.  */
@@ -37,7 +37,7 @@
 #define _@GUARD_PREFIX@_ALREADY_INCLUDING_LOCALE_H
 
 /* The include_next requires a split double-inclusion guard.  */
-#@INCLUDE_NEXT@ @NEXT_LOCALE_H@
+#@INCLUDE_NEXT@ <locale.h>
 
 #undef _@GUARD_PREFIX@_ALREADY_INCLUDING_LOCALE_H
 
@@ -53,7 +53,7 @@
 #include <stddef.h>
 
 /* Mac OS X 10.5 defines the locale_t type in <xlocale.h>.  */
-#if @HAVE_XLOCALE_H@
+#if 
 # include <xlocale.h>
 #endif
 

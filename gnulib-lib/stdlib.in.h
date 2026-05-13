@@ -35,7 +35,7 @@
    because in this case /usr/include/c++/11/stdlib.h (which does not support
    the convention) is seen before the gnulib-generated stdlib.h.  */
 
-#@INCLUDE_NEXT@ @NEXT_STDLIB_H@
+#@INCLUDE_NEXT@ 
 
 /* Make sure that the macros that indicate the special invocation convention
    get undefined.  This is needed at least on CentOS 7.  */
@@ -47,7 +47,7 @@
 #ifndef _@GUARD_PREFIX@_STDLIB_H
 
 /* The include_next requires a split double-inclusion guard.  */
-#@INCLUDE_NEXT@ @NEXT_STDLIB_H@
+#@INCLUDE_NEXT@ 
 
 #ifndef _@GUARD_PREFIX@_STDLIB_H
 #define _@GUARD_PREFIX@_STDLIB_H
@@ -63,7 +63,7 @@
 #include <stddef.h>
 
 /* Solaris declares getloadavg() in <sys/loadavg.h>.  */
-#if (@GNULIB_GETLOADAVG@ || defined GNULIB_POSIXCHECK) && @HAVE_SYS_LOADAVG_H@
+#if (@GNULIB_GETLOADAVG@ || defined GNULIB_POSIXCHECK) && 
 /* OpenIndiana has a bug: <sys/time.h> must be included before
    <sys/loadavg.h>.  */
 # include <sys/time.h>
@@ -71,7 +71,7 @@
 #endif
 
 /* QNX declares getprogname() in <sys/process.h>.  */
-#if (@GNULIB_GETPROGNAME@ || defined GNULIB_POSIXCHECK) && @HAVE_SYS_PROCESS_H@
+#if (@GNULIB_GETPROGNAME@ || defined GNULIB_POSIXCHECK) && 
 # include <sys/process.h>
 #endif
 

@@ -29,11 +29,11 @@
 #endif
 
 /* The include_next requires a split double-inclusion guard.  */
-#if @HAVE_SCHED_H@
-# if @HAVE_SYS_CDEFS_H@
+#if 
+# if 
 #  include <sys/cdefs.h>
 # endif
-# @INCLUDE_NEXT@ @NEXT_SCHED_H@
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_SCHED_H

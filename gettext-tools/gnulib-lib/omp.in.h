@@ -24,7 +24,7 @@
 
 /* The include_next requires a split double-inclusion guard.  */
 #ifdef _OPENMP
-# @INCLUDE_NEXT@ @NEXT_OMP_H@
+# @INCLUDE_NEXT@ 
 #endif
 
 #ifndef _@GUARD_PREFIX@_OMP_H
