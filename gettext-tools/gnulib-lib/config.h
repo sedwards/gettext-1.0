@@ -2,6 +2,10 @@
 #define xrealloc config_h_hidden_xrealloc
 #define xmalloc config_h_hidden_xmalloc
 #define xrealloc config_h_hidden_xrealloc
+#define xmalloc config_h_hidden_xmalloc
+#define xrealloc config_h_hidden_xrealloc
+#define xmalloc config_h_hidden_xmalloc
+#define xrealloc config_h_hidden_xrealloc
 /* Force system types and time definitions to prevent 'incomplete type' errors */
 #include <sys/types.h>
 #include <time.h>
@@ -130,3 +134,6 @@ extern "C" {
 # include <crt_externs.h>
 # define environ (*_NSGetEnviron())
 #endif
+#undef xmalloc
+#undef xrealloc
+

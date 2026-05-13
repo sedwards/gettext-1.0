@@ -1,6 +1,6 @@
 /* Darwin SDK Proxy Header */
-#ifndef _DARWIN_PROXY_ctype_H
-#define _DARWIN_PROXY_ctype_H
+#ifndef _DARWIN_PROXY_ctype.h
+#define _DARWIN_PROXY_ctype.h
 
 #include <stddef.h>
 

@@ -30,8 +30,8 @@ Kernel configured for up to 10 processors.
 Processor type: arm64e (ARM64E)
 Processors active: 0 1 2 3 4 5 6 7 8 9
 Primary memory available: 16.00 gigabytes
-Default processor set: 635 tasks, 2369 threads, 10 processors
-Load average: 1.85, Mach factor: 8.13
+Default processor set: 635 tasks, 2371 threads, 10 processors
+Load average: 1.96, Mach factor: 8.03
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
@@ -1584,7 +1584,7 @@ configure:19198: checking for _set_invalid_parameter_handler
 configure:19198: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "__set_invalid_parameter_handler", referenced from:
-      _main in conftest-9a6297.o
+      _main in conftest-f86776.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:19198: $? = 1
@@ -1711,7 +1711,7 @@ configure:19198: checking for getexecname
 configure:19198: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_getexecname", referenced from:
-      _main in conftest-558ef3.o
+      _main in conftest-d28032.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:19198: $? = 1
@@ -1868,7 +1868,7 @@ configure:19198: checking for vasnprintf
 configure:19198: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_vasnprintf", referenced from:
-      _main in conftest-167fbd.o
+      _main in conftest-fe4240.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:19198: $? = 1
@@ -2380,7 +2380,7 @@ configure:21837: checking for error
 configure:21837: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_error", referenced from:
-      _main in conftest-cbfcd2.o
+      _main in conftest-a23b29.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:21837: $? = 1
@@ -3438,7 +3438,7 @@ configure:24751: checking whether imported symbols can be declared weak
 configure:24778: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_xyzzy", referenced from:
-      _main in conftest-2d4a0f.o
+      _main in conftest-8febd8.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:24778: $? = 1
@@ -3573,11 +3573,11 @@ configure:25887: checking for iconv
 configure:25912: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_iconv", referenced from:
-      _main in conftest-1a07b8.o
+      _main in conftest-e48855.o
   "_iconv_close", referenced from:
-      _main in conftest-1a07b8.o
+      _main in conftest-e48855.o
   "_iconv_open", referenced from:
-      _main in conftest-1a07b8.o
+      _main in conftest-e48855.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:25912: $? = 1
@@ -9455,13 +9455,13 @@ configure:39410: checking where terminfo library functions come from
 configure:39451: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_setupterm", referenced from:
-      _main in conftest-8b2ae3.o
+      _main in conftest-d72f77.o
   "_tigetflag", referenced from:
-      _main in conftest-8b2ae3.o
+      _main in conftest-d72f77.o
   "_tigetnum", referenced from:
-      _main in conftest-8b2ae3.o
+      _main in conftest-d72f77.o
   "_tigetstr", referenced from:
-      _main in conftest-8b2ae3.o
+      _main in conftest-d72f77.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:39451: $? = 1
@@ -9646,13 +9646,13 @@ configure: failed program was:
 configure:39493: gcc -o conftest -g -O2   conftest.c   >&5
 Undefined symbols for architecture arm64:
   "_setupterm", referenced from:
-      _main in conftest-bcea9a.o
+      _main in conftest-256134.o
   "_tigetflag", referenced from:
-      _main in conftest-bcea9a.o
+      _main in conftest-256134.o
   "_tigetnum", referenced from:
-      _main in conftest-bcea9a.o
+      _main in conftest-256134.o
   "_tigetstr", referenced from:
-      _main in conftest-bcea9a.o
+      _main in conftest-256134.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:39493: $? = 1
@@ -9837,13 +9837,13 @@ configure: failed program was:
 configure:39536: gcc -o conftest -g -O2   conftest.c   >&5
 Undefined symbols for architecture arm64:
   "_setupterm", referenced from:
-      _main in conftest-407fad.o
+      _main in conftest-1779f2.o
   "_tigetflag", referenced from:
-      _main in conftest-407fad.o
+      _main in conftest-1779f2.o
   "_tigetnum", referenced from:
-      _main in conftest-407fad.o
+      _main in conftest-1779f2.o
   "_tigetstr", referenced from:
-      _main in conftest-407fad.o
+      _main in conftest-1779f2.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:39536: $? = 1
@@ -10028,13 +10028,13 @@ configure: failed program was:
 configure:39579: gcc -o conftest -g -O2   conftest.c   >&5
 Undefined symbols for architecture arm64:
   "_setupterm", referenced from:
-      _main in conftest-46352c.o
+      _main in conftest-5d0429.o
   "_tigetflag", referenced from:
-      _main in conftest-46352c.o
+      _main in conftest-5d0429.o
   "_tigetnum", referenced from:
-      _main in conftest-46352c.o
+      _main in conftest-5d0429.o
   "_tigetstr", referenced from:
-      _main in conftest-46352c.o
+      _main in conftest-5d0429.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:39579: $? = 1
@@ -10219,13 +10219,13 @@ configure: failed program was:
 configure:39622: gcc -o conftest -g -O2   conftest.c   >&5
 Undefined symbols for architecture arm64:
   "_setupterm", referenced from:
-      _main in conftest-740381.o
+      _main in conftest-e4cf83.o
   "_tigetflag", referenced from:
-      _main in conftest-740381.o
+      _main in conftest-e4cf83.o
   "_tigetnum", referenced from:
-      _main in conftest-740381.o
+      _main in conftest-e4cf83.o
   "_tigetstr", referenced from:
-      _main in conftest-740381.o
+      _main in conftest-e4cf83.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:39622: $? = 1
@@ -10412,7 +10412,7 @@ configure:39671: checking where termcap library functions come from
 configure:39695: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_tgetent", referenced from:
-      _main in conftest-3cc7b8.o
+      _main in conftest-95386b.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:39695: $? = 1
@@ -10580,7 +10580,7 @@ configure: failed program was:
 configure:39720: gcc -o conftest -g -O2   conftest.c   >&5
 Undefined symbols for architecture arm64:
   "_tgetent", referenced from:
-      _main in conftest-105b8a.o
+      _main in conftest-3d6ccf.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:39720: $? = 1
@@ -10748,7 +10748,7 @@ configure: failed program was:
 configure:39746: gcc -o conftest -g -O2   conftest.c   >&5
 Undefined symbols for architecture arm64:
   "_tgetent", referenced from:
-      _main in conftest-5f5f1f.o
+      _main in conftest-34094d.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:39746: $? = 1
@@ -10918,7 +10918,7 @@ configure:39789: checking for tparam
 configure:39817: gcc -o conftest -g -O2    conftest.c   >&5
 Undefined symbols for architecture arm64:
   "_tparam", referenced from:
-      _main in conftest-58da73.o
+      _main in conftest-f48b65.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:39817: $? = 1
@@ -11089,7 +11089,7 @@ configure:39836: checking for tparm
 configure:39863: gcc -o conftest -g -O2    conftest.c   >&5
 Undefined symbols for architecture arm64:
   "_tparm", referenced from:
-      _main in conftest-bae6ac.o
+      _main in conftest-a7361e.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:39863: $? = 1
@@ -11472,7 +11472,7 @@ configure:41327: checking for strerrorname_np
 configure:41327: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_strerrorname_np", referenced from:
-      _main in conftest-80bf5e.o
+      _main in conftest-87c17a.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:41327: $? = 1
@@ -12926,7 +12926,7 @@ configure:43862: checking for __fseterr
 configure:43862: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "___fseterr", referenced from:
-      _main in conftest-3b5eea.o
+      _main in conftest-943d63.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:43862: $? = 1
@@ -13738,8 +13738,8 @@ clang: note: diagnostic msg:
 
 PLEASE ATTACH THE FOLLOWING FILES TO THE BUG REPORT:
 Preprocessed source(s) and associated run script(s) are located at:
-clang: note: diagnostic msg: /var/folders/cj/m6v6x7m11k1dkrgvz8b0n_xw0000gn/T/conftest-f48c61.c
-clang: note: diagnostic msg: /var/folders/cj/m6v6x7m11k1dkrgvz8b0n_xw0000gn/T/conftest-f48c61.sh
+clang: note: diagnostic msg: /var/folders/cj/m6v6x7m11k1dkrgvz8b0n_xw0000gn/T/conftest-287f10.c
+clang: note: diagnostic msg: /var/folders/cj/m6v6x7m11k1dkrgvz8b0n_xw0000gn/T/conftest-287f10.sh
 clang: note: diagnostic msg: Crash backtrace is located in
 clang: note: diagnostic msg: /Users/sedwards/Library/Logs/DiagnosticReports/clang_<YYYY-MM-DD-HHMMSS>_<hostname>.crash
 clang: note: diagnostic msg: (choose the .crash file that corresponds to your crash)
@@ -14322,7 +14322,7 @@ configure:49686: checking for reallocarray
 configure:49686: gcc -o conftest -g -O2   conftest.c  >&5
 Undefined symbols for architecture arm64:
   "_reallocarray", referenced from:
-      _main in conftest-2747b1.o
+      _main in conftest-e1ca20.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:49686: $? = 1

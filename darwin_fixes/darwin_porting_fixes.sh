@@ -341,7 +341,7 @@ find . -name "Makefile" -exec sed -i '' 's/^@[A-Z0-9_]\{1,\}@//' {} +
 #!/bin/bash
 # header_fixes.sh
 
-HEADERS="fcntl.h sys/types.h sys/stat.h sys/select.h unistd.h stdlib.h string.h wchar.h wctype.h float.h sys/resource.h"
+HEADERS="fcntl.h sys/types.h sys/stat.h sys/select.h unistd.h stdlib.h string.h wchar.h wctype.h float.h sys/resource.h time.h sys/time.h stdio.h ctype.h"
 
 for h in $HEADERS; do
     echo "Converting $h to SDK proxy..."
