@@ -11,4 +11,3 @@
 #include_next <wctype.h>
 #undef _GL_ALREADY_INCLUDING_WCTYPE_H
 
-#endif /* _GL_WCTYPE_H */

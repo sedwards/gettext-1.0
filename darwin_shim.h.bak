@@ -44,16 +44,12 @@ extern "C" {
 # define O_BINARY 0
 #endif
 
+/* Allocation macro protection block to survive config.h redefinitions */
 #ifndef _DARWIN_ALLOC_PROTECT_
 #define _DARWIN_ALLOC_PROTECT_
-# ifndef xmalloc
 static inline void *xmalloc(size_t n) { void *p = malloc(n); if (!p && n) abort(); return p; }
-# endif
-# ifndef xrealloc
 static inline void *xrealloc(void *p, size_t n) { void *r = realloc(p, n); if (!r && n) abort(); return r; }
-# endif
 #endif
-
 #define XNMALLOC(n, t) ((t *) xmalloc ((n) * sizeof (t)))
 
 void error(int status, int errnum, const char *format, ...);

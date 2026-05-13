@@ -1,0 +1,23 @@
+# We will combine a master script that works
+# Runs with our configure requirements
+bash darwin_port.sh
+
+# Create proxy headers
+header_fixes3.sh
+
+# Correct wctype proxy
+fix_wctype.sh
+
+
+# Set this to your absolute gettext root directory path
+export GETTEXT_ROOT="/Users/sedwards/gtk/source/gettext-1.0"
+
+# Inject the include path into the global compiler flags
+export CPPFLAGS="-I$GETTEXT_ROOT $CPPFLAGS"
+export CFLAGS="-I$GETTEXT_ROOT $CFLAGS"
+export CXXFLAGS="-I$GETTEXT_ROOT $CXXFLAGS"
+
+# Run your build
+make V=1
+
+make CFLAGS="-I/Users/sedwards/gtk/source/gettext-1.0 $CFLAGS" V=1

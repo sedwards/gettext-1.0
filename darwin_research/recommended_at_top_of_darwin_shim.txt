@@ -1,0 +1,18 @@
+/* ... top of your darwin_shim.h ... */
+
+#include <sys/_types/_va_list.h>
+#include <sys/_types/_size_t.h>
+#include <sys/_types/_null.h>
+
+/* Complete circuit breaker for macOS FILE dependencies */
+#ifndef __sFILE_defined
+struct __sFILE;
+typedef struct __sFILE FILE;
+#define __sFILE_defined
+#define _FILE_DEFINED
+#endif
+
+/* Native macOS SDK Base Layer Inclusions */
+#include <stdio.h>
+/* ... rest of your darwin_shim.h ... */
+

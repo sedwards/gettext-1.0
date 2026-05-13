@@ -56,6 +56,9 @@ extern "C" {
 #endif
 EOF
 
+        # Ensure wctype.h is correct
+        bash fix_wctype.h 
+
         # Lock the file
         chmod 444 "$target"
     done
