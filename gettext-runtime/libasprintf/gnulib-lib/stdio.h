@@ -2,6 +2,10 @@
 # include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
 #endif
 
+#ifdef __APPLE__
+# include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
+#endif
+
 /* Darwin SDK Proxy Header */
 #ifndef sys_stdio_h
 #define sys_stdio_h

@@ -69,6 +69,12 @@ enum storage {
 #ifndef _GL_ATTRIBUTE_DEALLOC
 # define _GL_ATTRIBUTE_DEALLOC(f, g)
 #endif
+#ifndef _GL_ATTRIBUTE_FORMAT
+# define _GL_ATTRIBUTE_FORMAT(spec)
+#endif
+#ifndef _GL_ATTRIBUTE_SPEC_PRINTF_STANDARD
+# define _GL_ATTRIBUTE_SPEC_PRINTF_STANDARD 1
+#endif
 
 #ifndef _GL_CMP
 # define _GL_CMP(n1, n2) (((n1) > (n2)) - ((n1) < (n2)))
@@ -79,6 +85,12 @@ enum storage {
 #endif
 #ifndef LIBGETTEXTLIB_DLL_VARIABLE
 # define LIBGETTEXTLIB_DLL_VARIABLE
+#endif
+
+/* ARM64 Circuit Breaker: FPU Control Words do not exist on modern Mac Silicon hardware */
+#ifdef __arm64__
+# undef HAVE_FPUCW_H
+# define HAVE_FPUCW_H 0
 #endif
 
 /* Complete circuit breaker for macOS FILE dependencies in _wchar.h */
@@ -123,7 +135,7 @@ extern "C" {
 static inline void *xmalloc(size_t n) { void *p = malloc(n); if (!p && n) abort(); return p; }
 # endif
 # ifndef xrealloc
-#  define xrealloc config_h_hidden_xrealloc
+static inline void *xrealloc(void *p, size_t n) { void *r = realloc(p, n); if (!r && n) abort(); return r; }
 # endif
 #endif
 
@@ -146,14 +158,12 @@ const char *relocate(const char *pathname);
 #endif /* DARWIN_SHIM_H */
 EOF
 
-# Explicit target destinations for the shim file
 targets=(
     "./darwin_shim.h"
     "./gettext-tools/src/darwin_shim.h"
 )
 
 echo "Deploying absolute consolidated darwin_shim.h master records..."
-
 for target in "${targets[@]}"; do
     target_dir=$(dirname "$target")
     if [ -d "$target_dir" ]; then
@@ -162,7 +172,7 @@ for target in "${targets[@]}"; do
         cp darwin_shim.h.tmp "$target"
         chmod 444 "$target"
     else
-        echo "Skipping destination folder (Directory does not exist): $target_dir"
+        echo "Skipping destination folder: $target_dir"
     fi
 done
 

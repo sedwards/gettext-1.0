@@ -25,6 +25,9 @@ bash apply_absolute_shims.sh
 bash sync_and_link_unicode.sh
 
 
+Some other scripts may be deeted from the root upon verification
+
+
 
 # Set this to your absolute gettext root directory path
 export GETTEXT_ROOT="/Users/sedwards/gtk/source/gettext-1.0"
