@@ -1,9 +1,13 @@
+#ifdef __APPLE__
+# include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
+#endif
+
 #ifndef _GL_WCTYPE_H
 #define _GL_WCTYPE_H
 
 /* Force the universal shim to apply context first */
 #ifdef __APPLE__
-# include "darwin_shim.h"
+# include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
 #endif
 
 /* Allow Gnulib to include the actual macOS system header next */

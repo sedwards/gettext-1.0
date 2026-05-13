@@ -1,3 +1,7 @@
+#!/bin/bash
+
+# Define the complete consolidated payload for the master darwin_shim.h
+cat << 'EOF' > darwin_shim.h.tmp
 #ifndef DARWIN_SHIM_H
 #define DARWIN_SHIM_H
 
@@ -92,3 +96,28 @@ const char *relocate(const char *pathname);
 #endif
 
 #endif /* DARWIN_SHIM_H */
+EOF
+
+# Explicit target destinations for the shim file
+targets=(
+    "./darwin_shim.h"
+    "./gettext-tools/src/darwin_shim.h"
+)
+
+echo "Deploying absolute consolidated darwin_shim.h master records..."
+
+for target in "${targets[@]}"; do
+    target_dir=$(dirname "$target")
+    if [ -d "$target_dir" ]; then
+        echo "Writing macro master to: $target"
+        chmod +w "$target" 2>/dev/null
+        cp darwin_shim.h.tmp "$target"
+        chmod 444 "$target"
+    else
+        echo "Skipping destination folder (Directory does not exist): $target_dir"
+    fi
+done
+
+rm -f darwin_shim.h.tmp
+echo "All shims consolidated and active."
+

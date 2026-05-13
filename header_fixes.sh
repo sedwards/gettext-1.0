@@ -1,5 +1,5 @@
 #!/bin/bash
-# header_fixes.sh
+# header_fixes3.sh
 
 # Get the actual macOS SDK path to avoid infinite loops
 SDK_PATH=$(xcrun --show-sdk-path)
@@ -8,19 +8,23 @@ HEADERS="fcntl.h sys/types.h sys/stat.h sys/select.h unistd.h stdlib.h string.h 
 
 for h in $HEADERS; do
     echo "Converting $h to SDK proxy..."
+    
+    # Generate a clean macro-safe guard name (e.g., _DARWIN_PROXY_sys_types_h)
+    guard_name=$(echo "sys_${h}" | sed 's/[.\/]/_/g')
+    
     find . -path "*/$h" | while read -r target; do
-        # Unlock and delete
+        # Unlock and delete any existing Gnulib-generated blocks
         chmod 644 "$target" 2>/dev/null
         rm -f "$target"
         
-        # Ensure directory exists
+        # Ensure directory structure exists
         mkdir -p "$(dirname "$target")"
         
-        # Create the Proxy Header using absolute SDK paths
+        # Create the Base Proxy Header referencing the pristine Apple SDK
         cat > "$target" <<EOF
 /* Darwin SDK Proxy Header */
-#ifndef _DARWIN_PROXY_$h
-#define _DARWIN_PROXY_$h
+#ifndef ${guard_name}
+#define ${guard_name}
 
 #include <stddef.h>
 
@@ -51,23 +55,16 @@ extern "C" {
 #include "$SDK_PATH/usr/include/float.h"
 #include "$SDK_PATH/usr/include/sys/resource.h"
 
- 
-
-#endif
+#endif /* ${guard_name} */
 EOF
 
-        # Ensure wctype.h is correct
-        bash fix_wctype.h 
-
-        # Lock the file
+        # Lock the file down to octal 444 for macOS security compliance
         chmod 444 "$target"
     done
 done
 
 echo "Stripping Makefile placeholders..."
 find . -name "Makefile" -exec sed -i '' 's/@[A-Z0-9_]\{1,\}_H@//g' {} +
-    
-    # Satisfy dependencies for headers that might not exist in SDK but are needed by gnulib
-    #touch "$libdir/uchar.h"
-    #    chmod 444 "$target"
+
+echo "Base system alignment complete. Ready for specialized shim application."
 

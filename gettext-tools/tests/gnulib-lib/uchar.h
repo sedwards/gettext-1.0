@@ -2,7 +2,7 @@
 #define _GL_UCHAR_H
 
 #ifdef __APPLE__
-# include "darwin_shim.h"
+# include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
 # include <stdint.h>
 # include <stddef.h>
 

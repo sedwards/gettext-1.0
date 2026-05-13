@@ -1,32 +1,86 @@
 #ifndef DARWIN_SHIM_H
 #define DARWIN_SHIM_H
 
-#include <stddef.h>
+/* Force standard system features and architecture layouts */
+#include <sys/cdefs.h>
+#include <_types.h>
+
+/* Complete core Darwin mask properties */
+#define _CTYPE_A    0x00000100L
+#define _CTYPE_B    0x00000200L
+#define _DARWIN_CTYPE_A _CTYPE_A
+#define _DARWIN_CTYPE_B _CTYPE_B
+
+#define _CTYPE_C    0x00000400L
+#define _CTYPE_D    0x00000800L
+#define _CTYPE_G    0x00002000L
+#define _CTYPE_I    0x00004000L
+#define _CTYPE_L    0x00004000L
+#define _CTYPE_P    0x00010000L
+#define _CTYPE_Q    0x00200000L
+#define _CTYPE_R    0x00020000L
+#define _CTYPE_S    0x00040000L
+#define _CTYPE_T    0x00400000L
+#define _CTYPE_U    0x00080000L
+#define _CTYPE_X    0x00100000L
+
+/* Core prerequisite scalar types */
+#include <sys/_types/_va_list.h>
+#include <sys/_types/_size_t.h>
+#include <sys/_types/_null.h>
+
+/* Complete circuit breaker for macOS FILE dependencies in _wchar.h */
+#ifndef __sFILE_defined
+struct __sFILE;
+typedef struct __sFILE FILE;
+#define __sFILE_defined 1
+#define _FILE_DEFINED 1
+#define _FILE_DEFINED_
+#endif
+
+/* Native macOS SDK Base Layer Inclusions */
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdbool.h>
-#include <fcntl.h>
-#include <stdio.h>
+#include <ctype.h>
+#include <wchar.h>
+#include <wctype.h>
+
+/* Robust standard C fallback definition for static_assert */
+#undef static_assert
+#define _GL_PASTE(a, b) a ## b
+#define _GL_MANGLE(a, b) _GL_PASTE(a, b)
+#define static_assert(expr, ...) \
+   typedef int _GL_MANGLE(_compile_time_assert_, __LINE__)[(expr) ? 1 : -1] __attribute__((unused))
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-/* Gnulib Memory Wrappers */
-static inline void *xmalloc(size_t n) { 
-    void *p = malloc(n); if (!p && n) abort(); return p; 
-}
-static inline void *xrealloc(void *p, size_t n) { 
-    void *r = realloc(p, n); if (!r && n) abort(); return r; 
-}
+#ifndef GNULIB_LOCALEDIR
+# define GNULIB_LOCALEDIR "/Users/sedwards/gtk/share/locale"
+#endif
+#ifndef O_BINARY
+# define O_BINARY 0
+#endif
 
-/* Missing GNU Function Prototypes */
+/* Allocation macro protection block to survive config.h redefinitions */
+#ifndef _DARWIN_ALLOC_PROTECT_
+#define _DARWIN_ALLOC_PROTECT_
+# ifndef xmalloc
+static inline void *xmalloc(size_t n) { void *p = malloc(n); if (!p && n) abort(); return p; }
+# endif
+# ifndef xrealloc
+static inline void *xrealloc(void *p, size_t n) { void *r = realloc(p, n); if (!r && n) abort(); return r; }
+# endif
+#endif
+
+#define XNMALLOC(n, t) ((t *) xmalloc ((n) * sizeof (t)))
+
 void error(int status, int errnum, const char *format, ...);
-int fzprintf (FILE *stream, const char *format, ...);
 void xalloc_die(void);
-
-static inline int streq(const char *a, const char *b) { return strcmp(a, b) == 0; }
-static inline int memeq(const void *a, const void *b, size_t n) { return memcmp(a, b, n) == 0; }
+char *last_component(char const *name);
+const char *relocate(const char *pathname);
 
 #ifndef __environ
 # include <crt_externs.h>
