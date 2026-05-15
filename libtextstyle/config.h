@@ -1,9 +1,12 @@
 /* config.h.  Generated from config.h.in by configure.  */
-/* ==========================================================================
-   Native Darwin SDK Custom Bootstrapping Block (Forced Early Phase)
-   ========================================================================== */
 #ifdef __APPLE__
 # include "/Users/sedwards/gtk/source/gettext-1.0/darwin_shim.h"
 #endif
 
-/* ==========================================================================
+// ==========================================================================
+//   Native Darwin SDK Custom Bootstrapping Block (Forced Early Phase)
+//   ========================================================================
+#ifdef __APPLE__
+#endif
+
+// ==========================================================================

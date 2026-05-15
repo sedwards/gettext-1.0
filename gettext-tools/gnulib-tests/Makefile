@@ -16248,7 +16248,7 @@ uninstall-am: uninstall-pkgdataDATA
 # We need the following in order to create <endian.h> when the system
 # doesn't have one.
 @GL_GENERATE_ENDIAN_H_TRUE@endian.h: endian.in.h $(top_builddir)/config.status
-@GL_GENERATE_ENDIAN_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	@GL_GENERATE_ENDIAN_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
 @GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
 @GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
 @GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
@@ -16258,9 +16258,9 @@ uninstall-am: uninstall-pkgdataDATA
 @GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''HAVE_SYS_ENDIAN_H''@|$(HAVE_SYS_ENDIAN_H)|g' \
 @GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''ENDIAN_H_JUST_MISSING_STDINT''@|$(ENDIAN_H_JUST_MISSING_STDINT)|g' \
 @GL_GENERATE_ENDIAN_H_TRUE@	$(srcdir)/endian.in.h > $@-t
-@GL_GENERATE_ENDIAN_H_TRUE@	$(AM_V_at)mv $@-t $@
+	@GL_GENERATE_ENDIAN_H_TRUE@	$(AM_V_at)mv $@-t $@
 @GL_GENERATE_ENDIAN_H_FALSE@endian.h: $(top_builddir)/config.status
-@GL_GENERATE_ENDIAN_H_FALSE@	rm -f $@
+	@GL_GENERATE_ENDIAN_H_FALSE@	rm -f $@
 #test-localcharset-windows-utf8.res : $(srcdir)/windows-utf8.rc
 #	$(WINDRES) -i $(srcdir)/windows-utf8.rc -o test-localcharset-windows-utf8.res --output-format=coff
 #test-localename-windows-utf8.res : $(srcdir)/windows-utf8.rc

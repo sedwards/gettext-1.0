@@ -70,6 +70,8 @@
 #ifndef _GLTHREAD_THREAD_H
 #define _GLTHREAD_THREAD_H
 
+#include <config.h>
+
 /* This file uses _Noreturn, HAVE_THREADS_H, HAVE_PTHREAD_ATFORK.  */
 #if !_GL_CONFIG_H_INCLUDED
  #error "Please include config.h first."

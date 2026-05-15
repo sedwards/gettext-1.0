@@ -26,11 +26,11 @@
 /* Get size_t.  */
 #include <stddef.h>
 
-#if 
-# include <unistring/woe32dll.h>
-#else
+//#if 
+//#include <unistring/woe32dll.h>
+//#else
 # define LIBUNISTRING_DLL_VARIABLE
-#endif
+//#endif
 
 #ifdef __cplusplus
 extern "C" {

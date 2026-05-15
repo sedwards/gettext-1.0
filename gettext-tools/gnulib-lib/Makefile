@@ -11393,10 +11393,10 @@ assert.h: assert.in.h verify.h $(top_builddir)/config.status
 # We need the following in order to create <byteswap.h> when the system
 # doesn't have one.
 @GL_GENERATE_BYTESWAP_H_TRUE@byteswap.h: byteswap.in.h $(top_builddir)/config.status
-@GL_GENERATE_BYTESWAP_H_TRUE@	$(gl_V_at)$(SED_HEADER_TO_AT_t) $(srcdir)/byteswap.in.h
-@GL_GENERATE_BYTESWAP_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_BYTESWAP_H_FALSE@byteswap.h: $(top_builddir)/config.status
-@GL_GENERATE_BYTESWAP_H_FALSE@	rm -f $@
+	@GL_GENERATE_BYTESWAP_H_TRUE@	$(gl_V_at)$(SED_HEADER_TO_AT_t) $(srcdir)/byteswap.in.h
+	@GL_GENERATE_BYTESWAP_H_TRUE@	$(AM_V_at)mv $@-t $@
+	@GL_GENERATE_BYTESWAP_H_FALSE@byteswap.h: $(top_builddir)/config.status
+	@GL_GENERATE_BYTESWAP_H_FALSE@	rm -f $@
 
 # Listed in the same order as the GNU makefile conventions, and
 # provided by autoconf 2.59c+ or 2.70.
@@ -11599,47 +11599,47 @@ float.h: float.in.h $(top_builddir)/config.status
 
 # We need the following in order to create <fnmatch.h>.
 @GL_GENERATE_FNMATCH_H_TRUE@fnmatch.h: fnmatch.in.h $(top_builddir)/config.status $(CXXDEFS_H) $(ARG_NONNULL_H) $(WARN_ON_USE_H)
-@GL_GENERATE_FNMATCH_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
-@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''HAVE_FNMATCH_H''@|$(HAVE_FNMATCH_H)|g' \
-@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
-@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@||g' \
-@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''NEXT_FNMATCH_H''@|$(NEXT_FNMATCH_H)|g' \
-@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's/@''GNULIB_FNMATCH''@/$(GL_GNULIB_FNMATCH)/g' \
-@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''HAVE_FNMATCH''@|$(HAVE_FNMATCH)|g' \
-@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''REPLACE_FNMATCH''@|$(REPLACE_FNMATCH)|g' \
-@GL_GENERATE_FNMATCH_H_TRUE@	      -e '/definitions of _GL_FUNCDECL_RPL/r $(CXXDEFS_H)' \
-@GL_GENERATE_FNMATCH_H_TRUE@	      -e '/definition of _GL_ARG_NONNULL/r $(ARG_NONNULL_H)' \
-@GL_GENERATE_FNMATCH_H_TRUE@	      -e '/definition of _GL_WARN_ON_USE/r $(WARN_ON_USE_H)' \
-@GL_GENERATE_FNMATCH_H_TRUE@	      $(srcdir)/fnmatch.in.h > $@-t
-@GL_GENERATE_FNMATCH_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_FNMATCH_H_FALSE@fnmatch.h: $(top_builddir)/config.status
-@GL_GENERATE_FNMATCH_H_FALSE@	rm -f $@
+	@GL_GENERATE_FNMATCH_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''HAVE_FNMATCH_H''@|$(HAVE_FNMATCH_H)|g' \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''NEXT_FNMATCH_H''@|$(NEXT_FNMATCH_H)|g' \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's/@''GNULIB_FNMATCH''@/$(GL_GNULIB_FNMATCH)/g' \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''HAVE_FNMATCH''@|$(HAVE_FNMATCH)|g' \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      -e 's|@''REPLACE_FNMATCH''@|$(REPLACE_FNMATCH)|g' \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      -e '/definitions of _GL_FUNCDECL_RPL/r $(CXXDEFS_H)' \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      -e '/definition of _GL_ARG_NONNULL/r $(ARG_NONNULL_H)' \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      -e '/definition of _GL_WARN_ON_USE/r $(WARN_ON_USE_H)' \
+	@GL_GENERATE_FNMATCH_H_TRUE@	      $(srcdir)/fnmatch.in.h > $@-t
+	@GL_GENERATE_FNMATCH_H_TRUE@	$(AM_V_at)mv $@-t $@
+	@GL_GENERATE_FNMATCH_H_FALSE@fnmatch.h: $(top_builddir)/config.status
+	@GL_GENERATE_FNMATCH_H_FALSE@	rm -f $@
 
 # We need the following in order to create <getopt.h> when the system
 # doesn't have one that works with the given compiler.
 @GL_GENERATE_GETOPT_H_TRUE@getopt.h: getopt.in.h $(top_builddir)/config.status $(ARG_NONNULL_H)
-@GL_GENERATE_GETOPT_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_GETOPT_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
-@GL_GENERATE_GETOPT_H_TRUE@	      -e 's|@''HAVE_GETOPT_H''@|$(HAVE_GETOPT_H)|g' \
-@GL_GENERATE_GETOPT_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-@GL_GENERATE_GETOPT_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
-@GL_GENERATE_GETOPT_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@||g' \
-@GL_GENERATE_GETOPT_H_TRUE@	      -e 's|@''NEXT_GETOPT_H''@|$(NEXT_GETOPT_H)|g' \
-@GL_GENERATE_GETOPT_H_TRUE@	      -e '/definition of _GL_ARG_NONNULL/r $(ARG_NONNULL_H)' \
-@GL_GENERATE_GETOPT_H_TRUE@	      $(srcdir)/getopt.in.h > $@-t
-@GL_GENERATE_GETOPT_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_GETOPT_H_FALSE@getopt.h: $(top_builddir)/config.status
-@GL_GENERATE_GETOPT_H_FALSE@	rm -f $@
+	@GL_GENERATE_GETOPT_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	@GL_GENERATE_GETOPT_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
+	@GL_GENERATE_GETOPT_H_TRUE@	      -e 's|@''HAVE_GETOPT_H''@|$(HAVE_GETOPT_H)|g' \
+	@GL_GENERATE_GETOPT_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	@GL_GENERATE_GETOPT_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	@GL_GENERATE_GETOPT_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	@GL_GENERATE_GETOPT_H_TRUE@	      -e 's|@''NEXT_GETOPT_H''@|$(NEXT_GETOPT_H)|g' \
+	@GL_GENERATE_GETOPT_H_TRUE@	      -e '/definition of _GL_ARG_NONNULL/r $(ARG_NONNULL_H)' \
+	@GL_GENERATE_GETOPT_H_TRUE@	      $(srcdir)/getopt.in.h > $@-t
+	@GL_GENERATE_GETOPT_H_TRUE@	$(AM_V_at)mv $@-t $@
+	@GL_GENERATE_GETOPT_H_FALSE@getopt.h: $(top_builddir)/config.status
+	@GL_GENERATE_GETOPT_H_FALSE@	rm -f $@
 
 @GL_GENERATE_GETOPT_CDEFS_H_TRUE@getopt-cdefs.h: getopt-cdefs.in.h $(top_builddir)/config.status
-@GL_GENERATE_GETOPT_CDEFS_H_TRUE@	$(AM_V_GEN)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_GETOPT_CDEFS_H_TRUE@	  -e 's|@''HAVE_SYS_CDEFS_H''@|$(HAVE_SYS_CDEFS_H)|g' \
-@GL_GENERATE_GETOPT_CDEFS_H_TRUE@	  $(srcdir)/getopt-cdefs.in.h > $@-t
-@GL_GENERATE_GETOPT_CDEFS_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_GETOPT_CDEFS_H_FALSE@getopt-cdefs.h: $(top_builddir)/config.status
-@GL_GENERATE_GETOPT_CDEFS_H_FALSE@	rm -f $@
+	@GL_GENERATE_GETOPT_CDEFS_H_TRUE@	$(AM_V_GEN)$(SED_HEADER_STDOUT) \
+	@GL_GENERATE_GETOPT_CDEFS_H_TRUE@	  -e 's|@''HAVE_SYS_CDEFS_H''@|$(HAVE_SYS_CDEFS_H)|g' \
+	@GL_GENERATE_GETOPT_CDEFS_H_TRUE@	  $(srcdir)/getopt-cdefs.in.h > $@-t
+	@GL_GENERATE_GETOPT_CDEFS_H_TRUE@	$(AM_V_at)mv $@-t $@
+	@GL_GENERATE_GETOPT_CDEFS_H_FALSE@getopt-cdefs.h: $(top_builddir)/config.status
+	@GL_GENERATE_GETOPT_CDEFS_H_FALSE@	rm -f $@
 
 malloc/scratch_buffer.gl.h: malloc/scratch_buffer.h
 	$(AM_V_GEN)$(MKDIR_P) 'malloc'
@@ -12164,18 +12164,18 @@ netdb.h: netdb.in.h $(top_builddir)/config.status $(CXXDEFS_H) $(ARG_NONNULL_H) 
 # We need the following in order to create <netinet/in.h> when the system
 # doesn't have one.
 @GL_GENERATE_NETINET_IN_H_TRUE@netinet/in.h: netinet_in.in.h $(top_builddir)/config.status
-@GL_GENERATE_NETINET_IN_H_TRUE@	$(AM_V_GEN)$(MKDIR_P) 'netinet'
-@GL_GENERATE_NETINET_IN_H_TRUE@	$(AM_V_at)$(SED_HEADER_STDOUT) \
-@GL_GENERATE_NETINET_IN_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
-@GL_GENERATE_NETINET_IN_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-@GL_GENERATE_NETINET_IN_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
-@GL_GENERATE_NETINET_IN_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@||g' \
-@GL_GENERATE_NETINET_IN_H_TRUE@	      -e 's|@''NEXT_NETINET_IN_H''@|$(NEXT_NETINET_IN_H)|g' \
-@GL_GENERATE_NETINET_IN_H_TRUE@	      -e 's|@''HAVE_NETINET_IN_H''@|$(HAVE_NETINET_IN_H)|g' \
-@GL_GENERATE_NETINET_IN_H_TRUE@	      $(srcdir)/netinet_in.in.h > $@-t
-@GL_GENERATE_NETINET_IN_H_TRUE@	$(AM_V_at)mv $@-t $@
-@GL_GENERATE_NETINET_IN_H_FALSE@netinet/in.h: $(top_builddir)/config.status
-@GL_GENERATE_NETINET_IN_H_FALSE@	rm -f $@
+	@GL_GENERATE_NETINET_IN_H_TRUE@	$(AM_V_GEN)$(MKDIR_P) 'netinet'
+	@GL_GENERATE_NETINET_IN_H_TRUE@	$(AM_V_at)$(SED_HEADER_STDOUT) \
+	@GL_GENERATE_NETINET_IN_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
+	@GL_GENERATE_NETINET_IN_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+	@GL_GENERATE_NETINET_IN_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	@GL_GENERATE_NETINET_IN_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	@GL_GENERATE_NETINET_IN_H_TRUE@	      -e 's|@''NEXT_NETINET_IN_H''@|$(NEXT_NETINET_IN_H)|g' \
+	@GL_GENERATE_NETINET_IN_H_TRUE@	      -e 's|@''HAVE_NETINET_IN_H''@|$(HAVE_NETINET_IN_H)|g' \
+	@GL_GENERATE_NETINET_IN_H_TRUE@	      $(srcdir)/netinet_in.in.h > $@-t
+	@GL_GENERATE_NETINET_IN_H_TRUE@	$(AM_V_at)mv $@-t $@
+	@GL_GENERATE_NETINET_IN_H_FALSE@netinet/in.h: $(top_builddir)/config.status
+	@GL_GENERATE_NETINET_IN_H_FALSE@	rm -f $@
 
 # We need the following in order to create <obstack.h> when the system
 # doesn't have one that works with any size object.
@@ -12475,7 +12475,7 @@ stdarg.h: $(top_builddir)/config.status
 # We need the following in order to create <stdbit.h> when the system
 # doesn't have one that works with the given compiler.
 @GL_GENERATE_STDBIT_H_TRUE@stdbit.h: stdbit.in.h $(top_builddir)/config.status
-@GL_GENERATE_STDBIT_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
+	@GL_GENERATE_STDBIT_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
 @GL_GENERATE_STDBIT_H_TRUE@	  -e 's/@''HAVE_STDBIT_H''@/$(HAVE_STDBIT_H)/g' \
 @GL_GENERATE_STDBIT_H_TRUE@	  -e 's/@''GUARD_PREFIX''@/$(GUARD_PREFIX)/g' \
 @GL_GENERATE_STDBIT_H_TRUE@	  -e 's/@''PRAGMA_SYSTEM_HEADER''@/$(PRAGMA_SYSTEM_HEADER)/g' \
@@ -12505,9 +12505,9 @@ stdarg.h: $(top_builddir)/config.status
 @GL_GENERATE_STDBIT_H_TRUE@	  -e 's/@''GNULIB_STDC_STORE8_ALIGNED''@/$(GL_GNULIB_STDC_STORE8_ALIGNED)/g' \
 @GL_GENERATE_STDBIT_H_TRUE@	  -e 's/@''GNULIB_STDC_STORE8''@/$(GL_GNULIB_STDC_STORE8)/g' \
 @GL_GENERATE_STDBIT_H_TRUE@	  $(srcdir)/stdbit.in.h > $@-t
-@GL_GENERATE_STDBIT_H_TRUE@	$(AM_V_at)mv $@-t $@
+	@GL_GENERATE_STDBIT_H_TRUE@	$(AM_V_at)mv $@-t $@
 @GL_GENERATE_STDBIT_H_FALSE@stdbit.h: $(top_builddir)/config.status
-@GL_GENERATE_STDBIT_H_FALSE@	rm -f $@
+	@GL_GENERATE_STDBIT_H_FALSE@	rm -f $@
 
 # We need the following in order to create <stdckdint.h> when the system
 # doesn't have one that works with the given compiler.

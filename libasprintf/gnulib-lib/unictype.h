@@ -1,1 +1,1 @@
-/./libtextstyle/lib/unictype.h
+libtextstyle/lib/unictype.h
