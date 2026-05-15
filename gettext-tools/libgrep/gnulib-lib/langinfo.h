@@ -28,8 +28,8 @@
 
 
 /* The include_next requires a split double-inclusion guard.  */
-#if 1
-# include_next <langinfo.h>
+#if 
+# include_next 
 #endif
 
 #ifndef _GL_GRGL_LANGINFO_H
@@ -41,7 +41,7 @@
 #endif
 
 
-#if !1
+#if !
 
 /* A platform that lacks <langinfo.h>.  */
 

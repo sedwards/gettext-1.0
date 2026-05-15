@@ -539,7 +539,7 @@ ECHO_C = \c
 ECHO_N = 
 ECHO_T = 
 EGREP = /usr/bin/grep -E
-ENABLE_SHARED = yes
+ENABLE_SHARED = no
 ERRNO_H = 
 ETAGS = etags
 EXEEXT = 
@@ -2680,19 +2680,19 @@ envsubst-envsubst.obj: envsubst.c
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(envsubst_CFLAGS) $(CFLAGS) -c -o envsubst-envsubst.obj `if test -f 'envsubst.c'; then $(CYGPATH_W) 'envsubst.c'; else $(CYGPATH_W) '$(srcdir)/envsubst.c'; fi`
 
-gettext-gettext.o darwin_linker_stubs.o: gettext.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(gettext_CFLAGS) $(CFLAGS) -MT gettext-gettext.o darwin_linker_stubs.o -MD -MP -MF $(DEPDIR)/gettext-gettext.Tpo -c -o gettext-gettext.o darwin_linker_stubs.o `test -f 'gettext.c' || echo '$(srcdir)/'`gettext.c
+gettext-gettext.o: gettext.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(gettext_CFLAGS) $(CFLAGS) -MT gettext-gettext.o -MD -MP -MF $(DEPDIR)/gettext-gettext.Tpo -c -o gettext-gettext.o `test -f 'gettext.c' || echo '$(srcdir)/'`gettext.c
 #	$(AM_V_at)$(am__mv) $(DEPDIR)/gettext-gettext.Tpo $(DEPDIR)/gettext-gettext.Po
-#	$(AM_V_CC)source='gettext.c' object='gettext-gettext.o darwin_linker_stubs.o' libtool=no 
+#	$(AM_V_CC)source='gettext.c' object='gettext-gettext.o' libtool=no 
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(gettext_CFLAGS) $(CFLAGS) -c -o gettext-gettext.o darwin_linker_stubs.o `test -f 'gettext.c' || echo '$(srcdir)/'`gettext.c
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(gettext_CFLAGS) $(CFLAGS) -c -o gettext-gettext.o `test -f 'gettext.c' || echo '$(srcdir)/'`gettext.c
 
-gettext-gettext.o darwin_linker_stubs.obj: gettext.c
-#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(gettext_CFLAGS) $(CFLAGS) -MT gettext-gettext.o darwin_linker_stubs.obj -MD -MP -MF $(DEPDIR)/gettext-gettext.Tpo -c -o gettext-gettext.o darwin_linker_stubs.obj `if test -f 'gettext.c'; then $(CYGPATH_W) 'gettext.c'; else $(CYGPATH_W) '$(srcdir)/gettext.c'; fi`
+gettext-gettext.obj: gettext.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(gettext_CFLAGS) $(CFLAGS) -MT gettext-gettext.obj -MD -MP -MF $(DEPDIR)/gettext-gettext.Tpo -c -o gettext-gettext.obj `if test -f 'gettext.c'; then $(CYGPATH_W) 'gettext.c'; else $(CYGPATH_W) '$(srcdir)/gettext.c'; fi`
 #	$(AM_V_at)$(am__mv) $(DEPDIR)/gettext-gettext.Tpo $(DEPDIR)/gettext-gettext.Po
-#	$(AM_V_CC)source='gettext.c' object='gettext-gettext.o darwin_linker_stubs.obj' libtool=no 
+#	$(AM_V_CC)source='gettext.c' object='gettext-gettext.obj' libtool=no 
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) 
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(gettext_CFLAGS) $(CFLAGS) -c -o gettext-gettext.o darwin_linker_stubs.obj `if test -f 'gettext.c'; then $(CYGPATH_W) 'gettext.c'; else $(CYGPATH_W) '$(srcdir)/gettext.c'; fi`
+	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(gettext_CFLAGS) $(CFLAGS) -c -o gettext-gettext.obj `if test -f 'gettext.c'; then $(CYGPATH_W) 'gettext.c'; else $(CYGPATH_W) '$(srcdir)/gettext.c'; fi`
 
 ngettext-ngettext.o: ngettext.c
 #	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ngettext_CFLAGS) $(CFLAGS) -MT ngettext-ngettext.o -MD -MP -MF $(DEPDIR)/ngettext-ngettext.Tpo -c -o ngettext-ngettext.o `test -f 'ngettext.c' || echo '$(srcdir)/'`ngettext.c

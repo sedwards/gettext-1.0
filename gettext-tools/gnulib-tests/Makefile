@@ -549,22 +549,22 @@ check_PROGRAMS = test-accept$(EXEEXT) test-access$(EXEEXT) \
 	test-xstring-desc$(EXEEXT) test-xstrtol$(EXEEXT) \
 	test-xstrtoul$(EXEEXT) test-xvasprintf$(EXEEXT)
 EXTRA_PROGRAMS = test-verify-try$(EXEEXT)
-am__append_1 = accept.c
-am__append_2 = bind.c
+@GL_COND_OBJ_ACCEPT_TRUE@am__append_1 = accept.c
+@GL_COND_OBJ_BIND_TRUE@am__append_2 = bind.c
 am__append_3 = c32rtomb.c
-am__append_4 = connect.c
-am__append_5 = creat.c
-am__append_6 = endian.c
-am__append_7 = fflush.c
-am__append_8 = fpurge.c
-am__append_9 = freopen.c
-am__append_10 = fseek.c
-am__append_11 = fseeko.c
-am__append_12 = ftruncate.c
-am__append_13 = getpagesize.c
-am__append_14 = ioctl.c
-am__append_15 = link.c
-am__append_16 = listen.c
+@GL_COND_OBJ_CONNECT_TRUE@am__append_4 = connect.c
+@GL_COND_OBJ_CREAT_TRUE@am__append_5 = creat.c
+@GL_GENERATE_ENDIAN_H_TRUE@am__append_6 = endian.c
+@GL_COND_OBJ_FFLUSH_TRUE@am__append_7 = fflush.c
+@GL_COND_OBJ_FPURGE_TRUE@am__append_8 = fpurge.c
+@GL_COND_OBJ_FREOPEN_TRUE@am__append_9 = freopen.c
+@GL_COND_OBJ_FSEEK_TRUE@am__append_10 = fseek.c
+@GL_COND_OBJ_FSEEKO_TRUE@am__append_11 = fseeko.c
+@GL_COND_OBJ_FTRUNCATE_TRUE@am__append_12 = ftruncate.c
+@GL_COND_OBJ_GETPAGESIZE_TRUE@am__append_13 = getpagesize.c
+@GL_COND_OBJ_IOCTL_TRUE@am__append_14 = ioctl.c
+@GL_COND_OBJ_LINK_TRUE@am__append_15 = link.c
+@GL_COND_OBJ_LISTEN_TRUE@am__append_16 = listen.c
 #am__append_17 = test-localcharset-w32utf8.sh
 #am__append_18 = test-localcharset-w32utf8 \
 #	test-localename-w32utf8 \
@@ -575,53 +575,53 @@ am__append_16 = listen.c
 #	test-mbrtowc-windows-utf8.res
 #am__append_20 = test-localename-w32utf8.sh
 #am__append_21 = test-mbrtowc-w32utf8.sh
-am__append_22 = mkfifo.c
-am__append_23 = nanosleep.c
-am__append_24 = perror.c
-am__append_25 = pselect.c
-am__append_26 = pthread-cond.c
-am__append_27 = pthread-mutex.c
-am__append_28 = pthread-rwlock.c
-am__append_29 = pthread-thread.c
-am__append_30 = pthread_mutex_timedlock.c
-am__append_31 = putenv.c
-am__append_32 = random.c
-am__append_33 = random_r.c
-am__append_34 = sched_yield.c
-am__append_35 = select.c
+@GL_COND_OBJ_MKFIFO_TRUE@am__append_22 = mkfifo.c
+@GL_COND_OBJ_NANOSLEEP_TRUE@am__append_23 = nanosleep.c
+@GL_COND_OBJ_PERROR_TRUE@am__append_24 = perror.c
+@GL_COND_OBJ_PSELECT_TRUE@am__append_25 = pselect.c
+@GL_COND_OBJ_PTHREAD_COND_TRUE@am__append_26 = pthread-cond.c
+@GL_COND_OBJ_PTHREAD_MUTEX_TRUE@am__append_27 = pthread-mutex.c
+@GL_COND_OBJ_PTHREAD_RWLOCK_TRUE@am__append_28 = pthread-rwlock.c
+@GL_COND_OBJ_PTHREAD_THREAD_TRUE@am__append_29 = pthread-thread.c
+@GL_COND_OBJ_PTHREAD_MUTEX_TIMEDLOCK_TRUE@am__append_30 = pthread_mutex_timedlock.c
+@GL_COND_OBJ_PUTENV_TRUE@am__append_31 = putenv.c
+@GL_COND_OBJ_RANDOM_TRUE@am__append_32 = random.c
+@GL_COND_OBJ_RANDOM_R_TRUE@am__append_33 = random_r.c
+@GL_COND_OBJ_SCHED_YIELD_TRUE@am__append_34 = sched_yield.c
+@GL_COND_OBJ_SELECT_TRUE@am__append_35 = select.c
 #am__append_36 = test-setlocale-w32utf8.sh
 #am__append_37 = test-setlocale-w32utf8
 #am__append_38 = test-setlocale-windows-utf8.res
-am__append_39 = setsockopt.c
+@GL_COND_OBJ_SETSOCKOPT_TRUE@am__append_39 = setsockopt.c
 
 # Work around https://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=57213
-am__append_40 = test-sigprocmask
-am__append_41 = sleep.c
-am__append_42 = socket.c
-am__append_43 = symlink.c
-am__append_44 = symlinkat.c
-am__append_45 = time.c
+@OS_IS_NETBSD_FALSE@am__append_40 = test-sigprocmask
+@GL_COND_OBJ_SLEEP_TRUE@am__append_41 = sleep.c
+@GL_COND_OBJ_SOCKET_TRUE@am__append_42 = socket.c
+@GL_COND_OBJ_SYMLINK_TRUE@am__append_43 = symlink.c
+@GL_COND_OBJ_SYMLINKAT_TRUE@am__append_44 = symlinkat.c
+@GL_COND_OBJ_TIME_TRUE@am__append_45 = time.c
 
 # Unlike other libunistring modules, this test passes only when the
 # same version of uniname/uniname.c is used (even if it is newer).
-am__append_46 = uniname/test-uninames.sh
-am__append_47 = test-uninames
-am__append_48 = unistr/u16-cmp.c
-am__append_49 = unistr/u32-cmp.c
-am__append_50 = unistr/u32-set.c
-am__append_51 = unistr/u8-cmp.c
-am__append_52 = unistr/u8-strlen.c
-am__append_53 = unlinkat.c
-am__append_54 = usleep.c
-am__append_55 = test-usleep
+@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@am__append_46 = uniname/test-uninames.sh
+@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@am__append_47 = test-uninames
+@LIBUNISTRING_COMPILE_UNISTR_U16_CMP_TRUE@am__append_48 = unistr/u16-cmp.c
+@LIBUNISTRING_COMPILE_UNISTR_U32_CMP_TRUE@am__append_49 = unistr/u32-cmp.c
+@LIBUNISTRING_COMPILE_UNISTR_U32_SET_TRUE@am__append_50 = unistr/u32-set.c
+@LIBUNISTRING_COMPILE_UNISTR_U8_CMP_TRUE@am__append_51 = unistr/u8-cmp.c
+@LIBUNISTRING_COMPILE_UNISTR_U8_STRLEN_TRUE@am__append_52 = unistr/u8-strlen.c
+@GL_COND_OBJ_UNLINKAT_TRUE@am__append_53 = unlinkat.c
+@GL_COND_OBJ_USLEEP_TRUE@am__append_54 = usleep.c
+@OS_IS_CYGWIN_FALSE@am__append_55 = test-usleep
 #am__append_56 = wcrtomb.c
-am__append_57 = wctob.c
-am__append_58 = wctomb.c
-am__append_59 = windows-cond.c
+@GL_COND_OBJ_WCTOB_TRUE@am__append_57 = wctob.c
+@GL_COND_OBJ_WCTOMB_TRUE@am__append_58 = wctomb.c
+@GL_COND_OBJ_WINDOWS_COND_TRUE@am__append_59 = windows-cond.c
 #am__append_60 = windows-thread.c
-am__append_61 = windows-timedmutex.c
-am__append_62 = windows-timedrecmutex.c
-am__append_63 = windows-timedrwlock.c
+@GL_COND_OBJ_WINDOWS_TIMEDMUTEX_TRUE@am__append_61 = windows-timedmutex.c
+@GL_COND_OBJ_WINDOWS_TIMEDRECMUTEX_TRUE@am__append_62 = windows-timedrecmutex.c
+@GL_COND_OBJ_WINDOWS_TIMEDRWLOCK_TRUE@am__append_63 = windows-timedrwlock.c
 subdir = gnulib-tests
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/tests/gnulib-m4/gnulib-comp.m4 \
@@ -1034,7 +1034,7 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/../build-aux/mkinstalldirs
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
-am__EXEEXT_1 = test-uninames$(EXEEXT)
+@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@am__EXEEXT_1 = test-uninames$(EXEEXT)
 #am__EXEEXT_2 =  \
 #	test-localcharset-w32utf8$(EXEEXT) \
 #	test-localename-w32utf8$(EXEEXT) \
@@ -1070,64 +1070,64 @@ am__libtests_a_SOURCES_DIST = accept.c copy-acl.c set-acl.c \
 	windows-timedmutex.c windows-timedrecmutex.c \
 	windows-timedrwlock.c xgetcwd.c gl_xoset.h gl_xoset.c \
 	xstrtol-error.c glthread/yield.h
-am__objects_1 = accept.$(OBJEXT)
-am__objects_2 = bind.$(OBJEXT)
+@GL_COND_OBJ_ACCEPT_TRUE@am__objects_1 = accept.$(OBJEXT)
+@GL_COND_OBJ_BIND_TRUE@am__objects_2 = bind.$(OBJEXT)
 am__objects_3 = c32rtomb.$(OBJEXT)
-am__objects_4 = connect.$(OBJEXT)
-am__objects_5 = creat.$(OBJEXT)
-am__objects_6 = endian.$(OBJEXT)
-am__objects_7 = fflush.$(OBJEXT)
-am__objects_8 = fpurge.$(OBJEXT)
-am__objects_9 = freopen.$(OBJEXT)
-am__objects_10 = fseek.$(OBJEXT)
-am__objects_11 = fseeko.$(OBJEXT)
-am__objects_12 = ftruncate.$(OBJEXT)
-am__objects_13 = getpagesize.$(OBJEXT)
-am__objects_14 = ioctl.$(OBJEXT)
-am__objects_15 = link.$(OBJEXT)
-am__objects_16 = listen.$(OBJEXT)
-am__objects_17 = mkfifo.$(OBJEXT)
-am__objects_18 = nanosleep.$(OBJEXT)
-am__objects_19 = perror.$(OBJEXT)
-am__objects_20 = pselect.$(OBJEXT)
-am__objects_21 =  \
-	pthread-cond.$(OBJEXT)
-am__objects_22 =  \
-	pthread-mutex.$(OBJEXT)
-am__objects_23 =  \
-	pthread-rwlock.$(OBJEXT)
-am__objects_24 =  \
-	pthread-thread.$(OBJEXT)
-am__objects_25 = pthread_mutex_timedlock.$(OBJEXT)
-am__objects_26 = putenv.$(OBJEXT)
-am__objects_27 = random.$(OBJEXT)
-am__objects_28 = random_r.$(OBJEXT)
-am__objects_29 = sched_yield.$(OBJEXT)
-am__objects_30 = select.$(OBJEXT)
-am__objects_31 = setsockopt.$(OBJEXT)
-am__objects_32 = sleep.$(OBJEXT)
-am__objects_33 = socket.$(OBJEXT)
-am__objects_34 = symlink.$(OBJEXT)
-am__objects_35 = symlinkat.$(OBJEXT)
+@GL_COND_OBJ_CONNECT_TRUE@am__objects_4 = connect.$(OBJEXT)
+@GL_COND_OBJ_CREAT_TRUE@am__objects_5 = creat.$(OBJEXT)
+@GL_GENERATE_ENDIAN_H_TRUE@am__objects_6 = endian.$(OBJEXT)
+@GL_COND_OBJ_FFLUSH_TRUE@am__objects_7 = fflush.$(OBJEXT)
+@GL_COND_OBJ_FPURGE_TRUE@am__objects_8 = fpurge.$(OBJEXT)
+@GL_COND_OBJ_FREOPEN_TRUE@am__objects_9 = freopen.$(OBJEXT)
+@GL_COND_OBJ_FSEEK_TRUE@am__objects_10 = fseek.$(OBJEXT)
+@GL_COND_OBJ_FSEEKO_TRUE@am__objects_11 = fseeko.$(OBJEXT)
+@GL_COND_OBJ_FTRUNCATE_TRUE@am__objects_12 = ftruncate.$(OBJEXT)
+@GL_COND_OBJ_GETPAGESIZE_TRUE@am__objects_13 = getpagesize.$(OBJEXT)
+@GL_COND_OBJ_IOCTL_TRUE@am__objects_14 = ioctl.$(OBJEXT)
+@GL_COND_OBJ_LINK_TRUE@am__objects_15 = link.$(OBJEXT)
+@GL_COND_OBJ_LISTEN_TRUE@am__objects_16 = listen.$(OBJEXT)
+@GL_COND_OBJ_MKFIFO_TRUE@am__objects_17 = mkfifo.$(OBJEXT)
+@GL_COND_OBJ_NANOSLEEP_TRUE@am__objects_18 = nanosleep.$(OBJEXT)
+@GL_COND_OBJ_PERROR_TRUE@am__objects_19 = perror.$(OBJEXT)
+@GL_COND_OBJ_PSELECT_TRUE@am__objects_20 = pselect.$(OBJEXT)
+@GL_COND_OBJ_PTHREAD_COND_TRUE@am__objects_21 =  \
+@GL_COND_OBJ_PTHREAD_COND_TRUE@	pthread-cond.$(OBJEXT)
+@GL_COND_OBJ_PTHREAD_MUTEX_TRUE@am__objects_22 =  \
+@GL_COND_OBJ_PTHREAD_MUTEX_TRUE@	pthread-mutex.$(OBJEXT)
+@GL_COND_OBJ_PTHREAD_RWLOCK_TRUE@am__objects_23 =  \
+@GL_COND_OBJ_PTHREAD_RWLOCK_TRUE@	pthread-rwlock.$(OBJEXT)
+@GL_COND_OBJ_PTHREAD_THREAD_TRUE@am__objects_24 =  \
+@GL_COND_OBJ_PTHREAD_THREAD_TRUE@	pthread-thread.$(OBJEXT)
+@GL_COND_OBJ_PTHREAD_MUTEX_TIMEDLOCK_TRUE@am__objects_25 = pthread_mutex_timedlock.$(OBJEXT)
+@GL_COND_OBJ_PUTENV_TRUE@am__objects_26 = putenv.$(OBJEXT)
+@GL_COND_OBJ_RANDOM_TRUE@am__objects_27 = random.$(OBJEXT)
+@GL_COND_OBJ_RANDOM_R_TRUE@am__objects_28 = random_r.$(OBJEXT)
+@GL_COND_OBJ_SCHED_YIELD_TRUE@am__objects_29 = sched_yield.$(OBJEXT)
+@GL_COND_OBJ_SELECT_TRUE@am__objects_30 = select.$(OBJEXT)
+@GL_COND_OBJ_SETSOCKOPT_TRUE@am__objects_31 = setsockopt.$(OBJEXT)
+@GL_COND_OBJ_SLEEP_TRUE@am__objects_32 = sleep.$(OBJEXT)
+@GL_COND_OBJ_SOCKET_TRUE@am__objects_33 = socket.$(OBJEXT)
+@GL_COND_OBJ_SYMLINK_TRUE@am__objects_34 = symlink.$(OBJEXT)
+@GL_COND_OBJ_SYMLINKAT_TRUE@am__objects_35 = symlinkat.$(OBJEXT)
 am__dirstamp = $(am__leading_dot)dirstamp
-am__objects_36 = time.$(OBJEXT)
-am__objects_37 = unistr/u16-cmp.$(OBJEXT)
-am__objects_38 = unistr/u32-cmp.$(OBJEXT)
-am__objects_39 = unistr/u32-set.$(OBJEXT)
-am__objects_40 = unistr/u8-cmp.$(OBJEXT)
-am__objects_41 = unistr/u8-strlen.$(OBJEXT)
-am__objects_42 = unlinkat.$(OBJEXT)
-am__objects_43 = usleep.$(OBJEXT)
+@GL_COND_OBJ_TIME_TRUE@am__objects_36 = time.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNISTR_U16_CMP_TRUE@am__objects_37 = unistr/u16-cmp.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNISTR_U32_CMP_TRUE@am__objects_38 = unistr/u32-cmp.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNISTR_U32_SET_TRUE@am__objects_39 = unistr/u32-set.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNISTR_U8_CMP_TRUE@am__objects_40 = unistr/u8-cmp.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNISTR_U8_STRLEN_TRUE@am__objects_41 = unistr/u8-strlen.$(OBJEXT)
+@GL_COND_OBJ_UNLINKAT_TRUE@am__objects_42 = unlinkat.$(OBJEXT)
+@GL_COND_OBJ_USLEEP_TRUE@am__objects_43 = usleep.$(OBJEXT)
 #am__objects_44 = wcrtomb.$(OBJEXT)
-am__objects_45 = wctob.$(OBJEXT)
-am__objects_46 = wctomb.$(OBJEXT)
-am__objects_47 =  \
-	windows-cond.$(OBJEXT)
+@GL_COND_OBJ_WCTOB_TRUE@am__objects_45 = wctob.$(OBJEXT)
+@GL_COND_OBJ_WCTOMB_TRUE@am__objects_46 = wctomb.$(OBJEXT)
+@GL_COND_OBJ_WINDOWS_COND_TRUE@am__objects_47 =  \
+@GL_COND_OBJ_WINDOWS_COND_TRUE@	windows-cond.$(OBJEXT)
 #am__objects_48 =  \
 #	windows-thread.$(OBJEXT)
-am__objects_49 = windows-timedmutex.$(OBJEXT)
-am__objects_50 = windows-timedrecmutex.$(OBJEXT)
-am__objects_51 = windows-timedrwlock.$(OBJEXT)
+@GL_COND_OBJ_WINDOWS_TIMEDMUTEX_TRUE@am__objects_49 = windows-timedmutex.$(OBJEXT)
+@GL_COND_OBJ_WINDOWS_TIMEDRECMUTEX_TRUE@am__objects_50 = windows-timedrecmutex.$(OBJEXT)
+@GL_COND_OBJ_WINDOWS_TIMEDRWLOCK_TRUE@am__objects_51 = windows-timedrwlock.$(OBJEXT)
 am_libtests_a_OBJECTS = $(am__objects_1) copy-acl.$(OBJEXT) \
 	set-acl.$(OBJEXT) gl_array_map.$(OBJEXT) \
 	gl_array_oset.$(OBJEXT) gl_array_set.$(OBJEXT) \
@@ -3204,9 +3204,9 @@ test_uniname_h_OBJECTS = $(am_test_uniname_h_OBJECTS)
 test_uniname_h_DEPENDENCIES = $(am__DEPENDENCIES_2) \
 	$(am__DEPENDENCIES_1)
 am__test_uninames_SOURCES_DIST = uniname/test-uninames.c
-am_test_uninames_OBJECTS = uniname/test-uninames.$(OBJEXT)
+@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@am_test_uninames_OBJECTS = uniname/test-uninames.$(OBJEXT)
 test_uninames_OBJECTS = $(am_test_uninames_OBJECTS)
-test_uninames_DEPENDENCIES = $(am__DEPENDENCIES_2)
+@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@test_uninames_DEPENDENCIES = $(am__DEPENDENCIES_2)
 am_test_uninorm_h_OBJECTS = uninorm/test-uninorm-h.$(OBJEXT)
 test_uninorm_h_OBJECTS = $(am_test_uninorm_h_OBJECTS)
 test_uninorm_h_DEPENDENCIES = $(am__DEPENDENCIES_2) \
@@ -4248,18 +4248,18 @@ case "$@" in						\
 esac;							\
 test "x$$am__odir" = x"." || test -d "$$am__odir" 	\
   || $(MKDIR_P) "$$am__odir" || exit $$?;		\
-# if test -f "./$$f"; then dir=./;			\
+if test -f "./$$f"; then dir=./;			\
 elif test -f "$$f"; then dir=;				\
-# else dir="$(srcdir)/"; fi;				\
+else dir="$(srcdir)/"; fi;				\
 tst=$$dir$$f; log='$@'; 				\
-# if test -n '$(IGNORE_SKIPPED_LOGS)'; then		\
+if test -n '$(IGNORE_SKIPPED_LOGS)'; then		\
   am__collect_skipped_logs='--collect-skipped-logs no';	\
-# else							\
+else							\
   am__collect_skipped_logs='';				\
 fi;							\
-# if test -n '$(DISABLE_HARD_ERRORS)'; then		\
+if test -n '$(DISABLE_HARD_ERRORS)'; then		\
   am__enable_hard_errors=no; 				\
-# else							\
+else							\
   am__enable_hard_errors=yes; 				\
 fi; 							\
 case " $(XFAIL_TESTS) " in				\
@@ -4282,8 +4282,8 @@ am__set_TESTS_bases = \
   bases=`echo $$bases`
 AM_TESTSUITE_SUMMARY_HEADER = ' for $(PACKAGE_STRING)'
 RECHECK_LOGS = $(TEST_LOGS)
-am__EXEEXT_4 = test-sigprocmask$(EXEEXT)
-am__EXEEXT_5 = test-usleep$(EXEEXT)
+@OS_IS_NETBSD_FALSE@am__EXEEXT_4 = test-sigprocmask$(EXEEXT)
+@OS_IS_CYGWIN_FALSE@am__EXEEXT_5 = test-usleep$(EXEEXT)
 TEST_SUITE_LOG = test-suite.log
 TEST_EXTENSIONS =  .test
 LOG_DRIVER = $(SHELL) $(top_srcdir)/../build-aux/test-driver
@@ -7159,8 +7159,8 @@ NEXT_AS_FIRST_DIRECTIVE_UNISTD_H = <unistd.h>
 NEXT_AS_FIRST_DIRECTIVE_UTIME_H = 
 NEXT_AS_FIRST_DIRECTIVE_WCHAR_H = <wchar.h>
 NEXT_AS_FIRST_DIRECTIVE_WCTYPE_H = <wctype.h>
-NEXT_CTYPE_H = 
-NEXT_DIRENT_H = 
+NEXT_CTYPE_H = <ctype.h>
+NEXT_DIRENT_H = <dirent.h>
 NEXT_ENDIAN_H = 
 NEXT_ERRNO_H = 
 NEXT_ERROR_H = <error.h>
@@ -7193,13 +7193,13 @@ NEXT_STRING_H = <string.h>
 NEXT_SYS_IOCTL_H = 
 NEXT_SYS_RANDOM_H = 
 NEXT_SYS_RESOURCE_H = 
-NEXT_SYS_SELECT_H = 
+NEXT_SYS_SELECT_H = <sys/select.h>
 NEXT_SYS_SOCKET_H = 
 NEXT_SYS_STAT_H = <sys/stat.h>
 NEXT_SYS_TIME_H = 
 NEXT_SYS_TYPES_H = <sys/types.h>
 NEXT_SYS_UIO_H = 
-NEXT_SYS_WAIT_H = 
+NEXT_SYS_WAIT_H = <sys/wait.h>
 NEXT_TIME_H = <time.h>
 NEXT_UCHAR_H = <uchar.h>
 NEXT_UNISTD_H = <unistd.h>
@@ -8655,8 +8655,8 @@ test_u8_width_linebreaks_SOURCES = unilbrk/test-u8-width-linebreaks.c
 test_u8_width_linebreaks_LDADD = $(LDADD) $(LIBUNISTRING)
 test_uniname_h_SOURCES = uniname/test-uniname-h.c
 test_uniname_h_LDADD = $(LDADD) $(LIBUNISTRING)
-test_uninames_SOURCES = uniname/test-uninames.c
-test_uninames_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
+@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@test_uninames_SOURCES = uniname/test-uninames.c
+@LIBUNISTRING_COMPILE_UNINAME_UNINAME_TRUE@test_uninames_LDADD = $(LDADD) ${top_builddir}/../gettext-runtime/intl/libintl.la   -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices
 test_uninorm_h_SOURCES = uninorm/test-uninorm-h.c
 test_uninorm_h_LDADD = $(LDADD) $(LIBUNISTRING)
 test_canonical_decomposition_SOURCES = uninorm/test-canonical-decomposition.c
@@ -16247,20 +16247,20 @@ uninstall-am: uninstall-pkgdataDATA
 
 # We need the following in order to create <endian.h> when the system
 # doesn't have one.
-endian.h: endian.in.h $(top_builddir)/config.status
-	$(gl_V_at)$(SED_HEADER_STDOUT) \
-	      -e 's|@''GUARD_PREFIX''@|GL|g' \
-	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
-	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
-	      -e 's|@''PRAGMA_COLUMNS''@||g' \
-	      -e 's|@''HAVE_ENDIAN_H''@|$(HAVE_ENDIAN_H)|g' \
-	      -e 's|@''NEXT_ENDIAN_H''@|$(NEXT_ENDIAN_H)|g' \
-	      -e 's|@''HAVE_SYS_ENDIAN_H''@|$(HAVE_SYS_ENDIAN_H)|g' \
-	      -e 's|@''ENDIAN_H_JUST_MISSING_STDINT''@|$(ENDIAN_H_JUST_MISSING_STDINT)|g' \
-	$(srcdir)/endian.in.h > $@-t
-	$(AM_V_at)mv $@-t $@
-endian.h: $(top_builddir)/config.status
-	rm -f $@
+@GL_GENERATE_ENDIAN_H_TRUE@endian.h: endian.in.h $(top_builddir)/config.status
+@GL_GENERATE_ENDIAN_H_TRUE@	$(gl_V_at)$(SED_HEADER_STDOUT) \
+@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''GUARD_PREFIX''@|GL|g' \
+@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''INCLUDE_NEXT''@|$(INCLUDE_NEXT)|g' \
+@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''HAVE_ENDIAN_H''@|$(HAVE_ENDIAN_H)|g' \
+@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''NEXT_ENDIAN_H''@|$(NEXT_ENDIAN_H)|g' \
+@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''HAVE_SYS_ENDIAN_H''@|$(HAVE_SYS_ENDIAN_H)|g' \
+@GL_GENERATE_ENDIAN_H_TRUE@	      -e 's|@''ENDIAN_H_JUST_MISSING_STDINT''@|$(ENDIAN_H_JUST_MISSING_STDINT)|g' \
+@GL_GENERATE_ENDIAN_H_TRUE@	$(srcdir)/endian.in.h > $@-t
+@GL_GENERATE_ENDIAN_H_TRUE@	$(AM_V_at)mv $@-t $@
+@GL_GENERATE_ENDIAN_H_FALSE@endian.h: $(top_builddir)/config.status
+@GL_GENERATE_ENDIAN_H_FALSE@	rm -f $@
 #test-localcharset-windows-utf8.res : $(srcdir)/windows-utf8.rc
 #	$(WINDRES) -i $(srcdir)/windows-utf8.rc -o test-localcharset-windows-utf8.res --output-format=coff
 #test-localename-windows-utf8.res : $(srcdir)/windows-utf8.rc

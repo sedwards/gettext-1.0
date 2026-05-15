@@ -1508,9 +1508,9 @@ lib-asprintf.lo: $(lib_asprintf_EXTRASOURCES)
 #	  "-DPACKAGE_VERSION_MINOR="`echo '$(VERSION)' | sed -n -e "$$sed_extract_minor"` \
 #	  "-DPACKAGE_VERSION_SUBMINOR="`echo '$(VERSION)' | sed -n -e "$$sed_extract_subminor"` \
 #	  -i $(srcdir)/libasprintf.rc -o libasprintf.res.lo --output-format=coff
-libasprintf.la: $(libasprintf_la_OBJECTS) $(libasprintf_la_DEPENDENCIES) libgnu.la
-	$(AM_V_GEN)$(CXXLINK) -rpath $(libdir) $(libasprintf_la_LDFLAGS) $(libasprintf_la_OBJECTS) $(libasprintf_la_LIBADD) libgnu.la $(LIBS) || \
-	$(LINK) -rpath $(libdir) $(libasprintf_la_LDFLAGS) $(libasprintf_la_OBJECTS) $(libasprintf_la_LIBADD) libgnu.la $(LIBS)
+libasprintf.la: $(libasprintf_la_OBJECTS) $(libasprintf_la_DEPENDENCIES) gnulib-lib/libgnu.la
+	$(AM_V_GEN)$(CXXLINK) -rpath $(libdir) $(libasprintf_la_LDFLAGS) $(libasprintf_la_OBJECTS) $(libasprintf_la_LIBADD) gnulib-lib/libgnu.la $(LIBS) || \
+	$(LINK) -rpath $(libdir) $(libasprintf_la_LDFLAGS) $(libasprintf_la_OBJECTS) $(libasprintf_la_LIBADD) gnulib-lib/libgnu.la $(LIBS)
 
 # Clean up after Solaris cc.
 clean-local:

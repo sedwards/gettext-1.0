@@ -594,7 +594,7 @@ AM_CPPFLAGS = -Ignulib-lib -I$(srcdir)/gnulib-lib \
 # Enable more warning options in this directory.
 
 # Tell the ELF linker which symbols to export.
-AM_CFLAGS =  
+AM_CFLAGS =  @CFLAG_VISIBILITY@
 BISON = :
 BISONFLAGS = --name-prefix=__gettext
 # Just to shut up Automake "error: Yacc source seen but 'YACC' is undefined".
@@ -746,10 +746,10 @@ WOE32_LIBADD =
 #WOE32_LIBADD = libintl.res.lo
 
 # What object files to include in libintl.la and libgnuintl.la.
-libintl_la_LIBADD = libgnu.la $(WOE32_LIBADD)
-libintl_la_DEPENDENCIES = libgnu.la $(WOE32_LIBADD)
-libgnuintl_la_LIBADD = libgnu.la $(WOE32_LIBADD)
-libgnuintl_la_DEPENDENCIES = libgnu.la $(WOE32_LIBADD)
+libintl_la_LIBADD = gnulib-lib/libgnu.la $(WOE32_LIBADD)
+libintl_la_DEPENDENCIES = gnulib-lib/libgnu.la $(WOE32_LIBADD)
+libgnuintl_la_LIBADD = gnulib-lib/libgnu.la $(WOE32_LIBADD)
+libgnuintl_la_DEPENDENCIES = gnulib-lib/libgnu.la $(WOE32_LIBADD)
 INTL_WINDOWS_LIBS = 
 
 # langprefs.c (_nl_language_preferences_win32_95) uses functions from

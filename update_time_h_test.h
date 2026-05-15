@@ -6,7 +6,7 @@ cat << 'EOF' > time.h.tmp
 #define _GL_TIME_H
 
 #ifdef __APPLE__
-# include "darwin_shim.h"
+# include <config.h>
 # include_next <time.h>
 #endif
 
@@ -15,7 +15,7 @@ EOF
 
 # Find all auto-generated time.h files (ignoring directories like sys/)
 echo "Scanning tree and applying native macOS <time.h> redirects..."
-find . -name "time.h" -not -path "*/sys/*" -not -path "*/.git/*" | while read -r target; do
+find . -name "time.h" -not -path "*/.git/*" | while read -r target; do
     echo "Rewriting shim: $target"
     chmod +w "$target" 2>/dev/null
     cp time.h.tmp "$target"

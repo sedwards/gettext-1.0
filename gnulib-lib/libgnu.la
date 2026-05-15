@@ -1,4 +1,0 @@
-# libgnu.la - a libtool library file
-old_library='libgnu.a'
-installed=no
-shouldnotlink=no

@@ -29,13 +29,13 @@
 /* The include_next requires a split double-inclusion guard.  We must
    also inform the replacement unistd.h to not recursively use
    <getopt.h>; our definitions will be present soon enough.  */
-#if 1
+#if 
 # define _GL_SYSTEM_GETOPT
 /* Rename the system's 'struct option' to 'struct sys_option',
    so that we don't have to rename ours to 'struct rpl_option'
    (which would cause significant trouble in C++ mode).  */
 # define option sys_option
-# include_next <getopt.h>
+# include_next 
 # undef option
 # undef _GL_SYSTEM_GETOPT
 #endif
@@ -49,7 +49,7 @@
    cause confusion if included after this file (if the system had
    <getopt.h>, we have already included it).  */
 #if defined __GETOPT_PREFIX
-# if !1
+# if !
 #  define __need_system_stdlib_h
 #  include <stdlib.h>
 #  undef __need_system_stdlib_h

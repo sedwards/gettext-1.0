@@ -24,8 +24,8 @@
    or error_at_line(...) invocations.  */
 
 /* The include_next requires a split double-inclusion guard.  */
-#if 0 && !defined __MINGW32__
-# include_next <error.h>
+#if  && !defined __MINGW32__
+# include_next 
 #endif
 
 #ifndef _GL_LTS_ERROR_H

@@ -29,7 +29,7 @@
 /* Get uninorm_t.  */
 #include "uninorm.h"
 
-#if 0
+#if 
 # include <unistring/woe32dll.h>
 #else
 # define LIBUNISTRING_DLL_VARIABLE

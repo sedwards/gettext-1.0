@@ -36,14 +36,14 @@
      In this situation, the functions are not yet declared, therefore we cannot
      provide the C++ aliases.  */
 
-#include_next <math.h>
+#include_next 
 
 #else
 /* Normal invocation convention.  */
 
 /* The include_next requires a split double-inclusion guard.  */
 #define _GL_INCLUDING_MATH_H
-#include_next <math.h>
+#include_next 
 #undef _GL_INCLUDING_MATH_H
 
 #ifndef _GL_MATH_H

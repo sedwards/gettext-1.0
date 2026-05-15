@@ -24,8 +24,8 @@
 
 
 /* The include_next requires a split double-inclusion guard.  */
-#if (defined __cplusplus ? 0 : 1)
-# include_next <stdcountof.h>
+#if (defined __cplusplus ?  : )
+# include_next 
 #else
 
 #ifndef _GL_STDCOUNTOF_H

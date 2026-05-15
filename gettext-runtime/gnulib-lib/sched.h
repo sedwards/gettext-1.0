@@ -30,11 +30,11 @@
 #endif
 
 /* The include_next requires a split double-inclusion guard.  */
-#if 1
-# if 0
+#if 
+# if 
 #  include <sys/cdefs.h>
 # endif
-# include_next <sched.h>
+# include_next 
 #endif
 
 #ifndef _GL_SCHED_H

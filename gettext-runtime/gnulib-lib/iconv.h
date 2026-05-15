@@ -24,7 +24,7 @@
 
 
 /* The include_next requires a split double-inclusion guard.  */
-#include_next <iconv.h>
+#include_next 
 
 #ifndef _GL_ICONV_H
 #define _GL_ICONV_H

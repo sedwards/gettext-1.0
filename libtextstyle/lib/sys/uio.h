@@ -22,20 +22,20 @@
 
 #ifndef _GL_LTS_SYS_UIO_H
 
-#if 1
+#if 
 
 /* On OpenBSD 4.4, <sys/uio.h> assumes prior inclusion of <sys/types.h>.  */
 # include <sys/types.h>
 
 /* The include_next requires a split double-inclusion guard.  */
-# include_next <sys/uio.h>
+# include_next 
 
 #endif
 
 #ifndef _GL_LTS_SYS_UIO_H
 #define _GL_LTS_SYS_UIO_H
 
-#if !1
+#if !
 /* A platform that lacks <sys/uio.h>.  */
 /* Get 'size_t' and 'ssize_t'.  */
 # include <sys/types.h>

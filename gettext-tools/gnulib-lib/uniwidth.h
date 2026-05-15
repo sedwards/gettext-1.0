@@ -1,1 +1,1 @@
-/Users/sedwards/gtk/source/gettext-1.0/libtextstyle/lib/uniwidth.h
+/Users/sedwards/gtk/source/gettext-1.0/gnulib-lib/uniwidth.h

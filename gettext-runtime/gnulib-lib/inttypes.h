@@ -31,14 +31,14 @@
    which in turn includes this file.
    The include_next requires a split double-inclusion guard.  */
 #if ! defined INTTYPES_H || defined _GL_JUST_INCLUDE_SYSTEM_INTTYPES_H
-# if 1
+# if 
 
    /* Some pre-C++11 <stdint.h> implementations need this.  */
 #  if defined __cplusplus && ! defined __STDC_FORMAT_MACROS
 #   define __STDC_FORMAT_MACROS 1
 #  endif
 
-#  include_next <inttypes.h>
+#  include_next 
 
 #  define _GL_FINISHED_INCLUDING_SYSTEM_INTTYPES_H
 # endif

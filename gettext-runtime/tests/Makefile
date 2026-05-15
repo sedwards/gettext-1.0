@@ -487,18 +487,18 @@ case "$@" in						\
 esac;							\
 test "x$$am__odir" = x"." || test -d "$$am__odir" 	\
   || $(MKDIR_P) "$$am__odir" || exit $$?;		\
-# if test -f "./$$f"; then dir=./;			\
+if test -f "./$$f"; then dir=./;			\
 elif test -f "$$f"; then dir=;				\
-# else dir="$(srcdir)/"; fi;				\
+else dir="$(srcdir)/"; fi;				\
 tst=$$dir$$f; log='$@'; 				\
-# if test -n '$(IGNORE_SKIPPED_LOGS)'; then		\
+if test -n '$(IGNORE_SKIPPED_LOGS)'; then		\
   am__collect_skipped_logs='--collect-skipped-logs no';	\
-# else							\
+else							\
   am__collect_skipped_logs='';				\
 fi;							\
-# if test -n '$(DISABLE_HARD_ERRORS)'; then		\
+if test -n '$(DISABLE_HARD_ERRORS)'; then		\
   am__enable_hard_errors=no; 				\
-# else							\
+else							\
   am__enable_hard_errors=yes; 				\
 fi; 							\
 case " $(XFAIL_TESTS) " in				\
@@ -608,7 +608,7 @@ ECHO_C = \c
 ECHO_N = 
 ECHO_T = 
 EGREP = /usr/bin/grep -E
-ENABLE_SHARED = yes
+ENABLE_SHARED = no
 ERRNO_H = 
 ETAGS = etags
 EXEEXT = 

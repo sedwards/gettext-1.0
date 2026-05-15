@@ -825,18 +825,18 @@ case "$@" in						\
 esac;							\
 test "x$$am__odir" = x"." || test -d "$$am__odir" 	\
   || $(MKDIR_P) "$$am__odir" || exit $$?;		\
-# if test -f "./$$f"; then dir=./;			\
+if test -f "./$$f"; then dir=./;			\
 elif test -f "$$f"; then dir=;				\
-# else dir="$(srcdir)/"; fi;				\
+else dir="$(srcdir)/"; fi;				\
 tst=$$dir$$f; log='$@'; 				\
-# if test -n '$(IGNORE_SKIPPED_LOGS)'; then		\
+if test -n '$(IGNORE_SKIPPED_LOGS)'; then		\
   am__collect_skipped_logs='--collect-skipped-logs no';	\
-# else							\
+else							\
   am__collect_skipped_logs='';				\
 fi;							\
-# if test -n '$(DISABLE_HARD_ERRORS)'; then		\
+if test -n '$(DISABLE_HARD_ERRORS)'; then		\
   am__enable_hard_errors=no; 				\
-# else							\
+else							\
   am__enable_hard_errors=yes; 				\
 fi; 							\
 case " $(XFAIL_TESTS) " in				\
@@ -3712,8 +3712,8 @@ NEXT_AS_FIRST_DIRECTIVE_UNISTD_H = <unistd.h>
 NEXT_AS_FIRST_DIRECTIVE_UTIME_H = 
 NEXT_AS_FIRST_DIRECTIVE_WCHAR_H = <wchar.h>
 NEXT_AS_FIRST_DIRECTIVE_WCTYPE_H = <wctype.h>
-NEXT_CTYPE_H = 
-NEXT_DIRENT_H = 
+NEXT_CTYPE_H = <ctype.h>
+NEXT_DIRENT_H = <dirent.h>
 NEXT_ENDIAN_H = 
 NEXT_ERRNO_H = 
 NEXT_ERROR_H = <error.h>
@@ -3746,13 +3746,13 @@ NEXT_STRING_H = <string.h>
 NEXT_SYS_IOCTL_H = 
 NEXT_SYS_RANDOM_H = 
 NEXT_SYS_RESOURCE_H = 
-NEXT_SYS_SELECT_H = 
+NEXT_SYS_SELECT_H = <sys/select.h>
 NEXT_SYS_SOCKET_H = 
 NEXT_SYS_STAT_H = <sys/stat.h>
 NEXT_SYS_TIME_H = 
 NEXT_SYS_TYPES_H = <sys/types.h>
 NEXT_SYS_UIO_H = 
-NEXT_SYS_WAIT_H = 
+NEXT_SYS_WAIT_H = <sys/wait.h>
 NEXT_TIME_H = <time.h>
 NEXT_UCHAR_H = <uchar.h>
 NEXT_UNISTD_H = <unistd.h>

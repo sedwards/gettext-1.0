@@ -39,7 +39,7 @@
      In this situation, some of the functions are not yet declared, therefore
      we cannot provide the C++ aliases.  */
 
-# include_next <signal.h>
+# include_next 
 
 #else
 /* Normal invocation convention.  */
@@ -55,7 +55,7 @@
 #include <sys/types.h>
 
 /* The include_next requires a split double-inclusion guard.  */
-#include_next <signal.h>
+#include_next 
 
 #undef _GL_ALREADY_INCLUDING_SIGNAL_H
 

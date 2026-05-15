@@ -745,9 +745,9 @@ am_libgettextsrc_la_OBJECTS = $(am__objects_3) \
 	libgettextsrc_la-locating-rules.lo libgettextsrc_la-its.lo \
 	libgettextsrc_la-search-path.lo
 libgettextsrc_la_OBJECTS = $(am_libgettextsrc_la_OBJECTS)
-#am_libgettextsrc_la_rpath =
-am_libgettextsrc_la_rpath = -rpath \
-	$(libdir)
+am_libgettextsrc_la_rpath =
+#am_libgettextsrc_la_rpath = -rpath \
+#	$(libdir)
 am_cldr_plurals_OBJECTS = cldr_plurals-cldr-plural.$(OBJEXT) \
 	cldr_plurals-cldr-plural-exp.$(OBJEXT) \
 	cldr_plurals-cldr-plurals.$(OBJEXT)
@@ -4096,8 +4096,8 @@ NEXT_AS_FIRST_DIRECTIVE_UNISTD_H = <unistd.h>
 NEXT_AS_FIRST_DIRECTIVE_UTIME_H = 
 NEXT_AS_FIRST_DIRECTIVE_WCHAR_H = <wchar.h>
 NEXT_AS_FIRST_DIRECTIVE_WCTYPE_H = <wctype.h>
-NEXT_CTYPE_H = 
-NEXT_DIRENT_H = 
+NEXT_CTYPE_H = <ctype.h>
+NEXT_DIRENT_H = <dirent.h>
 NEXT_ENDIAN_H = 
 NEXT_ERRNO_H = 
 NEXT_ERROR_H = <error.h>
@@ -4130,13 +4130,13 @@ NEXT_STRING_H = <string.h>
 NEXT_SYS_IOCTL_H = 
 NEXT_SYS_RANDOM_H = 
 NEXT_SYS_RESOURCE_H = 
-NEXT_SYS_SELECT_H = 
+NEXT_SYS_SELECT_H = <sys/select.h>
 NEXT_SYS_SOCKET_H = 
 NEXT_SYS_STAT_H = <sys/stat.h>
 NEXT_SYS_TIME_H = 
 NEXT_SYS_TYPES_H = <sys/types.h>
 NEXT_SYS_UIO_H = 
-NEXT_SYS_WAIT_H = 
+NEXT_SYS_WAIT_H = <sys/wait.h>
 NEXT_TIME_H = <time.h>
 NEXT_UCHAR_H = <uchar.h>
 NEXT_UNISTD_H = <unistd.h>
@@ -4846,9 +4846,9 @@ RM = rm -f
 noinst_SCRIPTS = spit.py $(am__append_2)
 
 # Specify that libgettextsrc should be installed in $(libdir).
-lib_LTLIBRARIES = libgettextsrc.la
+#lib_LTLIBRARIES = libgettextsrc.la
 # Specify that libgettextsrc should not be installed.
-#noinst_LTLIBRARIES = libgettextsrc.la
+noinst_LTLIBRARIES = libgettextsrc.la
 noinst_LIBRARIES = libxgettextx.a $(LIBXGETTEXTTS)
 noinst_HEADERS = \
   pos.h message.h po-error.h xerror-handler.h po-xerror.h \

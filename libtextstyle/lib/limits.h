@@ -28,7 +28,7 @@
    In this situation, LONG_MAX and INT_MAX are not yet defined,
    therefore we should not attempt to define LONG_BIT.  */
 
-#include_next <limits.h>
+#include_next 
 
 #else
 /* Normal invocation convention.  */
@@ -38,7 +38,7 @@
 # define _GL_LTS_ALREADY_INCLUDING_LIMITS_H
 
 /* The include_next requires a split double-inclusion guard.  */
-# include_next <limits.h>
+#include_next <limits.h>
 
 # undef _GL_LTS_ALREADY_INCLUDING_LIMITS_H
 

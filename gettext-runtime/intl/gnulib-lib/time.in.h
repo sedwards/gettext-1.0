@@ -20,6 +20,8 @@
 #endif
 @PRAGMA_COLUMNS@
 
+#include <time.h>
+
 /* This file uses #include_next of a system file that defines time_t.
    For the 'year2038' module to work right, <config.h> needs to have been
    included before.  */
