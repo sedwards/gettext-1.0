@@ -18,6 +18,18 @@
 #  endif
 # endif
 
+/* Define custom fallback signatures for the missing uchar.h symbols */
+typedef unsigned int char32_t;
+
+int c32width (char32_t wc);
+int c32iscntrl (char32_t wc);
+
+size_t mbrtoc32 (char32_t *pc32, const char *s, size_t n, mbstate_t *ps);
+
+static inline void mbszero (mbstate_t *ps) {
+    memset (ps, 0, sizeof (mbstate_t));
+}
+
 #endif /* __APPLE__ */
 
 #endif /* _GL_UCHAR_H */

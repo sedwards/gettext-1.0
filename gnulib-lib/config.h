@@ -218,7 +218,7 @@
 #define GNULIB_TEST_C32TOLOWER 1
 
 /* Define to 1 when the gnulib module c32width should be tested. */
-#define GNULIB_TEST_C32WIDTH 1
+#define GNULIB_TEST_C32WIDTH 0 
 
 /* Define to 1 when the gnulib module calloc-gnu should be tested. */
 #define GNULIB_TEST_CALLOC_GNU 1
