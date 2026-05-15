@@ -15,6 +15,8 @@
    You should have received a copy of the GNU Lesser General Public License
    along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
 
+typedef unsigned int ucs4_t;
+
 static inline int bitmap_lookup (const void *table, ucs4_t uc);
 
 /* These values are currently hardcoded into gen-uni-tables.c, function

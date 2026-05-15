@@ -38,12 +38,11 @@
 #endif
 
 #ifndef weak_alias
-# define __memrchr memrchr
+//# define __memrchr memrchr
 #endif
 
 /* Search no more than N bytes of S for C.  */
-void *
-__memrchr (void const *s, int c_in, size_t n)
+void * __memrchr (void const *s, int c_in, size_t n)
 {
   /* On 32-bit hardware, choosing longword to be a 32-bit unsigned
      long instead of a 64-bit uintmax_t tends to give better

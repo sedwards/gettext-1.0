@@ -38,7 +38,7 @@
 #endif
 
 #ifndef weak_alias
-# define __memrchr memrchr
+//#define __memrchr memrchr
 #endif
 
 /* Search no more than N bytes of S for C.  */

@@ -3,6 +3,6 @@
 #include <stdbool.h>
 #include <ctype.h>
 typedef struct { unsigned int code; } uc_property_t;
-#define uc_is_alnum(wc) isalnum(wc)
-#define uc_is_alpha(wc) isalpha(wc)
+//#define uc_is_alnum(wc) isalnum(wc)
+//#define uc_is_alpha(wc) isalpha(wc)
 #endif

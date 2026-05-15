@@ -137,3 +137,17 @@ extern "C" {
 #undef xmalloc
 #undef xrealloc
 
+#ifndef _GL_ATTRIBUTE_ALWAYS_INLINE
+# if defined __GNUC__ || defined __clang__
+#  define _GL_ATTRIBUTE_ALWAYS_INLINE __attribute__ ((__always_inline__))
+# else
+
+#  define _GL_ATTRIBUTE_ALWAYS_INLINE
+# endif
+#endif
+
+#ifndef _GL_INLINE_HEADER_BEGIN
+# define _GL_INLINE_HEADER_BEGIN
+# define _GL_INLINE_HEADER_END
+#endif
+
