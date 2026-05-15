@@ -58,7 +58,7 @@ fi
 # that ensures that the library that contains the *gettext() family of functions
 # gets found.
 if test yes = yes; then
-  if test 'no' = yes; then
+  if test 'yes' = yes; then
     # NB: This case is not supported on AIX and HP-UX.
     LIBINTL="${relative_builddir}/intl/.libs/libintl.so -Wl,-rpath,${relative_builddir}/intl/.libs  -Wl,-framework -Wl,CoreFoundation -Wl,-framework -Wl,CoreServices"
   else
