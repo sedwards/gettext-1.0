@@ -1,1 +1,1 @@
-/Users/sedwards/gtk/source/gettext-1.0/gettext-tools/libgettextpo/uniconv.h
+/Users/sedwards/gtk/source/gettext-1.0/gettext-tools/gnulib-lib/uniconv.h

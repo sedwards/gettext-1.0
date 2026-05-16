@@ -1,1 +1,1 @@
-/Users/sedwards/gtk/source/gettext-1.0/gnulib-lib/uninorm.h
+/Users/sedwards/gtk/source/gettext-1.0/gettext-tools/gnulib-lib/uninorm.h

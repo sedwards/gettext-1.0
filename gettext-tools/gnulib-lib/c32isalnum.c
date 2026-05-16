@@ -4,3 +4,4 @@
 # include "config.h"
 #endif
 
+#include <ctype.h>
