@@ -52,6 +52,18 @@
 #endif
 
 typedef __uint32_t char32_t;
+
+# undef _GL_ATTRIBUTE_DEALLOC
+# define _GL_ATTRIBUTE_DEALLOC(f, i)
+
+# undef _GL_ATTRIBUTE_MALLOC
+# define _GL_ATTRIBUTE_MALLOC
+
+# undef _GL_ATTRIBUTE_FORMAT
+# define _GL_ATTRIBUTE_FORMAT(spec)
+
+# undef _GL_ATTRIBUTE_SPEC_PRINTF_STANDARD
+# define _GL_ATTRIBUTE_SPEC_PRINTF_STANDARD
 #endif
 
 // ==========================================================================

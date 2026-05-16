@@ -21,7 +21,7 @@
  * <https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/stdint.h.html>
  */
 
-#ifndef _GL_STDINT_H
+#ifndef _GL_GTPO_STDINT_H
 
 #if __GNUC__ >= 3
 #pragma GCC system_header
@@ -40,7 +40,7 @@
    Ideally we should test __BIONIC__ here, but it is only defined after
    <sys/cdefs.h> has been included; hence test __ANDROID__ instead.  */
 #if defined __ANDROID__ && defined _GL_INCLUDING_SYS_TYPES_H
-# include_next 
+#include_next <stdint.h>
 #else
 
 /* Get those types that are already defined in other system include
@@ -51,7 +51,7 @@
    for the "fast" types and macros, which we recommend against using
    in public interfaces due to compiler differences.  */
 
-#if 
+//#if 
   /* Some pre-C++11 <stdint.h> implementations need this.  */
 # ifdef __cplusplus
 #  ifndef __STDC_CONSTANT_MACROS
@@ -65,13 +65,13 @@
   /* Other systems may have an incomplete or buggy <stdint.h>.
      Include it before <inttypes.h>, since any "#include <stdint.h>"
      in <inttypes.h> would reinclude us, skipping our contents because
-     _GL_STDINT_H is defined.
+     _GL_GTPO_STDINT_H is defined.
      The include_next requires a split double-inclusion guard.  */
-# include_next 
+#include_next <stdint.h>
 #endif
 
-#if ! defined _GL_STDINT_H && ! defined _GL_JUST_INCLUDE_SYSTEM_STDINT_H
-#define _GL_STDINT_H
+#if ! defined _GL_GTPO_STDINT_H && ! defined _GL_JUST_INCLUDE_SYSTEM_STDINT_H
+#define _GL_GTPO_STDINT_H
 
 /* Get SCHAR_MIN, SCHAR_MAX, UCHAR_MAX, INT_MIN, INT_MAX,
    LONG_MIN, LONG_MAX, ULONG_MAX, CHAR_BIT, _GL_INTEGER_WIDTH.  */
@@ -736,6 +736,6 @@ typedef int _verify_intmax_size[sizeof (intmax_t) == sizeof (uintmax_t)
 # endif
 #endif /* !WINT_WIDTH && (_GNU_SOURCE || __STDC_WANT_IEC_60559_BFP_EXT__) */
 
-#endif /* _GL_STDINT_H */
+#endif /* _GL_GTPO_STDINT_H */
 #endif /* !(defined __ANDROID__ && ...) */
-#endif /* !defined _GL_STDINT_H && !defined _GL_JUST_INCLUDE_SYSTEM_STDINT_H */
+#endif /* !defined _GL_GTPO_STDINT_H && !defined _GL_JUST_INCLUDE_SYSTEM_STDINT_H */

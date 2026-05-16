@@ -22,7 +22,8 @@
 #pragma GCC system_header
 #endif
 
-#include_next <assert.h>
+
+#include_next 
 
 /* The definition of static_assert is copied here.  */
 /* Compile-time assert-like macros.
