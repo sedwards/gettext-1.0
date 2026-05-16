@@ -198,5 +198,8 @@ extern "C" {
 
 #ifdef __APPLE__
 # include <runetype.h>
+struct __sFILE;
+typedef struct __sFILE FILE;
+typedef __uint32_t char32_t;
 #endif
 

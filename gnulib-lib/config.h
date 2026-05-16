@@ -1866,3 +1866,9 @@ extern "C" {
 # define _GL_INLINE_HEADER_END
 #endif
 
+#ifdef __APPLE__
+struct __sFILE;
+typedef struct __sFILE FILE;
+typedef __uint32_t char32_t;
+#endif
+

@@ -38,7 +38,7 @@
      included after 'alloca' gets defined as a macro.  As a workaround,
      include this <alloca.h> first and define 'alloca' as a macro afterwards
      if needed.  */
-# if defined __GNUC__ && (defined _WIN32 && ! defined __CYGWIN__) && 
+# if defined __GNUC__ && (defined __APPLE__ || defined _WIN32 && ! defined __CYGWIN__)
 #  include_next <alloca.h>
 # endif
 #endif

@@ -17,4 +17,5 @@
 
 #define MBITERF_INLINE _GL_EXTERN_INLINE
 #include <config.h>
+size_t mbrtoc32 (char32_t *pc32, const char *s, size_t n, mbstate_t *ps);
 #include "mbiterf.h"

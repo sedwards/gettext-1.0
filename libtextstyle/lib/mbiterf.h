@@ -110,6 +110,9 @@ struct mbif_state
                          */
 };
 
+void mbszero (mbstate_t *ps);
+size_t mbrtoc32 (char32_t *pc32, const char *s, size_t n, mbstate_t *ps);
+
 MBITERF_INLINE mbchar_t
 mbiterf_next (struct mbif_state *ps, const char *iter, const char *endptr)
 {

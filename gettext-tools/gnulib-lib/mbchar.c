@@ -19,4 +19,8 @@
 
 #include <limits.h>
 
+typedef unsigned int char32_t;
+int c32width (char32_t wc);
+int c32iscntrl (char32_t wc);
+
 #include "mbchar.h"

@@ -245,6 +245,10 @@ typedef struct mbchar mbchar_t;
 /* Unprintable characters appear as a small box of width 1.  */
 #define MB_UNPRINTABLE_WIDTH 1
 
+typedef unsigned int char32_t;
+int c32width (char32_t wc);
+int c32iscntrl (char32_t wc);
+
 MBCHAR_INLINE int
 mb_width_aux (char32_t wc)
 {

@@ -23,7 +23,6 @@ typedef unsigned int char32_t;
 
 int c32width (char32_t wc);
 int c32iscntrl (char32_t wc);
-
 size_t mbrtoc32 (char32_t *pc32, const char *s, size_t n, mbstate_t *ps);
 
 static inline void mbszero (mbstate_t *ps) {

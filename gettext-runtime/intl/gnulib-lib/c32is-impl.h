@@ -94,6 +94,8 @@ FUNC (wint_t wc)
 
 #else /* macOS, FreeBSD, NetBSD, OpenBSD, HP-UX, Solaris, Minix, Android */
   /* char32_t and wchar_t are equivalent.  */
+  #include <assert.h>
+  #include <uchar.h>
   static_assert (sizeof (char32_t) == sizeof (wchar_t));
 
 # if GL_CHAR32_T_IS_UNICODE && GL_CHAR32_T_VS_WCHAR_T_NEEDS_CONVERSION

@@ -17,6 +17,11 @@ extern "C" {
 }
 #endif
 
+#ifdef __APPLE__
+struct __sFILE;
+typedef struct __sFILE FILE;
+#endif
+
 /* Include the ACTUAL system headers from the SDK */
 #include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/types.h"
 #include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/time.h"

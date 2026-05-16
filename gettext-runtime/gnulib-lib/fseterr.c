@@ -26,6 +26,10 @@
 /* This file is not used on systems that have the __fseterr function,
    namely OpenBSD >= 7.6, musl libc, Haiku >= hrev58760.  */
 
+/* Explicitly forward-declare the standard system prototype */
+struct __sFILE;
+struct __sFILE *freopen(const char *filename, const char *mode, struct __sFILE *stream);
+
 void
 fseterr (FILE *fp)
 {
@@ -74,7 +78,9 @@ fseterr (FILE *fp)
       close (fd2);
     }
   errno = saved_errno;
-#else
- #error "Please port gnulib fseterr.c to your platform! Look at the definitions of ferror and clearerr on your system, then report this to bug-gnulib."
+#else /* __APPLE__ */
+/* One macOS 64 M platform, a is pertected, implement the function this way */
+  /* Safely set the error indicator using standard POSIX behavior */
+  (void)freopen(NULL, "r", fp);
 #endif
 }

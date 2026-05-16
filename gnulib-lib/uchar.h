@@ -22,6 +22,7 @@
  */
 
 #ifndef _GL_UCHAR_H
+#define _GL_UCHAR_H
 
 #if __GNUC__ >= 3
 #pragma GCC system_header
@@ -29,7 +30,7 @@
 
 
 /* The include_next requires a split double-inclusion guard.  */
-#if (defined __cplusplus ?  : )
+//#if (defined __cplusplus ?  : )
 # if defined __HAIKU__
 /* Work around <https://dev.haiku-os.org/ticket/17040>.  */
 #  include <stdint.h>
@@ -42,8 +43,8 @@
 #  define char16_t gl_char16_t
 #  define char32_t gl_char32_t
 # endif
-# include_next 
-#endif
+//# include_next <uchar.h>
+//#endif
 
 #ifndef _GL_UCHAR_H
 #define _GL_UCHAR_H
@@ -57,12 +58,14 @@
 /* If needed, get uint_least16_t, uint_least32_t.
    Although POSIX allows <uchar.h> to make all symbols visible from <stdint.h>,
    our includers should not rely on this.  */
+#if 0
 #if (! (defined __cplusplus \
         ?  || 0 \
         : ) \
      || 1 || 1)
-# include <stdint.h>
 #endif
+# include <stdint.h>
+//#endif
 
 /* If needed, get btowc, mbstate_t, mbszero, size_t, wctob, wint_t, WEOF.
    Although POSIX allows <uchar.h> to make all symbols visible from <wchar.h>,
@@ -1566,5 +1569,6 @@ _GL_CXXALIASWARN (c32_apply_mapping);
 
 _GL_INLINE_HEADER_END
 
+#endif /* _GL_UCHAR_H */
 #endif /* _GL_UCHAR_H */
 #endif /* _GL_UCHAR_H */
