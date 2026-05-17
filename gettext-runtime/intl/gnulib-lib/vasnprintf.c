@@ -136,8 +136,33 @@
 #if NEED_PRINTF_DIRECTIVE_A || NEED_PRINTF_LONG_DOUBLE || (NEED_WPRINTF_DIRECTIVE_LA && WIDE_CHAR_VERSION)
 # include <math.h>
 # include "isnanl-nolibm.h"
-# include "printf-frexpl.h"
+//#include "printf-frexpl.h"
 # include "fpucw.h"
+#endif
+
+#ifndef DARWIN_PORTING_PATCH_VASNPRINTF
+#define DARWIN_PORTING_PATCH_VASNPRINTF
+
+#include <math.h>
+#include <string.h>
+#include <wchar.h>
+
+/* Map the missing printf_frexpl directly to Apple's native SDK math function */
+#define printf_frexpl frexpl
+
+/* Provide the missing inline definition for mbszero wide-character states */
+static inline void mbszero (mbstate_t *ps) {
+    memset (ps, 0, sizeof (mbstate_t));
+}
+
+/* 1. Explicitly declare the standard I/O functions to bypass the broken header loop */
+int sprintf(char *restrict s, const char *restrict format, ...);
+int snprintf(char *restrict s, unsigned long n, const char *restrict format, ...);
+
+/* 2. Hard-override the fallthrough macro to keep clang happy */
+# undef _GL_ATTRIBUTE_FALLTHROUGH
+# define _GL_ATTRIBUTE_FALLTHROUGH ((void)0)
+
 #endif
 
 #if HAVE_SAME_LONG_DOUBLE_AS_DOUBLE

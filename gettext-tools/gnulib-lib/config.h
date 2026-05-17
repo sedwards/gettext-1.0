@@ -197,6 +197,10 @@ extern "C" {
 #endif
 
 #ifdef __APPLE__
+/* 1. Force the low-level keyword for static assertions */
+# undef static_assert
+# define static_assert _Static_assert
+
 # include <runetype.h>
 struct __sFILE;
 typedef struct __sFILE FILE;
@@ -213,5 +217,7 @@ typedef __uint32_t char32_t;
 
 # undef _GL_ATTRIBUTE_SPEC_PRINTF_STANDARD
 # define _GL_ATTRIBUTE_SPEC_PRINTF_STANDARD
+
+#include stdio.h
 #endif
 

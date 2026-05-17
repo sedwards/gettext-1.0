@@ -147,6 +147,12 @@
 #include <string.h>
 #include <wchar.h>
 
+int sprintf(char *restrict s, const char *restrict format, ...);
+int snprintf(char *restrict s, unsigned long n, const char *restrict format, ...);
+
+# undef _GL_ATTRIBUTE_FALLTHROUGH
+# define _GL_ATTRIBUTE_FALLTHROUGH ((void)0)
+
 /* Map the missing printf_frexpl directly to Apple's native SDK math function */
 #define printf_frexpl frexpl
 

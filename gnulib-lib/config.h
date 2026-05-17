@@ -1870,6 +1870,10 @@ extern "C" {
 struct __sFILE;
 typedef struct __sFILE FILE;
 typedef __uint32_t char32_t;
+
+# undef static_assert
+# define static_assert _Static_assert
+
 # undef _GL_ATTRIBUTE_DEALLOC
 # define _GL_ATTRIBUTE_DEALLOC(f, i)
 
@@ -1881,5 +1885,8 @@ typedef __uint32_t char32_t;
 
 # undef _GL_ATTRIBUTE_SPEC_PRINTF_STANDARD
 # define _GL_ATTRIBUTE_SPEC_PRINTF_STANDARD
+
+#include <stdio.h>
 #endif
+
 
